@@ -74,11 +74,6 @@ export default function PracticeHome() {
           </form>
         </section>
 
-        <section className="home-intro mt-6" aria-label="学习介绍">
-          <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">从一套练习开始，<br className="sm:hidden" />让日语稳步进阶。</h1>
-          <p className="hidden sm:block mt-3 max-w-2xl text-sm leading-6 sm:text-base sm:leading-8 text-slate-600">选择题库、等级、场次与题型。用练习模式掌握知识，或用考试模式检验独立作答能力。</p>
-        </section>
-
         <ResponsivePanel title="练习说明" trigger="题库说明与使用帮助" className="mt-4 lg:mt-0">
         <section aria-label="练习说明" className="grid gap-3">
           {[

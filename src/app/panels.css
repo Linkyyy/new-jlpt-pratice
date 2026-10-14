@@ -18,8 +18,7 @@ body:has(dialog:modal) { overflow: hidden; }
   .home-layout { display: grid; grid-template-columns: minmax(300px, .8fr) minmax(0, 1.2fr); gap: 32px; align-items: start; }
   .home-header { grid-column: 1 / -1; }
   .home-selection { grid-column: 1; grid-row: 2; }
-  .home-intro { grid-column: 1; grid-row: 3; }
-  .home-layout > .responsive-panel { grid-column: 2; grid-row: 2 / 4; }
+  .home-layout > .responsive-panel { grid-column: 2; grid-row: 2; }
 }
 @media (max-width: 1023px) {
   .session-layout > header { margin-bottom: 16px; }
@@ -48,3 +47,25 @@ body:has(dialog:modal) { overflow: hidden; }
 @media (min-width: 1024px) { .session-progress { grid-column: 2; margin-top: 0; } }
 
 .question-card { touch-action: pan-y pinch-zoom; }
+
+.reading-workspace { padding-bottom: 100px; }
+.reading-article { scroll-margin-top: 16px; }
+.reading-sheet { position: fixed; z-index: 20; inset: auto 0 0; background: white; border: 1px solid #e2e8f0; border-radius: 20px 20px 0 0; box-shadow: 0 -8px 40px rgb(15 23 42 / 12%); padding-bottom: env(safe-area-inset-bottom); }
+.reading-sheet-handle { display: flex; width: 100%; min-height: 76px; flex-direction: column; align-items: center; gap: 12px; padding: 12px 20px 16px; font-size: 14px; font-weight: 600; cursor: ns-resize; touch-action: none; }
+.reading-sheet-handle:focus-visible { outline: 2px solid #6366f1; outline-offset: -4px; border-radius: 20px; }
+.reading-grip { height: 4px; width: 36px; border-radius: 4px; background: #cbd5e1; }
+.reading-sheet-content { max-height: calc(72dvh - 76px); overflow-y: auto; overscroll-behavior: contain; padding: 0 16px 20px; }
+.reading-sheet-content[hidden] { display: none; }
+.reading-sheet .question-card { padding: 20px 4px 4px; border: 0; border-radius: 0; box-shadow: none; }
+.reading-subquestions { position: sticky; top: 0; z-index: 2; background: white; display: flex; gap: 8px; flex-wrap: wrap; padding: 4px 4px 8px; }
+.reading-subquestions button { min-width: 44px; }
+.session-content:has(.reading-workspace) ~ .session-progress { padding-bottom: 80px; }
+@media (min-width: 1024px) {
+  .reading-sheet { left: auto; right: max(32px, calc((100vw - 1536px) / 2)); width: calc(100% - 368px); max-width: 1232px; }
+}
+@media (max-width: 1023px) {
+  .session-layout:has(.reading-workspace) > .responsive-panel { position: sticky; top: 0; z-index: 25; padding-block: 4px; background: #f8fafc; }
+  .session-layout:has(.reading-workspace):has(.session-timer) > .responsive-panel { top: 84px; }
+  .reading-article { scroll-margin-top: 64px; }
+  .session-layout:has(.session-timer) .reading-article { scroll-margin-top: 148px; }
+}
