@@ -168,10 +168,11 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         </header>
 
         <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
-           <nav aria-label="题目导航" className="mb-5 flex max-h-48 flex-wrap gap-2 overflow-y-auto">
+           <nav aria-label="题目导航" className="question-grid">
             {paper.questions.map((item, index) => {
               const itemAnswer = answers[item.id];
-              const status = itemAnswer?.submitted ? "已提交" : itemAnswer ? "已选择，未提交" : "未作答";
+              const correct = itemAnswer?.selectedOptionId === item.correctOptionId;
+              const status = itemAnswer?.submitted ? correct ? "回答正确" : "回答错误" : itemAnswer ? "已选择，未提交" : "未作答";
               return (
                 <button
                   key={item.id}
@@ -179,26 +180,26 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
                   onClick={() => goToQuestion(index)}
                   aria-current={index === questionIndex ? "step" : undefined}
                   aria-label={`第 ${index + 1} 题，${status}`}
-                  className={`min-h-11 min-w-11 rounded-lg border px-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${index === questionIndex ? "border-indigo-600 bg-indigo-600 text-white" : itemAnswer?.submitted ? "border-indigo-200 bg-indigo-50 text-indigo-700" : itemAnswer ? "border-amber-300 bg-amber-50 text-amber-800" : "border-slate-300 bg-white text-slate-600"}`}
-                >{index + 1}{itemAnswer?.submitted ? " ✓" : itemAnswer ? " •" : ""}</button>
+                  className={`question-number ${index === questionIndex ? "question-current" : ""} ${itemAnswer?.submitted ? correct ? "question-correct" : "question-incorrect" : itemAnswer ? "question-draft" : "question-empty"}`}
+                >{index + 1}</button>
               );
             })}
           </nav>
-          <p className="mb-5 text-xs leading-6 text-slate-500">✓ 已提交 · • 已选未提交 · 无标记为未作答。点击题号可跳转，未提交的选择会保留。</p>
+          <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
 
-        <fieldset className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
+        <fieldset className="mt-6 border-t border-slate-100 pt-5">
           <legend className="px-1 text-sm font-semibold text-slate-700">练习设置</legend>
           <div className="grid gap-3">
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
               <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
-              <span><span className="block font-semibold">点击选项即显示答案</span><span className="text-slate-500">立即判定、显示解析并锁定本题，省去提交操作。</span></span>
+              <span><span className="block font-semibold">点击选项即显示答案</span></span>
             </label>
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
               <input type="checkbox" name="large-text" checked={largeText} onChange={(event) => setLargeText(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
-              <span><span className="block font-semibold">大字号阅读</span><span className="text-slate-500">放大题干、阅读文章、选项和解析，方便手机阅读。</span></span>
+              <span><span className="block font-semibold">大字号阅读</span></span>
             </label>
           </div>
-          <p className="mt-3 text-xs leading-6 text-slate-500">设置仅对本次练习生效。切换即时判定不会自动提交已有选择，也不会解锁已提交的答案。</p>
+          <p className="mt-3 text-xs leading-6 text-slate-500">设置仅对本次练习生效，已提交答案保持锁定。</p>
         </fieldset>
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
         <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
@@ -209,8 +210,8 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <SessionResults paper={paper} answers={selectedAnswers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} />
         ) : (
           <>
-        <section aria-labelledby="question-title" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-          <h1 ref={headingRef} tabIndex={-1} id="question-title" className="scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
+        <section aria-labelledby="question-title" className="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+          <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
           <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
           <QuestionBody question={question} largeText={largeText} compact />
@@ -245,7 +246,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           </form>
         </section>
         <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm leading-6 text-slate-500">{finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。带 • 的题目也需要提交后才计入进度。`}</p>
+          <p className="text-sm leading-6 text-slate-500">{finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。已选择的题目提交后才计入进度。`}</p>
           {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button> : null)}
         </div>
         </>

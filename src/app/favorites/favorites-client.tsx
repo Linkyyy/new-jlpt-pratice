@@ -107,12 +107,12 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
             {filtered.map((entry) => {
               const item = catalogById.get(entry.questionId);
               const folderName = data.folders.find((folder) => folder.id === entry.folderId)?.name;
-              if (!item) return <article key={entry.questionId} className="rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">{loadingImported && entry.questionId.startsWith("imported:") ? "正在读取收藏题目" : "收藏的题目暂不可用"}</h2><p className="mt-2 text-sm leading-6 break-words text-slate-500">题目 ID：{entry.questionId}。收藏记录已保留。</p><FavoriteButton questionId={entry.questionId} /></article>;
+              if (!item) return <article key={entry.questionId} className="relative rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">{loadingImported && entry.questionId.startsWith("imported:") ? "正在读取收藏题目" : "收藏的题目暂不可用"}</h2><p className="mt-2 text-sm leading-6 break-words text-slate-500">题目 ID：{entry.questionId}。收藏记录已保留。</p><FavoriteButton questionId={entry.questionId} /></article>;
               const { question, year } = item;
               const type = questionTypes.find((type) => type.category === question.category)?.value ?? "all";
               const practiceLink = `/practice?source=${item.source ?? "original"}&level=${question.level}&year=${year}&type=${type}&mode=practice&question=${encodeURIComponent(question.id)}`;
-              return <article key={question.id} data-question-id={question.id} className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
-                <h2 className="text-sm font-semibold leading-6 break-words text-slate-600">{question.level} · {formatPeriod(year)} · {item.source === "imported" ? "用户提供题库" : "原创模拟题库"} · {question.category} · {folderName}</h2>
+              return <article key={question.id} data-question-id={question.id} className="relative rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+                <h2 className="pr-12 text-sm font-semibold leading-6 break-words text-slate-600">{question.level} · {formatPeriod(year)} · {item.source === "imported" ? "用户提供题库" : "原创模拟题库"} · {question.category} · {folderName}</h2>
                 <QuestionBody question={question} />
                 <ol lang="ja" className="mt-4 grid gap-2 text-sm leading-7 sm:grid-cols-2">{question.options.map((option) => <li key={option.id} className="rounded-lg border border-slate-200 px-3 py-2"><span className="font-semibold">{option.label ?? option.id}. </span><RichContent text={option.text} html={question.richText} /></li>)}</ol>
                 <div className="flex flex-wrap items-center gap-x-4"><FavoriteButton questionId={question.id} /><Link href={practiceLink} className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 underline">练习本题 →</Link></div>

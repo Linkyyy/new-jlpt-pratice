@@ -170,20 +170,20 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
         ) : (
           <>
             <ResponsivePanel title="考试题目导航" trigger={`题号导航 · 已作答 ${answeredCount}/${paper.questions.length}`}>
-            <nav aria-label="题目导航" className="mb-3 flex max-h-48 flex-wrap gap-2 overflow-y-auto">
+            <nav aria-label="题目导航" className="question-grid">
               {paper.questions.map((item, index) => {
                 const answered = answers[item.id] !== undefined;
-                return <button key={item.id} type="button" onClick={() => goToQuestion(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`第 ${index + 1} 题，${answered ? "已作答" : "未作答"}`} className={`min-h-11 min-w-11 rounded-lg border px-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${index === questionIndex ? "border-indigo-600 bg-indigo-600 text-white" : answered ? "border-indigo-200 bg-indigo-50 text-indigo-700" : "border-slate-300 bg-white text-slate-600"}`}>{index + 1}{answered ? " ✓" : ""}</button>;
+                return <button key={item.id} type="button" onClick={() => goToQuestion(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`第 ${index + 1} 题，${answered ? "已作答" : "未作答"}`} className={`question-number ${index === questionIndex ? "question-current" : ""} ${answered ? "question-answered" : "question-empty"}`}>{index + 1}</button>;
               })}
             </nav>
-            <p className="mb-5 text-xs leading-6 text-slate-500">✓ 已作答 · 无标记为未作答。{finished ? "已交卷，答案已锁定。" : "选择即记录，交卷前可修改。"}</p>
+            <p className="mb-5 text-xs leading-6 text-slate-500">蓝色为已作答，描边表示当前题目。{finished ? "已交卷，答案已锁定。" : "选择即记录，交卷前可修改。"}</p>
             <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>
             <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
             {question.instruction && <div className="mt-4 lg:hidden"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
 </ResponsivePanel>
             <div className="session-content">
-            <section aria-labelledby="question-title" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-              <h1 ref={headingRef} tabIndex={-1} id="question-title" className="scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
+            <section aria-labelledby="question-title" className="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+              <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
               <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
               <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
               <QuestionBody question={question} compact />

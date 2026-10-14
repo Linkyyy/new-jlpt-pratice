@@ -38,11 +38,11 @@ export default function FavoriteButton({ questionId }: { questionId: string }) {
   }
 
   return (
-    <div className="mt-4">
-      <button type="button" onClick={openDialog} disabled={!ready || storageError !== null} aria-label={entry ? `管理收藏：${folderName}` : "收藏本题"} className="min-h-11 max-w-full rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-left text-sm font-semibold break-words text-amber-900 hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-50">
-        {!ready ? "收藏加载中……" : entry ? `★ 已收藏 · ${folderName}` : "☆ 收藏本题"}
+    <div className="absolute right-4 top-4 sm:right-6 sm:top-6">
+      <button type="button" onClick={openDialog} disabled={!ready || storageError !== null} aria-label={entry ? `管理收藏：${folderName}` : "收藏本题"} title={storageError ?? (entry ? `已收藏 · ${folderName}` : "收藏本题")} className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-amber-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-50 ${entry ? "text-amber-500" : "text-slate-400 hover:text-amber-500"}`}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill={entry ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round"><path d="m12 3 2.78 5.63L21 9.54l-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.93 1.06-6.2L3 9.54l6.22-.91L12 3Z" /></svg>
       </button>
-      <p role="status" className="mt-1 text-xs leading-6 text-slate-500">{storageError ?? message}</p>
+      <p role="status" className="sr-only">{storageError ?? message}</p>
       <dialog ref={dialogRef} aria-labelledby={titleId} className="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-xl backdrop:bg-slate-900/50">
         <h2 id={titleId} className="text-xl font-bold">{entry ? "管理题目收藏" : "收藏题目"}</h2>
         <p className="mt-2 text-sm leading-6 text-slate-500">每道题归入一个收藏夹，可随时移动。收藏保存在当前浏览器，不包含作答记录。</p>
