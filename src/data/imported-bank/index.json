@@ -1,0 +1,3491 @@
+{
+  "version": 1,
+  "generatedBy": "jlpt-practice/import-question-bank/v1",
+  "sourceLabel": "用户提供题库",
+  "groups": [
+    {
+      "level": "N1",
+      "period": "201007",
+      "type": "vocabulary",
+      "file": "201007-N1-1.json",
+      "sourceFile": "time_201007_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201007",
+      "type": "grammar",
+      "file": "201007-N1-2.json",
+      "sourceFile": "time_201007_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201007",
+      "type": "reading",
+      "file": "201007-N1-3.json",
+      "sourceFile": "time_201007_level_n1_type_3.json",
+      "availableCount": 24,
+      "unavailableCount": 2,
+      "totalCount": 26
+    },
+    {
+      "level": "N1",
+      "period": "201007",
+      "type": "listening",
+      "file": "201007-N1-4.json",
+      "sourceFile": "time_201007_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201007",
+      "type": "vocabulary",
+      "file": "201007-N2-1.json",
+      "sourceFile": "time_201007_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201007",
+      "type": "grammar",
+      "file": "201007-N2-2.json",
+      "sourceFile": "time_201007_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201007",
+      "type": "reading",
+      "file": "201007-N2-3.json",
+      "sourceFile": "time_201007_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201007",
+      "type": "listening",
+      "file": "201007-N2-4.json",
+      "sourceFile": "time_201007_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201007",
+      "type": "vocabulary",
+      "file": "201007-N3-1.json",
+      "sourceFile": "time_201007_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201007",
+      "type": "grammar",
+      "file": "201007-N3-2.json",
+      "sourceFile": "time_201007_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201007",
+      "type": "reading",
+      "file": "201007-N3-3.json",
+      "sourceFile": "time_201007_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201007",
+      "type": "listening",
+      "file": "201007-N3-4.json",
+      "sourceFile": "time_201007_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201012",
+      "type": "vocabulary",
+      "file": "201012-N1-1.json",
+      "sourceFile": "time_201012_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201012",
+      "type": "grammar",
+      "file": "201012-N1-2.json",
+      "sourceFile": "time_201012_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201012",
+      "type": "reading",
+      "file": "201012-N1-3.json",
+      "sourceFile": "time_201012_level_n1_type_3.json",
+      "availableCount": 24,
+      "unavailableCount": 2,
+      "totalCount": 26
+    },
+    {
+      "level": "N1",
+      "period": "201012",
+      "type": "listening",
+      "file": "201012-N1-4.json",
+      "sourceFile": "time_201012_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201012",
+      "type": "vocabulary",
+      "file": "201012-N2-1.json",
+      "sourceFile": "time_201012_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201012",
+      "type": "grammar",
+      "file": "201012-N2-2.json",
+      "sourceFile": "time_201012_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201012",
+      "type": "reading",
+      "file": "201012-N2-3.json",
+      "sourceFile": "time_201012_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201012",
+      "type": "listening",
+      "file": "201012-N2-4.json",
+      "sourceFile": "time_201012_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201012",
+      "type": "vocabulary",
+      "file": "201012-N3-1.json",
+      "sourceFile": "time_201012_level_n3_type_1.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "201012",
+      "type": "grammar",
+      "file": "201012-N3-2.json",
+      "sourceFile": "time_201012_level_n3_type_2.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "201012",
+      "type": "reading",
+      "file": "201012-N3-3.json",
+      "sourceFile": "time_201012_level_n3_type_3.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "201012",
+      "type": "listening",
+      "file": "201012-N3-4.json",
+      "sourceFile": "time_201012_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N1",
+      "period": "201107",
+      "type": "vocabulary",
+      "file": "201107-N1-1.json",
+      "sourceFile": "time_201107_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201107",
+      "type": "grammar",
+      "file": "201107-N1-2.json",
+      "sourceFile": "time_201107_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201107",
+      "type": "reading",
+      "file": "201107-N1-3.json",
+      "sourceFile": "time_201107_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201107",
+      "type": "listening",
+      "file": "201107-N1-4.json",
+      "sourceFile": "time_201107_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201107",
+      "type": "vocabulary",
+      "file": "201107-N2-1.json",
+      "sourceFile": "time_201107_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201107",
+      "type": "grammar",
+      "file": "201107-N2-2.json",
+      "sourceFile": "time_201107_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201107",
+      "type": "reading",
+      "file": "201107-N2-3.json",
+      "sourceFile": "time_201107_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201107",
+      "type": "listening",
+      "file": "201107-N2-4.json",
+      "sourceFile": "time_201107_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 31,
+      "totalCount": 31
+    },
+    {
+      "level": "N3",
+      "period": "201107",
+      "type": "vocabulary",
+      "file": "201107-N3-1.json",
+      "sourceFile": "time_201107_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201107",
+      "type": "grammar",
+      "file": "201107-N3-2.json",
+      "sourceFile": "time_201107_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201107",
+      "type": "reading",
+      "file": "201107-N3-3.json",
+      "sourceFile": "time_201107_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201107",
+      "type": "listening",
+      "file": "201107-N3-4.json",
+      "sourceFile": "time_201107_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 27,
+      "totalCount": 27
+    },
+    {
+      "level": "N1",
+      "period": "201112",
+      "type": "vocabulary",
+      "file": "201112-N1-1.json",
+      "sourceFile": "time_201112_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201112",
+      "type": "grammar",
+      "file": "201112-N1-2.json",
+      "sourceFile": "time_201112_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201112",
+      "type": "reading",
+      "file": "201112-N1-3.json",
+      "sourceFile": "time_201112_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201112",
+      "type": "listening",
+      "file": "201112-N1-4.json",
+      "sourceFile": "time_201112_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201112",
+      "type": "vocabulary",
+      "file": "201112-N2-1.json",
+      "sourceFile": "time_201112_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201112",
+      "type": "grammar",
+      "file": "201112-N2-2.json",
+      "sourceFile": "time_201112_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201112",
+      "type": "reading",
+      "file": "201112-N2-3.json",
+      "sourceFile": "time_201112_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201112",
+      "type": "listening",
+      "file": "201112-N2-4.json",
+      "sourceFile": "time_201112_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 31,
+      "totalCount": 31
+    },
+    {
+      "level": "N3",
+      "period": "201112",
+      "type": "vocabulary",
+      "file": "201112-N3-1.json",
+      "sourceFile": "time_201112_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201112",
+      "type": "grammar",
+      "file": "201112-N3-2.json",
+      "sourceFile": "time_201112_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201112",
+      "type": "reading",
+      "file": "201112-N3-3.json",
+      "sourceFile": "time_201112_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201112",
+      "type": "listening",
+      "file": "201112-N3-4.json",
+      "sourceFile": "time_201112_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 27,
+      "totalCount": 27
+    },
+    {
+      "level": "N1",
+      "period": "201207",
+      "type": "vocabulary",
+      "file": "201207-N1-1.json",
+      "sourceFile": "time_201207_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201207",
+      "type": "grammar",
+      "file": "201207-N1-2.json",
+      "sourceFile": "time_201207_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201207",
+      "type": "reading",
+      "file": "201207-N1-3.json",
+      "sourceFile": "time_201207_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201207",
+      "type": "listening",
+      "file": "201207-N1-4.json",
+      "sourceFile": "time_201207_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201207",
+      "type": "vocabulary",
+      "file": "201207-N2-1.json",
+      "sourceFile": "time_201207_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201207",
+      "type": "grammar",
+      "file": "201207-N2-2.json",
+      "sourceFile": "time_201207_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201207",
+      "type": "reading",
+      "file": "201207-N2-3.json",
+      "sourceFile": "time_201207_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201207",
+      "type": "listening",
+      "file": "201207-N2-4.json",
+      "sourceFile": "time_201207_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 31,
+      "totalCount": 31
+    },
+    {
+      "level": "N3",
+      "period": "201207",
+      "type": "vocabulary",
+      "file": "201207-N3-1.json",
+      "sourceFile": "time_201207_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201207",
+      "type": "grammar",
+      "file": "201207-N3-2.json",
+      "sourceFile": "time_201207_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201207",
+      "type": "reading",
+      "file": "201207-N3-3.json",
+      "sourceFile": "time_201207_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201207",
+      "type": "listening",
+      "file": "201207-N3-4.json",
+      "sourceFile": "time_201207_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201212",
+      "type": "vocabulary",
+      "file": "201212-N1-1.json",
+      "sourceFile": "time_201212_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201212",
+      "type": "grammar",
+      "file": "201212-N1-2.json",
+      "sourceFile": "time_201212_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201212",
+      "type": "reading",
+      "file": "201212-N1-3.json",
+      "sourceFile": "time_201212_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201212",
+      "type": "listening",
+      "file": "201212-N1-4.json",
+      "sourceFile": "time_201212_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201212",
+      "type": "vocabulary",
+      "file": "201212-N2-1.json",
+      "sourceFile": "time_201212_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201212",
+      "type": "grammar",
+      "file": "201212-N2-2.json",
+      "sourceFile": "time_201212_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201212",
+      "type": "reading",
+      "file": "201212-N2-3.json",
+      "sourceFile": "time_201212_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201212",
+      "type": "listening",
+      "file": "201212-N2-4.json",
+      "sourceFile": "time_201212_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 31,
+      "totalCount": 31
+    },
+    {
+      "level": "N3",
+      "period": "201212",
+      "type": "vocabulary",
+      "file": "201212-N3-1.json",
+      "sourceFile": "time_201212_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201212",
+      "type": "grammar",
+      "file": "201212-N3-2.json",
+      "sourceFile": "time_201212_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201212",
+      "type": "reading",
+      "file": "201212-N3-3.json",
+      "sourceFile": "time_201212_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201212",
+      "type": "listening",
+      "file": "201212-N3-4.json",
+      "sourceFile": "time_201212_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201307",
+      "type": "vocabulary",
+      "file": "201307-N1-1.json",
+      "sourceFile": "time_201307_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201307",
+      "type": "grammar",
+      "file": "201307-N1-2.json",
+      "sourceFile": "time_201307_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201307",
+      "type": "reading",
+      "file": "201307-N1-3.json",
+      "sourceFile": "time_201307_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201307",
+      "type": "listening",
+      "file": "201307-N1-4.json",
+      "sourceFile": "time_201307_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201307",
+      "type": "vocabulary",
+      "file": "201307-N2-1.json",
+      "sourceFile": "time_201307_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201307",
+      "type": "grammar",
+      "file": "201307-N2-2.json",
+      "sourceFile": "time_201307_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201307",
+      "type": "reading",
+      "file": "201307-N2-3.json",
+      "sourceFile": "time_201307_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201307",
+      "type": "listening",
+      "file": "201307-N2-4.json",
+      "sourceFile": "time_201307_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 31,
+      "totalCount": 31
+    },
+    {
+      "level": "N3",
+      "period": "201307",
+      "type": "vocabulary",
+      "file": "201307-N3-1.json",
+      "sourceFile": "time_201307_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201307",
+      "type": "grammar",
+      "file": "201307-N3-2.json",
+      "sourceFile": "time_201307_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201307",
+      "type": "reading",
+      "file": "201307-N3-3.json",
+      "sourceFile": "time_201307_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201307",
+      "type": "listening",
+      "file": "201307-N3-4.json",
+      "sourceFile": "time_201307_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201312",
+      "type": "vocabulary",
+      "file": "201312-N1-1.json",
+      "sourceFile": "time_201312_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201312",
+      "type": "grammar",
+      "file": "201312-N1-2.json",
+      "sourceFile": "time_201312_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201312",
+      "type": "reading",
+      "file": "201312-N1-3.json",
+      "sourceFile": "time_201312_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201312",
+      "type": "listening",
+      "file": "201312-N1-4.json",
+      "sourceFile": "time_201312_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 36,
+      "totalCount": 36
+    },
+    {
+      "level": "N2",
+      "period": "201312",
+      "type": "vocabulary",
+      "file": "201312-N2-1.json",
+      "sourceFile": "time_201312_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201312",
+      "type": "grammar",
+      "file": "201312-N2-2.json",
+      "sourceFile": "time_201312_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201312",
+      "type": "reading",
+      "file": "201312-N2-3.json",
+      "sourceFile": "time_201312_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201312",
+      "type": "listening",
+      "file": "201312-N2-4.json",
+      "sourceFile": "time_201312_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201312",
+      "type": "vocabulary",
+      "file": "201312-N3-1.json",
+      "sourceFile": "time_201312_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201312",
+      "type": "grammar",
+      "file": "201312-N3-2.json",
+      "sourceFile": "time_201312_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201312",
+      "type": "reading",
+      "file": "201312-N3-3.json",
+      "sourceFile": "time_201312_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201312",
+      "type": "listening",
+      "file": "201312-N3-4.json",
+      "sourceFile": "time_201312_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201407",
+      "type": "vocabulary",
+      "file": "201407-N1-1.json",
+      "sourceFile": "time_201407_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201407",
+      "type": "grammar",
+      "file": "201407-N1-2.json",
+      "sourceFile": "time_201407_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201407",
+      "type": "reading",
+      "file": "201407-N1-3.json",
+      "sourceFile": "time_201407_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201407",
+      "type": "listening",
+      "file": "201407-N1-4.json",
+      "sourceFile": "time_201407_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201407",
+      "type": "vocabulary",
+      "file": "201407-N2-1.json",
+      "sourceFile": "time_201407_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201407",
+      "type": "grammar",
+      "file": "201407-N2-2.json",
+      "sourceFile": "time_201407_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201407",
+      "type": "reading",
+      "file": "201407-N2-3.json",
+      "sourceFile": "time_201407_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201407",
+      "type": "listening",
+      "file": "201407-N2-4.json",
+      "sourceFile": "time_201407_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201407",
+      "type": "vocabulary",
+      "file": "201407-N3-1.json",
+      "sourceFile": "time_201407_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201407",
+      "type": "grammar",
+      "file": "201407-N3-2.json",
+      "sourceFile": "time_201407_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201407",
+      "type": "reading",
+      "file": "201407-N3-3.json",
+      "sourceFile": "time_201407_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201407",
+      "type": "listening",
+      "file": "201407-N3-4.json",
+      "sourceFile": "time_201407_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201412",
+      "type": "vocabulary",
+      "file": "201412-N1-1.json",
+      "sourceFile": "time_201412_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201412",
+      "type": "grammar",
+      "file": "201412-N1-2.json",
+      "sourceFile": "time_201412_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201412",
+      "type": "reading",
+      "file": "201412-N1-3.json",
+      "sourceFile": "time_201412_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201412",
+      "type": "listening",
+      "file": "201412-N1-4.json",
+      "sourceFile": "time_201412_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201412",
+      "type": "vocabulary",
+      "file": "201412-N2-1.json",
+      "sourceFile": "time_201412_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201412",
+      "type": "grammar",
+      "file": "201412-N2-2.json",
+      "sourceFile": "time_201412_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201412",
+      "type": "reading",
+      "file": "201412-N2-3.json",
+      "sourceFile": "time_201412_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201412",
+      "type": "listening",
+      "file": "201412-N2-4.json",
+      "sourceFile": "time_201412_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201412",
+      "type": "vocabulary",
+      "file": "201412-N3-1.json",
+      "sourceFile": "time_201412_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201412",
+      "type": "grammar",
+      "file": "201412-N3-2.json",
+      "sourceFile": "time_201412_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201412",
+      "type": "reading",
+      "file": "201412-N3-3.json",
+      "sourceFile": "time_201412_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201412",
+      "type": "listening",
+      "file": "201412-N3-4.json",
+      "sourceFile": "time_201412_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201507",
+      "type": "vocabulary",
+      "file": "201507-N1-1.json",
+      "sourceFile": "time_201507_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201507",
+      "type": "grammar",
+      "file": "201507-N1-2.json",
+      "sourceFile": "time_201507_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201507",
+      "type": "reading",
+      "file": "201507-N1-3.json",
+      "sourceFile": "time_201507_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201507",
+      "type": "listening",
+      "file": "201507-N1-4.json",
+      "sourceFile": "time_201507_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201507",
+      "type": "vocabulary",
+      "file": "201507-N2-1.json",
+      "sourceFile": "time_201507_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201507",
+      "type": "grammar",
+      "file": "201507-N2-2.json",
+      "sourceFile": "time_201507_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201507",
+      "type": "reading",
+      "file": "201507-N2-3.json",
+      "sourceFile": "time_201507_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201507",
+      "type": "listening",
+      "file": "201507-N2-4.json",
+      "sourceFile": "time_201507_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201507",
+      "type": "vocabulary",
+      "file": "201507-N3-1.json",
+      "sourceFile": "time_201507_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201507",
+      "type": "grammar",
+      "file": "201507-N3-2.json",
+      "sourceFile": "time_201507_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201507",
+      "type": "reading",
+      "file": "201507-N3-3.json",
+      "sourceFile": "time_201507_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201507",
+      "type": "listening",
+      "file": "201507-N3-4.json",
+      "sourceFile": "time_201507_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201512",
+      "type": "vocabulary",
+      "file": "201512-N1-1.json",
+      "sourceFile": "time_201512_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201512",
+      "type": "grammar",
+      "file": "201512-N1-2.json",
+      "sourceFile": "time_201512_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201512",
+      "type": "reading",
+      "file": "201512-N1-3.json",
+      "sourceFile": "time_201512_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201512",
+      "type": "listening",
+      "file": "201512-N1-4.json",
+      "sourceFile": "time_201512_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201512",
+      "type": "vocabulary",
+      "file": "201512-N2-1.json",
+      "sourceFile": "time_201512_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201512",
+      "type": "grammar",
+      "file": "201512-N2-2.json",
+      "sourceFile": "time_201512_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201512",
+      "type": "reading",
+      "file": "201512-N2-3.json",
+      "sourceFile": "time_201512_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201512",
+      "type": "listening",
+      "file": "201512-N2-4.json",
+      "sourceFile": "time_201512_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201512",
+      "type": "vocabulary",
+      "file": "201512-N3-1.json",
+      "sourceFile": "time_201512_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201512",
+      "type": "grammar",
+      "file": "201512-N3-2.json",
+      "sourceFile": "time_201512_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201512",
+      "type": "reading",
+      "file": "201512-N3-3.json",
+      "sourceFile": "time_201512_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201512",
+      "type": "listening",
+      "file": "201512-N3-4.json",
+      "sourceFile": "time_201512_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201607",
+      "type": "vocabulary",
+      "file": "201607-N1-1.json",
+      "sourceFile": "time_201607_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201607",
+      "type": "grammar",
+      "file": "201607-N1-2.json",
+      "sourceFile": "time_201607_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201607",
+      "type": "reading",
+      "file": "201607-N1-3.json",
+      "sourceFile": "time_201607_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201607",
+      "type": "listening",
+      "file": "201607-N1-4.json",
+      "sourceFile": "time_201607_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201607",
+      "type": "vocabulary",
+      "file": "201607-N2-1.json",
+      "sourceFile": "time_201607_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201607",
+      "type": "grammar",
+      "file": "201607-N2-2.json",
+      "sourceFile": "time_201607_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201607",
+      "type": "reading",
+      "file": "201607-N2-3.json",
+      "sourceFile": "time_201607_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201607",
+      "type": "listening",
+      "file": "201607-N2-4.json",
+      "sourceFile": "time_201607_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201607",
+      "type": "vocabulary",
+      "file": "201607-N3-1.json",
+      "sourceFile": "time_201607_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201607",
+      "type": "grammar",
+      "file": "201607-N3-2.json",
+      "sourceFile": "time_201607_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201607",
+      "type": "reading",
+      "file": "201607-N3-3.json",
+      "sourceFile": "time_201607_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201607",
+      "type": "listening",
+      "file": "201607-N3-4.json",
+      "sourceFile": "time_201607_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201612",
+      "type": "vocabulary",
+      "file": "201612-N1-1.json",
+      "sourceFile": "time_201612_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201612",
+      "type": "grammar",
+      "file": "201612-N1-2.json",
+      "sourceFile": "time_201612_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201612",
+      "type": "reading",
+      "file": "201612-N1-3.json",
+      "sourceFile": "time_201612_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201612",
+      "type": "listening",
+      "file": "201612-N1-4.json",
+      "sourceFile": "time_201612_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 37,
+      "totalCount": 37
+    },
+    {
+      "level": "N2",
+      "period": "201612",
+      "type": "vocabulary",
+      "file": "201612-N2-1.json",
+      "sourceFile": "time_201612_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201612",
+      "type": "grammar",
+      "file": "201612-N2-2.json",
+      "sourceFile": "time_201612_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201612",
+      "type": "reading",
+      "file": "201612-N2-3.json",
+      "sourceFile": "time_201612_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201612",
+      "type": "listening",
+      "file": "201612-N2-4.json",
+      "sourceFile": "time_201612_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201612",
+      "type": "vocabulary",
+      "file": "201612-N3-1.json",
+      "sourceFile": "time_201612_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201612",
+      "type": "grammar",
+      "file": "201612-N3-2.json",
+      "sourceFile": "time_201612_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201612",
+      "type": "reading",
+      "file": "201612-N3-3.json",
+      "sourceFile": "time_201612_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201612",
+      "type": "listening",
+      "file": "201612-N3-4.json",
+      "sourceFile": "time_201612_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201707",
+      "type": "vocabulary",
+      "file": "201707-N1-1.json",
+      "sourceFile": "time_201707_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201707",
+      "type": "grammar",
+      "file": "201707-N1-2.json",
+      "sourceFile": "time_201707_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201707",
+      "type": "reading",
+      "file": "201707-N1-3.json",
+      "sourceFile": "time_201707_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201707",
+      "type": "listening",
+      "file": "201707-N1-4.json",
+      "sourceFile": "time_201707_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201707",
+      "type": "vocabulary",
+      "file": "201707-N2-1.json",
+      "sourceFile": "time_201707_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201707",
+      "type": "grammar",
+      "file": "201707-N2-2.json",
+      "sourceFile": "time_201707_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201707",
+      "type": "reading",
+      "file": "201707-N2-3.json",
+      "sourceFile": "time_201707_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201707",
+      "type": "listening",
+      "file": "201707-N2-4.json",
+      "sourceFile": "time_201707_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201707",
+      "type": "vocabulary",
+      "file": "201707-N3-1.json",
+      "sourceFile": "time_201707_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201707",
+      "type": "grammar",
+      "file": "201707-N3-2.json",
+      "sourceFile": "time_201707_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201707",
+      "type": "reading",
+      "file": "201707-N3-3.json",
+      "sourceFile": "time_201707_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201707",
+      "type": "listening",
+      "file": "201707-N3-4.json",
+      "sourceFile": "time_201707_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201712",
+      "type": "vocabulary",
+      "file": "201712-N1-1.json",
+      "sourceFile": "time_201712_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201712",
+      "type": "grammar",
+      "file": "201712-N1-2.json",
+      "sourceFile": "time_201712_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201712",
+      "type": "reading",
+      "file": "201712-N1-3.json",
+      "sourceFile": "time_201712_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201712",
+      "type": "listening",
+      "file": "201712-N1-4.json",
+      "sourceFile": "time_201712_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201712",
+      "type": "vocabulary",
+      "file": "201712-N2-1.json",
+      "sourceFile": "time_201712_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201712",
+      "type": "grammar",
+      "file": "201712-N2-2.json",
+      "sourceFile": "time_201712_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201712",
+      "type": "reading",
+      "file": "201712-N2-3.json",
+      "sourceFile": "time_201712_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201712",
+      "type": "listening",
+      "file": "201712-N2-4.json",
+      "sourceFile": "time_201712_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 32,
+      "totalCount": 32
+    },
+    {
+      "level": "N3",
+      "period": "201712",
+      "type": "vocabulary",
+      "file": "201712-N3-1.json",
+      "sourceFile": "time_201712_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201712",
+      "type": "grammar",
+      "file": "201712-N3-2.json",
+      "sourceFile": "time_201712_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201712",
+      "type": "reading",
+      "file": "201712-N3-3.json",
+      "sourceFile": "time_201712_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201712",
+      "type": "listening",
+      "file": "201712-N3-4.json",
+      "sourceFile": "time_201712_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201807",
+      "type": "vocabulary",
+      "file": "201807-N1-1.json",
+      "sourceFile": "time_201807_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201807",
+      "type": "grammar",
+      "file": "201807-N1-2.json",
+      "sourceFile": "time_201807_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201807",
+      "type": "reading",
+      "file": "201807-N1-3.json",
+      "sourceFile": "time_201807_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201807",
+      "type": "listening",
+      "file": "201807-N1-4.json",
+      "sourceFile": "time_201807_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201807",
+      "type": "vocabulary",
+      "file": "201807-N2-1.json",
+      "sourceFile": "time_201807_level_n2_type_1.json",
+      "availableCount": 32,
+      "unavailableCount": 0,
+      "totalCount": 32
+    },
+    {
+      "level": "N2",
+      "period": "201807",
+      "type": "grammar",
+      "file": "201807-N2-2.json",
+      "sourceFile": "time_201807_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201807",
+      "type": "reading",
+      "file": "201807-N2-3.json",
+      "sourceFile": "time_201807_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201807",
+      "type": "listening",
+      "file": "201807-N2-4.json",
+      "sourceFile": "time_201807_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "201807",
+      "type": "vocabulary",
+      "file": "201807-N3-1.json",
+      "sourceFile": "time_201807_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201807",
+      "type": "grammar",
+      "file": "201807-N3-2.json",
+      "sourceFile": "time_201807_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201807",
+      "type": "reading",
+      "file": "201807-N3-3.json",
+      "sourceFile": "time_201807_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201807",
+      "type": "listening",
+      "file": "201807-N3-4.json",
+      "sourceFile": "time_201807_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201812",
+      "type": "vocabulary",
+      "file": "201812-N1-1.json",
+      "sourceFile": "time_201812_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201812",
+      "type": "grammar",
+      "file": "201812-N1-2.json",
+      "sourceFile": "time_201812_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201812",
+      "type": "reading",
+      "file": "201812-N1-3.json",
+      "sourceFile": "time_201812_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201812",
+      "type": "listening",
+      "file": "201812-N1-4.json",
+      "sourceFile": "time_201812_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201812",
+      "type": "vocabulary",
+      "file": "201812-N2-1.json",
+      "sourceFile": "time_201812_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "201812",
+      "type": "grammar",
+      "file": "201812-N2-2.json",
+      "sourceFile": "time_201812_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201812",
+      "type": "reading",
+      "file": "201812-N2-3.json",
+      "sourceFile": "time_201812_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201812",
+      "type": "listening",
+      "file": "201812-N2-4.json",
+      "sourceFile": "time_201812_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "201812",
+      "type": "vocabulary",
+      "file": "201812-N3-1.json",
+      "sourceFile": "time_201812_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201812",
+      "type": "grammar",
+      "file": "201812-N3-2.json",
+      "sourceFile": "time_201812_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201812",
+      "type": "reading",
+      "file": "201812-N3-3.json",
+      "sourceFile": "time_201812_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201812",
+      "type": "listening",
+      "file": "201812-N3-4.json",
+      "sourceFile": "time_201812_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201907",
+      "type": "vocabulary",
+      "file": "201907-N1-1.json",
+      "sourceFile": "time_201907_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201907",
+      "type": "grammar",
+      "file": "201907-N1-2.json",
+      "sourceFile": "time_201907_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201907",
+      "type": "reading",
+      "file": "201907-N1-3.json",
+      "sourceFile": "time_201907_level_n1_type_3.json",
+      "availableCount": 22,
+      "unavailableCount": 2,
+      "totalCount": 24
+    },
+    {
+      "level": "N1",
+      "period": "201907",
+      "type": "listening",
+      "file": "201907-N1-4.json",
+      "sourceFile": "time_201907_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201907",
+      "type": "vocabulary",
+      "file": "201907-N2-1.json",
+      "sourceFile": "time_201907_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "201907",
+      "type": "grammar",
+      "file": "201907-N2-2.json",
+      "sourceFile": "time_201907_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201907",
+      "type": "reading",
+      "file": "201907-N2-3.json",
+      "sourceFile": "time_201907_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "201907",
+      "type": "listening",
+      "file": "201907-N2-4.json",
+      "sourceFile": "time_201907_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "201907",
+      "type": "vocabulary",
+      "file": "201907-N3-1.json",
+      "sourceFile": "time_201907_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201907",
+      "type": "grammar",
+      "file": "201907-N3-2.json",
+      "sourceFile": "time_201907_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201907",
+      "type": "reading",
+      "file": "201907-N3-3.json",
+      "sourceFile": "time_201907_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201907",
+      "type": "listening",
+      "file": "201907-N3-4.json",
+      "sourceFile": "time_201907_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "201912",
+      "type": "vocabulary",
+      "file": "201912-N1-1.json",
+      "sourceFile": "time_201912_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "201912",
+      "type": "grammar",
+      "file": "201912-N1-2.json",
+      "sourceFile": "time_201912_level_n1_type_2.json",
+      "availableCount": 20,
+      "unavailableCount": 0,
+      "totalCount": 20
+    },
+    {
+      "level": "N1",
+      "period": "201912",
+      "type": "reading",
+      "file": "201912-N1-3.json",
+      "sourceFile": "time_201912_level_n1_type_3.json",
+      "availableCount": 22,
+      "unavailableCount": 2,
+      "totalCount": 24
+    },
+    {
+      "level": "N1",
+      "period": "201912",
+      "type": "listening",
+      "file": "201912-N1-4.json",
+      "sourceFile": "time_201912_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "201912",
+      "type": "vocabulary",
+      "file": "201912-N2-1.json",
+      "sourceFile": "time_201912_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "201912",
+      "type": "grammar",
+      "file": "201912-N2-2.json",
+      "sourceFile": "time_201912_level_n2_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "201912",
+      "type": "reading",
+      "file": "201912-N2-3.json",
+      "sourceFile": "time_201912_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "201912",
+      "type": "listening",
+      "file": "201912-N2-4.json",
+      "sourceFile": "time_201912_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "201912",
+      "type": "vocabulary",
+      "file": "201912-N3-1.json",
+      "sourceFile": "time_201912_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "201912",
+      "type": "grammar",
+      "file": "201912-N3-2.json",
+      "sourceFile": "time_201912_level_n3_type_2.json",
+      "availableCount": 23,
+      "unavailableCount": 0,
+      "totalCount": 23
+    },
+    {
+      "level": "N3",
+      "period": "201912",
+      "type": "reading",
+      "file": "201912-N3-3.json",
+      "sourceFile": "time_201912_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "201912",
+      "type": "listening",
+      "file": "201912-N3-4.json",
+      "sourceFile": "time_201912_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202012",
+      "type": "vocabulary",
+      "file": "202012-N1-1.json",
+      "sourceFile": "time_202012_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202012",
+      "type": "grammar",
+      "file": "202012-N1-2.json",
+      "sourceFile": "time_202012_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202012",
+      "type": "reading",
+      "file": "202012-N1-3.json",
+      "sourceFile": "time_202012_level_n1_type_3.json",
+      "availableCount": 22,
+      "unavailableCount": 2,
+      "totalCount": 24
+    },
+    {
+      "level": "N1",
+      "period": "202012",
+      "type": "listening",
+      "file": "202012-N1-4.json",
+      "sourceFile": "time_202012_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "202012",
+      "type": "vocabulary",
+      "file": "202012-N2-1.json",
+      "sourceFile": "time_202012_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202012",
+      "type": "grammar",
+      "file": "202012-N2-2.json",
+      "sourceFile": "time_202012_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202012",
+      "type": "reading",
+      "file": "202012-N2-3.json",
+      "sourceFile": "time_202012_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202012",
+      "type": "listening",
+      "file": "202012-N2-4.json",
+      "sourceFile": "time_202012_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202012",
+      "type": "vocabulary",
+      "file": "202012-N3-1.json",
+      "sourceFile": "time_202012_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202012",
+      "type": "grammar",
+      "file": "202012-N3-2.json",
+      "sourceFile": "time_202012_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202012",
+      "type": "reading",
+      "file": "202012-N3-3.json",
+      "sourceFile": "time_202012_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202012",
+      "type": "listening",
+      "file": "202012-N3-4.json",
+      "sourceFile": "time_202012_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202107",
+      "type": "vocabulary",
+      "file": "202107-N1-1.json",
+      "sourceFile": "time_202107_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202107",
+      "type": "grammar",
+      "file": "202107-N1-2.json",
+      "sourceFile": "time_202107_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202107",
+      "type": "reading",
+      "file": "202107-N1-3.json",
+      "sourceFile": "time_202107_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202107",
+      "type": "listening",
+      "file": "202107-N1-4.json",
+      "sourceFile": "time_202107_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "202107",
+      "type": "vocabulary",
+      "file": "202107-N2-1.json",
+      "sourceFile": "time_202107_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202107",
+      "type": "grammar",
+      "file": "202107-N2-2.json",
+      "sourceFile": "time_202107_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202107",
+      "type": "reading",
+      "file": "202107-N2-3.json",
+      "sourceFile": "time_202107_level_n2_type_3.json",
+      "availableCount": 19,
+      "unavailableCount": 2,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202107",
+      "type": "listening",
+      "file": "202107-N2-4.json",
+      "sourceFile": "time_202107_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202107",
+      "type": "vocabulary",
+      "file": "202107-N3-1.json",
+      "sourceFile": "time_202107_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202107",
+      "type": "grammar",
+      "file": "202107-N3-2.json",
+      "sourceFile": "time_202107_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202107",
+      "type": "reading",
+      "file": "202107-N3-3.json",
+      "sourceFile": "time_202107_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202107",
+      "type": "listening",
+      "file": "202107-N3-4.json",
+      "sourceFile": "time_202107_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202112",
+      "type": "vocabulary",
+      "file": "202112-N1-1.json",
+      "sourceFile": "time_202112_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202112",
+      "type": "grammar",
+      "file": "202112-N1-2.json",
+      "sourceFile": "time_202112_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202112",
+      "type": "reading",
+      "file": "202112-N1-3.json",
+      "sourceFile": "time_202112_level_n1_type_3.json",
+      "availableCount": 23,
+      "unavailableCount": 2,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202112",
+      "type": "listening",
+      "file": "202112-N1-4.json",
+      "sourceFile": "time_202112_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "202112",
+      "type": "vocabulary",
+      "file": "202112-N2-1.json",
+      "sourceFile": "time_202112_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202112",
+      "type": "grammar",
+      "file": "202112-N2-2.json",
+      "sourceFile": "time_202112_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202112",
+      "type": "reading",
+      "file": "202112-N2-3.json",
+      "sourceFile": "time_202112_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202112",
+      "type": "listening",
+      "file": "202112-N2-4.json",
+      "sourceFile": "time_202112_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202112",
+      "type": "vocabulary",
+      "file": "202112-N3-1.json",
+      "sourceFile": "time_202112_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202112",
+      "type": "grammar",
+      "file": "202112-N3-2.json",
+      "sourceFile": "time_202112_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202112",
+      "type": "reading",
+      "file": "202112-N3-3.json",
+      "sourceFile": "time_202112_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202112",
+      "type": "listening",
+      "file": "202112-N3-4.json",
+      "sourceFile": "time_202112_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202207",
+      "type": "vocabulary",
+      "file": "202207-N1-1.json",
+      "sourceFile": "time_202207_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202207",
+      "type": "grammar",
+      "file": "202207-N1-2.json",
+      "sourceFile": "time_202207_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202207",
+      "type": "reading",
+      "file": "202207-N1-3.json",
+      "sourceFile": "time_202207_level_n1_type_3.json",
+      "availableCount": 22,
+      "unavailableCount": 2,
+      "totalCount": 24
+    },
+    {
+      "level": "N1",
+      "period": "202207",
+      "type": "listening",
+      "file": "202207-N1-4.json",
+      "sourceFile": "time_202207_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 35,
+      "totalCount": 35
+    },
+    {
+      "level": "N2",
+      "period": "202207",
+      "type": "vocabulary",
+      "file": "202207-N2-1.json",
+      "sourceFile": "time_202207_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202207",
+      "type": "grammar",
+      "file": "202207-N2-2.json",
+      "sourceFile": "time_202207_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202207",
+      "type": "reading",
+      "file": "202207-N2-3.json",
+      "sourceFile": "time_202207_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202207",
+      "type": "listening",
+      "file": "202207-N2-4.json",
+      "sourceFile": "time_202207_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202207",
+      "type": "vocabulary",
+      "file": "202207-N3-1.json",
+      "sourceFile": "time_202207_level_n3_type_1.json",
+      "availableCount": 34,
+      "unavailableCount": 0,
+      "totalCount": 34
+    },
+    {
+      "level": "N3",
+      "period": "202207",
+      "type": "grammar",
+      "file": "202207-N3-2.json",
+      "sourceFile": "time_202207_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202207",
+      "type": "reading",
+      "file": "202207-N3-3.json",
+      "sourceFile": "time_202207_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202207",
+      "type": "listening",
+      "file": "202207-N3-4.json",
+      "sourceFile": "time_202207_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202212",
+      "type": "vocabulary",
+      "file": "202212-N1-1.json",
+      "sourceFile": "time_202212_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202212",
+      "type": "grammar",
+      "file": "202212-N1-2.json",
+      "sourceFile": "time_202212_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202212",
+      "type": "reading",
+      "file": "202212-N1-3.json",
+      "sourceFile": "time_202212_level_n1_type_3.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202212",
+      "type": "listening",
+      "file": "202212-N1-4.json",
+      "sourceFile": "time_202212_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202212",
+      "type": "vocabulary",
+      "file": "202212-N2-1.json",
+      "sourceFile": "time_202212_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202212",
+      "type": "grammar",
+      "file": "202212-N2-2.json",
+      "sourceFile": "time_202212_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202212",
+      "type": "reading",
+      "file": "202212-N2-3.json",
+      "sourceFile": "time_202212_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202212",
+      "type": "listening",
+      "file": "202212-N2-4.json",
+      "sourceFile": "time_202212_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202212",
+      "type": "vocabulary",
+      "file": "202212-N3-1.json",
+      "sourceFile": "time_202212_level_n3_type_1.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202212",
+      "type": "grammar",
+      "file": "202212-N3-2.json",
+      "sourceFile": "time_202212_level_n3_type_2.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202212",
+      "type": "reading",
+      "file": "202212-N3-3.json",
+      "sourceFile": "time_202212_level_n3_type_3.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202212",
+      "type": "listening",
+      "file": "202212-N3-4.json",
+      "sourceFile": "time_202212_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N1",
+      "period": "202307",
+      "type": "vocabulary",
+      "file": "202307-N1-1.json",
+      "sourceFile": "time_202307_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202307",
+      "type": "reading",
+      "file": "202307-N1-3.json",
+      "sourceFile": "time_202307_level_n1_type_3.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202307",
+      "type": "listening",
+      "file": "202307-N1-4.json",
+      "sourceFile": "time_202307_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202307",
+      "type": "vocabulary",
+      "file": "202307-N2-1.json",
+      "sourceFile": "time_202307_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202307",
+      "type": "grammar",
+      "file": "202307-N2-2.json",
+      "sourceFile": "time_202307_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202307",
+      "type": "reading",
+      "file": "202307-N2-3.json",
+      "sourceFile": "time_202307_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202307",
+      "type": "listening",
+      "file": "202307-N2-4.json",
+      "sourceFile": "time_202307_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202307",
+      "type": "vocabulary",
+      "file": "202307-N3-1.json",
+      "sourceFile": "time_202307_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202307",
+      "type": "grammar",
+      "file": "202307-N3-2.json",
+      "sourceFile": "time_202307_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202307",
+      "type": "reading",
+      "file": "202307-N3-3.json",
+      "sourceFile": "time_202307_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202307",
+      "type": "listening",
+      "file": "202307-N3-4.json",
+      "sourceFile": "time_202307_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202312",
+      "type": "vocabulary",
+      "file": "202312-N1-1.json",
+      "sourceFile": "time_202312_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202312",
+      "type": "grammar",
+      "file": "202312-N1-2.json",
+      "sourceFile": "time_202312_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202312",
+      "type": "reading",
+      "file": "202312-N1-3.json",
+      "sourceFile": "time_202312_level_n1_type_3.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202312",
+      "type": "listening",
+      "file": "202312-N1-4.json",
+      "sourceFile": "time_202312_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202312",
+      "type": "vocabulary",
+      "file": "202312-N2-1.json",
+      "sourceFile": "time_202312_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202312",
+      "type": "grammar",
+      "file": "202312-N2-2.json",
+      "sourceFile": "time_202312_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202312",
+      "type": "reading",
+      "file": "202312-N2-3.json",
+      "sourceFile": "time_202312_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202312",
+      "type": "listening",
+      "file": "202312-N2-4.json",
+      "sourceFile": "time_202312_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202312",
+      "type": "vocabulary",
+      "file": "202312-N3-1.json",
+      "sourceFile": "time_202312_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202312",
+      "type": "grammar",
+      "file": "202312-N3-2.json",
+      "sourceFile": "time_202312_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202312",
+      "type": "reading",
+      "file": "202312-N3-3.json",
+      "sourceFile": "time_202312_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202312",
+      "type": "listening",
+      "file": "202312-N3-4.json",
+      "sourceFile": "time_202312_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202407",
+      "type": "vocabulary",
+      "file": "202407-N1-1.json",
+      "sourceFile": "time_202407_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202407",
+      "type": "grammar",
+      "file": "202407-N1-2.json",
+      "sourceFile": "time_202407_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202407",
+      "type": "reading",
+      "file": "202407-N1-3.json",
+      "sourceFile": "time_202407_level_n1_type_3.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202407",
+      "type": "listening",
+      "file": "202407-N1-4.json",
+      "sourceFile": "time_202407_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202407",
+      "type": "vocabulary",
+      "file": "202407-N2-1.json",
+      "sourceFile": "time_202407_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202407",
+      "type": "grammar",
+      "file": "202407-N2-2.json",
+      "sourceFile": "time_202407_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202407",
+      "type": "reading",
+      "file": "202407-N2-3.json",
+      "sourceFile": "time_202407_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202407",
+      "type": "listening",
+      "file": "202407-N2-4.json",
+      "sourceFile": "time_202407_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202407",
+      "type": "vocabulary",
+      "file": "202407-N3-1.json",
+      "sourceFile": "time_202407_level_n3_type_1.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202407",
+      "type": "grammar",
+      "file": "202407-N3-2.json",
+      "sourceFile": "time_202407_level_n3_type_2.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202407",
+      "type": "reading",
+      "file": "202407-N3-3.json",
+      "sourceFile": "time_202407_level_n3_type_3.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
+    },
+    {
+      "level": "N3",
+      "period": "202407",
+      "type": "listening",
+      "file": "202407-N3-4.json",
+      "sourceFile": "time_202407_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 28,
+      "totalCount": 28
+    },
+    {
+      "level": "N1",
+      "period": "202412",
+      "type": "vocabulary",
+      "file": "202412-N1-1.json",
+      "sourceFile": "time_202412_level_n1_type_1.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202412",
+      "type": "grammar",
+      "file": "202412-N1-2.json",
+      "sourceFile": "time_202412_level_n1_type_2.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202412",
+      "type": "reading",
+      "file": "202412-N1-3.json",
+      "sourceFile": "time_202412_level_n1_type_3.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202412",
+      "type": "listening",
+      "file": "202412-N1-4.json",
+      "sourceFile": "time_202412_level_n1_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202412",
+      "type": "vocabulary",
+      "file": "202412-N2-1.json",
+      "sourceFile": "time_202412_level_n2_type_1.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202412",
+      "type": "grammar",
+      "file": "202412-N2-2.json",
+      "sourceFile": "time_202412_level_n2_type_2.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202412",
+      "type": "reading",
+      "file": "202412-N2-3.json",
+      "sourceFile": "time_202412_level_n2_type_3.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202412",
+      "type": "listening",
+      "file": "202412-N2-4.json",
+      "sourceFile": "time_202412_level_n2_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 30,
+      "totalCount": 30
+    },
+    {
+      "level": "N3",
+      "period": "202412",
+      "type": "vocabulary",
+      "file": "202412-N3-1.json",
+      "sourceFile": "time_202412_level_n3_type_1.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202412",
+      "type": "grammar",
+      "file": "202412-N3-2.json",
+      "sourceFile": "time_202412_level_n3_type_2.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202412",
+      "type": "reading",
+      "file": "202412-N3-3.json",
+      "sourceFile": "time_202412_level_n3_type_3.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    },
+    {
+      "level": "N3",
+      "period": "202412",
+      "type": "listening",
+      "file": "202412-N3-4.json",
+      "sourceFile": "time_202412_level_n3_type_4.json",
+      "availableCount": 0,
+      "unavailableCount": 0,
+      "totalCount": 0
+    }
+  ],
+  "report": {
+    "files": 347,
+    "sourceRecords": 9301,
+    "containers": 632,
+    "questions": 8669,
+    "available": 5867,
+    "unavailable": 2802,
+    "inheritedMetadata": 632,
+    "reasons": {
+      "缺少配套图片": 229,
+      "缺少配套音频": 2634
+    },
+    "errors": []
+  }
+}

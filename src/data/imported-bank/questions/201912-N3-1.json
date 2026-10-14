@@ -1,0 +1,1270 @@
+{
+  "version": 1,
+  "sourceFile": "time_201912_level_n3_type_1.json",
+  "period": "201912",
+  "level": "N3",
+  "type": "vocabulary",
+  "questions": [
+    {
+      "id": "imported:201912:N3:1:7169:1",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 10時の<u>予約</u>をお願いします。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ようよく"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "よやく"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "よよく"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ようやく"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>予約（よやく）: 预约</p>\n<p>ようよく: 无此常用词，干扰项</p>\n<p>よよく: 无此常用词，干扰项</p>\n<p>ようやく: 终于，好不容易</p>"
+      ],
+      "sourceQuestionNumber": 1,
+      "sourceId": 7169
+    },
+    {
+      "id": "imported:201912:N3:1:7170:2",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> その頃、私も<u>若かった</u>。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "わるかった"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "さむかった"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "こわかった"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "わかかった"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>若かった:（若い）年轻</p>\n<p>わるかった:（悪い）坏、不好</p>\n<p>さむかった:（寒い）寒冷</p>\n<p>こわかった:（怖い）害怕</p>\n<p>わかかった:（若かった）是「若い」的过去式，表示“年轻”的过去状态，符合句意“那个时候，我也很年轻”。</p>"
+      ],
+      "sourceQuestionNumber": 2,
+      "sourceId": 7170
+    },
+    {
+      "id": "imported:201912:N3:1:7171:3",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> <u>上品</u>な人ですね。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "じょうひん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "じょうびん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "じょひん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "じょびん"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>上品:（じょうひん）文雅的、高雅的</p>\n<p>じょうびん: 无此常用词，干扰项</p>\n<p>じょひん: 无此常用词，干扰项</p>\n<p>じょびん: 无此常用词，干扰项</p>"
+      ],
+      "sourceQuestionNumber": 3,
+      "sourceId": 7171
+    },
+    {
+      "id": "imported:201912:N3:1:7172:4",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 山田さんに<u>助けて</u>もらった。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "とどけて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "たすけて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "うけて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "かたづけて"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>助けて:（助ける）帮助</p>\n<p>とどけて:（届ける）送达、寄送</p>\n<p>うけて:（受ける）接受、承受</p>\n<p>かたづけて:（片付ける）整理、收拾</p>\n<p>句意：得到了山田的帮助。</p>"
+      ],
+      "sourceQuestionNumber": 4,
+      "sourceId": 7172
+    },
+    {
+      "id": "imported:201912:N3:1:7173:5",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 私たちの<u>未来</u>を考えてみました。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "しょらい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "しょうらい"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "みらい"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "みいらい"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>みらい（未来）: 未来、将来</p>\n<p>しょらい: 干扰项，无实际对应常用词</p>\n<p>しょうらい（将来）: 将来、前程</p>\n<p>みいらい: 干扰项，无此常用词汇</p>"
+      ],
+      "sourceQuestionNumber": 5,
+      "sourceId": 7173
+    },
+    {
+      "id": "imported:201912:N3:1:7174:6",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> この電車は<u>各駅</u>にとまります。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "かくえき"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "がくえき"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "きゃくえき"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ぎゃくえき"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>かくえき（各駅）: 各个车站</p>\n<p>がくえき: 干扰项，无此常用词</p>\n<p>きゃくえき: 干扰项，无此常用词</p>\n<p>ぎゃくえき: 干扰项，无此常用词</p>\n<p>解析: 这辆电车在各个车站都停靠。</p>"
+      ],
+      "sourceQuestionNumber": 6,
+      "sourceId": 7174
+    },
+    {
+      "id": "imported:201912:N3:1:7175:7",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 誰が<u>勝った</u>んですか。</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "かざった"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "おった"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "のこった"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "かった"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>勝った:（勝つ）赢、胜利</p>\n<p>かざった:（飾る）装饰</p>\n<p>おった:（折る）折、折断</p>\n<p>のこった:（残る）残留、剩下</p>"
+      ],
+      "sourceQuestionNumber": 7,
+      "sourceId": 7175
+    },
+    {
+      "id": "imported:201912:N3:1:7176:8",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 彼に初めて会ったときの<u>印象</u>はどうでしたか？</p>",
+      "instruction": "<p>問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "いんしょう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "いんそう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "にんしょう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "にんそう"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>いんしょう（印象）: 印象</p>\n<p>いんそう: 无此常用词汇，干扰项</p>\n<p>にんしょう: 认证、认可，与“印象”无关</p>\n<p>にんそう: 容貌、相貌，多指外貌特征</p>\n<p>解析: “印象”对应的正确读音是「いんしょう」</p>"
+      ],
+      "sourceQuestionNumber": 8,
+      "sourceId": 7176
+    },
+    {
+      "id": "imported:201912:N3:1:7177:9",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> <u>りゆう</u>はよくわかりません。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "利用"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "理論"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "利有"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "理由"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>理由（りゆう）: 理由，缘故；借口</p>\n<p>利用（りよう）: 利用</p>\n<p>理論（りろん）: 理论</p>\n<p>利有: 无此常用词，干扰项</p>\n<p>解析: 「りゆう」对应汉字为「理由」，句意为“理由不是很清楚”。</p>"
+      ],
+      "sourceQuestionNumber": 9,
+      "sourceId": 7177
+    },
+    {
+      "id": "imported:201912:N3:1:7178:10",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> この<u>しま</u>には初めて来ました。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "寺"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "村"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "島"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "庭"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>しま: 島（しま）——岛屿</p>\n<p>寺（てら）: 寺庙</p>\n<p>村（むら）: 村子</p>\n<p>庭（にわ）: 庭院</p>\n<p>解析: 这个岛，我是第一次来。</p>"
+      ],
+      "sourceQuestionNumber": 10,
+      "sourceId": 7178
+    },
+    {
+      "id": "imported:201912:N3:1:7179:11",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 卒業の<u>きねん</u>に写真を撮りました。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "記年"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "貴念"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "紀念"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "記念"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>記念（きねん）: 纪念</p>\n<p>記年: 干扰项，无此常用词</p>\n<p>貴念: 干扰项，无此常用词</p>"
+      ],
+      "sourceQuestionNumber": 11,
+      "sourceId": 7179
+    },
+    {
+      "id": "imported:201912:N3:1:7180:12",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> これが<u>いっぱん</u>てきな方法です。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "一版"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "一番"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "一般"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "一班"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>一般（いっぱん）: 一般性的，普通的</p>\n<p>一版: 干扰项，无此常用搭配</p>\n<p>一番（いちばん）: 第一，最，最好</p>\n<p>一班: 一个班级，或指一班车，与句意不符</p>\n<p>解析: 句子意思是“这是一般的方法”，因此选“一般”</p>"
+      ],
+      "sourceQuestionNumber": 12,
+      "sourceId": 7180
+    },
+    {
+      "id": "imported:201912:N3:1:7181:13",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 今日も<u>かならず</u>行きます。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "必ず"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "需ず"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "過ず"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "代ず"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>必ず（かならず）: 一定、必定</p>\n<p>需ず: 无此常用词，干扰项</p>\n<p>過ず: 无此常用词，干扰项</p>\n<p>代ず: 无此常用词，干扰项</p>"
+      ],
+      "sourceQuestionNumber": 13,
+      "sourceId": 7181
+    },
+    {
+      "id": "imported:201912:N3:1:7182:14",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 効果が<u>あらわれた</u>ようです。</p>",
+      "instruction": "<p>問題2 _____の言葉を漢字で書くとき、最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "著れる"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "現れる"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "行れる"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "隠れる"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>現れる（あらわれる）: 出现、呈现</p>\n<p>著れる: 干扰项，无此常用词</p>\n<p>行れる: 干扰项，无此常用词</p>\n<p>隠れる（かくれる）: 隐藏、躲藏</p>\n<p>解析: 效果好像出现了。</p>"
+      ],
+      "sourceQuestionNumber": 14,
+      "sourceId": 7182
+    },
+    {
+      "id": "imported:201912:N3:1:7183:15",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 大学を卒業あとで父の会社に(　　)の予定です。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "登場"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "進行"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "就職"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "同席"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>就職（しゅうしょく）：就职，指开始在某公司或单位工作。</p>\n<p>登場（とうじょう）：登场，指人物、角色或新事物出现。</p>\n<p>進行（しんこう）：进行，指事情、活动或工作正在推进。</p>\n<p>同席（どうせき）：同席，指与他人一同就座，多用于饭局或会议。</p>\n<p>解析：大学毕业后，打算去父亲的公司工作，因此应选“就職”。</p>"
+      ],
+      "sourceQuestionNumber": 15,
+      "sourceId": 7183
+    },
+    {
+      "id": "imported:201912:N3:1:7184:16",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> この店の帽子は全部私が色や形など(　　)を考えています。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "レシピ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "デザイン"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "サイン"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ミックス"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>デザイン:（design）设计、样式</p>\n<p>レシピ:（recipe）食谱、菜谱</p>\n<p>サイン:（sign）签名、记号</p>\n<p>ミックス:（mix）混合、混搭</p>\n<p>解析: 这家店的帽子的颜色、形状等都是我设计的。</p>"
+      ],
+      "sourceQuestionNumber": 16,
+      "sourceId": 7184
+    },
+    {
+      "id": "imported:201912:N3:1:7185:17",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 申し込みの(　　)来週の月曜日ですから、それまでに申込書を出してください。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "あて先"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "合図"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "締め切り"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "合計"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>締め切り: （名）截止日期</p>\n<p>あて先: （名）收件人地址</p>\n<p>合図: （名）信号，暗号</p>\n<p>合計: （名・他動詞）合计，总计</p>\n<p>解析: 申请的截止日期是下周星期一，所以请在此之前提交申请书。</p>"
+      ],
+      "sourceQuestionNumber": 17,
+      "sourceId": 7185
+    },
+    {
+      "id": "imported:201912:N3:1:7186:18",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 佐藤さんは英語がわかるから、それを日本語に(　　)します。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "通訳"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "案内"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "伝言"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "連絡"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>通訳して:（通訳する）口译，翻译（口头）</p>\n<p>案内して:（案内する）引导，带路</p>\n<p>伝言して:（伝言する）传话，捎口信</p>\n<p>連絡して:（連絡する）联系，联络</p>\n<p>解析：佐藤懂英语，所以会把内容口译成日语。</p>"
+      ],
+      "sourceQuestionNumber": 18,
+      "sourceId": 7186
+    },
+    {
+      "id": "imported:201912:N3:1:7187:19",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 部屋の電気が(　　)消えて、驚いた。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "突然"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "急いで"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "結構"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "早速"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>突然: 突然、出乎意料地发生</p>\n<p>急いで: （急ぐ）急忙、赶紧</p>\n<p>結構: 相当、还好；也可以表示“不用了”</p>\n<p>早速: 马上、立刻</p>\n<p>解析: 电灯“突然”熄灭，符合“吓了一跳”的语境，其他选项语义不符。</p>"
+      ],
+      "sourceQuestionNumber": 19,
+      "sourceId": 7187
+    },
+    {
+      "id": "imported:201912:N3:1:7188:20",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 誰も木村さんはうそをついていると思うが、私は彼が言ったことを(　　)。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "手伝います"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "褒めます"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "守ります"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "信じます"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>信じます:（信じる）相信</p>\n<p>手伝います:（手伝う）帮忙</p>\n<p>褒めます:（褒める）表扬</p>\n<p>守ります:（守る）遵守、保护</p>\n<p>句意：虽然大家都认为木村在说谎，但我相信他说的话。</p>\n<p>根据语境，“相信他说的话”最符合逻辑，因此选4。</p>"
+      ],
+      "sourceQuestionNumber": 20,
+      "sourceId": 7188
+    },
+    {
+      "id": "imported:201912:N3:1:7189:21",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> このホテル慎重に清掃されているために部屋はとても(　　)。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "新鮮"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "清潔"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "正常"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "丁寧"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>清潔（せいけつ）：清洁、干净</p>\n<p>新鮮（しんせん）：新鲜的</p>\n<p>正常（せいじょう）：正常的</p>\n<p>丁寧（ていねい）：郑重的，周到的</p>\n<p>解析：因为酒店被仔细打扫，所以房间非常干净。</p>"
+      ],
+      "sourceQuestionNumber": 21,
+      "sourceId": 7189
+    },
+    {
+      "id": "imported:201912:N3:1:7190:22",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 仕事で遅くなってしまい、今日はご飯を作るのが(　　)ので、お弁当を買うことをしました。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "にくらしい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "だらしない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "しょうがない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "めんどうくさい"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>めんどうくさい: 麻烦的，繁琐的</p>\n<p>にくらしい: 可恨的，讨厌的</p>\n<p>だらしない: 散漫的，不整洁的</p>\n<p>しょうがない: 没办法，无可奈何</p>\n<p>解析：工作晚了，做饭太麻烦，所以买了便当。</p>"
+      ],
+      "sourceQuestionNumber": 22,
+      "sourceId": 7190
+    },
+    {
+      "id": "imported:201912:N3:1:7191:23",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> みんなの前でスピーチをしたときは、緊張して胸が(　　)しました。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "こんこん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "だぶだぶ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "どきどき"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ちかちか"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>どきどき: （拟声词）因紧张或兴奋，心跳加速，扑通扑通地跳</p>\n<p>こんこん: （拟声词）水持续涌出的样子，如泉水滚滚</p>\n<p>だぶだぶ: （拟态词）衣物或鞋子过于宽松、肥大</p>\n<p>ちかちか: （拟声词）光线闪烁、刺眼，如星星或灯光闪动</p>\n<p>解析：在众人面前演讲时因紧张导致心跳加速，应使用「どきどき」</p>"
+      ],
+      "sourceQuestionNumber": 23,
+      "sourceId": 7191
+    },
+    {
+      "id": "imported:201912:N3:1:7192:24",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> とても暑かったので、スーパーで買ったアイスクリームが、家に着く前に(　　)しまった。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "もえて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "とけて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "さめて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "かれて"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>もえて:（燃える）燃烧</p>\n<p>とけて:（溶ける）融化</p>\n<p>さめて:（冷める）变凉、冷却</p>\n<p>かれて:（枯れる）枯萎</p>\n<p>因为天气很热，冰激凌在到家前就融化了，所以选“とけて”</p>"
+      ],
+      "sourceQuestionNumber": 24,
+      "sourceId": 7192
+    },
+    {
+      "id": "imported:201912:N3:1:7193:25",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> アパートの鍵をなくしてしまったので、大家さんに(　　)を話して、鍵を開けてもらった。</p>",
+      "instruction": "<p>問題3 (　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "秘密"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "歴史"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "具合"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "事情"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>事情（じじょう）：缘由、情况、原委</p>\n<p>秘密（ひみつ）：秘密</p>\n<p>歴史（れきし）：历史</p>\n<p>具合（ぐあい）：状况，通常指身体状态</p>\n<p>「事情を話す」是固定搭配，表示“说明情况”</p>\n<p>句意：因弄丢公寓钥匙，向房东说明情况后，请他开门</p>"
+      ],
+      "sourceQuestionNumber": 25,
+      "sourceId": 7193
+    },
+    {
+      "id": "imported:201912:N3:1:7194:26",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 木村さんへ<u>感謝</u>の手紙を送った。</p>",
+      "instruction": "<p>問題4 _____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "お願い"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "お礼"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "お見舞い"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "お知らせ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>感謝：感谢</p>\n<p>お願い：请求，拜托</p>\n<p>お礼：感谢，谢意</p>\n<p>お見舞い：探望，慰问</p>\n<p>お知らせ：通知，告知</p>\n<p>「感謝の手紙」对应「お礼」，因此选2。</p>"
+      ],
+      "sourceQuestionNumber": 26,
+      "sourceId": 7194
+    },
+    {
+      "id": "imported:201912:N3:1:7195:27",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 子供たちは<u>キッチン</u>にいます。</p>",
+      "instruction": "<p>問題4 _____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ろうか"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "いま"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "げんかん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "だいどころ"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解：4</p>\n<p>キッチン：厨房</p>\n<p>1. ろうか（廊下）：走廊</p>\n<p>2. いま（居間）：客厅，起居室</p>\n<p>3. げんかん（玄関）：玄关，门口</p>\n<p>4. だいどころ（台所）：厨房</p>"
+      ],
+      "sourceQuestionNumber": 27,
+      "sourceId": 7195
+    },
+    {
+      "id": "imported:201912:N3:1:7196:28",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> <u>不安</u>なので、行かないことにしました。</p>",
+      "instruction": "<p>問題4 _____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "時間がない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "お金がない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "危険な"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "心配な"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>正解: 4</p>\n<p>不安なので、行かないことにしました：因为担心，所以决定不去了。</p>\n<p>不安：不安、担心</p>\n<p>時間がない：没有时间</p>\n<p>お金がない：没有钱</p>\n<p>危険な：危险的</p>\n<p>心配な：担心的</p>\n<p>心配な 与 不安 意思相近，符合语境。</p>"
+      ],
+      "sourceQuestionNumber": 28,
+      "sourceId": 7196
+    },
+    {
+      "id": "imported:201912:N3:1:7197:29",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> おなかが<u>ぺこぺこ</u>だ。</p>",
+      "instruction": "<p>問題4 _____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "痛い"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "すいている"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "かゆい"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "いっぱい"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>ぺこぺこ：形容非常饿的样子</p>\n<p>痛い：疼的</p>\n<p>すいている：（空く）饿；空着</p>\n<p>かゆい：痒的</p>\n<p>いっぱい：满的；很多</p>"
+      ],
+      "sourceQuestionNumber": 29,
+      "sourceId": 7197
+    },
+    {
+      "id": "imported:201912:N3:1:7198:30",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 兄は<u>黙って</u>ずっと漫画を読んでいる。</p>",
+      "instruction": "<p>問題4 _____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "何も話さないで"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "何も食べないで"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "勉強しないで"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "寝ないで"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>黙って:（黙る）不说话，保持沉默</p>\n<p>何も話さないで: 什么也不说</p>\n<p>何も食べないで: 什么也不吃</p>\n<p>勉強しないで: 不学习</p>\n<p>寝ないで: 不睡觉</p>\n<p>解析：句中「黙って」表示“不说话”，因此正确选项是“何も話さないで”。</p>"
+      ],
+      "sourceQuestionNumber": 30,
+      "sourceId": 7198
+    },
+    {
+      "id": "imported:201912:N3:1:7199:31",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 健康</p>",
+      "instruction": "<p>問題5 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "弟の成績がいつもより健康だったので、両親は喜んだ。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "祖父は毎日運動しているので、今でもとても健康だ。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "駅前にある大きなビルは古いけど健康だそうだ。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "最近パソコンは健康ではないみたいなので、ときどき変な音がする。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>健康（けんこう）：健康；身体状况良好</p>\n<p>选项1：成績が健康 → 错误用法</p>\n<p>成績：成绩，学业表现</p>\n<p>健康不能修饰成绩，应使用「よかった」等表达</p>\n<p>选项2：祖父はとても健康だ → 正确</p>\n<p>运动与健康搭配合理，用法正确</p>\n<p>选项3：ビルは健康だ → 错误用法</p>\n<p>ビル：大楼，建筑物</p>\n<p>建筑物不能用“健康”，应使用「しっかりしている」或「丈夫」</p>\n<p>选项4：パソコンは健康ではない → 错误用法</p>\n<p>パソコン：电脑</p>\n<p>机器状态不佳应说「調子が悪い」或「壊れている」</p>\n<p>健康不用于电子设备</p>"
+      ],
+      "sourceQuestionNumber": 31,
+      "sourceId": 7199
+    },
+    {
+      "id": "imported:201912:N3:1:7200:32",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 参加</p>",
+      "instruction": "<p>問題5 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "高橋さんは今度の留学セミナーに参加しますか？"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "村の中に参加したら、涼しくて気持ちがいいですよ。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "昨日タクシーの乗ったとき、渋滞に参加してしまった。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "猫が私の家族に参加しました。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解: 1</p>\n<p>参加: 参加；加入</p>\n<p>选项1 高橋さんは今度の留学セミナーに参加しますか？</p>\n<p>解析: 参加使用正确，表示“参加留学研讨会”</p>\n<p>选项2 村の中に参加したら、涼しくて気持ちがいいですよ。</p>\n<p>行く: 去；前往</p>\n<p>解析: 应使用「行く」，进入村庄应用“去”，而非“参加”</p>\n<p>选项3 昨日タクシーの乗ったとき、渋滞に参加してしまった。</p>\n<p>あう: 遭遇；遇到（渋滞にあう：遇到堵车）</p>\n<p>解析: “参加”不能用于被动遭遇，应使用「あう」</p>\n<p>选项4 猫が私の家族に参加しました。</p>\n<p>来る: 来；到来</p>\n<p>解析: 家庭成员加入应用「来る」，不能用“参加”</p>"
+      ],
+      "sourceQuestionNumber": 32,
+      "sourceId": 7200
+    },
+    {
+      "id": "imported:201912:N3:1:7201:33",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 中旬</p>",
+      "instruction": "<p>問題5 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "その本は本棚の中旬にあります。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "今日のサッカーは試合の中旬に点が入りました。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "来月の中旬には帰国するつもりです。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "私は三人兄弟の中旬です。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>中旬: 一个月的中间十天，即11日到20日</p>\n<p>1. 真ん中: 中间、中心位置</p>\n<p>2. 中盤: 比赛或事件的中期阶段</p>\n<p>4. 次男: 家庭中排行第二的儿子</p>"
+      ],
+      "sourceQuestionNumber": 33,
+      "sourceId": 7201
+    },
+    {
+      "id": "imported:201912:N3:1:7202:34",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> 落ち着く</p>",
+      "instruction": "<p>問題5 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "この店は人気があるので、朝早くから店の前に大勢の人が落ち着いている。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "買った本が袋に入ったまま、床に落ち着いている。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "好きな音楽を聞いているとき、気持ちが落ち着いている。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "祭りの後はいつも道にゴミがたくさん落ち着いている。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>正解: 3</p>\n<p>落ち着く：平静下来；情绪安定</p>\n<p>1. 並んでいる：排队（此处“落ち着いている”使用错误，应为“並んでいる”）</p>\n<p>2. 置いている：放置、搁着（“落ち着いている”不用于物体放置）</p>\n<p>3. 気持ちが落ち着いている：心情平静（用法正确）</p>\n<p>4. 散らばる：散落、散布（“落ち着いている”不能用于描述垃圾散乱）</p>"
+      ],
+      "sourceQuestionNumber": 34,
+      "sourceId": 7202
+    },
+    {
+      "id": "imported:201912:N3:1:7203:35",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<p> ほえる</p>",
+      "instruction": "<p>問題5 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "祖父の家の近くの森はいろいろな種類の鳥がほえている。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "夜になると、隣の家の犬がほえるので、とてもうるさい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "私は目覚まし時計がほえる音で起きる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "この店はいつもにぎやかな音楽がほえている。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解: 2</p>\n<p>ほえる：（狗、猛兽）吼叫，吠叫</p>\n<p>1. 鳥がほえている → 誤用。鳥の音は「鳴いている」が正しい。</p>\n<p>鳴いている：（鳥、虫など）鸣叫、啼叫</p>\n<p>2. 犬がほえる → 正しい用法。犬の鳴き声に「ほえる」を使う。</p>\n<p>3. 目覚まし時計がほえる → 誤用。機械の音は「鳴る」が適切。</p>\n<p>鳴る：（音が）响起，发出声音</p>\n<p>4. 音楽がほえている → 誤用。音楽は「流れている」が自然。</p>\n<p>流れている：（音楽、川など）流淌，播放</p>"
+      ],
+      "sourceQuestionNumber": 35,
+      "sourceId": 7203
+    }
+  ],
+  "unavailable": []
+}

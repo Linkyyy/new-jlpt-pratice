@@ -1,0 +1,910 @@
+{
+  "version": 1,
+  "sourceFile": "time_202412_level_n1_type_1.json",
+  "period": "202412",
+  "level": "N1",
+  "type": "vocabulary",
+  "questions": [
+    {
+      "id": "imported:202412:N1:1:3352:1",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 佐藤選手がゴールを決めたとき、観客は<u>絶叫</u>した。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "せっきょう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ぜっきょう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ぜっきゅう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "せっきゅう"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>当佐藤选手射门得分时，观众大声喊叫了起来。</p> <p>「絶叫」的读音是「ぜっきょう」。</p> <p>意思是\"大声喊叫\"。</p> <p>正确选项是② ぜっきょう。</p>"
+      ],
+      "sourceQuestionNumber": 1,
+      "sourceId": 3352
+    },
+    {
+      "id": "imported:202412:N1:1:3353:2",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> <u>背後</u>から物音が聞こえた。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "はいご"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "はいこう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "せいご"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "せいこう"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>从背后传来声响。</p> <p>「背後」的读音是「はいご」。</p> <p>正确答案是①「はいご」。</p>"
+      ],
+      "sourceQuestionNumber": 2,
+      "sourceId": 3353
+    },
+    {
+      "id": "imported:202412:N1:1:3354:3",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 将来の<u>抱負</u>を述べる。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ほうふ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ほうぶ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ほふ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ほぶ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>“抱負”的正确读音是「ほうふ」。</p> <p>「ほうぶ」「ほふ」「ほぶ」均为错误读音。</p> <p>正确选项是①「ほうふ」。</p>"
+      ],
+      "sourceQuestionNumber": 3,
+      "sourceId": 3354
+    },
+    {
+      "id": "imported:202412:N1:1:3355:4",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 人を<u>侮って</u>はいけない。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "からかって"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ののしって"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "あなどって"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "うらぎって"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>不可轻视他人。</p> <p>「侮る」读作「あなどる」，意为轻视。</p> <p>からかって：戏弄/嘲笑</p> <p>ののしって：辱骂/谴责</p> <p>うらぎって：背叛/辜负</p> <p>正确答案是③「あなどって」。</p>"
+      ],
+      "sourceQuestionNumber": 4,
+      "sourceId": 3355
+    },
+    {
+      "id": "imported:202412:N1:1:3356:5",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 相手がわかるように、<u>筋道</u>を立てて説明した。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "きんどう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "すじどう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "きんみち"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "すじみち"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>为了让对方明白，条理分明地进行了说明。</p>\n<p>“筋道”意为条理、脉络。</p>\n<p>正确读音为「すじみち」。</p>\n<p>因此，正确答案是选项④ 。</p>"
+      ],
+      "sourceQuestionNumber": 5,
+      "sourceId": 3356
+    },
+    {
+      "id": "imported:202412:N1:1:3357:6",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> その小説の主人公は、<u>奔放</u>な性格をしている。</p>",
+      "instruction": "<p>問題1&nbsp;_____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "はんぽう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ぼんぽう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ほんぽう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ばんぽう"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>那部小说的主人公性格奔放。</p>\n<p>“奔放”读作 ほんぽう，意味不受束缚、奔放。</p>\n<p>正确选项是③。</p>"
+      ],
+      "sourceQuestionNumber": 6,
+      "sourceId": 3357
+    },
+    {
+      "id": "imported:202412:N1:1:3358:7",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> その生物は、厳しい環境に(　)できる能力を持っている。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "適応"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "合致"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "転換"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "推移"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>该生物具备适应严酷环境的能力。</p> <p>「適応できる」表示\"能顺应环境生存\"的含义。</p> <p>「合致」：一致</p> <p>「転換」：转换；转变</p> <p>「推移」：推移；发展</p> <p>符合句意的只有「適応」。</p>"
+      ],
+      "sourceQuestionNumber": 7,
+      "sourceId": 3358
+    },
+    {
+      "id": "imported:202412:N1:1:3359:8",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 店の売り上げを五年で二倍にするという目標を(　)、みんなで努力している。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "企って"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "興って"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "築いて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "掲げて"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>大家正向着五年内将店铺营业额翻倍这一目标努力着。</p><p>「目標を掲げて」表示\"设定目标\"的意思，最符合句意。</p> <p>「企って」:企图,策划。</p> <p>「興って」:兴起,振兴。</p> <p>「築いて」构筑,修建。</p> <p>正确选项是④ 「掲げて」。</p>"
+      ],
+      "sourceQuestionNumber": 8,
+      "sourceId": 3359
+    },
+    {
+      "id": "imported:202412:N1:1:3360:9",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 新しい市長は前市長の政策を(　)し、駅前の開発を進めると述べた。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "相続"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "獲得"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "踏襲"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "伝承"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>新市长表示将沿用前任政策，推进车站前开发。</p>\n<p>「踏襲する」意为“沿用、继承前人的做法”。</p>\n<p>「相続」主要用于继承遗产或地位。</p>\n<p>「獲得」意为获得。</p>\n<p>「伝承」多用于文化、技艺的传承\n<p>因此，正确答案是③ 「踏襲」。</p>"
+      ],
+      "sourceQuestionNumber": 9,
+      "sourceId": 3360
+    },
+    {
+      "id": "imported:202412:N1:1:3361:10",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 台風で電車の到着が大幅に遅れたため、駅でしばらく(　)された。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "息抜き"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "棚上げ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "待ち伏せ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "足止め"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>因台风导致列车严重延误，在车站「滞留」多时。</p> <p>「足止めされる」指因故无法离开原地。</p> <p>「息抜き」意为休息;放松;歇口气。不适用。</p> <p>「棚上げ」表示搁置问题。不适用。</p> <p>「待ち伏せ」指埋伏等待。不适用。</p> <p>正确答案是④ 「足止め」。</p>"
+      ],
+      "sourceQuestionNumber": 10,
+      "sourceId": 3361
+    },
+    {
+      "id": "imported:202412:N1:1:3362:11",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 今日は試合で一日中走り続けたので、疲れて(　)になった。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "めちゃめちゃ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "へとへと"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "どろどろ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ぐちゃぐちゃ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>今天在比赛中跑了一整天，累得精疲力尽。</p> <p>「へとへと」表示\"精疲力尽\"的状态。</p> <p>「めちゃめちゃ」是杂乱的意思。</p> <p>「どろどろ」形容液体黏稠的状态。</p> <p>「ぐちゃぐちゃ」形容物体散乱的状态。</p> <p>正确答案：② へとへと</p>"
+      ],
+      "sourceQuestionNumber": 11,
+      "sourceId": 3362
+    },
+    {
+      "id": "imported:202412:N1:1:3363:12",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 工場の誘致について、市長が丁寧に説明し、住民の不安の(　)に努めた。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "払拭"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "喪失"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "破棄"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "排斥"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>关于工厂的引进，市长详细说明，努力消除居民的不安。</p>\n<p>“払拭（ふっしょく）”意为消除(疑虑、不安等)，符合语境。</p>\n<p>“喪失”指失去；喪失，不适用。</p>\n<p>“破棄”指废弃；废除，不适用。</p>\n<p>“排斥”指排斥；排挤，不适用。</p><p>正确答案：①  払拭</p>"
+      ],
+      "sourceQuestionNumber": 12,
+      "sourceId": 3363
+    },
+    {
+      "id": "imported:202412:N1:1:3364:13",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 階段でつまずいて転びそうになったので、(　)隣にいた友人の腕をつかんだ。</p>",
+      "instruction": "<p>問題2&nbsp;(　　　)に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "じきに"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "いまに"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "とっさに"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "とっくに"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>在楼梯上绊了一下差点摔倒的瞬间，反射性地抓住了旁边朋友的手臂。</p> <p>「とっさに」表示对突发状况的瞬间反应行为。</p> <p>「じきに」表示时间上的临近，与语境不符。</p> <p>「いまに」也用于描述近期将发生的事，不能用于过去的瞬间动作。</p> <p>「とっくに」意为\"早已\"，在时态和语义上都不合适。</p> <p>因此正确答案是③ 「とっさに」。</p>"
+      ],
+      "sourceQuestionNumber": 13,
+      "sourceId": 3364
+    },
+    {
+      "id": "imported:202412:N1:1:3365:14",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 社長は小林部長の<u>手腕</u>を高く評価しているようだ。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "経験"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "能力"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "考え"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "人柄"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>社长似乎对小林部长的能力给予高度评价。</p>\n<p>“手腕”意为“能力”。</p>\n<p>选项1“経験”：经验，不符。</p>\n<p>选项3“考え”：想法，不符。</p>\n<p>选项4“人柄”：人品，不符。</p>\n<p>正确答案是② “能力”。</p>"
+      ],
+      "sourceQuestionNumber": 14,
+      "sourceId": 3365
+    },
+    {
+      "id": "imported:202412:N1:1:3366:15",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 時間を<u>ロス</u>してしまった。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "間違えて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "無駄にして"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "かいて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "延長して"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>浪费了时间。</p>\n<p>「ロスする」意为“浪费、损失”。</p>\n<p>「無駄にする」与「ロスする」意思相同。</p>\n<p>「間違えて」表示“弄错”，不符合句意。</p>\n<p>「かいて」干扰项。</p>\n<p>「延長して」意为“延长”，与句意不符。</p>\n<p>因此，正确答案是选项② 「無駄にして」。</p>"
+      ],
+      "sourceQuestionNumber": 15,
+      "sourceId": 3366
+    },
+    {
+      "id": "imported:202412:N1:1:3367:16",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 確認が<u>おろそか</u>になっていた。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "めんどうくさ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "困難"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "遅く"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "いいかげん"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>确认工作变得马虎了。</p> <p>「おろそか」的意思接近于「いいかげん」。</p> <p>「いいかげん」表示\"不认真、敷衍了事\"的意思。</p> <p>「めんどうくさい」是\"嫌麻烦\"的意思。</p> <p>「困难」：\"困难\"。</p> <p>「遅く」：\"迟\"。</p> <p>正确答案是④いいかげん。</p>"
+      ],
+      "sourceQuestionNumber": 16,
+      "sourceId": 3367
+    },
+    {
+      "id": "imported:202412:N1:1:3368:17",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 私たちのチームの<u>目下</u>の目標は、市の大会で優勝することだ。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "最大"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "将来"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "今"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "最低限"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>我们队伍眼下的目标是在市大赛中夺冠。</p><p>“目下（もっか）”意为“当前、现在”。</p>\n<p>选项“今”与“目下”意思相符。</p>\n<p>其他选项：“最大”指最大，“将来”指未来，“最低限”指最低限度，均不符合。</p>\n<p>正确答案是：③今。</p>"
+      ],
+      "sourceQuestionNumber": 17,
+      "sourceId": 3368
+    },
+    {
+      "id": "imported:202412:N1:1:3369:18",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 経費を考慮したうえで、古いアパートの改修工事を<u>請け負う</u>ことにした。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "引き受ける"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "申し込む"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "断る"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "諦める"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>在考虑了经费之后，决定承包了对旧公寓的改修工程。</p><p>「請け負う」:\"承包；承办\",与「引き受ける」意思近。</p> <p>「申し込む」是\"申请\"的意思。</p> <p>「断る」是\"拒绝\"的意思。</p> <p>「諦める」是\"放弃\"的意思。</p> <p>正确答案是①「引き受ける」。</p>"
+      ],
+      "sourceQuestionNumber": 18,
+      "sourceId": 3369
+    },
+    {
+      "id": "imported:202412:N1:1:3370:19",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 先生に本を<u>進呈</u>しました。</p>",
+      "instruction": "<p>問題3&nbsp;_____の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "差し上げました"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "いただきました"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "お貸ししました"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "お借りしました"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>将书赠送给了老师。</p><p>「進呈しました」是向尊长赠送物品的敬语。</p>\n<p>对应选项为「差し上げました」。</p>\n<p>「いただきました」是接受，方向错误。</p>\n<p>「お貸ししました」是借出，不符合赠送语义。</p>\n<p>「お借りしました」是借入，语义不符。</p><p>正确答案是① 差し上げました。</p>"
+      ],
+      "sourceQuestionNumber": 19,
+      "sourceId": 3370
+    },
+    {
+      "id": "imported:202412:N1:1:3371:20",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 加工</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "食事や運動なとの生活習慣を加工するよう医師からアドバイスを受けた。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "このお店では、余った木材を加工した商品を販売してる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "両親は古い民家を安く購入して、自分たちで民宿に加工した。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "わが社は、現状に合わせて就業規則の一部を加工することにした。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>选项2中“木材を加工”符合该词的正确用法。</p>\n<p>选项1应使用“改善”(生活习惯)。</p>\n<p>选项3应使用“改装”(房屋改造)。</p>\n<p>选项4应使用“改定”(规则修订)。</p>\n<p>正确答案是选项② 。</p>"
+      ],
+      "sourceQuestionNumber": 20,
+      "sourceId": 3371
+    },
+    {
+      "id": "imported:202412:N1:1:3372:21",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 養う</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "息子が近くの公園で虫を捕まえてきたので、家で養うことにした。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "部屋のベランダで植物を養うために、お店で鉢や土を買った。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "私は一人で売り上げを伸ばし、自分の会社を養ってきた。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "山口さんは、会社を経営しながら3人の子どもを養っている。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>“養う”主要用于抚养人，提供生活所需。</p>\n<p>选项4“養っている”指抚养孩子，使用正确。</p>\n<p>选项1应使用“飼う”表示饲养动物。</p>\n<p>选项2应使用“育てる”表示种植植物。</p>\n<p>选项3“养公司”搭配不当，表达不自然。</p><p>正确答案是选项④ 。</p>"
+      ],
+      "sourceQuestionNumber": 21,
+      "sourceId": 3372
+    },
+    {
+      "id": "imported:202412:N1:1:3373:22",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 資質</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "携帯電話のカメラの資質は日に日に向上している。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "この動物は、見た目はかわいらしいが、資質は荒いので注意が必要だ。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "玩具の会社で製品の資質を管理する仕事をしています。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "森さんは身体能力が高く、陸上選手としての資質に恵まれている"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>“資質”指人或动物的天赋、素质。</p>\n<p>选项4中“陸上選手としての資質”使用恰当。</p>\n<p>选项1“カメラの資質”错误，设备不能用“資質”。</p>\n<p>选项2“動物の資質”不合适。</p>\n<p>选项3“製品の資質”错误，应使用“品質”。</p><p>正确答案是选项④ 。</p>"
+      ],
+      "sourceQuestionNumber": 22,
+      "sourceId": 3373
+    },
+    {
+      "id": "imported:202412:N1:1:3374:23",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 正当</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "説明書を見て正当に組み立てたのに、部品が一つ余った。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "「まる」はニックネームで、私の正当な名前は「丸山」です。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "その画家は、若いころには正当な評価を受けていなかった。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "トンネルの建設工事は大きな遅れもなく、正当に進んでいる。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>“正当”意为合理、应得。</p>\n<p>选项3“正当な評価”指应得的评价，使用正确。</p>\n<p>选项1应使用“正しく”。</p>\n<p>选项2应使用“本当”。</p>\n<p>选项4应使用“順調に”或“着々と”。</p><p>正确答案是选项③  。</p>"
+      ],
+      "sourceQuestionNumber": 23,
+      "sourceId": 3374
+    },
+    {
+      "id": "imported:202412:N1:1:3375:24",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> ありきたり</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "この町はコンビニがありきたりで、とても便利だ。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "その小説のストーリーはありきたりで、つまらなかった"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "困っている人がいたら助けるのは、ありきたりのことだ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ありきたりの方は、入場料が1,000円となっています。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>“ありきたり”意为“平凡、老套”。</p>\n<p>选项2中形容小说情节老套，用法最恰当。</p>\n<p>选项3应使用 “当然” 或者 “当たり前”。</p>\n<p>选项1和4语义不符，使用错误。</p>\n<p>正确答案是② 。</p>"
+      ],
+      "sourceQuestionNumber": 24,
+      "sourceId": 3375
+    },
+    {
+      "id": "imported:202412:N1:1:3376:25",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "<p> 間柄</p>",
+      "instruction": "<p>問題4&nbsp;次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "木村さんとは中学からずっと同じクラスだが、それほど親しい間柄ではない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "友好条約で両国の間柄は今後進展する"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "生態の変化、近年の環境の破壊との間柄が指摘される"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "父と漁民、小さい頃から、海と間柄の深い暮らしをしてきた"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>“間柄”主要用于描述人与人之间的关系。</p>\n<p>选项1中“親しい間柄”指人际关系，用法最恰当。</p>\n<p>选项2涉及国家关系，常用“関係”而非“間柄”。</p>\n<p>选项3 选项4，不适用“間柄”。</p>\n<p>因此，正确答案是选项① 。</p>"
+      ],
+      "sourceQuestionNumber": 25,
+      "sourceId": 3376
+    }
+  ],
+  "unavailable": []
+}

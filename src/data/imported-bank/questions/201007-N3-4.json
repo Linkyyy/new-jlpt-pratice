@@ -1,0 +1,1074 @@
+{
+  "version": 1,
+  "sourceFile": "time_201007_level_n3_type_4.json",
+  "period": "201007",
+  "level": "N3",
+  "type": "listening",
+  "questions": [],
+  "unavailable": [
+    {
+      "id": "imported:201007:N3:4:9077:75",
+      "sourceId": 9077,
+      "questionNumber": 75,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/1.mp3"
+      },
+      "raw": {
+        "id": 9077,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 75,
+        "typeQuestionId": 0,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/1.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": " 4",
+        "answer": 1,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\tデパートで女の人が父親の誕生日プレゼントを母親と選んでいます。女の人はどのセーターを買いますか。</p>\n<p  >\t娘:ねね、お母さん、お父さんってどんなセーターが好きだと思う?</p>\n<p  >\tお母さん:そうね、首の回りはあいてるほうが楽だって言ってるわね。</p>\n<p  >\t娘:へい、そうなの?色は白と黒、どっちが好き?</p>\n<p  >\tお母さん:そうね…黒はあまり好きじゃないみたいね。</p>\n<p  >\t娘:じゃあ、これにしよう。</p><br><p>听力译文</p><p>在百货商店里，一位女士正和母亲一起挑选父亲的生日礼物。这位女士会买哪件毛衣？</p>\n<p>女儿：妈妈，你觉得爸爸喜欢什么样的毛衣呀？</p>\n<p>妈妈：嗯，他说过脖子周围没有东西比较舒服，对吧？</p>\n<p>女儿：哎，是吗？白色和黑色，他喜欢哪个？</p>\n<p>妈妈：嗯……他好像不太喜欢黑色。</p>\n<p>女儿：那就买这个吧。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9078:76",
+      "sourceId": 9078,
+      "questionNumber": 76,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/2.mp3"
+      },
+      "raw": {
+        "id": 9078,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 76,
+        "typeQuestionId": 1,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/2.mp3",
+        "article": null,
+        "option1": " 400円",
+        "option2": " 500円",
+        "option3": " 600円",
+        "option4": " 700円",
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\tプールの受付で男の人が係りの人と話しています。この後、男の人はいくら支払いますか。</p>\n<p  >\t男:こちらのプールを利用したいんですが。</p>\n<p  >\t女:初めてですか。</p>\n<p  >\t男:はい。</p>\n<p  >\t女:それでは、利用カードをお作りしますね。プールをご利用になる時は利用カードを見せて400円払ってください。本日は力ード代の200円もお願いします。</p>\n<p  >\t男:わかりました。</p>\n<p  >\t女:それから、泳ぐときには水泳用の帽子が必要で、こちらは100円でおかししています。</p>\n<p  >\t男:帽子はあります。</p>\n<p  >\t女:あ 、そうですか。</p>\n<p  >\tこの後、男の人はいくら支払いますか。</p><br><p>听力译文</p><p>在游泳池的前台，男人正在和负责人对话。之后男人要支付多少钱呢?</p>\n<p>男：我想来这里游泳。</p>\n<p>女：您是第一次来吗？</p>\n<p>男：是的。</p>\n<p>女：那我给您办会员卡吧。来游泳的时候请出示会员卡并支付400日元。今天请先付200日元开卡费。</p>\n<p>男：知道了。</p>\n<p>女：还有，游泳的时候需要带泳帽，这边可以出借，一顶100日元。</p>\n<p>男：我有帽子。</p>\n<p>女：啊，这样啊。</p>\n<p>之后男人要付多少钱呢？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9079:77",
+      "sourceId": 9079,
+      "questionNumber": 77,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/3.mp3"
+      },
+      "raw": {
+        "id": 9079,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 77,
+        "typeQuestionId": 2,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/3.mp3",
+        "article": null,
+        "option1": " パーティーに行く",
+        "option2": " パーティーで撮った写真を取りに行く",
+        "option3": " ファックスで住所を教える",
+        "option4": " メールで住所を教える",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t留守番電話のメッセージを聞いています。メッセージを聞いた人はこの後何をしますか。</p>\n<p  >\t男：あっ、もしもし、鈴木です。先週のパーティーに来てくれて、ありがとう。ところで、あの日、うちに帽子忘れていたでしょう。今度送るので、住所教えてもらえる?あ、でも、今ファックスが壊れてるんで、メールでお願い。後、パーティーの時の写真もできたので、一緒に送るね。 じゃあ、またね。</p>\n<p  >\tメッセージを聞いた人はこの後何をしますか。</p><br><p>听力译文</p><p>正在听电话留言中的信息。听到信息的人之后会做什么?</p>\n<p>啊，喂，我是铃木。谢谢你上周来参加派对。不过，那天你把帽子落在我家了吧？下次给您送过去，能把你家地址告诉我吗？啊，但是现在传真机坏了，麻烦您给我发邮件。还有，聚会时拍的照片也洗好了，一起寄给你吧。那么，再见。</p>\n<p>听到信息的人之后会做什么?</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9080:78",
+      "sourceId": 9080,
+      "questionNumber": 78,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/4.mp3"
+      },
+      "raw": {
+        "id": 9080,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 78,
+        "typeQuestionId": 3,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/4.mp3",
+        "article": null,
+        "option1": " 研究会の案内を配る",
+        "option2": " 飲み物を買う",
+        "option3": " 研究会の案内をコピーする",
+        "option4": " 研究会のポスターを貼る",
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >大学で男の学生と先生が今日の研究会の準備について話しています。男の学生はこの後何をしなければなりませんか。</p>\n<p  >学生:先生、研究会のポスターは会場の建物の入り口と正門に貼っておきましたが、その二箇所でよろしいでしょうか。</p>\n<p  >先生:ああ、ありがとう。それで大丈夫でしょう。後は次の研究会の案内を配らないといけないから、コーピーしておいて。それから、発表者のための飲み物ですね。</p>\n<p  >学生:飲み物は昨日買って冷蔵庫に入れておきました。</p>\n<p  >先生:あ、ありがとう。</p>\n<p  >学生:コーピーは何部くらい必要でしようか。</p>\n<p  >先生:そうですね…20部お願いできますか。会場のパソコンは私のほうでセットしておきますから、コピーが終わったら、会場に持ってきてください。</p>\n<p  >学生:はい、わかりました。</p>\n<p  >男の学生はこの後何をしなければなりませんか。</p><br><p>听力译文</p><p>在大学里，男学生和老师正在讨论准备今天研讨会的事。男生在这之后必须要做什么?</p>\n<p>学生：老师，研讨会的海报已经贴在会场的入口和正门了，贴这两个地方可以吗？</p>\n<p>老师：啊，谢谢。这样应该没问题了。因为之后还要发下次研讨会的介绍，你先复印一下。还有，准备一下发言者的饮料。</p>\n<p>学生：饮料昨天买了，已经事先放在冰箱里了。</p>\n<p>老师：啊，谢谢。</p>\n<p>学生：需要复印几份呢？</p>\n<p>老师：嗯……能帮我复印20份吗？会场的电脑由我来布置，你复印完后就拿到会场吧。</p>\n<p>学生：好的，明白了。</p>\n<p>男生在这之后必须要做什么？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9081:79",
+      "sourceId": 9081,
+      "questionNumber": 79,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/5.mp3"
+      },
+      "raw": {
+        "id": 9081,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 79,
+        "typeQuestionId": 4,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/5.mp3",
+        "article": null,
+        "option1": " 聞きたい曲を歌う",
+        "option2": " 懐かしい曲を聞く",
+        "option3": " ラジオ局に電話する",
+        "option4": " ラジオ局のホームページで曲名を捜す",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男の人と女の人が話しています。男の人はこれからどうしますか。</p>\n<p  >\t男 :今朝ラジオを聴いてたら、懐かしい曲がかかっててね。</p>\n<p  >\t女: へえ、何って曲なの。</p>\n<p  >\t男 :それがね、どうしても思い出せなくてね。気になってしようがないんだ。大学時代によくうたってたんだけど。</p>\n<p  >\t女:ずいぶん前の話ね。じゃ、そのラジオ局に電話して聞いたらわかるんじゃない?</p>\n<p  >\t男:うーん…でも、なんて聞けばいいだろう。歌が歌えればいいんだけど。</p>\n<p  >\t女:そうね。あ、そのラジオ局のホームページに曲名がのってるんじゃないかな。</p>\n<p  >\t男: あ、そうだね。ありがとう。</p>\n<p  >\t男の人はこれからどうしますか。</p><br><p>听力译文</p><p>男：今天早上听广播的时候，听到了一首令人怀念的歌曲。</p>\n<p>女：欸，什么歌？</p>\n<p>男：这个啊，我怎么也想不起来了。实在是太想知道了，明明大学那会经常唱的。</p>\n<p>女：这都是很久以前的事了。那你给电台打电话问问不就知道了吗？</p>\n<p>男：嗯……但是，该怎么问才好呢？要是能唱歌就好了。</p>\n<p>女：是啊。啊，那个电台的主页上应该有歌名吧。</p>\n<p>男：啊，没错。谢谢。</p>\n<p>男人接下来要做什么？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9082:80",
+      "sourceId": 9082,
+      "questionNumber": 80,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/6.mp3"
+      },
+      "raw": {
+        "id": 9082,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 80,
+        "typeQuestionId": 5,
+        "type": 4,
+        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/6.mp3",
+        "article": null,
+        "option1": " 明日の会議の準備をする",
+        "option2": " 一人で会議に行く",
+        "option3": " 田中さんに電話して、書類ができているかどうか聞く",
+        "option4": " 田中さんに電話して、あした来られるかどうか聞く",
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t会社で男の人と女の人が話しています。男の人はこの後、まず何をしなければなりませんか。</p>\n<p  >\t男 :課長、田中さんから電話がありまして、熱があって今日はお休みだそうです。</p>\n<p  >\t女:ああ、そう。最近、忙しかったから。あっ、あした田中さんと2人で、光電気の会議に出てもらうことになってましたね。その準備はどうなってますか。</p>\n<p  >\t男: 私のほうの準備は終わっています。田中さんは家でやるって言っていました。</p>\n<p  >\t女:そう、じゃ、田中さんに電話して、書類ができているかどうか、ちょっと聞いてみてください。もしまだだったら、すぐに準備してもらえますか。</p>\n<p  >\t男 : はい。</p>\n<p  >\t女:それから、あした来られそうかどうかも聞いてみてもらえますか。無理そうだったら、悪いけど、一人で行ってくださいね。</p>\n<p  >\t男: はい、わかりました。</p>\n<p  >\t男の人はこの後、まず何をしなければなりませんか。</p><br><p>听力译文</p><p>公司里，一位男士和一位女士正在谈话。男士接下来首先必须做什么？</p>\n<p>男：科长，田中打电话过来说他发烧了，今天请假。</p>\n<p>女：啊，是吗？最近太忙了可能累着了。对了，明天你和田中两个人要参加光电的会议吧？准备得怎么样了？</p>\n<p>男：我的部分已经准备好了。田中说他在家里做他的部分。</p>\n<p>女：是吗？那你给田中打个电话，问问他文件准备好了没有。如果还没好的话，能不能让他马上准备？</p>\n<p>男：好的。</p>\n<p>女：还有，问问他明天能不能来。如果来不了的话，虽然不好意思，但就只能你一个人去了。</p>\n<p>男：好的，我明白了。</p>\n<p>男士接下来首先必须做什么？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9083:81",
+      "sourceId": 9083,
+      "questionNumber": 81,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/7.mp3"
+      },
+      "raw": {
+        "id": 9083,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 81,
+        "typeQuestionId": 6,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/7.mp3",
+        "article": null,
+        "option1": " 四時",
+        "option2": " 四時半",
+        "option3": " 五時",
+        "option4": " 五時半",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t留守番電話のメッセージを聞いています。加藤さんは何時ごろ着くと言っていますか。</p>\n<p  >\t男:加藤です。今日、四時半に田中さんと三人で会う約束でしたが、一時間ぐらい遅れそうなんです。事故があって、もう30分も電車が駅に止まったままで、先連絡があったんですが、田中さんは授業が早く終わったんで、四時には着くそうです。すいません、とにかく、急いでいきます。</p>\n<p  >\t加藤さんは何時ごろ着くといっていますか。</p><br><p>听力译文</p><p>正在听电话留言中的信息。加藤先生说他几点到？</p>\n<p>男：我是加藤。今天原本约好四点半和田中先生三个人见面，但是可能要晚一个小时左右。因为发生了事故，电车已经在车站停了30分钟。虽然刚刚联系了，但田中提前下课了，据说四点就到。不好意思，总之我尽快赶到。</p>\n<p>加藤先生说他几点到？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9084:82",
+      "sourceId": 9084,
+      "questionNumber": 82,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/8.mp3"
+      },
+      "raw": {
+        "id": 9084,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 82,
+        "typeQuestionId": 7,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/8.mp3",
+        "article": null,
+        "option1": " サッカー",
+        "option2": " バスケット",
+        "option3": " テニス",
+        "option4": " 卓球",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女の人と男の人が話しています。男の人は今、どのスポーツをしていますか。</p>\n<p  >\t女 : ねえ、田中君、サッカー好き?</p>\n<p  >\t男 :うん、ボールを使うスポーツって、いいよね。サッカーとか、バスケットとか。山田さんは?</p>\n<p  >\t女 :私?私も小さい頃からサッカーが好きで、今でも時々見に行くのよ。</p>\n<p  >\t男 : そう。何かスポーツしないの?</p>\n<p  >\t女: うん。スポーツは、見るだけ。田中君は、何かスポーツしてる?</p>\n<p  >\t男:僕は高校時代、テニスをしてたんだけど、最近は卓球をしてるんだ。やってみたら、結構面白くてね。</p>\n<p  >\t女: へえ、そうなんだ。私もやってみようかな。</p>\n<p  >\t男の人は今、どのスポーツをしていますか。</p><br><p>听力译文</p><p>女：喂，田中，你喜欢足球吗？</p>\n<p>男：嗯，球类运动很棒。足球啦、篮球啦。山田你呢？</p>\n<p>女：我？我从小就喜欢足球，现在有时也会去看。</p>\n<p>男：这样啊，不做什么运动吗？</p>\n<p>女：嗯。我只看不运动。田中在做什么运动吗？</p>\n<p>男：我高中的时候打网球，最近在打乒乓球。试着打了几次，相当有趣。</p>\n<p>女：欸，是吗？那我也试试吧。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9085:83",
+      "sourceId": 9085,
+      "questionNumber": 83,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/9.mp3"
+      },
+      "raw": {
+        "id": 9085,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 83,
+        "typeQuestionId": 8,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/9.mp3",
+        "article": null,
+        "option1": " おいしい料理を食べること",
+        "option2": " 子供と遊ぶこと",
+        "option3": " 写真をもらうこと",
+        "option4": " 日本の習慣を習うこと",
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男の留学生が、お世話になった人と話しています。留学生は何が最高の思い出だと言っていますか。</p>\n<p  >\t男：いろいろお世話になりました。</p>\n<p  >\t女：短かったけど、楽しかったわ。</p>\n<p  >\t男：僕もです。作ってくださった料理はとても美味しかったです。それに、日本の習慣もいろいろ教えてくださって、ありがとうございました。</p>\n<p  >\t女：こちらこそ。マイクさんには、子供と遊んでもらって。</p>\n<p  >\t男：僕には兄弟がいませんから、忘れられない最高の思い出になりました。</p>\n<p  >\t女：寂しくなりますね。また、遊びに来てくださいね。</p>\n<p  >\t男:はい、ありがとうございます。帰ったら、メールで写真を送ります。</p>\n<p  >\t女: ありがとう。じゃ、メール、楽しみに待っていますね。</p>\n<p  >\t留学生は何が最高の思い出だと言っていますか。</p><br><p>听力译文</p><p>男留学生正在和关照过他的人说话。留学生说最美好的回忆是什么？</p>\n<p>男：一直以来承蒙关照了。</p>\n<p>女：虽然在一起的时间很短，但我过得很开心。</p>\n<p>男：我也是。您做的菜非常好吃。而且还教了我很多日本的习惯，非常感谢。</p>\n<p>女：我也很感谢你愿意陪孩子一起玩。</p>\n<p>男：因为我没有兄弟姐妹，所以这是我难忘的最美好的回忆。</p>\n<p>女：你走了可就冷清了。以后再来玩呀。</p>\n<p>男：好，谢谢。等我回去，我会给你寄照片的。</p>\n<p>女：谢谢。我很期待你的邮件。</p>\n<p>留学生说最美好的回忆是什么？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9086:84",
+      "sourceId": 9086,
+      "questionNumber": 84,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/10.mp3"
+      },
+      "raw": {
+        "id": 9086,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 84,
+        "typeQuestionId": 9,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/10.mp3",
+        "article": null,
+        "option1": " このグループの歌が好きだから",
+        "option2": " 友達がこのグループのファンだから",
+        "option3": " グループのリーダーが好きだから",
+        "option4": " グループのリーダーのポスターがほしいから",
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男のアナウンサーが女の人にインタビューをしています。女の人はどうしてこのグループのコンサートに来ましたか。</p>\n<p  >\t男 :あのう、ミナミテレビですが、ちょっとインタビューいいですか。</p>\n<p  >\t女 :あっ、はい。</p>\n<p  >\t男:このグループのコンサートには、よくいらっしゃいますか。</p>\n<p  >\t女:そうですね、ときどき来てます。このグループの歌、私は、まあ、悪くないかなーくらいなんですけど、とにかく、友達が毎回、一緒に行こうって言うんで…</p>\n<p  >\t男:お友達はこのグループのファンなんですか。</p>\n<p  >\t女:ええ、CD、全部持ってるんですよ。歌も好きみたいですけど、とにかく、グループのリーダーに夢中で、部屋中に、彼のポスターがあって、それに、ダンスが最高って言っています。</p>\n<p  >\t男: なるほど、そうですか。どうもありがとうございました。</p>\n<p  >\t女の人はどうしてこのグループのコンサートに来ましたか。</p><br><p>听力译文</p><p>男广播员正在采访一位女士。这位女士为什么来参加这个组合的演唱会？</p>\n<p>男：那个，我们是南方电视台，可以采访您一下吗？</p>\n<p>女：啊，好的。</p>\n<p>男：您经常来听这个组合的演唱会吗？</p>\n<p>女：嗯，我有时候会来。这个组合的歌，我觉得也就一般般吧，不过朋友每次都说一定要一起去……</p>\n<p>男：您朋友是这个组合的粉丝吗？</p>\n<p>女：是的，她把他们的CD全都买齐了。她好像很喜欢他们的歌，而且特别迷这个组合的队长，房间里到处都贴着他的海报，还说他跳舞最棒。</p>\n<p>男：原来如此，是这样啊。非常感谢您。</p>\n<p>这位女士为什么来参加这个组合的演唱会？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9087:85",
+      "sourceId": 9087,
+      "questionNumber": 85,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/11.mp3"
+      },
+      "raw": {
+        "id": 9087,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 85,
+        "typeQuestionId": 10,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/11.mp3",
+        "article": null,
+        "option1": " 虫に食べられた傷があるから",
+        "option2": " 薬を使ってしまうから",
+        "option3": " 味は普通のりんごほどよくないから",
+        "option4": " 台風で落ちてしまって、表面に傷があるから",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\tスーパーで、店員がりんごの説明をしています。りんごはなぜ安いのですか。</p>\n<p  >\t男:さあ、安いよ、安いよ。このりんご、今日は特別、一つ50円です。安さの秘密は表面の傷、虫に食べられた傷じゃありませんよ。このりんご、先日の台風で落ちてしまったりんごで、表面に多少の傷や汚れはありますが、味は普通のりんごとまったく変わりません。それに、薬を使っていませんから、安心ですよ。さあ、いかがですか。</p>\n<p  >\tりんごはなぜ安いのですか。</p><br><p>听力译文</p><p>超市里，店员正在介绍苹果。苹果为什么便宜？</p>\n<p>男：快看，便宜啦，便宜啦！这种苹果今天特价，一个只要50日元。便宜的秘密就在于表面的伤痕，并不是虫子咬的。这些苹果是前几天台风时被吹落的，所以表面多少有些伤痕和污渍，但味道和普通的苹果完全一样。而且没有使用农药，所以很放心。怎么样，来一个吗？</p>\n<p>苹果为什么便宜？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9088:86",
+      "sourceId": 9088,
+      "questionNumber": 86,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/12.mp3"
+      },
+      "raw": {
+        "id": 9088,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 86,
+        "typeQuestionId": 11,
+        "type": 4,
+        "bigTitle": "<p>問題2 では、まず質問を聞いてください。そのあと、問題用紙を見てください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/12.mp3",
+        "article": null,
+        "option1": " 健康になりたいから",
+        "option2": " 花子は猫の形のパンが好きだから",
+        "option3": " 遠くのスーパーは何でも安くていいから",
+        "option4": " 花子は買い物のとき大人しくしているから",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t夫婦が話をしています。女の人が、遠くのスーパーに行くのは、どうしてですか。</p>\n<p  >\t男:今日、花子、喜んでたよ。お母さんに、猫の形のパンを買ってもらったって。</p>\n<p  >\t女:花子、あのパンが大好きなんだけど、遠くのスーパーにしか売ってなくて、近くのスーパーのほうが、何でも安くていいんだけど。</p>\n<p  >\t男:君が最近、遠くのスーパーに歩いていくのは、健康のためかと思ってたよ。本当は花子のためだったんだね。</p>\n<p  >\t女:うんふ、そういうわけじゃないんだけど…ほら、花子に、あとで猫のパン、買ってあげるからねって言うと、買い物している間、大人しくしていてくれるんだ。</p>\n<p  >\t男:はあ、なるほど。そうすれば、落ち着いて買い物ができるんだ。</p>\n<p  >\t女:そう、小さい子が一緒だと、本当大変。</p>\n<p  >\t女の人が、遠くのスーパーに行くのは、どうしてですか。</p><br><p>听力译文</p><p>夫妇正在聊天。女人为什么要去远处的超市呢？</p>\n<p>男：花子今天很高兴啊。她说妈妈给她买了小猫形状的面包。</p>\n<p>女：花子最喜欢那个面包了，但是只有那家很远的超市有卖，虽说附近的超市东西都是又便宜又好。</p>\n<p>男：我还以为你最近是为了健康才走去那家很远的超市呢。其实是为了花子吧。</p>\n<p>女：嗯，其实也不是这样的……你看，我对花子说待会儿给她买小猫面包，买东西的时候她就能老实待着了。</p>\n<p>男：啊，原来如此。这样的话，就能安心地买东西了。</p>\n<p>女：是啊，带小孩真的很麻烦。</p>\n<p>女人为什么要去很远的超市呢？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9089:87",
+      "sourceId": 9089,
+      "questionNumber": 87,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/13.mp3"
+      },
+      "raw": {
+        "id": 9089,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 87,
+        "typeQuestionId": 12,
+        "type": 4,
+        "bigTitle": "<p>問題3 では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問とせんたくしを聞いて、1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/13.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": " 4",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女の人と男の人が話しています。</p>\n<p  >\t女:あのう、お願いって何でしょうか。</p>\n<p  >\t男:あのう、田中さんは歌やピアノを教えていらっしゃるってきいたんですが。実は来月、知り合いの結婚式があって、私がピアノを演奏して、友達が歌を歌うことになったんです。でも、私、そんなにできるわけじゃなくて、困っているんですが。あのう、お時間のあるときに教えていただけないでしょうか。</p>\n<p  >\t男の人は女の人にどのようなことをお願いしていますか。</p>\n<p  >\t1.結婚式で歌ってもらうこと。</p>\n<p  >\t2.結婚式でピアノを弾いてもらうこと。</p>\n<p  >\t3.歌を教えてもらうこと。</p>\n<p  >\t4.ピアノを教えてもらうこと。</p><br><p>听力译文</p><p>女：那个，你说有事拜托我，是什么事啊？</p>\n<p>男：嗯，我听说田中你在教唱歌和钢琴。其实下个月我有个朋友结婚，婚礼上我弹钢琴，朋友唱歌。不过，我弹得也不太好，感觉很难办。那个……你有时间的时候能教教我吗？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9090:88",
+      "sourceId": 9090,
+      "questionNumber": 88,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/14.mp3"
+      },
+      "raw": {
+        "id": 9090,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 88,
+        "typeQuestionId": 13,
+        "type": 4,
+        "bigTitle": "<p>問題3 では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問とせんたくしを聞いて、1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/14.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": " 4",
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\tアナウンサーがスーパーからリポートしています。</p>\n<p  >\t女:こちら、スーパーの野菜売り場です。ごらんください。珍しい野菜が並んでいますね。この黄色いのなんだと思いますか。形はきゅうりですが、ちょっといただきます。うん、きゅうりの味です。おいしいです。実は、技術がすすんで、簡単に野菜の色を変えられるようになったそうです。おもしろいですね。ところが、このような野菜はあまり売れていません。値段は普通の野菜と変わらないのですが。やはりおいしそうに見えないのでしょうか。それが原因かもしれません。</p>\n<p  >\tアナウンサーは何についてリポートしていますか。</p>\n<p  >\t1.面白い形の野菜。</p>\n<p  >\t2.珍しい色の野菜。</p>\n<p  >\t3.変わった味の野菜。</p>\n<p  >\t4.値段の高い野菜。</p><br><p>听力译文</p><p>播音员正在超市做报道。</p>\n<p>女：这里是超市的蔬菜专卖场。请看，这里摆放的蔬菜十分罕见。你觉得这个黄色的蔬菜是什么？形状看起来是黄瓜，让我尝一下。嗯，是黄瓜的味道，很好吃。实际上，随着科技的进步，我们很容易就能改变蔬菜的颜色，很有意思吧。但是，这样的蔬菜卖得并不好，虽说价格和普通蔬菜差不多。原因可能是颜色变了，看起来不好吃了吧。</p>\n<p>播音员正在超市做什么报道？</p>\n<p>1 形状有趣的蔬菜。</p>\n<p>2 颜色少见的蔬菜。</p>\n<p>3 改变味道的蔬菜。</p>\n<p>4 价格昂贵的蔬菜。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9091:89",
+      "sourceId": 9091,
+      "questionNumber": 89,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/15.mp3"
+      },
+      "raw": {
+        "id": 9091,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 89,
+        "typeQuestionId": 14,
+        "type": 4,
+        "bigTitle": "<p>問題3 では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問とせんたくしを聞いて、1から4の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/15.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": " 4",
+        "answer": 4,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t中学生の男の子が友達についてスピーチしています。</p>\n<p  >\t男:よく、みんな友達は多ければ多いほどいいって言いますよね。ぼくは、前から、そのことに疑問を感じていました。どうして、友達がそんなにたくさん必要なのかわからないのです。数はすくなくても、お互いに心を開いて何でも話せるような付き合いをするのが理想的なのではないでしょうか。友達が多いと、一人一人としっかり向き合うことが難しくなると思います。</p>\n<p  >\t男の子はどんな付き合い方がいいと言っていますか。</p>\n<p  >\t1.多くの友達と浅く付き合う。</p>\n<p  >\t2.多くの友達と深く付き合う。</p>\n<p  >\t3.少数の友達と浅く付き合う。</p>\n<p  >\t4.少数の友達と深く付き合う。</p><br><p>听力译文</p><p>中学的男生正以朋友为题做演讲。</p>\n<p>男：大家总会说朋友越多越好。我从以前开始就对此感到疑惑。我不明白为什么需要那么多朋友。即使朋友不多，能够互相敞开心扉、无话不谈就很理想了吧。我觉得朋友一多，就很难和每一个人好好相处。</p>\n<p>男孩说怎样的交往方式比较好？</p>\n<p>1. 结交很多交情不深的朋友。</p>\n<p>2. 结交很多交情很深的朋友。</p>\n<p>3. 结交少数交情不深的朋友。</p>\n<p>4. 结交少数交情很深的朋友。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9092:90",
+      "sourceId": 9092,
+      "questionNumber": 90,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/16.mp3"
+      },
+      "raw": {
+        "id": 9092,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 90,
+        "typeQuestionId": 15,
+        "type": 4,
+        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/16.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t会社で後輩が先に帰ります。後輩に何と言いますか。</p>\n<p  >\t1.お世話になりました。</p>\n<p  >\t2.お疲れ様。</p>\n<p  >\t3.お先に失礼します。</p><br><p>听力译文</p><p>在公司里，后辈要先回去，前辈会对后辈说什么？</p>\n<p>1. 承蒙关照。</p>\n<p>2. 辛苦了。</p>\n<p>3. 我先走了。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9093:91",
+      "sourceId": 9093,
+      "questionNumber": 91,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/17.mp3"
+      },
+      "raw": {
+        "id": 9093,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 91,
+        "typeQuestionId": 16,
+        "type": 4,
+        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/17.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t前の人のハンカチを拾いました。何と言いますか。</p>\n<p  >\t1.ハンカチ、どうぞ。</p>\n<p  >\t2.ハンカチ、要りますか。</p>\n<p  >\t3.ハンカチ、落としましたよ。</p><br><p>听力译文</p><p>问题：捡到了前面的人的手帕，要怎么说。</p>\n<p>解析：3  你的手帕掉了。</p>\n<p>翻译</p>\n<p>后面的人捡起了前面的人掉的手帕，他会说什么?</p>\n<p>1请用手帕。</p>\n<p>2需要手帕吗?</p>\n<p>3手帕掉了。</p>\n\n<p>前の人のハンカチを拾いました。何と言いますか。</p>\n<p>1.ハンカチ、どうぞ。</p>\n<p>2.ハンカチ、要りますか。</p>\n<p>3.ハンカチ、落としましたよ。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9094:92",
+      "sourceId": 9094,
+      "questionNumber": 92,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/18.mp3"
+      },
+      "raw": {
+        "id": 9094,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 92,
+        "typeQuestionId": 17,
+        "type": 4,
+        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/18.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 1,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t辞書を忘れたので、クラスメートに借りたいです。何と言いますか。</p>\n<p  >\t1.辞書、貸してくれない。</p>\n<p  >\t2.辞書、貸しましょう。</p>\n<p  >\t3.辞書、どうですか。</p><br><p>听力译文</p><p>问题：忘带词典，想借同学的用，要怎么说。</p>\n<p>解析：1 能把你的词典借给我吗。</p>\n<p><b>翻译</b></p>\n<p>忘记带词典了，所以想向同学借，这时应该说什么?</p>\n<p>1 能把词典借给我吗?</p>\n<p>2 我把词典借给你吧。</p>\n<p>3 词典怎么样?</p>\n\n<p>辞書を忘れたので、クラスメートに借りたいです。何と言いますか。</p>\n<p>1. 辞書、貸してくれない。</p>\n<p>2. 辞書、貸しましょう。</p>\n<p>3. 辞書、どうですか。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9095:93",
+      "sourceId": 9095,
+      "questionNumber": 93,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/19.mp3"
+      },
+      "raw": {
+        "id": 9095,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 93,
+        "typeQuestionId": 18,
+        "type": 4,
+        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/19.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 1,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t自分たちの写真を撮ってもらいたいので、近くの人に頼みます。何と言いますか。</p>\n<p  >\t1.写真を撮っていただけませんか。</p>\n<p  >\t2.写真を撮らせていただけませんか。</p>\n<p  >\t3.写真を撮ってもいいですか。</p><br><p>听力译文</p><p>想让附近的人帮忙拍照，应该说什么?</p>\n<p>1能帮忙拍张照片吗?</p>\n<p>2能让我拍张照片吗?</p>\n<p>3这里可以拍照吗?</p>\n\n<p>自己想拍照，请附近的人帮忙，应该怎么说。</p>\n<p>1. 能帮我拍张照片吗？</p>\n<p>2. 能让我拍张照片吗？</p>\n<p>3. 可以拍照吗？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9096:94",
+      "sourceId": 9096,
+      "questionNumber": 94,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/20.mp3"
+      },
+      "raw": {
+        "id": 9096,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 94,
+        "typeQuestionId": 19,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/20.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：コーヒーもう一杯いかがですか。</p>\n<p  >\t1.結構だと思います。</p>\n<p  >\t2.おかげさまで。</p>\n<p  >\t3.いただきます。</p><br><p>听力译文</p><p>女：再来一杯咖啡怎么样？</p>\n<p>1. 我觉得不用了。</p>\n<p>2. 托您的福。</p>\n<p>3. 那我就不客气了。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9097:95",
+      "sourceId": 9097,
+      "questionNumber": 95,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/21.mp3"
+      },
+      "raw": {
+        "id": 9097,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 95,
+        "typeQuestionId": 20,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/21.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 1,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：いつ日本にいらっしゃったんですか。</p>\n<p  >\t1.三ヶ月前に参りました。</p>\n<p  >\t2 .3年の予定です。</p>\n<p  >\t3.来年の三月までいます。</p><br><p>听力译文</p><p>女：你是什么时候来日本的？</p>\n<p>1. 三个月前来的。</p>\n<p>2. 预计三年。</p>\n<p>3. 要待到明年三月。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9098:96",
+      "sourceId": 9098,
+      "questionNumber": 96,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/22.mp3"
+      },
+      "raw": {
+        "id": 9098,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 96,
+        "typeQuestionId": 21,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/22.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男：お久しぶりです。お元気ですか。</p>\n<p  >\t1.結構です。</p>\n<p  >\t2.お構いなく。</p>\n<p  >\t3.おかげさまで</p><br><p>听力译文</p><p>男：好久不见，你还好吗。</p>\n<p>1. 不用了。</p>\n<p>2. 别那么客气。</p>\n<p>3. 托您的福，一切都好。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9099:97",
+      "sourceId": 9099,
+      "questionNumber": 97,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/23.mp3"
+      },
+      "raw": {
+        "id": 9099,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 97,
+        "typeQuestionId": 22,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/23.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：風邪、どう?治った?</p>\n<p  >\t1.そう、お大事に。</p>\n<p  >\t2.まだ調子悪くて。</p>\n<p  >\t3.風邪引いちゃった。</p><br><p>听力译文</p><p>女：你的感冒怎么样了？痊愈了吗？</p>\n<p>1.这样啊，多保重身体。</p>\n<p>2.还不太舒服。</p>\n<p>3.我感冒了。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9100:98",
+      "sourceId": 9100,
+      "questionNumber": 98,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/24.mp3"
+      },
+      "raw": {
+        "id": 9100,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 98,
+        "typeQuestionId": 23,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/24.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：あのう、明日のテスト、どうしても受けなくちゃいけませんか。</p>\n<p  >\t1.受けられますよ。</p>\n<p  >\t2.必ず受けてください。</p>\n<p  >\t3.明日のほうが良かったですか。</p><br><p>听力译文</p><p>那个，明天的考试，无论如何都必须参加吗？</p>\n<p>1. 可以参加哦。</p>\n<p>2. 请务必参加。</p>\n<p>3. 明天可以吗？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9101:99",
+      "sourceId": 9101,
+      "questionNumber": 99,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/25.mp3"
+      },
+      "raw": {
+        "id": 9101,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 99,
+        "typeQuestionId": 24,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/25.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 1,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：この仕事、ぜひ私にやらせてもらいませんか。</p>\n<p  >\t1.ええ、お願いします。</p>\n<p  >\t2.そういわずに、がんばってください。</p>\n<p  >\t3.じゃあ、引き受けましょう。</p><br><p>听力译文</p><p>女：这个工作，请务必让我来做一下好吗。</p>\n<p>1. 嗯，那就拜托你了。</p>\n<p>2. 别这么说，加油干吧。</p>\n<p>3. 那我就接受吧。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9102:100",
+      "sourceId": 9102,
+      "questionNumber": 100,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/26.mp3"
+      },
+      "raw": {
+        "id": 9102,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 100,
+        "typeQuestionId": 25,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/26.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男：ねえ、田中君のこと聞いた?</p>\n<p  >\t1.そうなんだ。</p>\n<p  >\t2.何かあったの?</p>\n<p  >\t3.そんなことないよ。</p><br><p>听力译文</p><p>喂，你听说田中的事了吗？</p>\n<p>1是这样啊。</p>\n<p>2发生什么事了吗？</p>\n<p>3没那回事。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9103:101",
+      "sourceId": 9103,
+      "questionNumber": 101,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/27.mp3"
+      },
+      "raw": {
+        "id": 9103,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 101,
+        "typeQuestionId": 26,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/27.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 2,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t男：すいません、部長、この書類見ていただけませんか。</p>\n<p  >\t1.ご覧になってください。</p>\n<p  >\t2.会議の後でならいいですよ。</p>\n<p  >\t3.すぐに見せましょう。</p><br><p>听力译文</p><p>不好意思，部长，能帮忙看一下这份文件吗？</p>\n<p>1. 请看。</p>\n<p>2. 会议结束后就可以看。</p>\n<p>3. 马上让你看。</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    },
+    {
+      "id": "imported:201007:N3:4:9104:102",
+      "sourceId": 9104,
+      "questionNumber": 102,
+      "reasons": [
+        "缺少配套音频"
+      ],
+      "media": {
+        "picture": "",
+        "audio": "audio/201007n3/28.mp3"
+      },
+      "raw": {
+        "id": 9104,
+        "time": "201007",
+        "level": "n3",
+        "questionId": 102,
+        "typeQuestionId": 27,
+        "type": 4,
+        "bigTitle": "<p>問題5 では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。</p>",
+        "question": "<p></p>",
+        "littleQuestion": null,
+        "picture": null,
+        "audio": "audio/201007n3/28.mp3",
+        "article": null,
+        "option1": " 1",
+        "option2": " 2",
+        "option3": " 3",
+        "option4": null,
+        "answer": 3,
+        "isMultiple": 0,
+        "multipleIds": null,
+        "assistant": null,
+        "assistantNew": "<p>听力原文</p>\n<p  >\t女：明日3時にお伺いしてもよろしいでしょうか。</p>\n<p  >\t1.そうですか、伺います。</p>\n<p  >\t2.よくいらっしゃいました。</p>\n<p  >\t3.もうすこし早く来られませんか。</p><br><p>听力译文</p><p>女：明天3点去拜访您可以吗。</p>\n<p>1：是吗，我去拜访。</p>\n<p>2：您可来了，欢迎欢迎。</p>\n<p>3：可以再早一点来吗？</p>",
+        "extending": [],
+        "parentId": null,
+        "articleAssistant": null
+      }
+    }
+  ]
+}

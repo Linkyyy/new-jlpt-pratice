@@ -1,0 +1,59 @@
+import Link from "next/link";
+import type { RefObject } from "react";
+import { optionLabel, questionCategories, type OptionId } from "@/data/practice-question";
+import type { PracticePaper } from "@/data/practice-papers";
+import { formatDuration } from "@/data/practice-modes";
+
+export type SelectedAnswers = Partial<Record<string, OptionId>>;
+
+interface SessionResultsProps {
+  paper: PracticePaper;
+  answers: SelectedAnswers;
+  headingRef: RefObject<HTMLHeadingElement | null>;
+  onReview: (index: number) => void;
+  onRestart: () => void;
+  exam?: { elapsedSeconds: number; timedOut: boolean };
+}
+
+export default function SessionResults({ paper, answers, headingRef, onReview, onRestart, exam }: SessionResultsProps) {
+  const total = paper.questions.length;
+  const correct = paper.questions.filter((question) => answers[question.id] === question.correctOptionId).length;
+  const unanswered = paper.questions.filter((question) => answers[question.id] === undefined).length;
+  const wrong = total - correct - unanswered;
+
+  return (
+    <section aria-labelledby="results-title" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+      <h1 ref={headingRef} tabIndex={-1} id="results-title" className="scroll-mt-6 text-2xl font-bold outline-none">{exam ? "考试已交卷" : "练习已完成"}</h1>
+      <p className="mt-2 text-sm text-slate-500">{paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel} · {exam ? "考试模式" : "练习模式"}</p>
+      {exam && <p role="status" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{exam.timedOut ? "时间已到，已自动交卷。未作答题目按未得分计算。" : "已提交整份试卷，答案已锁定。"} 作答用时：{formatDuration(exam.elapsedSeconds)}。</p>}
+      <p className="mt-7 text-4xl font-bold text-indigo-600">{Math.round((correct / total) * 100)}% <span className="text-sm font-normal text-slate-500">正确率</span></p>
+      <p className="mt-3 text-slate-600">答对 {correct} 题，答错 {wrong} 题，{unanswered > 0 && `未作答 ${unanswered} 题，`}共 {total} 题。</p>
+      <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        {questionCategories.map((category) => {
+          const questions = paper.questions.filter((question) => question.category === category);
+          if (questions.length === 0) return null;
+          const categoryCorrect = questions.filter((question) => answers[question.id] === question.correctOptionId).length;
+          return <p key={category} className="rounded-xl bg-slate-50 p-4 text-sm">{category}：{categoryCorrect} / {questions.length} · {Math.round((categoryCorrect / questions.length) * 100)}%</p>;
+        })}
+      </div>
+      <p className="mt-5 text-xs leading-6 text-slate-500">正确率以全部题目为分母，未作答题目不计分。这不是 JLPT 官方标准分或合格判定。</p>
+      <h2 className="mt-7 font-bold">逐题回顾</h2>
+      <div className="mt-3 space-y-2">
+        {paper.questions.map((question, index) => {
+          const selected = answers[question.id];
+          const correct = selected === question.correctOptionId;
+          return (
+            <button key={question.id} type="button" onClick={() => onReview(index)} className="flex min-h-12 w-full flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 p-3 text-left text-sm hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-indigo-500">
+              <span>第 {index + 1} 题 · {question.category}</span>
+              <span className={selected === undefined ? "text-slate-500" : correct ? "text-emerald-700" : "text-rose-700"}>{selected === undefined ? "未作答" : correct ? "正确" : "错误"} · 你的选择 {optionLabel(question, selected)} / 答案 {optionLabel(question, question.correctOptionId)} →</span>
+            </button>
+          );
+        })}
+      </div>
+      <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+        <button type="button" onClick={onRestart} className="min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{exam ? "重新考试" : "重新练习"}</button>
+        <Link href="/" className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">选择其他练习</Link>
+      </div>
+    </section>
+  );
+}
