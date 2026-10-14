@@ -69,3 +69,10 @@ body:has(dialog:modal) { overflow: hidden; }
   .reading-article { scroll-margin-top: 64px; }
   .session-layout:has(.session-timer) .reading-article { scroll-margin-top: 148px; }
 }
+
+.session-review { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 12px 16px; border: 1px solid #c7d2fe; border-radius: 12px; background: #fff; }
+@media (min-width: 1024px) { .session-review { grid-column: 1 / -1; } }
+@media (max-width: 1023px) {
+  .session-layout:has(.session-review):has(.reading-workspace) > .responsive-panel { top: 80px; }
+  .session-layout:has(.session-review) .reading-article { scroll-margin-top: 148px; }
+}

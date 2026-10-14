@@ -9,6 +9,8 @@ import type { PracticePaper } from "@/data/practice-papers";
 import PracticeConfirmDialog, { type ConfirmationAction } from "./practice-confirm-dialog";
 import QuestionAnswer from "./question-answer";
 import ReadingWorkspace from "./reading-workspace";
+import { articleGroup, usesArticleDrawer } from "./article-questions";
+import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
 import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
@@ -45,6 +47,11 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   const resultRef = useRef<HTMLHeadingElement>(null);
   const previousView = useRef({ questionIndex, showResults });
   const question = paper.questions[questionIndex];
+  const article = usesArticleDrawer(question);
+  const group = articleGroup(paper.questions, question);
+  const groupComplete = group.every(({ item }) => answers[item.id] !== undefined);
+  const firstGroupDraft = group.find(({ item }) => answers[item.id] === undefined);
+  const nextArticleIndex = Math.max(...group.map(({ index }) => index)) + 1;
   const answer = answers[question.id];
   const selectedOptionId = answer?.selectedOptionId ?? null;
   const submitted = answer?.submitted ?? false;
@@ -67,8 +74,8 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
     previousView.current = { questionIndex, showResults };
     if (previous.questionIndex === questionIndex && previous.showResults === showResults) return;
     if (!headingRef.current?.closest("[hidden]")) headingRef.current?.focus({ preventScroll: true });
-    if (showResults || question.category !== "阅读" || !question.passage) headingRef.current?.scrollIntoView({ block: "start" });
-  }, [questionIndex, showResults, question.category, question.passage]);
+    if (showResults || !article) headingRef.current?.scrollIntoView({ block: "start" });
+  }, [questionIndex, showResults, article]);
 
   useEffect(() => {
     const previous = previousAnswer.current;
@@ -114,11 +121,18 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (selectedOptionId === null || submitted || finished) return;
-    setAnswers((previous) => ({
-      ...previous,
-      [question.id]: { selectedOptionId, submitted: true },
-    }));
+    if (finished || submitted || selectedOptionId === null) return;
+    if (article) {
+      if (!groupComplete) return;
+      setAnswers((previous) => {
+        if (group.some(({ item }) => previous[item.id] === undefined)) return previous;
+        const updated = { ...previous };
+        for (const { item } of group) updated[item.id] = { selectedOptionId: previous[item.id]!.selectedOptionId, submitted: true };
+        return updated;
+      });
+      return;
+    }
+    setAnswers((previous) => ({ ...previous, [question.id]: { selectedOptionId, submitted: true } }));
   }
 
   function selectOption(optionId: OptionId) {
@@ -126,7 +140,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
     setAnswers((previous) => {
       // 快速连点时也只接受第一次已判定的答案，避免依赖旧渲染的 submitted 值。
       if (previous[question.id]?.submitted) return previous;
-      return { ...previous, [question.id]: { selectedOptionId: optionId, submitted: instantFeedback } };
+      return { ...previous, [question.id]: { selectedOptionId: optionId, submitted: instantFeedback && !article } };
     });
   }
 
@@ -153,11 +167,12 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
-          <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 练习模式 · {paper.typeLabel} · {instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
+          <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · {finished ? "复习模式" : "练习模式"} · {paper.typeLabel} · {finished ? "原答案与解析" : article ? "本篇小题统一提交" : instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">该场次当前有 {paper.excludedCount} 题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。</p>}
 
         </header>
 
+        {finished && !showResults && <ReviewToolbar onReturn={() => setShowResults(true)} />}
         <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
           {question.instruction && <div className="mb-5 border-b border-slate-100 pb-4"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
            <nav aria-label="题目导航" className="question-grid">
@@ -180,22 +195,24 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
 
         <fieldset className="mt-6 border-t border-slate-100 pt-5">
-          <legend className="px-1 text-sm font-semibold text-slate-700">练习设置</legend>
+          <legend className="px-1 text-sm font-semibold text-slate-700">{finished ? "显示设置" : "练习设置"}</legend>
           <div className="grid gap-3">
+            {!finished && <>
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
               <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
               <span><span className="block font-semibold">点击选项即显示答案</span></span>
             </label>
+            </>}
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
               <input type="checkbox" name="large-text" checked={largeText} onChange={(event) => setLargeText(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
               <span><span className="block font-semibold">大字号阅读</span></span>
             </label>
           </div>
-          <p className="mt-3 text-xs leading-6 text-slate-500">设置仅对本次练习生效，已提交答案保持锁定。</p>
+          <p className="mt-3 text-xs leading-6 text-slate-500">文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。</p>
         </fieldset>
         <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
-        <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
+        <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
 
 </ResponsivePanel>
         <div className="session-content">
@@ -203,49 +220,48 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <SessionResults paper={paper} answers={selectedAnswers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} />
         ) : (
           <>
-        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} onNavigate={goToQuestion} getStatus={(item) => {
+        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
             return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
           }} largeText={largeText}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
-          <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
+          <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-          <QuestionBody question={question} largeText={largeText} compact part={question.category === "阅读" && question.passage?.trim() ? "question" : "all"} />
+          <QuestionBody question={question} largeText={largeText} compact part={article ? "question" : "all"} />
 
           <form key={`answer-${question.id}`} onSubmit={handleSubmit} className="mt-7">
-            <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted} onSelect={selectOption} feedbackRef={resultRef} largeText={largeText} />
+            <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted || finished} onSelect={selectOption} feedbackRef={resultRef} largeText={largeText} />
 
+            {article && !finished && !submitted && <p role="status" className="mt-4 text-sm text-slate-500">本篇已选择 {group.filter(({ item }) => answers[item.id] !== undefined).length} / {group.length} 题，全部选择后统一提交判定。</p>}
             <div className="answer-actions mt-5">
               {buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>}
-              {!submitted && !finished ? (
+              {finished ? (
+                !lastQuestion && buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button>
+              ) : article && !submitted ? (
+                !groupComplete && buttonsEnabled && selectedOptionId !== null && firstGroupDraft ? <button type="button" onClick={() => goToQuestion(firstGroupDraft.index)} className={`${primaryButton} flex-1`}>下一小题 →</button> : <button type="submit" disabled={!groupComplete} className={`${primaryButton} flex-1`}>提交本篇答案</button>
+              ) : article && nextArticleIndex < totalQuestions ? (
+                buttonsEnabled && <button type="button" onClick={() => goToQuestion(nextArticleIndex)} className={`${primaryButton} flex-1`}>下一篇 →</button>
+              ) : article ? (
+                remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>继续未完成题（{remainingQuestions}）</button>
+              ) : !submitted ? (
                 <>
-              {!instantFeedback && <button
-                type="submit"
-                disabled={selectedOptionId === null || submitted || finished}
-                className={`${primaryButton} flex-1`}
-              >
-                提交答案
-              </button>}
-              {instantFeedback && <p className="flex-1 self-center text-sm text-slate-500">点击选项即可查看解析</p>}
-              {buttonsEnabled && !lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>跳过</button>}
-              </>
+                  {!instantFeedback && <button type="submit" disabled={selectedOptionId === null} className={`${primaryButton} flex-1`}>提交答案</button>}
+                  {instantFeedback && <p className="flex-1 self-center text-sm text-slate-500">点击选项即可查看解析</p>}
+                  {buttonsEnabled && !lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>跳过</button>}
+                </>
               ) : !lastQuestion ? (
                 buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button>
-              ) : finished ? (
-                <button type="button" onClick={() => setShowResults(true)} className={`${primaryButton} flex-1`}>返回成绩汇总</button>
               ) : remainingQuestions > 0 ? (
                 buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>继续未完成题（{remainingQuestions}）</button>
-              ) : (
-                <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>完成并交卷</button>
-              )}
+              ) : <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>完成并交卷</button>}
             </div>
           </form>
         </section>
         </ReadingWorkspace>
         <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-slate-500">{finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。已选择的题目提交后才计入进度。`}</p>
-          {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button> : null)}
+          {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button> : null)}
         </div>
         </>
         )}

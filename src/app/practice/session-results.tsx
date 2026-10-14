@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import type { RefObject } from "react";
+import { useState, type RefObject } from "react";
+import { saveFavorites, useFavorites } from "@/lib/favorites-store";
 import { questionCategories, type OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration } from "@/data/practice-modes";
@@ -16,6 +19,19 @@ interface SessionResultsProps {
 }
 
 export default function SessionResults({ paper, answers, headingRef, onReview, onRestart, exam }: SessionResultsProps) {
+  const { data, ready, error: storageError } = useFavorites();
+  const [favoriteMessage, setFavoriteMessage] = useState("");
+  const [favoriteError, setFavoriteError] = useState<string | null>(null);
+  const wrongIds = paper.questions.filter((question) => answers[question.id] !== undefined && answers[question.id] !== question.correctOptionId).map((question) => question.id);
+  const unsavedWrong = wrongIds.filter((id) => !data.entries.some((entry) => entry.questionId === id));
+
+  function favoriteWrongQuestions() {
+    const result = saveFavorites(wrongIds);
+    if (!result.ok) { setFavoriteError(result.error); return; }
+    setFavoriteError(null);
+    setFavoriteMessage(`已新增收藏 ${result.addedCount ?? 0} 道错题，已有收藏保持不变。`);
+  }
+
   const total = paper.questions.length;
   const correct = paper.questions.filter((question) => answers[question.id] === question.correctOptionId).length;
   const unanswered = paper.questions.filter((question) => answers[question.id] === undefined).length;
@@ -37,6 +53,12 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
         })}
       </div>
       <p className="mt-5 text-xs leading-6 text-slate-500">正确率以全部题目为分母，未作答题目不计分。这不是 JLPT 官方标准分或合格判定。</p>
+      <div className="mt-5">
+        <button type="button" onClick={favoriteWrongQuestions} disabled={!ready || storageError !== null || unsavedWrong.length === 0} className="min-h-11 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-50">{wrongIds.length === 0 ? "暂无错题可收藏" : unsavedWrong.length === 0 ? "错题已全部收藏" : `一键收藏错题（${unsavedWrong.length}）`}</button>
+        <p className="mt-2 text-xs leading-6 text-slate-500">新收藏放入默认收藏夹，已收藏题目保留原有收藏夹。未作答题目不计入错题收藏。</p>
+        <p role="status" className="mt-1 text-sm text-slate-600">{favoriteMessage}</p>
+        {(favoriteError || storageError) && <p role="alert" className="mt-1 text-sm text-rose-700">{favoriteError ?? storageError}</p>}
+      </div>
       <h2 className="mt-7 font-bold">逐题回顾</h2>
       <p className="mt-2 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，灰色为未作答。点击题号查看答案与解析。</p>
       <nav aria-label="逐题回顾" className="question-grid results-grid mt-3">

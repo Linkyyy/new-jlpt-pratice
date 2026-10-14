@@ -30,7 +30,7 @@ export default function FolderManager() {
   const managerRef = useRef<HTMLDialogElement>(null);
   const deleteRef = useRef<HTMLDialogElement>(null);
   const deletingFolder = data.folders.find((folder) => folder.id === deleteId);
-  const deletingCount = data.entries.filter((entry) => entry.folderId === deleteId).length;
+  const deletingCount = data.entries.filter((entry) => deleteId !== null && entry.folderIds.includes(deleteId)).length;
 
   function create(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -50,7 +50,7 @@ export default function FolderManager() {
     const result = deleteFolder(deleteId);
     if (!result.ok) { setError(result.error); return; }
     deleteRef.current?.close();
-    setError(null); setMessage("收藏夹已删除，其中的题目已移动到默认收藏夹。");
+    setError(null); setMessage("收藏夹已删除，题目保留在其他收藏夹；无其他归属的题目已移到默认收藏夹。");
   }
 
   return (
@@ -73,7 +73,7 @@ export default function FolderManager() {
       </dialog>
       <dialog ref={deleteRef} aria-labelledby="delete-folder-title" aria-describedby="delete-folder-description" className="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-xl backdrop:bg-slate-900/50">
         <h2 id="delete-folder-title" className="text-xl font-bold">删除收藏夹？</h2>
-        <p id="delete-folder-description" className="mt-3 text-sm leading-7 break-words text-slate-600">“{deletingFolder?.name}”中的 {deletingCount} 道题会移动到默认收藏夹，不会删除题目收藏。</p>
+        <p id="delete-folder-description" className="mt-3 text-sm leading-7 break-words text-slate-600">“{deletingFolder?.name}”中的 {deletingCount} 道题会移除此收藏夹归属，题目会保留在其他收藏夹，仅无其他归属的题目移到默认收藏夹。</p>
         <form method="dialog" className="mt-6 flex flex-col gap-3 sm:flex-row">
           <button autoFocus className={`${buttonClass} flex-1`}>保留收藏夹</button>
           <button type="button" onClick={confirmDelete} className="min-h-12 flex-1 rounded-lg bg-indigo-600 px-4 py-3 font-semibold text-white hover:bg-indigo-700">确认删除收藏夹</button>

@@ -50,7 +50,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
   }, [importedIdsKey, retry]);
   const activeFolder = folderId === "all" || data.folders.some((folder) => folder.id === folderId) ? folderId : "all";
   const catalogById = new Map([...catalog, ...(remote.key === importedIdsKey ? remote.items : [])].map((item) => [item.question.id, item]));
-  const folderEntries = data.entries.filter((entry) => activeFolder === "all" || entry.folderId === activeFolder);
+  const folderEntries = data.entries.filter((entry) => activeFolder === "all" || entry.folderIds.includes(activeFolder));
   const levelEntries = folderEntries.filter((entry) => level === "all" || catalogById.get(entry.questionId)?.question.level === level);
   const filtered = levelEntries.filter((entry) => {
     const item = catalogById.get(entry.questionId);
@@ -75,7 +75,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
               <label className="text-sm font-semibold">收藏夹
                 <select aria-label="筛选收藏夹" value={activeFolder} onChange={(event) => setFolderId(event.target.value)} className={selectClass}>
                   <option value="all">全部收藏夹 · {data.entries.length} 题</option>
-                  {data.folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name} · {data.entries.filter((entry) => entry.folderId === folder.id).length} 题</option>)}
+                  {data.folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name} · {data.entries.filter((entry) => entry.folderIds.includes(folder.id)).length} 题</option>)}
                 </select>
               </label>
               <label className="text-sm font-semibold">等级
@@ -92,7 +92,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
               })}
             </div>
           </section>
-          <p className="mt-3 text-sm leading-7 text-slate-600">按收藏夹、题型和等级整理题目。每道题归入一个收藏夹，可从题目上的“已收藏”按钮移动或取消收藏。</p>
+          <p className="mt-3 text-sm leading-7 text-slate-600">按收藏夹、题型和等级整理题目。同一道题可加入多个收藏夹，点击题目右上角的星标管理归属或取消收藏。</p>
           <p className="mt-2 text-xs leading-6 text-slate-500">收藏仅保存在当前浏览器，刷新后仍保留；不会跨设备同步，清除网站数据会删除收藏。</p>
           </ResponsivePanel>
           <div className="favorites-content">
@@ -106,7 +106,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
           </section> : <div className="mt-4 grid items-start gap-5 xl:grid-cols-2">
             {filtered.map((entry) => {
               const item = catalogById.get(entry.questionId);
-              const folderName = data.folders.find((folder) => folder.id === entry.folderId)?.name;
+              const folderName = data.folders.filter((folder) => entry.folderIds.includes(folder.id)).map((folder) => folder.name).join("、");
               if (!item) return <article key={entry.questionId} className="relative rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">{loadingImported && entry.questionId.startsWith("imported:") ? "正在读取收藏题目" : "收藏的题目暂不可用"}</h2><p className="mt-2 text-sm leading-6 break-words text-slate-500">题目 ID：{entry.questionId}。收藏记录已保留。</p><FavoriteButton questionId={entry.questionId} /></article>;
               const { question, year } = item;
               const type = questionTypes.find((type) => type.category === question.category)?.value ?? "all";

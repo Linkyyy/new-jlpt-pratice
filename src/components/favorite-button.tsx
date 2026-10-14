@@ -6,8 +6,9 @@ import { DEFAULT_FOLDER_ID, removeFavorite, saveFavorite, useFavorites } from "@
 export default function FavoriteButton({ questionId }: { questionId: string }) {
   const { data, ready, error: storageError } = useFavorites();
   const entry = data.entries.find((entry) => entry.questionId === questionId);
-  const folderName = data.folders.find((folder) => folder.id === entry?.folderId)?.name;
-  const [folderId, setFolderId] = useState(DEFAULT_FOLDER_ID);
+  const folderName = data.folders.filter((folder) => entry?.folderIds.includes(folder.id)).map((folder) => folder.name).join("、");
+  const [folderIds, setFolderIds] = useState<readonly string[]>([DEFAULT_FOLDER_ID]);
+  const [createNew, setCreateNew] = useState(false);
   const [newFolderName, setNewFolderName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState("");
@@ -15,7 +16,8 @@ export default function FavoriteButton({ questionId }: { questionId: string }) {
   const titleId = `${questionId}-favorite-title`;
 
   function openDialog() {
-    setFolderId(entry?.folderId ?? DEFAULT_FOLDER_ID);
+    setFolderIds(entry?.folderIds ?? [DEFAULT_FOLDER_ID]);
+    setCreateNew(false);
     setNewFolderName("");
     setError(null);
     setMessage("");
@@ -24,7 +26,7 @@ export default function FavoriteButton({ questionId }: { questionId: string }) {
 
   function save(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const result = saveFavorite(questionId, folderId, folderId === "new" ? newFolderName : undefined);
+    const result = saveFavorite(questionId, folderIds, createNew ? newFolderName : undefined);
     if (!result.ok) { setError(result.error); return; }
     setMessage(entry ? "收藏夹已更新。" : "题目已收藏。" );
     dialogRef.current?.close();
@@ -45,15 +47,21 @@ export default function FavoriteButton({ questionId }: { questionId: string }) {
       <p role="status" className="sr-only">{storageError ?? message}</p>
       <dialog ref={dialogRef} aria-labelledby={titleId} className="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-xl backdrop:bg-slate-900/50">
         <h2 id={titleId} className="text-xl font-bold">{entry ? "管理题目收藏" : "收藏题目"}</h2>
-        <p className="mt-2 text-sm leading-6 text-slate-500">每道题归入一个收藏夹，可随时移动。收藏保存在当前浏览器，不包含作答记录。</p>
+        <p className="mt-2 text-sm leading-6 text-slate-500">一道题可以同时加入多个收藏夹。收藏保存在当前浏览器，不包含作答记录。</p>
         <form onSubmit={save} className="mt-5 space-y-4">
-          <label className="block text-sm font-semibold">选择收藏夹
-            <select autoFocus value={folderId} onChange={(event) => { setFolderId(event.target.value); setError(null); }} className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base">
-              {data.folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name}</option>)}
-              <option value="new">＋ 新建收藏夹</option>
-            </select>
+          <fieldset>
+            <legend className="text-sm font-semibold">选择收藏夹（可多选）</legend>
+            <div className="mt-2 max-h-52 space-y-1 overflow-y-auto">
+              {data.folders.map((folder, index) => <label key={folder.id} className="flex min-h-11 cursor-pointer items-center gap-3 rounded-lg px-2 text-sm hover:bg-slate-50">
+                <input autoFocus={index === 0} type="checkbox" checked={folderIds.includes(folder.id)} onChange={(event) => { setFolderIds((previous) => event.target.checked ? [...previous, folder.id] : previous.filter((id) => id !== folder.id)); setError(null); }} className="h-4 w-4 accent-indigo-600" />
+                {folder.name}
+              </label>)}
+            </div>
+          </fieldset>
+          <label className="flex min-h-11 cursor-pointer items-center gap-3 text-sm font-semibold">
+            <input type="checkbox" checked={createNew} onChange={(event) => setCreateNew(event.target.checked)} className="h-4 w-4 accent-indigo-600" />新建收藏夹
           </label>
-          {folderId === "new" && <label className="block text-sm font-semibold">新收藏夹名称
+          {createNew && <label className="block text-sm font-semibold">新收藏夹名称
             <input value={newFolderName} onChange={(event) => setNewFolderName(event.target.value)} maxLength={40} required className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2 text-base" placeholder="例如：易混淆语法" />
           </label>}
           {error && <p role="alert" className="text-sm text-rose-700">{error}</p>}

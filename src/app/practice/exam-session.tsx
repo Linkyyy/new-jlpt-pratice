@@ -10,6 +10,8 @@ import { formatDuration, getExamDuration } from "@/data/practice-modes";
 import PracticeConfirmDialog, { type ConfirmationAction } from "./practice-confirm-dialog";
 import QuestionAnswer from "./question-answer";
 import ReadingWorkspace from "./reading-workspace";
+import { usesArticleDrawer } from "./article-questions";
+import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
 import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
@@ -41,6 +43,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
   const durationSeconds = getExamDuration(paper.questions.length);
   const timer = useExamTimer(durationSeconds, () => finishExam(true));
   const question = paper.questions[questionIndex];
+  const article = usesArticleDrawer(question);
   const selectedOptionId = answers[question.id] ?? null;
   const answeredCount = paper.questions.filter((item) => answers[item.id] !== undefined).length;
   const unansweredCount = paper.questions.length - answeredCount;
@@ -53,8 +56,8 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
     previousView.current = { phase, questionIndex, showResults };
     if (previous.phase === phase && previous.questionIndex === questionIndex && previous.showResults === showResults) return;
     if (!headingRef.current?.closest("[hidden]")) headingRef.current?.focus({ preventScroll: true });
-    if (showResults || question.category !== "阅读" || !question.passage) headingRef.current?.scrollIntoView({ block: "start" });
-  }, [phase, questionIndex, showResults, question.category, question.passage]);
+    if (showResults || !article) headingRef.current?.scrollIntoView({ block: "start" });
+  }, [phase, questionIndex, showResults, article]);
 
   useEffect(() => {
     if (phase !== "running") return;
@@ -141,11 +144,12 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
-          <p className="mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 考试模式 · {paper.level} · {paper.typeLabel}</p>
+          <p className="mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · {finished ? "复习模式" : "考试模式"} · {paper.level} · {paper.typeLabel}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{paper.excludedCount} 题因配套资源缺失或数据不完整未计入当前试卷，本次只评估可作答题目。</p>}
 
         </header>
 
+        {finished && !showResults && <ReviewToolbar onReturn={() => setShowResults(true)} />}
         {phase === "running" && <div className="session-timer sticky top-0 z-10 mb-5 flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white/95 p-3 shadow-sm backdrop-blur">
           <p className={`text-sm font-semibold ${timer.remainingSeconds <= 60 ? "text-rose-700" : "text-slate-700"}`}>剩余时间 <span role="timer" aria-live="off" data-remaining-seconds={timer.remainingSeconds} className="ml-1 font-mono text-lg tabular-nums">{formatDuration(timer.remainingSeconds)}</span></p>
           <button type="button" onClick={() => requestConfirmation("submit")} className={primaryButton}>交卷</button>
@@ -175,32 +179,33 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             <nav aria-label="题目导航" className="question-grid">
               {paper.questions.map((item, index) => {
                 const answered = answers[item.id] !== undefined;
-                return <button key={item.id} type="button" onClick={() => goToQuestion(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`第 ${index + 1} 题，${answered ? "已作答" : "未作答"}`} className={`question-number ${index === questionIndex ? "question-current" : ""} ${answered ? "question-answered" : "question-empty"}`}>{index + 1}</button>;
+                const appearance = answered ? finished ? answers[item.id] === item.correctOptionId ? "question-correct" : "question-incorrect" : "question-answered" : "question-empty";
+                return <button key={item.id} type="button" onClick={() => goToQuestion(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`第 ${index + 1} 题，${answered ? "已作答" : "未作答"}`} className={`question-number ${index === questionIndex ? "question-current" : ""} ${appearance}`}>{index + 1}</button>;
               })}
             </nav>
-            <p className="mb-5 text-xs leading-6 text-slate-500">蓝色为已作答，描边表示当前题目。{finished ? "已交卷，答案已锁定。" : "选择即记录，交卷前可修改。"}</p>
+            <p className="mb-5 text-xs leading-6 text-slate-500">{finished ? "绿色为答对，红色为答错，灰色为未作答。原答案已锁定。" : "蓝色为已作答，描边表示当前题目。选择即记录，交卷前可修改。"}</p>
             <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>
-            <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
+            <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
 
 </ResponsivePanel>
             <div className="session-content">
-        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} onNavigate={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"}>
+        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"}>
             <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
               <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
               <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
               <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-              <QuestionBody question={question} compact part={question.category === "阅读" && question.passage?.trim() ? "question" : "all"} />
+              <QuestionBody question={question} compact part={article ? "question" : "all"} />
               <div key={`answer-${question.id}`} className="mt-7"><QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={finished} revealAnswer={finished} onSelect={selectOption} /></div>
               <div className="answer-actions mt-5">
                 {buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>}
-                {!lastQuestion ? buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button> : finished ? <button type="button" onClick={() => setShowResults(true)} className={`${primaryButton} flex-1`}>返回成绩汇总</button> : <button type="button" onClick={() => requestConfirmation("submit")} className={`${primaryButton} flex-1`}>交卷</button>}
+                {!lastQuestion ? buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button> : finished ? <button type="button" onClick={() => setShowResults(true)} className={`${primaryButton} flex-1`}>返回结算</button> : <button type="button" onClick={() => requestConfirmation("submit")} className={`${primaryButton} flex-1`}>交卷</button>}
               </div>
             </section>
         </ReadingWorkspace>
             <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm leading-6 text-slate-500">{finished ? "已交卷，可查看每道题的答案和解析。" : `已作答 ${answeredCount} 题，未作答 ${unansweredCount} 题。`}</p>
-              {finished ? !lastQuestion && <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回成绩汇总</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}
+              {finished ? !lastQuestion && <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}
             </div>
             </div>
           </>

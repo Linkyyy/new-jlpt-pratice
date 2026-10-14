@@ -12,12 +12,12 @@ export interface FavoriteFolder {
 
 export interface FavoriteEntry {
   readonly questionId: string;
-  readonly folderId: string;
+  readonly folderIds: readonly string[];
   readonly savedAt: string;
 }
 
 export interface FavoritesData {
-  readonly version: 1;
+  readonly version: 2;
   readonly folders: readonly FavoriteFolder[];
   readonly entries: readonly FavoriteEntry[];
 }
@@ -28,9 +28,9 @@ interface FavoritesSnapshot {
   readonly error: string | null;
 }
 
-export type FavoriteActionResult = { readonly ok: true; readonly folderId?: string } | { readonly ok: false; readonly error: string };
+export type FavoriteActionResult = { readonly ok: true; readonly folderId?: string; readonly addedCount?: number } | { readonly ok: false; readonly error: string };
 
-const emptyData: FavoritesData = { version: 1, folders: [{ id: DEFAULT_FOLDER_ID, name: "默认收藏夹" }], entries: [] };
+const emptyData: FavoritesData = { version: 2, folders: [{ id: DEFAULT_FOLDER_ID, name: "默认收藏夹" }], entries: [] };
 const serverSnapshot: FavoritesSnapshot = { data: emptyData, ready: false, error: null };
 let cachedRaw: string | null | undefined;
 let cachedSnapshot = serverSnapshot;
@@ -47,18 +47,32 @@ function isFolder(value: unknown): value is FavoriteFolder {
 
 function isEntry(value: unknown): value is FavoriteEntry {
   return isRecord(value) && typeof value.questionId === "string" && value.questionId.length > 0
-    && typeof value.folderId === "string" && typeof value.savedAt === "string" && Number.isFinite(Date.parse(value.savedAt));
+    && Array.isArray(value.folderIds) && value.folderIds.length > 0 && value.folderIds.every((id: unknown) => typeof id === "string")
+    && new Set(value.folderIds).size === value.folderIds.length && typeof value.savedAt === "string" && Number.isFinite(Date.parse(value.savedAt));
 }
 
 export function isFavoritesData(value: unknown): value is FavoritesData {
-  if (!isRecord(value) || value.version !== 1 || !Array.isArray(value.folders) || !Array.isArray(value.entries)) return false;
+  if (!isRecord(value) || value.version !== 2 || !Array.isArray(value.folders) || !Array.isArray(value.entries)) return false;
   const folders: unknown[] = value.folders;
   const entries: unknown[] = value.entries;
   if (!folders.every(isFolder) || !entries.every(isEntry)) return false;
   const ids = new Set(folders.map((folder) => folder.id));
   const names = new Set(folders.map((folder) => folder.name.toLocaleLowerCase()));
   return ids.has(DEFAULT_FOLDER_ID) && ids.size === folders.length && names.size === folders.length
-    && new Set(entries.map((entry) => entry.questionId)).size === entries.length && entries.every((entry) => ids.has(entry.folderId));
+    && new Set(entries.map((entry) => entry.questionId)).size === entries.length && entries.every((entry) => entry.folderIds.every((id) => ids.has(id)));
+}
+
+// Read version 1 without modifying storage; the next successful save persists version 2.
+function readFavoritesData(value: unknown): FavoritesData | null {
+  if (isFavoritesData(value)) return value;
+  if (!isRecord(value) || value.version !== 1 || !Array.isArray(value.entries)) return null;
+  const entries: unknown[] = value.entries;
+  if (!entries.every((entry) => isRecord(entry) && typeof entry.folderId === "string")) return null;
+  const migrated: unknown = { ...value, version: 2, entries: entries.map((entry) => {
+    const { folderId, ...rest } = entry as Record<string, unknown>;
+    return { ...rest, folderIds: [folderId] };
+  }) };
+  return isFavoritesData(migrated) ? migrated : null;
 }
 
 function getSnapshot(): FavoritesSnapshot {
@@ -69,8 +83,9 @@ function getSnapshot(): FavoritesSnapshot {
     let data: FavoritesData = emptyData;
     if (raw !== null) {
       const parsed: unknown = JSON.parse(raw);
-      if (!isFavoritesData(parsed)) throw new Error("Invalid favorite data");
-      data = parsed;
+      const loaded = readFavoritesData(parsed);
+      if (!loaded) throw new Error("Invalid favorite data");
+      data = loaded;
     }
     cachedRaw = raw;
     cachedSnapshot = { data, ready: true, error: null };
@@ -152,26 +167,46 @@ export function deleteFolder(folderId: string): FavoriteActionResult {
   return commit((data) => ({
     ...data,
     folders: data.folders.filter((folder) => folder.id !== folderId),
-    entries: data.entries.map((entry) => entry.folderId === folderId ? { ...entry, folderId: DEFAULT_FOLDER_ID } : entry),
+    entries: data.entries.map((entry) => {
+      const remaining = entry.folderIds.filter((id) => id !== folderId);
+      return { ...entry, folderIds: remaining.length ? remaining : [DEFAULT_FOLDER_ID] };
+    }),
   }));
 }
 
-export function saveFavorite(questionId: string, folderId: string, newFolderName?: string): FavoriteActionResult {
+export function saveFavorite(questionId: string, folderIds: readonly string[], newFolderName?: string): FavoriteActionResult {
   const snapshot = getSnapshot();
+  if (snapshot.error) return { ok: false, error: snapshot.error };
   const name = newFolderName?.trim();
   if (name !== undefined) {
     const error = folderNameError(name, snapshot.data);
     if (error) return { ok: false, error };
-  } else if (!snapshot.data.folders.some((folder) => folder.id === folderId)) return { ok: false, error: "收藏夹已不存在，请重新选择。" };
-  const targetId = name === undefined ? folderId : createFolderId();
+  }
+  if (!folderIds.every((id) => snapshot.data.folders.some((folder) => folder.id === id))) return { ok: false, error: "收藏夹已不存在，请重新选择。" };
+  if (folderIds.length === 0 && name === undefined) return { ok: false, error: "请至少选择一个收藏夹，或使用取消收藏。" };
+  const newId = name === undefined ? null : createFolderId();
+  const targetIds = [...new Set([...folderIds, ...(newId ? [newId] : [])])];
   return commit((data) => {
     const previous = data.entries.find((entry) => entry.questionId === questionId);
     return {
       ...data,
-      folders: name === undefined ? data.folders : [...data.folders, { id: targetId, name }],
-      entries: [...data.entries.filter((entry) => entry.questionId !== questionId), { questionId, folderId: targetId, savedAt: previous?.savedAt ?? new Date().toISOString() }],
+      folders: newId === null ? data.folders : [...data.folders, { id: newId, name: name! }],
+      entries: [...data.entries.filter((entry) => entry.questionId !== questionId), { questionId, folderIds: targetIds, savedAt: previous?.savedAt ?? new Date().toISOString() }],
     };
   });
+}
+
+/** Add only new questions in one storage write, preserving existing folder memberships. */
+export function saveFavorites(questionIds: readonly string[]): FavoriteActionResult {
+  let addedCount = 0;
+  const result = commit((data) => {
+    const existing = new Set(data.entries.map((entry) => entry.questionId));
+    const savedAt = new Date().toISOString();
+    const additions = [...new Set(questionIds)].filter((id) => !existing.has(id)).map((questionId) => ({ questionId, folderIds: [DEFAULT_FOLDER_ID], savedAt }));
+    addedCount = additions.length;
+    return { ...data, entries: [...data.entries, ...additions] };
+  });
+  return result.ok ? { ok: true, addedCount } : result;
 }
 
 export function removeFavorite(questionId: string): FavoriteActionResult {
