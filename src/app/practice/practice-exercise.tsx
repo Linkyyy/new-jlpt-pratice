@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent, type MouseEvent } from "react";
 import Link from "next/link";
+import ResponsivePanel from "@/components/responsive-panel";
 import { useRouter } from "next/navigation";
 import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
@@ -10,6 +11,7 @@ import QuestionAnswer from "./question-answer";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
+import RichContent from "@/components/rich-content";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
@@ -137,15 +139,15 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-8 font-sans text-slate-900 sm:px-8 sm:py-12">
-      <div className="mx-auto max-w-3xl">
+    <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+      <div className="session-layout">
         <header className="mb-8">
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 text-sm">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
-          <p className="mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 练习模式 · {paper.typeLabel} · {instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
-          {Boolean(paper.excludedCount) && <p className="mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">该场次当前有 {paper.excludedCount} 题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。</p>}
+          <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 练习模式 · {paper.typeLabel} · {instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
+          {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">该场次当前有 {paper.excludedCount} 题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。</p>}
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <span className="rounded-lg bg-indigo-600 px-3 py-1 text-sm font-bold text-white">{paper.level}</span>
@@ -165,25 +167,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           />
         </header>
 
-        <fieldset className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
-          <legend className="px-1 text-sm font-semibold text-slate-700">练习设置</legend>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
-              <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
-              <span><span className="block font-semibold">点击选项即显示答案</span><span className="text-slate-500">立即判定、显示解析并锁定本题，省去提交操作。</span></span>
-            </label>
-            <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
-              <input type="checkbox" name="large-text" checked={largeText} onChange={(event) => setLargeText(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
-              <span><span className="block font-semibold">大字号阅读</span><span className="text-slate-500">放大题干、阅读文章、选项和解析，方便手机阅读。</span></span>
-            </label>
-          </div>
-          <p className="mt-3 text-xs leading-6 text-slate-500">设置仅对本次练习生效。切换即时判定不会自动提交已有选择，也不会解锁已提交的答案。</p>
-        </fieldset>
-
-        {showResults ? (
-          <SessionResults paper={paper} answers={selectedAnswers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} />
-        ) : (
-          <>
+        <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
            <nav aria-label="题目导航" className="mb-5 flex max-h-48 flex-wrap gap-2 overflow-y-auto">
             {paper.questions.map((item, index) => {
               const itemAnswer = answers[item.id];
@@ -201,16 +185,40 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
             })}
           </nav>
           <p className="mb-5 text-xs leading-6 text-slate-500">✓ 已提交 · • 已选未提交 · 无标记为未作答。点击题号可跳转，未提交的选择会保留。</p>
+
+        <fieldset className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
+          <legend className="px-1 text-sm font-semibold text-slate-700">练习设置</legend>
+          <div className="grid gap-3">
+            <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
+              <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
+              <span><span className="block font-semibold">点击选项即显示答案</span><span className="text-slate-500">立即判定、显示解析并锁定本题，省去提交操作。</span></span>
+            </label>
+            <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
+              <input type="checkbox" name="large-text" checked={largeText} onChange={(event) => setLargeText(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
+              <span><span className="block font-semibold">大字号阅读</span><span className="text-slate-500">放大题干、阅读文章、选项和解析，方便手机阅读。</span></span>
+            </label>
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500">设置仅对本次练习生效。切换即时判定不会自动提交已有选择，也不会解锁已提交的答案。</p>
+        </fieldset>
+        <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
+        <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
+        {question.instruction && <div className="mt-4 lg:hidden"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
+</ResponsivePanel>
+        <div className="session-content">
+        {showResults ? (
+          <SessionResults paper={paper} answers={selectedAnswers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} />
+        ) : (
+          <>
         <section aria-labelledby="question-title" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
-          <p id="answer-help" className="mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
+          <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-          <QuestionBody question={question} largeText={largeText} />
+          <QuestionBody question={question} largeText={largeText} compact />
 
           <form key={`answer-${question.id}`} onSubmit={handleSubmit} className="mt-7">
             <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted} onSelect={selectOption} feedbackRef={resultRef} largeText={largeText} />
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex flex-wrap gap-2">
               <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>
               {!submitted && !finished ? (
                 <>
@@ -236,13 +244,14 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
             </div>
           </form>
         </section>
-        <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-slate-500">{finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。带 • 的题目也需要提交后才计入进度。`}</p>
           {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回成绩汇总</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button> : null)}
         </div>
         </>
         )}
-        <p className="mt-5 text-center text-xs leading-6 text-slate-500">
+        </div>
+        <p className="hidden lg:col-span-2 lg:block mt-5 text-center text-xs leading-6 text-slate-500">
           {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。{paper.source === "imported" ? "内容按用户提供资源导入，不代表官方授权或官方评分。" : "精简原创文字模拟练习，不含听力。"}刷新或离开页面会重置本次答题记录。
         </p>
       </div>

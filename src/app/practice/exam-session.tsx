@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ResponsivePanel from "@/components/responsive-panel";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import type { OptionId } from "@/data/practice-question";
@@ -12,6 +13,7 @@ import SessionResults, { type SelectedAnswers } from "./session-results";
 import { useExamTimer } from "./use-exam-timer";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
+import RichContent from "@/components/rich-content";
 
 type ExamPhase = "ready" | "running" | "finished";
 
@@ -125,15 +127,15 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-8 font-sans text-slate-900 sm:px-8 sm:py-12">
-      <div className="mx-auto max-w-3xl">
+    <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+      <div className="session-layout">
         <header className="mb-6">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3 text-sm">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
           <p className="mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 考试模式 · {paper.level} · {paper.typeLabel}</p>
-          {Boolean(paper.excludedCount) && <p className="mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{paper.excludedCount} 题因配套资源缺失或数据不完整未计入当前试卷，本次只评估可作答题目。</p>}
+          {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{paper.excludedCount} 题因配套资源缺失或数据不完整未计入当前试卷，本次只评估可作答题目。</p>}
           {phase !== "ready" && <>
             <div className="flex justify-between gap-3 text-sm text-slate-600">
               <label htmlFor="exam-progress">已作答 {answeredCount} / {paper.questions.length} 题</label>
@@ -143,13 +145,13 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           </>}
         </header>
 
-        {phase === "running" && <div className="sticky top-0 z-10 mb-5 flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white/95 p-3 shadow-sm backdrop-blur">
+        {phase === "running" && <div className="session-timer sticky top-0 z-10 mb-5 flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white/95 p-3 shadow-sm backdrop-blur">
           <p className={`text-sm font-semibold ${timer.remainingSeconds <= 60 ? "text-rose-700" : "text-slate-700"}`}>剩余时间 <span role="timer" aria-live="off" data-remaining-seconds={timer.remainingSeconds} className="ml-1 font-mono text-lg tabular-nums">{formatDuration(timer.remainingSeconds)}</span></p>
           <button type="button" onClick={() => requestConfirmation("submit")} className={primaryButton}>交卷</button>
         </div>}
 
         {phase === "ready" ? (
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8" aria-labelledby="exam-ready-title">
+          <section className="lg:col-span-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8" aria-labelledby="exam-ready-title">
             <h1 ref={headingRef} tabIndex={-1} id="exam-ready-title" className="scroll-mt-6 text-2xl font-bold outline-none">准备开始考试</h1>
             <p className="mt-4 text-slate-600">{paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.typeLabel} · 共 {paper.questions.length} 题</p>
             <p className="mt-3 text-lg font-semibold text-indigo-700">训练时长：{durationSeconds / 60} 分钟</p>
@@ -164,9 +166,10 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             <button type="button" onClick={startExam} className={`${primaryButton} mt-6 w-full sm:w-auto`}>开始考试</button>
           </section>
         ) : showResults ? (
-          <SessionResults paper={paper} answers={answers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} exam={{ elapsedSeconds, timedOut }} />
+          <div className="lg:col-span-2"><SessionResults paper={paper} answers={answers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} exam={{ elapsedSeconds, timedOut }} /></div>
         ) : (
           <>
+            <ResponsivePanel title="考试题目导航" trigger={`题号导航 · 已作答 ${answeredCount}/${paper.questions.length}`}>
             <nav aria-label="题目导航" className="mb-3 flex max-h-48 flex-wrap gap-2 overflow-y-auto">
               {paper.questions.map((item, index) => {
                 const answered = answers[item.id] !== undefined;
@@ -174,20 +177,26 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
               })}
             </nav>
             <p className="mb-5 text-xs leading-6 text-slate-500">✓ 已作答 · 无标记为未作答。{finished ? "已交卷，答案已锁定。" : "选择即记录，交卷前可修改。"}</p>
+            <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>
+            <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>成绩汇总</button> : nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
+            {question.instruction && <div className="mt-4 lg:hidden"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
+</ResponsivePanel>
+            <div className="session-content">
             <section aria-labelledby="question-title" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
               <h1 ref={headingRef} tabIndex={-1} id="question-title" className="scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
-              <p id="answer-help" className="mt-2 text-sm leading-6 text-slate-500">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
+              <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
               <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-              <QuestionBody question={question} />
+              <QuestionBody question={question} compact />
               <div key={`answer-${question.id}`} className="mt-7"><QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={finished} revealAnswer={finished} onSelect={selectOption} /></div>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 flex flex-wrap gap-2">
                 <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>
                 {!lastQuestion ? <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button> : finished ? <button type="button" onClick={() => setShowResults(true)} className={`${primaryButton} flex-1`}>返回成绩汇总</button> : <button type="button" onClick={() => requestConfirmation("submit")} className={`${primaryButton} flex-1`}>交卷</button>}
               </div>
             </section>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm leading-6 text-slate-500">{finished ? "已交卷，可查看每道题的答案和解析。" : `已作答 ${answeredCount} 题，未作答 ${unansweredCount} 题。`}</p>
               {finished ? !lastQuestion && <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回成绩汇总</button> : nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}
+            </div>
             </div>
           </>
         )}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ResponsivePanel from "@/components/responsive-panel";
 import { useEffect, useState } from "react";
 import FavoriteButton from "@/components/favorite-button";
 import FolderManager from "@/components/folder-manager";
@@ -57,20 +58,20 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
   }).sort((a, b) => b.savedAt.localeCompare(a.savedAt));
 
   return (
-    <main aria-busy={loadingImported} className="min-h-screen bg-slate-50 px-4 py-8 font-sans text-slate-900 sm:px-8 sm:py-12">
-      <div className="mx-auto max-w-4xl">
+    <main aria-busy={loadingImported} className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+      <div className="favorites-layout">
         <header>
           <Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
             <h1 className="text-3xl font-bold">我的收藏</h1>
-            <FolderManager />
+            <span className="text-sm text-slate-500">{data.entries.length} 道收藏</span>
           </div>
-          <p className="mt-3 text-sm leading-7 text-slate-600">按收藏夹、题型和等级整理题目。每道题归入一个收藏夹，可从题目上的“已收藏”按钮移动或取消收藏。</p>
-          <p className="mt-2 text-xs leading-6 text-slate-500">收藏仅保存在当前浏览器，刷新后仍保留；不会跨设备同步，清除网站数据会删除收藏。</p>
         </header>
         {!ready ? <p role="status" className="mt-8">正在读取本地收藏……</p> : error ? <p role="alert" className="mt-8 rounded-xl border border-rose-200 bg-rose-50 p-5 text-sm leading-7 text-rose-700">{error}</p> : <>
-          <section aria-label="筛选收藏" className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
-            <div className="grid gap-4 sm:grid-cols-2">
+          <ResponsivePanel title="收藏筛选与管理" trigger={`筛选与管理 · ${activeFolder === "all" ? "全部收藏夹" : data.folders.find(folder => folder.id === activeFolder)?.name ?? "收藏夹"}`}>
+          <FolderManager />
+          <section aria-label="筛选收藏" className="mt-5">
+            <div className="grid gap-4">
               <label className="text-sm font-semibold">收藏夹
                 <select aria-label="筛选收藏夹" value={activeFolder} onChange={(event) => setFolderId(event.target.value)} className={selectClass}>
                   <option value="all">全部收藏夹 · {data.entries.length} 题</option>
@@ -91,6 +92,10 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
               })}
             </div>
           </section>
+          <p className="mt-3 text-sm leading-7 text-slate-600">按收藏夹、题型和等级整理题目。每道题归入一个收藏夹，可从题目上的“已收藏”按钮移动或取消收藏。</p>
+          <p className="mt-2 text-xs leading-6 text-slate-500">收藏仅保存在当前浏览器，刷新后仍保留；不会跨设备同步，清除网站数据会删除收藏。</p>
+          </ResponsivePanel>
+          <div className="favorites-content">
           {loadingImported && <p role="status" className="mt-4 text-sm text-slate-500">正在读取用户题库中的收藏题目……</p>}
           {remote.key === importedIdsKey && remote.error && <p role="alert" className="mt-4 text-sm text-rose-700">{remote.error}<button type="button" onClick={() => { setRemote({ key: "", items: [], error: null }); setRetry((value) => value + 1); }} className="ml-2 min-h-11 px-3 underline">重试</button></p>}
           <p role="status" className="mt-5 text-sm text-slate-600">显示 {filtered.length} / {data.entries.length} 道收藏题目</p>
@@ -98,7 +103,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
             <h2 className="font-bold">{data.entries.length === 0 ? "还没有收藏题目" : "当前筛选下没有收藏题目"}</h2>
             <p className="mt-3 text-sm leading-7 text-slate-500">{data.entries.length === 0 ? "在练习题或考试题上点击“收藏本题”，选择收藏夹即可。" : "试试其他收藏夹、题型或等级。"}</p>
             {data.entries.length === 0 ? <Link href="/" className="mt-4 inline-flex min-h-11 items-center font-semibold text-indigo-600 underline">去选择练习</Link> : <button type="button" onClick={() => { setFolderId("all"); setCategory("all"); setLevel("all"); }} className="mt-4 min-h-11 px-4 font-semibold text-indigo-600 underline">清除筛选</button>}
-          </section> : <div className="mt-4 space-y-5">
+          </section> : <div className="mt-4 grid items-start gap-5 xl:grid-cols-2">
             {filtered.map((entry) => {
               const item = catalogById.get(entry.questionId);
               const folderName = data.folders.find((folder) => folder.id === entry.folderId)?.name;
@@ -115,6 +120,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
               </article>;
             })}
           </div>}
+          </div>
         </>}
       </div>
     </main>
