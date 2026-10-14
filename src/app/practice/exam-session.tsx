@@ -9,6 +9,7 @@ import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration, getExamDuration } from "@/data/practice-modes";
 import PracticeConfirmDialog, { type ConfirmationAction } from "./practice-confirm-dialog";
 import QuestionAnswer from "./question-answer";
+import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import { useExamTimer } from "./use-exam-timer";
 import FavoriteButton from "@/components/favorite-button";
@@ -126,6 +127,8 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
     }
   }
 
+  const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction));
+
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout">
@@ -136,13 +139,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           </div>
           <p className="mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 考试模式 · {paper.level} · {paper.typeLabel}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{paper.excludedCount} 题因配套资源缺失或数据不完整未计入当前试卷，本次只评估可作答题目。</p>}
-          {phase !== "ready" && <>
-            <div className="flex justify-between gap-3 text-sm text-slate-600">
-              <label htmlFor="exam-progress">已作答 {answeredCount} / {paper.questions.length} 题</label>
-              <span>{showResults ? "已交卷" : `第 ${questionIndex + 1} 题 / 共 ${paper.questions.length} 题`}</span>
-            </div>
-            <progress id="exam-progress" value={answeredCount} max={paper.questions.length} className="mt-2 block h-2 w-full overflow-hidden rounded-full border-0 [&::-moz-progress-bar]:bg-indigo-600 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-600" />
-          </>}
+
         </header>
 
         {phase === "running" && <div className="session-timer sticky top-0 z-10 mb-5 flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white/95 p-3 shadow-sm backdrop-blur">
@@ -182,13 +179,13 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             {question.instruction && <div className="mt-4 lg:hidden"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
 </ResponsivePanel>
             <div className="session-content">
-            <section aria-labelledby="question-title" className="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+            <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
               <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
               <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
               <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
               <QuestionBody question={question} compact />
               <div key={`answer-${question.id}`} className="mt-7"><QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={finished} revealAnswer={finished} onSelect={selectOption} /></div>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="answer-actions mt-5">
                 <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>
                 {!lastQuestion ? <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button> : finished ? <button type="button" onClick={() => setShowResults(true)} className={`${primaryButton} flex-1`}>返回成绩汇总</button> : <button type="button" onClick={() => requestConfirmation("submit")} className={`${primaryButton} flex-1`}>交卷</button>}
               </div>
@@ -200,6 +197,15 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             </div>
           </>
         )}
+        <footer className="session-progress" aria-label="考试进度">
+          {phase !== "ready" && <>
+            <div className="flex justify-between gap-3 text-sm text-slate-600">
+              <label htmlFor="exam-progress">已作答 {answeredCount} / {paper.questions.length} 题</label>
+              <span>{showResults ? "已交卷" : `第 ${questionIndex + 1} 题 / 共 ${paper.questions.length} 题`}</span>
+            </div>
+            <progress id="exam-progress" value={answeredCount} max={paper.questions.length} className="mt-2 block h-2 w-full overflow-hidden rounded-full border-0 [&::-moz-progress-bar]:bg-indigo-600 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-600" />
+          </>}
+        </footer>
       </div>
       <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} sessionLabel="考试" unansweredCount={unansweredCount} />
     </main>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { RefObject } from "react";
-import { optionLabel, questionCategories, type OptionId } from "@/data/practice-question";
+import { questionCategories, type OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration } from "@/data/practice-modes";
 
@@ -38,18 +38,19 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
       </div>
       <p className="mt-5 text-xs leading-6 text-slate-500">正确率以全部题目为分母，未作答题目不计分。这不是 JLPT 官方标准分或合格判定。</p>
       <h2 className="mt-7 font-bold">逐题回顾</h2>
-      <div className="mt-3 space-y-2">
+      <p className="mt-2 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，灰色为未作答。点击题号查看答案与解析。</p>
+      <nav aria-label="逐题回顾" className="question-grid results-grid mt-3">
         {paper.questions.map((question, index) => {
           const selected = answers[question.id];
           const correct = selected === question.correctOptionId;
+          const status = selected === undefined ? "未作答" : correct ? "回答正确" : "回答错误";
           return (
-            <button key={question.id} type="button" onClick={() => onReview(index)} className="flex min-h-12 w-full flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 p-3 text-left text-sm hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-indigo-500">
-              <span>第 {index + 1} 题 · {question.category}</span>
-              <span className={selected === undefined ? "text-slate-500" : correct ? "text-emerald-700" : "text-rose-700"}>{selected === undefined ? "未作答" : correct ? "正确" : "错误"} · 你的选择 {optionLabel(question, selected)} / 答案 {optionLabel(question, question.correctOptionId)} →</span>
+            <button key={question.id} type="button" onClick={() => onReview(index)} aria-label={`第 ${index + 1} 题，${status}`} className={`question-number ${selected === undefined ? "question-empty" : correct ? "question-correct" : "question-incorrect"}`}>
+              {index + 1}
             </button>
           );
         })}
-      </div>
+      </nav>
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
         <button type="button" onClick={onRestart} className="min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{exam ? "重新考试" : "重新练习"}</button>
         <Link href="/" className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">选择其他练习</Link>

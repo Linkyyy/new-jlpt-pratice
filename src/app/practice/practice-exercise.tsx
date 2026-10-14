@@ -8,6 +8,7 @@ import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import PracticeConfirmDialog, { type ConfirmationAction } from "./practice-confirm-dialog";
 import QuestionAnswer from "./question-answer";
+import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
@@ -138,6 +139,8 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
     setShowResults(false);
   }
 
+  const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction));
+
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout">
@@ -148,23 +151,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           </div>
           <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · 练习模式 · {paper.typeLabel} · {instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">该场次当前有 {paper.excludedCount} 题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。</p>}
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <span className="rounded-lg bg-indigo-600 px-3 py-1 text-sm font-bold text-white">{paper.level}</span>
-              <span className="rounded-lg bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700">{showResults ? "练习结果" : question.category}</span>
-            </div>
-            <p className="text-sm font-medium text-slate-600">{showResults ? `已完成 ${totalQuestions} 题` : `第 ${questionIndex + 1} 题 / 共 ${totalQuestions} 题`}</p>
-          </div>
-          <div className="mt-5 flex justify-between text-sm text-slate-600">
-            <label htmlFor="answer-progress">答题进度</label>
-            <span>{completedQuestions} / {totalQuestions} · {percent}%</span>
-          </div>
-          <progress
-            id="answer-progress"
-            value={completedQuestions}
-            max={totalQuestions}
-            className="mt-2 block h-2 w-full overflow-hidden rounded-full border-0 [&::-moz-progress-bar]:rounded-full [&::-moz-progress-bar]:bg-indigo-600 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-indigo-600"
-          />
+
         </header>
 
         <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
@@ -210,7 +197,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <SessionResults paper={paper} answers={selectedAnswers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} />
         ) : (
           <>
-        <section aria-labelledby="question-title" className="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+        <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
           <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
@@ -219,7 +206,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <form key={`answer-${question.id}`} onSubmit={handleSubmit} className="mt-7">
             <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted} onSelect={selectOption} feedbackRef={resultRef} largeText={largeText} />
 
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="answer-actions mt-5">
               <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>
               {!submitted && !finished ? (
                 <>
@@ -231,7 +218,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
                 提交答案
               </button>}
               {instantFeedback && <p className="flex-1 self-center text-sm text-slate-500">点击选项即可查看解析</p>}
-              {!lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>暂时跳过 →</button>}
+              {!lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>跳过</button>}
               </>
               ) : !lastQuestion ? (
                 <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button>
@@ -252,6 +239,18 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         </>
         )}
         </div>
+        <footer className="session-progress" aria-label="练习进度">
+          <div className="mt-5 flex justify-between text-sm text-slate-600">
+            <label htmlFor="answer-progress">答题进度</label>
+            <span>{completedQuestions} / {totalQuestions} · {percent}%</span>
+          </div>
+          <progress
+            id="answer-progress"
+            value={completedQuestions}
+            max={totalQuestions}
+            className="mt-2 block h-2 w-full overflow-hidden rounded-full border-0 [&::-moz-progress-bar]:rounded-full [&::-moz-progress-bar]:bg-indigo-600 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-indigo-600"
+          />
+        </footer>
         <p className="hidden lg:col-span-2 lg:block mt-5 text-center text-xs leading-6 text-slate-500">
           {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。{paper.source === "imported" ? "内容按用户提供资源导入，不代表官方授权或官方评分。" : "精简原创文字模拟练习，不含听力。"}刷新或离开页面会重置本次答题记录。
         </p>

@@ -27,10 +27,8 @@ export default function PracticeHome() {
   return (
     <main className="flex-1 bg-slate-50 px-4 py-5 font-sans text-slate-900 sm:px-8 sm:py-8">
       <div className="home-layout mx-auto max-w-[1536px]">
-        <header>
+        <header className="home-header">
           <div className="flex flex-wrap items-center justify-between gap-3"><p className="text-sm font-bold tracking-widest text-indigo-600">JLPT Practice</p><Link href="/favorites" className="inline-flex min-h-11 items-center rounded-lg border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-50">★ 我的收藏</Link></div>
-          <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">从一套练习开始，<br className="sm:hidden" />让日语稳步进阶。</h1>
-          <p className="hidden sm:block mt-3 max-w-2xl text-sm leading-6 sm:text-base sm:leading-8 text-slate-600">选择题库、等级、场次与题型。用练习模式掌握知识，或用考试模式检验独立作答能力。</p>
         </header>
 
         <section aria-labelledby="selection-title" className="home-selection mt-5 rounded-2xl lg:mt-0 border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
@@ -74,6 +72,11 @@ export default function PracticeHome() {
             <p aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{activeLevel} · {formatPeriod(activePeriod)} · {selection.label} · {questionCount} 题<span className="hidden sm:inline">。{type === "all" ? "包含当前可作答的词汇、语法和阅读，不含听力。" : "仅练习当前题型。"} {counts.excluded > 0 && `另有 ${counts.excluded} 题因缺少媒体或数据不完整暂不可用，未计入本次题量。`} {mode === "exam" ? `考试模式：训练时长 ${getExamDuration(questionCount) / 60} 分钟，交卷后统一解析，非正式考试时长。` : "练习模式：不限时，可开启点击选项即时判定。"}</span></p>
             <button type="submit" disabled={questionCount === 0} className="mt-6 min-h-12 w-full rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300 sm:w-auto">{mode === "exam" ? "进入考试准备" : type === "all" ? "开始整套练习" : `开始${selection.label}练习`} →</button>
           </form>
+        </section>
+
+        <section className="home-intro mt-6" aria-label="学习介绍">
+          <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">从一套练习开始，<br className="sm:hidden" />让日语稳步进阶。</h1>
+          <p className="hidden sm:block mt-3 max-w-2xl text-sm leading-6 sm:text-base sm:leading-8 text-slate-600">选择题库、等级、场次与题型。用练习模式掌握知识，或用考试模式检验独立作答能力。</p>
         </section>
 
         <ResponsivePanel title="练习说明" trigger="题库说明与使用帮助" className="mt-4 lg:mt-0">

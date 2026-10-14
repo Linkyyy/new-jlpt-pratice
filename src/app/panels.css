@@ -16,7 +16,10 @@ body:has(dialog:modal) { overflow: hidden; }
   .session-layout > header, .favorites-layout > header, .session-timer { grid-column: 1 / -1; }
   .session-content { grid-column: 2; }
   .home-layout { display: grid; grid-template-columns: minmax(300px, .8fr) minmax(0, 1.2fr); gap: 32px; align-items: start; }
-  .home-selection { grid-column: 2; grid-row: 1 / 3; }
+  .home-header { grid-column: 1 / -1; }
+  .home-selection { grid-column: 1; grid-row: 2; }
+  .home-intro { grid-column: 1; grid-row: 3; }
+  .home-layout > .responsive-panel { grid-column: 2; grid-row: 2 / 4; }
 }
 @media (max-width: 1023px) {
   .session-layout > header { margin-bottom: 16px; }
@@ -36,3 +39,12 @@ body:has(dialog:modal) { overflow: hidden; }
 .question-answered { background: #e0e7ff; border-color: #a5b4fc; color: #3730a3; }
 .question-current { outline: 2px solid #6366f1; outline-offset: 2px; }
 @media (min-width: 1024px) { .question-grid { max-height: 330px; overflow-y: auto; } }
+
+.session-progress { min-width: 0; margin-top: 24px; }
+.answer-actions { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; }
+.answer-actions button { flex-shrink: 0; padding: 12px; font-size: 14px; line-height: 20px; white-space: nowrap; }
+.answer-actions > p { min-width: 0; font-size: 12px; }
+.question-grid.results-grid { max-height: none; overflow: visible; }
+@media (min-width: 1024px) { .session-progress { grid-column: 2; margin-top: 0; } }
+
+.question-card { touch-action: pan-y pinch-zoom; }
