@@ -76,3 +76,17 @@ body:has(dialog:modal) { overflow: hidden; }
   .session-layout:has(.session-review):has(.reading-workspace) > .responsive-panel { top: 80px; }
   .session-layout:has(.session-review) .reading-article { scroll-margin-top: 148px; }
 }
+
+.question-overview { max-height: 420px; overflow-y: auto; padding: 4px; margin-bottom: 16px; }
+.overview-results { max-height: none; overflow: visible; margin-top: 12px; }
+.overview-category + .overview-category { margin-top: 24px; }
+.overview-category-title { margin-bottom: 16px; text-align: center; font-size: 14px; font-weight: 600; color: #64748b; }
+.overview-group { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 8px; align-items: start; }
+.overview-group + .overview-group { margin-top: 12px; }
+.overview-group-label { padding-top: 12px; font-size: 12px; color: #64748b; }
+.overview-numbers { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+@media (min-width: 1024px) {
+  .responsive-panel .overview-group { grid-template-columns: 1fr; gap: 4px; }
+  .responsive-panel .overview-group-label { padding-top: 0; }
+  .responsive-panel .overview-numbers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

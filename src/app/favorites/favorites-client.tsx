@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import FavoriteButton from "@/components/favorite-button";
 import FolderManager from "@/components/folder-manager";
 import { levels, questionCategories, type JLPTLevel, type QuestionCategory } from "@/data/practice-question";
-import { questionTypes, type CatalogQuestion } from "@/data/practice-papers";
+import { type CatalogQuestion } from "@/data/practice-papers";
 import { useFavorites } from "@/lib/favorites-store";
 import { formatPeriod } from "@/data/bank-catalog";
 import { isCatalogQuestion, isRecord } from "@/data/question-validation";
@@ -57,6 +57,8 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
     return category === "all" || item?.question.category === category;
   }).sort((a, b) => b.savedAt.localeCompare(a.savedAt));
 
+  const practiceQuery = new URLSearchParams({ folder: activeFolder, category, level });
+
   return (
     <main aria-busy={loadingImported} className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="favorites-layout">
@@ -98,7 +100,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
           <div className="favorites-content">
           {loadingImported && <p role="status" className="mt-4 text-sm text-slate-500">正在读取用户题库中的收藏题目……</p>}
           {remote.key === importedIdsKey && remote.error && <p role="alert" className="mt-4 text-sm text-rose-700">{remote.error}<button type="button" onClick={() => { setRemote({ key: "", items: [], error: null }); setRetry((value) => value + 1); }} className="ml-2 min-h-11 px-3 underline">重试</button></p>}
-          <p role="status" className="mt-5 text-sm text-slate-600">显示 {filtered.length} / {data.entries.length} 道收藏题目</p>
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3"><p role="status" className="text-sm text-slate-600">显示 {filtered.length} / {data.entries.length} 道收藏题目</p>{filtered.some((entry) => catalogById.has(entry.questionId)) && !loadingImported && <Link href={`/favorites/practice?${practiceQuery}`} className="inline-flex min-h-11 items-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">练习当前收藏</Link>}</div>
           {filtered.length === 0 ? <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 text-center">
             <h2 className="font-bold">{data.entries.length === 0 ? "还没有收藏题目" : "当前筛选下没有收藏题目"}</h2>
             <p className="mt-3 text-sm leading-7 text-slate-500">{data.entries.length === 0 ? "在练习题或考试题上点击“收藏本题”，选择收藏夹即可。" : "试试其他收藏夹、题型或等级。"}</p>
@@ -109,8 +111,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
               const folderName = data.folders.filter((folder) => entry.folderIds.includes(folder.id)).map((folder) => folder.name).join("、");
               if (!item) return <article key={entry.questionId} className="relative rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">{loadingImported && entry.questionId.startsWith("imported:") ? "正在读取收藏题目" : "收藏的题目暂不可用"}</h2><p className="mt-2 text-sm leading-6 break-words text-slate-500">题目 ID：{entry.questionId}。收藏记录已保留。</p><FavoriteButton questionId={entry.questionId} /></article>;
               const { question, year } = item;
-              const type = questionTypes.find((type) => type.category === question.category)?.value ?? "all";
-              const practiceLink = `/practice?source=${item.source ?? "original"}&level=${question.level}&year=${year}&type=${type}&mode=practice&question=${encodeURIComponent(question.id)}`;
+              const practiceLink = `/favorites/practice?question=${encodeURIComponent(question.id)}`;
               return <article key={question.id} data-question-id={question.id} className="relative rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
                 <h2 className="pr-12 text-sm font-semibold leading-6 break-words text-slate-600">{question.level} · {formatPeriod(year)} · {item.source === "imported" ? "用户提供题库" : "原创模拟题库"} · {question.category} · {folderName}</h2>
                 <QuestionBody question={question} />

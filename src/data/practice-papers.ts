@@ -21,11 +21,11 @@ export type QuestionType = (typeof questionTypes)[number]["value"];
 
 export interface PracticePaper {
   readonly id: string;
-  readonly level: JLPTLevel;
+  readonly level: JLPTLevel | "混合";
   readonly year: PaperYear;
   readonly typeLabel: string;
   readonly questions: readonly PracticeQuestion[];
-  readonly source?: "original" | "imported";
+  readonly source?: "original" | "imported" | "favorites";
   readonly periodLabel?: string;
   readonly sourceLabel?: string;
   readonly excludedCount?: number;

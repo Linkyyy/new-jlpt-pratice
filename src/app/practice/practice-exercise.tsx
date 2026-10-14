@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent, type MouseEvent } from "react";
+import QuestionOverview from "./question-overview";
 import Link from "next/link";
 import ResponsivePanel from "@/components/responsive-panel";
 import { useRouter } from "next/navigation";
@@ -110,7 +111,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   function confirmAction() {
     dialogRef.current?.close();
     if (confirmationAction === "restart") restartPaper();
-    if (confirmationAction === "leave") router.push("/");
+    if (confirmationAction === "leave") router.push(paper.source === "favorites" ? "/favorites" : "/");
   }
 
   function goToQuestion(index: number) {
@@ -164,7 +165,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
       <div className="session-layout">
         <header className="mb-8">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
-            <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
+            <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习"}</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
           <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · {finished ? "复习模式" : "练习模式"} · {paper.typeLabel} · {finished ? "原答案与解析" : article ? "本篇小题统一提交" : instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
@@ -175,23 +176,10 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         {finished && !showResults && <ReviewToolbar onReturn={() => setShowResults(true)} />}
         <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
           {question.instruction && <div className="mb-5 border-b border-slate-100 pb-4"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
-           <nav aria-label="题目导航" className="question-grid">
-            {paper.questions.map((item, index) => {
-              const itemAnswer = answers[item.id];
-              const correct = itemAnswer?.selectedOptionId === item.correctOptionId;
-              const status = itemAnswer?.submitted ? correct ? "回答正确" : "回答错误" : itemAnswer ? "已选择，未提交" : "未作答";
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => goToQuestion(index)}
-                  aria-current={index === questionIndex ? "step" : undefined}
-                  aria-label={`第 ${index + 1} 题，${status}`}
-                  className={`question-number ${index === questionIndex ? "question-current" : ""} ${itemAnswer?.submitted ? correct ? "question-correct" : "question-incorrect" : itemAnswer ? "question-draft" : "question-empty"}`}
-                >{index + 1}</button>
-              );
-            })}
-          </nav>
+          <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
+            const answer = answers[item.id];
+            return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
+          }} />
           <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
 
         <fieldset className="mt-6 border-t border-slate-100 pt-5">
@@ -279,7 +267,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           />
         </footer>
         <p className="hidden lg:col-span-2 lg:block mt-5 text-center text-xs leading-6 text-slate-500">
-          {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。{paper.source === "imported" ? "内容按用户提供资源导入，不代表官方授权或官方评分。" : "精简原创文字模拟练习，不含听力。"}刷新或离开页面会重置本次答题记录。
+          {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。{paper.source === "favorites" ? "本次练习来自所选收藏题目。" : paper.source === "imported" ? "内容按用户提供资源导入，不代表官方授权或官方评分。" : "精简原创文字模拟练习，不含听力。"}刷新或离开页面会重置本次答题记录。
         </p>
       </div>
       <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} />

@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   outputFileTracingIncludes: {
     "/practice": ["./src/data/imported-bank/questions/*.json"],
+    "/api/practice/favorites": ["./src/data/imported-bank/questions/*.json"],
     "/api/favorites/questions": ["./src/data/imported-bank/questions/*.json"],
   },
   turbopack: {

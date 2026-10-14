@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import QuestionOverview from "./question-overview";
 import { useState, type RefObject } from "react";
 import { saveFavorites, useFavorites } from "@/lib/favorites-store";
 import { questionCategories, type OptionId } from "@/data/practice-question";
@@ -61,21 +62,10 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
       </div>
       <h2 className="mt-7 font-bold">逐题回顾</h2>
       <p className="mt-2 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，灰色为未作答。点击题号查看答案与解析。</p>
-      <nav aria-label="逐题回顾" className="question-grid results-grid mt-3">
-        {paper.questions.map((question, index) => {
-          const selected = answers[question.id];
-          const correct = selected === question.correctOptionId;
-          const status = selected === undefined ? "未作答" : correct ? "回答正确" : "回答错误";
-          return (
-            <button key={question.id} type="button" onClick={() => onReview(index)} aria-label={`第 ${index + 1} 题，${status}`} className={`question-number ${selected === undefined ? "question-empty" : correct ? "question-correct" : "question-incorrect"}`}>
-              {index + 1}
-            </button>
-          );
-        })}
-      </nav>
+      <QuestionOverview questions={paper.questions} onSelect={onReview} label="逐题回顾" results getStatus={(question) => answers[question.id] === undefined ? "empty" : answers[question.id] === question.correctOptionId ? "correct" : "incorrect"} />
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
         <button type="button" onClick={onRestart} className="min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{exam ? "重新考试" : "重新练习"}</button>
-        <Link href="/" className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">选择其他练习</Link>
+        <Link href={paper.source === "favorites" ? "/favorites" : "/"} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{paper.source === "favorites" ? "返回收藏题库" : "选择其他练习"}</Link>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import QuestionOverview from "./question-overview";
 import ResponsivePanel from "@/components/responsive-panel";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
@@ -176,13 +177,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           <>
             <ResponsivePanel title="考试题目导航" trigger={`题号导航 · 已作答 ${answeredCount}/${paper.questions.length}`}>
           {question.instruction && <div className="mb-5 border-b border-slate-100 pb-4"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
-            <nav aria-label="题目导航" className="question-grid">
-              {paper.questions.map((item, index) => {
-                const answered = answers[item.id] !== undefined;
-                const appearance = answered ? finished ? answers[item.id] === item.correctOptionId ? "question-correct" : "question-incorrect" : "question-answered" : "question-empty";
-                return <button key={item.id} type="button" onClick={() => goToQuestion(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`第 ${index + 1} 题，${answered ? "已作答" : "未作答"}`} className={`question-number ${index === questionIndex ? "question-current" : ""} ${appearance}`}>{index + 1}</button>;
-              })}
-            </nav>
+            <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
             <p className="mb-5 text-xs leading-6 text-slate-500">{finished ? "绿色为答对，红色为答错，灰色为未作答。原答案已锁定。" : "蓝色为已作答，描边表示当前题目。选择即记录，交卷前可修改。"}</p>
             <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>

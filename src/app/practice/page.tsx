@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ActivationForm from "@/components/activation-form";
+import { isActivated, practiceReturnPath } from "@/lib/activation.server";
 import Link from "next/link";
 import { Suspense } from "react";
 import { levels, type JLPTLevel } from "@/data/practice-question";
@@ -39,6 +41,7 @@ function InvalidSelection() {
 
 async function SelectedExercise({ searchParams }: PageProps<"/practice">) {
   const params = await searchParams;
+  if (!await isActivated()) return <ActivationForm returnTo={practiceReturnPath("/practice", params)} />;
   const level = params.level ?? "N2";
   const sourceInput = params.source ?? (typeof params.year === "string" && /^\d{6}$/.test(params.year) ? "imported" : "original");
   if (sourceInput !== "original" && sourceInput !== "imported" || !isLevel(level)) return <InvalidSelection />;
