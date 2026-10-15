@@ -3,6 +3,7 @@
 import Link from "next/link";
 import QuestionOverview from "./question-overview";
 import ResponsivePanel from "@/components/responsive-panel";
+import FloatingSettings from "@/components/floating-settings";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import type { OptionId } from "@/data/practice-question";
@@ -175,12 +176,15 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           <div className="lg:col-span-2"><SessionResults paper={paper} answers={answers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} exam={{ elapsedSeconds, timedOut }} /></div>
         ) : (
           <>
-            <ResponsivePanel title="考试题目导航" trigger={`题号导航 · 已作答 ${answeredCount}/${paper.questions.length}`}>
-          {question.instruction && <div className="mb-5 border-b border-slate-100 pb-4"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
-            <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
-            <p className="mb-5 text-xs leading-6 text-slate-500">{finished ? "绿色为答对，红色为答错，灰色为未作答。原答案已锁定。" : "蓝色为已作答，描边表示当前题目。选择即记录，交卷前可修改。"}</p>
+            <ResponsivePanel title="答题卡" className="answer-card-panel" trigger={`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`} headerAction={
+              <FloatingSettings title={finished ? "复习设置" : "考试设置"}>
             <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>
+              </FloatingSettings>
+            }>
+          {question.instruction && <details className="answer-card-instruction"><summary>题型说明</summary><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></details>}
+            <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
+            <p className="mb-5 text-xs leading-6 text-slate-500">{finished ? "绿色为答对，红色为答错，灰色为未作答。原答案已锁定。" : "蓝色为已作答，描边表示当前题目。选择即记录，交卷前可修改。"}</p>
             <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
 
 </ResponsivePanel>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent, type MouseEvent } from "re
 import QuestionOverview from "./question-overview";
 import Link from "next/link";
 import ResponsivePanel from "@/components/responsive-panel";
+import FloatingSettings from "@/components/floating-settings";
 import { useRouter } from "next/navigation";
 import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
@@ -174,16 +175,10 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         </header>
 
         {finished && !showResults && <ReviewToolbar onReturn={() => setShowResults(true)} />}
-        <ResponsivePanel title="题目导航与设置" trigger={`题号与设置 · 已提交 ${completedQuestions}/${totalQuestions}`} >
-          {question.instruction && <div className="mb-5 border-b border-slate-100 pb-4"><h3 className="text-sm font-semibold">题型说明</h3><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></div>}
-          <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
-            const answer = answers[item.id];
-            return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
-          }} />
-          <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
-
-        <fieldset className="mt-6 border-t border-slate-100 pt-5">
-          <legend className="px-1 text-sm font-semibold text-slate-700">{finished ? "显示设置" : "练习设置"}</legend>
+        <ResponsivePanel title="答题卡" className="answer-card-panel" trigger={`答题卡 · 已提交 ${completedQuestions}/${totalQuestions}`} headerAction={
+          <FloatingSettings title={finished ? "复习设置" : "练习设置"}>
+        <fieldset>
+          <legend className="sr-only">答题与显示</legend>
           <div className="grid gap-3">
             {!finished && <>
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
@@ -200,6 +195,15 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         </fieldset>
         <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
+          </FloatingSettings>
+        }>
+          {question.instruction && <details className="answer-card-instruction"><summary>题型说明</summary><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></details>}
+          <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
+            const answer = answers[item.id];
+            return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
+          }} />
+          <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
+
         <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
 
 </ResponsivePanel>
