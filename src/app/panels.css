@@ -100,8 +100,9 @@ body:has(dialog:modal) { overflow: hidden; }
 .panel-heading-actions { display: flex; align-items: center; gap: 8px; }
 .answer-card-panel .panel-heading { top: 0; margin: -20px -20px 16px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; border-radius: 16px 16px 0 0; }
 .answer-card-panel .panel-heading h2 { font-size: 22px; letter-spacing: -.02em; }
-.answer-card-instruction { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #f1f5f9; }
-.answer-card-instruction summary { width: fit-content; cursor: pointer; font-size: 12px; font-weight: 600; color: #64748b; }
+.question-text { font-size: var(--practice-font-size, 18px); line-height: 1.8; }
+.question-passage { line-height: 2; }
+.question-instruction { font-size: max(14px, calc(var(--practice-font-size, 18px) - 4px)); line-height: 1.9; }
 .floating-settings { display: inline-flex; }
 .settings-toggle { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #e2e8f0; border-radius: 12px; background: white; color: #64748b; }
 .settings-toggle:hover { background: #f8fafc; color: #4f46e5; }

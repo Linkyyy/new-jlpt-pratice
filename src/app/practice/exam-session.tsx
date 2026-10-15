@@ -5,7 +5,7 @@ import QuestionOverview from "./question-overview";
 import ResponsivePanel from "@/components/responsive-panel";
 import FloatingSettings from "@/components/floating-settings";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration, getExamDuration } from "@/data/practice-modes";
@@ -15,12 +15,12 @@ import ReadingWorkspace from "./reading-workspace";
 import { usesArticleDrawer } from "./article-questions";
 import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
+import FontSizeSetting from "./font-size-setting";
 import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import { useExamTimer } from "./use-exam-timer";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
-import RichContent from "@/components/rich-content";
 
 type ExamPhase = "ready" | "running" | "finished";
 
@@ -28,6 +28,7 @@ const primaryButton = "min-h-12 rounded-xl bg-indigo-600 px-5 py-3 font-semibold
 const secondaryButton = "min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-40";
 
 export default function ExamSession({ paper }: { paper: PracticePaper }) {
+  const [fontSize, setFontSize] = useState(18);
   const router = useRouter();
   const [phase, setPhase] = useState<ExamPhase>("ready");
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -140,7 +141,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
 
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
-      <div className="session-layout">
+      <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="mb-6">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
@@ -178,14 +179,12 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           <>
             <ResponsivePanel title="答题卡" className="answer-card-panel" trigger={`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`} headerAction={
               <FloatingSettings title={finished ? "复习设置" : "考试设置"}>
+            <FontSizeSetting value={fontSize} onChange={setFontSize} />
             <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel}。{Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`}</p>
               </FloatingSettings>
             }>
-          {question.instruction && <details className="answer-card-instruction"><summary>题型说明</summary><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></details>}
             <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
-            <p className="mb-5 text-xs leading-6 text-slate-500">{finished ? "绿色为答对，红色为答错，灰色为未作答。原答案已锁定。" : "蓝色为已作答，描边表示当前题目。选择即记录，交卷前可修改。"}</p>
-            <div className="mt-4">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : buttonsEnabled && nextUnansweredIndex >= 0 && <button type="button" onClick={() => goToQuestion(nextUnansweredIndex)} className={secondaryButton}>定位未作答题</button>}</div>
 
 </ResponsivePanel>
             <div className="session-content">
@@ -194,7 +193,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
               <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
               <p id="answer-help" className="sr-only">{finished ? "考后回顾：可查看正确答案和解析，不能修改答案。" : "考试模式：交卷前不显示正误或解析。选项可修改，也可先跳题。"}</p>
               <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-              <QuestionBody question={question} compact part={article ? "question" : "all"} />
+              <QuestionBody question={question} part={article ? "question" : "all"} />
               <div key={`answer-${question.id}`} className="mt-7"><QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={finished} revealAnswer={finished} onSelect={selectOption} /></div>
               <div className="answer-actions mt-5">
                 {buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>}

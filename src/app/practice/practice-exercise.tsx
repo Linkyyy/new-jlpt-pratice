@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent, type MouseEvent } from "react";
 import QuestionOverview from "./question-overview";
 import Link from "next/link";
 import ResponsivePanel from "@/components/responsive-panel";
@@ -14,11 +14,11 @@ import ReadingWorkspace from "./reading-workspace";
 import { articleGroup, usesArticleDrawer } from "./article-questions";
 import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
+import FontSizeSetting from "./font-size-setting";
 import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
-import RichContent from "@/components/rich-content";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
@@ -40,7 +40,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   const [finished, setFinished] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [instantFeedback, setInstantFeedback] = useState(false);
-  const [largeText, setLargeText] = useState(false);
+  const [fontSize, setFontSize] = useState(18);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
@@ -163,7 +163,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
 
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
-      <div className="session-layout">
+      <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="mb-8">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习"}</Link>
@@ -186,10 +186,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
               <span><span className="block font-semibold">点击选项即显示答案</span></span>
             </label>
             </>}
-            <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
-              <input type="checkbox" name="large-text" checked={largeText} onChange={(event) => setLargeText(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
-              <span><span className="block font-semibold">大字号阅读</span></span>
-            </label>
+            <FontSizeSetting value={fontSize} onChange={setFontSize} />
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500">文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。</p>
         </fieldset>
@@ -197,15 +194,10 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
           </FloatingSettings>
         }>
-          {question.instruction && <details className="answer-card-instruction"><summary>题型说明</summary><RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-2 text-sm leading-7 text-slate-600" /></details>}
           <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
             return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
           }} />
-          <p className="mb-5 text-xs leading-6 text-slate-500">绿色为答对，红色为答错，浅黄为待提交。描边表示当前题目。</p>
-
-        <div className="mt-4 flex flex-wrap gap-2">{finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button>}</div>
-
 </ResponsivePanel>
         <div className="session-content">
         {showResults ? (
@@ -215,15 +207,15 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
         <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
             return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
-          }} largeText={largeText}>
+          }}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
           <p id="answer-help" className="sr-only">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : "选择答案后提交，切题会保留选择。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
-          <QuestionBody question={question} largeText={largeText} compact part={article ? "question" : "all"} />
+          <QuestionBody question={question} part={article ? "question" : "all"} />
 
           <form key={`answer-${question.id}`} onSubmit={handleSubmit} className="mt-7">
-            <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted || finished} onSelect={selectOption} feedbackRef={resultRef} largeText={largeText} />
+            <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted || finished} onSelect={selectOption} feedbackRef={resultRef} />
 
             {article && !finished && !submitted && <p role="status" className="mt-4 text-sm text-slate-500">本篇已选择 {group.filter(({ item }) => answers[item.id] !== undefined).length} / {group.length} 题，全部选择后统一提交判定。</p>}
             <div className="answer-actions mt-5">

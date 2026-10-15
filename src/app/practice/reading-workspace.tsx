@@ -11,7 +11,6 @@ interface ReadingWorkspaceProps {
   question: PracticeQuestion;
   questions: readonly PracticeQuestion[];
   questionIndex: number;
-  largeText?: boolean;
   reviewing?: boolean;
   onNavigate: (index: number) => void;
   getStatus: (question: PracticeQuestion) => QuestionStatus;
@@ -31,7 +30,7 @@ function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
   return { minimum, maximum: Math.max(minimum, viewport - topSpace), viewport };
 }
 
-function ReadingSheet({ question, questions, questionIndex, largeText, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
+function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
   const [expanded, setExpanded] = useState(reviewing);
   const [height, setHeight] = useState<number | null>(null);
   const id = useId();
@@ -125,7 +124,7 @@ function ReadingSheet({ question, questions, questionIndex, largeText, reviewing
       <article ref={articleRef} aria-label={articleTitle} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
         <h2 className="text-lg font-bold">{articleTitle}</h2>
         <p className="mt-2 text-xs leading-6 text-slate-500">本篇共 {group.length} 题 · 拖动底部题目栏调整高度，点击可展开或收起。</p>
-        <QuestionBody question={question} largeText={largeText} part="passage" />
+        <QuestionBody question={question} part="passage" />
       </article>
       <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉"} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}`}>
         <button ref={handleRef} type="button" className="reading-sheet-handle" title="上下拖动调整高度；点击展开或收起；方向键微调高度" aria-expanded={expanded} aria-controls={id}
