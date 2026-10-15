@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedText from "@/components/localized-text";
-import DisplaySettings from "@/components/display-settings";
 import AudioTestPlayer from "./audio-test-player";
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function AudioTestPage() {
     <main className="min-h-screen bg-slate-50 px-4 py-5 font-sans text-slate-900 sm:px-8 sm:py-8">
       <div className="mx-auto max-w-2xl">
         <Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline"><LocalizedText text="← 返回首页" /></Link>
-        <div className="flex justify-end"><DisplaySettings /></div>
         <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8" aria-labelledby="audio-test-title">
           <p className="text-xs font-semibold tracking-widest text-indigo-600">JLPT Practice</p>
           <h1 id="audio-test-title" className="mt-3 text-2xl font-bold"><LocalizedText text="听力播放测试" /></h1>

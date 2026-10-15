@@ -1,6 +1,7 @@
 "use client";
 
 import DisplaySettings from "@/components/display-settings";
+import ActionLabel, { actionButtonClass } from "@/components/action-label";
 import { useI18n } from "@/lib/i18n";
 
 import { useMemo, useState } from "react";
@@ -46,7 +47,7 @@ export default function PracticeHome() {
       <div className="mx-auto max-w-7xl space-y-5">
         <header className="flex flex-wrap items-center justify-between gap-3 pb-1">
           <p className="text-sm font-bold tracking-widest text-indigo-600">JLPT Practice</p>
-          <nav aria-label={t("个人学习")} className="flex items-center gap-2 text-sm font-semibold text-indigo-700"><Link href="/history" className="rounded-lg px-3 py-3 hover:bg-indigo-50">{t("学习记录")}</Link><Link href="/favorites" className="rounded-lg border border-indigo-200 bg-white px-3 py-3 hover:bg-indigo-50">{t("★ 我的收藏")}</Link><DisplaySettings /></nav>
+          <nav aria-label={t("个人学习")} className="flex items-center gap-2"><Link href="/history" aria-label={t("学习记录")} title={t("学习记录")} className={actionButtonClass}><ActionLabel icon="history">{t("学习记录")}</ActionLabel></Link><Link href="/favorites" aria-label={t("我的收藏")} title={t("我的收藏")} className={actionButtonClass}><ActionLabel icon="favorites">{t("我的收藏")}</ActionLabel></Link><DisplaySettings /></nav>
         </header>
         {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{t(error)}</p>}
         {latest && <section aria-label={t("继续上次学习")} className="flex items-center justify-between gap-4 rounded-2xl border border-indigo-200 bg-indigo-50 p-4 sm:px-6"><div className="min-w-0"><p className="text-xs font-semibold text-indigo-600">{t("接着上次练习")}</p><p className="mt-1 text-sm font-semibold leading-6 text-slate-800">{attemptTitle(latest, t)}</p></div><Link href={studyAttemptUrl(latest)} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-4 text-sm font-semibold text-white hover:bg-indigo-700">{t("继续 →")}</Link></section>}

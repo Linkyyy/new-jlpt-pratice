@@ -1,6 +1,5 @@
 "use client";
 
-import DisplaySettings from "@/components/display-settings";
 import { useI18n } from "@/lib/i18n";
 import { translatePeriod } from "@/lib/i18n/translate";
 
@@ -178,7 +177,6 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           <div className="session-topline mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{t(paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习")}</Link>
             <span className="text-slate-500">JLPT Practice · {translatePeriod(paper.periodLabel ?? `${paper.year} 原创版`, paper.source, t)}</span>
-            <DisplaySettings />
           </div>
           <p className="hidden lg:block mb-4 text-sm text-slate-500">{t(paper.sourceLabel ?? "原创模拟题库")} · {t(finished ? "复习模式" : "练习模式")} · {t(paper.typeLabel)} · {t(finished ? "原答案与解析" : article ? "本篇小题统一提交" : instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案")}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{t("该场次当前有")}{paper.excludedCount} {t("题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。")}</p>}

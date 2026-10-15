@@ -1,6 +1,5 @@
 "use client";
 
-import DisplaySettings from "@/components/display-settings";
 import { useI18n } from "@/lib/i18n";
 import { translatePeriod } from "@/lib/i18n/translate";
 
@@ -150,7 +149,6 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
           <div className="session-topline mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{t("← 首页 / 选择练习")}</Link>
             <span className="text-slate-500">JLPT Practice · {translatePeriod(paper.periodLabel ?? `${paper.year} 原创版`, paper.source, t)}</span>
-            <DisplaySettings />
           </div>
           <p className="mb-4 text-sm text-slate-500">{t(paper.sourceLabel ?? "原创模拟题库")} · {t(finished ? "复习模式" : "考试模式")} · {t(paper.level)} · {t(paper.typeLabel)}</p>
           {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{paper.excludedCount} {t("题因配套资源缺失或数据不完整未计入当前试卷，本次只评估可作答题目。")}</p>}

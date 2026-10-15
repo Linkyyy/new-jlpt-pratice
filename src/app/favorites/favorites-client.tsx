@@ -1,6 +1,5 @@
 "use client";
 
-import DisplaySettings from "@/components/display-settings";
 import { useI18n } from "@/lib/i18n";
 
 import Link from "next/link";
@@ -103,7 +102,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
       <div className="favorites-shell" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="favorites-header">
           <div><Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">{t("← 首页")}</Link><h1 className="text-2xl font-bold">{t("我的收藏")}<span className="ml-2 text-sm font-normal text-slate-500">{data.entries.length} {t("题")}</span></h1></div>
-          <div className="flex flex-wrap items-start gap-3"><BackupControls /><DisplaySettings /><FloatingSettings title={t("收藏设置")}>
+          <div className="flex flex-wrap items-start gap-3"><BackupControls /><FloatingSettings title={t("收藏设置")}>
             <fieldset><legend className="text-sm font-semibold">{t("查看模式")}</legend><div className="mt-2 grid gap-2">{([
               ["preview", "摘要列表", "先看场次与题号，选中后查看题目"], ["cards", "完整卡片", "连续浏览完整题目，答案折叠显示"], ["recall", "背题", "先回忆，再显示选项和答案"],
             ] as const).map(([value, label, description]) => <label key={value} className="flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 p-3"><input type="radio" name="favorite-view" value={value} checked={mode === value} onChange={() => { setMode(value); resetSelection(); paneRef.current?.scrollTo({ top: 0 }); }} className="mt-1 accent-indigo-600" /><span className="text-sm"><span className="block font-semibold">{t(label)}</span><span className="mt-1 block text-xs leading-5 text-slate-500">{t(description)}</span></span></label>)}</div></fieldset>
