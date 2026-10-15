@@ -3,6 +3,7 @@
 import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
+import ScoreReport from "@/components/score-report";
 import Link from "next/link";
 import { studyAttemptUrl, studyScore, useStudyHistory } from "@/lib/study-store";
 import { attemptTitle, studyDate } from "@/components/study-dashboard";
@@ -18,7 +19,7 @@ export default function StudyDetail({ id }: { id: string }) {
   return <main className="min-h-screen bg-slate-50 px-4 py-6 text-slate-900 sm:p-8"><div className="mx-auto max-w-3xl">
     <div><Link href="/history" className="text-sm font-semibold text-indigo-600">{t("← 学习记录")}</Link></div>
     <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 sm:p-8"><h1 className="text-xl font-bold">{attemptTitle(attempt, t)}</h1><p className="mt-2 text-sm text-slate-500">{studyDate(attempt.createdAt, locale)} · {t(attempt.mode === "exam" ? "考试" : "练习")} · {t(completed ? "已完成" : "未完成")}{t(attempt.timedOut ? " · 到时交卷" : "")}</p>
-      {completed ? <><p className="mt-6 text-4xl font-bold text-indigo-600">{score.percent}<span className="ml-1 text-sm font-normal text-slate-500">{t("分")}</span></p><p className="mt-3 text-sm text-slate-600">{t("答对")}{score.correct} {t("· 答错")}{score.wrong} {t("· 未作答")}{score.unanswered} {t("· 共")}{score.total} {t("题")}</p><p className="mt-2 text-xs text-slate-400">{t("每题等权折算百分制，非 JLPT 官方分数。历史成绩按本次交卷答案保留。")}</p></> : <p className="mt-6 text-slate-600">{t("已")}{t(attempt.mode === "exam" ? "选择" : "提交")} {attempt.mode === "exam" ? Object.keys(attempt.answers).length : score.answered} / {score.total} {t("题")}{t(attempt.mode === "exam" && attempt.deadline ? "，离开期间仍计时。" : "")}</p>}
+      {completed ? <><ScoreReport result={score} /><p className="mt-3 text-sm leading-6 text-slate-600">{t("答对 {0} 题，答错 {1} 题，未作答 {2} 题，共 {3} 题。", { 0: score.correct, 1: score.wrong, 2: score.unanswered, 3: score.total })} · {t("正确率")} {score.percent}%</p></> : <p className="mt-6 text-slate-600">{t("已")}{t(attempt.mode === "exam" ? "选择" : "提交")} {attempt.mode === "exam" ? Object.keys(attempt.answers).length : score.answered} / {score.total} {t("题")}{t(attempt.mode === "exam" && attempt.deadline ? "，离开期间仍计时。" : "")}</p>}
       <Link href={studyAttemptUrl(attempt)} className="mt-6 inline-flex min-h-12 items-center rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white">{t(completed ? "查看题目与解析" : "继续作答")} →</Link>
     </section>
     <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 sm:p-8" aria-label={t("逐题作答记录")}><h2 className="font-bold">{t("作答足迹")}</h2><div className="mt-4 grid gap-2 sm:grid-cols-2">{attempt.questions.map((q, index) => {

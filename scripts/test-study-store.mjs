@@ -11,8 +11,10 @@ const validation = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date });
 const historyData = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/study-history-data.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: historyData });
+const practiceScoring = {};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/practice-scoring.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: practiceScoring });
 const nodeRequire = createRequire(import.meta.url);
-const require = specifier => specifier === "./backup-validation" ? validation : specifier === "./study-history-data" ? historyData : nodeRequire(specifier), key = "jlpt-practice.study.v1";
+const require = specifier => specifier === "./backup-validation" ? validation : specifier === "./study-history-data" ? historyData : specifier === "./practice-scoring" ? practiceScoring : nodeRequire(specifier), key = "jlpt-practice.study.v1";
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", source: "original", questions: ["one", "two"].map(id => ({ id, level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] })) };
 function store(initial) {
   const values = new Map(initial === undefined ? [] : [[key, typeof initial === "string" ? initial : JSON.stringify(initial)]]);
@@ -150,4 +152,23 @@ test("deletion rejects changed or corrupt local data and preserves bytes on stor
   const corrupt = store("{broken");
   assert.equal(corrupt.api.deleteStudyHistory(null).ok, false);
   assert.equal(corrupt.raw(), "{broken");
+});
+
+test("stored scores use JLPT section maxima, preserve raw accuracy and never grade drafts", () => {
+  const make = (category, count) => Array.from({ length: count }, (_, index) => ({ id: `${category}-${index}`, level: "N2", category, correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }));
+  const full = { ...paper, id: "N2-2026-all", typeLabel: "整卷练习", questions: [...make("词汇", 30), ...make("语法", 21), ...make("阅读", 18), ...make("听力", 30)] };
+  const s = store(), a = s.api.createStudyAttempt(full, "practice").attempt;
+  const answers = Object.fromEntries(full.questions.map((q, index) => [q.id, { selectedOptionId: index < 89 ? "A" : "B", submitted: true }]));
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), status: "completed", answers }).ok, true);
+  const raw = s.raw(), score = store(s.read()).api.studyScore(s.read().attempts[0]);
+  assert.equal(score.score, 160); assert.equal(score.maxScore, 180); assert.equal(score.percent, 90);
+  assert.equal(s.raw(), raw);
+  const exam = s.api.createStudyAttempt(full, "exam").attempt;
+  s.api.updateStudyAttempt(exam.id, { ...state(exam), status: "active", deadline: Date.now() + 60000, answers: { [full.questions[0].id]: { selectedOptionId: "A", submitted: false } } });
+  const draft = s.api.studyScore(s.read().attempts.find(x => x.id === exam.id));
+  assert.equal(draft.score, 0); assert.equal(draft.answered, 0);
+  const single = s.api.createStudyAttempt(paper, "practice").attempt;
+  assert.equal(s.api.studyScore(single).maxScore, 60);
+  const collection = s.api.createStudyAttempt({ ...full, id: "favorites-practice", source: "favorites" }, "practice").attempt;
+  assert.equal(s.api.studyScore(collection).maxScore, 60);
 });

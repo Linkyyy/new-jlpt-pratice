@@ -3,11 +3,13 @@
 import { useI18n } from "@/lib/i18n";
 import { translatePeriod } from "@/lib/i18n/translate";
 
+import ScoreReport from "@/components/score-report";
+import { calculatePracticeScore } from "@/lib/practice-scoring";
 import Link from "next/link";
 import QuestionOverview from "./question-overview";
 import { useState, type RefObject } from "react";
 import { saveFavorites, useFavorites } from "@/lib/favorites-store";
-import { questionCategories, type OptionId } from "@/data/practice-question";
+import { type OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration } from "@/data/practice-modes";
 
@@ -37,9 +39,8 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
     setFavoriteMessage(`已新增收藏 ${result.addedCount ?? 0} 道错题，已有收藏保持不变。`);
   }
 
-  const total = paper.questions.length;
-  const correct = paper.questions.filter((question) => answers[question.id] === question.correctOptionId).length;
-  const unanswered = paper.questions.filter((question) => answers[question.id] === undefined).length;
+  const result = calculatePracticeScore({ ...paper, fullPaper: paper.source !== "favorites" && paper.id.endsWith("-all") }, answers);
+  const { total, correct, unanswered } = result;
   const wrong = total - correct - unanswered;
 
   return (
@@ -47,17 +48,8 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
       <h1 ref={headingRef} tabIndex={-1} id="results-title" className="scroll-mt-6 text-2xl font-bold outline-none">{t(exam ? "考试已交卷" : "练习已完成")}</h1>
       <p className="mt-2 text-sm text-slate-500">{t(paper.level)} · {translatePeriod(paper.periodLabel ?? `${paper.year} 原创版`, paper.source, t)} · {t(paper.sourceLabel ?? "原创模拟题库")} · {t(paper.typeLabel)} · {t(exam ? "考试模式" : "练习模式")}</p>
       {exam && <p role="status" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{t(exam.timedOut ? "时间已到，已自动交卷。未作答题目按未得分计算。" : "已提交整份试卷，答案已锁定。")} {t("作答用时：{0}", { 0: formatDuration(exam.elapsedSeconds) })}</p>}
-      <p className="mt-7 text-4xl font-bold text-indigo-600">{Math.round((correct / total) * 100)}% <span className="text-sm font-normal text-slate-500">{t("正确率")}</span></p>
-      <p className="mt-3 text-slate-600">{t("答对 {0} 题，答错 {1} 题，未作答 {2} 题，共 {3} 题。", { 0: correct, 1: wrong, 2: unanswered, 3: total })}</p>
-      <div className="mt-6 grid gap-3 sm:grid-cols-3">
-        {questionCategories.map((category) => {
-          const questions = paper.questions.filter((question) => question.category === category);
-          if (questions.length === 0) return null;
-          const categoryCorrect = questions.filter((question) => answers[question.id] === question.correctOptionId).length;
-          return <p key={category} className="rounded-xl bg-slate-50 p-4 text-sm">{t(category)}：{categoryCorrect} / {questions.length} · {Math.round((categoryCorrect / questions.length) * 100)}%</p>;
-        })}
-      </div>
-      <p className="mt-5 text-xs leading-6 text-slate-500">{t("正确率以全部题目为分母，未作答题目不计分。这不是 JLPT 官方标准分或合格判定。")}</p>
+      <ScoreReport result={result} />
+      <p className="mt-4 text-sm leading-6 text-slate-600">{t("答对 {0} 题，答错 {1} 题，未作答 {2} 题，共 {3} 题。", { 0: correct, 1: wrong, 2: unanswered, 3: total })} · {t("正确率")} {result.percent}%</p>
       <div className="mt-5">
         <button type="button" onClick={favoriteWrongQuestions} disabled={!ready || storageError !== null || unsavedWrong.length === 0} className="min-h-11 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-50">{t(wrongIds.length === 0 ? "暂无错题可收藏" : unsavedWrong.length === 0 ? "错题已全部收藏" : `一键收藏错题（${unsavedWrong.length}）`)}</button>
         <p className="mt-2 text-xs leading-6 text-slate-500">{t("新收藏放入默认收藏夹，已收藏题目保留原有收藏夹。未作答题目不计入错题收藏。")}</p>

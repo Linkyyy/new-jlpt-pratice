@@ -11,7 +11,7 @@ export const years = ["2026", "2025"] as const;
 export type PaperYear = string;
 
 export const questionTypes = [
-  { value: "all", label: "整套文字练习", category: null },
+  { value: "all", label: "整卷练习", category: null },
   { value: "vocabulary", label: "词汇", category: "词汇" },
   { value: "grammar", label: "语法", category: "语法" },
   { value: "reading", label: "阅读", category: "阅读" },

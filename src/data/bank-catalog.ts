@@ -22,7 +22,7 @@ export function getBankPeriods(source: QuestionBankSource, level: JLPTLevel): re
 
 export function getBankCount(source: QuestionBankSource, level: JLPTLevel, period: string, type: QuestionType) {
   if (source === "original") return { available: type === "listening" ? 0 : type === "all" ? 9 : 3, excluded: 0 };
-  const groups = manifest.groups.filter((group) => group.level === level && group.period === period && (type === "all" ? group.type !== "listening" : group.type === type));
+  const groups = manifest.groups.filter((group) => group.level === level && group.period === period && (type === "all" || group.type === type));
   return { available: groups.reduce((sum, group) => sum + group.availableCount, 0), excluded: groups.reduce((sum, group) => sum + group.unavailableCount, 0) };
 }
 

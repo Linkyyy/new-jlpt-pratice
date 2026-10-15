@@ -24,7 +24,7 @@ export function AttemptCard({ attempt, onDelete }: { attempt: StudyAttempt; onDe
       <p className="mt-1 text-xs leading-5 text-slate-500">{studyDate(attempt.completedAt ?? attempt.updatedAt, locale)} · {t(attempt.mode === "exam" ? "考试" : "练习")} · {t(completed ? `答对 ${score.correct}/${score.total} 题` : attempt.status === "ready" ? "待开始" : `已${attempt.mode === "exam" ? "选择" : "提交"} ${attempt.mode === "exam" ? chosen : score.answered}/${score.total} 题`)}</p>
     </div>
     <div className="shrink-0 text-right">
-      {completed && <p className="text-lg font-bold tabular-nums text-indigo-600">{score.percent}<span className="ml-0.5 text-xs font-normal">{t("分")}</span></p>}
+      {completed && <p className="text-lg font-bold tabular-nums text-indigo-600">{score.score}<span className="ml-0.5 text-sm font-normal">/ {score.maxScore}</span></p>}
       <div className="flex items-center justify-end gap-2"><Link href={studyAttemptUrl(attempt)} className="inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t(completed ? "复习 →" : "继续 →")}</Link>{onDelete && <HistoryDeleteButton onClick={() => onDelete(attempt)} />}</div>
     </div>
   </article>;

@@ -41,9 +41,10 @@ export default function PracticeHome() {
   const latest = latestStudyAttempt(data);
   const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
   const completed = data.attempts.filter(a => a.paperId === paperId && a.mode === mode && a.status === "completed");
+  const best = completed.map(studyScore).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
   const done = [...trails].filter(([id, q]) => {
     const samePaper = source === "imported" ? id.startsWith(`imported:${activePeriod}:${activeLevel}:`) : id.startsWith(`${activeLevel}-${activePeriod}-`);
-    return samePaper && (selection.category === null ? q.category !== "听力" : q.category === selection.category);
+    return samePaper && (selection.category === null || q.category === selection.category);
   }).length;
   const newUrl = `/practice?${new URLSearchParams({ source, level: activeLevel, year: activePeriod, type, mode, fresh: "1" })}`;
 
@@ -101,8 +102,9 @@ export default function PracticeHome() {
             <div aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
               <div className="flex items-center justify-between gap-3 text-sm"><p className="font-semibold text-slate-700">{t("本卷足迹")}</p><p className="tabular-nums text-indigo-600">{t("已练")}{ready ? Math.min(done, questionCount) : "—"} / {questionCount} {t("题")}</p></div>
               <progress aria-label={t("本卷已练题目")} value={Math.min(done, questionCount)} max={questionCount || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
-              <p className="mt-3 text-xs leading-5 text-slate-500">{t(completed.length ? `已完成 ${completed.length} 次 · 最佳 ${Math.max(...completed.map(a => studyScore(a).percent))} 分` : "完成作答后点亮足迹，同一道题重复练习只计入一次。")}{t(mode === "exam" ? ` · 训练 ${getExamDuration(questionCount) / 60} 分钟` : "")}</p>
+              <p className="mt-3 text-xs leading-5 text-slate-500">{(best ? t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore }) : t("完成作答后点亮足迹，同一道题重复练习只计入一次。"))}{t(mode === "exam" ? ` · 训练 ${getExamDuration(questionCount) / 60} 分钟` : "")}</p>
             </div>
+            {source === "original" && type === "all" && <p className="mt-3 text-xs leading-6 text-amber-800">{t("原创卷尚无听力题，整卷估分会标记为不完整。完整整卷请选用户提供题库。")}</p>}
             <div className="mt-5 flex flex-wrap items-center gap-4">
               <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={active ? mode === "exam" ? "继续考试" : "继续练习" : mode === "exam" ? "进入考试准备" : "开始练习"} />
               {active && <Link href={newUrl} className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-500 hover:text-indigo-600">{t("重新开始")}</Link>}

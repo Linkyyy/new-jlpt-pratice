@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { calculatePracticeScore } from "./practice-scoring";
 import { withoutStudyHistory } from "./study-history-data";
 import { isStudyData } from "./backup-validation";
 export { isStudyData } from "./backup-validation";
@@ -141,10 +142,16 @@ export function studyAttemptUrl(attempt: StudyAttempt) {
   return `/practice?${new URLSearchParams({ source: attempt.source, level: attempt.level, year: attempt.year, type: attempt.type, mode: attempt.mode, attempt: attempt.id })}`;
 }
 export function studyScore(attempt: StudyAttempt) {
-  let correct = 0, answered = 0;
-  for (const q of attempt.questions) { const a = attempt.answers[q.id]; if (a?.submitted) { answered++; if (a.selectedOptionId === q.correctOptionId) correct++; } }
-  return { total: attempt.questions.length, answered, correct, wrong: answered - correct, unanswered: attempt.questions.length - answered, percent: Math.round(correct / attempt.questions.length * 100) };
+  const answers: Partial<Record<string, OptionId>> = {};
+  let answered = 0;
+  for (const q of attempt.questions) {
+    const a = attempt.answers[q.id];
+    if (a?.submitted) { answered++; answers[q.id] = a.selectedOptionId; }
+  }
+  const result = calculatePracticeScore({ ...attempt, fullPaper: attempt.source !== "favorites" && attempt.type === "all" }, answers);
+  return { ...result, answered, wrong: answered - result.correct };
 }
+
 export function questionTrails(data: StudyData) {
   const trails = new Map<string, { correct: boolean; everCorrect: boolean; count: number; level: JLPTLevel; category: QuestionCategory }>();
   for (const attempt of [...data.attempts].sort((a, b) => a.createdAt - b.createdAt)) for (const q of attempt.questions) {

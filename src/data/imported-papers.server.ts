@@ -19,7 +19,7 @@ const readGroup = cache(async (level: JLPTLevel, period: string, type: QuestionT
 
 export async function loadPracticePaper(source: "original" | "imported", level: JLPTLevel, period: string, type: QuestionType): Promise<PracticePaper> {
   if (source === "original") return { ...getPracticePaper(level, period, type), source, periodLabel: formatPeriod(period), sourceLabel: "原创模拟题库", excludedCount: 0 };
-  const selectedTypes = type === "all" ? ["vocabulary", "grammar", "reading"] as const : [type];
+  const selectedTypes: readonly Exclude<QuestionType, "all">[] = type === "all" ? ["vocabulary", "grammar", "reading", "listening"] : [type];
   const questions = (await Promise.all(selectedTypes.map((selectedType) => readGroup(level, period, selectedType)))).flat();
   const excludedCount = selectedTypes.reduce((sum, selectedType) => sum + (getImportedGroup(level, period, selectedType)?.unavailableCount ?? 0), 0);
   return { id: `imported-${level}-${period}-${type}`, level, year: period, typeLabel: questionTypes.find((item) => item.value === type)?.label ?? type, source, periodLabel: formatPeriod(period), sourceLabel: "用户提供题库", questions, excludedCount };
