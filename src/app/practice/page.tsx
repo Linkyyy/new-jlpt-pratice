@@ -7,8 +7,7 @@ import { levels, type JLPTLevel } from "@/data/practice-question";
 import { questionTypes, type QuestionType } from "@/data/practice-papers";
 import { getBankLevels, getBankPeriods, type QuestionBankSource } from "@/data/bank-catalog";
 import { loadPracticePaper } from "@/data/imported-papers.server";
-import PracticeExercise from "./practice-exercise";
-import ExamSession from "./exam-session";
+import StudySession from "./study-session";
 import { practiceModes, type PracticeMode } from "@/data/practice-modes";
 
 export const metadata: Metadata = {
@@ -59,7 +58,8 @@ async function SelectedExercise({ searchParams }: PageProps<"/practice">) {
   const questionId = params.question;
   const initialQuestionIndex = typeof questionId === "string" ? paper.questions.findIndex((question) => question.id === questionId) : 0;
   if (questionId !== undefined && (typeof questionId !== "string" || initialQuestionIndex < 0)) return <InvalidSelection />;
-  return mode === "exam" ? <ExamSession key={`${paper.id}-exam`} paper={paper} /> : <PracticeExercise key={`${paper.id}-practice-${questionId ?? ""}`} paper={paper} initialQuestionIndex={initialQuestionIndex} />;
+  const attemptId = typeof params.attempt === "string" ? params.attempt : undefined;
+  return <StudySession key={`${paper.id}-${mode}-${attemptId ?? ""}-${params.fresh ?? ""}-${questionId ?? ""}`} paper={paper} mode={mode} initialQuestionIndex={initialQuestionIndex} requestedQuestion={questionId !== undefined} />;
 }
 
 export default function PracticePage(props: PageProps<"/practice">) {

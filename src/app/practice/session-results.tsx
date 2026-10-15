@@ -66,6 +66,7 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
         <button type="button" onClick={onRestart} className="min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{exam ? "重新考试" : "重新练习"}</button>
         <Link href={paper.source === "favorites" ? "/favorites" : "/"} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">{paper.source === "favorites" ? "返回收藏题库" : "选择其他练习"}</Link>
+        <Link href="/history" className="min-h-12 rounded-xl px-5 py-3 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-50">查看学习记录</Link>
       </div>
     </section>
   );

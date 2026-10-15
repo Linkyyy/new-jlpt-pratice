@@ -19,10 +19,15 @@ import { useQuestionSwipe } from "./use-question-swipe";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
+import type { StudyAttempt } from "@/lib/study-store";
+import { useStudyPersistence } from "./use-study-persistence";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
   initialQuestionIndex?: number;
+  attempt: StudyAttempt;
+  initialSaveError: string | null;
+  onRestart: () => void;
 }
 
 interface AnswerState {
@@ -33,14 +38,14 @@ interface AnswerState {
 const primaryButton = "min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-500";
 const secondaryButton = "min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-40";
 
-export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: PracticeExerciseProps) {
+export default function PracticeExercise({ paper, attempt, initialSaveError, onRestart, initialQuestionIndex = 0 }: PracticeExerciseProps) {
   const router = useRouter();
   const [questionIndex, setQuestionIndex] = useState(initialQuestionIndex);
-  const [answers, setAnswers] = useState<Partial<Record<string, AnswerState>>>({});
-  const [finished, setFinished] = useState(false);
-  const [showResults, setShowResults] = useState(false);
+  const [answers, setAnswers] = useState<Partial<Record<string, AnswerState>>>(attempt.answers);
+  const [finished, setFinished] = useState(attempt.status === "completed");
+  const [showResults, setShowResults] = useState(attempt.status === "completed");
   const [instantFeedback, setInstantFeedback] = useState(false);
-  const [fontSize, setFontSize] = useState(18);
+  const [fontSize, setFontSize] = useState(attempt.fontSize);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
@@ -70,6 +75,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   const lastQuestion = questionIndex === totalQuestions - 1;
   const hasProgress = Object.keys(answers).length > 0 && !finished;
   const previousAnswer = useRef({ id: question.id, submitted });
+  const saveError = useStudyPersistence(attempt, { answers, status: finished ? "completed" : "active", questionIndex, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize }, initialSaveError);
 
   useEffect(() => {
     const previous = previousView.current;
@@ -88,14 +94,14 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   }, [question.id, submitted]);
 
   useEffect(() => {
-    if (!hasProgress) return;
+    if (!hasProgress || !saveError) return;
     function warnBeforeUnload(event: BeforeUnloadEvent) {
       event.preventDefault();
       event.returnValue = "";
     }
     window.addEventListener("beforeunload", warnBeforeUnload);
     return () => window.removeEventListener("beforeunload", warnBeforeUnload);
-  }, [hasProgress]);
+  }, [hasProgress, saveError]);
 
   function requestConfirmation(action: ConfirmationAction) {
     setConfirmationAction(action);
@@ -104,7 +110,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
 
   function handleHomeClick(event: MouseEvent<HTMLAnchorElement>) {
     // 打开新标签页不会丢失当前页的答案，无需阻拦。
-    if (!hasProgress || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    if (!hasProgress || !saveError || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
     requestConfirmation("leave");
   }
@@ -153,10 +159,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
   }
 
   function restartPaper() {
-    setAnswers({});
-    setQuestionIndex(0);
-    setFinished(false);
-    setShowResults(false);
+    onRestart();
   }
 
   const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction), swipeEnabled);
@@ -165,6 +168,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="mb-8">
+          {saveError && <p role="alert" className="mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习"}</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
@@ -191,7 +195,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           <p className="mt-3 text-xs leading-6 text-slate-500">文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。</p>
         </fieldset>
         <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
-        <p className="mt-4 text-xs leading-6 text-slate-500">{paper.sourceLabel} · {paper.periodLabel} · {paper.typeLabel}。刷新或离开会重置本次答题记录。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
+        <p className="mt-4 text-xs leading-6 text-slate-500">进度自动保存在当前浏览器，可从首页继续练习。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
           </FloatingSettings>
         }>
           <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
@@ -263,10 +267,10 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           />
         </footer>
         <p className="hidden lg:col-span-2 lg:block mt-5 text-center text-xs leading-6 text-slate-500">
-          {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。{paper.source === "favorites" ? "本次练习来自所选收藏题目。" : paper.source === "imported" ? "内容按用户提供资源导入，不代表官方授权或官方评分。" : "精简原创文字模拟练习，不含听力。"}刷新或离开页面会重置本次答题记录。
+          {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。进度与成绩保存在当前浏览器。
         </p>
       </div>
-      <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} />
+      <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} progressSaved={!saveError} />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import QuestionOverview from "./question-overview";
 import ResponsivePanel from "@/components/responsive-panel";
 import FloatingSettings from "@/components/floating-settings";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
 import { formatDuration, getExamDuration } from "@/data/practice-modes";
@@ -21,30 +21,32 @@ import SessionResults, { type SelectedAnswers } from "./session-results";
 import { useExamTimer } from "./use-exam-timer";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
+import type { StudyAttempt } from "@/lib/study-store";
+import { useStudyPersistence } from "./use-study-persistence";
 
 type ExamPhase = "ready" | "running" | "finished";
 
 const primaryButton = "min-h-12 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600";
 const secondaryButton = "min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-40";
 
-export default function ExamSession({ paper }: { paper: PracticePaper }) {
-  const [fontSize, setFontSize] = useState(18);
+export default function ExamSession({ paper, attempt, initialSaveError, initialQuestionIndex = 0, onRestart }: { paper: PracticePaper; attempt: StudyAttempt; initialSaveError: string | null; initialQuestionIndex?: number; onRestart: () => void }) {
+  const [fontSize, setFontSize] = useState(attempt.fontSize);
   const router = useRouter();
-  const [phase, setPhase] = useState<ExamPhase>("ready");
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<SelectedAnswers>({});
-  const [showResults, setShowResults] = useState(false);
-  const [timedOut, setTimedOut] = useState(false);
-  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [phase, setPhase] = useState<ExamPhase>(attempt.status === "completed" ? "finished" : attempt.status === "active" ? "running" : "ready");
+  const [questionIndex, setQuestionIndex] = useState(initialQuestionIndex);
+  const [answers, setAnswers] = useState<SelectedAnswers>(() => Object.fromEntries(Object.entries(attempt.answers).filter(([, a]) => a).map(([id, a]) => [id, a!.selectedOptionId])));
+  const [showResults, setShowResults] = useState(attempt.status === "completed");
+  const [timedOut, setTimedOut] = useState(attempt.timedOut);
+  const [elapsedSeconds, setElapsedSeconds] = useState(attempt.elapsedSeconds);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const finishedRef = useRef(false);
+  const finishedRef = useRef(attempt.status === "completed");
   const previousView = useRef({ phase, questionIndex, showResults });
   const durationSeconds = getExamDuration(paper.questions.length);
-  const timer = useExamTimer(durationSeconds, () => finishExam(true));
+  const timer = useExamTimer(durationSeconds, () => finishExam(true), attempt.deadline);
   const question = paper.questions[questionIndex];
   const article = usesArticleDrawer(question);
   const selectedOptionId = answers[question.id] ?? null;
@@ -53,6 +55,8 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
   const nextUnansweredIndex = paper.questions.findIndex((item, index) => index !== questionIndex && answers[item.id] === undefined);
   const finished = phase === "finished";
   const lastQuestion = questionIndex === paper.questions.length - 1;
+  const savedAnswers = useMemo(() => Object.fromEntries(Object.entries(answers).filter(([, id]) => id).map(([id, selectedOptionId]) => [id, { selectedOptionId: selectedOptionId!, submitted: finished }])), [answers, finished]);
+  const saveError = useStudyPersistence(attempt, { answers: savedAnswers, status: finished ? "completed" : phase === "ready" ? "ready" : "active", questionIndex, deadline: phase === "running" ? timer.deadline : null, elapsedSeconds, timedOut, fontSize }, initialSaveError);
 
   useEffect(() => {
     const previous = previousView.current;
@@ -63,14 +67,14 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
   }, [phase, questionIndex, showResults, article]);
 
   useEffect(() => {
-    if (phase !== "running") return;
+    if (phase !== "running" || !saveError) return;
     function warnBeforeUnload(event: BeforeUnloadEvent) {
       event.preventDefault();
       event.returnValue = "";
     }
     window.addEventListener("beforeunload", warnBeforeUnload);
     return () => window.removeEventListener("beforeunload", warnBeforeUnload);
-  }, [phase]);
+  }, [phase, saveError]);
 
   function startExam() {
     finishedRef.current = false;
@@ -126,14 +130,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
     if (confirmationAction === "submit") finishExam(false);
     if (confirmationAction === "leave") router.push("/");
     if (confirmationAction === "restart") {
-      timer.reset();
-      finishedRef.current = false;
-      setAnswers({});
-      setQuestionIndex(0);
-      setShowResults(false);
-      setTimedOut(false);
-      setElapsedSeconds(0);
-      setPhase("ready");
+      onRestart();
     }
   }
 
@@ -143,6 +140,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
     <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="mb-6">
+          {saveError && <p role="alert" className="mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
@@ -165,10 +163,10 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
             <p className="mt-3 text-lg font-semibold text-indigo-700">训练时长：{durationSeconds / 60} 分钟</p>
             <ul className="mt-5 list-disc space-y-3 pl-5 text-sm leading-7 text-slate-600">
               <li>点击“开始考试”才开始计时；当前尚未计时。</li>
-              <li>选项会记录在本次页面中，可自由切题并修改，交卷前不显示答案和解析。</li>
+              <li>选项自动保存在当前浏览器，可自由切题并修改，交卷前不显示答案和解析。</li>
               <li>计时不会因切题、确认弹窗或切到后台而暂停。时间到后自动交卷。</li>
               <li>提前交卷需要确认；未作答题目不计分，交卷后不可修改答案。</li>
-              <li>刷新或离开页面会丢失答案和计时进度，目前不支持断点续考。</li>
+              <li>刷新或离开后可从首页续考，考试仍按原截止时间计时；到期恢复时自动交卷。</li>
             </ul>
             <p className="mt-5 text-xs leading-6 text-slate-500">{paper.source === "imported" ? "本卷来自用户提供题库；未接入的媒体题不计入本次作答。" : "这是原创精简文字卷，不含听力。"}训练时长、题量和评分均不等同于正式 JLPT 考试。</p>
             <button type="button" onClick={startExam} className={`${primaryButton} mt-6 w-full sm:w-auto`}>开始考试</button>
@@ -218,7 +216,7 @@ export default function ExamSession({ paper }: { paper: PracticePaper }) {
           </>}
         </footer>
       </div>
-      <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} sessionLabel="考试" unansweredCount={unansweredCount} />
+      <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} sessionLabel="考试" unansweredCount={unansweredCount} progressSaved={!saveError} />
     </main>
   );
 }

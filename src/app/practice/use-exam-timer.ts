@@ -2,9 +2,9 @@
 
 import { useEffect, useEffectEvent, useState } from "react";
 
-export function useExamTimer(durationSeconds: number, onExpire: () => void) {
-  const [deadline, setDeadline] = useState<number | null>(null);
-  const [remainingSeconds, setRemainingSeconds] = useState(durationSeconds);
+export function useExamTimer(durationSeconds: number, onExpire: () => void, initialDeadline: number | null = null) {
+  const [deadline, setDeadline] = useState<number | null>(initialDeadline);
+  const [remainingSeconds, setRemainingSeconds] = useState(() => initialDeadline === null ? durationSeconds : Math.max(0, Math.ceil((initialDeadline - Date.now()) / 1000)));
   const expire = useEffectEvent(onExpire);
 
   useEffect(() => {
@@ -14,6 +14,7 @@ export function useExamTimer(durationSeconds: number, onExpire: () => void) {
       setRemainingSeconds(remaining);
       if (remaining === 0) expire();
     }
+    updateTime();
     const interval = window.setInterval(updateTime, 1000);
     document.addEventListener("visibilitychange", updateTime);
     return () => {

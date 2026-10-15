@@ -1,3 +1,7 @@
+"use client";
+
+import { useMemo } from "react";
+import { questionTrails, useStudyHistory } from "@/lib/study-store";
 import type { PracticeQuestion, QuestionCategory } from "@/data/practice-question";
 import { questionCategories } from "@/data/practice-question";
 
@@ -21,6 +25,8 @@ function problemGroup(question: PracticeQuestion): { key: string; label: string 
 }
 
 export default function QuestionOverview({ questions, currentIndex, onSelect, getStatus, label = "题目导航", results = false }: OverviewProps) {
+  const { data } = useStudyHistory();
+  const trails = useMemo(() => questionTrails(data), [data]);
   const categories = new Map<QuestionCategory, Map<string, { label: string; items: { question: PracticeQuestion; index: number }[] }>>();
   questions.forEach((question, index) => {
     if (!categories.has(question.category)) categories.set(question.category, new Map());
@@ -41,7 +47,8 @@ export default function QuestionOverview({ questions, currentIndex, onSelect, ge
             <div className="overview-numbers">
               {group.items.map(({ question, index }) => {
                 const status = getStatus(question);
-                return <button key={question.id} type="button" onClick={() => onSelect(index)} aria-current={currentIndex === index ? "step" : undefined} aria-label={`第 ${index + 1} 题，${statusLabels[status]}`} title={question.sourceQuestionNumber != null ? `原题号 ${question.sourceQuestionNumber}` : undefined} className={`question-number question-${status} ${currentIndex === index ? "question-current" : ""}`}>{index + 1}</button>;
+                const visited = (status === "empty" || status === "draft") && trails.has(question.id);
+                return <button key={question.id} type="button" onClick={() => onSelect(index)} aria-current={currentIndex === index ? "step" : undefined} aria-label={`第 ${index + 1} 题，${statusLabels[status]}${visited ? "，曾练习" : ""}`} title={`${question.sourceQuestionNumber != null ? `原题号 ${question.sourceQuestionNumber}` : ""}${visited ? " · 曾练习" : ""}`} className={`relative question-number question-${status} ${currentIndex === index ? "question-current" : ""}`}>{index + 1}{visited && <span aria-hidden="true" className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-indigo-400" />}</button>;
               })}
             </div>
           </div>)}

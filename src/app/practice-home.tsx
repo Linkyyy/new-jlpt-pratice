@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
-import ResponsivePanel from "@/components/responsive-panel";
+import { AttemptCard, StudyAchievements, StudyStats, attemptTitle, studyCard } from "@/components/study-dashboard";
+import { latestStudyAttempt, questionTrails, studyAttemptUrl, studyScore, useStudyHistory } from "@/lib/study-store";
 import type { JLPTLevel } from "@/data/practice-question";
 import { questionTypes, type QuestionType } from "@/data/practice-papers";
 import { getExamDuration, practiceModes, type PracticeMode } from "@/data/practice-modes";
@@ -23,15 +24,31 @@ export default function PracticeHome() {
   const activePeriod = periods.includes(year) ? year : periods[0] ?? "2026";
   const counts = getBankCount(source, activeLevel, activePeriod, type);
   const questionCount = counts.available;
+  const { data, ready, error } = useStudyHistory();
+  const trails = useMemo(() => questionTrails(data), [data]);
+  const paperId = `${source === "imported" ? "imported-" : ""}${activeLevel}-${activePeriod}-${type}`;
+  const active = latestStudyAttempt(data, paperId, mode);
+  const latest = latestStudyAttempt(data);
+  const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
+  const completed = data.attempts.filter(a => a.paperId === paperId && a.mode === mode && a.status === "completed");
+  const done = [...trails].filter(([id, q]) => {
+    const samePaper = source === "imported" ? id.startsWith(`imported:${activePeriod}:${activeLevel}:`) : id.startsWith(`${activeLevel}-${activePeriod}-`);
+    return samePaper && (selection.category === null ? q.category !== "听力" : q.category === selection.category);
+  }).length;
+  const newUrl = `/practice?${new URLSearchParams({ source, level: activeLevel, year: activePeriod, type, mode, fresh: "1" })}`;
 
   return (
     <main className="flex-1 bg-slate-50 px-4 py-5 font-sans text-slate-900 sm:px-8 sm:py-8">
-      <div className="home-layout mx-auto max-w-[1536px]">
-        <header className="home-header">
-          <div className="flex flex-wrap items-center justify-between gap-3"><p className="text-sm font-bold tracking-widest text-indigo-600">JLPT Practice</p><Link href="/favorites" className="inline-flex min-h-11 items-center rounded-lg border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-50">★ 我的收藏</Link></div>
+      <div className="mx-auto max-w-7xl space-y-5">
+        <header className="flex flex-wrap items-center justify-between gap-3 pb-1">
+          <p className="text-sm font-bold tracking-widest text-indigo-600">JLPT Practice</p>
+          <nav aria-label="个人学习" className="flex items-center gap-2 text-sm font-semibold text-indigo-700"><Link href="/history" className="rounded-lg px-3 py-3 hover:bg-indigo-50">学习记录</Link><Link href="/favorites" className="rounded-lg border border-indigo-200 bg-white px-3 py-3 hover:bg-indigo-50">★ 我的收藏</Link></nav>
         </header>
-
-        <section aria-labelledby="selection-title" className="home-selection mt-5 rounded-2xl lg:mt-0 border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+        {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{error}</p>}
+        <StudyStats data={data} ready={ready} />
+        {latest && <section aria-label="继续上次学习" className="flex items-center justify-between gap-4 rounded-2xl border border-indigo-200 bg-indigo-50 p-4 sm:px-6"><div className="min-w-0"><p className="text-xs font-semibold text-indigo-600">接着上次练习</p><p className="mt-1 text-sm font-semibold leading-6 text-slate-800">{attemptTitle(latest)}</p></div><Link href={studyAttemptUrl(latest)} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-4 text-sm font-semibold text-white hover:bg-indigo-700">继续 →</Link></section>}
+        <div className="grid items-start gap-5 lg:grid-cols-[1.05fr_1fr]">
+        <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">选择练习</h2>
           <form action="/practice" method="get" className="mt-4">
             <label className="mb-4 block text-sm font-semibold">题库来源
@@ -57,7 +74,7 @@ export default function PracticeHome() {
               </label>
               <label className="text-sm font-semibold">
                 场次／版本
-                <select name="year" value={activePeriod} onChange={(event) => setYear(event.target.value)} aria-describedby="year-note" className={selectClassName}>
+                <select name="year" value={activePeriod} onChange={(event) => setYear(event.target.value)} className={selectClassName}>
                   {periods.map((period) => <option key={period} value={period}>{formatPeriod(period)}</option>)}
                 </select>
               </label>
@@ -68,28 +85,24 @@ export default function PracticeHome() {
                 </select>
               </label>
             </div>
-            <p id="year-note" className="hidden lg:block mt-5 text-sm leading-6 text-slate-500">{source === "imported" ? "按用户资源中的年月场次组织，保留原题号、阅读子题和数字选项；不宣称是原创或已获官方授权。" : "原创版本不代表历年官方真题。"}</p>
-            <p aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{activeLevel} · {formatPeriod(activePeriod)} · {selection.label} · {questionCount} 题<span className="hidden sm:inline">。{type === "all" ? "包含当前可作答的词汇、语法和阅读，不含听力。" : "仅练习当前题型。"} {counts.excluded > 0 && `另有 ${counts.excluded} 题因缺少媒体或数据不完整暂不可用，未计入本次题量。`} {mode === "exam" ? `考试模式：训练时长 ${getExamDuration(questionCount) / 60} 分钟，交卷后统一解析，非正式考试时长。` : "练习模式：不限时，可开启点击选项即时判定。"}</span></p>
-            <button type="submit" disabled={questionCount === 0} className="mt-6 min-h-12 w-full rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300 sm:w-auto">{mode === "exam" ? "进入考试准备" : type === "all" ? "开始整套练习" : `开始${selection.label}练习`} →</button>
+            <div aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
+              <div className="flex items-center justify-between gap-3 text-sm"><p className="font-semibold text-slate-700">本卷足迹</p><p className="tabular-nums text-indigo-600">已练 {ready ? Math.min(done, questionCount) : "—"} / {questionCount} 题</p></div>
+              <progress aria-label="本卷已练题目" value={Math.min(done, questionCount)} max={questionCount || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
+              <p className="mt-3 text-xs leading-5 text-slate-500">{completed.length ? `已完成 ${completed.length} 次 · 最佳 ${Math.max(...completed.map(a => studyScore(a).percent))} 分` : "完成作答后点亮足迹，同一道题重复练习只计入一次。"}{mode === "exam" ? ` · 训练 ${getExamDuration(questionCount) / 60} 分钟` : ""}</p>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center gap-4">
+              <button type="submit" disabled={!ready || questionCount === 0} className="min-h-12 flex-1 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300">{active ? mode === "exam" ? "继续考试" : "继续练习" : mode === "exam" ? "进入考试准备" : "开始练习"} →</button>
+              {active && <Link href={newUrl} className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-500 hover:text-indigo-600">重新开始</Link>}
+            </div>
           </form>
         </section>
 
-        <ResponsivePanel title="练习说明" trigger="题库说明与使用帮助" className="mt-4 lg:mt-0">
-        <section aria-label="练习说明" className="grid gap-3">
-          {[
-            { title: "用户题库与原创题库", text: `已导入 ${importedBankSummary.files} 个文件、${importedBankSummary.available} 道可作答题。原有 N1–N5 的 90 道原创题继续保留。` },
-            { title: "资源完整性检查", text: `${importedBankSummary.unavailable} 道题暂缺音频、图片或有效数据，已保留记录但不进入作答和评分。补充资源后可重新导入。` },
-            { title: "学习与自测分开", text: "练习模式即时反馈；考试模式限时独立作答，交卷后查看分项成绩与解析。" },
-          ].map((item) => (
-            <article key={item.title} className="rounded-xl bg-slate-50 p-4">
-              <h2 className="font-semibold">{item.title}</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{item.text}</p>
-            </article>
-          ))}
-        </section>
-        <p id="mobile-year-note" className="mt-4 text-sm leading-7 text-slate-500">{source === "imported" ? "按年月场次组织，保留原题号；内容来自用户提供资源，不宣称官方授权。" : "原创版本不代表历年官方真题。"}练习模式逐题反馈，考试模式交卷后解析。</p>
-        <p className="mt-4 text-sm leading-7 text-slate-500">题量、训练时长及正确率不等同于正式 JLPT 的评分或合格判定。答题记录仅保留在本次页面内，刷新或离开页面后会重置。</p>
-        </ResponsivePanel>
+        <aside className="space-y-5">
+          <StudyAchievements data={data} />
+          <section className={studyCard} aria-labelledby="recent-title"><div className="mb-4 flex items-center justify-between"><h2 id="recent-title" className="font-bold">最近作答</h2><Link href="/history" className="text-xs font-semibold text-indigo-600">全部记录 →</Link></div>{recent.length ? <div className="space-y-2">{recent.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <div className="rounded-xl border border-dashed border-slate-200 px-4 py-8 text-center"><p className="text-sm text-slate-500">从第一道题开始，积累你的学习足迹。</p><p className="mt-2 text-xs text-slate-400">进度与每次交卷成绩自动保存</p></div>}</section>
+        </aside>
+        </div>
+        <details className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-500"><summary className="cursor-pointer font-semibold text-slate-700">题库说明与记录帮助</summary><div className="mt-3 space-y-2 text-xs leading-6"><p>进度、历史成绩与做题足迹保存在当前浏览器，可在学习记录中导出备份。无痕模式或清理浏览器数据后无法保留。学习天数按日本时间计算。</p><p>题号右上角的小圆点表示曾练习；当前作答仍用颜色显示正误。整篇阅读与长文语法题统一提交后才留下足迹。</p><p>用户题库已导入 {importedBankSummary.files} 个文件、{importedBankSummary.available} 道可作答题；资源不完整的 {importedBankSummary.unavailable} 道题暂不参与作答。原创题库不代表官方真题。题量、时长及成绩不等同于正式 JLPT 评分。</p></div></details>
       </div>
     </main>
   );
