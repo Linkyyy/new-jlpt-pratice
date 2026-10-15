@@ -744,84 +744,89 @@
       ],
       "sourceQuestionNumber": 64,
       "sourceId": 3703
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202312:N1:3:3704:65",
-      "sourceId": 3704,
-      "questionNumber": 65,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> チョウさんは、机1台を買い取ってもらいたいと思っている。机は、重さが12kgで、三辺の合計が220cmである。チョウさんが利用できる方法にはどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "店頭買取か出張買取か宅配買取"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "店頭買取か出張買取"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "店頭買取か宅配買取"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "店頭買取"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 3704,
       "media": {
-        "picture": "pic/120231265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3704,
-        "time": null,
-        "level": null,
-        "questionId": 65,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> チョウさんは、机1台を買い取ってもらいたいと思っている。机は、重さが12kgで、三辺の合計が220cmである。チョウさんが利用できる方法にはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 店頭買取か出張買取か宅配買取",
-        "option2": " 店頭買取か出張買取",
-        "option3": " 店頭買取か宅配買取",
-        "option4": " 店頭買取",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 65,
-        "articleAssistant": null
+        "images": [
+          "pic/120231265.jpg"
+        ]
       }
     },
     {
       "id": "imported:202312:N1:3:3705:66",
-      "sourceId": 3705,
-      "questionNumber": 66,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 森村さんは、ギター（重さ5kg、三辺の合計150cm）と自転車（重さ10kg、三辺の合計160cm）をまとめて買い取ってもらいたいと思っているが、店頭に自分で持っていかずに済む方法がいい。森村さんが利用できる方法はどれで、何を準備しなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "宅配買取で、品物と顔写真付きの本人確認書類のコピーを並準備する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "宅配買取で、品物と本人確認書類のコピーを準備する。本人入確認書類は、顔写真付きでなくてもいい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "出張買取で、品物と顔写真付きの本人確認書類を準備する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "出張買取で、品物と本人確認書類を準備する。本人確認書類頃は、顔写真付きでなくてもいい。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 3705,
       "media": {
-        "picture": "pic/120231265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3705,
-        "time": "202312",
-        "level": "n1",
-        "questionId": 66,
-        "typeQuestionId": 21,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 森村さんは、ギター（重さ5kg、三辺の合計150cm）と自転車（重さ10kg、三辺の合計160cm）をまとめて買い取ってもらいたいと思っているが、店頭に自分で持っていかずに済む方法がいい。森村さんが利用できる方法はどれで、何を準備しなければならないか。</p>",
-        "picture": "pic/120231265.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 宅配買取で、品物と顔写真付きの本人確認書類のコピーを並準備する。",
-        "option2": " 宅配買取で、品物と本人確認書類のコピーを準備する。本人入確認書類は、顔写真付きでなくてもいい。",
-        "option3": " 出張買取で、品物と顔写真付きの本人確認書類を準備する。",
-        "option4": " 出張買取で、品物と本人確認書類を準備する。本人確認書類頃は、顔写真付きでなくてもいい。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 3704,
-        "articleAssistant": null
+        "images": [
+          "pic/120231265.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

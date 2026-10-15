@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 574
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202207:N2:3:575:70",
-      "sourceId": 575,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> スマンさんは3歳の娘と一緒に8月の平日にプールに行き、10時から12時まで遊ぶつもりである。スマンさんたちの料金はいくらになるか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "スマンさん2,800円、娘1,000円から、それぞれ300円を引いた金額"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "スマンさん3,000円、娘1,300円から、それぞれ300円を引いた金額"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "スマンさん3,500円、娘1,800円から、それぞれ300円を引いた金額"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "スマンさん3,500円、娘1,800円"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 575,
       "media": {
-        "picture": "pic/220220770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 575,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> スマンさんは3歳の娘と一緒に8月の平日にプールに行き、10時から12時まで遊ぶつもりである。スマンさんたちの料金はいくらになるか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " スマンさん2,800円、娘1,000円から、それぞれ300円を引いた金額",
-        "option2": " スマンさん3,000円、娘1,300円から、それぞれ300円を引いた金額",
-        "option3": " スマンさん3,500円、娘1,800円から、それぞれ300円を引いた金額",
-        "option4": " スマンさん3,500円、娘1,800円",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220220770.jpg"
+        ]
       }
     },
     {
       "id": "imported:202207:N2:3:576:71",
-      "sourceId": 576,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p>次の四つの団体は、一日パスを購入しようと思っている。この中で、学校団体として割引が適用されるのはどの団体か。</p><table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);\">\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);\">\n  <tbody>\n    <tr style=\"background-color: #f8f9fa; color: #495057;\">\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">団体名</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">証明書の有無</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">合計人数</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">利用予定日</th>\n    </tr>\n    <tr style=\"background-color: #ffffff;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">① 高下北小学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">なし</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">23名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">7月の平日</td>\n    </tr>\n    <tr style=\"background-color: #f8f9fa;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">② 高下南小学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">30名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">8月の平日</td>\n    </tr>\n    <tr style=\"background-color: #ffffff;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">③ 高下第二中学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">18名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">9月の日曜日</td>\n    </tr>\n    <tr style=\"background-color: #f8f9fa;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">④ 高下学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">45名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">8月の土曜日</td>\n    </tr>\n  </tbody>\n</table>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 576,
       "media": {
-        "picture": "pic/220220770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 576,
-        "time": "202207",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p>次の四つの団体は、一日パスを購入しようと思っている。この中で、学校団体として割引が適用されるのはどの団体か。</p><table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);\">\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);\">\n  <tbody>\n    <tr style=\"background-color: #f8f9fa; color: #495057;\">\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">団体名</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">証明書の有無</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">合計人数</th>\n      <th style=\"border: 1px solid #e9ecef; padding: 12px 15px; text-align: left; font-weight: 600;\">利用予定日</th>\n    </tr>\n    <tr style=\"background-color: #ffffff;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">① 高下北小学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">なし</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">23名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">7月の平日</td>\n    </tr>\n    <tr style=\"background-color: #f8f9fa;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">② 高下南小学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">30名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">8月の平日</td>\n    </tr>\n    <tr style=\"background-color: #ffffff;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">③ 高下第二中学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">18名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">9月の日曜日</td>\n    </tr>\n    <tr style=\"background-color: #f8f9fa;\">\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">④ 高下学校</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">あり</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">45名</td>\n      <td style=\"border: 1px solid #e9ecef; padding: 10px 15px; color: #212529;\">8月の土曜日</td>\n    </tr>\n  </tbody>\n</table>",
-        "picture": "pic/220220770.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " ①",
-        "option2": " ②",
-        "option3": " ③",
-        "option4": " ④",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 575,
-        "articleAssistant": null
+        "images": [
+          "pic/220220770.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

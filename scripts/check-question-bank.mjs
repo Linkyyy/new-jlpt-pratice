@@ -3,6 +3,7 @@ import path from "node:path";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { isAudioReference } from "../src/lib/audio-url.mjs";
+import { isImageReference } from "../src/lib/image-url.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const directory = path.join(root, "src/data/imported-bank");
@@ -29,8 +30,8 @@ for (const group of manifest.groups) {
     if (question.media?.audio) assert(isAudioReference(question.media.audio), `Invalid audio reference: ${question.id}`);
     if (question.category === "听力") assert(question.media?.audio, `Missing listening audio: ${question.id}`);
     for (const reference of question.media?.images ?? []) {
-      assert(reference.startsWith("/imported-media/") && !reference.includes(".."));
-      assert((await fs.stat(path.join(root, "public", reference.slice(1)))).isFile());
+      assert(isImageReference(reference), `Invalid image reference: ${question.id}`);
+      if (reference.startsWith("/imported-media/")) assert((await fs.stat(path.join(root, "public", reference.slice(1)))).isFile());
     }
   }
   available += group.availableCount;

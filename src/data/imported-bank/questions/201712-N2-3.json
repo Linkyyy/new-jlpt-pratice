@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 1611
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201712:N2:3:1612:74",
-      "sourceId": 1612,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> サラさんは、通学型研究で「ビジネスマナー」について学ぶように上司から指示された。「ビジネスマナー」が学べて、受講料が4万円以下なら、自由にコースを選んでいいと言われたので、できるだけ多くの内容を含むのを受けるつもりだ。行ける曜日は、金曜日である。サラさんの条件に最も合うコースはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "D"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "员工萨拉需在预算内选择课程，并希望学习内容尽可能多，且只能在周五上课。根据图表信息，综合考虑预算、时间与学习内容量，排除其他选项后，最符合要求的是D课程。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 1612,
       "media": {
-        "picture": "pic/220171274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 1612,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> サラさんは、通学型研究で「ビジネスマナー」について学ぶように上司から指示された。「ビジネスマナー」が学べて、受講料が4万円以下なら、自由にコースを選んでいいと言われたので、できるだけ多くの内容を含むのを受けるつもりだ。行ける曜日は、金曜日である。サラさんの条件に最も合うコースはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " A",
-        "option2": " B",
-        "option3": " C",
-        "option4": " D",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "员工萨拉需在预算内选择课程，并希望学习内容尽可能多，且只能在周五上课。根据图表信息，综合考虑预算、时间与学习内容量，排除其他选项后，最符合要求的是D课程。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220171274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201712:N2:3:1613:75",
-      "sourceId": 1613,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 田中さんは、新入社員のための社会研修を企画中で、JBセンターの講師出張型研究を利用しようと思っている。申し込みに関して気をつけなければならないことは、次のうちどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "通学型研修のプログラムの中から内容を選ばなければならない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "研修の実施日を月曜から土曜の間で決めなければならない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "受講者が少ない場合でも、料金は変わらない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "実施日の２か月前にならなければ、申し込めない。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "田中在策划新员工的社内培训时，打算采用JB中心的讲师派遣型研修。申请时需注意：培训内容不必局限于通学型研修的现有项目，也可根据公司需求定制；培训时间原则上为周一至周六，但周日或节假日在可能范围内也可安排；费用方面不会因参训人数多少而变动；至于申请期限，若需定制非标准课程，建议至少提前两个月提出，但一般情况并无强制性的提前两个月限制。因此正确选项是3：受講者が少ない場合でも料金は変わらない。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 1613,
       "media": {
-        "picture": "pic/220171274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 1613,
-        "time": "201712",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 田中さんは、新入社員のための社会研修を企画中で、JBセンターの講師出張型研究を利用しようと思っている。申し込みに関して気をつけなければならないことは、次のうちどれか。</p>",
-        "picture": "pic/220171274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 通学型研修のプログラムの中から内容を選ばなければならない。",
-        "option2": " 研修の実施日を月曜から土曜の間で決めなければならない。",
-        "option3": " 受講者が少ない場合でも、料金は変わらない。",
-        "option4": " 実施日の２か月前にならなければ、申し込めない。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "田中在策划新员工的社内培训时，打算采用JB中心的讲师派遣型研修。申请时需注意：培训内容不必局限于通学型研修的现有项目，也可根据公司需求定制；培训时间原则上为周一至周六，但周日或节假日在可能范围内也可安排；费用方面不会因参训人数多少而变动；至于申请期限，若需定制非标准课程，建议至少提前两个月提出，但一般情况并无强制性的提前两个月限制。因此正确选项是3：受講者が少ない場合でも料金は変わらない。",
-        "extending": [],
-        "parentId": 1612,
-        "articleAssistant": null
+        "images": [
+          "pic/220171274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2360
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201407:N2:3:2361:74",
-      "sourceId": 2361,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 商品を購入する際に、送料と手数料を払わなくてもいいのは次の4人のうち誰か。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "へサルさん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "山田さん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ジョンソンさん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "シンサン"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "题目问的是四人中谁在购物时无需支付运费和手续费。根据表格信息可知：订单金额超过5,250日元可免运费；使用借记卡或现金支付可免手续费，而货到付款需额外支付300日元手续费。综合判断，只有ジョンツンさん的购物金额超过5,250日元且采用现金支付，因此他既免运费也免手续费，故正确答案是选项3。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2361,
       "media": {
-        "picture": "pic/220140774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2361,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 商品を購入する際に、送料と手数料を払わなくてもいいのは次の4人のうち誰か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " へサルさん",
-        "option2": " 山田さん",
-        "option3": " ジョンソンさん",
-        "option4": " シンサン",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目问的是四人中谁在购物时无需支付运费和手续费。根据表格信息可知：订单金额超过5,250日元可免运费；使用借记卡或现金支付可免手续费，而货到付款需额外支付300日元手续费。综合判断，只有ジョンツンさん的购物金额超过5,250日元且采用现金支付，因此他既免运费也免手续费，故正确答案是选项3。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220140774.jpg"
+        ]
       }
     },
     {
       "id": "imported:201407:N2:3:2362:75",
-      "sourceId": 2362,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 返品交換をしたい人が注意しなければならないことはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "連絡は、商品を返送する前か返送直後にする。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "返送は、商品到着後14日以内に行う。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "商品は、返品理由を書いた納品書と一緒に返送する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "返送料は、返品·交換理由にかかわらず自身が負担する。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "想要退换货的人必须注意：需在收货后14天内先联系商家，退货时须连同发货单一并寄回，并填写退货原因；若因个人原因退换货，往返运费需自行承担。因此选项3正确。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2362,
       "media": {
-        "picture": "pic/220140774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2362,
-        "time": "201407",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 返品交換をしたい人が注意しなければならないことはどれか。</p>",
-        "picture": "pic/220140774.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 連絡は、商品を返送する前か返送直後にする。",
-        "option2": " 返送は、商品到着後14日以内に行う。",
-        "option3": " 商品は、返品理由を書いた納品書と一緒に返送する。",
-        "option4": " 返送料は、返品·交換理由にかかわらず自身が負担する。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "想要退换货的人必须注意：需在收货后14天内先联系商家，退货时须连同发货单一并寄回，并填写退货原因；若因个人原因退换货，往返运费需自行承担。因此选项3正确。",
-        "extending": [],
-        "parentId": 2361,
-        "articleAssistant": null
+        "images": [
+          "pic/220140774.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

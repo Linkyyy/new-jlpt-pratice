@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2680
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201212:N2:3:2681:74",
-      "sourceId": 2681,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ジョージさんはこの冷蔵庫を使っているが、最近、中の食品があまり冷えない。ジョージさんが確認する必要がないことはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "冷蔵庫の温度設定。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "冷蔵庫の中の食品の量。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "冷蔵庫の周囲のスペース。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "冷蔵庫がある場所の気温。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "当食品冷冻效果不好时，需要确认的有三点：是否放入了大量食物、温度是否设得较高、冰箱周围是否有足够空隙。而“确认冰箱放置处的温度”在文中未提及，因此无需确认。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2681,
       "media": {
-        "picture": "pic/220121274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2681,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ジョージさんはこの冷蔵庫を使っているが、最近、中の食品があまり冷えない。ジョージさんが確認する必要がないことはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 冷蔵庫の温度設定。",
-        "option2": " 冷蔵庫の中の食品の量。",
-        "option3": " 冷蔵庫の周囲のスペース。",
-        "option4": " 冷蔵庫がある場所の気温。",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "当食品冷冻效果不好时，需要确认的有三点：是否放入了大量食物、温度是否设得较高、冰箱周围是否有足够空隙。而“确认冰箱放置处的温度”在文中未提及，因此无需确认。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220121274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201212:N2:3:2682:75",
-      "sourceId": 2682,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> この冷蔵庫の使用中にすぐに使うのをやめて販売店などに故障かどうか調べてもらったほうがいいのは、次のうちのどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "冷蔵庫から食品のにおいがもれてくる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "冷蔵庫の側面を触ると熱く感じる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "冷蔵庫が激しく振動することがある。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "冷蔵庫から大きい音がすることがある。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "当电源线温度异常高、电源线出现损伤或变形、闻到焦味或设备运行时有剧烈震动的情况下，应立即停止使用并联系厂商检查故障。因此，符合文意的选项是3。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2682,
       "media": {
-        "picture": "pic/220121274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2682,
-        "time": "201212",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> この冷蔵庫の使用中にすぐに使うのをやめて販売店などに故障かどうか調べてもらったほうがいいのは、次のうちのどれか。</p>",
-        "picture": "pic/220121274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 冷蔵庫から食品のにおいがもれてくる。",
-        "option2": " 冷蔵庫の側面を触ると熱く感じる。",
-        "option3": "  冷蔵庫が激しく振動することがある。",
-        "option4": " 冷蔵庫から大きい音がすることがある。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "当电源线温度异常高、电源线出现损伤或变形、闻到焦味或设备运行时有剧烈震动的情况下，应立即停止使用并联系厂商检查故障。因此，符合文意的选项是3。",
-        "extending": [],
-        "parentId": 2681,
-        "articleAssistant": null
+        "images": [
+          "pic/220121274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

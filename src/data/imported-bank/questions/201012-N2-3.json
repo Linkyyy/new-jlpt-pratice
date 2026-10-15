@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 3317
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201012:N2:3:3318:74",
-      "sourceId": 3318,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 留学生のリーさんは、日本のコンピュータ関連の企業への就職を希望している。このセミナーでは企業の採用担当者に質問をしたいと思っている。リーさんは当日どうすればいいか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "個別相談の申し込みをしたうえで、11：00に7号館の1階大講義室に行く。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "個別相談の申し込みをしたうえで、13：00に７号館の２階202に行く。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "質問用紙に質問を記入したうえで、11：00に7号館の1階大講義室に行く。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "質問用紙に質問を記入したうえで、13：00に7号館の２階202に行く。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "解析：这个问题涉及对计算机公司感兴趣的同学如何获得公司相关人员的指导，需查看「個別指導」栏目。由于「コンピューター」对应「情報、通信」，且原文明确说明「申し込み不要」，因此直接选择选项4即可。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 3318,
       "media": {
-        "picture": "pic/220101274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3318,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 留学生のリーさんは、日本のコンピュータ関連の企業への就職を希望している。このセミナーでは企業の採用担当者に質問をしたいと思っている。リーさんは当日どうすればいいか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 個別相談の申し込みをしたうえで、11：00に7号館の1階大講義室に行く。",
-        "option2": " 個別相談の申し込みをしたうえで、13：00に７号館の２階202に行く。",
-        "option3": " 質問用紙に質問を記入したうえで、11：00に7号館の1階大講義室に行く。",
-        "option4": " 質問用紙に質問を記入したうえで、13：00に7号館の２階202に行く。",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "解析：这个问题涉及对计算机公司感兴趣的同学如何获得公司相关人员的指导，需查看「個別指導」栏目。由于「コンピューター」对应「情報、通信」，且原文明确说明「申し込み不要」，因此直接选择选项4即可。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220101274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201012:N2:3:3319:75",
-      "sourceId": 3319,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> このセミナーの参加者は当日どうしなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "履歴書を必ず持参しなければならない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "スーツを必ず着て行かなければならない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "受付で質問用紙を必ずもらわなければならない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "すべてのプログラスに必ず参加しなければならない。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "解析：关于参与活动对象的说明，只需理解介绍中「対象」部分的要求即可得出答案；第二题为判断正误，需仔细阅读介绍内容，逐句对照，运用排除法找出正确答案，重点在「注意事項」中查找「スーツ」和「筆記用具を持参する」这两个关键词。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 3319,
       "media": {
-        "picture": "pic/220101274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3319,
-        "time": "201012",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> このセミナーの参加者は当日どうしなければならないか。</p>",
-        "picture": "pic/220101274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 履歴書を必ず持参しなければならない。",
-        "option2": " スーツを必ず着て行かなければならない。",
-        "option3": " 受付で質問用紙を必ずもらわなければならない。",
-        "option4": " すべてのプログラスに必ず参加しなければならない。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "解析：关于参与活动对象的说明，只需理解介绍中「対象」部分的要求即可得出答案；第二题为判断正误，需仔细阅读介绍内容，逐句对照，运用排除法找出正确答案，重点在「注意事項」中查找「スーツ」和「筆記用具を持参する」这两个关键词。",
-        "extending": [],
-        "parentId": 3318,
-        "articleAssistant": null
+        "images": [
+          "pic/220101274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

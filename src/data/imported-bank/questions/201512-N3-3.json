@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 8056
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201512:N3:3:8057:73",
-      "sourceId": 8057,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> ナットさんは、今度の金曜日に7歳の娘一人と4歳の息子一人を連れて出かける。乗り放題きっぷを利用したいが、どのきっぷを何枚買わなければならないか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "おとな料金の「1日満足きっぷ」1枚と、こども料金の「1日満足きっぷ」1枚"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "おとな料金の「1日満足きっぷ」1枚と、こども料金の「1日満足きっぷ」2枚"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "「親子でお出かけきっぷ」 1枚と、こども料金の「1日満足きっぷ」1枚"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "「親子でお出かけきっぷ」1枚だけ"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>73.正解：1</p>\n<p>解析:问题是：ナット这个周五要带着她7岁的女儿和4岁的儿子出门。想要使用随心乘坐的车票,必须买几张哪种车票呢?</p>\n<p>因为是周五出行，因此只能购买“一日满足车票”，选项3和 4都排除。</p>\n<p>由于是3个人出行，根据注释3，5岁以下的小孩才能享受优惠，那么7岁以上的小孩需要购买一张儿童票，5岁的小孩不需要买票，大人需购一张成人票。</p>\n<p>所以正确答案是选项1。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 8057,
       "media": {
-        "picture": "pic/320151273.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 8057,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ナットさんは、今度の金曜日に7歳の娘一人と4歳の息子一人を連れて出かける。乗り放題きっぷを利用したいが、どのきっぷを何枚買わなければならないか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " おとな料金の「1日満足きっぷ」1枚と、こども料金の「1日満足きっぷ」1枚",
-        "option2": " おとな料金の「1日満足きっぷ」1枚と、こども料金の「1日満足きっぷ」2枚",
-        "option3": " 「親子でお出かけきっぷ」 1枚と、こども料金の「1日満足きっぷ」1枚",
-        "option4": " 「親子でお出かけきっぷ」1枚だけ",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>73.正解：1</p>\n<p>解析:问题是：ナット这个周五要带着她7岁的女儿和4岁的儿子出门。想要使用随心乘坐的车票,必须买几张哪种车票呢?</p>\n<p>因为是周五出行，因此只能购买“一日满足车票”，选项3和 4都排除。</p>\n<p>由于是3个人出行，根据注释3，5岁以下的小孩才能享受优惠，那么7岁以上的小孩需要购买一张儿童票，5岁的小孩不需要买票，大人需购一张成人票。</p>\n<p>所以正确答案是选项1。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320151273.jpg"
+        ]
       }
     },
     {
       "id": "imported:201512:N3:3:8058:74",
-      "sourceId": 8058,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 次の中で、「学生応援きっぷ」を使えるのはどの人か。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "74.正确答案：4       解析：题目问的是谁能购买“学生优惠票”。根据“学生优惠票”的相关条件以及注解1和2，选项①②③的出行目的都不是学校组织的远足或社团活动。只有选项④的成员由学生和指导者组成，且出行目的是参加学校活动，因此正确答案是4。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 8058,
       "media": {
-        "picture": "pic/320151273.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 8058,
-        "time": "201512",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 次の中で、「学生応援きっぷ」を使えるのはどの人か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①",
-        "option2": " ②",
-        "option3": " ③",
-        "option4": " ④",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>74.正解:4</p>\n<p>解析:问题是:能够购买“学生优惠票”的是哪个人呢?</p>\n<p>根据“学生优惠票”中有关特征和注解1和2 ，选项①②③的目的不是学校组织的远足或社团活动。</p>\n<p>只有选项④中成员由学生与指导者组成且刹用目的是参加学校的活动，因此正确答案是4</p>",
-        "assistantNew": "74.正确答案：4       解析：题目问的是谁能购买“学生优惠票”。根据“学生优惠票”的相关条件以及注解1和2，选项①②③的出行目的都不是学校组织的远足或社团活动。只有选项④的成员由学生和指导者组成，且出行目的是参加学校活动，因此正确答案是4。",
-        "extending": [],
-        "parentId": 8057,
-        "articleAssistant": null
+        "images": [
+          "pic/320151273.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 69
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202412:N2:3:70:70",
-      "sourceId": 70,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> カールさんは、同じ大学の友人と二人で北原ホテルに泊まりたいと考えている。ベッドがあり、お風呂がついている部屋を選ぶつもりだ。「朝食つきプラン」で日曜日に宿泊する予定だが、希望に合う部屋の一人分の料金はいくらになるか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "7200円"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "7200円に1100円を加えた金額"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "10500円"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "10500円に1100円を加えた金額"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "两人入住带浴室且有床的房型，符合C型房（可住2至6人，配备2张床和浴室）。同时选择了含早餐，根据价格表中【C–2名–朝食つき】对应的人均价格为10,500日元，该价格已为每人费用。入住日为周日，无需额外支付1100日元的加价费用。因此答案为3：10500日元。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 70,
       "media": {
-        "picture": "pic/220241270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 70,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> カールさんは、同じ大学の友人と二人で北原ホテルに泊まりたいと考えている。ベッドがあり、お風呂がついている部屋を選ぶつもりだ。「朝食つきプラン」で日曜日に宿泊する予定だが、希望に合う部屋の一人分の料金はいくらになるか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 7200円",
-        "option2": " 7200円に1100円を加えた金額",
-        "option3": " 10500円",
-        "option4": " 10500円に1100円を加えた金額",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "两人入住带浴室且有床的房型，符合C型房（可住2至6人，配备2张床和浴室）。同时选择了含早餐，根据价格表中【C–2名–朝食つき】对应的人均价格为10,500日元，该价格已为每人费用。入住日为周日，无需额外支付1100日元的加价费用。因此答案为3：10500日元。",
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220241270.jpg"
+        ]
       }
     },
     {
       "id": "imported:202412:N2:3:71:71",
-      "sourceId": 71,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ナディアさんは、4月8日に一人で泊まる予定で、「朝食つきプラン」で部屋を予約しているが、特別和食膳の夕食もつけたくなった。今日は4月4日である。追加料金はいくらで、ホテルへの連絡はいつまでにしなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "追加料金は1000円で、4月6日の午後5時までに連絡する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "追加料金は1000円で、4月7日の午後5時までに連絡する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "追加料金は4000円で、4月6日の午後5時までに連絡する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "追加料金は4000円で、4月7日の午後5時までに連絡する。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "追加「特別和食膳」晚餐需支付4000日元，且必须在4月6日下午5点前联系酒店，因为用餐日为4月8日，截止时间为用餐日前两天的同一时间。因此正确选项是3。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 71,
       "media": {
-        "picture": "pic/220241270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 71,
-        "time": "202412",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ナディアさんは、4月8日に一人で泊まる予定で、「朝食つきプラン」で部屋を予約しているが、特別和食膳の夕食もつけたくなった。今日は4月4日である。追加料金はいくらで、ホテルへの連絡はいつまでにしなければならないか。</p>",
-        "picture": "pic/220241270.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 追加料金は1000円で、4月6日の午後5時までに連絡する。",
-        "option2": " 追加料金は1000円で、4月7日の午後5時までに連絡する。",
-        "option3": " 追加料金は4000円で、4月6日の午後5時までに連絡する。",
-        "option4": " 追加料金は4000円で、4月7日の午後5時までに連絡する。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "追加「特別和食膳」晚餐需支付4000日元，且必须在4月6日下午5点前联系酒店，因为用餐日为4月8日，截止时间为用餐日前两天的同一时间。因此正确选项是3。",
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220241270.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

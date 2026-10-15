@@ -18,6 +18,13 @@ function fixtures() {
   return { paper, attempt, snapshot };
 }
 
+function imageFixtures() {
+  const base = fixtures();
+  const imageQuestions = [70, 71].map(number => ({ ...base.paper.questions[68], id: `image-q${number}`, media: { images: ["pic/220241270.jpg"] } }));
+  const paper = { ...base.paper, questions: [...base.paper.questions.slice(0, 69), ...imageQuestions, ...base.paper.questions.slice(69)] };
+  return { ...base, paper, previousPaper: base.paper, imageQuestions };
+}
+
 test("an exact snapshot returns the original paper reference", () => {
   const { paper, attempt, snapshot } = fixtures();
   assert.equal(restorePracticePaper(paper, { ...attempt, questions: snapshot(paper.questions) }, "exam"), paper);
@@ -105,4 +112,72 @@ test("partially saved listening papers and other written-only papers cannot use 
   const { paper, attempt, snapshot } = fixtures();
   assert.equal(restorePracticePaper(paper, { ...attempt, questions: snapshot(paper.questions.slice(0, 70)) }, "exam"), null);
   assert.equal(restorePracticePaper({ ...paper, questions: paper.questions.slice(0, 68) }, attempt, "exam"), null);
+});
+
+test("new full and reading snapshots retain all remote image questions", () => {
+  const { paper, attempt, snapshot } = imageFixtures();
+  assert.equal(paper.questions.length, 101);
+  assert.equal(restorePracticePaper(paper, { ...attempt, questions: snapshot(paper.questions) }, "exam"), paper);
+  const reading = { ...paper, id: "imported-N2-202412-reading", questions: paper.questions.filter(question => question.category === "阅读") };
+  const saved = { ...attempt, paperId: reading.id, type: "reading", questions: snapshot(reading.questions) };
+  assert.equal(reading.questions.length, 20);
+  assert.equal(restorePracticePaper(reading, saved, "exam"), reading);
+});
+
+test("previous 99-question full papers restore after two remote image questions are added", () => {
+  const { paper, previousPaper, attempt, snapshot } = imageFixtures();
+  const saved = { ...attempt, questions: snapshot(previousPaper.questions), typeLabel: "整卷练习" };
+  const before = JSON.stringify(saved);
+  const restored = restorePracticePaper(paper, saved, "exam");
+  assert.equal(restored.questions.length, 99);
+  assert.equal(restored.questions.map(question => question.id).join(), previousPaper.questions.map(question => question.id).join());
+  assert.equal(restored.questions.filter(question => question.category === "听力").length, 30);
+  assert.equal(JSON.stringify(saved), before);
+});
+
+test("previous 18-question reading papers restore after two remote image questions are added", () => {
+  const { paper, previousPaper, attempt, snapshot } = imageFixtures();
+  const reading = { ...paper, id: "imported-N2-202412-reading", questions: paper.questions.filter(question => question.category === "阅读") };
+  const saved = { ...attempt, paperId: reading.id, type: "reading", typeLabel: "阅读", questions: snapshot(previousPaper.questions.filter(question => question.category === "阅读")) };
+  const restored = restorePracticePaper(reading, saved, "exam");
+  assert.equal(restored.questions.length, 18);
+  assert.equal(restored.questions.every(question => !question.media?.images.length), true);
+  assert.equal(restored.typeLabel, "阅读");
+});
+
+test("oldest 69-question written full papers restore after listening and image questions are added", () => {
+  const { paper, attempt } = imageFixtures();
+  const restored = restorePracticePaper(paper, attempt, "exam");
+  assert.equal(restored.questions.length, 69);
+  assert.equal(restored.questions.some(question => question.category === "听力" || question.media?.images.length), false);
+  assert.equal(restored.typeLabel, "整套文字练习");
+  assert.equal(attempt.deadline, 1800000000000);
+});
+
+test("remote image compatibility rejects incomplete removals, reordered snapshots and genuine question edits", () => {
+  const { paper, previousPaper, imageQuestions, attempt, snapshot } = imageFixtures();
+  const previous = snapshot(previousPaper.questions);
+  for (const questions of [previous.slice(1), previous.slice(0, -1), [...previous].reverse(), [...previous.slice(0, 69), ...snapshot(imageQuestions.slice(0, 1)), ...previous.slice(69)]]) {
+    assert.equal(restorePracticePaper(paper, { ...attempt, questions }, "exam"), null);
+  }
+  for (const patch of [{ id: "changed" }, { correctOptionId: "B" }, { category: "语法" }, { level: "N1" }, { optionIds: ["B", "A"] }]) {
+    assert.equal(restorePracticePaper(paper, { ...attempt, questions: [{ ...previous[0], ...patch }, ...previous.slice(1)] }, "exam"), null, JSON.stringify(patch));
+  }
+});
+
+test("remote image compatibility cannot remove non-reading or local image questions", () => {
+  const { paper, previousPaper, imageQuestions, attempt, snapshot } = imageFixtures();
+  const saved = { ...attempt, questions: snapshot(previousPaper.questions) };
+  for (const image of [{ ...imageQuestions[0], category: "语法" }, { ...imageQuestions[0], media: { images: ["/imported-media/pic/local.jpg"] } }]) {
+    const changed = { ...paper, questions: [...previousPaper.questions.slice(0, 69), image, ...previousPaper.questions.slice(69)] };
+    assert.equal(restorePracticePaper(changed, saved, "exam"), null);
+  }
+});
+
+test("favorite image snapshots still require exact questions instead of legacy filtering", () => {
+  const { paper, previousPaper, attempt, snapshot } = imageFixtures();
+  const favorites = { ...paper, id: "favorites-practice", source: "favorites", year: "favorites" };
+  const saved = { ...attempt, paperId: favorites.id, source: "favorites", year: favorites.year, questions: snapshot(previousPaper.questions) };
+  assert.equal(restorePracticePaper(favorites, saved, "exam"), null);
+  assert.equal(restorePracticePaper(favorites, { ...saved, questions: snapshot(favorites.questions) }, "exam"), favorites);
 });

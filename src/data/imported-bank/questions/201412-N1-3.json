@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 5465
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201412:N1:3:5466:69",
-      "sourceId": 5466,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 留学生のマイクさんは日本で就職したいと思っている。マイクさんが必ず出席しなければいけない行事はいくつか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "一つ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "二つ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "三つ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "四つ"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "留学生麦克想在日本就职，必须参加的活动是【就职说明会】。由于两场就职说明会内容重复，只需参加其中一场即可。而【留学生说明会】是自愿参加的，并非强制要求。因此，必须参加的活动只有一场，选项1正确。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 5466,
       "media": {
-        "picture": "pic/120141269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5466,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 留学生のマイクさんは日本で就職したいと思っている。マイクさんが必ず出席しなければいけない行事はいくつか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 一つ",
-        "option2": " 二つ",
-        "option3": " 三つ",
-        "option4": " 四つ",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "留学生麦克想在日本就职，必须参加的活动是【就职说明会】。由于两场就职说明会内容重复，只需参加其中一场即可。而【留学生说明会】是自愿参加的，并非强制要求。因此，必须参加的活动只有一场，选项1正确。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120141269.jpg"
+        ]
       }
     },
     {
       "id": "imported:201412:N1:3:5467:70",
-      "sourceId": 5467,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 林さんはマスコミ関連の企業に就職したいので、関連企業に就職した先輩の話や、関連企業の仕事内容について聞きたいと思っている。林さんは授業のため 17 時以降しか出席できない。林さんに合う行事はどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "③と⑧のみ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "③と⑧と⑩"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "⑧のみ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "⑧と⑩のみ"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "题目要求小林参加与媒体相关的活动，且时间必须在17点以后。符合条件的活动需同时满足两个条件：一是内容涉及「マスコミ」，二是时间在17点之后。根据信息，③是在17点后举行的大众传媒讲座，符合要求；⑧是在17:15～18:15举行的大众传媒合同企业说明会，也符合要求。因此，正确选项是③和⑧。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 5467,
       "media": {
-        "picture": "pic/120141269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5467,
-        "time": "201412",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 林さんはマスコミ関連の企業に就職したいので、関連企業に就職した先輩の話や、関連企業の仕事内容について聞きたいと思っている。林さんは授業のため 17 時以降しか出席できない。林さんに合う行事はどれか。</p>",
-        "picture": "pic/120141269.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " ③と⑧のみ",
-        "option2": " ③と⑧と⑩",
-        "option3": " ⑧のみ",
-        "option4": " ⑧と⑩のみ",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目要求小林参加与媒体相关的活动，且时间必须在17点以后。符合条件的活动需同时满足两个条件：一是内容涉及「マスコミ」，二是时间在17点之后。根据信息，③是在17点后举行的大众传媒讲座，符合要求；⑧是在17:15～18:15举行的大众传媒合同企业说明会，也符合要求。因此，正确选项是③和⑧。",
-        "extending": [],
-        "parentId": 5466,
-        "articleAssistant": null
+        "images": [
+          "pic/120141269.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

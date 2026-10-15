@@ -32,13 +32,13 @@ test("full imported papers include listening after the written sections", async 
   const paper = await papers.loadPracticePaper("imported", "N2", "202412", "all");
   assert.equal(paper.id, "imported-N2-202412-all");
   assert.equal(paper.typeLabel, "整卷练习");
-  assert.equal(paper.questions.length, 99);
-  assert.equal(paper.excludedCount, 2);
+  assert.equal(paper.questions.length, 101);
+  assert.equal(paper.excludedCount, 0);
   assert.equal(paper.questions.slice(0, 30).every(question => question.category === "词汇"), true);
   assert.equal(paper.questions.slice(30, 51).every(question => question.category === "语法"), true);
-  assert.equal(paper.questions.slice(51, 69).every(question => question.category === "阅读"), true);
-  assert.equal(paper.questions.slice(69).every(question => question.category === "听力" && question.media.audio), true);
-  assert.equal(paper.questions[69].media.audio, "audio/202412n2/1.mp3");
+  assert.equal(paper.questions.slice(51, 71).every(question => question.category === "阅读"), true);
+  assert.equal(paper.questions.slice(71).every(question => question.category === "听力" && question.media.audio), true);
+  assert.equal(paper.questions[71].media.audio, "audio/202412n2/1.mp3");
 });
 
 test("full-paper advertised counts match every imported level and period", async () => {
@@ -71,10 +71,11 @@ test("original papers retain their actual written questions without invented lis
 test("mixed favorites still load original, listening and written question IDs in order", async () => {
   const full = await papers.loadPracticePaper("imported", "N2", "202412", "all");
   const original = await papers.loadPracticePaper("original", "N2", "2026", "all");
-  const ids = [original.questions[0].id, full.questions[69].id, full.questions[30].id];
+  const ids = [original.questions[0].id, full.questions[71].id, full.questions[30].id, full.questions[69].id];
   const favorites = await papers.loadFavoriteQuestions([...ids, "invalid-question"]);
   assert.equal(favorites.map(item => item.question.id).join(","), ids.join(","));
-  assert.equal(favorites[1].question.media.audio, full.questions[69].media.audio);
+  assert.equal(favorites[1].question.media.audio, full.questions[71].media.audio);
+  assert.equal(favorites[3].question.media.images[0], "pic/220241270.jpg");
   assert.equal(favorites[0].source, "original");
   assert.equal(favorites[1].source, "imported");
 });

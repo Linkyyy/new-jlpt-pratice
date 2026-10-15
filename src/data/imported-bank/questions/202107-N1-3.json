@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 67,
       "sourceId": 4201
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202107:N1:3:4202:68",
-      "sourceId": 4202,
-      "questionNumber": 68,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 会社員のイリヤさんは年間セット券を購入することにした。星山ホ一ルで行われるシリ一ズで、40000円以内のものがいい。そして公演数ができるだけ多く、席種はランクが高いものがいいが、ランクより公演数を優先したい。イリアさんはどの年間セット券を購入するか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①のA席"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②のA席"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③のS席"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④のS席"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 68,
+      "sourceId": 4202,
       "media": {
-        "picture": "pic/120210768.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4202,
-        "time": null,
-        "level": null,
-        "questionId": 68,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 会社員のイリヤさんは年間セット券を購入することにした。星山ホ一ルで行われるシリ一ズで、40000円以内のものがいい。そして公演数ができるだけ多く、席種はランクが高いものがいいが、ランクより公演数を優先したい。イリアさんはどの年間セット券を購入するか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①のA席",
-        "option2": " ②のA席",
-        "option3": " ③のS席",
-        "option4": " ④のS席",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 68,
-        "articleAssistant": null
+        "images": [
+          "pic/120210768.jpg"
+        ]
       }
     },
     {
       "id": "imported:202107:N1:3:4203:69",
-      "sourceId": 4203,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> スマンさんは「④特別公演」の年間セット券(A席) を持っている。来月10月23日の公演のチケットを「③名曲集公演」の10月30日の公演(A席)に振り替えたい。いつまでにチケットオフィスに電話しなければならないか。また、席が確保された場合、電話のあとどうしなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "10月13日までに電話し、10月22日必着で振替元のチケットを郵送する"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "10月13日までに電話し、10月22日必着で振替元のチケットを郵送し、当日窓口で支払いをする"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "10月20日までに電話し、10月22日必着で振替元のチケットを郵送する"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "10月20日までに電話し、10月22日必着で振替元のチケットを郵送し、当日窓口で支払いをする"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 4203,
       "media": {
-        "picture": "pic/120210768.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4203,
-        "time": "202107",
-        "level": "n1",
-        "questionId": 69,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> スマンさんは「④特別公演」の年間セット券(A席) を持っている。来月10月23日の公演のチケットを「③名曲集公演」の10月30日の公演(A席)に振り替えたい。いつまでにチケットオフィスに電話しなければならないか。また、席が確保された場合、電話のあとどうしなければならないか。</p>",
-        "picture": "pic/120210768.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 10月13日までに電話し、10月22日必着で振替元のチケットを郵送する",
-        "option2": " 10月13日までに電話し、10月22日必着で振替元のチケットを郵送し、当日窓口で支払いをする",
-        "option3": " 10月20日までに電話し、10月22日必着で振替元のチケットを郵送する",
-        "option4": " 10月20日までに電話し、10月22日必着で振替元のチケットを郵送し、当日窓口で支払いをする",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 4202,
-        "articleAssistant": null
+        "images": [
+          "pic/120210768.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

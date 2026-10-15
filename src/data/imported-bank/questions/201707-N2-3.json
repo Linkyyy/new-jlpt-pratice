@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 1718
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201707:N2:3:1719:74",
-      "sourceId": 1719,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 高校生のエミリさんは公開講座を受けてみようと考えている。7月 25 日から8月30 日の間に行われる経済学部が実施する講座で、会場が影山キャンパスのものがいい。エミリさんに合うのはどの講座か。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①と③と④と⑥"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "③と④と⑥"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③と④"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④のみ"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "高中生エミリさん希望参加的讲座需满足三个条件：时间在7月25日至8月30日之间，举办学部为经济学部，地点在影山校区。根据文章内容，先筛选出经济学部的讲座，再从中找出位于影山校区的，符合条件的是③④⑥，接着检查这些讲座的时间是否在指定范围内，最终符合所有条件的只有③和④，因此正确答案是3。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 1719,
       "media": {
-        "picture": "pic/220170774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 1719,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 高校生のエミリさんは公開講座を受けてみようと考えている。7月 25 日から8月30 日の間に行われる経済学部が実施する講座で、会場が影山キャンパスのものがいい。エミリさんに合うのはどの講座か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①と③と④と⑥",
-        "option2": " ③と④と⑥",
-        "option3": " ③と④",
-        "option4": " ④のみ",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "高中生エミリさん希望参加的讲座需满足三个条件：时间在7月25日至8月30日之间，举办学部为经济学部，地点在影山校区。根据文章内容，先筛选出经济学部的讲座，再从中找出位于影山校区的，符合条件的是③④⑥，接着检查这些讲座的时间是否在指定范围内，最终符合所有条件的只有③和④，因此正确答案是3。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220170774.jpg"
+        ]
       }
     },
     {
       "id": "imported:201707:N2:3:1720:75",
-      "sourceId": 1720,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 会社員のパコさんは二つの講座に申し込みたいと思っている。申し込みは、直接事務所窓口に行くつもりだ。パコさんが提出しなければならないものは何か。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "公開講座申込書１枚のみ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "公開講座申込書２枚のみ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "公開講座申込書１枚と返信用の封筒１枚"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "公開講座申込書２枚と返信用の封筒１枚"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "パコさんは申請時に、公開講座申込書を1枚記入して提出し、さらに返信用の封筒（長3号・120×235mm）を用意する必要がある。その封筒には82円切手を貼り、住所と氏名を記入して一緒に提出しなければならない。したがって、正解は選択肢3である。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 1720,
       "media": {
-        "picture": "pic/220170774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 1720,
-        "time": "201707",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 会社員のパコさんは二つの講座に申し込みたいと思っている。申し込みは、直接事務所窓口に行くつもりだ。パコさんが提出しなければならないものは何か。</p>",
-        "picture": "pic/220170774.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 公開講座申込書１枚のみ",
-        "option2": " 公開講座申込書２枚のみ",
-        "option3": " 公開講座申込書１枚と返信用の封筒１枚",
-        "option4": " 公開講座申込書２枚と返信用の封筒１枚",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "パコさんは申請時に、公開講座申込書を1枚記入して提出し、さらに返信用の封筒（長3号・120×235mm）を用意する必要がある。その封筒には82円切手を貼り、住所と氏名を記入して一緒に提出しなければならない。したがって、正解は選択肢3である。",
-        "extending": [],
-        "parentId": 1719,
-        "articleAssistant": null
+        "images": [
+          "pic/220170774.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

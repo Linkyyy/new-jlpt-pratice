@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 473
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202212:N2:3:474:70",
-      "sourceId": 474,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 高校生の村田さんは「C.平日夜間・土日(初心者)コース」に入会したいと思っている。姉がすでに同じコースを受講しているが、入会時に支払うものは何か。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "入会金、年会費、10%割引された受講料。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "入会金、年会費、15%割引された受講料。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "年会費、15%割引された受講料。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "年会費、50%割引された受講料。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 474,
       "media": {
-        "picture": "pic/220221270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 474,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 高校生の村田さんは「C.平日夜間・土日(初心者)コース」に入会したいと思っている。姉がすでに同じコースを受講しているが、入会時に支払うものは何か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 入会金、年会費、10%割引された受講料。",
-        "option2": " 入会金、年会費、15%割引された受講料。",
-        "option3": " 年会費、15%割引された受講料。",
-        "option4": " 年会費、50%割引された受講料。",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220221270.jpg"
+        ]
       }
     },
     {
       "id": "imported:202212:N2:3:475:71",
-      "sourceId": 475,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> リナさんは、このテニススクールに1か月前に入会し、現在「B.平日昼間(中・上級者)コース」を受講している。5月から「D.平日夜間土日(中・上級者)コース」に変わりたいと思っているが、リナさんはどうしなければならないか。今日は3月15日である。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "4月10日までに、手数料550円を支払い、手続きをする。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "4月10日までに手続きをする。手数料は必要ない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "4月20日までに、手数料550円を支払い、手続きをする。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4月20日までに手続きをする。手数料は必要ない。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 475,
       "media": {
-        "picture": "pic/220221270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 475,
-        "time": "202212",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> リナさんは、このテニススクールに1か月前に入会し、現在「B.平日昼間(中・上級者)コース」を受講している。5月から「D.平日夜間土日(中・上級者)コース」に変わりたいと思っているが、リナさんはどうしなければならないか。今日は3月15日である。</p>",
-        "picture": "pic/220221270.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 4月10日までに、手数料550円を支払い、手続きをする。",
-        "option2": " 4月10日までに手続きをする。手数料は必要ない。",
-        "option3": " 4月20日までに、手数料550円を支払い、手続きをする。",
-        "option4": " 4月20日までに手続きをする。手数料は必要ない。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 474,
-        "articleAssistant": null
+        "images": [
+          "pic/220221270.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

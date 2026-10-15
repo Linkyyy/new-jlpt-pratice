@@ -818,84 +818,89 @@
       ],
       "sourceQuestionNumber": 66,
       "sourceId": 4304
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202012:N1:3:4305:67",
-      "sourceId": 4305,
-      "questionNumber": 67,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ソン先生は、来月以降にクラスの学生15名を連れて、「B.工場見学」に行きたいと考えている。予約に関して、注意しなければならないことは何か。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "インターネットで行う場合は見学希望日の3日前まで、電話の場合は前日までにする"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "インターネットでも電話でもいいが、見学希望日の7日前までにする"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "電話で見学希望日の7日前までにする"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "電話で見学希望日の前日までにする"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 67,
+      "sourceId": 4305,
       "media": {
-        "picture": "pic/120201267.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4305,
-        "time": null,
-        "level": null,
-        "questionId": 67,
-        "typeQuestionId": 22,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ソン先生は、来月以降にクラスの学生15名を連れて、「B.工場見学」に行きたいと考えている。予約に関して、注意しなければならないことは何か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " インターネットで行う場合は見学希望日の3日前まで、電話の場合は前日までにする",
-        "option2": " インターネットでも電話でもいいが、見学希望日の7日前までにする",
-        "option3": " 電話で見学希望日の7日前までにする",
-        "option4": " 電話で見学希望日の前日までにする",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 67,
-        "articleAssistant": null
+        "images": [
+          "pic/120201267.jpg"
+        ]
       }
     },
     {
       "id": "imported:202012:N1:3:4306:68",
-      "sourceId": 4306,
-      "questionNumber": 68,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p>マルコさんは友達と3人で「A.工場見学と陶芸体験」に行きたいと考えている。12月15日から21日の間の3人の空いている日時をメモにまとめたが、予約が入れられる日時はいつか。また、当日の見学についての注意事項として、合っているのはどれか。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9;\"> <tr> <th style=\"border: 1px solid #ddd; text-align: left; padding: 4px;\">名前</th> <th style=\"border: 1px solid #ddd; text-align: left; padding: 4px;\">スケジュール</th> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">ハヌルさん</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日 午後のみ、20日 午前のみ</td> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">みアットさん</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日 午後のみ、18日、19日 午前のみ、20日、21日</td> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">マルコ</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日、19日 午後のみ、20日、21日</td> </tr> </table>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "16日の14時と20日の9時。見学は16日はすべてできるが、20日は一部できない所がある。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "16日の14時と20日の9時。見学は16日も20日も一部できない所がある。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "20日の9時。見学は一部できない所がある。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "20日の9時。見学はできない。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 68,
+      "sourceId": 4306,
       "media": {
-        "picture": "pic/120201267.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4306,
-        "time": "202012",
-        "level": "n1",
-        "questionId": 68,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p>マルコさんは友達と3人で「A.工場見学と陶芸体験」に行きたいと考えている。12月15日から21日の間の3人の空いている日時をメモにまとめたが、予約が入れられる日時はいつか。また、当日の見学についての注意事項として、合っているのはどれか。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9;\"> <tr> <th style=\"border: 1px solid #ddd; text-align: left; padding: 4px;\">名前</th> <th style=\"border: 1px solid #ddd; text-align: left; padding: 4px;\">スケジュール</th> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">ハヌルさん</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日 午後のみ、20日 午前のみ</td> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">みアットさん</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日 午後のみ、18日、19日 午前のみ、20日、21日</td> </tr> <tr> <td style=\"border: 1px solid #ddd; padding: 4px;\">マルコ</td> <td style=\"border: 1px solid #ddd; padding: 4px;\">16日、19日 午後のみ、20日、21日</td> </tr> </table>",
-        "picture": "pic/120201267.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 16日の14時と20日の9時。見学は16日はすべてできるが、20日は一部できない所がある。",
-        "option2": " 16日の14時と20日の9時。見学は16日も20日も一部できない所がある。",
-        "option3": " 20日の9時。見学は一部できない所がある。",
-        "option4": " 20日の9時。見学はできない。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 4305,
-        "articleAssistant": null
+        "images": [
+          "pic/120201267.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

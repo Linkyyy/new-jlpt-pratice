@@ -173,16 +173,15 @@ export function cloudDeleteHistory(request: Request) {
     await rateLimit("history-delete", user.id, 20, 60);
     const body = await input(request, 4096);
     if (body.expectedUsername !== user.username) throw new CloudError(409, "登录账号已变化，请刷新后重试。");
-    if (!(body.attemptId === null || typeof body.attemptId === "string" && body.attemptId.length > 0 && body.attemptId.length <= 300)
-      || !(body.expectedRevision === null || typeof body.expectedRevision === "string" && body.expectedRevision.length <= 100)) throw new CloudError(400, "请求格式无效。");
+    if (body.attemptId !== null || body.confirmed !== true) throw new CloudError(400, "仅支持确认后清空全部做题记录。");
+    if (!(body.expectedRevision === null || typeof body.expectedRevision === "string" && body.expectedRevision.length <= 100)) throw new CloudError(400, "请求格式无效。");
     const rows = await query<{ data: string; revision: string; savedAt: number; bytes: number }>("SELECT data, revision, saved_at AS savedAt, bytes FROM cloud_backups WHERE user_id = ?", [user.id]);
     const saved = rows[0];
     if ((saved?.revision ?? null) !== body.expectedRevision) throw new CloudError(409, "云备份已在其他设备更新，请刷新后重试。");
     if (!saved) return json({ ok: true, backup: null });
     const value: unknown = JSON.parse(saved.data);
     if (!isLearningBackup(value)) throw new CloudError(422, "云备份格式无效，本地记录未修改。");
-    const study = withoutStudyHistory(value.study, body.attemptId);
-    if (study === value.study) return json({ ok: true, backup: { revision: saved.revision, savedAt: saved.savedAt, bytes: saved.bytes } });
+    const study = withoutStudyHistory(value.study);
     // Retain the cloud's own favorites, folders and other fields. Never upload the
     // current device's collection while deleting history from a different device.
     const data = JSON.stringify({ ...value, study, exportedAt: new Date().toISOString() });

@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 675
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202112:N2:3:676:70",
-      "sourceId": 676,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 次の4人は、スーパー森下で買い物を終えたところで、買った商品を自宅まで届けてほしいと考えている。この中で、店の宅配サービスを利用できるのは誰か。<br>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;\">\n  <thead>\n    <tr style=\"background-color: #f2f2f2;\">\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">名前</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">住所</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">会員の種類</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">買い物の合計金額</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">送る商品の量</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">リーさん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">南区平川町２丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">非会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">５２３２円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">３箱分</td>\n    </tr>\n    <tr style=\"background-color: #f9f9f9;\">\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">川口さん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">中区緑町４丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">一般会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２５４６円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２箱分</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">ハリスさん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">北区千京町１丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">シニア会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２１７９円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１箱分</td>\n    </tr>\n    <tr style=\"background-color: #f9f9f9;\">\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">高橋さん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">北区朝春町５丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">シニア会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１６３０円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１箱分</td>\n    </tr>\n  </tbody>\n</table>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "リーさん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "川口さん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ハリスさん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "高橋さん"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 676,
       "media": {
-        "picture": "pic/220211270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 676,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 次の4人は、スーパー森下で買い物を終えたところで、買った商品を自宅まで届けてほしいと考えている。この中で、店の宅配サービスを利用できるのは誰か。<br>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;\">\n  <thead>\n    <tr style=\"background-color: #f2f2f2;\">\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">名前</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">住所</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">会員の種類</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">買い物の合計金額</th>\n      <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">送る商品の量</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">リーさん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">南区平川町２丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">非会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">５２３２円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">３箱分</td>\n    </tr>\n    <tr style=\"background-color: #f9f9f9;\">\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">川口さん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">中区緑町４丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">一般会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２５４６円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２箱分</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">ハリスさん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">北区千京町１丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">シニア会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">２１７９円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１箱分</td>\n    </tr>\n    <tr style=\"background-color: #f9f9f9;\">\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">高橋さん</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">北区朝春町５丁目</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">シニア会員</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１６３０円</td>\n      <td style=\"border: 1px solid #ddd; padding: 8px;\">１箱分</td>\n    </tr>\n  </tbody>\n</table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " リーさん",
-        "option2": " 川口さん",
-        "option3": " ハリスさん",
-        "option4": " 高橋さん",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220211270.jpg"
+        ]
       }
     },
     {
       "id": "imported:202112:N2:3:677:71",
-      "sourceId": 677,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 加山さんは一般会員で、この宅配サービスが利用可能である。今日、水などの常温の商品と冷凍食品を買うつもりである。明日の午前中に商品を届けてもらいたい。送れるのは何で、受付は何時から何時までに済ませなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "常温の商品で、午前10時から午後4時までに済ませる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "常温の商品で、正午から午後10時までに済ませる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "常温の商品と冷凍の商品で、午前10時から午後4時までに済ませる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "常温の商品と冷凍の商品で、正午から午後10時までに済ませる。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 677,
       "media": {
-        "picture": "pic/220211270.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 677,
-        "time": "202112",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 加山さんは一般会員で、この宅配サービスが利用可能である。今日、水などの常温の商品と冷凍食品を買うつもりである。明日の午前中に商品を届けてもらいたい。送れるのは何で、受付は何時から何時までに済ませなければならないか。</p>",
-        "picture": "pic/220211270.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 常温の商品で、午前10時から午後4時までに済ませる。",
-        "option2": " 常温の商品で、正午から午後10時までに済ませる。",
-        "option3": " 常温の商品と冷凍の商品で、午前10時から午後4時までに済ませる。",
-        "option4": " 常温の商品と冷凍の商品で、正午から午後10時までに済ませる。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 676,
-        "articleAssistant": null
+        "images": [
+          "pic/220211270.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

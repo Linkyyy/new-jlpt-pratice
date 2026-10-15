@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2467
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201312:N2:3:2468:74",
-      "sourceId": 2468,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p>次の学生のうち、このコンテストの応募条件を満たしているのは誰か。</p>\\n<table>\\n<tbody>\\n<tr>\\n<th>名前</th>\\n<th>現在の留学先</th>\\n<th>今後の予定</th>\\n<th>小論文のテーマ</th>\\n</tr>\\n<tr>\\n<td>チャン</td>\\n<td>日本の高校</td>\\n<td>日本の大学に進学</td>\\n<td>自国でのごみを減らす取り組みについて</td>\\n</tr>\\n<tr>\\n<td>アフマド</td>\\n<td>日本の大学</td>\\n<td>日本の大学院に進学</td>\\n<td>日本のオフィスでの節電対策について</td>\\n</tr>\\n<tr>\\n<td>ローズ</td>\\n<td>日本の大学</td>\\n<td>日本で働く</td>\\n<td>自国の資源の再利用について</td>\\n</tr>\\n<tr>\\n<td>ナタリア</td>\\n<td>日本の大学院</td>\\n<td>母国で働く</td>\\n<td>日本人の夏用ビジネススーツについて</td>\\n</tr>\\n</tbody>\\n</table>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "チャンさん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "アフマドさん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ローズさん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ナタリアさん"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "题目是“下列学生中，满足报名条件的是谁？”。解题关键在于小论文比赛的“テーマ”和“応募資格”部分。根据要求，“テーマ”必须与留学生本国的温室效应对策相关，因此选题为日本温室效应对策的选项2和4可以排除。同时，“応募資格”规定参赛者需满足两个条件：一是在日本的大学或研究生院就读的外国留学生，二是毕业后希望在日本工作。因此，在日本读高中的选项1也不符合条件。符合条件的只有选项3。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2468,
       "media": {
-        "picture": "pic/220131274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2468,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p>次の学生のうち、このコンテストの応募条件を満たしているのは誰か。</p>\\n<table>\\n<tbody>\\n<tr>\\n<th>名前</th>\\n<th>現在の留学先</th>\\n<th>今後の予定</th>\\n<th>小論文のテーマ</th>\\n</tr>\\n<tr>\\n<td>チャン</td>\\n<td>日本の高校</td>\\n<td>日本の大学に進学</td>\\n<td>自国でのごみを減らす取り組みについて</td>\\n</tr>\\n<tr>\\n<td>アフマド</td>\\n<td>日本の大学</td>\\n<td>日本の大学院に進学</td>\\n<td>日本のオフィスでの節電対策について</td>\\n</tr>\\n<tr>\\n<td>ローズ</td>\\n<td>日本の大学</td>\\n<td>日本で働く</td>\\n<td>自国の資源の再利用について</td>\\n</tr>\\n<tr>\\n<td>ナタリア</td>\\n<td>日本の大学院</td>\\n<td>母国で働く</td>\\n<td>日本人の夏用ビジネススーツについて</td>\\n</tr>\\n</tbody>\\n</table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " チャンさん",
-        "option2": " アフマドさん",
-        "option3": " ローズさん",
-        "option4": " ナタリアさん",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目是“下列学生中，满足报名条件的是谁？”。解题关键在于小论文比赛的“テーマ”和“応募資格”部分。根据要求，“テーマ”必须与留学生本国的温室效应对策相关，因此选题为日本温室效应对策的选项2和4可以排除。同时，“応募資格”规定参赛者需满足两个条件：一是在日本的大学或研究生院就读的外国留学生，二是毕业后希望在日本工作。因此，在日本读高中的选项1也不符合条件。符合条件的只有选项3。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220131274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201312:N2:3:2469:75",
-      "sourceId": 2469,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> このコンテストに応募する際に注意しなければならないことは、次のうちどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "小論文は、要旨を含め5000字以内書かなければならない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "応募用紙は、小論文より先に提出しなければならない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "応募用紙は、大学に連絡して取り寄せなければならない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "一人が応募する小論文は、一点だけにしなければならない。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "报名参加这次比赛时需要注意的是：小论文字数应控制在4500至5000字之间，另需附上约400字的主旨，主旨不计入小论文字数内，因此选项1错误；报名表和小论文需一同通过邮件发送，不存在先后顺序，因此选项2错误；报名表可从指定主页下载，无需先与大学联系获取，因此选项3错误；根据规定，每人仅限提交一篇小论文，因此选项4正确。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2469,
       "media": {
-        "picture": "pic/220131274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2469,
-        "time": "201312",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> このコンテストに応募する際に注意しなければならないことは、次のうちどれか。</p>",
-        "picture": "pic/220131274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 小論文は、要旨を含め5000字以内書かなければならない",
-        "option2": " 応募用紙は、小論文より先に提出しなければならない。",
-        "option3": " 応募用紙は、大学に連絡して取り寄せなければならない。",
-        "option4": " 一人が応募する小論文は、一点だけにしなければならない。",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "报名参加这次比赛时需要注意的是：小论文字数应控制在4500至5000字之间，另需附上约400字的主旨，主旨不计入小论文字数内，因此选项1错误；报名表和小论文需一同通过邮件发送，不存在先后顺序，因此选项2错误；报名表可从指定主页下载，无需先与大学联系获取，因此选项3错误；根据规定，每人仅限提交一篇小论文，因此选项4正确。",
-        "extending": [],
-        "parentId": 2468,
-        "articleAssistant": null
+        "images": [
+          "pic/220131274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

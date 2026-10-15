@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 67,
       "sourceId": 4097
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202112:N1:3:4098:68",
-      "sourceId": 4098,
-      "questionNumber": 68,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 正南大学3年生のヤンさんは、研究発表の練習のために教室を借りたいと思っている。7名が参加予定で、机が動かせる教室がいい。大学のプロジェクターを2台使う予定である。ヤンさんの希望に合う教室はどこか。また、書類は何を提出しなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "③か④の教室で、③の場合はCとDを、④の場合はCを提出する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "③か④の教室で、どちらの教室を借りる場合もCとDを提出する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "④の教室だけで、CとDを提出する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④の教室だけで、Cを提出する。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 68,
+      "sourceId": 4098,
       "media": {
-        "picture": "pic/120211268.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4098,
-        "time": null,
-        "level": null,
-        "questionId": 68,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 正南大学3年生のヤンさんは、研究発表の練習のために教室を借りたいと思っている。7名が参加予定で、机が動かせる教室がいい。大学のプロジェクターを2台使う予定である。ヤンさんの希望に合う教室はどこか。また、書類は何を提出しなければならないか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ③か④の教室で、③の場合はCとDを、④の場合はCを提出する。",
-        "option2": " ③か④の教室で、どちらの教室を借りる場合もCとDを提出する。",
-        "option3": " ④の教室だけで、CとDを提出する。",
-        "option4": " ④の教室だけで、Cを提出する。",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 68,
-        "articleAssistant": null
+        "images": [
+          "pic/120211268.jpg"
+        ]
       }
     },
     {
       "id": "imported:202112:N1:3:4099:69",
-      "sourceId": 4099,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 正南大学留学生会は、参加者が100名以上見込まれるスピーチ大会のために「正南ホール」を使用したいと思っている。備え付け以外の備品を追加で借りる必要はない。留学生会が最後にホールを使用したのは2年前である。どのように手続きを進めなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "AとBを使用希望日の3か月前までに提出する。学生課で説明を受ける必要はない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "AとBを使用希望日の3か月前までに提出する。学生課で説明を受ける必要がある。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "Aを使用希望日の3か月前までに、Bを2か月前までに提出する。学生課で説明を受ける必要はない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "Aを使用希望日の3か月前までに、Bを2か月前までに提出する。学生課で説明を受ける必要がある。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 4099,
       "media": {
-        "picture": "pic/120211268.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4099,
-        "time": "202112",
-        "level": "n1",
-        "questionId": 69,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 正南大学留学生会は、参加者が100名以上見込まれるスピーチ大会のために「正南ホール」を使用したいと思っている。備え付け以外の備品を追加で借りる必要はない。留学生会が最後にホールを使用したのは2年前である。どのように手続きを進めなければならないか。</p>",
-        "picture": "pic/120211268.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " AとBを使用希望日の3か月前までに提出する。学生課で説明を受ける必要はない。",
-        "option2": " AとBを使用希望日の3か月前までに提出する。学生課で説明を受ける必要がある。",
-        "option3": " Aを使用希望日の3か月前までに、Bを2か月前までに提出する。学生課で説明を受ける必要はない。",
-        "option4": " Aを使用希望日の3か月前までに、Bを2か月前までに提出する。学生課で説明を受ける必要がある。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 4098,
-        "articleAssistant": null
+        "images": [
+          "pic/120211268.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

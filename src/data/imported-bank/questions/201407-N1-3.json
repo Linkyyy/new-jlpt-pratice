@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 5572
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201407:N1:3:5573:69",
-      "sourceId": 5573,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 中西さんは35歳の会社員で、CPJカードを申し込むことにした。中西さんは年会費を5000円以内に抑えたいが、海外旅行の保険はなるべく高額なものがよい。中西さんに最も合っているカードはどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "D"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "中西35岁，是公司职员，申请CPJ卡，希望年会费不超过5000日元，同时希望海外旅行保险额度尽可能高。A卡年费超过5000日元，排除；B卡仅限18至29岁申请，中西年龄不符，排除；C卡和D卡年费均在5000日元以内，但C卡的旅行保险额度更高，因此最合适的是C卡。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 5573,
       "media": {
-        "picture": "pic/120140769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5573,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 中西さんは35歳の会社員で、CPJカードを申し込むことにした。中西さんは年会費を5000円以内に抑えたいが、海外旅行の保険はなるべく高額なものがよい。中西さんに最も合っているカードはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " A",
-        "option2": " B",
-        "option3": " C",
-        "option4": " D",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "中西35岁，是公司职员，申请CPJ卡，希望年会费不超过5000日元，同时希望海外旅行保险额度尽可能高。A卡年费超过5000日元，排除；B卡仅限18至29岁申请，中西年龄不符，排除；C卡和D卡年费均在5000日元以内，但C卡的旅行保险额度更高，因此最合适的是C卡。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120140769.jpg"
+        ]
       }
     },
     {
       "id": "imported:201407:N1:3:5574:70",
-      "sourceId": 5574,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 会社員の山本さんはCPJカードを申し込むことにした。山本さんは引っ越しをしたばかりのため、運転免許証に書かれた住所と現住所が異なっている。カードを申し込む際、入会申込書のほかに、次のどの書類を提出しなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "運転免許証のコピーだけ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "運転免許証のコピーと住民票のコピー"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "運転免許証のコピーと先月の電話料金の領収書のコピー"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "運転免許証のコピーと先月の水道料金の領収書のコピー"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "题目中提到山本刚搬家，驾驶证上的地址与现住址不一致。根据【※2】的内容，申请CPJ卡时除驾驶证外，还需提供能证明现住址的文件之一：a.水电煤等公共费用收据；b.健康保险或年金等社会保险收据；c.纳税证明。因此，正确选项是4。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 5574,
       "media": {
-        "picture": "pic/120140769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5574,
-        "time": "201407",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 会社員の山本さんはCPJカードを申し込むことにした。山本さんは引っ越しをしたばかりのため、運転免許証に書かれた住所と現住所が異なっている。カードを申し込む際、入会申込書のほかに、次のどの書類を提出しなければならないか。</p>",
-        "picture": "pic/120140769.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 運転免許証のコピーだけ",
-        "option2": " 運転免許証のコピーと住民票のコピー",
-        "option3": " 運転免許証のコピーと先月の電話料金の領収書のコピー",
-        "option4": " 運転免許証のコピーと先月の水道料金の領収書のコピー",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目中提到山本刚搬家，驾驶证上的地址与现住址不一致。根据【※2】的内容，申请CPJ卡时除驾驶证外，还需提供能证明现住址的文件之一：a.水电煤等公共费用收据；b.健康保险或年金等社会保险收据；c.纳税证明。因此，正确选项是4。",
-        "extending": [],
-        "parentId": 5573,
-        "articleAssistant": null
+        "images": [
+          "pic/120140769.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

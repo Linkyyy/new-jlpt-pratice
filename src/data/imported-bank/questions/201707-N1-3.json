@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 4932
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201707:N1:3:4933:69",
-      "sourceId": 4933,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ウーさんは 55 歳で、このスポーツジムに入会してトレーニングジムとプールを使いたいと考えている。火曜の 10 時から 12 時までと、水曜の 17 時から 19 時までが両方利用できるもので、できるだけ安いプランがいい。ウーさんの希望に合うプランはどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "フルタイム"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "平日A"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "平日B"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "平日C"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "题目要求55岁的ウさん选择一个能使用健身器材和游泳池的健身房方案，使用时间为周二10点到12点以及周三17点到19点，且希望费用越低越好。满足这两个时间段使用需求的只有平日A方案和フルタイム方案，根据价格最低优先的原则，最合适的选择是选项2。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 4933,
       "media": {
-        "picture": "pic/120170769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4933,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ウーさんは 55 歳で、このスポーツジムに入会してトレーニングジムとプールを使いたいと考えている。火曜の 10 時から 12 時までと、水曜の 17 時から 19 時までが両方利用できるもので、できるだけ安いプランがいい。ウーさんの希望に合うプランはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " フルタイム",
-        "option2": " 平日A",
-        "option3": " 平日B",
-        "option4": " 平日C",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目要求55岁的ウさん选择一个能使用健身器材和游泳池的健身房方案，使用时间为周二10点到12点以及周三17点到19点，且希望费用越低越好。满足这两个时间段使用需求的只有平日A方案和フルタイム方案，根据价格最低优先的原则，最合适的选择是选项2。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120170769.jpg"
+        ]
       }
     },
     {
       "id": "imported:201707:N1:3:4934:70",
-      "sourceId": 4934,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> アンガスさんは、このスポーツジムの「夏のご入会キャンペーン」の期間内に入会手続きに行くつもりだ。アンガスさんが入会手続き時に支払わなければならない料金はどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "入会金と２か月分の月会費"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "入会金と１か月分の月会費"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "２か月分の月会費"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "１か月分の月会費"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "安格斯参加健身房的「夏季入会活动」，根据优惠1入会费被免除，优惠2是3个月会员费中免收1个月，因此他只需支付2个月的会员费即可入会，所以正确选项是3。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 4934,
       "media": {
-        "picture": "pic/120170769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 4934,
-        "time": "201707",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> アンガスさんは、このスポーツジムの「夏のご入会キャンペーン」の期間内に入会手続きに行くつもりだ。アンガスさんが入会手続き時に支払わなければならない料金はどれか。</p>",
-        "picture": "pic/120170769.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 入会金と２か月分の月会費",
-        "option2": " 入会金と１か月分の月会費",
-        "option3": " ２か月分の月会費",
-        "option4": " １か月分の月会費",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "安格斯参加健身房的「夏季入会活动」，根据优惠1入会费被免除，优惠2是3个月会员费中免收1个月，因此他只需支付2个月的会员费即可入会，所以正确选项是3。",
-        "extending": [],
-        "parentId": 4933,
-        "articleAssistant": null
+        "images": [
+          "pic/120170769.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 7342
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201907:N3:3:7343:73",
-      "sourceId": 7343,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> ガス工事が予定されているのはいつか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "9月16日と9月19日"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "9月18日と9月20日"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "9月17日の午前9時から午後5時まで"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "9月17日の午前9時から午後6時まで"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>73.正解：3</p>\n<p>解析：此类题型，考生只需根据问题在图表中找到相关信息即可。</p>\n<p>表中“工事予定日”一栏中写到9月17日为预定施工日，预定时间是9：00-17：00，所以，综上所述，应该选择3。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 7343,
       "media": {
-        "picture": "pic/320190773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7343,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ガス工事が予定されているのはいつか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 9月16日と9月19日",
-        "option2": " 9月18日と9月20日",
-        "option3": " 9月17日の午前9時から午後5時まで",
-        "option4": " 9月17日の午前9時から午後6時まで",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>73.正解：3</p>\n<p>解析：此类题型，考生只需根据问题在图表中找到相关信息即可。</p>\n<p>表中“工事予定日”一栏中写到9月17日为预定施工日，预定时间是9：00-17：00，所以，综上所述，应该选择3。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320190773.jpg"
+        ]
       }
     },
     {
       "id": "imported:201907:N3:3:7344:74",
-      "sourceId": 7344,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 工事が行われる日、車の通行はどうなるか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "午前9時から午後5時まで通れない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "通常どおり、通ることができる"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "通ることができるが、道が狭くなっている"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "道路の片側だけ通ることができる"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "根据表格显示，施工当天汽车可以通行，但仅限道路单侧通过，因此正确答案是4。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 7344,
       "media": {
-        "picture": "pic/320190773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7344,
-        "time": "201907",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 工事が行われる日、車の通行はどうなるか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 午前9時から午後5時まで通れない",
-        "option2": " 通常どおり、通ることができる",
-        "option3": " 通ることができるが、道が狭くなっている",
-        "option4": " 道路の片側だけ通ることができる",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>74.正解：4</p>\n<p>解析：从表中可以看出，在施工当日，汽车可以通行，但只有道路的一侧可以通过。</p>\n<p>应该选4。</p>",
-        "assistantNew": "根据表格显示，施工当天汽车可以通行，但仅限道路单侧通过，因此正确答案是4。",
-        "extending": [],
-        "parentId": 7343,
-        "articleAssistant": null
+        "images": [
+          "pic/320190773.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

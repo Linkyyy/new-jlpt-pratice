@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 70,
       "sourceId": 777
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202107:N2:3:778:71",
-      "sourceId": 778,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ソンミンさんは地形・地質学講座に参加したいと考えている。申し込みの際に気をつけなければならないことはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "申し込みは、はがきまたは電話でする。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2回の講座のうち、どちらが一方にしか参加できない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "受付は先着順のため、できるだけ早く申し込む。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "申し込みの結果の問い合わせは、締め切り日から7日以内にする。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 778,
       "media": {
-        "picture": "pic/220210771.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 778,
-        "time": null,
-        "level": null,
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ソンミンさんは地形・地質学講座に参加したいと考えている。申し込みの際に気をつけなければならないことはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 申し込みは、はがきまたは電話でする。",
-        "option2": " 2回の講座のうち、どちらが一方にしか参加できない。",
-        "option3": " 受付は先着順のため、できるだけ早く申し込む。",
-        "option4": " 申し込みの結果の問い合わせは、締め切り日から7日以内にする。",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 71,
-        "articleAssistant": null
+        "images": [
+          "pic/220210771.jpg"
+        ]
       }
     },
     {
       "id": "imported:202107:N2:3:779:72",
-      "sourceId": 779,
-      "questionNumber": 72,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> イーサさんは4月17日の講座に申し込んだ。キャンセル待ちになった場合､結果の連絡はいつまで待たなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "4月2日"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "4月9日"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "4月13日"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4月16日"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 72,
+      "sourceId": 779,
       "media": {
-        "picture": "pic/220210771.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 779,
-        "time": "202107",
-        "level": "n2",
-        "questionId": 72,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> イーサさんは4月17日の講座に申し込んだ。キャンセル待ちになった場合､結果の連絡はいつまで待たなければならないか。</p>",
-        "picture": "pic/220210771.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 4月2日",
-        "option2": " 4月9日",
-        "option3": " 4月13日",
-        "option4": " 4月16日",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 778,
-        "articleAssistant": null
+        "images": [
+          "pic/220210771.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

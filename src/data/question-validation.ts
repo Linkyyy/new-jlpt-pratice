@@ -1,6 +1,7 @@
 import { levels, questionCategories, type PracticeOption, type PracticeQuestion } from "./practice-question";
 import type { CatalogQuestion } from "./practice-papers";
 import { isAudioReference } from "@/lib/audio-url.mjs";
+import { isImageReference } from "@/lib/image-url.mjs";
 
 export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -19,7 +20,7 @@ export function isPracticeQuestion(value: unknown): value is PracticeQuestion {
     && (value.richText === undefined || typeof value.richText === "boolean")
     && (value.sourceQuestionNumber === undefined || value.sourceQuestionNumber === null || typeof value.sourceQuestionNumber === "number" && Number.isInteger(value.sourceQuestionNumber))
     && (value.sourceId === undefined || typeof value.sourceId === "number" && Number.isInteger(value.sourceId))
-    && (value.media === undefined || isRecord(value.media) && Array.isArray(value.media.images) && value.media.images.every((image: unknown) => typeof image === "string" && image.startsWith("/imported-media/")) && (value.media.audio === undefined || isAudioReference(value.media.audio)));
+    && (value.media === undefined || isRecord(value.media) && Array.isArray(value.media.images) && value.media.images.every(isImageReference) && (value.media.audio === undefined || isAudioReference(value.media.audio)));
 }
 
 export function isCatalogQuestion(value: unknown): value is CatalogQuestion {

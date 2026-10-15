@@ -145,23 +145,31 @@ function historyBackup() {
   backup.study.activityDays = ["2026-10-15"];
   return backup;
 }
-const removeHistory = (e, cookie, attemptId, revision, username = "alice", origin = base) => e.api.cloudDeleteHistory(new Request(e.request("/api/cloud-backup/history", { attemptId, expectedRevision: revision, expectedUsername: username }, cookie, origin), { method: "DELETE" }));
-test("single and all history deletion preserve the cloud's folders/favorites and other accounts", async () => {
+const removeHistory = (e, cookie, attemptId, revision, username = "alice", origin = base, confirmed = true) => e.api.cloudDeleteHistory(new Request(e.request("/api/cloud-backup/history", { attemptId, confirmed, expectedRevision: revision, expectedUsername: username }, cookie, origin), { method: "DELETE" }));
+test("only confirmed clear-all is allowed and preserves cloud folders/favorites and other accounts", async () => {
   const e = environment(), alice = await e.auth(), bob = await e.auth("bob");
   const original = historyBackup();
   await e.write(alice.cookie, original);
   await e.write(bob.cookie, original, null, "bob");
   const old = await (await e.read(alice.cookie)).json();
-  assert.equal((await removeHistory(e, alice.cookie, "attempt-1", old.backup.revision)).status, 200);
-  const single = await (await e.read(alice.cookie)).json();
-  assert.deepEqual(single.data.study.attempts.map(a => a.id), ["attempt-2"]);
-  assert.deepEqual(single.data.favorites, original.favorites);
-  assert.notEqual(single.backup.revision, old.backup.revision);
-  assert.equal((await removeHistory(e, alice.cookie, "attempt-1", single.backup.revision)).status, 200);
-  assert.equal((await removeHistory(e, alice.cookie, null, single.backup.revision)).status, 200);
+  const stored = e.database.prepare("SELECT data, revision FROM cloud_backups WHERE user_id = (SELECT id FROM cloud_users WHERE username = ?)").get("alice");
+  for (const attemptId of ["attempt-1", "attempt-2", "missing", "", undefined]) {
+    const response = await removeHistory(e, alice.cookie, attemptId, old.backup.revision);
+    assert.equal(response.status, 400);
+    assert.equal((await response.json()).error, "仅支持确认后清空全部做题记录。");
+    assert.deepEqual(e.database.prepare("SELECT data, revision FROM cloud_backups WHERE user_id = (SELECT id FROM cloud_users WHERE username = ?)").get("alice"), stored);
+  }
+  for (const confirmed of [false, null, "true"]) {
+    assert.equal((await removeHistory(e, alice.cookie, null, old.backup.revision, "alice", base, confirmed)).status, 400);
+  }
+  const legacyRequest = new Request(e.request("/api/cloud-backup/history", { attemptId: null, expectedRevision: old.backup.revision, expectedUsername: "alice" }, alice.cookie), { method: "DELETE" });
+  assert.equal((await e.api.cloudDeleteHistory(legacyRequest)).status, 400);
+  assert.deepEqual(e.database.prepare("SELECT data, revision FROM cloud_backups WHERE user_id = (SELECT id FROM cloud_users WHERE username = ?)").get("alice"), stored);
+  assert.equal((await removeHistory(e, alice.cookie, null, old.backup.revision)).status, 200);
   const cleared = await (await e.read(alice.cookie)).json();
   assert.deepEqual(cleared.data.study, { version: 1, attempts: [], activityDays: [] });
   assert.deepEqual(cleared.data.favorites, original.favorites);
+  assert.notEqual(cleared.backup.revision, old.backup.revision);
   assert.deepEqual((await (await e.read(bob.cookie, "bob")).json()).data, original);
   assert.equal((await e.api.cloudStatus(e.request("/api/cloud-backup/auth", undefined, alice.cookie))).status, 200);
 });

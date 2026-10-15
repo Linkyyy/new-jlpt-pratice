@@ -818,84 +818,89 @@
       ],
       "sourceQuestionNumber": 66,
       "sourceId": 3993
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202207:N1:3:3994:67",
-      "sourceId": 3994,
-      "questionNumber": 67,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ジェシカさんは、9月に受講料9,000円のビジネスマナー講座を、10月に受講料27,000円のプレゼン講座を受講する。ジェシカさんが会社から受けられる補助は、いくらになるか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "9,000円と10,000円"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "9,000円と27,000円"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "10,000円と10,000円"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "10,000円"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 67,
+      "sourceId": 3994,
       "media": {
-        "picture": "pic/120220767.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3994,
-        "time": null,
-        "level": null,
-        "questionId": 67,
-        "typeQuestionId": 22,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ジェシカさんは、9月に受講料9,000円のビジネスマナー講座を、10月に受講料27,000円のプレゼン講座を受講する。ジェシカさんが会社から受けられる補助は、いくらになるか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 9,000円と10,000円",
-        "option2": " 9,000円と27,000円",
-        "option3": " 10,000円と10,000円",
-        "option4": " 10,000円",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 67,
-        "articleAssistant": null
+        "images": [
+          "pic/120220767.jpg"
+        ]
       }
     },
     {
       "id": "imported:202207:N1:3:3995:68",
-      "sourceId": 3995,
-      "questionNumber": 68,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 森田さんは、2月20日にビジネス文書講座を受講する。受講料補助の申請はどうしなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "2月15日までに①~④を人事課に提出する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2月15日までに①を、3月10日までに②~④を人事課に提出する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "2月15日までに①を、3月31日までに②~④を人事課に提出する"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "3月10日までに①~④を人事課に提出する。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 68,
+      "sourceId": 3995,
       "media": {
-        "picture": "pic/120220767.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3995,
-        "time": "202207",
-        "level": "n1",
-        "questionId": 68,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 森田さんは、2月20日にビジネス文書講座を受講する。受講料補助の申請はどうしなければならないか。</p>",
-        "picture": "pic/120220767.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 2月15日までに①~④を人事課に提出する。",
-        "option2": " 2月15日までに①を、3月10日までに②~④を人事課に提出する。",
-        "option3": " 2月15日までに①を、3月31日までに②~④を人事課に提出する",
-        "option4": " 3月10日までに①~④を人事課に提出する。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 3994,
-        "articleAssistant": null
+        "images": [
+          "pic/120220767.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

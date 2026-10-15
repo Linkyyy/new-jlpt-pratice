@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 70,
       "sourceId": 879
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202012:N2:3:880:71",
-      "sourceId": 880,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 海外旅行から帰国した大原さんは、今、平山空港にいる。平山空港から友人の家に、ビン入りのジュースを送ることにした。今は朝の6時で、すぐにカウンターへ行って送りたいと思っている。どうすれぱいいか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①へ行き、身分証明書を見せ、安全便で送る。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "①へ行き、専用ボックスを購入し、クール便で送る。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "①か②へ行き、専用ボックスを購入し、安全便で送る。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "①か③へ行き、専用ボックスを購入し、安全便で送る"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 880,
       "media": {
-        "picture": "pic/220201271.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 880,
-        "time": null,
-        "level": null,
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 海外旅行から帰国した大原さんは、今、平山空港にいる。平山空港から友人の家に、ビン入りのジュースを送ることにした。今は朝の6時で、すぐにカウンターへ行って送りたいと思っている。どうすれぱいいか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①へ行き、身分証明書を見せ、安全便で送る。",
-        "option2": " ①へ行き、専用ボックスを購入し、クール便で送る。",
-        "option3": " ①か②へ行き、専用ボックスを購入し、安全便で送る。",
-        "option4": " ①か③へ行き、専用ボックスを購入し、安全便で送る",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 71,
-        "articleAssistant": null
+        "images": [
+          "pic/220201271.jpg"
+        ]
       }
     },
     {
       "id": "imported:202012:N2:3:881:72",
-      "sourceId": 881,
-      "questionNumber": 72,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 加山さんは、旅行に行くため四国地方の自宅から平山空港に荷物を送ろうと思っている。縦・横・高さの合計が90cmで重さが13kgのスーツケースを、配送会社の営業所に持っていって通常配送で送るつもりだ。片道だけの利用の場合、料金はいくらになるか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "2,000円から100円割引された金額"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2,000円から200円割引された金額"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "2,400円から100円割引された金額"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "2,400円から200円割引された金額"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 72,
+      "sourceId": 881,
       "media": {
-        "picture": "pic/220201271.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 881,
-        "time": "202012",
-        "level": "n2",
-        "questionId": 72,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 加山さんは、旅行に行くため四国地方の自宅から平山空港に荷物を送ろうと思っている。縦・横・高さの合計が90cmで重さが13kgのスーツケースを、配送会社の営業所に持っていって通常配送で送るつもりだ。片道だけの利用の場合、料金はいくらになるか。</p>",
-        "picture": "pic/220201271.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 2,000円から100円割引された金額",
-        "option2": " 2,000円から200円割引された金額",
-        "option3": " 2,400円から100円割引された金額",
-        "option4": " 2,400円から200円割引された金額",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 880,
-        "articleAssistant": null
+        "images": [
+          "pic/220201271.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -744,84 +744,89 @@
       ],
       "sourceQuestionNumber": 64,
       "sourceId": 3799
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202307:N1:3:3800:65",
-      "sourceId": 3800,
-      "questionNumber": 65,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 次の人は今年の4月に、運動教室を受講したいと考えている。この中で、この教室を受講できる人は誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%;\">\n  <tr style=\"background-color: #f2f2f2;\">\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">名前</th>\n    <th style=\"border: 1px solid #ddd; padding: 0 12px; text-align: left;\">年齢</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">住んでいる所</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">勤務地</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">健康度測定</th>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"border: 1px solid #ddd; \">ダニエルさん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">54歳</td>\n    <td style=\"border: 1px solid #ddd; \">木原市内</td>\n    <td style=\"border: 1px solid #ddd; \">木原市外</td>\n    <td style=\"border: 1px solid #ddd; \">去年の１月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #ffffff;\">\n    <td style=\"border: 1px solid #ddd;\">木村さん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">34歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市外</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">去年の１０月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"border: 1px solid #ddd;\">大川さん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">16歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">なし</td>\n    <td style=\"border: 1px solid #ddd;\">今年の２月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #ffffff;\">\n    <td style=\"border: 1px solid #ddd;\">チェさん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">27歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">今年の５月に受ける予定</td>\n  </tr>\n</table>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ダニエルさん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "木村さん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "大川さん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "チェさん"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 3800,
       "media": {
-        "picture": "pic/120230765.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3800,
-        "time": null,
-        "level": null,
-        "questionId": 65,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 次の人は今年の4月に、運動教室を受講したいと考えている。この中で、この教室を受講できる人は誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%;\">\n  <tr style=\"background-color: #f2f2f2;\">\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">名前</th>\n    <th style=\"border: 1px solid #ddd; padding: 0 12px; text-align: left;\">年齢</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">住んでいる所</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">勤務地</th>\n    <th style=\"border: 1px solid #ddd;  text-align: left;\">健康度測定</th>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"border: 1px solid #ddd; \">ダニエルさん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">54歳</td>\n    <td style=\"border: 1px solid #ddd; \">木原市内</td>\n    <td style=\"border: 1px solid #ddd; \">木原市外</td>\n    <td style=\"border: 1px solid #ddd; \">去年の１月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #ffffff;\">\n    <td style=\"border: 1px solid #ddd;\">木村さん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">34歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市外</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">去年の１０月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"border: 1px solid #ddd;\">大川さん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">16歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">なし</td>\n    <td style=\"border: 1px solid #ddd;\">今年の２月に受けた</td>\n  </tr>\n  <tr style=\"background-color: #ffffff;\">\n    <td style=\"border: 1px solid #ddd;\">チェさん</td>\n    <td style=\"border: 1px solid #ddd; padding: 0 12px;\">27歳</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">木原市内</td>\n    <td style=\"border: 1px solid #ddd;\">今年の５月に受ける予定</td>\n  </tr>\n</table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ダニエルさん",
-        "option2": " 木村さん",
-        "option3": " 大川さん",
-        "option4": " チェさん",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 65,
-        "articleAssistant": null
+        "images": [
+          "pic/120230765.jpg"
+        ]
       }
     },
     {
       "id": "imported:202307:N1:3:3801:66",
-      "sourceId": 3801,
-      "questionNumber": 66,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> シャヒンさんは、来週の「ダンス」を予約したが、空きがあれば来週の「体操」も追加予約したいと考えている。どうすればいいか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "来週の月曜日以降に窓口が電話で空きを確認し、空きがあれば、窓口で予約する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "来週の月曜日以降に窓口が電話で空きを確認し、空きがあれば、予約機か電話で予約する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "来週の水曜日以降に窓口か電話で空きを確認し、空きがあれば、窓口で予約する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "来週の水曜日以降に窓口か電話で空きを確認し、空きがあれば、予約機か電話で予約する。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 3801,
       "media": {
-        "picture": "pic/120230765.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3801,
-        "time": "202307",
-        "level": "n1",
-        "questionId": 66,
-        "typeQuestionId": 21,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> シャヒンさんは、来週の「ダンス」を予約したが、空きがあれば来週の「体操」も追加予約したいと考えている。どうすればいいか。</p>",
-        "picture": "pic/120230765.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 来週の月曜日以降に窓口が電話で空きを確認し、空きがあれば、窓口で予約する。",
-        "option2": " 来週の月曜日以降に窓口が電話で空きを確認し、空きがあれば、予約機か電話で予約する。",
-        "option3": " 来週の水曜日以降に窓口か電話で空きを確認し、空きがあれば、窓口で予約する。",
-        "option4": " 来週の水曜日以降に窓口か電話で空きを確認し、空きがあれば、予約機か電話で予約する。",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 3800,
-        "articleAssistant": null
+        "images": [
+          "pic/120230765.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

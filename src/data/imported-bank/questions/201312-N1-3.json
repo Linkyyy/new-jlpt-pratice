@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 5679
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201312:N1:3:5680:69",
-      "sourceId": 5680,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ムディさんは、市民農園を借りたいと考えている。作る野菜は自分で決めたいが、農作業の経験がないので作りかたを教えてほしいと思っている。ムディさんはどの農園を借りたらよいか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确答案是2。解析：题目中提到穆迪想借用市民农田，希望自己决定种植的蔬菜种类，但缺乏种植经验，因此需要获得种植方法的指导。在所有选项中，只有②原口市西川农田既允许自行决定种植的蔬菜，又提供栽培指导(种子和幼苗需自备)，因此符合条件的只有选项2。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 5680,
       "media": {
-        "picture": "pic/120131269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5680,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ムディさんは、市民農園を借りたいと考えている。作る野菜は自分で決めたいが、農作業の経験がないので作りかたを教えてほしいと思っている。ムディさんはどの農園を借りたらよいか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①",
-        "option2": " ②",
-        "option3": " ③",
-        "option4": " ④",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "正确答案是2。解析：题目中提到穆迪想借用市民农田，希望自己决定种植的蔬菜种类，但缺乏种植经验，因此需要获得种植方法的指导。在所有选项中，只有②原口市西川农田既允许自行决定种植的蔬菜，又提供栽培指导(种子和幼苗需自备)，因此符合条件的只有选项2。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120131269.jpg"
+        ]
       }
     },
     {
       "id": "imported:201312:N1:3:5681:70",
-      "sourceId": 5681,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 原口市の市民農園を借りる際に、留意しなければならないことはどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "原口市に住んでいる人しか借りることができない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "同じ農園を3年以上連続して借りなければならない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "自分で農具を準備しなければならない農園がある。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "早く募集しないと希望の農園が借りられないことがある。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正解:2 自己需要准备农具的农田是存在的。  \n解析:题目问的是租借原口市的市民农田时需要注意的事项。  \n1.只有原口市居民才能租借——错误，因为在原口市工作的人也有资格，因此排除。  \n2.同一块农田必须连续租借3年以上——错误，实际使用期限最长为3年，并非必须连续租满3年，排除。  \n3.部分农田需要自行准备农具——正确，例如三田和池泽地区的农田就是如此，符合条件。  \n4.若不尽早报名，可能无法租到心仪的农田——错误，因为即使提前报名，若申请人数过多，将通过抽签决定，报名早晚不影响结果。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 5681,
       "media": {
-        "picture": "pic/120131269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5681,
-        "time": "201312",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 原口市の市民農園を借りる際に、留意しなければならないことはどれか。</p>",
-        "picture": "pic/120131269.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 原口市に住んでいる人しか借りることができない。",
-        "option2": " 同じ農園を3年以上連続して借りなければならない。",
-        "option3": " 自分で農具を準備しなければならない農園がある。",
-        "option4": " 早く募集しないと希望の農園が借りられないことがある。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "正解:2 自己需要准备农具的农田是存在的。  \n解析:题目问的是租借原口市的市民农田时需要注意的事项。  \n1.只有原口市居民才能租借——错误，因为在原口市工作的人也有资格，因此排除。  \n2.同一块农田必须连续租借3年以上——错误，实际使用期限最长为3年，并非必须连续租满3年，排除。  \n3.部分农田需要自行准备农具——正确，例如三田和池泽地区的农田就是如此，符合条件。  \n4.若不尽早报名，可能无法租到心仪的农田——错误，因为即使提前报名，若申请人数过多，将通过抽签决定，报名早晚不影响结果。",
-        "extending": [],
-        "parentId": 5680,
-        "articleAssistant": null
+        "images": [
+          "pic/120131269.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

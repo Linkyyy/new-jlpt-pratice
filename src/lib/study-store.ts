@@ -184,9 +184,10 @@ export function mergeStudyData(data: StudyData, value: StudyData): StudyData {
   return { version: 1, attempts: [...attempts.values()], activityDays: [...new Set([...data.activityDays, ...value.activityDays])].sort() };
 }
 
-export function deleteStudyHistory(attemptId: string | null, expected?: StudyData): StudyResult {
+export function deleteStudyHistory(attemptId: null, expected?: StudyData): StudyResult {
+  if (attemptId !== null) return { ok: false, error: "仅支持确认后清空全部做题记录。" };
   const snapshot = readStudySnapshot();
   if (!snapshot.ready || snapshot.error) return { ok: false, error: snapshot.error ?? "正在读取学习记录……" };
   if (expected && JSON.stringify(snapshot.data) !== JSON.stringify(expected)) return { ok: false, error: "本地记录已在其他页面更新，请重新确认删除。" };
-  return commit(data => withoutStudyHistory(data, attemptId));
+  return commit(data => withoutStudyHistory(data));
 }

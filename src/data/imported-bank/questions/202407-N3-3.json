@@ -522,84 +522,91 @@
       ],
       "sourceQuestionNumber": 71,
       "sourceId": 6533
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202407:N3:3:6534:72",
-      "sourceId": 6534,
-      "questionNumber": 72,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 次の4人は、 2月1日から3月31日までの間に 「買い物券チャレンジ」の参加店で買い物をした。「買い物券チャレンジ」に応募できるのは誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; color: #333;\">\n<tbody>\n<tr style=\"background-color: #f5f5f5;\">\n<th style=\"border: 1px solid #ddd; text-align: left; \">名前</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">利用した店の数</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">レシートの数</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">レシートの合計</th>\n</tr>\n<tr style=\"background-color: white;\">\n<td style=\"border: 1px solid #ddd; \">森田さん</td>\n<td style=\"border: 1px solid #ddd; \">2店</td>\n<td style=\"border: 1px solid #ddd; \">8枚</td>\n<td style=\"border: 1px solid #ddd; \">7520 円</td>\n</tr>\n<tr style=\"background-color: #f5f5f5;\">\n<td style=\"border: 1px solid #ddd;\">ヨウさん</td>\n<td style=\"border: 1px solid #ddd;\">4店</td>\n<td style=\"border: 1px solid #ddd;\">4枚</td>\n<td style=\"border: 1px solid #ddd;\">9080 円</td>\n</tr>\n<tr style=\"background-color: white;\">\n<td style=\"border: 1px solid #ddd;\">東さん</td>\n<td style=\"border: 1px solid #ddd;\">4店</td>\n<td style=\"border: 1px solid #ddd;\">6枚</td>\n<td style=\"border: 1px solid #ddd;\">6100 円</td>\n</tr>\n<tr style=\"background-color: #f5f5f5;\">\n<td style=\"border: 1px solid #ddd;\">クレアさん</td>\n<td style=\"border: 1px solid #ddd;\">5店</td>\n<td style=\"border: 1px solid #ddd;\">7枚</td>\n<td style=\"border: 1px solid #ddd;\">4340 円</td>\n</tr>\n</tbody>\n</table>",
+      "passage": "<p>「買い物券チャレンジ」<br>\nみずき市の店で買い物したレシートを集めて応募すると、100名の方に、市内の店で使える5,000円分の買い物券が当たります。</p>\n<p>参加・応募方法<br>\n<b>①レシートを集める</b><br>\nみずき市の生活用品店、 食料品店など、ホームページに書かれている参加店を利用して、レシートをもらってください。</p>\n<p>【期間】 2月1日 (月)~3月31日(水)<br>\n・応募には、 合計 5,000 円分以上のレシートが必要です。<br>\n・レシートの枚数は、 5枚以上必要です。<br>\n・同じ店のレシートが2枚以上あってもいいですが、 必ず3つ以上の店を利用してレシートを集めてください。</p>\n<p><b>②応募する</b><br>\n応募用紙に氏名・住所・電話番号を書き、集めたレシートをはってください。 応募用紙は、ホームページに書かれている店でもらえます。</p>\n<p>&lt;応募方法&gt;<br>\nみずき市商業課に郵送、 または持参してください。</p>\n<p>1. 郵送の場合<br>\n【期間】 2月1日 (月)~4月9日<br>\n・郵送する場合は、応募用紙を封筒に入れ、 切手をはって送ってください。</p>\n<p>2. 持参の場合<br>\n【期間】 2月1日(月)~4月12日 (月)<br>\n・商業課の窓口の開いている時間 (平日の10時~16時、 最終日 4月12日は10時~17時)に来てください。 土日は休みです。</p>\n<p><b>■買い物券について</b><br>\n・当たった方には、4月20日ごろに買い物券をお送りします。<br>\n買い物券の使用期限は10月31日です。 使える店は、ホームページを確認してください。</p>\n<p>みずき市商業課 〒 126-0204 みずき市中町 2040-1 みずき市役所3階<br>\n電話 031-924-1976</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "森田さん。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ヨウさん。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "東さん。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "クレアさん。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 72,
+      "sourceId": 6534,
       "media": {
-        "picture": "pic/320240772.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 6534,
-        "time": null,
-        "level": null,
-        "questionId": 72,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 次の4人は、 2月1日から3月31日までの間に 「買い物券チャレンジ」の参加店で買い物をした。「買い物券チャレンジ」に応募できるのは誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; color: #333;\">\n<tbody>\n<tr style=\"background-color: #f5f5f5;\">\n<th style=\"border: 1px solid #ddd; text-align: left; \">名前</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">利用した店の数</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">レシートの数</th>\n<th style=\"border: 1px solid #ddd; text-align: left; \">レシートの合計</th>\n</tr>\n<tr style=\"background-color: white;\">\n<td style=\"border: 1px solid #ddd; \">森田さん</td>\n<td style=\"border: 1px solid #ddd; \">2店</td>\n<td style=\"border: 1px solid #ddd; \">8枚</td>\n<td style=\"border: 1px solid #ddd; \">7520 円</td>\n</tr>\n<tr style=\"background-color: #f5f5f5;\">\n<td style=\"border: 1px solid #ddd;\">ヨウさん</td>\n<td style=\"border: 1px solid #ddd;\">4店</td>\n<td style=\"border: 1px solid #ddd;\">4枚</td>\n<td style=\"border: 1px solid #ddd;\">9080 円</td>\n</tr>\n<tr style=\"background-color: white;\">\n<td style=\"border: 1px solid #ddd;\">東さん</td>\n<td style=\"border: 1px solid #ddd;\">4店</td>\n<td style=\"border: 1px solid #ddd;\">6枚</td>\n<td style=\"border: 1px solid #ddd;\">6100 円</td>\n</tr>\n<tr style=\"background-color: #f5f5f5;\">\n<td style=\"border: 1px solid #ddd;\">クレアさん</td>\n<td style=\"border: 1px solid #ddd;\">5店</td>\n<td style=\"border: 1px solid #ddd;\">7枚</td>\n<td style=\"border: 1px solid #ddd;\">4340 円</td>\n</tr>\n</tbody>\n</table>\n",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 森田さん。",
-        "option2": " ヨウさん。",
-        "option3": " 東さん。",
-        "option4": " クレアさん。",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 72,
-        "articleAssistant": null
+        "images": [
+          "pic/320240772.jpg"
+        ]
       }
     },
     {
       "id": "imported:202407:N3:3:6535:73",
-      "sourceId": 6535,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 中村さんは、「買い物券チャレンジ」に応募しようと思い、応募用紙の準備をした。今日 は4月11日(日) である。 応募用紙はとのように出さなければならないか。</p>",
+      "passage": "<p>「買い物券チャレンジ」<br>\nみずき市の店で買い物したレシートを集めて応募すると、100名の方に、市内の店で使える5,000円分の買い物券が当たります。</p>\n<p>参加・応募方法<br>\n<b>①レシートを集める</b><br>\nみずき市の生活用品店、 食料品店など、ホームページに書かれている参加店を利用して、レシートをもらってください。</p>\n<p>【期間】 2月1日 (月)~3月31日(水)<br>\n・応募には、 合計 5,000 円分以上のレシートが必要です。<br>\n・レシートの枚数は、 5枚以上必要です。<br>\n・同じ店のレシートが2枚以上あってもいいですが、 必ず3つ以上の店を利用してレシートを集めてください。</p>\n<p><b>②応募する</b><br>\n応募用紙に氏名・住所・電話番号を書き、集めたレシートをはってください。 応募用紙は、ホームページに書かれている店でもらえます。</p>\n<p>&lt;応募方法&gt;<br>\nみずき市商業課に郵送、 または持参してください。</p>\n<p>1. 郵送の場合<br>\n【期間】 2月1日 (月)~4月9日<br>\n・郵送する場合は、応募用紙を封筒に入れ、 切手をはって送ってください。</p>\n<p>2. 持参の場合<br>\n【期間】 2月1日(月)~4月12日 (月)<br>\n・商業課の窓口の開いている時間 (平日の10時~16時、 最終日 4月12日は10時~17時)に来てください。 土日は休みです。</p>\n<p><b>■買い物券について</b><br>\n・当たった方には、4月20日ごろに買い物券をお送りします。<br>\n買い物券の使用期限は10月31日です。 使える店は、ホームページを確認してください。</p>\n<p>みずき市商業課 〒 126-0204 みずき市中町 2040-1 みずき市役所3階<br>\n電話 031-924-1976</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "今日中に郵送するか、明日の1) 0時から1) 7時までに商業課に持参する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "今日の10時から16時まで、 または明日の1) 0時から1) 7時までに商業課に持参する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "明日の10時から16時までに商業課に持参する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "明日の10時から17時までに商業課に持参する。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "<p>「购物券挑战」<br>\n在水木市的商店购物并收集收据进行报名，将有100名幸运者获得可在市内商店使用的5,000日元购物券。</p>\n<p>参加及报名方法<br>\n<b>① 收集收据</b><br>\n请在水木市的生活用品店、食品店等官网列出的参与店铺进行购物，并索取收据。</p>\n<p>【活动期间】 2月1日 (周一) ~ 3月31日 (周三)<br>\n・报名需提供合计金额达5,000日元以上的收据。<br>\n・收据张数需至少5张。<br>\n・允许包含同一店铺的2张以上收据，但必须从至少3家不同的店铺收集收据。</p>\n<p><b>② 报名</b><br>\n请在报名表上填写姓名、住址和电话号码，并贴上收集到的收据。报名表可在官网列出的店铺领取。</p>\n<p>请邮寄或亲自送至水木市商业课。</p>\n<p>1. 邮寄方式<br>\n【截止日期】 2月1日 (周一) ~ 4月9日<br>\n・邮寄时，请将报名表装入信封，并贴上邮票寄出。</p>\n<p>2. 亲自提交<br>\n【截止日期】 2月1日 (周一) ~ 4月12日 (周一)<br>\n・请在商业课窗口开放时间（工作日10:00~16:00，最后一天4月12日为10:00~17:00）前来提交。周末休息。</p>\n<p><b>■ 关于购物券</b><br>\n・中奖者将于4月20日左右收到购物券。<br>\n购物券使用期限至10月31日。可用店铺请查阅官网。</p>\n<p>水木市商业课 〒126-0204 水木市中町2040-1 水木市役所3楼<br>\n电话 031-924-1976</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 6535,
       "media": {
-        "picture": "pic/320240772.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 6535,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 73,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "<p>「買い物券チャレンジ」<br>\nみずき市の店で買い物したレシートを集めて応募すると、100名の方に、市内の店で使える5,000円分の買い物券が当たります。</p>\n<p>参加・応募方法<br>\n<b>①レシートを集める</b><br>\nみずき市の生活用品店、 食料品店など、ホームページに書かれている参加店を利用して、レシートをもらってください。</p>\n<p>【期間】 2月1日 (月)~3月31日(水)<br>\n・応募には、 合計 5,000 円分以上のレシートが必要です。<br>\n・レシートの枚数は、 5枚以上必要です。<br>\n・同じ店のレシートが2枚以上あってもいいですが、 必ず3つ以上の店を利用してレシートを集めてください。</p>\n<p><b>②応募する</b><br>\n応募用紙に氏名・住所・電話番号を書き、集めたレシートをはってください。 応募用紙は、ホームページに書かれている店でもらえます。</p>\n<p>&lt;応募方法&gt;<br>\nみずき市商業課に郵送、 または持参してください。</p>\n<p>1. 郵送の場合<br>\n【期間】 2月1日 (月)~4月9日<br>\n・郵送する場合は、応募用紙を封筒に入れ、 切手をはって送ってください。</p>\n<p>2. 持参の場合<br>\n【期間】 2月1日(月)~4月12日 (月)<br>\n・商業課の窓口の開いている時間 (平日の10時~16時、 最終日 4月12日は10時~17時)に来てください。 土日は休みです。</p>\n<p><b>■買い物券について</b><br>\n・当たった方には、4月20日ごろに買い物券をお送りします。<br>\n買い物券の使用期限は10月31日です。 使える店は、ホームページを確認してください。</p>\n<p>みずき市商業課 〒 126-0204 みずき市中町 2040-1 みずき市役所3階<br>\n電話 031-924-1976</p>\n",
-        "littleQuestion": "<p> 中村さんは、「買い物券チャレンジ」に応募しようと思い、応募用紙の準備をした。今日 は4月11日(日) である。 応募用紙はとのように出さなければならないか。</p>",
-        "picture": "",
-        "audio": null,
-        "article": null,
-        "option1": " 今日中に郵送するか、明日の1) 0時から1) 7時までに商業課に持参する。",
-        "option2": " 今日の10時から16時まで、 または明日の1) 0時から1) 7時までに商業課に持参する。",
-        "option3": " 明日の10時から16時までに商業課に持参する。",
-        "option4": " 明日の10時から17時までに商業課に持参する。",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>「购物券挑战」<br>\n在水木市的商店购物并收集收据进行报名，将有100名幸运者获得可在市内商店使用的5,000日元购物券。</p>\n<p>参加及报名方法<br>\n<b>① 收集收据</b><br>\n请在水木市的生活用品店、食品店等官网列出的参与店铺进行购物，并索取收据。</p>\n<p>【活动期间】 2月1日 (周一) ~ 3月31日 (周三)<br>\n・报名需提供合计金额达5,000日元以上的收据。<br>\n・收据张数需至少5张。<br>\n・允许包含同一店铺的2张以上收据，但必须从至少3家不同的店铺收集收据。</p>\n<p><b>② 报名</b><br>\n请在报名表上填写姓名、住址和电话号码，并贴上收集到的收据。报名表可在官网列出的店铺领取。</p>\n<p>请邮寄或亲自送至水木市商业课。</p>\n<p>1. 邮寄方式<br>\n【截止日期】 2月1日 (周一) ~ 4月9日<br>\n・邮寄时，请将报名表装入信封，并贴上邮票寄出。</p>\n<p>2. 亲自提交<br>\n【截止日期】 2月1日 (周一) ~ 4月12日 (周一)<br>\n・请在商业课窗口开放时间（工作日10:00~16:00，最后一天4月12日为10:00~17:00）前来提交。周末休息。</p>\n<p><b>■ 关于购物券</b><br>\n・中奖者将于4月20日左右收到购物券。<br>\n购物券使用期限至10月31日。可用店铺请查阅官网。</p>\n<p>水木市商业课 〒126-0204 水木市中町2040-1 水木市役所3楼<br>\n电话 031-924-1976</p>",
-        "extending": [],
-        "parentId": 6534,
-        "articleAssistant": null
+        "images": [
+          "pic/320240772.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

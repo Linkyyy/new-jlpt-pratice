@@ -109,11 +109,13 @@ test("corrupt local data cannot be silently exported as empty or overwritten", (
   assert.equal(bad.raw.has(studyKey), false);
 });
 
-test("deleting history never touches local favorites or multiple folder memberships", () => {
+test("clearing history preserves favorites and rejected single deletions preserve all records", () => {
   const e = environment({ [favoriteKey]: favorites });
   const id = completed(e);
   const untouched = e.raw.get(favoriteKey);
-  assert.equal(e.study.deleteStudyHistory(id).ok, true);
+  const history = e.raw.get(studyKey);
+  assert.equal(e.study.deleteStudyHistory(id).ok, false);
+  assert.equal(e.raw.get(studyKey), history);
   assert.equal(e.raw.get(favoriteKey), untouched);
   completed(e);
   assert.equal(e.study.deleteStudyHistory(null).ok, true);

@@ -45,7 +45,7 @@ test("import preserves shared audio mappings, supports an optional manifest and 
   const root = await fs.mkdtemp(path.join(os.tmpdir(), "jlpt-audio-import-"));
   try {
     for (const dir of ["scripts", "src/lib", "input"]) await fs.mkdir(path.join(root, dir), { recursive: true });
-    for (const file of ["scripts/import-question-bank.mjs", "scripts/r2-audio-files.mjs", "src/lib/audio-url.mjs"]) await fs.copyFile(new URL(`../${file}`, import.meta.url), path.join(root, file));
+    for (const file of ["scripts/import-question-bank.mjs", "scripts/r2-audio-files.mjs", "src/lib/audio-url.mjs", "src/lib/image-url.mjs"]) await fs.copyFile(new URL(`../${file}`, import.meta.url), path.join(root, file));
     const options = { option1: "first", option2: "second", answer: 1 };
     const rows = [
       { id: 1, audio: "audio/202412n2/7.mp3", bigTitle: "共有音声", extending: [{ id: 2, questionId: 42, ...options }, { id: 3, questionId: 43, ...options }] },

@@ -744,84 +744,89 @@
       ],
       "sourceQuestionNumber": 64,
       "sourceId": 3415
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202412:N1:3:3416:65",
-      "sourceId": 3416,
-      "questionNumber": 65,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> サイさんは、9月4日から7日までボランティア活動を行ったので、9月中に助成金を申請しようと考えている。交通費と宿泊費を計算してメモにまとめたが、申請が認められた場合、サイさんに支給される助成金はいくらになるか。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 13px;\">\n  <tr style=\"background-color: #f5f5f5;\">\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">サイさんのメモ</th>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">交通費:12,000円　宿泊費:7,000円を3泊分</td>\n  </tr>\n</table>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "交通10,000円と、宿泊6,000円を2泊分。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "交通10,000円と、宿泊6,000円を3泊分。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "交通12,000円と、宿泊7,000円を2泊分。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "交通12,000円と、宿泊7,000円を3泊分。"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 3416,
       "media": {
-        "picture": "pic/120241265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3416,
-        "time": null,
-        "level": null,
-        "questionId": 65,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> サイさんは、9月4日から7日までボランティア活動を行ったので、9月中に助成金を申請しようと考えている。交通費と宿泊費を計算してメモにまとめたが、申請が認められた場合、サイさんに支給される助成金はいくらになるか。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 13px;\">\n  <tr style=\"background-color: #f5f5f5;\">\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">サイさんのメモ</th>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">交通費:12,000円　宿泊費:7,000円を3泊分</td>\n  </tr>\n</table>\n",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 交通10,000円と、宿泊6,000円を2泊分。",
-        "option2": " 交通10,000円と、宿泊6,000円を3泊分。",
-        "option3": " 交通12,000円と、宿泊7,000円を2泊分。",
-        "option4": " 交通12,000円と、宿泊7,000円を3泊分。",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "",
-        "extending": [],
-        "parentId": 65,
-        "articleAssistant": null
+        "images": [
+          "pic/120241265.jpg"
+        ]
       }
     },
     {
       "id": "imported:202412:N1:3:3417:66",
-      "sourceId": 3417,
-      "questionNumber": 66,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ジムさんは、1月10日に日帰りでボランテイア活動を行う予定である。助成金を申請したいと考えているが、活動終了後に必ず提出しなければならないものは何か、いつまでに提出しなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "AとBとCで、3月10日までに提出する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "AとBとCで、3月24日までに提出する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "AとBとDで、3月10日までに提出する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "AとBとCとDで、3月24日までに提出する。"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<h3 style=\"text-align: center; color: #2a5885; border-bottom: 2px solid #2a5885; padding-bottom: 10px;\">志愿者活动补助金 申请指南</h3>\n  \n  <p>绿川大学为参与全国各地志愿者活动的学生设立了部分费用补助制度。</p>\n  \n  <h4 style=\"color: #2a5885;\">1. 补助对象</h4>\n  <p>绿川大学本科生及研究生</p>\n  \n  <h4 style=\"color: #2a5885;\">2. 补助对象活动</h4>\n  <p>由公共团体主办的志愿者活动</p>\n  \n  <h4 style=\"color: #2a5885;\">3. 补助费用、金额及次数</h4>\n  <p>(1) 费用：志愿者活动产生的交通费和住宿费</p>\n  <p>(2) 金额：</p>\n  <ul>\n    <li>交通费：每次活动最高补助10,000日元</li>\n    <li>住宿费：每次活动每晚最高补助6,000日元（实报实销），最多补助2晚</li>\n  </ul>\n  <p>(3) 次数：每年度最多2次</p>\n  \n  <h4 style=\"color: #2a5885;\">4. 申请方法（A-C类文件可从官网下载模板）</h4>\n  <p>活动结束后2个月内向志愿者中心提交以下材料（年度最终截止日期为3月24日，严格守时）：</p>\n  <ul>\n    <li>A：志愿者活动补助金申请书</li>\n    <li>B：志愿者活动补助金汇款账户登记表</li>\n    <li>C：志愿者活动证明书（可使用接收单位格式）</li>\n    <li>D：收据※</li>\n  </ul>\n  <p>※住宿费收据必须提交。交通费收据如能获取请一并提交。无法获取时请在A表中填写实际金额。</p>\n  \n  <h4 style=\"color: #2a5885;\">5. 补助金发放</h4>\n  <p>经审核通过后，将于提交材料次月月底汇款（如材料不全可能导致延迟）。</p>\n  \n  <h4 style=\"color: #2a5885;\">6. 其他</h4>\n  <p>\"A：志愿者活动补助金申请书\"中的\"活动感想\"可能会被刊登在志愿者中心官网。</p>\n  \n  <h4 style=\"color: #2a5885;\">7. 咨询方式</h4>\n  <p>绿川大学志愿者中心（3号楼1层）</p>\n  <p>周一至周五 9:00-17:00</p>\n  <p>电话：019-991-8728</p>"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 3417,
       "media": {
-        "picture": "pic/120241265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3417,
-        "time": "202412",
-        "level": "n1",
-        "questionId": 66,
-        "typeQuestionId": 21,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ジムさんは、1月10日に日帰りでボランテイア活動を行う予定である。助成金を申請したいと考えているが、活動終了後に必ず提出しなければならないものは何か、いつまでに提出しなければならないか。</p>",
-        "picture": "pic/120241265.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " AとBとCで、3月10日までに提出する。",
-        "option2": " AとBとCで、3月24日までに提出する。",
-        "option3": " AとBとDで、3月10日までに提出する。",
-        "option4": " AとBとCとDで、3月24日までに提出する。",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<h3 style=\"text-align: center; color: #2a5885; border-bottom: 2px solid #2a5885; padding-bottom: 10px;\">志愿者活动补助金 申请指南</h3>\n  \n  <p>绿川大学为参与全国各地志愿者活动的学生设立了部分费用补助制度。</p>\n  \n  <h4 style=\"color: #2a5885;\">1. 补助对象</h4>\n  <p>绿川大学本科生及研究生</p>\n  \n  <h4 style=\"color: #2a5885;\">2. 补助对象活动</h4>\n  <p>由公共团体主办的志愿者活动</p>\n  \n  <h4 style=\"color: #2a5885;\">3. 补助费用、金额及次数</h4>\n  <p>(1) 费用：志愿者活动产生的交通费和住宿费</p>\n  <p>(2) 金额：</p>\n  <ul>\n    <li>交通费：每次活动最高补助10,000日元</li>\n    <li>住宿费：每次活动每晚最高补助6,000日元（实报实销），最多补助2晚</li>\n  </ul>\n  <p>(3) 次数：每年度最多2次</p>\n  \n  <h4 style=\"color: #2a5885;\">4. 申请方法（A-C类文件可从官网下载模板）</h4>\n  <p>活动结束后2个月内向志愿者中心提交以下材料（年度最终截止日期为3月24日，严格守时）：</p>\n  <ul>\n    <li>A：志愿者活动补助金申请书</li>\n    <li>B：志愿者活动补助金汇款账户登记表</li>\n    <li>C：志愿者活动证明书（可使用接收单位格式）</li>\n    <li>D：收据※</li>\n  </ul>\n  <p>※住宿费收据必须提交。交通费收据如能获取请一并提交。无法获取时请在A表中填写实际金额。</p>\n  \n  <h4 style=\"color: #2a5885;\">5. 补助金发放</h4>\n  <p>经审核通过后，将于提交材料次月月底汇款（如材料不全可能导致延迟）。</p>\n  \n  <h4 style=\"color: #2a5885;\">6. 其他</h4>\n  <p>\"A：志愿者活动补助金申请书\"中的\"活动感想\"可能会被刊登在志愿者中心官网。</p>\n  \n  <h4 style=\"color: #2a5885;\">7. 咨询方式</h4>\n  <p>绿川大学志愿者中心（3号楼1层）</p>\n  <p>周一至周五 9:00-17:00</p>\n  <p>电话：019-991-8728</p>",
-        "extending": [],
-        "parentId": 3416,
-        "articleAssistant": null
+        "images": [
+          "pic/120241265.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

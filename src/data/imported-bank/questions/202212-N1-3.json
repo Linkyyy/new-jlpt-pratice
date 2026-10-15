@@ -744,84 +744,89 @@
       ],
       "sourceQuestionNumber": 64,
       "sourceId": 3895
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202212:N1:3:3896:65",
-      "sourceId": 3896,
-      "questionNumber": 65,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 次の4人は、星川大学の大学院に在学中で、以下の研究活動を行いたいと思っている。「グローバル研究活動助成」に応募できるのは誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 13px;\">\n  <tr style=\"background-color: #f5f5f5;\">\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">名前</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">研究活動</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">渡航期間</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">この助成の採択歴</th>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">西田さん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">海外のシンポジウムで講演を聞く</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">2022年8月24日から3日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">なし</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">ダリアさん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外に渡航し、資料の収集や調査を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2023年1月18日から3日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">なし</td>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">ラワンさん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外で研究発表を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2023年2月20日から5日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2020年度にあり</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">山本さん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外に渡航し、調査を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2022年8月20日から12日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2021年度にあり</td>\n  </tr>\n</table>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "西田さん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ダリアさん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ラワンさん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "山本さん"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 3896,
       "media": {
-        "picture": "pic/120221265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3896,
-        "time": null,
-        "level": null,
-        "questionId": 65,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 次の4人は、星川大学の大学院に在学中で、以下の研究活動を行いたいと思っている。「グローバル研究活動助成」に応募できるのは誰か。</p>\n<table style=\"border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 13px;\">\n  <tr style=\"background-color: #f5f5f5;\">\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">名前</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">研究活動</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">渡航期間</th>\n    <th style=\"font-size: 13px;border: 1px solid #ddd;  text-align: left;\">この助成の採択歴</th>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">西田さん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">海外のシンポジウムで講演を聞く</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">2022年8月24日から3日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd;\">なし</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">ダリアさん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外に渡航し、資料の収集や調査を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2023年1月18日から3日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">なし</td>\n  </tr>\n  <tr>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">ラワンさん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外で研究発表を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2023年2月20日から5日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2020年度にあり</td>\n  </tr>\n  <tr style=\"background-color: #f9f9f9;\">\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">山本さん</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">海外に渡航し、調査を行う</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2022年8月20日から12日間</td>\n    <td style=\"font-size: 13px;border: 1px solid #ddd; \">2021年度にあり</td>\n  </tr>\n</table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 西田さん",
-        "option2": " ダリアさん",
-        "option3": " ラワンさん",
-        "option4": " 山本さん",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 65,
-        "articleAssistant": null
+        "images": [
+          "pic/120221265.jpg"
+        ]
       }
     },
     {
       "id": "imported:202212:N1:3:3897:66",
-      "sourceId": 3897,
-      "questionNumber": 66,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 応募に関して、留意しなければならないことは何か。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "指導教員から研究推進課窓口に提出してもらわなければならない書類がある。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "研究活動が発表か調査かによって、提出しなければならない書類の種類が異なる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "記入用紙は、5月10日までに研究推進課窓口に取りに行かなけれはならない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "研究発表の場合、発表を行うことが確定していないと応募ができない。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 3897,
       "media": {
-        "picture": "pic/120221265.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3897,
-        "time": "202212",
-        "level": "n1",
-        "questionId": 66,
-        "typeQuestionId": 21,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 応募に関して、留意しなければならないことは何か。</p>",
-        "picture": "pic/120221265.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 指導教員から研究推進課窓口に提出してもらわなければならない書類がある。",
-        "option2": " 研究活動が発表か調査かによって、提出しなければならない書類の種類が異なる。",
-        "option3": " 記入用紙は、5月10日までに研究推進課窓口に取りに行かなけれはならない。",
-        "option4": " 研究発表の場合、発表を行うことが確定していないと応募ができない。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 3896,
-        "articleAssistant": null
+        "images": [
+          "pic/120221265.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

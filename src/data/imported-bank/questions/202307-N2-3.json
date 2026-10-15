@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 372
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202307:N2:3:373:70",
-      "sourceId": 373,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> アニカさんは友達と3人で一緒に、ハイキングに行ったことにした。ハイキングのコースは、「お勧めコース」から選びたいと思っている。アニカさんは3人の希望をメモに書いた。3人の希望に最も合うコースはどれか。</p>\n    <table style=\"border-collapse: collapse; background-color: #fafafa; border: 1px solid #ddd;\">\n        <tr style=\"background-color: #e0e0e0;\">\n            <th style=\"padding: 5px; text-align: left; border-bottom: 1px solid #ddd;\">名前</th>\n            <th style=\"text-align: left; border-bottom: 1px solid #ddd;\">希望内容</th>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;border-bottom: 1px solid #ddd;\">ティエ</td>\n            <td style=\"border-bottom: 1px solid #ddd;\">登山鉄道に乗りたい。</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;border-bottom: 1px solid #ddd;\">サナ</td>\n            <td style=\"border-bottom: 1px solid #ddd;\">「合計時間」が、2時間までのものがいい。</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;\">アニカ</td>\n            <td>スタートとゴールは違う場所にしたい。</td>\n        </tr>\n    </table>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "らくらくコース"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "花を楽しむコース"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "半周コース"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "一周コース"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 373,
       "media": {
-        "picture": "pic/220230770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 373,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> アニカさんは友達と3人で一緒に、ハイキングに行ったことにした。ハイキングのコースは、「お勧めコース」から選びたいと思っている。アニカさんは3人の希望をメモに書いた。3人の希望に最も合うコースはどれか。</p>\n    <table style=\"border-collapse: collapse; background-color: #fafafa; border: 1px solid #ddd;\">\n        <tr style=\"background-color: #e0e0e0;\">\n            <th style=\"padding: 5px; text-align: left; border-bottom: 1px solid #ddd;\">名前</th>\n            <th style=\"text-align: left; border-bottom: 1px solid #ddd;\">希望内容</th>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;border-bottom: 1px solid #ddd;\">ティエ</td>\n            <td style=\"border-bottom: 1px solid #ddd;\">登山鉄道に乗りたい。</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;border-bottom: 1px solid #ddd;\">サナ</td>\n            <td style=\"border-bottom: 1px solid #ddd;\">「合計時間」が、2時間までのものがいい。</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 5px;\">アニカ</td>\n            <td>スタートとゴールは違う場所にしたい。</td>\n        </tr>\n    </table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " らくらくコース",
-        "option2": " 花を楽しむコース",
-        "option3": " 半周コース",
-        "option4": " 一周コース",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220230770.jpg"
+        ]
       }
     },
     {
       "id": "imported:202307:N2:3:374:71",
-      "sourceId": 374,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ダンさんは、10月に会社の同僚15人とガイドツアーを利用したいと思っている。申し込みにあたり気をつけなければならないこととして、合っているのはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "申し込みはツアーを希望する日の3日前の午後6時までに電話でする必要がある。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ガイド料金はどの「お勧めコース」を選ぶかによって変わる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "申し込みはまとめてできるが、当日は複数のグループに分かれなければならない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "出発時間は、午前8時30分から午前11時までの間で指定する必要がある。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 374,
       "media": {
-        "picture": "pic/220230770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 374,
-        "time": "202307",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ダンさんは、10月に会社の同僚15人とガイドツアーを利用したいと思っている。申し込みにあたり気をつけなければならないこととして、合っているのはどれか。</p>",
-        "picture": "pic/220230770.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 申し込みはツアーを希望する日の3日前の午後6時までに電話でする必要がある。",
-        "option2": " ガイド料金はどの「お勧めコース」を選ぶかによって変わる。",
-        "option3": " 申し込みはまとめてできるが、当日は複数のグループに分かれなければならない。",
-        "option4": " 出発時間は、午前8時30分から午前11時までの間で指定する必要がある。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 373,
-        "articleAssistant": null
+        "images": [
+          "pic/220230770.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

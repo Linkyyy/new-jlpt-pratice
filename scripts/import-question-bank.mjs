@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getAudioObjectKey, isPublicAudioUrl } from "../src/lib/audio-url.mjs";
+import { getImageObjectKey } from "../src/lib/image-url.mjs";
 import { readAudioManifest } from "./r2-audio-files.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -33,7 +34,7 @@ const allIds = new Set();
 function text(value) { return typeof value === "string" ? value.trim() : ""; }
 function visibleText(value) { return text(value).replace(/<[^>]*>/g, "").replace(/&nbsp;|\s+/g, " ").trim(); }
 
-async function resolveMedia(reference, kind) {
+async function resolveMedia(reference, kind, remoteImage = false) {
   if (!reference) return null;
   if (kind === "audio") {
     if (isPublicAudioUrl(reference)) return reference;
@@ -41,6 +42,8 @@ async function resolveMedia(reference, kind) {
     // Resolve the original reference without fetching audio. A supplied manifest can restrict it.
     return key && (uploadedAudio === null || uploadedAudio.has(key)) ? key : null;
   }
+  // Reading charts can be uploaded after importing the question bank.
+  if (remoteImage && getImageObjectKey(reference)) return getImageObjectKey(reference);
   const relative = text(reference).replaceAll("\\", "/").replace(/^\.\//, "");
   if (!mediaDirectory || /^(?:[a-z]+:|\/)/i.test(relative) || relative.split("/").some((part) => part === ".." || part === "")) return null;
   const extensions = /\.(png|jpg|jpeg|webp|gif)$/i;
@@ -127,7 +130,7 @@ for (const name of (await fs.readdir(sourceDirectory)).sort()) {
 
     const pictureReference = text(row.picture) || text(parent?.picture);
     const audioReference = text(row.audio) || text(parent?.audio);
-    const image = await resolveMedia(pictureReference, "image");
+    const image = await resolveMedia(pictureReference, "image", type === 3);
     const audio = await resolveMedia(audioReference, "audio");
     if (pictureReference && !image) reasons.push("缺少配套图片");
     if (type === 4 && !audio || audioReference && !audio) reasons.push("缺少配套音频");

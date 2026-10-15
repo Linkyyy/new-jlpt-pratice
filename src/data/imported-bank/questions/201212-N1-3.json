@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 5891
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201212:N1:3:5892:69",
-      "sourceId": 5892,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> サラさんは大学の芸術学部の学生で演劇を勉強している。サラさんが「東西劇場　友の会」の会員になったら、次のどのサービスを受けることができるか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "東西劇場の情報が掲載されている会報誌を毎月受け取ることができる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "東西劇場で行われる公演をすべて15％割引で観劇することができる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "東西劇場と系列劇場で行われる公演をすべて割引で見ることができる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "東西劇場と系列劇場の売店で10％割引で買い物をすることができる。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "东西剧场举办的所有公演，学生会员均可享受15%的会员折扣优惠，此外，日本全国系列剧场的部分公演还可享受5%的折扣。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 5892,
       "media": {
-        "picture": "pic/120121269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5892,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> サラさんは大学の芸術学部の学生で演劇を勉強している。サラさんが「東西劇場　友の会」の会員になったら、次のどのサービスを受けることができるか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 東西劇場の情報が掲載されている会報誌を毎月受け取ることができる。",
-        "option2": " 東西劇場で行われる公演をすべて15％割引で観劇することができる。",
-        "option3": " 東西劇場と系列劇場で行われる公演をすべて割引で見ることができる。",
-        "option4": " 東西劇場と系列劇場の売店で10％割引で買い物をすることができる。",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "东西剧场举办的所有公演，学生会员均可享受15%的会员折扣优惠，此外，日本全国系列剧场的部分公演还可享受5%的折扣。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120121269.jpg"
+        ]
       }
     },
     {
       "id": "imported:201212:N1:3:5893:70",
-      "sourceId": 5893,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 会社員のユアンさんは「東西劇場　友の会」に入会したいと思っている。入会費と年会費の支払いはどのようにするか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "事務局で入会費と年会費を直接払う。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "金融機関で入会費と年会費を振り込む。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "事務局で入会費を直接払い、年会費の自動振替の手続きもする。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "事務局で入会費を直接払い、金融機関で年会費の自動振替の手続きをする。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正解:3事务局缴纳入会费，并办理年会费自动转账手续。  \n解析:由于サラ小姐是公司职员，因此适用一般会员的缴费方式。根据原文「在事务局支付入会费并登记用于年会费转账的金融机构账户。年会费将在入会约两个月后，从所登记的账户中自动扣款。」可知，入会费需在事务局现场支付，年会费则需在事务局登记银行账户，入会两个月后将自动从该账户扣款。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 5893,
       "media": {
-        "picture": "pic/120121269.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5893,
-        "time": "201212",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 会社員のユアンさんは「東西劇場　友の会」に入会したいと思っている。入会費と年会費の支払いはどのようにするか。</p>",
-        "picture": "pic/120121269.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 事務局で入会費と年会費を直接払う。",
-        "option2": " 金融機関で入会費と年会費を振り込む。",
-        "option3": " 事務局で入会費を直接払い、年会費の自動振替の手続きもする。",
-        "option4": " 事務局で入会費を直接払い、金融機関で年会費の自動振替の手続きをする。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "正解:3事务局缴纳入会费，并办理年会费自动转账手续。  \n解析:由于サラ小姐是公司职员，因此适用一般会员的缴费方式。根据原文「在事务局支付入会费并登记用于年会费转账的金融机构账户。年会费将在入会约两个月后，从所登记的账户中自动扣款。」可知，入会费需在事务局现场支付，年会费则需在事务局登记银行账户，入会两个月后将自动从该账户扣款。",
-        "extending": [],
-        "parentId": 5892,
-        "articleAssistant": null
+        "images": [
+          "pic/120121269.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

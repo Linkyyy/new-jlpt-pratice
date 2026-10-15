@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2253
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201412:N2:3:2254:74",
-      "sourceId": 2254,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> オーリャさんと山下さんの二人は臨時スタッフになって、海岸清掃活動に参加したいと思っている。 二人はどうしなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "４月２３日までイーメールで申し込む。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "４月２３日の１７時までに電話で申し込む。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "５月１４日の１３時までに会場に行って、申し込む。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "５月１５日の８時までに会場に行って、申し込む。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "オーリャ和山下需要在4月23日17点前打电话到事务所报名。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2254,
       "media": {
-        "picture": "pic/220141274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2254,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> オーリャさんと山下さんの二人は臨時スタッフになって、海岸清掃活動に参加したいと思っている。 二人はどうしなければならないか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ４月２３日までイーメールで申し込む。",
-        "option2": " ４月２３日の１７時までに電話で申し込む。",
-        "option3": " ５月１４日の１３時までに会場に行って、申し込む。",
-        "option4": " ５月１５日の８時までに会場に行って、申し込む。",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "オーリャ和山下需要在4月23日17点前打电话到事务所报名。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220141274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201412:N2:3:2255:75",
-      "sourceId": 2255,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 海岸清掃活動への参加者が当日必ずするように言われていることはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ゴミ袋を持参し、清掃活動後のゴミを持ち帰る。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "けがをしたときのために健康保険証を持参する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "長袖シャツと長ズボンを着て、作業用手袋を持参する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "会場に来るときに公共交通機関を利用する。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "けがや急病に備えて、健康保険証を持参することが当日必要なことである。したがって、選択肢2の「けがをしたときのために健康保険証を持参する」が正しい。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2255,
       "media": {
-        "picture": "pic/220141274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2255,
-        "time": "201412",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 海岸清掃活動への参加者が当日必ずするように言われていることはどれか。</p>",
-        "picture": "pic/220141274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " ゴミ袋を持参し、清掃活動後のゴミを持ち帰る。",
-        "option2": " けがをしたときのために健康保険証を持参する。",
-        "option3": " 長袖シャツと長ズボンを着て、作業用手袋を持参する。",
-        "option4": " 会場に来るときに公共交通機関を利用する。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "けがや急病に備えて、健康保険証を持参することが当日必要なことである。したがって、選択肢2の「けがをしたときのために健康保険証を持参する」が正しい。",
-        "extending": [],
-        "parentId": 2254,
-        "articleAssistant": null
+        "images": [
+          "pic/220141274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

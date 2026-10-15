@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 9074
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201007:N3:3:9075:73",
-      "sourceId": 9075,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> この案内によると、参加者が必ず持って来なければならないものは何か。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "参加費とはがき"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "参加費と昼食"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "昼食だけ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "参加費だけ"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正解：2</p>\n<p>解析:选项中涉及的内容有「参加費」「はがき」「昼食」三项，而从文中内容可以得出需要参加者带来的是「参加費」和「昼食」，「はがき」则由主办方提供。“はがきはこちらで用意します（無料）”。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 9075,
       "media": {
-        "picture": "pic/320100773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 9075,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> この案内によると、参加者が必ず持って来なければならないものは何か。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 参加費とはがき",
-        "option2": " 参加費と昼食",
-        "option3": " 昼食だけ",
-        "option4": " 参加費だけ",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>正解：2</p>\n<p>解析:选项中涉及的内容有「参加費」「はがき」「昼食」三项，而从文中内容可以得出需要参加者带来的是「参加費」和「昼食」，「はがき」则由主办方提供。“はがきはこちらで用意します（無料）”。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320100773.jpg"
+        ]
       }
     },
     {
       "id": "imported:201007:N3:3:9076:74",
-      "sourceId": 9076,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 小学校 6 年生の小林一郎くんは、この教室に参加したいと思っている。デジタルカメラを持っていないので、写真館で借りるつもりだ。申し込みのはがきの正しい書き方はどれか</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确答案是1。解析：四个选项的区别仅在于②和④。根据文中「④デジタルカメラの貸し出しを希望するかどうか、を書いてお申し込みください」可知，申请时必须注明是否需要借用数码相机，因此排除选项2。此外，文中提到「小学生は家族の大人の方がいっしょに参加してください」以及「家族でお申し込みの場合は、全員のお名前をお書きください」，说明若有小学生参加，必须有成人陪同，并且申请时需填写所有参与成员的姓名，因此排除选项3和4，最终选择1。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 9076,
       "media": {
-        "picture": "pic/320100773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 9076,
-        "time": "201007",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 小学校 6 年生の小林一郎くんは、この教室に参加したいと思っている。デジタルカメラを持っていないので、写真館で借りるつもりだ。申し込みのはがきの正しい書き方はどれか</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>正解:1</p>\n<p>解析:四个选项中的区别只有②和④两项。</p>\n<p>通过文中「④デジタルカメラの貸し出しを希望するかどうか、を書いてお申し込みください」，可知申请时需写上是否要借数码相机，因此排除选项2。</p>\n<p>另有文中「小学生は家族の大人の方がいっしょに参加してください。」「家族でお申し込みの場合は、全員のお名前をお書きください。」两句可知，若有小学生参加，需有大人陪同，且必须在申请表上写上所有人员的姓名，故而排除3、4，选1</p>",
-        "assistantNew": "正确答案是1。解析：四个选项的区别仅在于②和④。根据文中「④デジタルカメラの貸し出しを希望するかどうか、を書いてお申し込みください」可知，申请时必须注明是否需要借用数码相机，因此排除选项2。此外，文中提到「小学生は家族の大人の方がいっしょに参加してください」以及「家族でお申し込みの場合は、全員のお名前をお書きください」，说明若有小学生参加，必须有成人陪同，并且申请时需填写所有参与成员的姓名，因此排除选项3和4，最终选择1。",
-        "extending": [],
-        "parentId": 9075,
-        "articleAssistant": null
+        "images": [
+          "pic/320100773.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

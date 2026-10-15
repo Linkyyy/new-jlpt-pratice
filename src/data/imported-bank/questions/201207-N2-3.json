@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2786
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201207:N2:3:2787:74",
-      "sourceId": 2787,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> このパスを手に入れるには、どうしたらいいか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "京都楽遊パスオフィスへ行けば無料でもらえる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "京都市内の観光案内所、駅、ホテルなどで買える。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "京都市内の主な観光施設で買うことができる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "京都市内のバスや地下鉄などに乗るともらえる。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "题目询问如何获得乘车券，应关注文中关于「購入」的部分，因为这部分说明了获取方式。根据内容，乘车券可在京都市内的观光咨询处、JR、私铁、地铁各车站，以及宾馆、商场的服务台、咨询处和便利店等地购买。因此，正确答案是选项2。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2787,
       "media": {
-        "picture": "pic/220120774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2787,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> このパスを手に入れるには、どうしたらいいか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 京都楽遊パスオフィスへ行けば無料でもらえる。",
-        "option2": " 京都市内の観光案内所、駅、ホテルなどで買える。",
-        "option3": " 京都市内の主な観光施設で買うことができる。",
-        "option4": " 京都市内のバスや地下鉄などに乗るともらえる。",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目询问如何获得乘车券，应关注文中关于「購入」的部分，因为这部分说明了获取方式。根据内容，乘车券可在京都市内的观光咨询处、JR、私铁、地铁各车站，以及宾馆、商场的服务台、咨询处和便利店等地购买。因此，正确答案是选项2。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220120774.jpg"
+        ]
       }
     },
     {
       "id": "imported:201207:N2:3:2788:75",
-      "sourceId": 2788,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> このパスを持っているとどんなことが可能になるか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "指定の店での買い物はすべて5%引きになる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "距離に関係なく、市内の乗り物が無料になる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "指定の美術館では入場料が１00円引きになる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "市内のレストランでの食事が１0％引きになる。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "本题考查的是使用该乘车券可以享受哪些优惠，可用排除法分析。  \n选项1提到在指定店铺购物全部享受5%折扣，但根据文中③「買う」部分说明，只有消费满2000日元以上才能享受优惠，因此该选项错误。  \n选项2称市内所有交通工具无论距离均可免费乘坐，但文中①「乗る」括号内指出，若乘车距离过长需额外付费，因此该选项不成立。  \n选项3表示在指定美术馆可减免100日元入场费，这与文中②「見る」部分所述内容相符，因此正确。  \n选项4说在市内餐厅用餐可享9折优惠，但根据④「食べる」部分，实际是在指定餐厅用餐免费，而非打折，因此该选项不符。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2788,
       "media": {
-        "picture": "pic/220120774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2788,
-        "time": "201207",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> このパスを持っているとどんなことが可能になるか。</p>",
-        "picture": "pic/220120774.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 指定の店での買い物はすべて5%引きになる。",
-        "option2": " 距離に関係なく、市内の乗り物が無料になる。",
-        "option3": " 指定の美術館では入場料が１00円引きになる。",
-        "option4": " 市内のレストランでの食事が１0％引きになる。",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "本题考查的是使用该乘车券可以享受哪些优惠，可用排除法分析。  \n选项1提到在指定店铺购物全部享受5%折扣，但根据文中③「買う」部分说明，只有消费满2000日元以上才能享受优惠，因此该选项错误。  \n选项2称市内所有交通工具无论距离均可免费乘坐，但文中①「乗る」括号内指出，若乘车距离过长需额外付费，因此该选项不成立。  \n选项3表示在指定美术馆可减免100日元入场费，这与文中②「見る」部分所述内容相符，因此正确。  \n选项4说在市内餐厅用餐可享9折优惠，但根据④「食べる」部分，实际是在指定餐厅用餐免费，而非打折，因此该选项不符。",
-        "extending": [],
-        "parentId": 2787,
-        "articleAssistant": null
+        "images": [
+          "pic/220120774.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 7750
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201707:N3:3:7751:73",
-      "sourceId": 7751,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> ウンジさんは友達と一緒に山登りに参加したいと思っている。バスを使わずに最初から歩いて登れるもので、土曜日のコースがいい。ウンジさんたちの希望に合うのはどれか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "Aコース、7月19日"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "Aコース、7月29日"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "Bコース、7月15日"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "Bコース、7月26日"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>73.正解：3</p>\n<p>解析:问题是：ンジさん想要和朋友一起去爬山，希望是不坐巴士从头开始爬，周六的路线最好，符合ウンジさん的要求的是哪一个?</p>\n<p>符合时间(周六)的两个选项是选项2 A コース7月29日和选项3 Bコース7月15日。符合不坐巴士只爬山的条件的就只有选项3 了。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 7751,
       "media": {
-        "picture": "pic/320170773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7751,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ウンジさんは友達と一緒に山登りに参加したいと思っている。バスを使わずに最初から歩いて登れるもので、土曜日のコースがいい。ウンジさんたちの希望に合うのはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " Aコース、7月19日",
-        "option2": " Aコース、7月29日",
-        "option3": " Bコース、7月15日",
-        "option4": " Bコース、7月26日",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>73.正解：3</p>\n<p>解析:问题是：ンジさん想要和朋友一起去爬山，希望是不坐巴士从头开始爬，周六的路线最好，符合ウンジさん的要求的是哪一个?</p>\n<p>符合时间(周六)的两个选项是选项2 A コース7月29日和选项3 Bコース7月15日。符合不坐巴士只爬山的条件的就只有选项3 了。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320170773.jpg"
+        ]
       }
     },
     {
       "id": "imported:201707:N3:3:7752:74",
-      "sourceId": 7752,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 山登りに申し込みたいと思っている人が、気をつけなればならないことはどれか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "参加者が一人しかいない場合、山登りは行われない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "申し込みは、EメールかFAXでしか行えない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "料金は、山登りに行く日の三日前までに支払う必要がある。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "山登り前日までに、説明会に参加する必要がある。"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确选项是1，因为解析指出：若参加者不满两人，登山活动无法进行，且费用不含前往集合地点的交通费，因此当只有一个人报名时，活动不能举行。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 7752,
       "media": {
-        "picture": "pic/320170773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7752,
-        "time": "201707",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 山登りに申し込みたいと思っている人が、気をつけなればならないことはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 参加者が一人しかいない場合、山登りは行われない",
-        "option2": " 申し込みは、EメールかFAXでしか行えない。",
-        "option3": " 料金は、山登りに行く日の三日前までに支払う必要がある。",
-        "option4": " 山登り前日までに、説明会に参加する必要がある。",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>74.正解:1</p>\n<p>解析:问题是:希望申请参加登山的人，必须注意什么?</p>\n<p>注意点中有写到:参加者不满两人时，登山不能进行。</p>\n<p>以及费用当中不包括到集合地点的交通费。</p>\n<p>所以本题的正确选项应该是1参加者只有一个人的情况，登山活动不能进行。</p>",
-        "assistantNew": "正确选项是1，因为解析指出：若参加者不满两人，登山活动无法进行，且费用不含前往集合地点的交通费，因此当只有一个人报名时，活动不能举行。",
-        "extending": [],
-        "parentId": 7751,
-        "articleAssistant": null
+        "images": [
+          "pic/320170773.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -3,7 +3,6 @@
 import { useI18n } from "@/lib/i18n";
 import { translatePeriod } from "@/lib/i18n/translate";
 
-import HistoryDeleteButton from "./history-delete-button";
 import Link from "next/link";
 import type { Locale } from "@/lib/display-preferences";
 import { studyAttemptUrl, studyScore, studySummary, type StudyAttempt, type StudyData } from "@/lib/study-store";
@@ -14,7 +13,7 @@ export function attemptTitle(attempt: StudyAttempt, t: (text: string) => string 
   return `${t(attempt.level)} · ${period} · ${t(attempt.typeLabel)}`;
 }
 export function studyDate(time: number, locale: Locale = "zh") { return new Intl.DateTimeFormat(locale === "zh" ? "zh-CN" : locale, { timeZone: "Asia/Tokyo", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(time); }
-export function AttemptCard({ attempt, onDelete }: { attempt: StudyAttempt; onDelete?: (attempt: StudyAttempt) => void }) {
+export function AttemptCard({ attempt }: { attempt: StudyAttempt }) {
   const { t, locale } = useI18n();
   const score = studyScore(attempt), completed = attempt.status === "completed";
   const chosen = Object.keys(attempt.answers).length;
@@ -25,7 +24,7 @@ export function AttemptCard({ attempt, onDelete }: { attempt: StudyAttempt; onDe
     </div>
     <div className="shrink-0 text-right">
       {completed && <p className="text-lg font-bold tabular-nums text-indigo-600">{score.score}<span className="ml-0.5 text-sm font-normal">/ {score.maxScore}</span></p>}
-      <div className="flex items-center justify-end gap-2"><Link href={studyAttemptUrl(attempt)} className="inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t(completed ? "复习 →" : "继续 →")}</Link>{onDelete && <HistoryDeleteButton onClick={() => onDelete(attempt)} />}</div>
+      <div className="flex items-center justify-end gap-2"><Link href={studyAttemptUrl(attempt)} className="inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t(completed ? "复习 →" : "继续 →")}</Link></div>
     </div>
   </article>;
 }

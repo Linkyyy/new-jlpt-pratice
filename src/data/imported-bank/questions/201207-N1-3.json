@@ -855,84 +855,89 @@
       ],
       "sourceQuestionNumber": 68,
       "sourceId": 5997
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201207:N1:3:5998:69",
-      "sourceId": 5998,
-      "questionNumber": 69,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> 会社員の山田さんは英語で書かれた新聞を読めるようになりたいと思っている。週末は出張が多いので平日しか通えない。山田さんに合う講座はどれか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正解是2。解析：这道题可以通过排除法来解答。根据条件，山田希望可以阅读英文报纸，且上课时间不能在周末。首先从时间安排来看，3和4都安排在周末，因此排除。剩下的选项是1和2，再看课程内容，只有2明确提到能提升阅读英文报纸的能力，因此正确答案是2。"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 5998,
       "media": {
-        "picture": "pic/120120769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5998,
-        "time": null,
-        "level": null,
-        "questionId": 69,
-        "typeQuestionId": 23,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 会社員の山田さんは英語で書かれた新聞を読めるようになりたいと思っている。週末は出張が多いので平日しか通えない。山田さんに合う講座はどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ①",
-        "option2": " ②",
-        "option3": " ③",
-        "option4": " ④",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "正解是2。解析：这道题可以通过排除法来解答。根据条件，山田希望可以阅读英文报纸，且上课时间不能在周末。首先从时间安排来看，3和4都安排在周末，因此排除。剩下的选项是1和2，再看课程内容，只有2明确提到能提升阅读英文报纸的能力，因此正确答案是2。",
-        "extending": [],
-        "parentId": 69,
-        "articleAssistant": null
+        "images": [
+          "pic/120120769.jpg"
+        ]
       }
     },
     {
       "id": "imported:201207:N1:3:5999:70",
-      "sourceId": 5999,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> ④の講座を受講するためにはどのような手続きが必要か。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "見学をしてレベルを確認してから、電話で受講を申し込む。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "会館に行って総合パンフレットをもらい、窓口で申し込む。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "電話で受講申込書を送ってもらい、会館に行って申し込む"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "事前見学の予約をし、見学後、郵便局で受講料を振り込む。"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确答案是1：先参加试听确认水平是否合适，然后再通过电话申请报名。  \n解析：题目询问参加课程④所需的手续。文中明确指出“请务必提前试听，确认课程是否符合自身水平后再申请”，说明试听是必要步骤。此外，报名方式中提到“课程预约和报名请通过电话进行”。因此，正确的流程是先试听确认级别，再打电话报名，对应选项1。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 5999,
       "media": {
-        "picture": "pic/120120769.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 5999,
-        "time": "201207",
-        "level": "n1",
-        "questionId": 70,
-        "typeQuestionId": 24,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ④の講座を受講するためにはどのような手続きが必要か。</p>",
-        "picture": "pic/120120769.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 見学をしてレベルを確認してから、電話で受講を申し込む。",
-        "option2": " 会館に行って総合パンフレットをもらい、窓口で申し込む。",
-        "option3": " 電話で受講申込書を送ってもらい、会館に行って申し込む",
-        "option4": " 事前見学の予約をし、見学後、郵便局で受講料を振り込む。",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "正确答案是1：先参加试听确认水平是否合适，然后再通过电话申请报名。  \n解析：题目询问参加课程④所需的手续。文中明确指出“请务必提前试听，确认课程是否符合自身水平后再申请”，说明试听是必要步骤。此外，报名方式中提到“课程预约和报名请通过电话进行”。因此，正确的流程是先试听确认级别，再打电话报名，对应选项1。",
-        "extending": [],
-        "parentId": 5998,
-        "articleAssistant": null
+        "images": [
+          "pic/120120769.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

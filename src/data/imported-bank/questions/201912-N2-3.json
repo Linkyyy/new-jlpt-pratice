@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 70,
       "sourceId": 981
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201912:N2:3:982:71",
-      "sourceId": 982,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ポリーさんは、朝田市のダンス教室の仲間と文化祭でダンスの発表をしたいと考えている。申し込みにあたって、注意しなければならないこととして合っているのはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "10分以内の発表時間で申し込まなければならない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "事務所に直接行って申込書を提出しなければならない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "1枚の申込書に出演者全員の名前を書かなければならない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "事前の舞台リハーサルに出なければならない。"
+        }
       ],
+      "correctOptionId": "C",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 982,
       "media": {
-        "picture": "pic/220191271.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 982,
-        "time": null,
-        "level": null,
-        "questionId": 71,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> ポリーさんは、朝田市のダンス教室の仲間と文化祭でダンスの発表をしたいと考えている。申し込みにあたって、注意しなければならないこととして合っているのはどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 10分以内の発表時間で申し込まなければならない。",
-        "option2": " 事務所に直接行って申込書を提出しなければならない。",
-        "option3": " 1枚の申込書に出演者全員の名前を書かなければならない。",
-        "option4": " 事前の舞台リハーサルに出なければならない。",
-        "answer": 3,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 71,
-        "articleAssistant": null
+        "images": [
+          "pic/220191271.jpg"
+        ]
       }
     },
     {
       "id": "imported:201912:N2:3:983:72",
-      "sourceId": 983,
-      "questionNumber": 72,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ザーリンさんは文化祭に申し込みをし、写真作品を展示することになった。この後、文化祭が始まるまでに、何をしなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "10月4日の説明会に行き、文化祭初日の前日の9時から17時の間に作品を運び入れる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "10月4日の説明会に行き、文化祭初日の7時から9時の間に作品を運び入れる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "10月4日から6日のどれかの説明会に行き、文化祭初日の前日の9時から17時の間に作品を運び入れる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "10月4日から6日のどれかの説明会に行き、文化祭初日の7時から9時の間に作品を運び入れる。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 72,
+      "sourceId": 983,
       "media": {
-        "picture": "pic/220191271.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 983,
-        "time": "201912",
-        "level": "n2",
-        "questionId": 72,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ザーリンさんは文化祭に申し込みをし、写真作品を展示することになった。この後、文化祭が始まるまでに、何をしなければならないか。</p>",
-        "picture": "pic/220191271.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 10月4日の説明会に行き、文化祭初日の前日の9時から17時の間に作品を運び入れる。",
-        "option2": " 10月4日の説明会に行き、文化祭初日の7時から9時の間に作品を運び入れる。",
-        "option3": " 10月4日から6日のどれかの説明会に行き、文化祭初日の前日の9時から17時の間に作品を運び入れる。",
-        "option4": " 10月4日から6日のどれかの説明会に行き、文化祭初日の7時から9時の間に作品を運び入れる。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 982,
-        "articleAssistant": null
+        "images": [
+          "pic/220191271.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

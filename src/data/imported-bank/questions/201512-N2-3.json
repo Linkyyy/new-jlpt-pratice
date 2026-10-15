@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 2039
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201512:N2:3:2040:74",
-      "sourceId": 2040,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> マルコさんは、一週間後、10歳の子供と一緒に体験教室に参加したいと考えている。都合で午後1時までには美術館を出なければならないが、作った作品は当日持ち帰りたい。マルコさんが選べる教室はどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "Aのみ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "AとBとC"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "AとCとD"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "AとD"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "マルコ想带10岁的孩子参加一周后的体验班，要求在下午一点前离开美术馆，并希望当天能带走完成的作品。教室A适合5岁以上儿童，第一次活动于12:45结束，满足时间要求。教室B制作完成后需等待1小时，无法在13:00前离开，不符合条件。教室C虽然活动在11:30结束，但作品需等待2小时才能取走，即13:30后才能离开，不满足1点前离开的要求，因此排除。教室D的活动适合8岁以上儿童，10岁孩子可以参加，第一次活动10:45结束，等待2小时后于12:45可取走作品并离开，符合13:00前离开的条件。因此，教室A和教室D都满足マルコ的需求，正确选项是4。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 2040,
       "media": {
-        "picture": "pic/220151274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2040,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> マルコさんは、一週間後、10歳の子供と一緒に体験教室に参加したいと考えている。都合で午後1時までには美術館を出なければならないが、作った作品は当日持ち帰りたい。マルコさんが選べる教室はどれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " Aのみ",
-        "option2": " AとBとC",
-        "option3": " AとCとD",
-        "option4": " AとD",
-        "answer": 4,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "マルコ想带10岁的孩子参加一周后的体验班，要求在下午一点前离开美术馆，并希望当天能带走完成的作品。教室A适合5岁以上儿童，第一次活动于12:45结束，满足时间要求。教室B制作完成后需等待1小时，无法在13:00前离开，不符合条件。教室C虽然活动在11:30结束，但作品需等待2小时才能取走，即13:30后才能离开，不满足1点前离开的要求，因此排除。教室D的活动适合8岁以上儿童，10岁孩子可以参加，第一次活动10:45结束，等待2小时后于12:45可取走作品并离开，符合13:00前离开的条件。因此，教室A和教室D都满足マルコ的需求，正确选项是4。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220151274.jpg"
+        ]
       }
     },
     {
       "id": "imported:201512:N2:3:2041:75",
-      "sourceId": 2041,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 大学生のユウさんは、明日の体験教室に参加したいと考えている。作る物は食器以外がいい。ユウさんの希望に合っていて、参加できる可能性がある教室はどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "Aのみ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "Bのみ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "AとD"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "BとC"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "题目要求选择一个大学生ユウ可以参加的、与餐具无关且明天能参加的体验教室。教室C和D需提前3天预约，无法满足明天参加的条件，因此排除选项3和4。教室A和B都不需要预约，只需提前5分钟到场即可参与。教室A的内容是在杯子上绘画，属于餐具相关，不符合ユウ希望避开餐具类活动的要求。教室B是制作饰品，不涉及餐具，且时间上可行。因此符合条件的只有教室B，正确答案是2。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 2041,
       "media": {
-        "picture": "pic/220151274.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 2041,
-        "time": "201512",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> 大学生のユウさんは、明日の体験教室に参加したいと考えている。作る物は食器以外がいい。ユウさんの希望に合っていて、参加できる可能性がある教室はどれか。</p>",
-        "picture": "pic/220151274.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " Aのみ",
-        "option2": " Bのみ",
-        "option3": " AとD",
-        "option4": " BとC",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "题目要求选择一个大学生ユウ可以参加的、与餐具无关且明天能参加的体验教室。教室C和D需提前3天预约，无法满足明天参加的条件，因此排除选项3和4。教室A和B都不需要预约，只需提前5分钟到场即可参与。教室A的内容是在杯子上绘画，属于餐具相关，不符合ユウ希望避开餐具类活动的要求。教室B是制作饰品，不涉及餐具，且时间上可行。因此符合条件的只有教室B，正确答案是2。",
-        "extending": [],
-        "parentId": 2040,
-        "articleAssistant": null
+        "images": [
+          "pic/220151274.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

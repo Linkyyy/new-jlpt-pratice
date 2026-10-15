@@ -707,84 +707,89 @@
       ],
       "sourceQuestionNumber": 73,
       "sourceId": 3210
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201007:N2:3:3211:74",
-      "sourceId": 3211,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> この市民セミナーを受講できるのは次のうちのだれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "市外から河山市の大学に通学している21歳の女性"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "河山市のスーパーに勤務している35歳の男性"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "河山市外の自宅で学習塾を開いている46歳の女性"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "河山市役所の市民課に勤めている53歳の男性"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "这道题问的是谁可以参加这个市民讲座。  \n解答时只需抓住关键信息：对象为居住或工作在河山市且年满18岁的社会人士（不包括河山市职员）。  \n由于这是信息查找类题目，可以根据问题直接定位相关内容。有了这句关于“对象”的说明，就能准确判断出正确答案。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 3211,
       "media": {
-        "picture": "pic/220100774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3211,
-        "time": null,
-        "level": null,
-        "questionId": 74,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> この市民セミナーを受講できるのは次のうちのだれか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 市外から河山市の大学に通学している21歳の女性",
-        "option2": " 河山市のスーパーに勤務している35歳の男性",
-        "option3": " 河山市外の自宅で学習塾を開いている46歳の女性",
-        "option4": " 河山市役所の市民課に勤めている53歳の男性",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "这道题问的是谁可以参加这个市民讲座。  \n解答时只需抓住关键信息：对象为居住或工作在河山市且年满18岁的社会人士（不包括河山市职员）。  \n由于这是信息查找类题目，可以根据问题直接定位相关内容。有了这句关于“对象”的说明，就能准确判断出正确答案。",
-        "extending": [],
-        "parentId": 74,
-        "articleAssistant": null
+        "images": [
+          "pic/220100774.jpg"
+        ]
       }
     },
     {
       "id": "imported:201007:N2:3:3212:75",
-      "sourceId": 3212,
-      "questionNumber": 75,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> このセミナーの申し込みについて、正しいものはどれか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "定員が20名なので早く申し込む必要がある。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "市役所で申し込む場合は、水曜日の決められた時間に行く。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "はがきで申し込む場合は、1枚で何人でも申し込むことができる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ホームページから申し込む場合は、申しこめない時間がある。"
+        }
       ],
+      "correctOptionId": "D",
+      "explanation": [
+        "这道题虽然不难，但需要逐个选项分析判断。  \n根据“定員、20名、応募者多数の場合は抽選になります。”可知选项1错误；  \n根据“受付時間：水曜日を除く　9：00～17：00”可知选项2错误；  \n根据“はがき1枚につき1名のみ受付可能です。”可知选项3错误；  \n而根据“毎日午前2：00～5：00はホームページの点検作業のため申し込めません。”可以确定选项4正确。"
+      ],
+      "sourceQuestionNumber": 75,
+      "sourceId": 3212,
       "media": {
-        "picture": "pic/220100774.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3212,
-        "time": "201007",
-        "level": "n2",
-        "questionId": 75,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> このセミナーの申し込みについて、正しいものはどれか。</p>",
-        "picture": "pic/220100774.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 定員が20名なので早く申し込む必要がある。",
-        "option2": " 市役所で申し込む場合は、水曜日の決められた時間に行く。",
-        "option3": " はがきで申し込む場合は、1枚で何人でも申し込むことができる。",
-        "option4": " ホームページから申し込む場合は、申しこめない時間がある。",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "这道题虽然不难，但需要逐个选项分析判断。  \n根据“定員、20名、応募者多数の場合は抽選になります。”可知选项1错误；  \n根据“受付時間：水曜日を除く　9：00～17：00”可知选项2错误；  \n根据“はがき1枚につき1名のみ受付可能です。”可知选项3错误；  \n而根据“毎日午前2：00～5：00はホームページの点検作業のため申し込めません。”可以确定选项4正确。",
-        "extending": [],
-        "parentId": 3211,
-        "articleAssistant": null
+        "images": [
+          "pic/220100774.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

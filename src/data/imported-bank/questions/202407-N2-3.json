@@ -670,84 +670,89 @@
       ],
       "sourceQuestionNumber": 69,
       "sourceId": 170
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202407:N2:3:171:70",
-      "sourceId": 171,
-      "questionNumber": 70,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> 次の４人は、動画コンテストに応募しようと考えている。現段階で応募条件を満たしているのは誰か。</p>\n<table style=\"\n  border-collapse: collapse;\n  width: 100%;\n  max-width: 800px;\n  margin: 20px 0;\n  font-family: 'Meiryo', 'MS Gothic', sans-serif;\n  font-size: 14px;\n  border: 1px solid #e0e0e0;\n\">\n  <thead>\n    <tr style=\"background-color: #f5f5f5;\">\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">名前</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">職業</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">作品の内容</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">動画の長さ</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">動画の発表歴</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">ヤンさん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">高校生</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の自然の魅力</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">25秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n    <tr style=\"background-color: #fafafa;\">\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">村木さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">塾講師</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の緑茶の魅力</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">28秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">長島さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">会社員</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の歴史的な建物</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">3分45秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">あり</td>\n    </tr>\n    <tr style=\"background-color: #fafafa;\">\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">原田さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">中学生</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の祭りの文化</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">2分15秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n  </tbody>\n</table>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ヤンさん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "村木さん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "長島さん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "原田さん"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "要满足参赛条件，需符合以下要求：\n\n视频类型与长度：  \n绿茶部門：以春口市绿茶为主题的宣传视频，时长在20至30秒之间。  \n观光部門：内容涉及春口市历史、文化或自然的视频，时长在2至5分钟之间。  \n参赛资格：仅限高中生及以上学历者参加。\n\n视频必须为未发表的原创作品。\n\n参赛者分析：  \nヤンさん（杨先生）：  \n为高中生，年龄符合要求。  \n视频内容为春口市的自然景观，属于观光部門。  \n视频时长25秒，未达到观光部門至少2分钟的要求。  \n因此不符合参赛条件。\n\n村木さん（村木先生）：  \n职业为补习班讲师，年龄符合要求。  \n视频内容介绍春口市绿茶，属于绿茶部門。  \n视频时长28秒，在20至30秒范围内，符合绿茶部門规定。  \n作品为未发表，满足视频原创性要求。  \n因此符合全部参赛条件。\n\n長島さん（长岛先生）：  \n为公司职员，年龄符合要求。  \n视频内容关于春口市历史建筑，属于观光部門。  \n视频时长3分45秒，在2至5分钟范围内，符合长度要求。  \n但该作品已发表过，不满足未发表的条件。  \n因此不符合参赛要求。\n\n原田さん（原田先生）：  \n为初中生，未达到高中生及以上的资格要求。  \n因此不符合参赛条件。\n\n正确答案：  \n2) 村木さん\n\n说明：村木先生满足所有参赛条件，包括年龄、视频类别、时长以及作品未发表。"
+      ],
+      "sourceQuestionNumber": 70,
+      "sourceId": 171,
       "media": {
-        "picture": "pic/220240770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 171,
-        "time": null,
-        "level": null,
-        "questionId": 70,
-        "typeQuestionId": 18,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 次の４人は、動画コンテストに応募しようと考えている。現段階で応募条件を満たしているのは誰か。</p>\n<table style=\"\n  border-collapse: collapse;\n  width: 100%;\n  max-width: 800px;\n  margin: 20px 0;\n  font-family: 'Meiryo', 'MS Gothic', sans-serif;\n  font-size: 14px;\n  border: 1px solid #e0e0e0;\n\">\n  <thead>\n    <tr style=\"background-color: #f5f5f5;\">\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">名前</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">職業</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">作品の内容</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">動画の長さ</th>\n      <th style=\"border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left;\">動画の発表歴</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">ヤンさん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">高校生</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の自然の魅力</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">25秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n    <tr style=\"background-color: #fafafa;\">\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">村木さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">塾講師</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の緑茶の魅力</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">28秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">長島さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">会社員</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の歴史的な建物</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">3分45秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">あり</td>\n    </tr>\n    <tr style=\"background-color: #fafafa;\">\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">原田さん</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">中学生</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">春口市の祭りの文化</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">2分15秒</td>\n      <td style=\"border: 1px solid #e0e0e0; padding: 10px 12px;\">なし</td>\n    </tr>\n  </tbody>\n</table>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " ヤンさん",
-        "option2": " 村木さん",
-        "option3": " 長島さん",
-        "option4": " 原田さん",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "要满足参赛条件，需符合以下要求：\n\n视频类型与长度：  \n绿茶部門：以春口市绿茶为主题的宣传视频，时长在20至30秒之间。  \n观光部門：内容涉及春口市历史、文化或自然的视频，时长在2至5分钟之间。  \n参赛资格：仅限高中生及以上学历者参加。\n\n视频必须为未发表的原创作品。\n\n参赛者分析：  \nヤンさん（杨先生）：  \n为高中生，年龄符合要求。  \n视频内容为春口市的自然景观，属于观光部門。  \n视频时长25秒，未达到观光部門至少2分钟的要求。  \n因此不符合参赛条件。\n\n村木さん（村木先生）：  \n职业为补习班讲师，年龄符合要求。  \n视频内容介绍春口市绿茶，属于绿茶部門。  \n视频时长28秒，在20至30秒范围内，符合绿茶部門规定。  \n作品为未发表，满足视频原创性要求。  \n因此符合全部参赛条件。\n\n長島さん（长岛先生）：  \n为公司职员，年龄符合要求。  \n视频内容关于春口市历史建筑，属于观光部門。  \n视频时长3分45秒，在2至5分钟范围内，符合长度要求。  \n但该作品已发表过，不满足未发表的条件。  \n因此不符合参赛要求。\n\n原田さん（原田先生）：  \n为初中生，未达到高中生及以上的资格要求。  \n因此不符合参赛条件。\n\n正确答案：  \n2) 村木さん\n\n说明：村木先生满足所有参赛条件，包括年龄、视频类别、时长以及作品未发表。",
-        "extending": [],
-        "parentId": 70,
-        "articleAssistant": null
+        "images": [
+          "pic/220240770.jpg"
+        ]
       }
     },
     {
       "id": "imported:202407:N2:3:172:71",
-      "sourceId": 172,
-      "questionNumber": 71,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<p> ローズさんは、動画コンテストに応募しようと考えている。 動画は、インターネットで送りたい。ローズさんは、どうしなければならないか。</p>",
+      "instruction": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "5月10日までに応募情報を送信し、17日までに動画を送信する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "5月10日までに応募情報を送信し、24日までに動画を送信する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "5 月 10 日までに応募情報と動画を送信する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "5月24日までに応募情報と動画を送信する"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "罗兹女士需在5月10日前提交参赛信息，之后在5月24日前通过互联网上传视频。"
+      ],
+      "sourceQuestionNumber": 71,
+      "sourceId": 172,
       "media": {
-        "picture": "pic/220240770.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 172,
-        "time": "202407",
-        "level": "n2",
-        "questionId": 71,
-        "typeQuestionId": 19,
-        "type": 3,
-        "bigTitle": "<p>問題14 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> ローズさんは、動画コンテストに応募しようと考えている。 動画は、インターネットで送りたい。ローズさんは、どうしなければならないか。</p>",
-        "picture": "pic/220240770.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 5月10日までに応募情報を送信し、17日までに動画を送信する。",
-        "option2": " 5月10日までに応募情報を送信し、24日までに動画を送信する。",
-        "option3": " 5 月 10 日までに応募情報と動画を送信する。",
-        "option4": " 5月24日までに応募情報と動画を送信する",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "罗兹女士需在5月10日前提交参赛信息，之后在5月24日前通过互联网上传视频。",
-        "extending": [],
-        "parentId": 171,
-        "articleAssistant": null
+        "images": [
+          "pic/220240770.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

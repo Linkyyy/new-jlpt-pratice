@@ -1,4 +1,8 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["题目图片暂时无法加载，请稍后重试。", "問題の画像を読み込めません。しばらくしてから再試行してください。", "The question image could not load. Please try again shortly."],
+  ["重新加载图片", "画像を再読み込み", "Reload image"],
+  ["正在加载图片……", "画像を読み込み中……", "Loading image…"],
+  ["仅支持确认后清空全部做题记录。", "確認後に全解答履歴をクリアする操作のみ対応しています。", "Only a confirmed clear of all study history is supported."],
   ["整卷练习", "全科目セット", "Full paper"],
   ["成绩报告", "成績レポート", "Score report"],
   ["练习估分", "練習の推定得点", "Practice estimate"],

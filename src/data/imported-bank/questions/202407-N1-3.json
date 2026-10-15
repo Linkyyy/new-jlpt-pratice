@@ -744,84 +744,89 @@
       ],
       "sourceQuestionNumber": 64,
       "sourceId": 3607
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:202407:N1:3:3608:65",
-      "sourceId": 3608,
-      "questionNumber": 65,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> マリーさんは秋川大学で本を借りるために、図書館利用カードを作ろうと思っている。 今日は金曜日である。明日の夜までに本を借りたいが、図書館利用カードは、どのよう に申請しなければならないか。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "今日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "今日、中央図書館で 9 時から 17 時までの間に申請する。文学部図書館では申請できない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "今日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請するか、明日、中央図書館で 9 時から 17 時までの間に申請する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "今日か明日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請する。"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 3608,
       "media": {
-        "picture": "pic/120240765.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3608,
-        "time": null,
-        "level": null,
-        "questionId": 65,
-        "typeQuestionId": 20,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> マリーさんは秋川大学で本を借りるために、図書館利用カードを作ろうと思っている。 今日は金曜日である。明日の夜までに本を借りたいが、図書館利用カードは、どのよう に申請しなければならないか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 今日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請する。",
-        "option2": " 今日、中央図書館で 9 時から 17 時までの間に申請する。文学部図書館では申請できない。",
-        "option3": " 今日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請するか、明日、中央図書館で 9 時から 17 時までの間に申請する。",
-        "option4": " 今日か明日、中央図書館か文学部図書館で 9 時から 17 時までの間に申請する。",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 65,
-        "articleAssistant": null
+        "images": [
+          "pic/120240765.jpg"
+        ]
       }
     },
     {
       "id": "imported:202407:N1:3:3609:66",
-      "sourceId": 3609,
-      "questionNumber": 66,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N1",
+      "category": "阅读",
+      "prompt": "<p> カイさんは、研究のために資料を借りたり複写したりする必要があって、秋川大学の文学部図書館に来た。図書館利用カードは持っている。今日は、授業期間の火曜日である。貸し出しと複写は、何時まで可能か。</p>",
+      "instruction": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "貸し出しは 18 時の 15 分前まで、複写は 18 時まで可能である。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "貸し出しは 21 時の 15 分前まで、複写は 21 時まで可能である。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "貸し出しは 21 時の 15 分前まで、複写は 21 時の 10 分前まで可能である。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "貸し出しは 21 時の 30 分前まで、複写は 21 時の 10 分前まで可能である。"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<div style=\"color: #666; margin-bottom: 20px;\">秋川大学＞秋川大学图书馆＞公众服务</div>\n    \n<h3 style=\"color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-top: 0;\">公众图书馆使用指南</h3>\n\n<p>非秋川大学学生的一般公众也可出于研究等目的，使用秋川校区的中央图书馆和<br>\n文学院图书馆的资料。</p>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【入馆方式】</h4>\n<ul>\n    <li>持有图书馆使用卡的读者，可通过自动闸机进出</li>\n    <li>未持卡读者可在服务台办理当日入馆证</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【图书馆使用卡】</h4>\n<ul>\n    <li>借阅图书资料时需出示使用卡</li>\n    <li>办理请携带身份证件至中央图书馆或文学院图书馆服务台<br>（文学院图书馆仅限工作日办理）</li>\n    <li>工作日9:00-17:00申请的当日发卡，17:00后及周末申请的<br>顺延至下一个工作日发卡</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【借阅规则】</h4>\n<ul>\n    <li>最多可借5册，借期14天</li>\n    <li>中央图书馆闭馆前30分钟停止借书，文学院图书馆闭馆前15分钟停止</li>\n    <li>闭馆时可至服务台还书，非开放时间请使用还书箱</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【资料复印】</h4>\n<ul>\n    <li>可使用馆内复印机复印资料</li>\n    <li>中央图书馆闭馆前10分钟停止使用，文学院图书馆可使用至闭馆</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【开放时间】</h4>\n<table style=\"width: 100%; border-collapse: collapse; margin: 20px 0;\">\n    <tr>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">图书馆</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">时段</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">平日</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">周末</th>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\" rowspan=\"2\">中央图书馆</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">学期期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-22:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-17:00</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">寒暑假期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-19:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">闭馆</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\" rowspan=\"2\">文学院图书馆</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">学期期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-21:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-17:00</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">寒暑假期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-18:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">闭馆</td>\n    </tr>\n</table>\n\n<p>※具体日期请查看图书馆开放日历</p>"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 3609,
       "media": {
-        "picture": "pic/120240765.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 3609,
-        "time": "202407",
-        "level": "n1",
-        "questionId": 66,
-        "typeQuestionId": 21,
-        "type": 3,
-        "bigTitle": "<p>問題13　下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> カイさんは、研究のために資料を借りたり複写したりする必要があって、秋川大学の文学部図書館に来た。図書館利用カードは持っている。今日は、授業期間の火曜日である。貸し出しと複写は、何時まで可能か。</p>",
-        "picture": "pic/120240765.jpg",
-        "audio": null,
-        "article": null,
-        "option1": " 貸し出しは 18 時の 15 分前まで、複写は 18 時まで可能である。",
-        "option2": " 貸し出しは 21 時の 15 分前まで、複写は 21 時まで可能である。",
-        "option3": " 貸し出しは 21 時の 15 分前まで、複写は 21 時の 10 分前まで可能である。",
-        "option4": " 貸し出しは 21 時の 30 分前まで、複写は 21 時の 10 分前まで可能である。",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<div style=\"color: #666; margin-bottom: 20px;\">秋川大学＞秋川大学图书馆＞公众服务</div>\n    \n<h3 style=\"color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-top: 0;\">公众图书馆使用指南</h3>\n\n<p>非秋川大学学生的一般公众也可出于研究等目的，使用秋川校区的中央图书馆和<br>\n文学院图书馆的资料。</p>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【入馆方式】</h4>\n<ul>\n    <li>持有图书馆使用卡的读者，可通过自动闸机进出</li>\n    <li>未持卡读者可在服务台办理当日入馆证</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【图书馆使用卡】</h4>\n<ul>\n    <li>借阅图书资料时需出示使用卡</li>\n    <li>办理请携带身份证件至中央图书馆或文学院图书馆服务台<br>（文学院图书馆仅限工作日办理）</li>\n    <li>工作日9:00-17:00申请的当日发卡，17:00后及周末申请的<br>顺延至下一个工作日发卡</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【借阅规则】</h4>\n<ul>\n    <li>最多可借5册，借期14天</li>\n    <li>中央图书馆闭馆前30分钟停止借书，文学院图书馆闭馆前15分钟停止</li>\n    <li>闭馆时可至服务台还书，非开放时间请使用还书箱</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【资料复印】</h4>\n<ul>\n    <li>可使用馆内复印机复印资料</li>\n    <li>中央图书馆闭馆前10分钟停止使用，文学院图书馆可使用至闭馆</li>\n</ul>\n\n<h4 style=\"color: #444; margin-top: 25px;\">【开放时间】</h4>\n<table style=\"width: 100%; border-collapse: collapse; margin: 20px 0;\">\n    <tr>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">图书馆</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">时段</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">平日</th>\n        <th style=\"border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;\">周末</th>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\" rowspan=\"2\">中央图书馆</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">学期期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-22:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-17:00</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">寒暑假期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-19:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">闭馆</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\" rowspan=\"2\">文学院图书馆</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">学期期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-21:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-17:00</td>\n    </tr>\n    <tr>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">寒暑假期间</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">9:00-18:00</td>\n        <td style=\"border: 1px solid #ddd; padding: 8px; text-align: left;\">闭馆</td>\n    </tr>\n</table>\n\n<p>※具体日期请查看图书馆开放日历</p>",
-        "extending": [],
-        "parentId": 3608,
-        "articleAssistant": null
+        "images": [
+          "pic/120240765.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

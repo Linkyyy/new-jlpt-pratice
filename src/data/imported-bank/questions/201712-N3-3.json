@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 7648
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201712:N3:3:7649:73",
-      "sourceId": 7649,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> トンさんは、「新聞をつくって、発表しよう!」のグループ活動でグループCになった。グループCが、いちばん早くコンピューター室を利用できるのは何月何日の何時からか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "11月6日の10:50から"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "11月6日の11:25から"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "11月13日の10:50から"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "11月13日の11:25から"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>正确答案:2</p>\n<p>问题是:「トンさん」在本次“制作报纸,然后发表吧！”小组活动中被分到了C组。C组最早能使用微机室的时间是几月几日几时开始呢?</p>\n<p>结合说明和图表可见，C组可以使用微机室的时间是从11月 6日的11：25开始,以及11月13日的10：50开始,其中显然11月 6日的11：25更早。</p>\n<p>所以本题正确答案是选项2“11月 6日11：25开始”。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 7649,
       "media": {
-        "picture": "pic/320171273.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7649,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> トンさんは、「新聞をつくって、発表しよう!」のグループ活動でグループCになった。グループCが、いちばん早くコンピューター室を利用できるのは何月何日の何時からか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 11月6日の10:50から",
-        "option2": " 11月6日の11:25から",
-        "option3": " 11月13日の10:50から",
-        "option4": " 11月13日の11:25から",
-        "answer": 2,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>正确答案:2</p>\n<p>问题是:「トンさん」在本次“制作报纸,然后发表吧！”小组活动中被分到了C组。C组最早能使用微机室的时间是几月几日几时开始呢?</p>\n<p>结合说明和图表可见，C组可以使用微机室的时间是从11月 6日的11：25开始,以及11月13日的10：50开始,其中显然11月 6日的11：25更早。</p>\n<p>所以本题正确答案是选项2“11月 6日11：25开始”。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320171273.jpg"
+        ]
       }
     },
     {
       "id": "imported:201712:N3:3:7650:74",
-      "sourceId": 7650,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> グレイグさんたちのグループは、11月27日の授業時間中にインタビューを行いたいと考えている。いつ先生にインタビューの案を見せなければならないか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "11月6日"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "11月13日"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "11月20日"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "11月27日"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "根据图表备注，若要在课堂时间内进行采访，需在前一次授课时向老师提交方案。由于11月27日的前一次授课是11月13日（11月20日无课），因此必须在11月13日提交，故答案为2“11月13日”。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 7650,
       "media": {
-        "picture": "pic/320171273.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 7650,
-        "time": "201712",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> グレイグさんたちのグループは、11月27日の授業時間中にインタビューを行いたいと考えている。いつ先生にインタビューの案を見せなければならないか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 11月6日",
-        "option2": " 11月13日",
-        "option3": " 11月20日",
-        "option4": " 11月27日",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>74.正确答案:2</p>\n<p>问题是:「グレイグさん」所在的小组,在11月27日的课堂时间内想要进行采访活动,他们需要什么时候给老师看采访的方案呢?</p>\n<p>图表中备注“如果需要在课堂时间内进行采访活动,需要在前一次授课时给老师看采访的方案”,所以 11月27日需要采访的话,必须在上一次授课时。</p>\n<p>但是由于11月20日并没有授课安排,所以只能是11月13日给老师看采访方案,故本题选2“11月13日”。</p>",
-        "assistantNew": "根据图表备注，若要在课堂时间内进行采访，需在前一次授课时向老师提交方案。由于11月27日的前一次授课是11月13日（11月20日无课），因此必须在11月13日提交，故答案为2“11月13日”。",
-        "extending": [],
-        "parentId": 7649,
-        "articleAssistant": null
+        "images": [
+          "pic/320171273.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

@@ -522,84 +522,89 @@
       ],
       "sourceQuestionNumber": 72,
       "sourceId": 8770
-    }
-  ],
-  "unavailable": [
+    },
     {
       "id": "imported:201207:N3:3:8771:73",
-      "sourceId": 8771,
-      "questionNumber": 73,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> 原さんは、来週の木曜日の午後に読書クラブの活動を行う会場を探している。参加者は30名程度で、料理は必要ないので、飲み物だけ買って持っていきたい。原さんの希望に合う会場はいくつか。</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1つ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2つ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3つ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4つ"
+        }
       ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>正解：1</p>\n<p>解析:据题干可知，原さん的会场要求是利用时间 「来週の木曜日の午後」，「参加者は30名程度」「料理は必要ない」「飲み物だけ買って持っていきたい」。</p>\n<p>由于①和③都是「必ず料理を注文してください」 请一定要点餐，所以可以排除。</p>\n<p>②的话，定休日:木曜日，也就是周四休息。因此也可以排除。</p>\n<p>所以只有④是符合原先生要求的，正确选项就是选项1。</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "sourceId": 8771,
       "media": {
-        "picture": "pic/320120773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 8771,
-        "time": null,
-        "level": null,
-        "questionId": 73,
-        "typeQuestionId": 14,
-        "type": 3,
-        "bigTitle": null,
-        "question": null,
-        "littleQuestion": "<p> 原さんは、来週の木曜日の午後に読書クラブの活動を行う会場を探している。参加者は30名程度で、料理は必要ないので、飲み物だけ買って持っていきたい。原さんの希望に合う会場はいくつか。</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 1つ",
-        "option2": " 2つ",
-        "option3": " 3つ",
-        "option4": " 4つ",
-        "answer": 1,
-        "isMultiple": null,
-        "multipleIds": null,
-        "assistant": "<p>正解：1</p>\n<p>解析:据题干可知，原さん的会场要求是利用时间 「来週の木曜日の午後」，「参加者は30名程度」「料理は必要ない」「飲み物だけ買って持っていきたい」。</p>\n<p>由于①和③都是「必ず料理を注文してください」 请一定要点餐，所以可以排除。</p>\n<p>②的话，定休日:木曜日，也就是周四休息。因此也可以排除。</p>\n<p>所以只有④是符合原先生要求的，正确选项就是选项1。</p>",
-        "assistantNew": null,
-        "extending": [],
-        "parentId": 73,
-        "articleAssistant": null
+        "images": [
+          "pic/320120773.jpg"
+        ]
       }
     },
     {
       "id": "imported:201207:N3:3:8772:74",
-      "sourceId": 8772,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
+      "level": "N3",
+      "category": "阅读",
+      "prompt": "<p> マイさんは、友達から「交流会の会場を探してほしい」と下のメモを渡された。友達の希望に合う会場はどれか。<br>\nメモ:<br>\n・来週の土曜日のお昼<br>\n・人数は20人ぐらい<br>\n・安見駅から歩いて20分以内<br>\n・料理は2, 000円以内で会場で注文したい</p>",
+      "instruction": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
       ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正解は2です。マイさんの条件は「来週の土曜日のお昼」「20人程度」「安見駅から徒歩20分以内」「料理を会場で注文して1人2000円以内」です。1人2000円以内で注文可能なのは①と②ですが、①は「安見駅から徒歩30分」で条件に合いません。そのため正しいのは②です。"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 8772,
       "media": {
-        "picture": "pic/320120773.jpg",
-        "audio": ""
-      },
-      "raw": {
-        "id": 8772,
-        "time": "201207",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 15,
-        "type": 3,
-        "bigTitle": "<p>問題7 下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。</p>",
-        "question": "",
-        "littleQuestion": "<p> マイさんは、友達から「交流会の会場を探してほしい」と下のメモを渡された。友達の希望に合う会場はどれか。<br>\nメモ:<br>\n・来週の土曜日のお昼<br>\n・人数は20人ぐらい<br>\n・安見駅から歩いて20分以内<br>\n・料理は2, 000円以内で会場で注文したい</p>",
-        "picture": null,
-        "audio": null,
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": "<p>正解:2</p>\n<p>解析:マイさん的要求有「来週の土曜日のお昼」「人数は20人ぐらい」「安見駅から歩いて20 分以内」「料理は2000円以内で会場で注文したい」。</p>\n<p>可以提供单人2000日元以内点餐的只有①、②，但是①的话 「安見駅から徒歩30分」，不符合要求。</p>\n<p>所以正确答案是选项 2 ②。</p>",
-        "assistantNew": "正解は2です。マイさんの条件は「来週の土曜日のお昼」「20人程度」「安見駅から徒歩20分以内」「料理を会場で注文して1人2000円以内」です。1人2000円以内で注文可能なのは①と②ですが、①は「安見駅から徒歩30分」で条件に合いません。そのため正しいのは②です。",
-        "extending": [],
-        "parentId": 8771,
-        "articleAssistant": null
+        "images": [
+          "pic/320120773.jpg"
+        ]
       }
     }
-  ]
+  ],
+  "unavailable": []
 }

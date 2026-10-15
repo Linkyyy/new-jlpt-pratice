@@ -2,17 +2,15 @@
 
 import { useId, useImperativeHandle, useRef, useState, type Ref } from "react";
 import { useI18n } from "@/lib/i18n";
-import { deleteStudyHistory, readStudySnapshot, type StudyAttempt } from "@/lib/study-store";
+import { deleteStudyHistory, readStudySnapshot } from "@/lib/study-store";
 import { requestCloudBackup as api, CloudRequestError, type CloudState } from "@/lib/cloud-backup-client";
-import { attemptTitle } from "./study-dashboard";
 import { LoadingSpinner } from "./loading-skeleton";
 import MessageToast, { type FeedbackMessage } from "./message-toast";
 
-export type HistoryDeletionHandle = { open: (attempt: StudyAttempt | null) => void };
+export type HistoryDeletionHandle = { open: () => void };
 export default function HistoryDeletion({ ref }: { ref: Ref<HistoryDeletionHandle> }) {
   const { t } = useI18n();
   const id = useId(), dialog = useRef<HTMLDialogElement>(null);
-  const [target, setTarget] = useState<StudyAttempt | null>(null);
   const [cloud, setCloud] = useState<CloudState | null>(null);
   const [busy, setBusy] = useState<"check" | "delete" | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -30,9 +28,9 @@ export default function HistoryDeletion({ ref }: { ref: Ref<HistoryDeletionHandl
       if (!request.signal.aborted) setError("无法确认云备份状态，未删除记录。请重试。");
     } finally { if (!request.signal.aborted) setBusy(null); }
   }
-  function open(attempt: StudyAttempt | null) {
+  function open() {
     if (busy === "delete") return;
-    setTarget(attempt); setMessage(null); dialog.current?.showModal(); void check();
+    setMessage(null); dialog.current?.showModal(); void check();
   }
   useImperativeHandle(ref, () => ({ open }));
   async function confirm() {
@@ -49,10 +47,10 @@ export default function HistoryDeletion({ ref }: { ref: Ref<HistoryDeletionHandl
         setCloud(null); setError("登录账号已变化，请重新检查并确认删除。"); return;
       }
       if (cloud.user) {
-        await api("/history", { attemptId: target?.id ?? null, expectedUsername: cloud.user.username, expectedRevision: cloud.backup?.revision ?? null }, "DELETE");
+        await api("/history", { attemptId: null, confirmed: true, expectedUsername: cloud.user.username, expectedRevision: cloud.backup?.revision ?? null }, "DELETE");
         cloudDeleted = true;
       }
-      const result = deleteStudyHistory(target?.id ?? null, snapshot.data);
+      const result = deleteStudyHistory(null, snapshot.data);
       if (!result.ok) {
         setCloud(null);
         setError(cloudDeleted ? "云端记录已删除，本地记录保留。请重新检查后重试。" : result.error);
@@ -67,13 +65,12 @@ export default function HistoryDeletion({ ref }: { ref: Ref<HistoryDeletionHandl
   }
   return <>
     <dialog ref={dialog} aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`} onCancel={event => { if (busy === "delete") event.preventDefault(); }} onClose={() => { if (!dialog.current?.open) checking.current?.abort(); }} className="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-xl backdrop:bg-slate-900/50">
-      <h2 id={`${id}-title`} className="text-xl font-bold">{t(target ? "删除这条做题记录？" : "清空全部做题记录？")}</h2>
-      {target && <p className="mt-3 text-sm font-semibold text-slate-700">{attemptTitle(target, t)}</p>}
-      <p id={`${id}-description`} className="mt-3 text-sm leading-7 text-slate-600">{t(target ? "将删除这次练习或考试的作答和成绩，此操作无法撤销。收藏题目和收藏夹会保留。" : "将删除全部练习、考试记录、成绩和学习足迹，此操作无法撤销。收藏题目和收藏夹会保留。")}</p>
+      <h2 id={`${id}-title`} className="text-xl font-bold">{t("清空全部做题记录？")}</h2>
+      <p id={`${id}-description`} className="mt-3 text-sm leading-7 text-slate-600">{t("将删除全部练习、考试记录、成绩和学习足迹，此操作无法撤销。收藏题目和收藏夹会保留。")}</p>
       {busy && <p role="status" className="mt-4 flex items-center gap-2 text-sm text-slate-500"><LoadingSpinner />{t(busy === "check" ? "正在检查云备份……" : "正在删除记录……")}</p>}
-      {cloud && <p className="mt-4 rounded-xl bg-rose-50 p-3 text-sm leading-6 text-rose-700">{cloud.user ? <>{cloud.user.username} · {t(target ? "同时删除这个账号云备份中的对应记录。" : "同时清空这个账号云备份中的全部做题记录。")}</> : t("当前未登录，仅删除此浏览器中的做题记录。")}</p>}
+      {cloud && <p className="mt-4 rounded-xl bg-rose-50 p-3 text-sm leading-6 text-rose-700">{cloud.user ? <>{cloud.user.username} · {t("同时清空这个账号云备份中的全部做题记录。")}</> : t("当前未登录，仅删除此浏览器中的做题记录。")}</p>}
       {error && <div className="mt-4"><p role="alert" className="text-sm leading-6 text-rose-700">{t(error)}</p><button type="button" disabled={Boolean(busy)} onClick={() => { void check(); }} className="mt-2 min-h-11 text-sm font-semibold text-indigo-600 disabled:opacity-40">{t("重新检查")}</button></div>}
-      <div className="mt-6 flex gap-3"><button autoFocus type="button" disabled={busy === "delete"} onClick={() => dialog.current?.close()} className="min-h-11 flex-1 rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold hover:bg-slate-50 disabled:opacity-40">{t("取消")}</button><button type="button" disabled={Boolean(busy) || !cloud} onClick={() => { void confirm(); }} className="min-h-11 flex-1 rounded-xl bg-rose-600 px-4 py-3 text-sm font-semibold text-white hover:bg-rose-700 disabled:opacity-40">{t(target ? "确认删除" : "确认清空")}</button></div>
+      <div className="mt-6 flex gap-3"><button autoFocus type="button" disabled={busy === "delete"} onClick={() => dialog.current?.close()} className="min-h-11 flex-1 rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold hover:bg-slate-50 disabled:opacity-40">{t("取消")}</button><button type="button" disabled={Boolean(busy) || !cloud} onClick={() => { void confirm(); }} className="min-h-11 flex-1 rounded-xl bg-rose-600 px-4 py-3 text-sm font-semibold text-white hover:bg-rose-700 disabled:opacity-40">{t("确认清空")}</button></div>
       <MessageToast message={dialogMessage} onDismiss={() => setDialogMessage(null)} />
     </dialog>
     <MessageToast message={message} onDismiss={() => setMessage(null)} />

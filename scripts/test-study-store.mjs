@@ -127,24 +127,30 @@ test("legacy records remain valid and mobile font preferences are saved independ
   assert.equal(restored.raw(), raw);
 });
 
-test("history deletion removes selected scores/trails and clear-all resets activity days", () => {
+test("history cannot delete individual records; clear-all resets scores, trails and activity days", () => {
   const s = store(), first = s.api.createStudyAttempt(paper, "practice").attempt;
   s.api.updateStudyAttempt(first.id, { ...state(first), status: "completed", answers: { one: { selectedOptionId: "A", submitted: true }, two: { selectedOptionId: "B", submitted: true } } });
-  const second = s.api.createStudyAttempt(paper, "practice").attempt;
-  assert.equal(s.api.deleteStudyHistory(first.id).ok, true);
-  assert.deepEqual(s.read().attempts.map(a => a.id), [second.id]);
+  s.api.createStudyAttempt(paper, "practice");
+  const raw = s.raw();
+  for (const attemptId of [first.id, "missing", "", undefined]) {
+    assert.equal(s.api.deleteStudyHistory(attemptId).ok, false);
+    assert.equal(s.raw(), raw);
+  }
+  assert.equal(s.api.studySummary(s.read()).completed, 1);
+  assert.equal(s.api.questionTrails(s.read()).size, 2);
+  assert.equal(s.api.deleteStudyHistory(null).ok, true);
+  assert.deepEqual(s.read(), { version: 1, attempts: [], activityDays: [] });
   assert.equal(s.api.studySummary(s.read()).completed, 0);
   assert.equal(s.api.questionTrails(s.read()).size, 0);
   assert.equal(s.api.updateStudyAttempt(first.id, state(first)).ok, false);
-  assert.equal(s.api.deleteStudyHistory(null).ok, true);
-  assert.deepEqual(s.read(), { version: 1, attempts: [], activityDays: [] });
 });
 test("deletion rejects changed or corrupt local data and preserves bytes on storage failure", () => {
-  const s = store(), a = s.api.createStudyAttempt(paper, "practice").attempt;
+  const s = store();
+  s.api.createStudyAttempt(paper, "practice");
   const before = s.read();
   s.api.createStudyAttempt(paper, "practice");
   const raw = s.raw();
-  assert.equal(s.api.deleteStudyHistory(a.id, before).ok, false);
+  assert.equal(s.api.deleteStudyHistory(null, before).ok, false);
   assert.equal(s.raw(), raw);
   s.fail();
   assert.equal(s.api.deleteStudyHistory(null).ok, false);
