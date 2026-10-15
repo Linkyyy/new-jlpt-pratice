@@ -1,11 +1,14 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n";
+
 import { useRef, useState } from "react";
 import { useFavorites } from "@/lib/favorites-store";
 import { studyDay, useStudyHistory } from "@/lib/study-store";
 import { createLearningBackup, importLearningBackup } from "@/lib/learning-backup";
 
 export default function BackupControls() {
+  const { t } = useI18n();
   const favorites = useFavorites(), study = useStudyHistory();
   const input = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState<{ text: string; error: boolean } | null>(null);
@@ -29,7 +32,7 @@ export default function BackupControls() {
     if (input.current) input.current.value = "";
   }
   return <div className="max-w-md">
-    <div className="flex flex-wrap gap-4 text-sm font-semibold text-indigo-600"><button onClick={exportBackup} disabled={disabled} title="导出收藏、收藏夹和做题记录" className="min-h-11 disabled:opacity-40">导出备份</button><button onClick={() => input.current?.click()} disabled={disabled} title="合并收藏与做题记录，也支持旧版备份" className="min-h-11 disabled:opacity-40">导入备份</button><input ref={input} type="file" accept="application/json,.json" aria-label="导入收藏与学习记录备份" className="hidden" onChange={event => { void importBackup(event.target.files?.[0]); }} /></div>
-    {message && <p role={message.error ? "alert" : "status"} className={`mt-1 text-xs leading-6 ${message.error ? "text-rose-700" : "text-slate-500"}`}>{message.text}</p>}
+    <div className="flex flex-wrap gap-4 text-sm font-semibold text-indigo-600"><button onClick={exportBackup} disabled={disabled} title={t("导出收藏、收藏夹和做题记录")} className="min-h-11 disabled:opacity-40">{t("导出备份")}</button><button onClick={() => input.current?.click()} disabled={disabled} title={t("合并收藏与做题记录，也支持旧版备份")} className="min-h-11 disabled:opacity-40">{t("导入备份")}</button><input ref={input} type="file" accept="application/json,.json" aria-label={t("导入收藏与学习记录备份")} className="hidden" onChange={event => { void importBackup(event.target.files?.[0]); }} /></div>
+    {message && <p role={message.error ? "alert" : "status"} className={`mt-1 text-xs leading-6 ${message.error ? "text-rose-700" : "text-slate-500"}`}>{t(message.text)}</p>}
   </div>;
 }

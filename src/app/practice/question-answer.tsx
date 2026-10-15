@@ -1,3 +1,7 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n";
+
 import type { RefObject } from "react";
 import { optionLabel, type OptionId, type PracticeQuestion } from "@/data/practice-question";
 import RichContent from "@/components/rich-content";
@@ -12,13 +16,14 @@ interface QuestionAnswerProps {
 }
 
 export default function QuestionAnswer({ question, selectedOptionId, locked, revealAnswer, onSelect, feedbackRef }: QuestionAnswerProps) {
+  const { t } = useI18n();
   const isCorrect = selectedOptionId === question.correctOptionId;
   const feedback = selectedOptionId === null ? "未作答" : isCorrect ? "回答正确" : "回答错误";
 
   return (
     <>
       <fieldset disabled={locked} aria-describedby="answer-help">
-        <legend className="sr-only">答案选项（单选）</legend>
+        <legend className="sr-only">{t("答案选项（单选）")}</legend>
         <div className="space-y-2 sm:space-y-3">
           {question.options.map((option) => {
             const selected = selectedOptionId === option.id;
@@ -31,19 +36,19 @@ export default function QuestionAnswer({ question, selectedOptionId, locked, rev
                 <input type="radio" name="answer" value={option.id} checked={selected} onChange={() => { if (!locked) onSelect(option.id); }} onClick={() => { if (!locked && selected) onSelect(option.id); }} className="h-4 w-4 shrink-0 accent-indigo-600" />
                 <span className="text-sm font-bold text-slate-500">{option.label ?? option.id}</span>
                 <RichContent text={option.text} html={question.richText} lang="ja" className="question-text flex-1" />
-                {selected && <span className="text-xs font-semibold">{revealAnswer ? "你的选择" : "已选中"}</span>}
-                {correctAnswer && <span className="text-xs font-semibold text-emerald-700">正确答案</span>}
+                {selected && <span className="text-xs font-semibold">{t(revealAnswer ? "你的选择" : "已选中")}</span>}
+                {correctAnswer && <span className="text-xs font-semibold text-emerald-700">{t("正确答案")}</span>}
               </label>
             );
           })}
         </div>
       </fieldset>
-      <p aria-live="polite" aria-atomic="true" className="sr-only">{revealAnswer ? `${feedback}，答案已锁定。` : ""}</p>
+      <p aria-live="polite" aria-atomic="true" className="sr-only">{t(revealAnswer ? `${feedback}，答案已锁定。` : "")}</p>
       {revealAnswer && (
         <section aria-labelledby="result-title" className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{feedback}</h2>
-          <p className="mt-2 text-sm text-slate-600">你的选择：{optionLabel(question, selectedOptionId)} · 正确答案：{optionLabel(question, question.correctOptionId)}</p>
-          <h3 className="mt-5 font-semibold">{question.richText ? "题库解析" : "中文解析"}</h3>
+          <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{t(feedback)}</h2>
+          <p className="mt-2 text-sm text-slate-600">{t("你的选择：")}{optionLabel(question, selectedOptionId)} {t("· 正确答案：")}{optionLabel(question, question.correctOptionId)}</p>
+          <h3 className="mt-5 font-semibold">{t(question.richText ? "题库解析" : "中文解析")}</h3>
           {question.explanation.map((paragraph, index) => <RichContent key={index} text={paragraph} html={question.richText} className="question-text mt-2 text-slate-700" />)}
         </section>
       )}

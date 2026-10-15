@@ -1,5 +1,7 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n";
+
 import { useCallback, useEffect, useId, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import type { PracticeQuestion } from "@/data/practice-question";
 import QuestionBody from "@/components/question-body";
@@ -33,6 +35,7 @@ function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
 }
 
 function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
+  const { t } = useI18n();
   const [expanded, setExpanded] = useState(reviewing);
   const [height, setHeight] = useState<number | null>(null);
   const id = useId();
@@ -123,21 +126,21 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
 
   return (
     <div className="reading-workspace">
-      <article ref={articleRef} aria-label={articleTitle} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-        <h2 className="text-lg font-bold">{articleTitle}</h2>
-        <p className="mt-2 text-xs leading-6 text-slate-500">本篇共 {group.length} 题 · 拖动底部题目栏调整高度，点击可展开或收起。</p>
+      <article ref={articleRef} aria-label={t(articleTitle)} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+        <h2 className="text-lg font-bold">{t(articleTitle)}</h2>
+        <p className="mt-2 text-xs leading-6 text-slate-500">{t("本篇共")}{group.length} {t("题 · 拖动底部题目栏调整高度，点击可展开或收起。")}</p>
         <QuestionBody question={question} part="passage" />
       </article>
-      <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉"} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}`}>
-        <button ref={handleRef} type="button" className="reading-sheet-handle" title="上下拖动调整高度；点击展开或收起；方向键微调高度" aria-expanded={expanded} aria-controls={id}
+      <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={t(question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉")} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}`}>
+        <button ref={handleRef} type="button" className="reading-sheet-handle" title={t("上下拖动调整高度；点击展开或收起；方向键微调高度")} aria-expanded={expanded} aria-controls={id}
           onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={endDrag} onKeyDown={resizeWithKeyboard}
           onClick={(event) => { if (dragged.current && event.detail > 0) { dragged.current = false; return; } toggle(); }}>
           <span aria-hidden="true" className="reading-grip" />
-          <span className="flex w-full items-center justify-between gap-3"><span>第 {questionIndex + 1} 题 · 本篇 {group.length} 题</span><span className="text-xs text-indigo-600">{expanded ? "收起题目 ↓" : "展开题目 ↑"}</span></span>
+          <span className="flex w-full items-center justify-between gap-3"><span>{t("第 {0} 题 · 本篇 {1} 题", { 0: questionIndex + 1, 1: group.length })}</span><span className="text-xs text-indigo-600">{t(expanded ? "收起题目 ↓" : "展开题目 ↑")}</span></span>
         </button>
         <div id={id} hidden={!expanded} className="reading-sheet-content">
-          {group.length > 1 && <nav aria-label="同篇文章子题" className="reading-subquestions">
-            {group.map(({ item, index }) => <button key={item.id} type="button" onClick={() => onNavigate(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={`本篇第 ${index + 1} 题，${statusLabels[getStatus(item)]}`} className={`question-number question-${getStatus(item)} ${index === questionIndex ? "question-current" : ""}`}>{index + 1}</button>)}
+          {group.length > 1 && <nav aria-label={t("同篇文章子题")} className="reading-subquestions">
+            {group.map(({ item, index }) => <button key={item.id} type="button" onClick={() => onNavigate(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={t(`本篇第 ${index + 1} 题，${statusLabels[getStatus(item)]}`)} className={`question-number question-${getStatus(item)} ${index === questionIndex ? "question-current" : ""}`}>{index + 1}</button>)}
           </nav>}
           {children}
         </div>

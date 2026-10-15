@@ -1,5 +1,7 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -13,11 +15,12 @@ import { useStudyHistory } from "@/lib/study-store";
 interface Selection { folderId: string; category: string; level: string; questionId?: string; attemptId?: string; fresh?: boolean }
 
 export default function FavoritePracticeClient(initialSelection: Selection) {
+  const { t } = useI18n();
   const params = useSearchParams();
   const selection = { ...initialSelection, attemptId: params.get("attempt") ?? undefined };
   const { data, ready, error } = useFavorites();
   const history = useStudyHistory();
-  if (!ready || !history.ready) return <p role="status" className="p-8">正在读取收藏……</p>;
+  if (!ready || !history.ready) return <p role="status" className="p-8">{t("正在读取收藏……")}</p>;
   const saved = history.data.attempts.find(a => a.id === selection.attemptId && a.source === "favorites");
   if (selection.attemptId && !saved) return <Feedback message={history.error ?? "找不到这次收藏题练习记录，请从学习记录重新选择。"} />;
   if (error && !saved) return <Feedback message={error} />;
@@ -27,7 +30,8 @@ export default function FavoritePracticeClient(initialSelection: Selection) {
 }
 
 function Feedback({ message, retry }: { message: string; retry?: () => void }) {
-  return <main className="min-h-screen bg-slate-50 p-6 text-slate-900"><section className="mx-auto max-w-xl rounded-2xl border border-slate-200 bg-white p-6"><h1 className="text-xl font-bold">收藏题练习</h1><p role="status" className="mt-4 leading-7 text-slate-600">{message}</p><div className="mt-5 flex flex-wrap gap-4">{retry && <button type="button" onClick={retry} className="min-h-11 px-3 font-semibold text-indigo-600">重新加载</button>}<Link href="/favorites" className="inline-flex min-h-11 items-center font-semibold text-indigo-600">返回收藏题库</Link></div></section></main>;
+  const { t } = useI18n();
+  return <main className="min-h-screen bg-slate-50 p-6 text-slate-900"><section className="mx-auto max-w-xl rounded-2xl border border-slate-200 bg-white p-6"><h1 className="text-xl font-bold">{t("收藏题练习")}</h1><p role="status" className="mt-4 leading-7 text-slate-600">{t(message)}</p><div className="mt-5 flex flex-wrap gap-4">{retry && <button type="button" onClick={retry} className="min-h-11 px-3 font-semibold text-indigo-600">{t("重新加载")}</button>}<Link href="/favorites" className="inline-flex min-h-11 items-center font-semibold text-indigo-600">{t("返回收藏题库")}</Link></div></section></main>;
 }
 
 function SelectedFavorites({ initialIds, folderName, category, level, attemptId }: Selection & { initialIds: readonly string[]; folderName: string }) {

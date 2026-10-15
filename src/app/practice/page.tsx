@@ -1,3 +1,4 @@
+import LocalizedText from "@/components/localized-text";
 import type { Metadata } from "next";
 import ActivationForm from "@/components/activation-form";
 import { isActivated, practiceReturnPath } from "@/lib/activation.server";
@@ -30,9 +31,9 @@ function InvalidSelection() {
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-16 text-slate-900">
       <div className="mx-auto max-w-xl rounded-2xl border border-slate-200 bg-white p-8">
-        <h1 className="text-2xl font-bold">未找到这份练习卷</h1>
-        <p className="mt-4 leading-7 text-slate-600">请选择有效的等级、年份版本、题型、作答模式和题目。</p>
-        <Link href="/" className="mt-6 inline-block font-semibold text-indigo-600 underline">返回首页重新选择</Link>
+        <h1 className="text-2xl font-bold"><LocalizedText text="未找到这份练习卷" /></h1>
+        <p className="mt-4 leading-7 text-slate-600"><LocalizedText text="请选择有效的等级、年份版本、题型、作答模式和题目。" /></p>
+        <Link href="/" className="mt-6 inline-block font-semibold text-indigo-600 underline"><LocalizedText text="返回首页重新选择" /></Link>
       </div>
     </main>
   );
@@ -64,7 +65,7 @@ async function SelectedExercise({ searchParams }: PageProps<"/practice">) {
 
 export default function PracticePage(props: PageProps<"/practice">) {
   return (
-    <Suspense fallback={<p role="status" className="p-8">正在准备练习卷……</p>}>
+    <Suspense fallback={<p role="status" className="p-8"><LocalizedText text="正在准备练习卷……" /></p>}>
       <SelectedExercise {...props} />
     </Suspense>
   );

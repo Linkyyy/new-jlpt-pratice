@@ -1,5 +1,9 @@
 "use client";
 
+import DisplaySettings from "@/components/display-settings";
+import { useI18n } from "@/lib/i18n";
+import { translatePeriod } from "@/lib/i18n/translate";
+
 import { useEffect, useRef, useState, type CSSProperties, type FormEvent, type MouseEvent } from "react";
 import QuestionOverview from "./question-overview";
 import Link from "next/link";
@@ -40,6 +44,7 @@ const primaryButton = "min-h-12 rounded-xl bg-indigo-600 px-6 py-3 font-semibold
 const secondaryButton = "min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-40";
 
 export default function PracticeExercise({ paper, attempt, initialSaveError, onRestart, initialQuestionIndex = 0 }: PracticeExerciseProps) {
+  const { t } = useI18n();
   const router = useRouter();
   const [questionIndex, setQuestionIndex] = useState(initialQuestionIndex);
   const [answers, setAnswers] = useState<Partial<Record<string, AnswerState>>>(attempt.answers);
@@ -169,34 +174,35 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
     <main className="session-page min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
         <header className="session-header mb-8">
-          {saveError && <p role="alert" className="session-save-error mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
+          {saveError && <p role="alert" className="session-save-error mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{t(saveError)} {t("当前作答尚未保存，请勿关闭页面。")}</p>}
           <div className="session-topline mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
-            <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习"}</Link>
-            <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
+            <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{t(paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习")}</Link>
+            <span className="text-slate-500">JLPT Practice · {translatePeriod(paper.periodLabel ?? `${paper.year} 原创版`, paper.source, t)}</span>
+            <DisplaySettings />
           </div>
-          <p className="hidden lg:block mb-4 text-sm text-slate-500">{paper.sourceLabel ?? "原创模拟题库"} · {finished ? "复习模式" : "练习模式"} · {paper.typeLabel} · {finished ? "原答案与解析" : article ? "本篇小题统一提交" : instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案"}</p>
-          {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">该场次当前有 {paper.excludedCount} 题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。</p>}
+          <p className="hidden lg:block mb-4 text-sm text-slate-500">{t(paper.sourceLabel ?? "原创模拟题库")} · {t(finished ? "复习模式" : "练习模式")} · {t(paper.typeLabel)} · {t(finished ? "原答案与解析" : article ? "本篇小题统一提交" : instantFeedback ? "点击选项即判定并锁定答案" : "手动提交后显示解析并锁定答案")}</p>
+          {Boolean(paper.excludedCount) && <p className="hidden lg:block mb-4 rounded-lg bg-amber-50 p-3 text-xs leading-6 text-amber-900">{t("该场次当前有")}{paper.excludedCount} {t("题缺少配套资源或数据不完整，未计入本次可作答题目；详见题库导入报告。")}</p>}
 
         </header>
 
         {finished && !showResults && <ReviewToolbar onReturn={() => setShowResults(true)} />}
-        <ResponsivePanel title="答题卡" className="answer-card-panel" trigger={`答题卡 · 已提交 ${completedQuestions}/${totalQuestions}`} headerAction={
-          <FloatingSettings title={finished ? "复习设置" : "练习设置"}>
+        <ResponsivePanel title={t("答题卡")} className="answer-card-panel" trigger={t(`答题卡 · 已提交 ${completedQuestions}/${totalQuestions}`)} headerAction={
+          <FloatingSettings title={t(finished ? "复习设置" : "练习设置")}>
         <fieldset>
-          <legend className="sr-only">答题与显示</legend>
+          <legend className="sr-only">{t("答题与显示")}</legend>
           <div className="grid gap-3">
             {!finished && <>
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
               <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
-              <span><span className="block font-semibold">点击选项即显示答案</span></span>
+              <span><span className="block font-semibold">{t("点击选项即显示答案")}</span></span>
             </label>
             </>}
             <FontSizeSetting value={fontSize} onChange={setFontSize} />
           </div>
-          <p className="mt-3 text-xs leading-6 text-slate-500">文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。</p>
+          <p className="mt-3 text-xs leading-6 text-slate-500">{t("文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。")}</p>
         </fieldset>
         <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
-        <p className="mt-4 text-xs leading-6 text-slate-500">进度自动保存在当前浏览器，可从首页继续练习。{Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`}</p>
+        <p className="mt-4 text-xs leading-6 text-slate-500">{t("进度自动保存在当前浏览器，可从首页继续练习。")}{t(Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`)}</p>
           </FloatingSettings>
         }>
           <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
@@ -214,50 +220,50 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
             return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
           }}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-          <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
-          <p id="answer-help" className="sr-only">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : "选择答案后提交，切题会保留选择。"}</p>
+          <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">{t("第 {0} 题 · {1}", { 0: questionIndex + 1, 1: t(question.category) })}{question.sourceQuestionNumber != null && t(" · 原题号 {0}", { 0: question.sourceQuestionNumber })}</h1>
+          <p id="answer-help" className="sr-only">{t(finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : "选择答案后提交，切题会保留选择。")}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
           <QuestionBody question={question} part={article ? "question" : "all"} />
 
           <form key={`answer-${question.id}`} onSubmit={handleSubmit} className="mt-7">
             <QuestionAnswer question={question} selectedOptionId={selectedOptionId} locked={submitted || finished} revealAnswer={submitted || finished} onSelect={selectOption} feedbackRef={resultRef} />
 
-            {article && !finished && !submitted && <p role="status" className="mt-4 text-sm text-slate-500">本篇已选择 {group.filter(({ item }) => answers[item.id] !== undefined).length} / {group.length} 题，全部选择后统一提交判定。</p>}
+            {article && !finished && !submitted && <p role="status" className="mt-4 text-sm text-slate-500">{t("本篇已选择")}{group.filter(({ item }) => answers[item.id] !== undefined).length} / {group.length} {t("题，全部选择后统一提交判定。")}</p>}
             <div className="answer-actions mt-5">
-              {buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>← 上一题</button>}
+              {buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex - 1)} disabled={questionIndex === 0} className={secondaryButton}>{t("← 上一题")}</button>}
               {finished ? (
-                !lastQuestion && buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button>
+                !lastQuestion && buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>{t("下一题 →")}</button>
               ) : article && !submitted ? (
-                !groupComplete && buttonsEnabled && selectedOptionId !== null && firstGroupDraft ? <button type="button" onClick={() => goToQuestion(firstGroupDraft.index)} className={`${primaryButton} flex-1`}>下一小题 →</button> : <button type="submit" disabled={!groupComplete} className={`${primaryButton} flex-1`}>提交本篇答案</button>
+                !groupComplete && buttonsEnabled && selectedOptionId !== null && firstGroupDraft ? <button type="button" onClick={() => goToQuestion(firstGroupDraft.index)} className={`${primaryButton} flex-1`}>{t("下一小题 →")}</button> : <button type="submit" disabled={!groupComplete} className={`${primaryButton} flex-1`}>{t("提交本篇答案")}</button>
               ) : article && nextArticleIndex < totalQuestions ? (
-                buttonsEnabled && <button type="button" onClick={() => goToQuestion(nextArticleIndex)} className={`${primaryButton} flex-1`}>下一篇 →</button>
+                buttonsEnabled && <button type="button" onClick={() => goToQuestion(nextArticleIndex)} className={`${primaryButton} flex-1`}>{t("下一篇 →")}</button>
               ) : article ? (
-                remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>完成并交卷</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>继续未完成题（{remainingQuestions}）</button>
+                remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>{t("完成并交卷")}</button> : buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>{t("继续未完成题（")}{remainingQuestions}）</button>
               ) : !submitted ? (
                 <>
-                  {!instantFeedback && <button type="submit" disabled={selectedOptionId === null} className={`${primaryButton} flex-1`}>提交答案</button>}
-                  {instantFeedback && <p className="flex-1 self-center text-sm text-slate-500">点击选项即可查看解析</p>}
-                  {buttonsEnabled && !lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>跳过</button>}
+                  {!instantFeedback && <button type="submit" disabled={selectedOptionId === null} className={`${primaryButton} flex-1`}>{t("提交答案")}</button>}
+                  {instantFeedback && <p className="flex-1 self-center text-sm text-slate-500">{t("点击选项即可查看解析")}</p>}
+                  {buttonsEnabled && !lastQuestion && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={secondaryButton}>{t("跳过")}</button>}
                 </>
               ) : !lastQuestion ? (
-                buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>下一题 →</button>
+                buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>{t("下一题 →")}</button>
               ) : remainingQuestions > 0 ? (
-                buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>继续未完成题（{remainingQuestions}）</button>
-              ) : <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>完成并交卷</button>}
+                buttonsEnabled && <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={`${primaryButton} flex-1`}>{t("继续未完成题（")}{remainingQuestions}）</button>
+              ) : <button type="button" onClick={finishPaper} className={`${primaryButton} flex-1`}>{t("完成并交卷")}</button>}
             </div>
           </form>
         </section>
         </ReadingWorkspace>
         <div className="mt-5 hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm leading-6 text-slate-500">{finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。已选择的题目提交后才计入进度。`}</p>
-          {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>返回结算</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>完成并交卷</button> : buttonsEnabled && submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>继续未完成题（{remainingQuestions}）</button> : null)}
+          <p className="text-sm leading-6 text-slate-500">{t(finished ? "本次练习已完成，可切题回顾解析。" : remainingQuestions === 0 ? "所有题目已提交，可以交卷查看成绩汇总。" : `还有 ${remainingQuestions} 题未提交。已选择的题目提交后才计入进度。`)}</p>
+          {!lastQuestion && (finished ? <button type="button" onClick={() => setShowResults(true)} className={secondaryButton}>{t("返回结算")}</button> : remainingQuestions === 0 ? <button type="button" onClick={finishPaper} className={primaryButton}>{t("完成并交卷")}</button> : buttonsEnabled && submitted && firstIncompleteIndex !== questionIndex ? <button type="button" onClick={() => goToQuestion(firstIncompleteIndex)} className={secondaryButton}>{t("继续未完成题（")}{remainingQuestions}）</button> : null)}
         </div>
         </>
         )}
         </div>
-        <footer className="session-progress" aria-label="练习进度">
+        <footer className="session-progress" aria-label={t("练习进度")}>
           <div className="mt-5 flex justify-between text-sm text-slate-600">
-            <label htmlFor="answer-progress">答题进度</label>
+            <label htmlFor="answer-progress">{t("答题进度")}</label>
             <span>{completedQuestions} / {totalQuestions} · {percent}%</span>
           </div>
           <progress
@@ -268,8 +274,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           />
         </footer>
         <p className="hidden lg:col-span-2 lg:block mt-5 text-center text-xs leading-6 text-slate-500">
-          {paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.sourceLabel ?? "原创模拟题库"} · {paper.typeLabel}。进度与成绩保存在当前浏览器。
-        </p>
+          {t(paper.level)} · {translatePeriod(paper.periodLabel ?? `${paper.year} 原创版`, paper.source, t)} · {t(paper.sourceLabel ?? "原创模拟题库")} · {t(paper.typeLabel)}{t("。进度与成绩保存在当前浏览器。")}</p>
       </div>
       <PracticeConfirmDialog dialogRef={dialogRef} action={confirmationAction} onConfirm={confirmAction} onClose={() => setConfirmationAction(null)} progressSaved={!saveError} />
     </main>

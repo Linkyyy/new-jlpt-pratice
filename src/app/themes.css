@@ -1,0 +1,81 @@
+:root {
+  color-scheme: light;
+  --surface: #fff;
+  --surface-muted: #f8fafc;
+  --soft-surface: #f1f5f9;
+  --line: #e2e8f0;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --subtle: #334155;
+  --accent-surface: #eef2ff;
+  --accent-line: #c7d2fe;
+  --accent-text: #4338ca;
+  --accent-focus: #6366f1;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #141c20;
+  --foreground: #dfe7df;
+  --surface: #1c272c;
+  --surface-muted: #141c20;
+  --soft-surface: #253238;
+  --line: #3b4a4f;
+  --ink: #dfe7df;
+  --subtle: #cbd6d2;
+  --muted: #acbbb9;
+  --accent-surface: #2c2f43;
+  --accent-line: #565772;
+  --accent-text: #c3b8e5;
+  --accent-focus: #a397c6;
+  --color-slate-50: #141c20;
+  --color-slate-100: #253238;
+  --color-slate-200: #3b4a4f;
+  --color-slate-300: #526268;
+  --color-slate-400: #9dadad;
+  --color-slate-500: #acbbb9;
+  --color-slate-600: #bccac6;
+  --color-slate-700: #cbd6d2;
+  --color-slate-800: #d9e2db;
+  --color-slate-900: #e4ebe2;
+  --color-indigo-50: #2c2f43;
+  --color-indigo-100: #3b3e55;
+  --color-indigo-200: #565772;
+  --color-indigo-300: #8c85aa;
+  --color-indigo-400: #a79bc8;
+  --color-indigo-500: #9d8dc3;
+  --color-indigo-600: #685992;
+  --color-indigo-700: #594c7e;
+  --color-indigo-800: #d0c4e7;
+  --color-indigo-900: #e0d6ec;
+  --color-emerald-50: #20382e;
+  --color-emerald-100: #20382e;
+  --color-emerald-200: #3d6a50;
+  --color-emerald-300: #588568;
+  --color-emerald-500: #699978;
+  --color-emerald-700: #a9d7b4;
+  --color-rose-50: #3b272b;
+  --color-rose-100: #462b32;
+  --color-rose-200: #67434d;
+  --color-rose-300: #8d5867;
+  --color-rose-400: #bd8090;
+  --color-rose-700: #ecadbb;
+  --color-amber-50: #39321f;
+  --color-amber-100: #463c25;
+  --color-amber-200: #675735;
+  --color-amber-300: #967d47;
+  --color-amber-500: #dfbb73;
+  --color-amber-800: #e1c896;
+  --color-amber-900: #e9d5ad;
+}
+html[data-theme="dark"] :is(.bg-white, .floating-settings-window) { background-color: var(--surface); }
+html[data-theme="dark"] [class~="bg-white/95"] { background-color: color-mix(in srgb, var(--surface) 95%, transparent); }
+html[data-theme="dark"] :is(.text-indigo-400, .text-indigo-500, .text-indigo-600, .text-indigo-700) { color: var(--accent-text); }
+html[data-theme="dark"] dialog::backdrop { background: rgb(0 0 0 / 65%); }
+html[data-theme="dark"] select, html[data-theme="dark"] input { color-scheme: dark; }
+html[data-theme="dark"] ::selection { background: #625777; color: #f1eadf; }
+.display-settings { display: inline-flex; flex-shrink: 0; }
+.session-topline .display-settings > .floating-settings > .settings-toggle { width: 32px; height: 32px; border-radius: 9px; }
+@media (max-width: 1023px) {
+  html[lang="en"] .answer-actions button { padding-inline: 8px; font-size: 12px; }
+  html[lang="en"] .favorite-preview { font-size: 12px; }
+}

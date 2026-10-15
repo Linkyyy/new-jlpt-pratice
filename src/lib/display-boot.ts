@@ -1,0 +1,2 @@
+// Runs before paint so a saved night theme never flashes a white page.
+export const displayBootScript = `(function(){try{var v=JSON.parse(localStorage.getItem('jlpt-practice.display.v1')||'null')||{};var d=v.theme==='dark'||v.theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=v.locale==='ja'?'ja':v.locale==='en'?'en':'zh-CN';}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}})();`;

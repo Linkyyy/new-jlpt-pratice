@@ -1,10 +1,13 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n";
+
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function ActivationForm({ returnTo }: { returnTo: string }) {
+  const { t } = useI18n();
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -26,16 +29,15 @@ export default function ActivationForm({ returnTo }: { returnTo: string }) {
     <main className="min-h-screen bg-slate-50 px-4 py-12 text-slate-900">
       <section aria-labelledby="activation-title" className="mx-auto max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <p className="text-sm font-bold text-indigo-600">JLPT Practice</p>
-        <h1 id="activation-title" className="mt-4 text-2xl font-bold">输入暗号开始答题</h1>
-        <p className="mt-3 text-sm leading-6 text-slate-500">请输入暗号，当前浏览器验证后 30 天内无需重复输入。</p>
+        <h1 id="activation-title" className="mt-4 text-2xl font-bold">{t("输入暗号开始答题")}</h1>
+        <p className="mt-3 text-sm leading-6 text-slate-500">{t("请输入暗号，当前浏览器验证后 30 天内无需重复输入。")}</p>
         <form onSubmit={activate} className="mt-6">
-          <label className="block text-sm font-semibold">暗号
-            <input autoFocus name="code" type="password" required maxLength={100} autoComplete="off" autoCapitalize="characters" spellCheck={false} placeholder="请输入暗号" className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2 text-base" />
+          <label className="block text-sm font-semibold">{t("暗号")}<input autoFocus name="code" type="password" required maxLength={100} autoComplete="off" autoCapitalize="characters" spellCheck={false} placeholder={t("请输入暗号")} className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2 text-base" />
           </label>
-          {error && <p role="alert" className="mt-3 text-sm text-rose-700">{error}</p>}
-          <button type="submit" disabled={pending} className="mt-5 min-h-12 w-full rounded-xl bg-indigo-600 px-4 py-3 font-semibold text-white hover:bg-indigo-700 disabled:opacity-50">{pending ? "正在验证……" : "验证并开始"}</button>
+          {error && <p role="alert" className="mt-3 text-sm text-rose-700">{t(error)}</p>}
+          <button type="submit" disabled={pending} className="mt-5 min-h-12 w-full rounded-xl bg-indigo-600 px-4 py-3 font-semibold text-white hover:bg-indigo-700 disabled:opacity-50">{t(pending ? "正在验证……" : "验证并开始")}</button>
         </form>
-        <Link href="/" className="mt-4 inline-flex min-h-11 items-center text-sm text-indigo-600">返回首页</Link>
+        <Link href="/" className="mt-4 inline-flex min-h-11 items-center text-sm text-indigo-600">{t("返回首页")}</Link>
       </section>
     </main>
   );

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import "./panels.css";
+import "./themes.css";
+import { displayBootScript } from "@/lib/display-boot";
+import { DisplaySync } from "@/components/display-settings";
 
 export const metadata: Metadata = {
   title: "JLPT Practice",
@@ -12,8 +16,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="zh-CN"
       className="h-full antialiased"
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head><script dangerouslySetInnerHTML={{ __html: displayBootScript }} /></head>
+      <body className="min-h-full flex flex-col"><Suspense fallback={null}><DisplaySync /></Suspense>{children}</body>
     </html>
   );
 }

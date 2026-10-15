@@ -1,5 +1,7 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n";
+
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -11,6 +13,7 @@ import ExamSession from "./exam-session";
 
 interface Props { paper: PracticePaper; mode: PracticeMode; initialQuestionIndex?: number; requestedQuestion?: boolean }
 export default function StudySession({ paper, mode, initialQuestionIndex = 0, requestedQuestion }: Props) {
+  const { t } = useI18n();
   const params = useSearchParams();
   // Next preserves page state during back/forward navigation. The URL must select
   // the saved attempt even when a previous exercise component is being reused.
@@ -49,8 +52,8 @@ export default function StudySession({ paper, mode, initialQuestionIndex = 0, re
     url.searchParams.set("attempt", created.attempt.id);
     window.history.replaceState(null, "", url);
   }
-  if (message) return <main className="mx-auto max-w-xl p-8"><p role="alert">{message}</p><div className="mt-5 flex gap-5"><Link href="/history" className="text-indigo-600">查看学习记录</Link><Link href="/" className="text-indigo-600">返回首页</Link></div></main>;
-  if (!session || attemptId && session.attempt.id !== attemptId) return <p role="status" className="p-8">正在恢复学习进度……</p>;
+  if (message) return <main className="mx-auto max-w-xl p-8"><p role="alert">{t(message)}</p><div className="mt-5 flex gap-5"><Link href="/history" className="text-indigo-600">{t("查看学习记录")}</Link><Link href="/" className="text-indigo-600">{t("返回首页")}</Link></div></main>;
+  if (!session || attemptId && session.attempt.id !== attemptId) return <p role="status" className="p-8">{t("正在恢复学习进度……")}</p>;
   const props = { paper, attempt: session.attempt, initialSaveError: session.error, initialQuestionIndex: session.index, onRestart: restart };
   return mode === "exam" ? <ExamSession key={session.attempt.id} {...props} /> : <PracticeExercise key={session.attempt.id} {...props} />;
 }
