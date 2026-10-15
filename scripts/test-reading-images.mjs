@@ -37,14 +37,17 @@ test("image reading subquestions share a drawer without requiring passage text",
   assert.notEqual(article.articleGroupKey(first), article.articleGroupKey(unrelated));
 });
 
-test("subquestion pictures remain below the prompt and do not split a shared reading group", async () => {
-  const bank = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/questions/201412-N3-3.json", import.meta.url)));
+test("July subquestion pictures do not split the shared reading group or leak into December", async () => {
+  const bank = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/questions/201407-N3-3.json", import.meta.url)));
   const [first, second] = bank.questions.slice(-2);
-  assert.deepEqual(first.media.images, ["pic/320141273.jpg"]);
+  assert.deepEqual(first.media.images, ["pic/320140773.jpg"]);
   assert.deepEqual(first.media.questionImages, ["pic/320140773-1.jpg"]);
   assert.equal(second.media.questionImages, undefined);
   assert.equal(article.articleGroup(bank.questions, first).length, 2);
   assert.equal(article.articleGroupKey(first), article.articleGroupKey(second));
+  const december = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/questions/201412-N3-3.json", import.meta.url)));
+  assert.deepEqual(december.questions.at(-2).media.images, ["pic/320141273.jpg"]);
+  assert.equal(december.questions.at(-2).media.questionImages, undefined);
 });
 
 test("every shared listening recording uses one drawer and inherits its question-card heading", async () => {
