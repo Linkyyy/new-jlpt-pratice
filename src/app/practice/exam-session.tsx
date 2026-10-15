@@ -23,6 +23,7 @@ import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
 import type { StudyAttempt } from "@/lib/study-store";
 import { useStudyPersistence } from "./use-study-persistence";
+import { useQuestionFontSize } from "./use-question-font-size";
 
 type ExamPhase = "ready" | "running" | "finished";
 
@@ -30,7 +31,7 @@ const primaryButton = "min-h-12 rounded-xl bg-indigo-600 px-5 py-3 font-semibold
 const secondaryButton = "min-h-12 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-40";
 
 export default function ExamSession({ paper, attempt, initialSaveError, initialQuestionIndex = 0, onRestart }: { paper: PracticePaper; attempt: StudyAttempt; initialSaveError: string | null; initialQuestionIndex?: number; onRestart: () => void }) {
-  const [fontSize, setFontSize] = useState(attempt.fontSize);
+  const { fontSize, setFontSize, savedFontSizes } = useQuestionFontSize(attempt);
   const router = useRouter();
   const [phase, setPhase] = useState<ExamPhase>(attempt.status === "completed" ? "finished" : attempt.status === "active" ? "running" : "ready");
   const [questionIndex, setQuestionIndex] = useState(initialQuestionIndex);
@@ -56,7 +57,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
   const finished = phase === "finished";
   const lastQuestion = questionIndex === paper.questions.length - 1;
   const savedAnswers = useMemo(() => Object.fromEntries(Object.entries(answers).filter(([, id]) => id).map(([id, selectedOptionId]) => [id, { selectedOptionId: selectedOptionId!, submitted: finished }])), [answers, finished]);
-  const saveError = useStudyPersistence(attempt, { answers: savedAnswers, status: finished ? "completed" : phase === "ready" ? "ready" : "active", questionIndex, deadline: phase === "running" ? timer.deadline : null, elapsedSeconds, timedOut, fontSize }, initialSaveError);
+  const saveError = useStudyPersistence(attempt, { answers: savedAnswers, status: finished ? "completed" : phase === "ready" ? "ready" : "active", questionIndex, deadline: phase === "running" ? timer.deadline : null, elapsedSeconds, timedOut, ...savedFontSizes }, initialSaveError);
 
   useEffect(() => {
     const previous = previousView.current;
@@ -137,11 +138,11 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
   const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction), swipeEnabled);
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+    <main className="session-page min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
-        <header className="mb-6">
-          {saveError && <p role="alert" className="mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
-          <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
+        <header className="session-header mb-6">
+          {saveError && <p role="alert" className="session-save-error mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
+          <div className="session-topline mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href="/" onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>
@@ -157,7 +158,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
         </div>}
 
         {phase === "ready" ? (
-          <section className="lg:col-span-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8" aria-labelledby="exam-ready-title">
+          <section className="session-content exam-ready lg:col-span-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8" aria-labelledby="exam-ready-title">
             <h1 ref={headingRef} tabIndex={-1} id="exam-ready-title" className="scroll-mt-6 text-2xl font-bold outline-none">准备开始考试</h1>
             <p className="mt-4 text-slate-600">{paper.level} · {paper.periodLabel ?? `${paper.year} 原创版`} · {paper.typeLabel} · 共 {paper.questions.length} 题</p>
             <p className="mt-3 text-lg font-semibold text-indigo-700">训练时长：{durationSeconds / 60} 分钟</p>
@@ -172,7 +173,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
             <button type="button" onClick={startExam} className={`${primaryButton} mt-6 w-full sm:w-auto`}>开始考试</button>
           </section>
         ) : showResults ? (
-          <div className="lg:col-span-2"><SessionResults paper={paper} answers={answers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} exam={{ elapsedSeconds, timedOut }} /></div>
+          <div className="session-content exam-results lg:col-span-2"><SessionResults paper={paper} answers={answers} headingRef={headingRef} onReview={goToQuestion} onRestart={() => requestConfirmation("restart")} exam={{ elapsedSeconds, timedOut }} /></div>
         ) : (
           <>
             <ResponsivePanel title="答题卡" className="answer-card-panel" trigger={`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`} headerAction={

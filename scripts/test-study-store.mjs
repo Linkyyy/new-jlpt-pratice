@@ -105,3 +105,17 @@ test("JST days and streaks count distinct study days; achievements stay unlocked
   const later = s.api.studySummary(data, Date.parse("2026-10-17T05:00:00Z"));
   assert.equal(later.streak, 0); assert.equal(later.bestStreak, 3);
 });
+
+test("legacy records remain valid and mobile font preferences are saved independently", () => {
+  const s = store(), a = s.api.createStudyAttempt(paper, "practice").attempt;
+  assert.equal(a.fontSize, 18); assert.equal(a.mobileFontSize, 16);
+  const legacy = s.read(); delete legacy.attempts[0].mobileFontSize;
+  const restored = store(legacy);
+  assert.equal(restored.api.isStudyData(legacy), true);
+  assert.equal(restored.api.updateStudyAttempt(a.id, { ...state(a), fontSize: 24, mobileFontSize: 20 }).ok, true);
+  const saved = restored.read().attempts[0];
+  assert.equal(saved.fontSize, 24); assert.equal(saved.mobileFontSize, 20);
+  const raw = restored.raw();
+  assert.equal(restored.api.updateStudyAttempt(a.id, { ...state(saved), mobileFontSize: 5 }).ok, false);
+  assert.equal(restored.raw(), raw);
+});

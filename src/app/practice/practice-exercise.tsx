@@ -21,6 +21,7 @@ import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
 import type { StudyAttempt } from "@/lib/study-store";
 import { useStudyPersistence } from "./use-study-persistence";
+import { useQuestionFontSize } from "./use-question-font-size";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
@@ -45,7 +46,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const [finished, setFinished] = useState(attempt.status === "completed");
   const [showResults, setShowResults] = useState(attempt.status === "completed");
   const [instantFeedback, setInstantFeedback] = useState(false);
-  const [fontSize, setFontSize] = useState(attempt.fontSize);
+  const { fontSize, setFontSize, savedFontSizes } = useQuestionFontSize(attempt);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
@@ -75,7 +76,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const lastQuestion = questionIndex === totalQuestions - 1;
   const hasProgress = Object.keys(answers).length > 0 && !finished;
   const previousAnswer = useRef({ id: question.id, submitted });
-  const saveError = useStudyPersistence(attempt, { answers, status: finished ? "completed" : "active", questionIndex, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize }, initialSaveError);
+  const saveError = useStudyPersistence(attempt, { answers, status: finished ? "completed" : "active", questionIndex, deadline: null, elapsedSeconds: 0, timedOut: false, ...savedFontSizes }, initialSaveError);
 
   useEffect(() => {
     const previous = previousView.current;
@@ -165,11 +166,11 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction), swipeEnabled);
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+    <main className="session-page min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
       <div className="session-layout" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
-        <header className="mb-8">
-          {saveError && <p role="alert" className="mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
-          <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
+        <header className="session-header mb-8">
+          {saveError && <p role="alert" className="session-save-error mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">{saveError} 当前作答尚未保存，请勿关闭页面。</p>}
+          <div className="session-topline mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
             <Link href={paper.source === "favorites" ? "/favorites" : "/"} onClick={handleHomeClick} className="font-semibold text-indigo-600 hover:underline">{paper.source === "favorites" ? "← 返回收藏题库" : "← 首页 / 选择练习"}</Link>
             <span className="text-slate-500">JLPT Practice · {paper.periodLabel ?? `${paper.year} 原创版`}</span>
           </div>

@@ -27,7 +27,7 @@ export default function QuestionAnswer({ question, selectedOptionId, locked, rev
             const appearance = correctAnswer ? "border-emerald-500 bg-emerald-50" : wrongSelection ? "border-rose-400 bg-rose-50" : selected ? "border-indigo-500 bg-indigo-50" : "border-slate-200 bg-white";
 
             return (
-              <label key={option.id} className={`flex min-h-12 sm:min-h-16 flex-wrap items-center gap-3 rounded-xl border-2 p-3 sm:p-4 transition-colors focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 ${appearance} ${locked ? "cursor-default" : "cursor-pointer hover:border-indigo-400"}`}>
+              <label key={option.id} className={`answer-option flex min-h-12 sm:min-h-16 flex-wrap items-center gap-3 rounded-xl border-2 p-3 sm:p-4 transition-colors focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 ${appearance} ${locked ? "cursor-default" : "cursor-pointer hover:border-indigo-400"}`}>
                 <input type="radio" name="answer" value={option.id} checked={selected} onChange={() => { if (!locked) onSelect(option.id); }} onClick={() => { if (!locked && selected) onSelect(option.id); }} className="h-4 w-4 shrink-0 accent-indigo-600" />
                 <span className="text-sm font-bold text-slate-500">{option.label ?? option.id}</span>
                 <RichContent text={option.text} html={question.richText} lang="ja" className="question-text flex-1" />

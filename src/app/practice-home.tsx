@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { AttemptCard, StudyAchievements, StudyStats, attemptTitle, studyCard } from "@/components/study-dashboard";
+import { AttemptCard, attemptTitle, studyCard } from "@/components/study-dashboard";
 import { latestStudyAttempt, questionTrails, studyAttemptUrl, studyScore, useStudyHistory } from "@/lib/study-store";
 import type { JLPTLevel } from "@/data/practice-question";
 import { questionTypes, type QuestionType } from "@/data/practice-papers";
@@ -45,7 +45,6 @@ export default function PracticeHome() {
           <nav aria-label="个人学习" className="flex items-center gap-2 text-sm font-semibold text-indigo-700"><Link href="/history" className="rounded-lg px-3 py-3 hover:bg-indigo-50">学习记录</Link><Link href="/favorites" className="rounded-lg border border-indigo-200 bg-white px-3 py-3 hover:bg-indigo-50">★ 我的收藏</Link></nav>
         </header>
         {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{error}</p>}
-        <StudyStats data={data} ready={ready} />
         {latest && <section aria-label="继续上次学习" className="flex items-center justify-between gap-4 rounded-2xl border border-indigo-200 bg-indigo-50 p-4 sm:px-6"><div className="min-w-0"><p className="text-xs font-semibold text-indigo-600">接着上次练习</p><p className="mt-1 text-sm font-semibold leading-6 text-slate-800">{attemptTitle(latest)}</p></div><Link href={studyAttemptUrl(latest)} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-4 text-sm font-semibold text-white hover:bg-indigo-700">继续 →</Link></section>}
         <div className="grid items-start gap-5 lg:grid-cols-[1.05fr_1fr]">
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
@@ -98,7 +97,6 @@ export default function PracticeHome() {
         </section>
 
         <aside className="space-y-5">
-          <StudyAchievements data={data} />
           <section className={studyCard} aria-labelledby="recent-title"><div className="mb-4 flex items-center justify-between"><h2 id="recent-title" className="font-bold">最近作答</h2><Link href="/history" className="text-xs font-semibold text-indigo-600">全部记录 →</Link></div>{recent.length ? <div className="space-y-2">{recent.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <div className="rounded-xl border border-dashed border-slate-200 px-4 py-8 text-center"><p className="text-sm text-slate-500">从第一道题开始，积累你的学习足迹。</p><p className="mt-2 text-xs text-slate-400">进度与每次交卷成绩自动保存</p></div>}</section>
         </aside>
         </div>

@@ -27,7 +27,9 @@ function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
   const minimum = handle.getBoundingClientRect().height + parseFloat(styles.paddingBottom) + parseFloat(styles.borderTopWidth) + parseFloat(styles.borderBottomWidth);
   const viewport = window.visualViewport?.height ?? window.innerHeight;
   const topSpace = parseFloat(styles.getPropertyValue("--sheet-top-space")) || 16;
-  return { minimum, maximum: Math.max(minimum, viewport - topSpace), viewport };
+  const bottomSpace = parseFloat(styles.bottom) || 0;
+  const cssMaximum = parseFloat(styles.maxHeight) || Infinity;
+  return { minimum, maximum: Math.max(minimum, Math.min(cssMaximum, viewport - topSpace - bottomSpace)), viewport };
 }
 
 function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {

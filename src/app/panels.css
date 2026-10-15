@@ -15,6 +15,7 @@ body:has(dialog:modal) { overflow: hidden; }
   .session-layout, .favorites-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; align-items: start; }
   .session-layout > header, .favorites-layout > header, .session-timer { grid-column: 1 / -1; }
   .session-content { grid-column: 2; }
+  .session-layout > .exam-ready, .session-layout > .exam-results { grid-column: 1 / -1; }
   .home-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: stretch; }
   .home-header { grid-column: 1 / -1; }
   .home-selection { grid-column: 1; grid-row: 2; }
@@ -117,4 +118,100 @@ body:has(dialog:modal) { overflow: hidden; }
   .reading-sheet { --sheet-top-space: 64px; }
   .session-layout:has(.session-timer) .reading-sheet,
   .session-layout:has(.session-review) .reading-sheet { --sheet-top-space: 148px; }
+}
+
+/* Keep the mobile navigation in view while only the question area scrolls. */
+@media (max-width: 1023px) {
+  .session-page { height: 100dvh; min-height: 0; overflow: hidden; padding: 0; }
+  .session-page .session-layout {
+    --answer-card-height: calc(57px + env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .session-layout > .session-header {
+    grid-row: 1;
+    z-index: 30;
+    min-width: 0;
+    margin: 0;
+    padding: env(safe-area-inset-top) 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    background: #fff;
+  }
+  .session-header .session-topline { min-height: 52px; margin: 0; flex-wrap: nowrap; gap: 8px; font-size: 12px; }
+  .session-topline > a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 44px; }
+  .session-topline > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
+  .session-header > p:not(.session-save-error) { display: none; }
+  .session-header .session-save-error { margin: 6px 0; padding: 8px; font-size: 12px; }
+  .session-layout > .session-content {
+    grid-column: 1;
+    grid-row: 4;
+    min-height: 0;
+    margin: 0;
+    padding: 12px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-padding-block: 12px;
+  }
+  .session-content > section, .session-content .question-card { padding: 14px; }
+  .session-content .question-card > h1 { padding-right: 36px; font-size: 15px; line-height: 24px; scroll-margin-top: 12px; }
+  .session-content .question-card > .absolute { top: 6px; right: 6px; }
+  .session-content .question-card > .question-instruction { margin-top: 12px; padding: 10px; line-height: 1.6; }
+  .session-content .question-card > .question-text { margin-top: 14px; }
+  .session-content .question-text { line-height: 1.65; }
+  .session-content .question-passage { line-height: 1.9; }
+  .session-content .question-card > form, .session-content .question-card > div.mt-7 { margin-top: 16px; }
+  .question-instruction p:first-child { margin-top: 0; }
+  .question-instruction p:last-child { margin-bottom: 0; }
+  .question-card .answer-option { padding: 10px; gap: 10px; }
+  .question-card .answer-option > .question-text { min-width: 0; overflow-wrap: anywhere; }
+  .session-content .answer-actions { margin-top: 14px; }
+  .answer-actions button { min-height: 44px; padding: 10px; font-size: 13px; }
+  .session-layout > .answer-card-panel,
+  .session-layout:has(.reading-workspace) > .answer-card-panel,
+  .session-layout:has(.session-review):has(.reading-workspace) > .answer-card-panel {
+    grid-row: 5;
+    position: relative;
+    top: auto;
+    z-index: 40;
+    margin: 0;
+    padding: 6px 12px calc(6px + env(safe-area-inset-bottom));
+    border-top: 1px solid #e2e8f0;
+    background: #fff;
+  }
+  .answer-card-panel > .panel-trigger { min-height: 44px; border: 0; border-radius: 10px; background: #eef2ff; padding: 8px 12px; font-size: 13px; }
+  .session-layout > .session-progress { display: none; }
+  .session-layout > .session-review { grid-row: 2; position: static; margin: 0; border: 0; border-bottom: 1px solid #e2e8f0; border-radius: 0; padding: 4px 12px; font-size: 13px; }
+  .session-review h2 { font-size: 13px; }
+  .session-review p { display: none; }
+  .session-review button { font-size: 12px; }
+  .session-layout > .session-timer { grid-row: 3; position: static; margin: 0; border: 0; border-bottom: 1px solid #e2e8f0; border-radius: 0; padding: 4px 12px; box-shadow: none; }
+  .session-timer p { font-size: 12px; }
+  .session-timer [role="timer"] { font-size: 16px; }
+  .session-timer button { min-height: 44px; padding: 8px 16px; font-size: 13px; }
+  .session-layout .reading-workspace { padding-bottom: 90px; }
+  .session-layout .reading-article { scroll-margin-top: 12px; }
+  .session-layout .reading-sheet {
+    --sheet-top-space: 64px;
+    bottom: var(--answer-card-height);
+    max-height: calc(100dvh - var(--sheet-top-space) - var(--answer-card-height) - env(safe-area-inset-top));
+    padding-bottom: 0;
+  }
+  .session-layout:has(.session-timer) .reading-sheet,
+  .session-layout:has(.session-review) .reading-sheet { --sheet-top-space: 116px; }
+  .session-layout:has(.session-save-error) .reading-sheet { --sheet-top-space: 180px; }
+  .session-layout .reading-sheet-handle { min-height: 64px; gap: 8px; padding: 10px 16px 12px; font-size: 13px; }
+  .session-layout .reading-sheet-content .question-card { padding: 12px 0 0; }
+}
+@media (max-width: 360px) and (max-height: 680px) {
+  .session-layout > .session-content { padding: 8px; }
+  .session-content .question-card { padding: 12px; }
+  .session-content .question-card > .question-instruction { padding: 8px; font-size: 13px; line-height: 1.5; }
+  .session-content .question-card > .question-text { margin-top: 10px; }
+  .session-content .question-card > form, .session-content .question-card > div.mt-7 { margin-top: 12px; }
+  .session-content .answer-option { min-height: 44px; padding: 7px 10px; }
+  .session-content .answer-actions { margin-top: 10px; }
 }

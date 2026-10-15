@@ -36,11 +36,12 @@ export interface StudyAttempt {
   readonly elapsedSeconds: number;
   readonly timedOut: boolean;
   readonly fontSize: number;
+  readonly mobileFontSize?: number;
 }
 export interface StudyData { readonly version: 1; readonly attempts: readonly StudyAttempt[]; readonly activityDays: readonly string[] }
 interface StudySnapshot { readonly data: StudyData; readonly ready: boolean; readonly error: string | null }
 export type StudyResult = { ok: true } | { ok: false; error: string };
-export type StudyPatch = Pick<StudyAttempt, "status" | "questionIndex" | "deadline" | "elapsedSeconds" | "timedOut" | "fontSize"> & { answers: StudyAttempt["answers"] };
+export type StudyPatch = Pick<StudyAttempt, "status" | "questionIndex" | "deadline" | "elapsedSeconds" | "timedOut" | "fontSize" | "mobileFontSize"> & { answers: StudyAttempt["answers"] };
 
 const empty: StudyData = { version: 1, attempts: [], activityDays: [] };
 const serverSnapshot: StudySnapshot = { data: empty, ready: false, error: null };
@@ -69,7 +70,8 @@ function isAttempt(v: unknown): v is StudyAttempt {
     || !Array.isArray(v.questions) || !v.questions.length || !v.questions.every(isQuestion) || new Set(v.questions.map(q => q.id)).size !== v.questions.length
     || !record(v.answers) || !Number.isSafeInteger(v.questionIndex) || Number(v.questionIndex) < 0 || Number(v.questionIndex) >= v.questions.length
     || !(v.deadline === null || timestamp(v.deadline)) || !Number.isSafeInteger(v.elapsedSeconds) || Number(v.elapsedSeconds) < 0
-    || typeof v.timedOut !== "boolean" || !Number.isInteger(v.fontSize) || Number(v.fontSize) < 14 || Number(v.fontSize) > 28) return false;
+    || typeof v.timedOut !== "boolean" || !Number.isInteger(v.fontSize) || Number(v.fontSize) < 14 || Number(v.fontSize) > 28
+    || v.mobileFontSize !== undefined && (!Number.isInteger(v.mobileFontSize) || Number(v.mobileFontSize) < 14 || Number(v.mobileFontSize) > 28)) return false;
   const questions = new Map((v.questions as StudyQuestion[]).map(q => [q.id, q]));
   if (!Object.entries(v.answers).every(([id, a]) => record(a) && typeof a.submitted === "boolean" && questions.get(id)?.optionIds.includes(a.selectedOptionId as OptionId))) return false;
   if (v.status === "completed" && (!timestamp(v.completedAt) || v.completedAt < v.createdAt || v.deadline !== null)) return false;
@@ -131,7 +133,7 @@ export function createStudyAttempt(paper: PracticePaper, mode: PracticeMode) {
     type: (types.find(t => paper.id.endsWith(`-${t}`)) ?? "all") as QuestionType,
     typeLabel: paper.typeLabel, periodLabel: paper.periodLabel ?? `${paper.year} 原创版`, mode,
     createdAt: now, updatedAt: now, completedAt: null, status: mode === "exam" ? "ready" : "active",
-    questionIndex: 0, answers: {}, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize: 18,
+    questionIndex: 0, answers: {}, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize: 18, mobileFontSize: 16,
     questions: paper.questions.map(q => ({ id: q.id, level: q.level, category: q.category, correctOptionId: q.correctOptionId, optionIds: q.options.map(o => o.id), sourceQuestionNumber: q.sourceQuestionNumber })),
   };
   const result = commit(data => ({ ...data, attempts: [...data.attempts, attempt] }));
