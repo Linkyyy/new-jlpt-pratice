@@ -41,7 +41,7 @@ test("uploader preserves directories, skips unrelated files and does not follow 
   } finally { await fs.rm(root, { recursive: true, force: true }); }
 });
 
-test("import only enables uploaded audio, preserves shared parent mapping and keeps MP3 outside public", async () => {
+test("import preserves shared audio mappings, supports an optional manifest and defers missing files to playback", async () => {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), "jlpt-audio-import-"));
   try {
     for (const dir of ["scripts", "src/lib", "input"]) await fs.mkdir(path.join(root, dir), { recursive: true });
@@ -65,6 +65,11 @@ test("import only enables uploaded audio, preserves shared parent mapping and ke
     assert.equal(output.questions[1].media.audio, output.questions[0].media.audio);
     assert.equal(output.questions[0].instruction, "共有音声");
     assert.match(output.unavailable[0].reasons.join(","), /缺少配套音频/);
+    execFileSync(process.execPath, [path.join(root, "scripts/import-question-bank.mjs"), "--source", path.join(root, "input")]);
+    const remote = JSON.parse(await fs.readFile(path.join(root, "src/data/imported-bank/questions/202412-N2-4.json")));
+    assert.equal(remote.questions.length, 3);
+    assert.equal(remote.questions[2].media.audio, "audio/202412n2/8.mp3");
+    assert.equal(remote.unavailable.length, 1); // A record without any audio reference is still invalid.
     await assert.rejects(fs.access(path.join(root, "public")));
   } finally { await fs.rm(root, { recursive: true, force: true }); }
 });

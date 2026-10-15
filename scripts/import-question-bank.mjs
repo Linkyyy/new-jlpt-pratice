@@ -11,7 +11,7 @@ const mediaIndex = args.indexOf("--media");
 const audioIndex = args.indexOf("--audio-manifest");
 if (sourceIndex < 0 || !args[sourceIndex + 1]) throw new Error("Usage: node scripts/import-question-bank.mjs --source <JSON directory> [--media <local image directory>] [--audio-manifest <uploaded R2 keys JSON>]");
 if (audioIndex >= 0 && !args[audioIndex + 1]) throw new Error("--audio-manifest 需要指定已上传对象清单。");
-const uploadedAudio = audioIndex >= 0 ? readAudioManifest(JSON.parse(await fs.readFile(path.resolve(args[audioIndex + 1]), "utf8"))) : new Set();
+const uploadedAudio = audioIndex >= 0 ? readAudioManifest(JSON.parse(await fs.readFile(path.resolve(args[audioIndex + 1]), "utf8"))) : null;
 const sourceDirectory = path.resolve(args[sourceIndex + 1]);
 const mediaDirectory = mediaIndex >= 0 && args[mediaIndex + 1] ? await fs.realpath(path.resolve(args[mediaIndex + 1])) : null;
 const outputDirectory = path.join(projectRoot, "src/data/imported-bank");
@@ -38,8 +38,8 @@ async function resolveMedia(reference, kind) {
   if (kind === "audio") {
     if (isPublicAudioUrl(reference)) return reference;
     const key = getAudioObjectKey(reference);
-    // No guessing from question numbers; only existing references confirmed by an upload.
-    return key && uploadedAudio.has(key) ? key : null;
+    // Resolve the original reference without fetching audio. A supplied manifest can restrict it.
+    return key && (uploadedAudio === null || uploadedAudio.has(key)) ? key : null;
   }
   const relative = text(reference).replaceAll("\\", "/").replace(/^\.\//, "");
   if (!mediaDirectory || /^(?:[a-z]+:|\/)/i.test(relative) || relative.split("/").some((part) => part === ".." || part === "")) return null;

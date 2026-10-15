@@ -39,8 +39,8 @@
       "type": "listening",
       "file": "201007-N1-4.json",
       "sourceFile": "time_201007_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -79,8 +79,8 @@
       "type": "listening",
       "file": "201007-N2-4.json",
       "sourceFile": "time_201007_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -119,8 +119,8 @@
       "type": "listening",
       "file": "201007-N3-4.json",
       "sourceFile": "time_201007_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -159,8 +159,8 @@
       "type": "listening",
       "file": "201012-N1-4.json",
       "sourceFile": "time_201012_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 36,
+      "unavailableCount": 0,
       "totalCount": 36
     },
     {
@@ -199,8 +199,8 @@
       "type": "listening",
       "file": "201012-N2-4.json",
       "sourceFile": "time_201012_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -279,8 +279,8 @@
       "type": "listening",
       "file": "201107-N1-4.json",
       "sourceFile": "time_201107_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 36,
+      "unavailableCount": 0,
       "totalCount": 36
     },
     {
@@ -319,8 +319,8 @@
       "type": "listening",
       "file": "201107-N2-4.json",
       "sourceFile": "time_201107_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 31,
+      "availableCount": 31,
+      "unavailableCount": 0,
       "totalCount": 31
     },
     {
@@ -359,8 +359,8 @@
       "type": "listening",
       "file": "201107-N3-4.json",
       "sourceFile": "time_201107_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 27,
+      "availableCount": 27,
+      "unavailableCount": 0,
       "totalCount": 27
     },
     {
@@ -399,8 +399,8 @@
       "type": "listening",
       "file": "201112-N1-4.json",
       "sourceFile": "time_201112_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 36,
+      "unavailableCount": 0,
       "totalCount": 36
     },
     {
@@ -439,8 +439,8 @@
       "type": "listening",
       "file": "201112-N2-4.json",
       "sourceFile": "time_201112_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 31,
+      "availableCount": 30,
+      "unavailableCount": 1,
       "totalCount": 31
     },
     {
@@ -479,8 +479,8 @@
       "type": "listening",
       "file": "201112-N3-4.json",
       "sourceFile": "time_201112_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 27,
+      "availableCount": 27,
+      "unavailableCount": 0,
       "totalCount": 27
     },
     {
@@ -519,8 +519,8 @@
       "type": "listening",
       "file": "201207-N1-4.json",
       "sourceFile": "time_201207_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 34,
+      "unavailableCount": 2,
       "totalCount": 36
     },
     {
@@ -559,8 +559,8 @@
       "type": "listening",
       "file": "201207-N2-4.json",
       "sourceFile": "time_201207_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 31,
+      "availableCount": 30,
+      "unavailableCount": 1,
       "totalCount": 31
     },
     {
@@ -599,8 +599,8 @@
       "type": "listening",
       "file": "201207-N3-4.json",
       "sourceFile": "time_201207_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -639,8 +639,8 @@
       "type": "listening",
       "file": "201212-N1-4.json",
       "sourceFile": "time_201212_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 35,
+      "unavailableCount": 1,
       "totalCount": 36
     },
     {
@@ -679,8 +679,8 @@
       "type": "listening",
       "file": "201212-N2-4.json",
       "sourceFile": "time_201212_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 31,
+      "availableCount": 30,
+      "unavailableCount": 1,
       "totalCount": 31
     },
     {
@@ -719,8 +719,8 @@
       "type": "listening",
       "file": "201212-N3-4.json",
       "sourceFile": "time_201212_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -759,8 +759,8 @@
       "type": "listening",
       "file": "201307-N1-4.json",
       "sourceFile": "time_201307_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 36,
+      "unavailableCount": 0,
       "totalCount": 36
     },
     {
@@ -799,8 +799,8 @@
       "type": "listening",
       "file": "201307-N2-4.json",
       "sourceFile": "time_201307_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 31,
+      "availableCount": 31,
+      "unavailableCount": 0,
       "totalCount": 31
     },
     {
@@ -839,8 +839,8 @@
       "type": "listening",
       "file": "201307-N3-4.json",
       "sourceFile": "time_201307_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -879,8 +879,8 @@
       "type": "listening",
       "file": "201312-N1-4.json",
       "sourceFile": "time_201312_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 36,
+      "availableCount": 36,
+      "unavailableCount": 0,
       "totalCount": 36
     },
     {
@@ -919,8 +919,8 @@
       "type": "listening",
       "file": "201312-N2-4.json",
       "sourceFile": "time_201312_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -959,8 +959,8 @@
       "type": "listening",
       "file": "201312-N3-4.json",
       "sourceFile": "time_201312_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -999,8 +999,8 @@
       "type": "listening",
       "file": "201407-N1-4.json",
       "sourceFile": "time_201407_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1039,8 +1039,8 @@
       "type": "listening",
       "file": "201407-N2-4.json",
       "sourceFile": "time_201407_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 31,
+      "unavailableCount": 1,
       "totalCount": 32
     },
     {
@@ -1079,8 +1079,8 @@
       "type": "listening",
       "file": "201407-N3-4.json",
       "sourceFile": "time_201407_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1119,8 +1119,8 @@
       "type": "listening",
       "file": "201412-N1-4.json",
       "sourceFile": "time_201412_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1159,8 +1159,8 @@
       "type": "listening",
       "file": "201412-N2-4.json",
       "sourceFile": "time_201412_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1199,8 +1199,8 @@
       "type": "listening",
       "file": "201412-N3-4.json",
       "sourceFile": "time_201412_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1239,8 +1239,8 @@
       "type": "listening",
       "file": "201507-N1-4.json",
       "sourceFile": "time_201507_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1279,8 +1279,8 @@
       "type": "listening",
       "file": "201507-N2-4.json",
       "sourceFile": "time_201507_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1319,8 +1319,8 @@
       "type": "listening",
       "file": "201507-N3-4.json",
       "sourceFile": "time_201507_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1359,8 +1359,8 @@
       "type": "listening",
       "file": "201512-N1-4.json",
       "sourceFile": "time_201512_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1399,8 +1399,8 @@
       "type": "listening",
       "file": "201512-N2-4.json",
       "sourceFile": "time_201512_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1439,8 +1439,8 @@
       "type": "listening",
       "file": "201512-N3-4.json",
       "sourceFile": "time_201512_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1479,8 +1479,8 @@
       "type": "listening",
       "file": "201607-N1-4.json",
       "sourceFile": "time_201607_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1519,8 +1519,8 @@
       "type": "listening",
       "file": "201607-N2-4.json",
       "sourceFile": "time_201607_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1559,8 +1559,8 @@
       "type": "listening",
       "file": "201607-N3-4.json",
       "sourceFile": "time_201607_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1599,8 +1599,8 @@
       "type": "listening",
       "file": "201612-N1-4.json",
       "sourceFile": "time_201612_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 37,
+      "availableCount": 37,
+      "unavailableCount": 0,
       "totalCount": 37
     },
     {
@@ -1639,8 +1639,8 @@
       "type": "listening",
       "file": "201612-N2-4.json",
       "sourceFile": "time_201612_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1679,8 +1679,8 @@
       "type": "listening",
       "file": "201612-N3-4.json",
       "sourceFile": "time_201612_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1719,8 +1719,8 @@
       "type": "listening",
       "file": "201707-N1-4.json",
       "sourceFile": "time_201707_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -1759,8 +1759,8 @@
       "type": "listening",
       "file": "201707-N2-4.json",
       "sourceFile": "time_201707_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 32,
+      "unavailableCount": 0,
       "totalCount": 32
     },
     {
@@ -1799,8 +1799,8 @@
       "type": "listening",
       "file": "201707-N3-4.json",
       "sourceFile": "time_201707_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1839,8 +1839,8 @@
       "type": "listening",
       "file": "201712-N1-4.json",
       "sourceFile": "time_201712_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 34,
+      "unavailableCount": 1,
       "totalCount": 35
     },
     {
@@ -1879,8 +1879,8 @@
       "type": "listening",
       "file": "201712-N2-4.json",
       "sourceFile": "time_201712_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 32,
+      "availableCount": 31,
+      "unavailableCount": 1,
       "totalCount": 32
     },
     {
@@ -1919,8 +1919,8 @@
       "type": "listening",
       "file": "201712-N3-4.json",
       "sourceFile": "time_201712_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -1959,8 +1959,8 @@
       "type": "listening",
       "file": "201807-N1-4.json",
       "sourceFile": "time_201807_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -1999,8 +1999,8 @@
       "type": "listening",
       "file": "201807-N2-4.json",
       "sourceFile": "time_201807_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -2039,8 +2039,8 @@
       "type": "listening",
       "file": "201807-N3-4.json",
       "sourceFile": "time_201807_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -2079,8 +2079,8 @@
       "type": "listening",
       "file": "201812-N1-4.json",
       "sourceFile": "time_201812_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 34,
+      "unavailableCount": 1,
       "totalCount": 35
     },
     {
@@ -2119,8 +2119,8 @@
       "type": "listening",
       "file": "201812-N2-4.json",
       "sourceFile": "time_201812_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -2159,8 +2159,8 @@
       "type": "listening",
       "file": "201812-N3-4.json",
       "sourceFile": "time_201812_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 26,
+      "unavailableCount": 2,
       "totalCount": 28
     },
     {
@@ -2199,8 +2199,8 @@
       "type": "listening",
       "file": "201907-N1-4.json",
       "sourceFile": "time_201907_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -2239,8 +2239,8 @@
       "type": "listening",
       "file": "201907-N2-4.json",
       "sourceFile": "time_201907_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -2279,8 +2279,8 @@
       "type": "listening",
       "file": "201907-N3-4.json",
       "sourceFile": "time_201907_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -2319,8 +2319,8 @@
       "type": "listening",
       "file": "201912-N1-4.json",
       "sourceFile": "time_201912_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -2359,8 +2359,8 @@
       "type": "listening",
       "file": "201912-N2-4.json",
       "sourceFile": "time_201912_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -2399,8 +2399,8 @@
       "type": "listening",
       "file": "201912-N3-4.json",
       "sourceFile": "time_201912_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 28,
+      "unavailableCount": 0,
       "totalCount": 28
     },
     {
@@ -2439,8 +2439,8 @@
       "type": "listening",
       "file": "202012-N1-4.json",
       "sourceFile": "time_202012_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -2479,8 +2479,8 @@
       "type": "listening",
       "file": "202012-N2-4.json",
       "sourceFile": "time_202012_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -2519,8 +2519,8 @@
       "type": "listening",
       "file": "202012-N3-4.json",
       "sourceFile": "time_202012_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 22,
+      "unavailableCount": 6,
       "totalCount": 28
     },
     {
@@ -2559,8 +2559,8 @@
       "type": "listening",
       "file": "202107-N1-4.json",
       "sourceFile": "time_202107_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -2599,8 +2599,8 @@
       "type": "listening",
       "file": "202107-N2-4.json",
       "sourceFile": "time_202107_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 28,
+      "unavailableCount": 2,
       "totalCount": 30
     },
     {
@@ -2639,8 +2639,8 @@
       "type": "listening",
       "file": "202107-N3-4.json",
       "sourceFile": "time_202107_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 23,
+      "unavailableCount": 5,
       "totalCount": 28
     },
     {
@@ -2679,8 +2679,8 @@
       "type": "listening",
       "file": "202112-N1-4.json",
       "sourceFile": "time_202112_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 35,
+      "unavailableCount": 0,
       "totalCount": 35
     },
     {
@@ -2719,8 +2719,8 @@
       "type": "listening",
       "file": "202112-N2-4.json",
       "sourceFile": "time_202112_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -2759,8 +2759,8 @@
       "type": "listening",
       "file": "202112-N3-4.json",
       "sourceFile": "time_202112_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 20,
+      "unavailableCount": 8,
       "totalCount": 28
     },
     {
@@ -2799,8 +2799,8 @@
       "type": "listening",
       "file": "202207-N1-4.json",
       "sourceFile": "time_202207_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 35,
+      "availableCount": 34,
+      "unavailableCount": 1,
       "totalCount": 35
     },
     {
@@ -2839,8 +2839,8 @@
       "type": "listening",
       "file": "202207-N2-4.json",
       "sourceFile": "time_202207_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -2879,8 +2879,8 @@
       "type": "listening",
       "file": "202207-N3-4.json",
       "sourceFile": "time_202207_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 23,
+      "unavailableCount": 5,
       "totalCount": 28
     },
     {
@@ -2919,8 +2919,8 @@
       "type": "listening",
       "file": "202212-N1-4.json",
       "sourceFile": "time_202212_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -2959,8 +2959,8 @@
       "type": "listening",
       "file": "202212-N2-4.json",
       "sourceFile": "time_202212_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -3029,8 +3029,8 @@
       "type": "listening",
       "file": "202307-N1-4.json",
       "sourceFile": "time_202307_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3069,8 +3069,8 @@
       "type": "listening",
       "file": "202307-N2-4.json",
       "sourceFile": "time_202307_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3109,8 +3109,8 @@
       "type": "listening",
       "file": "202307-N3-4.json",
       "sourceFile": "time_202307_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 22,
+      "unavailableCount": 6,
       "totalCount": 28
     },
     {
@@ -3149,8 +3149,8 @@
       "type": "listening",
       "file": "202312-N1-4.json",
       "sourceFile": "time_202312_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3189,8 +3189,8 @@
       "type": "listening",
       "file": "202312-N2-4.json",
       "sourceFile": "time_202312_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 29,
+      "unavailableCount": 1,
       "totalCount": 30
     },
     {
@@ -3229,8 +3229,8 @@
       "type": "listening",
       "file": "202312-N3-4.json",
       "sourceFile": "time_202312_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 23,
+      "unavailableCount": 5,
       "totalCount": 28
     },
     {
@@ -3269,8 +3269,8 @@
       "type": "listening",
       "file": "202407-N1-4.json",
       "sourceFile": "time_202407_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3309,8 +3309,8 @@
       "type": "listening",
       "file": "202407-N2-4.json",
       "sourceFile": "time_202407_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3349,8 +3349,8 @@
       "type": "listening",
       "file": "202407-N3-4.json",
       "sourceFile": "time_202407_level_n3_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 28,
+      "availableCount": 23,
+      "unavailableCount": 5,
       "totalCount": 28
     },
     {
@@ -3389,8 +3389,8 @@
       "type": "listening",
       "file": "202412-N1-4.json",
       "sourceFile": "time_202412_level_n1_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3429,8 +3429,8 @@
       "type": "listening",
       "file": "202412-N2-4.json",
       "sourceFile": "time_202412_level_n2_type_4.json",
-      "availableCount": 2,
-      "unavailableCount": 28,
+      "availableCount": 30,
+      "unavailableCount": 0,
       "totalCount": 30
     },
     {
@@ -3479,12 +3479,11 @@
     "sourceRecords": 9301,
     "containers": 632,
     "questions": 8669,
-    "available": 5869,
-    "unavailable": 2800,
+    "available": 8440,
+    "unavailable": 229,
     "inheritedMetadata": 632,
     "reasons": {
-      "缺少配套图片": 229,
-      "缺少配套音频": 2632
+      "缺少配套图片": 229
     },
     "errors": []
   }

@@ -218,7 +218,7 @@ export default function PracticeExercise({ paper, initialQuestionIndex = 0 }: Pr
           }} largeText={largeText}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">第 {questionIndex + 1} 题 · {question.category}{question.sourceQuestionNumber != null && ` · 原题号 ${question.sourceQuestionNumber}`}</h1>
-          <p id="answer-help" className="sr-only lg:not-sr-only mt-2 text-sm leading-6 text-slate-500">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : selectedOptionId === null ? "选择一个答案后才能提交；也可使用题号导航，稍后作答。" : "已选择但尚未提交，可以修改。切题会保留选择，不会自动提交。"}</p>
+          <p id="answer-help" className="sr-only">{finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : "选择答案后提交，切题会保留选择。"}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
           <QuestionBody question={question} largeText={largeText} compact part={article ? "question" : "all"} />
 

@@ -9,7 +9,7 @@ export default function QuestionBody({ question, largeText = false, compact = fa
     : question.prompt;
   return (
     <>
-      {part === "all" && question.instruction && <RichContent text={question.instruction} html={question.richText} lang="ja" className={`${compact ? "hidden lg:block" : ""} mt-5 rounded-xl border border-indigo-100 bg-indigo-50 p-3 text-sm leading-7 text-indigo-900`} />}
+      {part === "all" && !compact && question.instruction && <RichContent text={question.instruction} html={question.richText} lang="ja" className="mt-5 rounded-xl border border-indigo-100 bg-indigo-50 p-3 text-sm leading-7 text-indigo-900" />}
       {part !== "question" && question.passage && <RichContent text={question.passage} html={question.richText} lang="ja" className={`mt-6 ${part === "passage" && question.richText ? "whitespace-normal" : "whitespace-pre-line"} rounded-xl bg-slate-50 p-4 sm:p-5 ${largeText ? "text-xl leading-10" : "text-base leading-8"}`} />}
       {part !== "question" && question.media?.images.map((src) => <Image key={src} src={src} alt="题目配图" width={1024} height={768} unoptimized className="mt-5 h-auto max-h-[80vh] w-full object-contain" />)}
       {part !== "question" && question.media?.audio && <ListeningPlayer reference={question.media.audio} questionId={question.id} />}

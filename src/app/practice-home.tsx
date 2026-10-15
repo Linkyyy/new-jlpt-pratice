@@ -23,7 +23,6 @@ export default function PracticeHome() {
   const activePeriod = periods.includes(year) ? year : periods[0] ?? "2026";
   const counts = getBankCount(source, activeLevel, activePeriod, type);
   const questionCount = counts.available;
-  const listeningCount = getBankCount("imported", "N2", "202412", "listening").available;
 
   return (
     <main className="flex-1 bg-slate-50 px-4 py-5 font-sans text-slate-900 sm:px-8 sm:py-8">
@@ -73,7 +72,6 @@ export default function PracticeHome() {
             <p aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{activeLevel} · {formatPeriod(activePeriod)} · {selection.label} · {questionCount} 题<span className="hidden sm:inline">。{type === "all" ? "包含当前可作答的词汇、语法和阅读，不含听力。" : "仅练习当前题型。"} {counts.excluded > 0 && `另有 ${counts.excluded} 题因缺少媒体或数据不完整暂不可用，未计入本次题量。`} {mode === "exam" ? `考试模式：训练时长 ${getExamDuration(questionCount) / 60} 分钟，交卷后统一解析，非正式考试时长。` : "练习模式：不限时，可开启点击选项即时判定。"}</span></p>
             <button type="submit" disabled={questionCount === 0} className="mt-6 min-h-12 w-full rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300 sm:w-auto">{mode === "exam" ? "进入考试准备" : type === "all" ? "开始整套练习" : `开始${selection.label}练习`} →</button>
           </form>
-          {listeningCount > 0 && <Link href="/practice?source=imported&level=N2&year=202412&type=listening" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">开始听力练习 · N2 / 2024年12月（{listeningCount} 题） →</Link>}
         </section>
 
         <ResponsivePanel title="练习说明" trigger="题库说明与使用帮助" className="mt-4 lg:mt-0">
@@ -90,7 +88,7 @@ export default function PracticeHome() {
           ))}
         </section>
         <p id="mobile-year-note" className="mt-4 text-sm leading-7 text-slate-500">{source === "imported" ? "按年月场次组织，保留原题号；内容来自用户提供资源，不宣称官方授权。" : "原创版本不代表历年官方真题。"}练习模式逐题反馈，考试模式交卷后解析。</p>
-        <p className="mt-4 text-sm leading-7 text-slate-500">当前只提供可作答资源，未接入音频的听力题不可开始。题量、训练时长及正确率不等同于正式 JLPT 的评分或合格判定。答题记录仅保留在本次页面内，刷新或离开页面后会重置。</p>
+        <p className="mt-4 text-sm leading-7 text-slate-500">题量、训练时长及正确率不等同于正式 JLPT 的评分或合格判定。答题记录仅保留在本次页面内，刷新或离开页面后会重置。</p>
         </ResponsivePanel>
       </div>
     </main>
