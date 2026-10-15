@@ -4,6 +4,7 @@ import "./globals.css";
 import "./panels.css";
 import "./themes.css";
 import { displayBootScript } from "@/lib/display-boot";
+import PopupPositioning from "@/components/popup-positioning";
 import { DisplaySync } from "@/components/display-settings";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head><script dangerouslySetInnerHTML={{ __html: displayBootScript }} /></head>
-      <body className="min-h-full flex flex-col"><Suspense fallback={null}><DisplaySync /></Suspense>{children}</body>
+      <body className="min-h-full flex flex-col"><Suspense fallback={null}><DisplaySync /></Suspense><PopupPositioning />{children}</body>
     </html>
   );
 }

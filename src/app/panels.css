@@ -105,7 +105,7 @@ body:has(dialog:modal) { overflow: hidden; }
 .question-passage { line-height: 2; }
 .question-instruction { font-size: max(14px, calc(var(--practice-font-size, 18px) - 4px)); line-height: 1.9; }
 .floating-settings { display: inline-flex; }
-.settings-toggle { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--muted); }
+.settings-toggle { display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--muted); }
 .settings-toggle:hover { background: var(--surface-muted); color: var(--accent-focus); }
 .settings-toggle:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .floating-settings-window { position: fixed; inset: auto 24px 24px auto; margin: 0; width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 20px; padding: 20px; background: var(--surface); color: var(--ink); box-shadow: 0 16px 64px rgb(15 23 42 / 20%); }
@@ -215,3 +215,17 @@ body:has(dialog:modal) { overflow: hidden; }
   .session-content .answer-option { min-height: 44px; padding: 7px 10px; }
   .session-content .answer-actions { margin-top: 10px; }
 }
+
+/* Anchor desktop popups to the click or focused trigger, without moving mobile sheets. */
+@media (min-width: 1024px) {
+  [data-cursor-popup] {
+    position: fixed;
+    inset: auto;
+    left: var(--popup-left, 16px);
+    top: var(--popup-top, 16px);
+    margin: 0;
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+  }
+}
+.display-settings { display: inline-flex; align-items: center; }

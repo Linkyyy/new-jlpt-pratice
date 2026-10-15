@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export const actionButtonClass = "inline-flex min-h-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-40";
+export const actionButtonClass = "inline-flex h-11 min-w-11 w-11 shrink-0 sm:w-auto items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-slate-200 bg-white px-0 text-sm sm:px-3 font-semibold text-indigo-600 hover:bg-indigo-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-40";
 
 export default function ActionLabel({ icon, children }: { icon: "import" | "export" | "favorites" | "history" | "cloud"; children: ReactNode }) {
   return <><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" className="shrink-0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
