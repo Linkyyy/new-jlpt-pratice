@@ -3429,8 +3429,8 @@
       "type": "listening",
       "file": "202412-N2-4.json",
       "sourceFile": "time_202412_level_n2_type_4.json",
-      "availableCount": 0,
-      "unavailableCount": 30,
+      "availableCount": 2,
+      "unavailableCount": 28,
       "totalCount": 30
     },
     {
@@ -3479,12 +3479,12 @@
     "sourceRecords": 9301,
     "containers": 632,
     "questions": 8669,
-    "available": 5867,
-    "unavailable": 2802,
+    "available": 5869,
+    "unavailable": 2800,
     "inheritedMetadata": 632,
     "reasons": {
       "缺少配套图片": 229,
-      "缺少配套音频": 2634
+      "缺少配套音频": 2632
     },
     "errors": []
   }

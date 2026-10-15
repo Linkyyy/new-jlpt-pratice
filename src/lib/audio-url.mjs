@@ -3,6 +3,9 @@ const audioExtension = /\.(?:mp3|m4a|wav|ogg)$/i;
 // Public playback domain supplied by the site owner. Upload credentials stay private.
 export const defaultAudioBaseUrl = "https://pub-8ac2a059bee9443c839a7e7f2f350e93.r2.dev";
 
+// Clear these keys after the owner replaces the synthetic recordings with real audio.
+export const placeholderAudioKeys = ["audio/202412n2/1.mp3", "audio/202412n2/2.mp3"];
+
 /** Preserve the source file mapping, including files shared by multiple questions. */
 export function getAudioObjectKey(reference) {
   if (typeof reference !== "string") return null;

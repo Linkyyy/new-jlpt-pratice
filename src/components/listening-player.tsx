@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { getAudioUrl } from "@/lib/audio-url.mjs";
+import { getAudioObjectKey, getAudioUrl, placeholderAudioKeys } from "@/lib/audio-url.mjs";
 
 function formatTime(value: number) {
   if (!Number.isFinite(value) || value < 0) return "0:00";
@@ -10,11 +10,12 @@ function formatTime(value: number) {
 
 export default function ListeningPlayer({ reference, questionId }: { reference: string; questionId: string }) {
   const url = getAudioUrl(reference);
+  const placeholder = placeholderAudioKeys.includes(getAudioObjectKey(reference) ?? "");
   // Remount even when two questions share one recording: stop the previous question.
-  return <AudioControls key={`${questionId}:${url}`} url={url} />;
+  return <AudioControls key={`${questionId}:${url}`} url={url} placeholder={placeholder} />;
 }
 
-function AudioControls({ url }: { url: string | null }) {
+function AudioControls({ url, placeholder }: { url: string | null; placeholder: boolean }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const mounted = useRef(false);
   const id = useId();
@@ -69,6 +70,7 @@ function AudioControls({ url }: { url: string | null }) {
   return (
     <section aria-label="听力播放器" className="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4">
       <p className="text-sm font-semibold">听力音频</p>
+      {placeholder && <p className="mt-2 text-xs leading-6 text-amber-800">当前为测试语音占位，答案与解析按原题展示。</p>}
       {url ? <>
         <audio ref={audioRef} preload="none" aria-label="本题听力音频"
           onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); setLoading(false); }}
