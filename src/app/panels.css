@@ -54,11 +54,13 @@ body:has(dialog:modal) { overflow: hidden; }
 
 .reading-workspace { padding-bottom: 100px; }
 .reading-article { scroll-margin-top: 16px; }
-.reading-sheet { position: fixed; z-index: 20; inset: auto 0 0; background: white; border: 1px solid #e2e8f0; border-radius: 20px 20px 0 0; box-shadow: 0 -8px 40px rgb(15 23 42 / 12%); padding-bottom: env(safe-area-inset-bottom); }
-.reading-sheet-handle { display: flex; width: 100%; min-height: 76px; flex-direction: column; align-items: center; gap: 12px; padding: 12px 20px 16px; font-size: 14px; font-weight: 600; cursor: ns-resize; touch-action: none; }
+.reading-sheet { --sheet-top-space: 16px; display: flex; flex-direction: column; box-sizing: border-box; max-height: calc(100dvh - var(--sheet-top-space)); position: fixed; z-index: 20; inset: auto 0 0; background: white; border: 1px solid #e2e8f0; border-radius: 20px 20px 0 0; box-shadow: 0 -8px 40px rgb(15 23 42 / 12%); padding-bottom: env(safe-area-inset-bottom); }
+.reading-sheet-expanded { height: 72dvh; }
+.reading-sheet[data-resizing] { user-select: none; }
+.reading-sheet-handle { flex-shrink: 0; user-select: none; display: flex; width: 100%; min-height: 76px; flex-direction: column; align-items: center; gap: 12px; padding: 12px 20px 16px; font-size: 14px; font-weight: 600; cursor: ns-resize; touch-action: none; }
 .reading-sheet-handle:focus-visible { outline: 2px solid #6366f1; outline-offset: -4px; border-radius: 20px; }
 .reading-grip { height: 4px; width: 36px; border-radius: 4px; background: #cbd5e1; }
-.reading-sheet-content { max-height: calc(72dvh - 76px); overflow-y: auto; overscroll-behavior: contain; padding: 0 16px 20px; }
+.reading-sheet-content { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 16px 20px; }
 .reading-sheet-content[hidden] { display: none; }
 .reading-sheet .question-card { padding: 20px 4px 4px; border: 0; border-radius: 0; box-shadow: none; }
 .reading-subquestions { position: sticky; top: 0; z-index: 2; background: white; display: flex; gap: 8px; flex-wrap: wrap; padding: 4px 4px 8px; }
@@ -107,3 +109,11 @@ body:has(dialog:modal) { overflow: hidden; }
 .floating-settings-window { position: fixed; inset: auto 24px 24px auto; margin: 0; width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; border: 1px solid #e2e8f0; border-radius: 20px; padding: 20px; background: #fff; color: #0f172a; box-shadow: 0 16px 64px rgb(15 23 42 / 20%); }
 .floating-settings-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
 @media (max-width: 1023px) { .floating-settings-window { inset: auto 16px 16px auto; } }
+
+.session-layout:has(.session-timer) .reading-sheet,
+.session-layout:has(.session-review) .reading-sheet { --sheet-top-space: 100px; }
+@media (max-width: 1023px) {
+  .reading-sheet { --sheet-top-space: 64px; }
+  .session-layout:has(.session-timer) .reading-sheet,
+  .session-layout:has(.session-review) .reading-sheet { --sheet-top-space: 148px; }
+}
