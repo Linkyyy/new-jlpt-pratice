@@ -1,4 +1,5 @@
 import { createHash, randomBytes, randomUUID, scrypt, timingSafeEqual } from "node:crypto";
+import { withoutStudyHistory } from "./study-history-data";
 import { isLearningBackup, isRecord } from "./backup-validation";
 
 const COOKIE = "jlpt-cloud-session";
@@ -112,6 +113,7 @@ export function cloudAuth(request: Request) {
     const username = typeof body.username === "string" ? body.username.trim().toLowerCase() : "";
     const password = body.password;
     if (!/^[a-z0-9_]{3,32}$/.test(username) || typeof password !== "string" || password.length < 8 || password.length > 128) throw new CloudError(400, "账号需为 3–32 位字母、数字或下划线，密码需为 8–128 位。");
+    if (body.action === "register" && body.confirmPassword !== password) throw new CloudError(400, "两次输入的密码不一致。");
     const ip = (request.headers.get("x-vercel-forwarded-for") ?? request.headers.get("x-forwarded-for") ?? "unknown").split(",")[0].trim();
     await rateLimit("auth-ip", ip, 30, 900);
     await rateLimit("auth-account", username, 15, 900);
@@ -160,6 +162,33 @@ export function cloudWrite(request: Request) {
       ? await query("INSERT INTO cloud_backups (user_id, data, revision, saved_at, bytes) VALUES (?, ?, ?, ?, ?) ON CONFLICT(user_id) DO NOTHING RETURNING revision", [user.id, data, revision, savedAt, bytes])
       : await query("UPDATE cloud_backups SET data = ?, revision = ?, saved_at = ?, bytes = ? WHERE user_id = ? AND revision = ? RETURNING revision", [data, revision, savedAt, bytes, user.id, body.expectedRevision]);
     if (!rows.length) throw new CloudError(409, "云备份已在其他设备更新，请刷新后重试。");
+    return json({ ok: true, backup: { revision, savedAt, bytes } });
+  });
+}
+
+export function cloudDeleteHistory(request: Request) {
+  return handle(async () => {
+    sameOrigin(request);
+    const user = await requireSession(request);
+    await rateLimit("history-delete", user.id, 20, 60);
+    const body = await input(request, 4096);
+    if (body.expectedUsername !== user.username) throw new CloudError(409, "登录账号已变化，请刷新后重试。");
+    if (!(body.attemptId === null || typeof body.attemptId === "string" && body.attemptId.length > 0 && body.attemptId.length <= 300)
+      || !(body.expectedRevision === null || typeof body.expectedRevision === "string" && body.expectedRevision.length <= 100)) throw new CloudError(400, "请求格式无效。");
+    const rows = await query<{ data: string; revision: string; savedAt: number; bytes: number }>("SELECT data, revision, saved_at AS savedAt, bytes FROM cloud_backups WHERE user_id = ?", [user.id]);
+    const saved = rows[0];
+    if ((saved?.revision ?? null) !== body.expectedRevision) throw new CloudError(409, "云备份已在其他设备更新，请刷新后重试。");
+    if (!saved) return json({ ok: true, backup: null });
+    const value: unknown = JSON.parse(saved.data);
+    if (!isLearningBackup(value)) throw new CloudError(422, "云备份格式无效，本地记录未修改。");
+    const study = withoutStudyHistory(value.study, body.attemptId);
+    if (study === value.study) return json({ ok: true, backup: { revision: saved.revision, savedAt: saved.savedAt, bytes: saved.bytes } });
+    // Retain the cloud's own favorites, folders and other fields. Never upload the
+    // current device's collection while deleting history from a different device.
+    const data = JSON.stringify({ ...value, study, exportedAt: new Date().toISOString() });
+    const revision = randomUUID(), savedAt = Date.now(), bytes = Buffer.byteLength(data, "utf8");
+    const updated = await query("UPDATE cloud_backups SET data = ?, revision = ?, saved_at = ?, bytes = ? WHERE user_id = ? AND revision = ? RETURNING revision", [data, revision, savedAt, bytes, user.id, saved.revision]);
+    if (!updated.length) throw new CloudError(409, "云备份已在其他设备更新，请刷新后重试。");
     return json({ ok: true, backup: { revision, savedAt, bytes } });
   });
 }

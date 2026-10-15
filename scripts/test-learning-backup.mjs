@@ -8,7 +8,7 @@ import ts from "typescript";
 const require = createRequire(import.meta.url);
 const favoriteKey = "jlpt-practice.favorites.v1", studyKey = "jlpt-practice.study.v1";
 const compile = name => ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation"].map(name => [name, compile(name)]));
+const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation", "study-history-data"].map(name => [name, compile(name)]));
 const favorites = { version: 2, folders: [{ id: "default", name: "默认收藏夹" }, { id: "folder-a", name: "语法" }], entries: [{ questionId: "q1", folderIds: ["default", "folder-a"], savedAt: "2026-10-01T00:00:00Z" }] };
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", questions: [{ id: "q1", level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }] };
 function environment(initial = {}) {
@@ -107,4 +107,16 @@ test("corrupt local data cannot be silently exported as empty or overwritten", (
   assert.equal(bad.backup.importLearningBackup(source.backup.createLearningBackup().data).ok, false);
   assert.equal(bad.raw.get(favoriteKey), "{broken");
   assert.equal(bad.raw.has(studyKey), false);
+});
+
+test("deleting history never touches local favorites or multiple folder memberships", () => {
+  const e = environment({ [favoriteKey]: favorites });
+  const id = completed(e);
+  const untouched = e.raw.get(favoriteKey);
+  assert.equal(e.study.deleteStudyHistory(id).ok, true);
+  assert.equal(e.raw.get(favoriteKey), untouched);
+  completed(e);
+  assert.equal(e.study.deleteStudyHistory(null).ok, true);
+  assert.equal(e.raw.get(favoriteKey), untouched);
+  assert.equal(e.backup.createLearningBackup().data.study.attempts.length, 0);
 });

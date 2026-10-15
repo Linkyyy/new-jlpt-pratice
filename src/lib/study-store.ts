@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { withoutStudyHistory } from "./study-history-data";
 import { isStudyData } from "./backup-validation";
 export { isStudyData } from "./backup-validation";
 import type { JLPTLevel, OptionId, QuestionCategory } from "@/data/practice-question";
@@ -174,4 +175,11 @@ export function mergeStudyData(data: StudyData, value: StudyData): StudyData {
   const attempts = new Map(data.attempts.map(a => [a.id, a]));
   for (const a of value.attempts) { const old = attempts.get(a.id); if (!old || old.status !== "completed" && a.updatedAt > old.updatedAt) attempts.set(a.id, a); }
   return { version: 1, attempts: [...attempts.values()], activityDays: [...new Set([...data.activityDays, ...value.activityDays])].sort() };
+}
+
+export function deleteStudyHistory(attemptId: string | null, expected?: StudyData): StudyResult {
+  const snapshot = readStudySnapshot();
+  if (!snapshot.ready || snapshot.error) return { ok: false, error: snapshot.error ?? "正在读取学习记录……" };
+  if (expected && JSON.stringify(snapshot.data) !== JSON.stringify(expected)) return { ok: false, error: "本地记录已在其他页面更新，请重新确认删除。" };
+  return commit(data => withoutStudyHistory(data, attemptId));
 }

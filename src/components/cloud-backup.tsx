@@ -3,19 +3,11 @@
 import { useId, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { createLearningBackup, importLearningBackup } from "@/lib/learning-backup";
+import { requestCloudBackup as api, CloudRequestError as RequestError, type CloudState } from "@/lib/cloud-backup-client";
 import ActionLabel, { actionButtonClass } from "./action-label";
 import LoadingSkeleton, { LoadingSpinner } from "./loading-skeleton";
 import MessageToast, { type FeedbackMessage } from "./message-toast";
 
-type BackupInfo = { revision: string; savedAt: number; bytes: number };
-type CloudState = { configured: boolean; user: { username: string } | null; backup: BackupInfo | null };
-class RequestError extends Error { constructor(readonly status: number, message: string) { super(message); } }
-async function api(path: string, body?: unknown) {
-  const response = await fetch(`/api/cloud-backup${path}`, { method: body === undefined ? "GET" : "POST", credentials: "same-origin", cache: "no-store", signal: AbortSignal.timeout(20000), ...(body === undefined ? {} : { headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }) });
-  const result = await response.json();
-  if (!response.ok) throw new RequestError(response.status, result.error ?? "云服务暂时不可用，请稍后重试。");
-  return result;
-}
 const field = "mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 focus:outline-2 focus:outline-indigo-500";
 const primary = "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-40";
 
@@ -28,7 +20,7 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
   const [message, setMessage] = useState<FeedbackMessage | null>(null);
   const [mode, setMode] = useState<"login" | "register">("login");
   const [confirm, setConfirm] = useState<"backup" | "restore" | null>(null);
-  const username = useRef<HTMLInputElement>(null), password = useRef<HTMLInputElement>(null);
+  const username = useRef<HTMLInputElement>(null), password = useRef<HTMLInputElement>(null), confirmPassword = useRef<HTMLInputElement>(null);
   async function run(label: string, action: () => Promise<void>) {
     if (busy) return;
     setBusy(label); setMessage(null);
@@ -45,10 +37,16 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
   }
   function authenticate(event: React.FormEvent) {
     event.preventDefault();
-    const credentials = { action: mode, username: username.current?.value, password: password.current?.value };
+    if (mode === "register" && confirmPassword.current?.value !== password.current?.value) {
+      setMessage({ text: "两次输入的密码不一致。", error: true });
+      confirmPassword.current?.focus();
+      return;
+    }
+    const credentials = { action: mode, username: username.current?.value, password: password.current?.value, ...(mode === "register" ? { confirmPassword: confirmPassword.current?.value } : {}) };
     void run(mode === "login" ? "正在登录……" : "正在创建账号……", async () => {
       setState(await api("/auth", credentials));
       if (password.current) password.current.value = "";
+      if (confirmPassword.current) confirmPassword.current.value = "";
       setMessage({ text: mode === "login" ? "登录成功。" : "账号已创建并登录。", error: false });
     });
   }
@@ -72,15 +70,20 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
   }
   return <>
     <button type="button" aria-label={t("云备份")} title={t("云备份")} onClick={open} className={actionButtonClass}><ActionLabel icon="cloud">{t("云备份")}</ActionLabel></button>
-    <dialog ref={dialog} aria-labelledby={`${id}-title`} onCancel={event => { if (busy) event.preventDefault(); }} onClose={() => { if (password.current) password.current.value = ""; }} className="m-auto max-h-[calc(100dvh-32px)] w-[calc(100vw-32px)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-5 text-slate-900 shadow-xl backdrop:bg-slate-900/40 sm:p-6">
+    <dialog ref={dialog} aria-labelledby={`${id}-title`} onCancel={event => { if (busy) event.preventDefault(); }} onClose={() => {
+      if (dialog.current?.open) return;
+      if (password.current) password.current.value = "";
+      if (confirmPassword.current) confirmPassword.current.value = "";
+    }} className="m-auto max-h-[calc(100dvh-32px)] w-[calc(100vw-32px)] max-w-md overflow-y-auto rounded-2xl border border-slate-200 bg-white p-5 text-slate-900 shadow-xl backdrop:bg-slate-900/40 sm:p-6">
       <div className="mb-5 flex items-center justify-between gap-3"><h2 id={`${id}-title`} className="text-xl font-bold">{t("云备份")}</h2><button type="button" disabled={Boolean(busy)} onClick={() => dialog.current?.close()} aria-label={t("关闭云备份")} className="settings-toggle disabled:opacity-40">✕</button></div>
       {busy && <p role="status" className="mb-4 flex items-center gap-2 text-sm text-indigo-600"><LoadingSpinner />{t(busy)}</p>}
       {!state ? <>{busy ? <LoadingSkeleton label="正在连接云备份……" /> : <button type="button" onClick={open} className={actionButtonClass}>{t("重新加载")}</button>}</> : !state.configured ? <p className="text-sm leading-7 text-slate-500">{t("云备份尚未配置，请联系站点管理员。")}</p> : !state.user ? <form onSubmit={authenticate}>
-        <p className="mb-4 text-sm leading-6 text-slate-500">{t("登录后可跨设备备份收藏和学习记录，不影响直接刷题。")}</p>
+        {mode === "register" && <p className="mb-4 text-sm leading-6 text-slate-500">{t("登录后可跨设备备份收藏和学习记录，不影响直接刷题。")}</p>}
         <fieldset disabled={Boolean(busy)} className="space-y-4">
-          <label className="block text-sm font-semibold">{t("账号")}<input ref={username} name="username" autoComplete="username" autoCapitalize="none" spellCheck={false} required minLength={3} maxLength={32} pattern="[A-Za-z0-9_]{3,32}" aria-describedby={`${id}-help`} className={field} /></label>
-          <p id={`${id}-help`} className="text-xs leading-5 text-slate-500">{t("账号需为 3–32 位字母、数字或下划线，密码需为 8–128 位。")}</p>
+          <label className="block text-sm font-semibold">{t("账号")}<input ref={username} name="username" autoComplete="username" autoCapitalize="none" spellCheck={false} required minLength={3} maxLength={32} pattern="[A-Za-z0-9_]{3,32}" aria-describedby={mode === "register" ? `${id}-help` : undefined} className={field} /></label>
+          {mode === "register" && <p id={`${id}-help`} className="text-xs leading-5 text-slate-500">{t("账号需为 3–32 位字母、数字或下划线，密码需为 8–128 位。")}</p>}
           <label className="block text-sm font-semibold">{t("密码")}<input ref={password} type="password" name="password" autoComplete={mode === "register" ? "new-password" : "current-password"} required minLength={8} maxLength={128} className={field} /></label>
+          {mode === "register" && <label className="block text-sm font-semibold">{t("确认密码")}<input ref={confirmPassword} type="password" name="confirmPassword" autoComplete="new-password" required minLength={8} maxLength={128} className={field} /></label>}
           <button type="submit" className={`${primary} w-full`} disabled={Boolean(busy)}>{t(mode === "login" ? "登录" : "创建账号")}</button>
           <button type="button" onClick={() => { setMode(mode === "login" ? "register" : "login"); setMessage(null); }} className="min-h-11 w-full text-sm font-semibold text-indigo-600">{t(mode === "login" ? "没有账号？创建账号" : "已有账号？登录")}</button>
         </fieldset>
