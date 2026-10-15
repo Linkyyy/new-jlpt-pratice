@@ -37,6 +37,38 @@ test("image reading subquestions share a drawer without requiring passage text",
   assert.notEqual(article.articleGroupKey(first), article.articleGroupKey(unrelated));
 });
 
+test("subquestion pictures remain below the prompt and do not split a shared reading group", async () => {
+  const bank = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/questions/201412-N3-3.json", import.meta.url)));
+  const [first, second] = bank.questions.slice(-2);
+  assert.deepEqual(first.media.images, ["pic/320141273.jpg"]);
+  assert.deepEqual(first.media.questionImages, ["pic/320140773-1.jpg"]);
+  assert.equal(second.media.questionImages, undefined);
+  assert.equal(article.articleGroup(bank.questions, first).length, 2);
+  assert.equal(article.articleGroupKey(first), article.articleGroupKey(second));
+});
+
+test("every shared listening recording uses one drawer and inherits its question-card heading", async () => {
+  const manifest = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/index.json", import.meta.url)));
+  let shared = 0;
+  for (const group of manifest.groups.filter(group => group.type === "listening")) {
+    const { questions } = JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${group.file}`, import.meta.url)));
+    if (questions.length < 2) continue;
+    const [first, second] = questions.slice(-2);
+    if (first.media.audio !== second.media.audio) continue;
+    shared++;
+    assert.ok(first.instruction, group.file);
+    assert.equal(first.instruction, second.instruction, group.file);
+    assert.equal(article.usesArticleDrawer(first, questions), true);
+    assert.equal(article.usesArticleDrawer(second, questions), true);
+    assert.equal(article.articleGroup(questions, first).length, 2);
+    assert.equal(article.articleGroupKey(first), article.articleGroupKey(second));
+    assert.equal(article.usesArticleDrawer(first, [first]), false);
+    assert.equal(article.usesArticleDrawer(first, [first, { ...second, media: { ...second.media, audio: "audio/other/1.mp3" } }]), false);
+    assert.notEqual(article.articleGroupKey(first), article.articleGroupKey({ ...second, id: second.id.replace(/imported:\d+:/, "imported:199901:") }));
+  }
+  assert.equal(shared, 57);
+});
+
 test("all 168 previously excluded reading questions are available with original image mappings", async () => {
   const manifest = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/index.json", import.meta.url)));
   let opened = 0;
@@ -63,7 +95,7 @@ test("reimport keeps shared reading images playable before upload without openin
     for (const dir of ["scripts", "src/lib", "input"]) await fs.mkdir(path.join(root, dir), { recursive: true });
     for (const file of ["scripts/import-question-bank.mjs", "scripts/r2-audio-files.mjs", "src/lib/audio-url.mjs", "src/lib/image-url.mjs"]) await fs.copyFile(new URL(`../${file}`, import.meta.url), path.join(root, file));
     const options = { option1: "first", option2: "second", answer: 1 };
-    const rows = [{ id: 70, picture: "pic/220241270.jpg", bigTitle: "問題14", extending: [{ id: 70, questionId: 70, littleQuestion: "question one", ...options }, { id: 71, questionId: 71, littleQuestion: "question two", ...options }] }];
+    const rows = [{ id: 70, picture: "pic/220241270.jpg", bigTitle: "問題14", extending: [{ id: 70, questionId: 70, littleQuestion: "question one", picture: "pic/220241270-1.jpg", ...options }, { id: 71, questionId: 71, littleQuestion: "question two", ...options }] }];
     await fs.writeFile(path.join(root, "input/time_202412_level_n2_type_3.json"), JSON.stringify(rows));
     await fs.writeFile(path.join(root, "input/time_202412_level_n2_type_4.json"), JSON.stringify([{ id: 1, questionId: 72, picture: "pic/listening.jpg", audio: "audio/202412n2/1.mp3", ...options }]));
     execFileSync(process.execPath, [path.join(root, "scripts/import-question-bank.mjs"), "--source", path.join(root, "input")]);
@@ -72,7 +104,9 @@ test("reimport keeps shared reading images playable before upload without openin
     assert.equal(bank.unavailable.length, 0);
     assert.equal(bank.questions[0].instruction, "問題14");
     assert.deepEqual(bank.questions[0].media.images, ["pic/220241270.jpg"]);
+    assert.deepEqual(bank.questions[0].media.questionImages, ["pic/220241270-1.jpg"]);
     assert.deepEqual(bank.questions[1].media.images, bank.questions[0].media.images);
+    assert.equal(bank.questions[1].media.questionImages, undefined);
     const listening = JSON.parse(await fs.readFile(path.join(root, "src/data/imported-bank/questions/202412-N2-4.json")));
     assert.equal(listening.questions.length, 0);
     assert.equal(listening.unavailable.length, 1);

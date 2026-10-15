@@ -7,6 +7,7 @@ import { requestCloudBackup as api, CloudRequestError as RequestError, type Clou
 import ActionLabel, { actionButtonClass } from "./action-label";
 import LoadingSkeleton, { LoadingSpinner } from "./loading-skeleton";
 import MessageToast, { type FeedbackMessage } from "./message-toast";
+import HistoryDeletion, { type HistoryDeletionHandle } from "./history-deletion";
 
 const field = "mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 focus:outline-2 focus:outline-indigo-500";
 const primary = "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-40";
@@ -16,6 +17,8 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
   const { t, locale } = useI18n();
   const id = useId();
   const dialog = useRef<HTMLDialogElement>(null);
+  const deletion = useRef<HistoryDeletionHandle>(null);
+  const clearHistoryButton = useRef<HTMLButtonElement>(null);
   const [state, setState] = useState<CloudState | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [message, setMessage] = useState<FeedbackMessage | null>(null);
@@ -35,6 +38,22 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
   function open() {
     dialog.current?.showModal(); setConfirm(null);
     void run("正在连接云备份……", async () => { setState(await api("/auth")); });
+  }
+  function clearHistory() {
+    if (busy || disabled) return;
+    setConfirm(null); setMessage(null);
+    dialog.current?.close();
+    deletion.current?.open();
+  }
+  function returnFromHistory(message: FeedbackMessage | null) {
+    if (!dialog.current?.open) dialog.current?.showModal();
+    setState(null);
+    // Clearing can update the remote revision even when a local write fails.
+    // Refresh on every return, including cancellation, before another backup.
+    void run("正在连接云备份……", async () => {
+      setState(await api("/auth"));
+      if (message) setMessage(message);
+    }).finally(() => clearHistoryButton.current?.focus());
   }
   function authenticate(event: React.FormEvent) {
     event.preventDefault();
@@ -92,10 +111,12 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
         <div className="rounded-xl bg-slate-50 p-4"><p className="break-all text-sm font-semibold">{state.user.username}</p><p className="mt-2 text-xs leading-6 text-slate-500">{state.backup ? `${t("上次备份")} · ${new Intl.DateTimeFormat(locale === "zh" ? "zh-CN" : locale, { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Tokyo" }).format(state.backup.savedAt)} (JST)` : t("这个账号还没有云备份。")}</p></div>
         {confirm ? <div className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-4"><p className="text-sm leading-7">{t(confirm === "backup" ? "将用当前设备的收藏和学习记录替换这个账号的云备份。建议先导入云备份合并其他设备的记录。" : "将云备份合并到当前浏览器，保留本地已有收藏和已完成成绩。")}</p><div className="mt-4 grid gap-2 sm:flex"><button type="button" disabled={Boolean(busy) || disabled} onClick={confirm === "backup" ? upload : restore} className={primary}>{t(confirm === "backup" ? "确认备份" : "确认导入")}</button><button type="button" disabled={Boolean(busy)} onClick={() => setConfirm(null)} className={secondary}>{t("取消")}</button></div></div> : <div className="mt-5 grid gap-3"><button type="button" disabled={Boolean(busy) || disabled} onClick={() => state.backup ? setConfirm("backup") : upload()} className={`${primary} w-full`}><ActionLabel icon="import" alwaysShowText>{t("备份到云端")}</ActionLabel></button><button type="button" disabled={Boolean(busy) || disabled || !state.backup} onClick={() => setConfirm("restore")} className={`${secondary} w-full`}><ActionLabel icon="export" alwaysShowText>{t("从云端导入")}</ActionLabel></button></div>}
         <p className="mt-4 text-xs leading-6 text-slate-500">{t("云备份包含全部收藏夹、收藏题和学习记录；每个账号保留一份最新备份。")}</p>
-        <button type="button" disabled={Boolean(busy)} onClick={() => { void run("正在退出……", async () => { await api("/auth", { action: "logout" }); setState({ configured: true, user: null, backup: null }); setConfirm(null); setMessage({ text: "已退出云备份账号，本地记录保留。", error: false }); }); }} className="mt-3 min-h-11 text-sm font-semibold text-slate-500 disabled:opacity-40">{t("退出账号")}</button>
+
       </>}
       {disabled && <p className="mt-3 text-xs leading-6 text-amber-800">{t("本地记录尚未就绪或无法读取，请检查存储权限后重试。")}</p>}
+      <div className="mt-4 flex items-center justify-between gap-4">{state?.user ? <button type="button" disabled={Boolean(busy)} onClick={() => { void run("正在退出……", async () => { await api("/auth", { action: "logout" }); setState({ configured: true, user: null, backup: null }); setConfirm(null); setMessage({ text: "已退出云备份账号，本地记录保留。", error: false }); }); }} className="min-h-11 text-sm font-semibold text-slate-500 disabled:opacity-40">{t("退出账号")}</button> : <span />}<button ref={clearHistoryButton} type="button" disabled={Boolean(busy) || disabled} onClick={clearHistory} aria-label={t("清空做题记录")} className="inline-flex min-h-11 items-center text-xs text-rose-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500 disabled:opacity-40">{t("清空记录")}</button></div>
       <MessageToast message={message} onDismiss={() => setMessage(null)} />
     </dialog>
+    <HistoryDeletion ref={deletion} onClose={returnFromHistory} />
   </>;
 }

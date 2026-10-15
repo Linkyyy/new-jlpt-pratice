@@ -1,13 +1,21 @@
 import type { PracticeQuestion } from "@/data/practice-question";
 
-export function usesArticleDrawer(question: PracticeQuestion): boolean {
-  return (question.category === "阅读" || question.category === "语法") && Boolean(question.passage?.trim() || question.media?.images.length);
+function listeningGroupKey(question: PracticeQuestion): string | null {
+  if (question.category !== "听力" || !question.media?.audio) return null;
+  const paper = question.id.startsWith("imported:") ? question.id.split(":").slice(0, 4).join(":") : question.level;
+  return JSON.stringify(["听力", paper, question.media.audio]);
+}
+
+export function usesArticleDrawer(question: PracticeQuestion, questions: readonly PracticeQuestion[] = []): boolean {
+  if (question.category === "阅读" || question.category === "语法") return Boolean(question.passage?.trim() || question.media?.images.length);
+  const key = listeningGroupKey(question);
+  return key !== null && questions.some(item => item.id !== question.id && listeningGroupKey(item) === key);
 }
 
 export function articleGroupKey(question: PracticeQuestion): string {
-  return usesArticleDrawer(question)
-    ? JSON.stringify([question.category, question.passage?.trim() ?? "", question.richText ?? false, question.media ?? null])
-    : question.id;
+  return listeningGroupKey(question) ?? (usesArticleDrawer(question)
+    ? JSON.stringify([question.category, question.passage?.trim() ?? "", question.richText ?? false, question.media?.images ?? [], question.media?.audio ?? null])
+    : question.id);
 }
 
 export function articleGroup(questions: readonly PracticeQuestion[], question: PracticeQuestion) {

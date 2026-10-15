@@ -24,7 +24,7 @@ export interface PracticeQuestion {
   readonly richText?: boolean;
   readonly sourceQuestionNumber?: number | null;
   readonly sourceId?: number;
-  readonly media?: { readonly images: readonly string[]; readonly audio?: string };
+  readonly media?: { readonly images: readonly string[]; readonly questionImages?: readonly string[]; readonly audio?: string };
 }
 
 export function optionLabel(question: PracticeQuestion, optionId: OptionId | undefined | null): string {

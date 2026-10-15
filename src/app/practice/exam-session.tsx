@@ -53,7 +53,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
   const durationSeconds = getExamDuration(paper.questions.length);
   const timer = useExamTimer(durationSeconds, () => finishExam(true), attempt.deadline);
   const question = paper.questions[questionIndex];
-  const article = usesArticleDrawer(question);
+  const article = usesArticleDrawer(question, paper.questions);
   const selectedOptionId = answers[question.id] ?? null;
   const answeredCount = paper.questions.filter((item) => answers[item.id] !== undefined).length;
   const unansweredCount = paper.questions.length - answeredCount;

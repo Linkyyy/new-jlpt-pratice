@@ -101,7 +101,7 @@ for (const name of (await fs.readdir(sourceDirectory)).sort()) {
     allIds.add(id);
     if (row.time != null && row.time !== period || row.level != null && String(row.level).toUpperCase() !== level || row.type != null && row.type !== type) reasons.push("文件与题目元数据不一致");
 
-    const instruction = text(row.bigTitle) || text(parent?.bigTitle);
+    const instruction = text(row.bigTitle) || text(parent?.bigTitle) || (parent?.extending?.map(child => text(child?.bigTitle)).find(Boolean) ?? "");
     let prompt = text(row.littleQuestion);
     let passage = "";
     if (parent) {
@@ -128,18 +128,20 @@ for (const name of (await fs.readdir(sourceDirectory)).sort()) {
     const answer = Number.isInteger(row.answer) && row.answer >= 1 && row.answer <= 4 ? letters[row.answer - 1] : null;
     if (options.length < 2 || !options.some((option) => option.id === answer)) reasons.push("选项或答案不完整");
 
-    const pictureReference = text(row.picture) || text(parent?.picture);
+    const questionPictureReference = parent && text(row.picture) && text(row.picture) !== text(parent.picture) ? text(row.picture) : "";
+    const pictureReference = text(parent?.picture) || (questionPictureReference ? "" : text(row.picture));
     const audioReference = text(row.audio) || text(parent?.audio);
     const image = await resolveMedia(pictureReference, "image", type === 3);
+    const questionImage = await resolveMedia(questionPictureReference, "image", type === 3);
     const audio = await resolveMedia(audioReference, "audio");
-    if (pictureReference && !image) reasons.push("缺少配套图片");
+    if (pictureReference && !image || questionPictureReference && !questionImage) reasons.push("缺少配套图片");
     if (type === 4 && !audio || audioReference && !audio) reasons.push("缺少配套音频");
     if (reasons.length > 0) {
       unavailable.push({ id, sourceId: row.id, questionNumber: number, reasons, media: { picture: pictureReference, audio: audioReference }, raw: row });
       for (const reason of reasons) report.reasons[reason] = (report.reasons[reason] ?? 0) + 1;
       return;
     }
-    questions.push({ id, level, category: categories[type], prompt, ...(passage ? { passage } : {}), ...(instruction ? { instruction } : {}), richText: true, options, correctOptionId: answer, explanation: [explanationFor(row, parent)], sourceQuestionNumber: number, sourceId: row.id, ...(image || audio ? { media: { images: image ? [image] : [], ...(audio ? { audio } : {}) } } : {}) });
+    questions.push({ id, level, category: categories[type], prompt, ...(passage ? { passage } : {}), ...(instruction ? { instruction } : {}), richText: true, options, correctOptionId: answer, explanation: [explanationFor(row, parent)], sourceQuestionNumber: number, sourceId: row.id, ...(image || questionImage || audio ? { media: { images: image ? [image] : [], ...(questionImage ? { questionImages: [questionImage] } : {}), ...(audio ? { audio } : {}) } } : {}) });
   }
   for (const row of rows) await visit(row);
   report.available += questions.length;

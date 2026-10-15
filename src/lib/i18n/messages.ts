@@ -1,4 +1,10 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["听力材料", "聴解音声", "Listening material"],
+  ["听力题目抽屉", "聴解問題パネル", "Listening question drawer"],
+  ["本段共", "この音声は", "This recording has "],
+  ["同段听力子题", "同じ音声の小問", "Questions for this recording"],
+  ["第 {0} 题 · 本段 {1} 题", "第{0}問 · この音声は{1}問", "Question {0} · {1} in this recording"],
+  ["提交本组答案", "この音声の解答を提出", "Submit this group"],
   ["题目图片暂时无法加载，请稍后重试。", "問題の画像を読み込めません。しばらくしてから再試行してください。", "The question image could not load. Please try again shortly."],
   ["重新加载图片", "画像を再読み込み", "Reload image"],
   ["正在加载图片……", "画像を読み込み中……", "Loading image…"],

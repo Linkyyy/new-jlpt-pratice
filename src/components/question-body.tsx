@@ -7,7 +7,7 @@ import type { PracticeQuestion } from "@/data/practice-question";
 import RichContent from "./rich-content";
 import ListeningPlayer from "./listening-player";
 
-export default function QuestionBody({ question, part = "all" }: { question: PracticeQuestion; part?: "all" | "passage" | "question" }) {
+export default function QuestionBody({ question, part = "all", audioGroupId }: { question: PracticeQuestion; part?: "all" | "passage" | "question"; audioGroupId?: string }) {
   const { t } = useI18n();
   const prompt = part === "question" && question.passage?.trim() === question.prompt.trim()
     ? question.category === "语法" ? t("请选择文章中{0}的答案。", { 0: question.sourceQuestionNumber != null ? t("第 {0} 空", { 0: question.sourceQuestionNumber }) : t("当前空格") }) : t("请根据上方文章选择答案。")
@@ -17,8 +17,9 @@ export default function QuestionBody({ question, part = "all" }: { question: Pra
       {part !== "question" && question.instruction && <RichContent text={question.instruction} html={question.richText} lang="ja" className="question-instruction mt-5 rounded-xl border border-indigo-100 bg-indigo-50 p-3 text-indigo-900" />}
       {part !== "question" && question.passage && <RichContent text={question.passage} html={question.richText} lang="ja" className={`question-text question-passage mt-6 ${part === "passage" && question.richText ? "whitespace-normal" : "whitespace-pre-line"} rounded-xl bg-slate-50 p-4 sm:p-5`} />}
       {part !== "question" && question.media?.images.map((src) => <QuestionImage key={src} reference={src} />)}
-      {part !== "question" && question.media?.audio && <ListeningPlayer reference={question.media.audio} questionId={question.id} />}
+      {part !== "question" && question.media?.audio && <ListeningPlayer reference={question.media.audio} questionId={audioGroupId ?? question.id} />}
       {part !== "passage" && <RichContent text={prompt} html={question.richText} lang="ja" className="question-text mt-4 sm:mt-7 whitespace-pre-line" />}
+      {part !== "passage" && question.media?.questionImages?.map(src => <QuestionImage key={src} reference={src} />)}
     </>
   );
 }

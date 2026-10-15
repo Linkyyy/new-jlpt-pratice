@@ -59,7 +59,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const resultRef = useRef<HTMLHeadingElement>(null);
   const previousView = useRef({ questionIndex, showResults });
   const question = paper.questions[questionIndex];
-  const article = usesArticleDrawer(question);
+  const article = usesArticleDrawer(question, paper.questions);
   const group = articleGroup(paper.questions, question);
   const groupComplete = group.every(({ item }) => answers[item.id] !== undefined);
   const firstGroupDraft = group.find(({ item }) => answers[item.id] === undefined);
@@ -232,7 +232,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
               {finished ? (
                 !lastQuestion && buttonsEnabled && <button type="button" onClick={() => goToQuestion(questionIndex + 1)} className={`${primaryButton} flex-1`}>{t("下一题 →")}</button>
               ) : article && !submitted ? (
-                !groupComplete && buttonsEnabled && selectedOptionId !== null && firstGroupDraft ? <button type="button" onClick={() => goToQuestion(firstGroupDraft.index)} className={`${primaryButton} flex-1`}>{t("下一小题 →")}</button> : <button type="submit" disabled={!groupComplete} className={`${primaryButton} flex-1`}>{t("提交本篇答案")}</button>
+                !groupComplete && buttonsEnabled && selectedOptionId !== null && firstGroupDraft ? <button type="button" onClick={() => goToQuestion(firstGroupDraft.index)} className={`${primaryButton} flex-1`}>{t("下一小题 →")}</button> : <button type="submit" disabled={!groupComplete} className={`${primaryButton} flex-1`}>{t(question.category === "听力" ? "提交本组答案" : "提交本篇答案")}</button>
               ) : article && nextArticleIndex < totalQuestions ? (
                 buttonsEnabled && <button type="button" onClick={() => goToQuestion(nextArticleIndex)} className={`${primaryButton} flex-1`}>{t("下一篇 →")}</button>
               ) : article ? (

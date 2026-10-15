@@ -12,7 +12,8 @@ function formatTime(value: number) {
 
 export default function ListeningPlayer({ reference, questionId }: { reference: string; questionId: string }) {
   const url = getAudioUrl(reference);
-  // Remount even when two questions share one recording: stop the previous question.
+  // A shared listening drawer passes its group ID to keep playback between subquestions.
+  // Navigating to a different question/group remounts and pauses the previous audio.
   return <AudioControls key={`${questionId}:${url}`} url={url} />;
 }
 

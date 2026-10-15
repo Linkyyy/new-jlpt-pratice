@@ -29,7 +29,7 @@ for (const group of manifest.groups) {
     assert(question.explanation.length > 0);
     if (question.media?.audio) assert(isAudioReference(question.media.audio), `Invalid audio reference: ${question.id}`);
     if (question.category === "听力") assert(question.media?.audio, `Missing listening audio: ${question.id}`);
-    for (const reference of question.media?.images ?? []) {
+    for (const reference of [...(question.media?.images ?? []), ...(question.media?.questionImages ?? [])]) {
       assert(isImageReference(reference), `Invalid image reference: ${question.id}`);
       if (reference.startsWith("/imported-media/")) assert((await fs.stat(path.join(root, "public", reference.slice(1)))).isFile());
     }
