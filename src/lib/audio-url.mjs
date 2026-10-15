@@ -1,5 +1,8 @@
 const audioExtension = /\.(?:mp3|m4a|wav|ogg)$/i;
 
+// Public playback domain supplied by the site owner. Upload credentials stay private.
+export const defaultAudioBaseUrl = "https://pub-8ac2a059bee9443c839a7e7f2f350e93.r2.dev";
+
 /** Preserve the source file mapping, including files shared by multiple questions. */
 export function getAudioObjectKey(reference) {
   if (typeof reference !== "string") return null;
@@ -26,7 +29,7 @@ export function isAudioReference(reference) {
 }
 
 /** NEXT_PUBLIC_AUDIO_BASE_URL is public and fixed at next build time. No proxy. */
-export function getAudioUrl(reference, baseUrl = process.env.NEXT_PUBLIC_AUDIO_BASE_URL) {
+export function getAudioUrl(reference, baseUrl = process.env.NEXT_PUBLIC_AUDIO_BASE_URL || defaultAudioBaseUrl) {
   if (isPublicAudioUrl(reference)) return reference;
   const key = getAudioObjectKey(reference);
   if (!key) return null;

@@ -29,7 +29,7 @@ npm start
 - Install Command：`npm ci`
 - Build Command：`npm run build`
 - Output Directory：保留 Next.js 默认值
-- Environment Variables：听力播放需配置公开音频域名 `NEXT_PUBLIC_AUDIO_BASE_URL`；纯文字练习无需音频配置
+- Environment Variables：已配置默认 R2 公开音频域名，首页“听力播放测试”可试听；更换域名可用 `NEXT_PUBLIC_AUDIO_BASE_URL` 覆盖
 
 应用包含服务端题库读取和 API，使用 Vercel 的 Next.js 部署方式。`next.config.ts` 已配置题库 JSON 文件追踪，生产部署包含练习和收藏接口需要的数据。
 

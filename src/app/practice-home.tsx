@@ -72,6 +72,7 @@ export default function PracticeHome() {
             <p aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{activeLevel} · {formatPeriod(activePeriod)} · {selection.label} · {questionCount} 题<span className="hidden sm:inline">。{type === "all" ? "包含当前可作答的词汇、语法和阅读，不含听力。" : "仅练习当前题型。"} {counts.excluded > 0 && `另有 ${counts.excluded} 题因缺少媒体或数据不完整暂不可用，未计入本次题量。`} {mode === "exam" ? `考试模式：训练时长 ${getExamDuration(questionCount) / 60} 分钟，交卷后统一解析，非正式考试时长。` : "练习模式：不限时，可开启点击选项即时判定。"}</span></p>
             <button type="submit" disabled={questionCount === 0} className="mt-6 min-h-12 w-full rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300 sm:w-auto">{mode === "exam" ? "进入考试准备" : type === "all" ? "开始整套练习" : `开始${selection.label}练习`} →</button>
           </form>
+          <Link href="/audio-test" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">听力播放测试 →</Link>
         </section>
 
         <ResponsivePanel title="练习说明" trigger="题库说明与使用帮助" className="mt-4 lg:mt-0">
