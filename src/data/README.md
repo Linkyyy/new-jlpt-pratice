@@ -37,10 +37,12 @@ npm run check:bank
 要补充媒体，提供与 JSON 引用一致的本地目录结构，例如 `audio/201007n2/1.mp3` 和 `pic/120100770.jpg`：
 
 ```powershell
-npm run import:bank -- --source "题库 JSON 目录" --media "含 audio 和 pic 的资源根目录"
+npm run import:bank -- --source "题库 JSON 目录" --media "含 pic 的资源根目录" --audio-manifest "R2 已上传对象清单.json"
 ```
 
-媒体仅复制为本地静态资源；不抓取或请求外部站点。补充后需重新检查并构建。
+图片复制为本地静态资源。音频上传至 Cloudflare R2，导入器按已上传清单保留原始相对路径，不复制 MP3、不猜测题号对应文件，也不在导入时请求外站。父子题继续继承已有音频引用。配置 `NEXT_PUBLIC_AUDIO_BASE_URL` 后由浏览器按需直连播放；完整 HTTPS 音频字段和旧本地音频引用也兼容。
+
+具体上传、域名、环境变量与部署步骤见 [R2 听力说明](../../docs/r2-audio.md)。补充媒体后需重新检查并构建；重新导入请使用全量原始 JSON 目录及原有图片资源，避免丢失其他题型。
 
 服务端按选定题型读取 JSON，收藏页面只通过本站只读接口查询已收藏的题目，避免把整份题库传入浏览器。Next.js 文件追踪配置会将标准化 JSON 包含在部署产物中。
 

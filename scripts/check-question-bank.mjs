@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
+import { isAudioReference } from "../src/lib/audio-url.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const directory = path.join(root, "src/data/imported-bank");
@@ -25,7 +26,9 @@ for (const group of manifest.groups) {
     assert.equal(new Set(question.options.map((option) => option.id)).size, question.options.length);
     assert(question.options.some((option) => option.id === question.correctOptionId));
     assert(question.explanation.length > 0);
-    for (const reference of [...(question.media?.images ?? []), ...(question.media?.audio ? [question.media.audio] : [])]) {
+    if (question.media?.audio) assert(isAudioReference(question.media.audio), `Invalid audio reference: ${question.id}`);
+    if (question.category === "听力") assert(question.media?.audio, `Missing listening audio: ${question.id}`);
+    for (const reference of question.media?.images ?? []) {
       assert(reference.startsWith("/imported-media/") && !reference.includes(".."));
       assert((await fs.stat(path.join(root, "public", reference.slice(1)))).isFile());
     }

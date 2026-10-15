@@ -29,13 +29,19 @@ npm start
 - Install Command：`npm ci`
 - Build Command：`npm run build`
 - Output Directory：保留 Next.js 默认值
-- Environment Variables：当前应用无需配置环境变量
+- Environment Variables：听力播放需配置公开音频域名 `NEXT_PUBLIC_AUDIO_BASE_URL`；纯文字练习无需音频配置
 
 应用包含服务端题库读取和 API，使用 Vercel 的 Next.js 部署方式。`next.config.ts` 已配置题库 JSON 文件追踪，生产部署包含练习和收藏接口需要的数据。
 
 关联 GitHub 后，推送至生产分支触发生产部署，其他分支或 PR 生成预览部署。不要提交 `.env*`、`.vercel`、`node_modules` 或 `.next`。
 
 题库格式与导入说明见 [src/data/README.md](src/data/README.md)。
+
+## MP3 听力播放
+
+播放器支持播放/暂停、拖动进度、音量和 0.75–1.5 倍速，切题时自动暂停，加载失败可重试。音频按当前题目按需直连 Cloudflare R2，不经过 Vercel。
+
+R2 Bucket、公开域名、上传凭据、批量上传、题库关联和 Vercel 配置步骤见 [听力部署说明](docs/r2-audio.md)。密钥只用于本地上传，不提交到 GitHub；`npm run upload:audio -- --directory <资源根目录> --dry-run` 可预检目录，`npm run test:audio` 运行音频相关测试。
 
 ## 暗号与收藏练习
 

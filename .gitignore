@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Audio belongs in R2, never in the repository or deployment assets.
+*.[mM][pP]3
+/r2-audio-manifest*.json
+
 # vercel
 .vercel
 

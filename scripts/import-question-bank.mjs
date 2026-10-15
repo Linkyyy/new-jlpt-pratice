@@ -1,12 +1,17 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getAudioObjectKey, isPublicAudioUrl } from "../src/lib/audio-url.mjs";
+import { readAudioManifest } from "./r2-audio-files.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const sourceIndex = args.indexOf("--source");
 const mediaIndex = args.indexOf("--media");
-if (sourceIndex < 0 || !args[sourceIndex + 1]) throw new Error("Usage: node scripts/import-question-bank.mjs --source <JSON directory> [--media <local media directory>]");
+const audioIndex = args.indexOf("--audio-manifest");
+if (sourceIndex < 0 || !args[sourceIndex + 1]) throw new Error("Usage: node scripts/import-question-bank.mjs --source <JSON directory> [--media <local image directory>] [--audio-manifest <uploaded R2 keys JSON>]");
+if (audioIndex >= 0 && !args[audioIndex + 1]) throw new Error("--audio-manifest 需要指定已上传对象清单。");
+const uploadedAudio = audioIndex >= 0 ? readAudioManifest(JSON.parse(await fs.readFile(path.resolve(args[audioIndex + 1]), "utf8"))) : new Set();
 const sourceDirectory = path.resolve(args[sourceIndex + 1]);
 const mediaDirectory = mediaIndex >= 0 && args[mediaIndex + 1] ? await fs.realpath(path.resolve(args[mediaIndex + 1])) : null;
 const outputDirectory = path.join(projectRoot, "src/data/imported-bank");
@@ -30,9 +35,15 @@ function visibleText(value) { return text(value).replace(/<[^>]*>/g, "").replace
 
 async function resolveMedia(reference, kind) {
   if (!reference) return null;
+  if (kind === "audio") {
+    if (isPublicAudioUrl(reference)) return reference;
+    const key = getAudioObjectKey(reference);
+    // No guessing from question numbers; only existing references confirmed by an upload.
+    return key && uploadedAudio.has(key) ? key : null;
+  }
   const relative = text(reference).replaceAll("\\", "/").replace(/^\.\//, "");
   if (!mediaDirectory || /^(?:[a-z]+:|\/)/i.test(relative) || relative.split("/").some((part) => part === ".." || part === "")) return null;
-  const extensions = kind === "audio" ? /\.(mp3|wav|ogg|m4a)$/i : /\.(png|jpg|jpeg|webp|gif)$/i;
+  const extensions = /\.(png|jpg|jpeg|webp|gif)$/i;
   if (!extensions.test(relative)) return null;
   try {
     const resolved = await fs.realpath(path.join(mediaDirectory, relative));

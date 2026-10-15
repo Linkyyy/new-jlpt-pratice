@@ -1,0 +1,7 @@
+# Audio is delivered directly by R2. Never upload recordings to Vercel.
+**/*.[mM][pP]3
+**/*.m4a
+**/*.wav
+**/*.ogg
+.env*
+r2-audio-manifest*.json
