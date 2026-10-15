@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getQuestionCatalog } from "@/data/practice-papers";
 import FavoritesClient from "./favorites-client";
+import "./favorites.css";
 
 export const metadata: Metadata = { title: "我的收藏 | JLPT Practice" };
 

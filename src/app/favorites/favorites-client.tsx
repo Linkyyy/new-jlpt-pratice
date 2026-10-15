@@ -1,22 +1,35 @@
 "use client";
 
 import Link from "next/link";
-import ResponsivePanel from "@/components/responsive-panel";
-import { useEffect, useState } from "react";
-import FavoriteButton from "@/components/favorite-button";
+import FloatingSettings from "@/components/floating-settings";
+import BackupControls from "@/components/backup-controls";
+import FontSizeSetting from "@/app/practice/font-size-setting";
+import FavoriteQuestion, { favoriteTitle, type FavoriteViewMode } from "./favorite-question";
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import FolderManager from "@/components/folder-manager";
 import { levels, questionCategories, type JLPTLevel, type QuestionCategory } from "@/data/practice-question";
 import { type CatalogQuestion } from "@/data/practice-papers";
 import { useFavorites } from "@/lib/favorites-store";
-import { formatPeriod } from "@/data/bank-catalog";
 import { isCatalogQuestion, isRecord } from "@/data/question-validation";
-import RichContent from "@/components/rich-content";
-import QuestionBody from "@/components/question-body";
 
-const selectClass = "mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 focus-visible:outline-2 focus-visible:outline-indigo-600";
+const selectClass = "mt-1 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 focus-visible:outline-2 focus-visible:outline-indigo-600";
+
+function subscribeDesktop(listener: () => void) {
+  const media = window.matchMedia("(min-width: 1024px)");
+  media.addEventListener("change", listener);
+  return () => media.removeEventListener("change", listener);
+}
 
 export default function FavoritesClient({ catalog }: { catalog: readonly CatalogQuestion[] }) {
   const { data, ready, error } = useFavorites();
+  const desktop = useSyncExternalStore(subscribeDesktop, () => window.matchMedia("(min-width: 1024px)").matches, () => false);
+  const [mode, setMode] = useState<FavoriteViewMode>("preview");
+  const [sort, setSort] = useState("recent");
+  const [fontSize, setFontSize] = useState(16);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [mobileDetail, setMobileDetail] = useState(false);
+  const paneRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLElement>(null);
   const [folderId, setFolderId] = useState("all");
   const [category, setCategory] = useState<QuestionCategory | "all">("all");
   const [level, setLevel] = useState<JLPTLevel | "all">("all");
@@ -55,73 +68,69 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
   const filtered = levelEntries.filter((entry) => {
     const item = catalogById.get(entry.questionId);
     return category === "all" || item?.question.category === category;
-  }).sort((a, b) => b.savedAt.localeCompare(a.savedAt));
+  }).sort((a, b) => {
+    if (sort === "paper") {
+      const left = catalogById.get(a.questionId), right = catalogById.get(b.questionId);
+      return (right?.year ?? "").localeCompare(left?.year ?? "") || (left?.question.level ?? "").localeCompare(right?.question.level ?? "") || questionCategories.indexOf(left?.question.category ?? "词汇") - questionCategories.indexOf(right?.question.category ?? "词汇") || (left?.question.sourceQuestionNumber ?? 0) - (right?.question.sourceQuestionNumber ?? 0) || a.questionId.localeCompare(b.questionId, undefined, { numeric: true });
+    }
+    return b.savedAt.localeCompare(a.savedAt) || a.questionId.localeCompare(b.questionId);
+  });
 
   const practiceQuery = new URLSearchParams({ folder: activeFolder, category, level });
 
+  const activeId = filtered.some(entry => entry.questionId === selectedId) ? selectedId : filtered[0]?.questionId ?? null;
+  const currentIndex = filtered.findIndex(entry => entry.questionId === activeId);
+  const detailEntries = mode === "cards" ? filtered : filtered.filter(entry => entry.questionId === activeId);
+  function selectQuestion(id: string) {
+    setSelectedId(id); setMobileDetail(true);
+    requestAnimationFrame(() => {
+      const pane = paneRef.current;
+      const article = [...(pane?.querySelectorAll<HTMLElement>("[data-question-id]") ?? [])].find(el => el.dataset.questionId === id);
+      if (desktop) pane?.scrollTo({ top: mode === "cards" ? article?.offsetTop ?? 0 : 0 });
+      else pane?.scrollIntoView({ block: "start" });
+      article?.querySelector<HTMLElement>("h2")?.focus({ preventScroll: true });
+    });
+  }
+  function returnToList() { setMobileDetail(false); if (mode === "cards") setMode("preview"); }
+  function resetSelection() { setMobileDetail(false); setSelectedId(null); listRef.current?.scrollTo({ top: 0 }); paneRef.current?.scrollTo({ top: 0 }); }
+
   return (
-    <main aria-busy={loadingImported} className="min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
-      <div className="favorites-layout">
-        <header>
-          <Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">← 首页 / 选择练习</Link>
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-            <h1 className="text-3xl font-bold">我的收藏</h1>
-            <span className="text-sm text-slate-500">{data.entries.length} 道收藏</span>
-          </div>
+    <main aria-busy={loadingImported} className="favorites-page min-h-screen bg-slate-50 px-4 py-4 font-sans text-slate-900 sm:px-8 sm:py-6">
+      <div className="favorites-shell" style={{ "--practice-font-size": `${fontSize}px` } as CSSProperties}>
+        <header className="favorites-header">
+          <div><Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 hover:underline">← 首页</Link><h1 className="text-2xl font-bold">我的收藏 <span className="ml-2 text-sm font-normal text-slate-500">{data.entries.length} 题</span></h1></div>
+          <div className="flex flex-wrap items-start gap-3"><BackupControls /><FloatingSettings title="收藏设置">
+            <fieldset><legend className="text-sm font-semibold">查看模式</legend><div className="mt-2 grid gap-2">{([
+              ["preview", "摘要列表", "先看场次与题号，选中后查看题目"], ["cards", "完整卡片", "连续浏览完整题目，答案折叠显示"], ["recall", "背题", "先回忆，再显示选项和答案"],
+            ] as const).map(([value, label, description]) => <label key={value} className="flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 p-3"><input type="radio" name="favorite-view" value={value} checked={mode === value} onChange={() => { setMode(value); resetSelection(); paneRef.current?.scrollTo({ top: 0 }); }} className="mt-1 accent-indigo-600" /><span className="text-sm"><span className="block font-semibold">{label}</span><span className="mt-1 block text-xs leading-5 text-slate-500">{description}</span></span></label>)}</div></fieldset>
+            <label className="mt-4 block text-sm font-semibold">排序<select aria-label="收藏排序" value={sort} onChange={event => { setSort(event.target.value); resetSelection(); }} className={selectClass}><option value="recent">最近收藏</option><option value="paper">场次、等级与题号</option></select></label>
+            <div className="mt-3"><FontSizeSetting value={fontSize} onChange={setFontSize} /></div>
+            <div className="mt-4 border-t border-slate-200 pt-4"><FolderManager /></div>
+            <p className="mt-4 text-xs leading-6 text-slate-500">备份包含全部收藏夹、收藏题目与做题记录，不受当前筛选影响。</p>
+          </FloatingSettings></div>
         </header>
-        {!ready ? <p role="status" className="mt-8">正在读取本地收藏……</p> : error ? <p role="alert" className="mt-8 rounded-xl border border-rose-200 bg-rose-50 p-5 text-sm leading-7 text-rose-700">{error}</p> : <>
-          <ResponsivePanel title="收藏筛选与管理" trigger={`筛选与管理 · ${activeFolder === "all" ? "全部收藏夹" : data.folders.find(folder => folder.id === activeFolder)?.name ?? "收藏夹"}`}>
-          <FolderManager />
-          <section aria-label="筛选收藏" className="mt-5">
-            <div className="grid gap-4">
-              <label className="text-sm font-semibold">收藏夹
-                <select aria-label="筛选收藏夹" value={activeFolder} onChange={(event) => setFolderId(event.target.value)} className={selectClass}>
-                  <option value="all">全部收藏夹 · {data.entries.length} 题</option>
-                  {data.folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name} · {data.entries.filter((entry) => entry.folderIds.includes(folder.id)).length} 题</option>)}
-                </select>
-              </label>
-              <label className="text-sm font-semibold">等级
-                <select aria-label="筛选等级" value={level} onChange={(event) => { const selected = levels.find((item) => item === event.target.value); setLevel(selected ?? "all"); }} className={selectClass}>
-                  <option value="all">全部等级</option>
-                  {levels.map((level) => <option key={level} value={level}>{level}</option>)}
-                </select>
-              </label>
-            </div>
-            <div aria-label="按题型筛选" className="mt-5 flex flex-wrap gap-2">
-              {(["all", ...questionCategories] as const).map((type) => {
-                const count = levelEntries.filter((entry) => type === "all" || catalogById.get(entry.questionId)?.question.category === type).length;
-                return <button key={type} type="button" onClick={() => setCategory(type)} aria-pressed={category === type} className={`min-h-11 rounded-lg border px-4 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${category === type ? "border-indigo-600 bg-indigo-600 text-white" : "border-slate-300 text-slate-600 hover:bg-slate-50"}`}>{type === "all" ? "全部题型" : type} · {count}</button>;
-              })}
-            </div>
+        {!ready ? <p role="status">正在读取本地收藏……</p> : error ? <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-5 text-sm leading-7 text-rose-700">{error}</p> : <>
+          <section aria-label="筛选收藏" className="favorites-filters">
+            <label className="text-xs font-semibold text-slate-500">收藏夹<select aria-label="筛选收藏夹" value={activeFolder} onChange={event => { setFolderId(event.target.value); resetSelection(); }} className={selectClass}><option value="all">全部收藏夹 · {data.entries.length} 题</option>{data.folders.map(folder => <option key={folder.id} value={folder.id}>{folder.name} · {data.entries.filter(entry => entry.folderIds.includes(folder.id)).length} 题</option>)}</select></label>
+            <label className="text-xs font-semibold text-slate-500">等级<select aria-label="筛选等级" value={level} onChange={event => { setLevel(levels.find(item => item === event.target.value) ?? "all"); resetSelection(); }} className={selectClass}><option value="all">全部等级</option>{levels.map(value => <option key={value} value={value}>{value}</option>)}</select></label>
+            <label className="text-xs font-semibold text-slate-500">题型<select aria-label="筛选题型" value={category} onChange={event => { setCategory(questionCategories.find(item => item === event.target.value) ?? "all"); resetSelection(); }} className={selectClass}><option value="all">全部题型</option>{questionCategories.map(value => <option key={value} value={value}>{value}</option>)}</select></label>
+            <div className="flex items-center justify-between gap-2"><p role="status" className="shrink-0 whitespace-nowrap text-xs text-slate-500">{filtered.length} 题</p>{filtered.some(entry => catalogById.has(entry.questionId)) && !loadingImported && <Link href={`/favorites/practice?${practiceQuery}`} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-3 text-xs font-semibold text-white hover:bg-indigo-700 sm:px-4 sm:text-sm">练习当前收藏</Link>}</div>
           </section>
-          <p className="mt-3 text-sm leading-7 text-slate-600">按收藏夹、题型和等级整理题目。同一道题可加入多个收藏夹，点击题目右上角的星标管理归属或取消收藏。</p>
-          <p className="mt-2 text-xs leading-6 text-slate-500">收藏仅保存在当前浏览器，刷新后仍保留；不会跨设备同步，清除网站数据会删除收藏。</p>
-          </ResponsivePanel>
-          <div className="favorites-content">
-          {loadingImported && <p role="status" className="mt-4 text-sm text-slate-500">正在读取用户题库中的收藏题目……</p>}
-          {remote.key === importedIdsKey && remote.error && <p role="alert" className="mt-4 text-sm text-rose-700">{remote.error}<button type="button" onClick={() => { setRemote({ key: "", items: [], error: null }); setRetry((value) => value + 1); }} className="ml-2 min-h-11 px-3 underline">重试</button></p>}
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3"><p role="status" className="text-sm text-slate-600">显示 {filtered.length} / {data.entries.length} 道收藏题目</p>{filtered.some((entry) => catalogById.has(entry.questionId)) && !loadingImported && <Link href={`/favorites/practice?${practiceQuery}`} className="inline-flex min-h-11 items-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">练习当前收藏</Link>}</div>
-          {filtered.length === 0 ? <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 text-center">
-            <h2 className="font-bold">{data.entries.length === 0 ? "还没有收藏题目" : "当前筛选下没有收藏题目"}</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-500">{data.entries.length === 0 ? "在练习题或考试题上点击“收藏本题”，选择收藏夹即可。" : "试试其他收藏夹、题型或等级。"}</p>
-            {data.entries.length === 0 ? <Link href="/" className="mt-4 inline-flex min-h-11 items-center font-semibold text-indigo-600 underline">去选择练习</Link> : <button type="button" onClick={() => { setFolderId("all"); setCategory("all"); setLevel("all"); }} className="mt-4 min-h-11 px-4 font-semibold text-indigo-600 underline">清除筛选</button>}
-          </section> : <div className="mt-4 grid items-start gap-5 xl:grid-cols-2">
-            {filtered.map((entry) => {
-              const item = catalogById.get(entry.questionId);
-              const folderName = data.folders.filter((folder) => entry.folderIds.includes(folder.id)).map((folder) => folder.name).join("、");
-              if (!item) return <article key={entry.questionId} className="relative rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">{loadingImported && entry.questionId.startsWith("imported:") ? "正在读取收藏题目" : "收藏的题目暂不可用"}</h2><p className="mt-2 text-sm leading-6 break-words text-slate-500">题目 ID：{entry.questionId}。收藏记录已保留。</p><FavoriteButton questionId={entry.questionId} /></article>;
-              const { question, year } = item;
-              const practiceLink = `/favorites/practice?question=${encodeURIComponent(question.id)}`;
-              return <article key={question.id} data-question-id={question.id} className="relative rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
-                <h2 className="pr-12 text-sm font-semibold leading-6 break-words text-slate-600">{question.level} · {formatPeriod(year)} · {item.source === "imported" ? "用户提供题库" : "原创模拟题库"} · {question.category} · {folderName}</h2>
-                <QuestionBody question={question} />
-                <ol lang="ja" className="mt-4 grid gap-2 text-sm leading-7 sm:grid-cols-2">{question.options.map((option) => <li key={option.id} className="rounded-lg border border-slate-200 px-3 py-2"><span className="font-semibold">{option.label ?? option.id}. </span><RichContent text={option.text} html={question.richText} /></li>)}</ol>
-                <div className="flex flex-wrap items-center gap-x-4"><FavoriteButton questionId={question.id} /><Link href={practiceLink} className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-indigo-600 underline">练习本题 →</Link></div>
-                <details className="mt-4 rounded-xl bg-slate-50 p-4"><summary className="cursor-pointer text-sm font-semibold text-indigo-700">查看答案与解析</summary><p className="mt-3 text-sm font-semibold">正确答案：{question.options.find((option) => option.id === question.correctOptionId)?.label ?? question.correctOptionId}</p>{question.explanation.map((paragraph, index) => <RichContent key={index} text={paragraph} html={question.richText} className="mt-2 text-sm leading-7 text-slate-700" />)}</details>
-              </article>;
-            })}
+          {loadingImported && <p role="status" className="text-sm text-slate-500">正在读取用户题库中的收藏题目……</p>}
+          {remote.key === importedIdsKey && remote.error && <p role="alert" className="text-sm text-rose-700">{remote.error}<button type="button" onClick={() => { setRemote({ key: "", items: [], error: null }); setRetry(value => value + 1); }} className="ml-2 min-h-11 px-3 underline">重试</button></p>}
+          {filtered.length === 0 ? <section className="rounded-2xl border border-slate-200 bg-white p-6 text-center"><h2 className="font-bold">{data.entries.length === 0 ? "还没有收藏题目" : "当前筛选下没有收藏题目"}</h2><p className="mt-3 text-sm leading-7 text-slate-500">{data.entries.length === 0 ? "在题目上点击星标，选择收藏夹即可。" : "试试其他收藏夹、题型或等级。"}</p>{data.entries.length === 0 ? <Link href="/" className="mt-4 inline-flex min-h-11 items-center font-semibold text-indigo-600">去选择练习 →</Link> : <button type="button" onClick={() => { setFolderId("all"); setCategory("all"); setLevel("all"); resetSelection(); }} className="mt-4 min-h-11 px-4 font-semibold text-indigo-600">清除筛选</button>}</section> : <div className="favorites-browser" data-mobile-detail={mobileDetail} data-view-mode={mode}>
+            <nav ref={listRef} aria-label="收藏题目一览" className="favorites-list">
+              {filtered.map((entry, index) => {
+                const item = catalogById.get(entry.questionId), folders = data.folders.filter(folder => entry.folderIds.includes(folder.id)).map(folder => folder.name).join("、");
+                const title = item ? favoriteTitle(item) : `${loadingImported ? "正在读取" : "暂不可用"} · ${entry.questionId}`;
+                return <button key={entry.questionId} type="button" aria-current={activeId === entry.questionId ? "true" : undefined} onClick={() => selectQuestion(entry.questionId)} className={`favorite-preview ${activeId === entry.questionId ? "favorite-preview-current" : ""}`}><span className="flex items-start justify-between gap-3"><span className="text-sm font-semibold leading-6">{title}</span><span aria-hidden="true" className="pt-1 text-xs text-slate-400">{index + 1} →</span></span><span className="mt-2 block text-xs leading-5 text-slate-500">{folders}</span></button>;
+              })}
+            </nav>
+            {(desktop || mobileDetail || mode === "cards") && <div ref={paneRef} className="favorites-detail-pane">
+              {mode !== "cards" && filtered.length > 1 && <nav aria-label="切换收藏题目" className="mb-3 flex items-center justify-between gap-3 text-sm"><button type="button" onClick={() => selectQuestion(filtered[currentIndex - 1].questionId)} disabled={currentIndex <= 0} className="min-h-11 px-2 font-semibold text-indigo-600 disabled:opacity-30">← 上一道收藏</button><span className="text-xs tabular-nums text-slate-400">{currentIndex + 1} / {filtered.length}</span><button type="button" onClick={() => selectQuestion(filtered[currentIndex + 1].questionId)} disabled={currentIndex >= filtered.length - 1} className="min-h-11 px-2 font-semibold text-indigo-600 disabled:opacity-30">下一道收藏 →</button></nav>}
+              {detailEntries.map(entry => <FavoriteQuestion key={`${entry.questionId}:${mode}`} questionId={entry.questionId} item={catalogById.get(entry.questionId)} folderName={data.folders.filter(folder => entry.folderIds.includes(folder.id)).map(folder => folder.name).join("、")} mode={mode} loading={loadingImported} onBack={returnToList} />)}
+            </div>}
           </div>}
-          </div>
         </>}
       </div>
     </main>

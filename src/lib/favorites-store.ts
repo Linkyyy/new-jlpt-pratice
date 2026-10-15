@@ -116,6 +116,39 @@ export function useFavorites(): FavoritesSnapshot {
   return useSyncExternalStore(subscribe, getSnapshot, () => serverSnapshot);
 }
 
+export { getSnapshot as readFavoritesSnapshot };
+export function refreshFavorites() {
+  cachedRaw = undefined;
+  getSnapshot();
+  listeners.forEach(listener => listener());
+}
+
+/** Merge folders by name, remapping colliding IDs without changing local folders. */
+export function mergeFavoritesData(local: FavoritesData, incoming: FavoritesData): FavoritesData {
+  const folders = [...local.folders];
+  const folderIds = new Map<string, string>([[DEFAULT_FOLDER_ID, DEFAULT_FOLDER_ID]]);
+  for (const folder of incoming.folders) {
+    if (folder.id === DEFAULT_FOLDER_ID) continue;
+    const named = folders.find(item => item.name.toLocaleLowerCase() === folder.name.toLocaleLowerCase());
+    let id = named?.id ?? folder.id;
+    if (!named && folders.some(item => item.id === id)) {
+      do { id = createFolderId(); } while (folders.some(item => item.id === id));
+    }
+    if (!named) folders.push({ id, name: folder.name });
+    folderIds.set(folder.id, id);
+  }
+  const entries = new Map(local.entries.map(entry => [entry.questionId, entry]));
+  for (const entry of incoming.entries) {
+    const old = entries.get(entry.questionId);
+    entries.set(entry.questionId, {
+      questionId: entry.questionId,
+      folderIds: [...new Set([...(old?.folderIds ?? []), ...entry.folderIds.map(id => folderIds.get(id)!)])],
+      savedAt: old && Date.parse(old.savedAt) < Date.parse(entry.savedAt) ? old.savedAt : entry.savedAt,
+    });
+  }
+  return { version: 2, folders, entries: [...entries.values()] };
+}
+
 function commit(update: (data: FavoritesData) => FavoritesData): FavoriteActionResult {
   const snapshot = getSnapshot();
   if (snapshot.error) return { ok: false, error: snapshot.error };

@@ -111,6 +111,7 @@ function subscribe(listener: () => void) {
   return () => { listeners.delete(listener); window.removeEventListener("storage", onStorage); };
 }
 export function useStudyHistory() { return useSyncExternalStore(subscribe, readStudySnapshot, () => serverSnapshot); }
+export function refreshStudyHistory() { cachedRaw = undefined; readStudySnapshot(); listeners.forEach(listener => listener()); }
 function commit(update: (data: StudyData) => StudyData): StudyResult {
   const snapshot = readStudySnapshot();
   if (snapshot.error) return { ok: false, error: snapshot.error };
@@ -203,9 +204,10 @@ export function studySummary(data: StudyData, now?: number) {
 }
 export function importStudyData(value: unknown): StudyResult {
   if (!isStudyData(value)) return { ok: false, error: "备份格式无效，原记录未修改。" };
-  return commit(data => {
-    const attempts = new Map(data.attempts.map(a => [a.id, a]));
-    for (const a of value.attempts) { const old = attempts.get(a.id); if (!old || old.status !== "completed" && a.updatedAt > old.updatedAt) attempts.set(a.id, a); }
-    return { version: 1, attempts: [...attempts.values()], activityDays: [...new Set([...data.activityDays, ...value.activityDays])].sort() };
-  });
+  return commit(data => mergeStudyData(data, value));
+}
+export function mergeStudyData(data: StudyData, value: StudyData): StudyData {
+  const attempts = new Map(data.attempts.map(a => [a.id, a]));
+  for (const a of value.attempts) { const old = attempts.get(a.id); if (!old || old.status !== "completed" && a.updatedAt > old.updatedAt) attempts.set(a.id, a); }
+  return { version: 1, attempts: [...attempts.values()], activityDays: [...new Set([...data.activityDays, ...value.activityDays])].sort() };
 }
