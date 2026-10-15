@@ -8,6 +8,8 @@
 
 网站默认公开音频域名已设置为 `https://pub-8ac2a059bee9443c839a7e7f2f350e93.r2.dev`。首页“听力播放测试”进入 `/audio-test`，分别加载 `audio/202412n2/1.mp3` 和 `audio/202412n2/2.mp3`。这是合成英语语音试听，不进入正式题库、答题记录或评分。
 
+网站地址按现有域名拼写为 `new-jlpt-pratice.vercel.app`（`pratice`）。测试页：https://new-jlpt-pratice.vercel.app/audio-test 。该页面需等待包含测试入口的 Vercel 部署完成后使用。
+
 此测试入口无需另外配置 Vercel 环境变量即可使用默认域名。若已有 `NEXT_PUBLIC_AUDIO_BASE_URL`，该变量优先于默认域名；需要指向本次 Bucket，或删除旧值后重新部署。正式切换自定义域名时仍建议通过这个变量覆盖。公开域名不是上传凭据。
 
 ## 1. 在 Cloudflare 中操作
@@ -20,7 +22,7 @@
 ```json
 [
   {
-    "AllowedOrigins": ["https://new-jlpt-practice.vercel.app", "https://你的正式域名"],
+    "AllowedOrigins": ["https://new-jlpt-pratice.vercel.app", "https://你的正式域名"],
     "AllowedMethods": ["GET", "HEAD"],
     "AllowedHeaders": ["Range"],
     "ExposeHeaders": ["Accept-Ranges", "Content-Length", "Content-Range"],
