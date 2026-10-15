@@ -43,7 +43,7 @@ function sameOrigin(request: Request) {
 }
 async function input(request: Request, maxBytes: number): Promise<Record<string, unknown>> {
   if (request.headers.get("content-type")?.split(";")[0].trim() !== "application/json") throw new CloudError(415, "请求格式无效。");
-  if (Number(request.headers.get("content-length")) > maxBytes) throw new CloudError(413, "备份过大，请使用文件导出保存。");
+  if (Number(request.headers.get("content-length")) > maxBytes) throw new CloudError(413, "备份超过云端容量上限，请联系站点管理员。");
   const reader = request.body?.getReader();
   if (!reader) throw new CloudError(400, "请求格式无效。");
   const chunks: Uint8Array[] = []; let bytes = 0;
@@ -51,7 +51,7 @@ async function input(request: Request, maxBytes: number): Promise<Record<string,
     while (true) {
       const part = await reader.read(); if (part.done) break;
       bytes += part.value.byteLength;
-      if (bytes > maxBytes) { await reader.cancel(); throw new CloudError(413, "备份过大，请使用文件导出保存。"); }
+      if (bytes > maxBytes) { await reader.cancel(); throw new CloudError(413, "备份超过云端容量上限，请联系站点管理员。"); }
       chunks.push(part.value);
     }
     const value: unknown = JSON.parse(Buffer.concat(chunks).toString("utf8"));
@@ -154,7 +154,7 @@ export function cloudWrite(request: Request) {
     if (body.expectedUsername !== user.username) throw new CloudError(409, "登录账号已变化，请刷新后重试。");
     if (!isLearningBackup(body.data) || !(body.expectedRevision === null || typeof body.expectedRevision === "string" && body.expectedRevision.length <= 100)) throw new CloudError(400, "备份格式无效，云端记录未修改。");
     const data = JSON.stringify(body.data), bytes = Buffer.byteLength(data, "utf8");
-    if (bytes > MAX_CLOUD_BACKUP_BYTES) throw new CloudError(413, "备份过大，请使用文件导出保存。");
+    if (bytes > MAX_CLOUD_BACKUP_BYTES) throw new CloudError(413, "备份超过云端容量上限，请联系站点管理员。");
     const revision = randomUUID(), savedAt = Date.now();
     const rows = body.expectedRevision === null
       ? await query("INSERT INTO cloud_backups (user_id, data, revision, saved_at, bytes) VALUES (?, ?, ?, ?, ?) ON CONFLICT(user_id) DO NOTHING RETURNING revision", [user.id, data, revision, savedAt, bytes])
