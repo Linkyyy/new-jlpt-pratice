@@ -9,17 +9,19 @@ import ts from "typescript";
 const require = createRequire(import.meta.url);
 const source = fs.readFileSync(new URL("../src/lib/activation.server.ts", import.meta.url), "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-function activation() {
+function activation(required = true) {
   const code = `TEST-${randomBytes(16).toString("hex").toUpperCase()}`;
   let cookie;
+  let cookieReads = 0;
   const exports = {};
   vm.runInNewContext(compiled, { exports, Buffer, URLSearchParams, require: (name) => {
     if (name === "server-only") return {};
-    if (name === "next/headers") return { cookies: async () => ({ get: () => cookie === undefined ? undefined : { value: cookie } }) };
+    if (name === "next/headers") return { cookies: async () => { cookieReads++; return { get: () => cookie === undefined ? undefined : { value: cookie } }; } };
+    if (name === "./access-config.server") return { PASSPHRASE_REQUIRED: required };
     if (name === "./activation-code.server") return { ACTIVATION_CODE_DIGEST: createHash("sha256").update(code).digest("hex") };
     return require(name);
   } });
-  return { api: exports, code, cookie: (value) => { cookie = value; } };
+  return { api: exports, code, reads: () => cookieReads, cookie: (value) => { cookie = value; } };
 }
 
 test("activation accepts the code and rejects missing, malformed and incorrect input", () => {
@@ -49,4 +51,13 @@ test("activation return paths preserve the selected paper and encode query value
   assert.equal(parsed.searchParams.get("folder"), "重点 & 阅读");
   assert.equal(parsed.searchParams.get("category"), "阅读");
   assert.equal(parsed.searchParams.has("missing"), false);
+});
+
+
+test("disabled passphrase gate permits entry without reading cookies", async () => {
+  const a = activation(false);
+  assert.equal(await a.api.isActivated(), true);
+  a.cookie("unverified-cookie");
+  assert.equal(await a.api.isActivated(), true);
+  assert.equal(a.reads(), 0);
 });

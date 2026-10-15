@@ -1,4 +1,5 @@
 import "server-only";
+import { PASSPHRASE_REQUIRED } from "./access-config.server";
 import { createHash, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { ACTIVATION_CODE_DIGEST } from "./activation-code.server";
@@ -17,6 +18,7 @@ export function verifyActivationCode(value: unknown): boolean {
 }
 
 export async function isActivated(): Promise<boolean> {
+  if (!PASSPHRASE_REQUIRED) return true;
   return verifyActivationCode((await cookies()).get(ACTIVATION_COOKIE)?.value);
 }
 

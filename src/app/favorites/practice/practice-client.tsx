@@ -37,7 +37,7 @@ function SelectedFavorites({ initialIds, folderName, category, level }: Selectio
         const catalog: CatalogQuestion[] = [];
         for (let offset = 0; offset < ids.length; offset += 100) {
           const response = await fetch("/api/practice/favorites", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ids: ids.slice(offset, offset + 100) }), signal: controller.signal });
-          if (response.status === 401) { setState({ message: "激活已失效，请刷新页面重新输入激活码。" }); return; }
+          if (response.status === 401) { setState({ message: "暗号验证已失效，请刷新页面重新输入暗号。" }); return; }
           if (!response.ok) throw new Error("Loading failed");
           const body: unknown = await response.json();
           if (!isRecord(body) || !Array.isArray(body.questions) || !body.questions.every(isCatalogQuestion)) throw new Error("Invalid question data");

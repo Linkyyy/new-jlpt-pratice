@@ -2,7 +2,7 @@ import { isActivated } from "@/lib/activation.server";
 import { loadFavoriteQuestions } from "@/data/imported-papers.server";
 
 export async function POST(request: Request) {
-  if (!await isActivated()) return Response.json({ error: "请先输入激活码。" }, { status: 401 });
+  if (!await isActivated()) return Response.json({ error: "请先输入暗号。" }, { status: 401 });
   if (Number(request.headers.get("content-length") ?? 0) > 30000) return Response.json({ error: "请求过大" }, { status: 413 });
   let body: unknown;
   try { body = await request.json(); } catch { return Response.json({ error: "无效 JSON" }, { status: 400 }); }
