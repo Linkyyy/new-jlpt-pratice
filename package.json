@@ -11,7 +11,9 @@
     "import:bank": "node scripts/import-question-bank.mjs",
     "check:bank": "node scripts/check-question-bank.mjs",
     "upload:audio": "node scripts/upload-r2-audio.mjs",
-    "test:audio": "node --test scripts/test-audio.mjs"
+    "test:audio": "node --test scripts/test-audio.mjs",
+    "setup:cloud": "node --env-file-if-exists=.env.local scripts/setup-cloud-backup.mjs",
+    "test:cloud": "node --test scripts/test-cloud-backup.mjs"
   },
   "dependencies": {
     "next": "16.4.0",

@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
 import { useState } from "react";
@@ -27,7 +28,7 @@ export default function FavoriteQuestion({ questionId, item, folderName, mode, l
     <h2 tabIndex={-1} className="favorite-detail-title pr-12 text-sm font-semibold leading-6 text-slate-700 outline-none">{t(item ? favoriteTitle(item) : loading ? "正在读取收藏题目" : "收藏的题目暂不可用")}</h2>
     <p className="mt-1 pr-10 text-xs leading-5 text-slate-400">{folderName}{t(item && ` · ${item.source === "imported" ? "用户提供题库" : "原创模拟题库"}`)}</p>
     <FavoriteButton questionId={questionId} />
-    {!q ? <p className="mt-4 break-words text-sm leading-7 text-slate-500">{questionId}{t("。收藏记录已保留，可通过星标管理收藏。")}</p> : <>
+    {!q && loading ? <LoadingSkeleton label="正在读取收藏题目" variant="question" /> : !q ? <p className="mt-4 break-words text-sm leading-7 text-slate-500">{questionId}{t("。收藏记录已保留，可通过星标管理收藏。")}</p> : <>
       <QuestionBody question={q} />
       {recall && !revealed ? <button type="button" onClick={() => setRevealed(true)} className="mt-5 min-h-12 w-full rounded-xl border border-indigo-200 bg-indigo-50 px-4 text-sm font-semibold text-indigo-700">{t("显示选项与答案")}</button> : <>
         <ol lang="ja" className="mt-4 grid gap-2">{q.options.map(option => <li key={option.id} className={`flex items-start gap-2 rounded-xl border px-3 py-3 ${recall && option.id === q.correctOptionId ? "border-emerald-300 bg-emerald-50" : "border-slate-200"}`}><span className="pt-0.5 text-sm font-semibold text-slate-500">{option.label ?? option.id}.</span><RichContent text={option.text} html={q.richText} className="question-text flex-1" /></li>)}</ol>

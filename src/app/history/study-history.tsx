@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
 import { useState } from "react";
@@ -19,6 +20,6 @@ export default function StudyHistory() {
     {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{t(error)}</p>}
     <StudyStats data={data} ready={ready} />
     <nav aria-label={t("记录筛选")} className="flex flex-wrap gap-2">{[["all", "全部"], ["active", "未完成"], ["completed", "已完成"], ["practice", "练习"], ["exam", "考试"]].map(([value, label]) => <button key={value} aria-pressed={filter === value} onClick={() => setFilter(value)} className={`min-h-10 rounded-full px-4 text-sm font-semibold ${filter === value ? "bg-indigo-600 text-white" : "bg-white text-slate-600 border border-slate-200"}`}>{t(label)}</button>)}</nav>
-    {!ready ? <p role="status">{t("正在读取学习记录……")}</p> : attempts.length ? <div className="grid gap-3 md:grid-cols-2">{attempts.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <section className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center"><p className="text-slate-500">{t(data.attempts.length ? "暂时没有此类记录。" : "还没有学习记录，完成第一道题就能留下足迹。")}</p><Link href="/" className="mt-5 inline-block font-semibold text-indigo-600">{t("去选择练习 →")}</Link></section>}
+    {!ready ? <LoadingSkeleton label="正在读取学习记录……" /> : attempts.length ? <div className="grid gap-3 md:grid-cols-2">{attempts.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <section className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center"><p className="text-slate-500">{t(data.attempts.length ? "暂时没有此类记录。" : "还没有学习记录，完成第一道题就能留下足迹。")}</p><Link href="/" className="mt-5 inline-block font-semibold text-indigo-600">{t("去选择练习 →")}</Link></section>}
   </div></main>;
 }

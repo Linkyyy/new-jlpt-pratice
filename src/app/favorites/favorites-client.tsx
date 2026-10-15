@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
 import Link from "next/link";
@@ -112,14 +113,14 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
             <p className="mt-4 text-xs leading-6 text-slate-500">{t("备份包含全部收藏夹、收藏题目与做题记录，不受当前筛选影响。")}</p>
           </FloatingSettings></div>
         </header>
-        {!ready ? <p role="status">{t("正在读取本地收藏……")}</p> : error ? <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-5 text-sm leading-7 text-rose-700">{t(error)}</p> : <>
+        {!ready ? <LoadingSkeleton label="正在读取本地收藏……" /> : error ? <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-5 text-sm leading-7 text-rose-700">{t(error)}</p> : <>
           <section aria-label={t("筛选收藏")} className="favorites-filters">
             <label className="text-xs font-semibold text-slate-500">{t("收藏夹")}<select aria-label={t("筛选收藏夹")} value={activeFolder} onChange={event => { setFolderId(event.target.value); resetSelection(); }} className={selectClass}><option value="all">{t("全部收藏夹 ·")}{data.entries.length} {t("题")}</option>{data.folders.map(folder => <option key={folder.id} value={folder.id}>{folder.id === "default" ? t("默认收藏夹") : folder.name} · {data.entries.filter(entry => entry.folderIds.includes(folder.id)).length} {t("题")}</option>)}</select></label>
             <label className="text-xs font-semibold text-slate-500">{t("等级")}<select aria-label={t("筛选等级")} value={level} onChange={event => { setLevel(levels.find(item => item === event.target.value) ?? "all"); resetSelection(); }} className={selectClass}><option value="all">{t("全部等级")}</option>{levels.map(value => <option key={value} value={value}>{t(value)}</option>)}</select></label>
             <label className="text-xs font-semibold text-slate-500">{t("题型")}<select aria-label={t("筛选题型")} value={category} onChange={event => { setCategory(questionCategories.find(item => item === event.target.value) ?? "all"); resetSelection(); }} className={selectClass}><option value="all">{t("全部题型")}</option>{questionCategories.map(value => <option key={value} value={value}>{t(value)}</option>)}</select></label>
             <div className="flex items-center justify-between gap-2"><p role="status" className="shrink-0 whitespace-nowrap text-xs text-slate-500">{filtered.length} {t("题")}</p>{filtered.some(entry => catalogById.has(entry.questionId)) && !loadingImported && <Link href={`/favorites/practice?${practiceQuery}`} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-3 text-xs font-semibold text-white hover:bg-indigo-700 sm:px-4 sm:text-sm">{t("练习当前收藏")}</Link>}</div>
           </section>
-          {loadingImported && <p role="status" className="text-sm text-slate-500">{t("正在读取用户题库中的收藏题目……")}</p>}
+          {loadingImported && <LoadingSkeleton label="正在读取用户题库中的收藏题目……" />}
           {remote.key === importedIdsKey && remote.error && <p role="alert" className="text-sm text-rose-700">{t(remote.error)}<button type="button" onClick={() => { setRemote({ key: "", items: [], error: null }); setRetry(value => value + 1); }} className="ml-2 min-h-11 px-3 underline">{t("重试")}</button></p>}
           {filtered.length === 0 ? <section className="rounded-2xl border border-slate-200 bg-white p-6 text-center"><h2 className="font-bold">{t(data.entries.length === 0 ? "还没有收藏题目" : "当前筛选下没有收藏题目")}</h2><p className="mt-3 text-sm leading-7 text-slate-500">{t(data.entries.length === 0 ? "在题目上点击星标，选择收藏夹即可。" : "试试其他收藏夹、题型或等级。")}</p>{data.entries.length === 0 ? <Link href="/" className="mt-4 inline-flex min-h-11 items-center font-semibold text-indigo-600">{t("去选择练习 →")}</Link> : <button type="button" onClick={() => { setFolderId("all"); setCategory("all"); setLevel("all"); resetSelection(); }} className="mt-4 min-h-11 px-4 font-semibold text-indigo-600">{t("清除筛选")}</button>}</section> : <div className="favorites-browser" data-mobile-detail={mobileDetail} data-view-mode={mode}>
             <nav ref={listRef} aria-label={t("收藏题目一览")} className="favorites-list">

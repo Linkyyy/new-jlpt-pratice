@@ -8,7 +8,7 @@ import ts from "typescript";
 const require = createRequire(import.meta.url);
 const favoriteKey = "jlpt-practice.favorites.v1", studyKey = "jlpt-practice.study.v1";
 const compile = name => ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup"].map(name => [name, compile(name)]));
+const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation"].map(name => [name, compile(name)]));
 const favorites = { version: 2, folders: [{ id: "default", name: "默认收藏夹" }, { id: "folder-a", name: "语法" }], entries: [{ questionId: "q1", folderIds: ["default", "folder-a"], savedAt: "2026-10-01T00:00:00Z" }] };
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", questions: [{ id: "q1", level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }] };
 function environment(initial = {}) {

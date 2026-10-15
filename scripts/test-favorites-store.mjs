@@ -7,7 +7,10 @@ import ts from "typescript";
 
 const source = fs.readFileSync(new URL("../src/lib/favorites-store.ts", import.meta.url), "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const require = createRequire(import.meta.url);
+const validation = {};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date });
+const nodeRequire = createRequire(import.meta.url);
+const require = specifier => specifier === "./backup-validation" ? validation : nodeRequire(specifier);
 const key = "jlpt-practice.favorites.v1";
 const date = "2026-01-01T00:00:00.000Z";
 function store(initial) {

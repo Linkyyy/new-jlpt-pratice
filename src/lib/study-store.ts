@@ -1,6 +1,8 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { isStudyData } from "./backup-validation";
+export { isStudyData } from "./backup-validation";
 import type { JLPTLevel, OptionId, QuestionCategory } from "@/data/practice-question";
 import type { PracticePaper, QuestionType } from "@/data/practice-papers";
 import type { PracticeMode } from "@/data/practice-modes";
@@ -48,45 +50,7 @@ const serverSnapshot: StudySnapshot = { data: empty, ready: false, error: null }
 let cachedRaw: string | null | undefined;
 let cachedSnapshot = serverSnapshot;
 const listeners = new Set<() => void>();
-const optionIds = ["A", "B", "C", "D"];
-const levels = ["N1", "N2", "N3", "N4", "N5"];
-const categories = ["词汇", "语法", "阅读", "听力"];
 const types = ["all", "vocabulary", "grammar", "reading", "listening"];
-const record = (v: unknown): v is Record<string, unknown> => typeof v === "object" && v !== null && !Array.isArray(v);
-const text = (v: unknown): v is string => typeof v === "string" && v.length > 0 && v.length <= 300;
-const timestamp = (v: unknown): v is number => typeof v === "number" && Number.isSafeInteger(v) && v > 0 && v <= 8640000000000000;
-
-function isQuestion(v: unknown): v is StudyQuestion {
-  return record(v) && text(v.id) && levels.includes(String(v.level)) && categories.includes(String(v.category))
-    && Array.isArray(v.optionIds) && v.optionIds.length >= 2 && v.optionIds.length <= 4 && v.optionIds.every(id => optionIds.includes(String(id)))
-    && new Set(v.optionIds).size === v.optionIds.length && v.optionIds.includes(v.correctOptionId)
-    && (v.sourceQuestionNumber === undefined || v.sourceQuestionNumber === null || Number.isSafeInteger(v.sourceQuestionNumber));
-}
-function isAttempt(v: unknown): v is StudyAttempt {
-  if (!record(v) || !text(v.id) || !text(v.paperId) || !["original", "imported", "favorites"].includes(String(v.source))
-    || ![...levels, "混合"].includes(String(v.level)) || !text(v.year) || !types.includes(String(v.type)) || !text(v.typeLabel) || !text(v.periodLabel)
-    || !["practice", "exam"].includes(String(v.mode)) || !["ready", "active", "completed"].includes(String(v.status))
-    || !timestamp(v.createdAt) || !timestamp(v.updatedAt) || v.updatedAt < v.createdAt || !(v.completedAt === null || timestamp(v.completedAt))
-    || !Array.isArray(v.questions) || !v.questions.length || !v.questions.every(isQuestion) || new Set(v.questions.map(q => q.id)).size !== v.questions.length
-    || !record(v.answers) || !Number.isSafeInteger(v.questionIndex) || Number(v.questionIndex) < 0 || Number(v.questionIndex) >= v.questions.length
-    || !(v.deadline === null || timestamp(v.deadline)) || !Number.isSafeInteger(v.elapsedSeconds) || Number(v.elapsedSeconds) < 0
-    || typeof v.timedOut !== "boolean" || !Number.isInteger(v.fontSize) || Number(v.fontSize) < 14 || Number(v.fontSize) > 28
-    || v.mobileFontSize !== undefined && (!Number.isInteger(v.mobileFontSize) || Number(v.mobileFontSize) < 14 || Number(v.mobileFontSize) > 28)) return false;
-  const questions = new Map((v.questions as StudyQuestion[]).map(q => [q.id, q]));
-  if (!Object.entries(v.answers).every(([id, a]) => record(a) && typeof a.submitted === "boolean" && questions.get(id)?.optionIds.includes(a.selectedOptionId as OptionId))) return false;
-  if (v.status === "completed" && (!timestamp(v.completedAt) || v.completedAt < v.createdAt || v.deadline !== null)) return false;
-  if (v.status !== "completed" && v.completedAt !== null) return false;
-  if (v.mode === "exam" && v.status === "active" && v.deadline === null) return false;
-  if (v.mode === "practice" && (v.status === "ready" || v.deadline !== null)) return false;
-  if (v.mode === "exam" && v.status !== "completed" && Object.values(v.answers).some(a => (a as StudyAnswer).submitted)) return false;
-  if (v.status === "completed" && (Object.values(v.answers).some(a => !(a as StudyAnswer).submitted) || v.mode === "practice" && Object.keys(v.answers).length !== v.questions.length)) return false;
-  return true;
-}
-export function isStudyData(v: unknown): v is StudyData {
-  return record(v) && v.version === 1 && Array.isArray(v.attempts) && v.attempts.every(isAttempt)
-    && new Set(v.attempts.map(a => a.id)).size === v.attempts.length && Array.isArray(v.activityDays)
-    && v.activityDays.every(day => typeof day === "string" && /^\d{4}-\d{2}-\d{2}$/.test(day) && Number.isFinite(Date.parse(day)) && new Date(day).toISOString().slice(0, 10) === day) && new Set(v.activityDays).size === v.activityDays.length;
-}
 export function studyDay(time = Date.now()): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit" }).format(time);
 }

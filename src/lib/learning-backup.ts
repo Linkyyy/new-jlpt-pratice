@@ -1,5 +1,6 @@
 "use client";
 
+import { isLearningBackup } from "./backup-validation";
 import { FAVORITES_STORAGE_KEY, isFavoritesData, mergeFavoritesData, readFavoritesSnapshot, refreshFavorites, type FavoritesData } from "./favorites-store";
 import { STUDY_STORAGE_KEY, isStudyData, mergeStudyData, readStudySnapshot, refreshStudyHistory, type StudyData, type StudyResult } from "./study-store";
 
@@ -20,8 +21,7 @@ function backupParts(value: unknown): { favorites?: FavoritesData; study?: Study
   if (isStudyData(value)) return { study: value };
   if (isFavoritesData(value)) return { favorites: value };
   if (typeof value !== "object" || value === null || Array.isArray(value)) return null;
-  const v = value as Record<string, unknown>;
-  return v.format === "jlpt-practice-backup" && v.version === 1 && typeof v.exportedAt === "string" && Number.isFinite(Date.parse(v.exportedAt)) && isFavoritesData(v.favorites) && isStudyData(v.study) ? { favorites: v.favorites, study: v.study } : null;
+  return isLearningBackup(value) ? { favorites: value.favorites, study: value.study } : null;
 }
 export function importLearningBackup(value: unknown): StudyResult {
   const incoming = backupParts(value);

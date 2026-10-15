@@ -1,6 +1,8 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { isRecord, isFavoritesData } from "./backup-validation";
+export { isFavoritesData } from "./backup-validation";
 
 export const FAVORITES_STORAGE_KEY = "jlpt-practice.favorites.v1";
 export const DEFAULT_FOLDER_ID = "default";
@@ -35,32 +37,6 @@ const serverSnapshot: FavoritesSnapshot = { data: emptyData, ready: false, error
 let cachedRaw: string | null | undefined;
 let cachedSnapshot = serverSnapshot;
 const listeners = new Set<() => void>();
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
-}
-
-function isFolder(value: unknown): value is FavoriteFolder {
-  return isRecord(value) && typeof value.id === "string" && value.id.length > 0
-    && typeof value.name === "string" && value.name.trim() === value.name && value.name.length > 0 && value.name.length <= 40;
-}
-
-function isEntry(value: unknown): value is FavoriteEntry {
-  return isRecord(value) && typeof value.questionId === "string" && value.questionId.length > 0
-    && Array.isArray(value.folderIds) && value.folderIds.length > 0 && value.folderIds.every((id: unknown) => typeof id === "string")
-    && new Set(value.folderIds).size === value.folderIds.length && typeof value.savedAt === "string" && Number.isFinite(Date.parse(value.savedAt));
-}
-
-export function isFavoritesData(value: unknown): value is FavoritesData {
-  if (!isRecord(value) || value.version !== 2 || !Array.isArray(value.folders) || !Array.isArray(value.entries)) return false;
-  const folders: unknown[] = value.folders;
-  const entries: unknown[] = value.entries;
-  if (!folders.every(isFolder) || !entries.every(isEntry)) return false;
-  const ids = new Set(folders.map((folder) => folder.id));
-  const names = new Set(folders.map((folder) => folder.name.toLocaleLowerCase()));
-  return ids.has(DEFAULT_FOLDER_ID) && ids.size === folders.length && names.size === folders.length
-    && new Set(entries.map((entry) => entry.questionId)).size === entries.length && entries.every((entry) => entry.folderIds.every((id) => ids.has(id)));
-}
 
 // Read version 1 without modifying storage; the next successful save persists version 2.
 function readFavoritesData(value: unknown): FavoritesData | null {

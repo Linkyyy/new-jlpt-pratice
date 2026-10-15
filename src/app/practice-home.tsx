@@ -1,10 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import PracticeStartButton from "@/components/practice-start-button";
+import LoadingSkeleton from "@/components/loading-skeleton";
 import DisplaySettings from "@/components/display-settings";
 import ActionLabel, { actionButtonClass } from "@/components/action-label";
 import { useI18n } from "@/lib/i18n";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition, type FormEvent } from "react";
 import Link from "next/link";
 import { AttemptCard, attemptTitle, studyCard } from "@/components/study-dashboard";
 import { latestStudyAttempt, questionTrails, studyAttemptUrl, studyScore, useStudyHistory } from "@/lib/study-store";
@@ -17,6 +20,8 @@ const selectClassName = "mt-2 min-h-12 w-full rounded-xl border border-slate-300
 
 export default function PracticeHome() {
   const { t } = useI18n();
+  const router = useRouter();
+  const [starting, startNavigation] = useTransition();
   const [source, setSource] = useState<QuestionBankSource>(importedBankSummary.available > 0 ? "imported" : "original");
   const [level, setLevel] = useState<JLPTLevel>("N2");
   const [year, setYear] = useState<string>(getBankPeriods(source, "N2")[0] ?? "2026");
@@ -42,6 +47,14 @@ export default function PracticeHome() {
   }).length;
   const newUrl = `/practice?${new URLSearchParams({ source, level: activeLevel, year: activePeriod, type, mode, fresh: "1" })}`;
 
+  function beginPractice(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (starting || !ready || questionCount === 0) return;
+    const params = new URLSearchParams();
+    for (const [key, value] of new FormData(event.currentTarget)) params.set(key, String(value));
+    startNavigation(() => router.push(`/practice?${params}`));
+  }
+
   return (
     <main className="flex-1 bg-slate-50 px-4 py-5 font-sans text-slate-900 sm:px-8 sm:py-8">
       <div className="mx-auto max-w-7xl space-y-5">
@@ -54,7 +67,7 @@ export default function PracticeHome() {
         <div className="grid items-start gap-5 lg:grid-cols-[1.05fr_1fr]">
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">{t("选择练习")}</h2>
-          <form action="/practice" method="get" className="mt-4">
+          <form action="/practice" method="get" onSubmit={beginPractice} className="mt-4">
             <label className="mb-4 block text-sm font-semibold">{t("题库来源")}<select name="source" value={source} onChange={(event) => { const next = bankSources.find((item) => item.value === event.target.value); if (next) setSource(next.value); }} className={selectClassName}>
                 {bankSources.map((item) => <option key={item.value} value={item.value} disabled={item.value === "imported" && importedBankSummary.available === 0}>{t(item.label)}</option>)}
               </select>
@@ -91,14 +104,14 @@ export default function PracticeHome() {
               <p className="mt-3 text-xs leading-5 text-slate-500">{t(completed.length ? `已完成 ${completed.length} 次 · 最佳 ${Math.max(...completed.map(a => studyScore(a).percent))} 分` : "完成作答后点亮足迹，同一道题重复练习只计入一次。")}{t(mode === "exam" ? ` · 训练 ${getExamDuration(questionCount) / 60} 分钟` : "")}</p>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-4">
-              <button type="submit" disabled={!ready || questionCount === 0} className="min-h-12 flex-1 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:bg-slate-300">{t(active ? mode === "exam" ? "继续考试" : "继续练习" : mode === "exam" ? "进入考试准备" : "开始练习")} →</button>
+              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={active ? mode === "exam" ? "继续考试" : "继续练习" : mode === "exam" ? "进入考试准备" : "开始练习"} />
               {active && <Link href={newUrl} className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-500 hover:text-indigo-600">{t("重新开始")}</Link>}
             </div>
           </form>
         </section>
 
         <aside className="space-y-5">
-          <section className={studyCard} aria-labelledby="recent-title"><div className="mb-4 flex items-center justify-between"><h2 id="recent-title" className="font-bold">{t("最近作答")}</h2><Link href="/history" className="text-xs font-semibold text-indigo-600">{t("全部记录 →")}</Link></div>{recent.length ? <div className="space-y-2">{recent.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <div className="rounded-xl border border-dashed border-slate-200 px-4 py-8 text-center"><p className="text-sm text-slate-500">{t("从第一道题开始，积累你的学习足迹。")}</p><p className="mt-2 text-xs text-slate-400">{t("进度与每次交卷成绩自动保存")}</p></div>}</section>
+          <section className={studyCard} aria-labelledby="recent-title"><div className="mb-4 flex items-center justify-between"><h2 id="recent-title" className="font-bold">{t("最近作答")}</h2><Link href="/history" className="text-xs font-semibold text-indigo-600">{t("全部记录 →")}</Link></div>{!ready ? <LoadingSkeleton label="正在读取学习记录……" /> : recent.length ? <div className="space-y-2">{recent.map(a => <AttemptCard key={a.id} attempt={a} />)}</div> : <div className="rounded-xl border border-dashed border-slate-200 px-4 py-8 text-center"><p className="text-sm text-slate-500">{t("从第一道题开始，积累你的学习足迹。")}</p><p className="mt-2 text-xs text-slate-400">{t("进度与每次交卷成绩自动保存")}</p></div>}</section>
         </aside>
         </div>
         <details className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-500"><summary className="cursor-pointer font-semibold text-slate-700">{t("题库说明与记录帮助")}</summary><div className="mt-3 space-y-2 text-xs leading-6"><p>{t("进度、历史成绩与做题足迹保存在当前浏览器，可在学习记录中导出备份。无痕模式或清理浏览器数据后无法保留。学习天数按日本时间计算。")}</p><p>{t("题号右上角的小圆点表示曾练习；当前作答仍用颜色显示正误。整篇阅读与长文语法题统一提交后才留下足迹。")}</p><p>{t("用户题库已导入")}{importedBankSummary.files} {t("个文件、")}{importedBankSummary.available} {t("道可作答题；资源不完整的")}{importedBankSummary.unavailable} {t("道题暂不参与作答。原创题库不代表官方真题。题量、时长及成绩不等同于正式 JLPT 评分。")}</p></div></details>

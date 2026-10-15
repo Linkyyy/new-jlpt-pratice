@@ -1,3 +1,4 @@
+import LoadingSkeleton from "@/components/loading-skeleton";
 import LocalizedText from "@/components/localized-text";
 import type { Metadata } from "next";
 import ActivationForm from "@/components/activation-form";
@@ -65,7 +66,7 @@ async function SelectedExercise({ searchParams }: PageProps<"/practice">) {
 
 export default function PracticePage(props: PageProps<"/practice">) {
   return (
-    <Suspense fallback={<p role="status" className="p-8"><LocalizedText text="正在准备练习卷……" /></p>}>
+    <Suspense fallback={<LoadingSkeleton label="正在准备练习卷……" variant="question" fullPage />}>
       <SelectedExercise {...props} />
     </Suspense>
   );

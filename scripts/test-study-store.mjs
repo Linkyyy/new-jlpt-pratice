@@ -7,7 +7,10 @@ import ts from "typescript";
 
 const source = fs.readFileSync(new URL("../src/lib/study-store.ts", import.meta.url), "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const require = createRequire(import.meta.url), key = "jlpt-practice.study.v1";
+const validation = {};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date });
+const nodeRequire = createRequire(import.meta.url);
+const require = specifier => specifier === "./backup-validation" ? validation : nodeRequire(specifier), key = "jlpt-practice.study.v1";
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", source: "original", questions: ["one", "two"].map(id => ({ id, level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] })) };
 function store(initial) {
   const values = new Map(initial === undefined ? [] : [[key, typeof initial === "string" ? initial : JSON.stringify(initial)]]);

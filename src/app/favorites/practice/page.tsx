@@ -1,4 +1,4 @@
-import LocalizedText from "@/components/localized-text";
+import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ActivationForm from "@/components/activation-form";
@@ -14,5 +14,5 @@ async function FavoritePractice({ searchParams }: PageProps<"/favorites/practice
 }
 
 export default function FavoritePracticePage(props: PageProps<"/favorites/practice">) {
-  return <Suspense fallback={<p role="status" className="p-8"><LocalizedText text="正在准备收藏练习……" /></p>}><FavoritePractice {...props} /></Suspense>;
+  return <Suspense fallback={<LoadingSkeleton label="正在准备收藏练习……" variant="question" fullPage />}><FavoritePractice {...props} /></Suspense>;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
 import { useEffect, useState } from "react";
@@ -15,12 +16,11 @@ import { useStudyHistory } from "@/lib/study-store";
 interface Selection { folderId: string; category: string; level: string; questionId?: string; attemptId?: string; fresh?: boolean }
 
 export default function FavoritePracticeClient(initialSelection: Selection) {
-  const { t } = useI18n();
   const params = useSearchParams();
   const selection = { ...initialSelection, attemptId: params.get("attempt") ?? undefined };
   const { data, ready, error } = useFavorites();
   const history = useStudyHistory();
-  if (!ready || !history.ready) return <p role="status" className="p-8">{t("正在读取收藏……")}</p>;
+  if (!ready || !history.ready) return <LoadingSkeleton label="正在读取收藏……" variant="question" fullPage />;
   const saved = history.data.attempts.find(a => a.id === selection.attemptId && a.source === "favorites");
   if (selection.attemptId && !saved) return <Feedback message={history.error ?? "找不到这次收藏题练习记录，请从学习记录重新选择。"} />;
   if (error && !saved) return <Feedback message={error} />;
@@ -66,5 +66,6 @@ function SelectedFavorites({ initialIds, folderName, category, level, attemptId 
     return () => controller.abort();
   }, [ids, label, category, level, retry, attemptId]);
   if (state.paper) return <StudySession paper={state.paper} mode="practice" />;
-  return <Feedback message={state.message ?? "正在准备所选收藏题目……"} retry={state.message ? () => { setState({}); setRetry((value) => value + 1); } : undefined} />;
+  if (!state.message) return <LoadingSkeleton label="正在准备所选收藏题目……" variant="question" fullPage />;
+  return <Feedback message={state.message} retry={() => { setState({}); setRetry((value) => value + 1); }} />;
 }

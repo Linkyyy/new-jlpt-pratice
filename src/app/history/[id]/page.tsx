@@ -1,4 +1,4 @@
-import LocalizedText from "@/components/localized-text";
+import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import StudyDetail from "./study-detail";
 import { Suspense } from "react";
@@ -9,5 +9,5 @@ async function SelectedDetail({ params }: PageProps<"/history/[id]">) {
   return <StudyDetail id={id} />;
 }
 export default function HistoryDetailPage(props: PageProps<"/history/[id]">) {
-  return <Suspense fallback={<p role="status" className="p-8"><LocalizedText text="正在读取作答记录……" /></p>}><SelectedDetail {...props} /></Suspense>;
+  return <Suspense fallback={<LoadingSkeleton label="正在读取作答记录……" fullPage />}><SelectedDetail {...props} /></Suspense>;
 }

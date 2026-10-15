@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/components/loading-skeleton";
 import { useI18n } from "@/lib/i18n";
 
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function StudyDetail({ id }: { id: string }) {
   const { t, locale } = useI18n();
   const { data, ready, error } = useStudyHistory();
   const attempt = data.attempts.find(a => a.id === id);
-  if (!ready) return <p role="status" className="p-8">{t("正在读取作答记录……")}</p>;
+  if (!ready) return <LoadingSkeleton label="正在读取作答记录……" fullPage />;
   if (!attempt) return <main className="p-8"><p role="alert">{t(error ?? "当前浏览器没有这份记录。")}</p><Link href="/history" className="mt-5 inline-block text-indigo-600">{t("返回学习记录")}</Link></main>;
   const score = studyScore(attempt), completed = attempt.status === "completed";
   const choice = (id: string | undefined, questionId: string) => id ? questionId.startsWith("imported:") ? String(id.charCodeAt(0) - 64) : id : "—";
