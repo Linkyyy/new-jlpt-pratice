@@ -107,10 +107,10 @@ export default function PracticeHome() {
               {resumable && <Link href={newUrl} className="inline-flex min-h-12 items-center rounded-xl px-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 hover:text-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">{t("重新开始")}</Link>}
             </div>
           </form>
-          <section aria-label={t("本卷练习记录")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
-            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷练习记录")}</h3><p className="tabular-nums text-slate-600">{t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, questionCount) : "—", 1: questionCount })}</p></div>
+          <section aria-label={t("本卷历史足迹")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷历史足迹")}</h3><p className="tabular-nums text-slate-600">{t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, questionCount) : "—", 1: questionCount })}</p></div>
             <progress aria-label={t("本卷已练题目")} value={Math.min(done, questionCount)} max={questionCount || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
-            <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p>{t("累计统计已提交题目，重复练习只计一次。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
+            <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p>{t("累计统计已提交题目，重复练习只计一次。")}</p><p>{t("并非上次进度。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
           </section>
         </section>
 
