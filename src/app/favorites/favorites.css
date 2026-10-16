@@ -11,6 +11,10 @@
 .collection-filter-trigger:hover { background: var(--surface-muted); }
 .collection-filter-trigger:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .collection-toolbar-actions { display: flex; flex-shrink: 0; align-items: center; gap: 8px; }
+.collection-icon-action { display: inline-flex; width: 44px; height: 44px; flex-shrink: 0; align-items: center; justify-content: center; border: 0; border-radius: 8px; padding: 0; background: transparent; color: var(--muted); }
+.collection-icon-action svg { width: 18px; height: 18px; }
+.collection-icon-action:hover { color: var(--accent-focus); }
+.collection-icon-action:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .collection-filter-fields { display: grid; gap: 16px; }
 .collection-filter-fields select { min-width: 0; }
 .favorites-list { display: grid; align-content: start; gap: 10px; padding: 3px; }
