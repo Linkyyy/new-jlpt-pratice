@@ -31,7 +31,7 @@ function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
   const topSpace = parseFloat(styles.getPropertyValue("--sheet-top-space")) || 16;
   const bottomSpace = parseFloat(styles.bottom) || 0;
   const cssMaximum = parseFloat(styles.maxHeight) || Infinity;
-  return { minimum, maximum: Math.max(minimum, Math.min(cssMaximum, viewport - topSpace - bottomSpace)), viewport };
+  return { minimum, maximum: Math.max(minimum, Math.min(cssMaximum, viewport - topSpace - bottomSpace)) };
 }
 
 function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
@@ -42,7 +42,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const sheetRef = useRef<HTMLElement>(null);
   const handleRef = useRef<HTMLButtonElement>(null);
   const heightRef = useRef<number | null>(null);
-  const preferredHeight = useRef<number | null>(null);
+  const sizeMode = useRef<"min" | "max" | "custom">(reviewing ? "max" : "min");
   const articleRef = useRef<HTMLElement>(null);
   const drag = useRef<{ x: number; y: number; height: number; pointerId: number } | null>(null);
   const dragged = useRef(false);
@@ -61,16 +61,20 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
     const open = next > minimum + 1;
     if (!open) next = minimum;
     heightRef.current = next;
+    sizeMode.current = !open ? "min" : maximum - next <= 1 ? "max" : "custom";
     // Move immediately with the pointer; commit React state when the gesture ends.
     sheet.style.height = `${next}px`;
     setExpanded(open);
-    if (open && commit) preferredHeight.current = next;
     if (commit) setHeight(next);
   }, []);
 
   useEffect(() => {
     function fitViewport() {
-      if (heightRef.current !== null) resizeSheet(heightRef.current);
+      if (heightRef.current === null) return;
+      const mode = sizeMode.current;
+      resizeSheet(mode === "max" ? Infinity : mode === "min" ? 0 : heightRef.current);
+      // A viewport change should preserve whether the user snapped or dragged.
+      sizeMode.current = mode;
     }
     const viewport = window.visualViewport;
     window.addEventListener("resize", fitViewport);
@@ -110,9 +114,8 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
 
   function toggle() {
     if (!sheetRef.current || !handleRef.current) return;
-    const { minimum, viewport } = sheetBounds(sheetRef.current, handleRef.current);
-    if (expanded) preferredHeight.current = sheetRef.current.getBoundingClientRect().height;
-    resizeSheet(expanded ? minimum : preferredHeight.current ?? viewport * .72);
+    const { minimum, maximum } = sheetBounds(sheetRef.current, handleRef.current);
+    resizeSheet(expanded ? minimum : maximum);
   }
 
   function resizeWithKeyboard(event: KeyboardEvent<HTMLButtonElement>) {
