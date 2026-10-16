@@ -29,6 +29,7 @@ import { useStudyPersistence } from "./use-study-persistence";
 import { useQuestionFontSize } from "./use-question-font-size";
 import { isRandomPeriod, questionPeriod } from "@/data/random-practice";
 import { formatPeriod } from "@/data/bank-catalog";
+import { setUserPreferences, useUserPreferences } from "@/lib/user-preferences";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
@@ -53,11 +54,9 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const [answers, setAnswers] = useState<Partial<Record<string, AnswerState>>>(attempt.answers);
   const [finished, setFinished] = useState(attempt.status === "completed");
   const [showResults, setShowResults] = useState(attempt.status === "completed");
-  const [instantFeedback, setInstantFeedback] = useState(false);
+  const preferences = useUserPreferences();
+  const { instantFeedback, swipeEnabled, buttonsEnabled, keyboardEnabled } = preferences.data.practice;
   const { fontSize, setFontSize, savedFontSizes } = useQuestionFontSize(attempt);
-  const [swipeEnabled, setSwipeEnabled] = useState(true);
-  const [buttonsEnabled, setButtonsEnabled] = useState(true);
-  const [keyboardEnabled, setKeyboardEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -229,7 +228,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           <div className="grid gap-3">
             {!finished && <>
             <label className="flex min-h-11 cursor-pointer items-start gap-3 text-sm leading-6">
-              <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setInstantFeedback(event.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
+              <input type="checkbox" name="instant-feedback" checked={instantFeedback} disabled={finished} onChange={(event) => setUserPreferences("practice", { instantFeedback: event.target.checked })} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600 disabled:cursor-not-allowed" />
               <span><span className="block font-semibold">{t("点击选项即显示答案")}</span></span>
             </label>
             </>}
@@ -237,7 +236,8 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500">{t("文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。")}</p>
         </fieldset>
-        <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} onKeyboardChange={setKeyboardEnabled} />
+        <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={value => setUserPreferences("practice", { swipeEnabled: value })} onButtonsChange={value => setUserPreferences("practice", { buttonsEnabled: value })} onKeyboardChange={value => setUserPreferences("practice", { keyboardEnabled: value })} />
+        {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
         <p className="mt-4 text-xs leading-6 text-slate-500">{t("进度自动保存在当前浏览器，可从首页继续练习。")}{t(Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`)}</p>
         <QuestionFeedback question={question} paper={paper} />
           </FloatingSettings>

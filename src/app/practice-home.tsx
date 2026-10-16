@@ -8,15 +8,15 @@ import LearningNextCard from "@/components/learning-next-card";
 import ActionLabel, { actionButtonClass } from "@/components/action-label";
 import { useI18n } from "@/lib/i18n";
 
-import { useMemo, useState, useTransition, type FormEvent, type MouseEvent } from "react";
+import { useMemo, useTransition, type FormEvent, type MouseEvent } from "react";
 import Link from "next/link";
 import { AttemptCard, studyCard } from "@/components/study-dashboard";
 import { questionTrails, studyScore, useStudyHistory } from "@/lib/study-store";
-import type { JLPTLevel } from "@/data/practice-question";
-import { questionTypes, type QuestionType } from "@/data/practice-papers";
-import { getExamDuration, practiceModes, type PracticeMode } from "@/data/practice-modes";
-import { bankSources, formatPeriod, getBankCount, getBankLevels, getBankPeriods, importedBankSummary, type QuestionBankSource } from "@/data/bank-catalog";
+import { questionTypes } from "@/data/practice-papers";
+import { getExamDuration, practiceModes } from "@/data/practice-modes";
+import { bankSources, formatPeriod, getBankCount, getBankLevels, getBankPeriods, importedBankSummary } from "@/data/bank-catalog";
 import { createRandomPeriod, isRandomPeriod, RANDOM_PERIOD, RANDOM_QUESTION_TARGET } from "@/data/random-practice";
+import { setUserPreferences, useUserPreferences } from "@/lib/user-preferences";
 
 const selectClassName = "mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3 py-3 text-slate-900 focus:border-indigo-500 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500";
 
@@ -24,11 +24,9 @@ export default function PracticeHome() {
   const { t } = useI18n();
   const router = useRouter();
   const [starting, startNavigation] = useTransition();
-  const [source, setSource] = useState<QuestionBankSource>(importedBankSummary.available > 0 ? "imported" : "original");
-  const [level, setLevel] = useState<JLPTLevel>("N2");
-  const [year, setYear] = useState<string>(getBankPeriods(source, "N2")[0] ?? "2026");
-  const [type, setType] = useState<QuestionType>("all");
-  const [mode, setMode] = useState<PracticeMode>("practice");
+  const preferences = useUserPreferences();
+  const { level, year, type, mode } = preferences.data.home;
+  const source = preferences.data.home.source === "imported" && importedBankSummary.available === 0 ? "original" : preferences.data.home.source;
   const selection = questionTypes.find((item) => item.value === type) ?? questionTypes[0];
   const bankLevels = getBankLevels(source);
   const activeLevel = bankLevels.includes(level) ? level : bankLevels[0] ?? "N2";
@@ -53,7 +51,7 @@ export default function PracticeHome() {
 
   function beginPractice(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (starting || !ready || questionCount === 0) return;
+    if (starting || !ready || !preferences.ready || questionCount === 0) return;
     const params = new URLSearchParams();
     for (const [key, value] of new FormData(event.currentTarget)) params.set(key, String(value));
     if (resumable) params.set("year", resumable.year);
@@ -78,13 +76,14 @@ export default function PracticeHome() {
           <nav aria-label={t("个人学习")} className="flex items-center gap-2"><Link href="/history" aria-label={t("学习记录")} title={t("学习记录")} className={actionButtonClass}><ActionLabel icon="history">{t("学习记录")}</ActionLabel></Link><Link href="/favorites" aria-label={t("我的收藏")} title={t("我的收藏")} className={actionButtonClass}><ActionLabel icon="favorites">{t("我的收藏")}</ActionLabel></Link><DisplaySettings /></nav>
         </header>
         {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{t(error)}</p>}
+        {preferences.error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{t(preferences.error)}</p>}
         <LearningNextCard data={data} ready={ready} />
         <div className="grid items-start gap-5 lg:grid-cols-[1.05fr_1fr]">
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">{t("选择练习")}</h2>
           <form action="/practice" method="get" onSubmit={beginPractice} className="mt-4">
             <input type="hidden" name={resumable ? "attempt" : "fresh"} value={resumable?.id ?? "1"} />
-            <label className="mb-4 block text-sm font-semibold">{t("题库来源")}<select name="source" value={source} onChange={(event) => { const next = bankSources.find((item) => item.value === event.target.value); if (next) setSource(next.value); }} className={selectClassName}>
+            <label className="mb-4 block text-sm font-semibold">{t("题库来源")}<select name="source" value={source} onChange={(event) => { const next = bankSources.find((item) => item.value === event.target.value); if (next) setUserPreferences("home", { source: next.value }); }} className={selectClassName}>
                 {bankSources.map((item) => <option key={item.value} value={item.value} disabled={item.value === "imported" && importedBankSummary.available === 0}>{t(item.label)}</option>)}
               </select>
             </label>
@@ -92,25 +91,25 @@ export default function PracticeHome() {
               <legend className="mb-3 text-sm font-semibold">{t("作答模式")}</legend>
               <div className="grid grid-cols-2 gap-2">
                 {practiceModes.map((item) => <label key={item.value} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 p-3 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 ${mode === item.value ? "border-indigo-500 bg-indigo-50" : "border-slate-200 bg-white hover:border-indigo-300"}`}>
-                  <input type="radio" name="mode" value={item.value} checked={mode === item.value} onChange={() => setMode(item.value)} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
+                  <input type="radio" name="mode" value={item.value} checked={mode === item.value} onChange={() => setUserPreferences("home", { mode: item.value })} className="mt-1 h-4 w-4 shrink-0 accent-indigo-600" />
                   <span><span className="block font-semibold">{t(item.label)}</span><span className="mt-1 hidden text-sm leading-6 sm:block text-slate-600">{t(item.description)}</span></span>
                 </label>)}
               </div>
             </fieldset>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               <label className="text-sm font-semibold">
-                {t("日语等级")}<select name="level" value={activeLevel} onChange={(event) => { const next = bankLevels.find((level) => level === event.target.value); if (next) setLevel(next); }} className={selectClassName}>
+                {t("日语等级")}<select name="level" value={activeLevel} onChange={(event) => { const next = bankLevels.find((level) => level === event.target.value); if (next) setUserPreferences("home", { level: next }); }} className={selectClassName}>
                   {bankLevels.map((level) => <option key={level} value={level}>{level}</option>)}
                 </select>
               </label>
               <label className="text-sm font-semibold">
-                {t("场次／版本")}<select name="year" value={activePeriod} onChange={(event) => { const period = event.target.value; setYear(period); if (period === RANDOM_PERIOD && type === "all") setType("vocabulary"); }} className={selectClassName}>
+                {t("场次／版本")}<select name="year" value={activePeriod} onChange={(event) => { const period = event.target.value; setUserPreferences("home", { year: period, type: period === RANDOM_PERIOD && type === "all" ? "vocabulary" : type }); }} className={selectClassName}>
                   {periods.map((period) => <option key={period} value={period}>{t(formatPeriod(period))}</option>)}
                   <option value={RANDOM_PERIOD}>{t("随机")}</option>
                 </select>
               </label>
               <label className="col-span-2 text-sm font-semibold sm:col-span-1">
-                {t("题目类型")}<select name="type" value={type} onChange={(event) => { const next = questionTypes.find((type) => type.value === event.target.value); if (next) setType(next.value); }} className={selectClassName}>
+                {t("题目类型")}<select name="type" value={type} onChange={(event) => { const next = questionTypes.find((type) => type.value === event.target.value); if (next) setUserPreferences("home", { type: next.value }); }} className={selectClassName}>
                   {questionTypes.map((type) => { const count = getBankCount(source, activeLevel, activePeriod, type.value); return <option key={type.value} value={type.value} disabled={count.available === 0 || random && type.value === "all"}>{t(type.label)} · {random ? t("题池 {0} 题", { 0: count.available }) : <>{count.available} {t("题")}{t(count.excluded > 0 ? `（${count.excluded} 题暂不可用）` : "")}</>}</option>; })}
                 </select>
               </label>
@@ -119,14 +118,14 @@ export default function PracticeHome() {
             {source === "original" && type === "all" && <p className="mt-3 text-xs leading-6 text-amber-800">{t("原创卷尚无听力题，整卷估分会标记为不完整。完整整卷请选用户提供题库。")}</p>}
             {mode === "exam" && !random && <p className="mt-3 text-xs leading-6 text-slate-500">{t("训练时长：{0} 分钟", { 0: getExamDuration(questionCount) / 60 })}</p>}
             <div className="mt-5 flex flex-wrap items-center gap-3">
-              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={resumable ? "继续上次" : mode === "exam" ? "进入考试准备" : "开始练习"} />
+              <PracticeStartButton pending={starting} disabled={!ready || !preferences.ready || questionCount === 0} label={resumable ? "继续上次" : mode === "exam" ? "进入考试准备" : "开始练习"} />
               {resumable && <Link href={newUrl} onClick={restartRandom} prefetch={random ? false : undefined} className="inline-flex min-h-12 items-center rounded-xl px-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 hover:text-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">{t("重新开始")}</Link>}
             </div>
           </form>
           <section aria-label={t("本卷历史足迹")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
             <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷历史足迹")}</h3><p className="tabular-nums text-slate-600">{t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, counts.available) : "—", 1: counts.available })}</p></div>
             <progress aria-label={t("本卷已练题目")} value={Math.min(done, counts.available)} max={counts.available || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
-            <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p>{t("累计统计已提交题目，重复练习只计一次。")}</p><p>{t("并非上次进度。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
+            <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p className="text-[clamp(10px,2.9vw,12px)]">{t("累计完成题目，重复只计一次，非上次进度。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
           </section>
         </section>
 

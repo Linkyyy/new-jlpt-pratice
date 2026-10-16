@@ -26,7 +26,7 @@ export default function NavigationSettings({ swipeEnabled, buttonsEnabled, keybo
         <input type="checkbox" name="keyboard-shortcuts" checked={keyboardEnabled} onChange={(event) => onKeyboardChange(event.target.checked)} className="h-4 w-4 accent-indigo-600" />
         {t("电脑答题快捷键")}</label>
       <p className="mt-1 text-xs leading-6 text-slate-500">{t("数字 1–4 选择，Enter 提交或继续，← / → 切题。输入文字或打开弹窗时不生效。")}</p>
-      <p className="mt-2 text-xs leading-6 text-slate-500">{t("仅对本次作答生效，关闭后仍可点击题号切题。")}</p>
+      <p className="mt-2 text-xs leading-6 text-slate-500">{t("设置会自动记住，并随云备份保存；关闭切题开关后仍可点击题号切题。")}</p>
     </fieldset>
   );
 }

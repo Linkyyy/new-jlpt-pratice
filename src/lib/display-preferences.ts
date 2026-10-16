@@ -25,6 +25,8 @@ function read() {
   } catch { /* Keep the current view usable when storage is unavailable. */ }
   return snapshot;
 }
+export const readDisplayPreferences = read;
+export function refreshDisplayPreferences() { rawCache = undefined; read(); listeners.forEach(listener => listener()); }
 function subscribe(listener: () => void) {
   listeners.add(listener);
   const onStorage = (event: StorageEvent) => { if (event.key === DISPLAY_STORAGE_KEY || event.key === null) { rawCache = undefined; listener(); } };

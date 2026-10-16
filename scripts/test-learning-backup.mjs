@@ -8,7 +8,7 @@ import ts from "typescript";
 const require = createRequire(import.meta.url);
 const favoriteKey = "jlpt-practice.favorites.v1", studyKey = "jlpt-practice.study.v1";
 const compile = name => ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation", "study-history-data", "practice-scoring"].map(name => [name, compile(name)]));
+const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation", "study-history-data", "practice-scoring", "user-preferences", "display-preferences"].map(name => [name, compile(name)]));
 const favorites = { version: 2, folders: [{ id: "default", name: "默认收藏夹" }, { id: "folder-a", name: "语法" }], entries: [{ questionId: "q1", folderIds: ["default", "folder-a"], savedAt: "2026-10-01T00:00:00Z" }] };
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", questions: [{ id: "q1", level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }] };
 function environment(initial = {}) {
@@ -27,7 +27,7 @@ function environment(initial = {}) {
     }
     return modules[name];
   }
-  return { backup: load("learning-backup"), favorite: load("favorites-store"), study: load("study-store"), raw, failNextSecondWrite: () => { failAt = writes + 2; } };
+  return { backup: load("learning-backup"), favorite: load("favorites-store"), study: load("study-store"), raw, preferences: load("user-preferences"), display: load("display-preferences"), failWrite: offset => { failAt = writes + offset; }, failNextSecondWrite: () => { failAt = writes + 2; } };
 }
 function completed(env, option = "B") {
   const a = env.study.createStudyAttempt(paper, "practice").attempt;
@@ -156,4 +156,48 @@ test("clearing history preserves favorites and rejected single deletions preserv
   assert.equal(e.study.deleteStudyHistory(null).ok, true);
   assert.equal(e.raw.get(favoriteKey), untouched);
   assert.equal(e.backup.createLearningBackup().data.study.attempts.length, 0);
+});
+
+test("cloud backups round-trip remembered selections, practice/favorite settings and theme/language", () => {
+  const source = environment({ [favoriteKey]: favorites }); completed(source);
+  source.preferences.setUserPreferences("home", { level: "N3", year: "random", type: "grammar", mode: "exam" });
+  source.preferences.setUserPreferences("practice", { swipeEnabled: false, buttonsEnabled: false, keyboardEnabled: false, instantFeedback: true, fontSize: 24, mobileFontSize: 20, playbackRate: 1.5 });
+  source.preferences.setUserPreferences("favorites", { mode: "cards", sort: "paper", fontSize: 22 });
+  source.display.setDisplayPreferences({ theme: "dark", locale: "ja" });
+  const backup = JSON.parse(JSON.stringify(source.backup.createLearningBackup().data));
+  const destination = environment();
+  assert.equal(destination.backup.importLearningBackup(backup).ok, true);
+  assert.deepEqual(JSON.parse(destination.raw.get("jlpt-practice.preferences.v1")), backup.preferences);
+  assert.deepEqual(JSON.parse(destination.raw.get("jlpt-practice.display.v1")), backup.display);
+  assert.equal(destination.preferences.readUserPreferences().data.practice.fontSize, 24);
+  assert.equal(destination.display.readDisplayPreferences().locale, "ja");
+  destination.study.deleteStudyHistory(null);
+  assert.deepEqual(destination.backup.createLearningBackup().data.preferences, destination.preferences.readUserPreferences().data);
+});
+
+test("old cloud backups preserve current settings and invalid new settings reject the whole import", () => {
+  const source = environment({ [favoriteKey]: favorites }), destination = environment();
+  destination.preferences.setUserPreferences("home", { level: "N1" }); destination.display.setDisplayPreferences({ theme: "dark", locale: "en" });
+  const legacy = JSON.parse(JSON.stringify(source.backup.createLearningBackup().data)); delete legacy.preferences; delete legacy.display;
+  const beforePreferences = destination.raw.get("jlpt-practice.preferences.v1"), beforeDisplay = destination.raw.get("jlpt-practice.display.v1");
+  assert.equal(destination.backup.importLearningBackup(legacy).ok, true);
+  assert.equal(destination.raw.get("jlpt-practice.preferences.v1"), beforePreferences); assert.equal(destination.raw.get("jlpt-practice.display.v1"), beforeDisplay);
+  for (const field of ["preferences", "display"]) {
+    const incoming = JSON.parse(JSON.stringify(source.backup.createLearningBackup().data)); incoming[field] = { invalid: true };
+    const before = [...destination.raw];
+    assert.equal(destination.backup.importLearningBackup(incoming).ok, false); assert.deepEqual([...destination.raw], before);
+  }
+});
+
+test("failure writing either settings field rolls back favorites, study, preferences and display together", () => {
+  const source = environment({ [favoriteKey]: favorites }); completed(source);
+  source.preferences.setUserPreferences("home", { level: "N3" }); source.display.setDisplayPreferences({ locale: "ja" });
+  for (const offset of [3, 4]) {
+    const destination = environment(); destination.preferences.setUserPreferences("home", { level: "N1" }); destination.display.setDisplayPreferences({ locale: "en" });
+    const before = [...destination.raw].sort(); destination.failWrite(offset);
+    assert.equal(destination.backup.importLearningBackup(source.backup.createLearningBackup().data).ok, false);
+    assert.deepEqual([...destination.raw].sort(), before);
+    assert.equal(destination.preferences.readUserPreferences().data.home.level, "N1");
+    assert.equal(destination.display.readDisplayPreferences().locale, "en");
+  }
 });

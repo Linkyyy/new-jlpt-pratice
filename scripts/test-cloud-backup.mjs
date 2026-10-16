@@ -234,3 +234,18 @@ test("a backup changed between read and delete cannot lose the other device's da
   assert.equal((await removeHistory(e, alice.cookie, null, saved.backup.revision)).status, 409);
   assert.deepEqual((await (await e.read(alice.cookie)).json()).data, concurrent);
 });
+
+test("D1 backups retain personal preferences and display settings through upload, read and history clearing", async () => {
+  const e = environment(), user = await e.auth(), data = emptyBackup();
+  data.preferences = { version: 1, home: { source: "imported", level: "N3", year: "random", type: "reading", mode: "practice" }, practice: { swipeEnabled: false, buttonsEnabled: false, keyboardEnabled: true, instantFeedback: true, fontSize: 24, mobileFontSize: 20, playbackRate: 1.25 }, favorites: { mode: "cards", fontSize: 22, sort: "paper", mistakesSort: "wrong", dueSort: "due" } };
+  data.display = { locale: "ja", theme: "dark" };
+  assert.equal((await e.write(user.cookie, data)).status, 200);
+  const saved = await (await e.read(user.cookie)).json();
+  assert.deepEqual(saved.data.preferences, data.preferences); assert.deepEqual(saved.data.display, data.display);
+  assert.equal((await removeHistory(e, user.cookie, null, saved.backup.revision)).status, 200);
+  const cleared = await (await e.read(user.cookie)).json();
+  assert.deepEqual(cleared.data.preferences, data.preferences); assert.deepEqual(cleared.data.display, data.display);
+  const invalid = structuredClone(data); invalid.preferences.practice.fontSize = 99;
+  assert.equal((await e.write(user.cookie, invalid, cleared.backup.revision)).status, 400);
+  assert.deepEqual((await (await e.read(user.cookie)).json()).data.preferences, data.preferences);
+});

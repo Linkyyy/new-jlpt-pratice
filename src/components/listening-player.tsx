@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 
 import { useEffect, useId, useRef, useState } from "react";
 import { getAudioUrl } from "@/lib/audio-url.mjs";
+import { setUserPreferences, useUserPreferences } from "@/lib/user-preferences";
 
 function formatTime(value: number) {
   if (!Number.isFinite(value) || value < 0) return "0:00";
@@ -27,7 +28,11 @@ function AudioControls({ url }: { url: string | null }) {
   const [error, setError] = useState<string | null>(null);
   const [position, setPosition] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [rate, setRate] = useState(1);
+  const preferences = useUserPreferences();
+  const rate = preferences.data.practice.playbackRate;
+  useEffect(() => {
+    if (audioRef.current) { audioRef.current.defaultPlaybackRate = rate; audioRef.current.playbackRate = rate; }
+  }, [rate]);
 
   useEffect(() => {
     mounted.current = true;
@@ -93,7 +98,7 @@ function AudioControls({ url }: { url: string | null }) {
               onChange={(event) => { const audio = audioRef.current; if (audio && ready) { audio.currentTime = Number(event.target.value); setPosition(audio.currentTime); } }}
               className="h-9 min-w-0 flex-1 accent-indigo-600 disabled:opacity-40" />
           <span className="shrink-0 whitespace-nowrap text-[11px] tabular-nums text-slate-500 sm:text-xs">{formatTime(position)} / {formatTime(duration)}</span>
-          <select value={rate} aria-label={t("听力播放速度")} onChange={(event) => { const next = Number(event.target.value); if (audioRef.current) audioRef.current.playbackRate = next; setRate(next); }} className="h-9 w-14 shrink-0 rounded-lg bg-transparent pl-1 text-xs text-slate-700 focus-visible:outline-2 focus-visible:outline-indigo-600 sm:w-16 sm:text-sm">
+          <select value={rate} aria-label={t("听力播放速度")} onChange={(event) => { setUserPreferences("practice", { playbackRate: Number(event.target.value) }); }} className="h-9 w-14 shrink-0 rounded-lg bg-transparent pl-1 text-xs text-slate-700 focus-visible:outline-2 focus-visible:outline-indigo-600 sm:w-16 sm:text-sm">
               {[.75, 1, 1.25, 1.5].map((value) => <option key={value} value={value}>{value}x</option>)}
             </select>
         </div>
@@ -102,6 +107,7 @@ function AudioControls({ url }: { url: string | null }) {
           <p>{t(error)}</p><button type="button" aria-label={t("重试音频")} title={t("重试音频")} onClick={() => void play(true)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-rose-50 focus-visible:outline-2 focus-visible:outline-rose-600"><svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="2"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2.3 5.7" /></svg></button>
         </div>}
       </> : <p role="alert" className="mt-2 text-sm text-rose-700">{t("本题音频地址尚未配置，请联系管理员。")}</p>}
+      {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
     </section>
   );
 }

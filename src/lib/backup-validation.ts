@@ -2,6 +2,8 @@ import type { OptionId } from "@/data/practice-question";
 import type { FavoriteFolder, FavoriteEntry, FavoritesData } from "./favorites-store";
 import type { StudyQuestion, StudyAnswer, StudyAttempt, StudyData } from "./study-store";
 import type { LearningBackup } from "./learning-backup";
+import type { UserPreferences } from "./user-preferences";
+import type { DisplayPreferences } from "./display-preferences";
 
 // Pure validators shared by local import and the server; never read browser storage.
 export function isRecord(value: unknown): value is Record<string, unknown> {
@@ -73,5 +75,23 @@ export function isStudyData(v: unknown): v is StudyData {
 export function isLearningBackup(value: unknown): value is LearningBackup {
   return isRecord(value) && value.format === "jlpt-practice-backup" && value.version === 1
     && typeof value.exportedAt === "string" && Number.isFinite(Date.parse(value.exportedAt))
-    && isFavoritesData(value.favorites) && isStudyData(value.study);
+    && isFavoritesData(value.favorites) && isStudyData(value.study)
+    && (value.preferences === undefined || isUserPreferences(value.preferences))
+    && (value.display === undefined || isDisplayPreferences(value.display));
+}
+
+export function isDisplayPreferences(value: unknown): value is DisplayPreferences {
+  return isRecord(value) && ["zh", "ja", "en"].includes(String(value.locale)) && ["system", "light", "dark"].includes(String(value.theme));
+}
+export function isUserPreferences(value: unknown): value is UserPreferences {
+  if (!isRecord(value) || value.version !== 1 || !isRecord(value.home) || !isRecord(value.practice) || !isRecord(value.favorites)) return false;
+  const { home, practice, favorites } = value;
+  const size = (n: unknown) => Number.isInteger(n) && Number(n) >= 14 && Number(n) <= 28;
+  return ["original", "imported"].includes(String(home.source)) && levels.includes(String(home.level))
+    && typeof home.year === "string" && /^(?:|\d{4}|\d{6}|random)$/.test(home.year) && types.includes(String(home.type))
+    && (home.year !== "random" || home.type !== "all") && ["practice", "exam"].includes(String(home.mode))
+    && ["swipeEnabled", "buttonsEnabled", "keyboardEnabled", "instantFeedback"].every(key => typeof practice[key] === "boolean")
+    && size(practice.fontSize) && size(practice.mobileFontSize) && [0.75, 1, 1.25, 1.5].includes(practice.playbackRate as number)
+    && ["preview", "cards"].includes(String(favorites.mode)) && size(favorites.fontSize)
+    && ["sort", "mistakesSort", "dueSort"].every(key => ["recent", "wrong", "due", "paper"].includes(String(favorites[key])));
 }

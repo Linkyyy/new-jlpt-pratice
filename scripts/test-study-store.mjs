@@ -7,6 +7,7 @@ import ts from "typescript";
 
 const source = fs.readFileSync(new URL("../src/lib/study-store.ts", import.meta.url), "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
+const preferencesCompiled = ts.transpileModule(fs.readFileSync(new URL("../src/lib/user-preferences.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
 const validation = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date });
 const historyData = {};
@@ -20,11 +21,14 @@ function store(initial, clock = Date) {
   const values = new Map(initial === undefined ? [] : [[key, typeof initial === "string" ? initial : JSON.stringify(initial)]]);
   let fail = false, writes = 0;
   const exports = {};
-  vm.runInNewContext(compiled, { exports, require, Intl, Date: clock, URLSearchParams, window: { localStorage: {
+  const window = { localStorage: {
     getItem: name => values.get(name) ?? null,
     setItem: (name, value) => { if (fail) throw new Error("Quota exceeded"); writes++; values.set(name, value); },
-  } } });
-  return { api: exports, read: () => JSON.parse(values.get(key)), raw: () => values.get(key), writes: () => writes, fail: () => { fail = true; } };
+  } };
+  const preferences = {};
+  vm.runInNewContext(preferencesCompiled, { exports: preferences, require, window });
+  vm.runInNewContext(compiled, { exports, require: specifier => specifier === "./user-preferences" ? preferences : require(specifier), Intl, Date: clock, URLSearchParams, window });
+  return { api: exports, preferences, read: () => JSON.parse(values.get(key)), raw: () => values.get(key), writes: () => writes, fail: () => { fail = true; } };
 }
 const state = a => ({ answers: {}, status: a.status, questionIndex: a.questionIndex, deadline: a.deadline, elapsedSeconds: a.elapsedSeconds, timedOut: a.timedOut, fontSize: a.fontSize });
 function controlledClock(initial = Date.parse("2026-10-16T00:00:00Z")) {
@@ -47,6 +51,15 @@ test("random practice URLs preserve the saved seed and restarting creates indepe
   assert.equal(s.read().attempts.length, 2);
   assert.equal(s.read().attempts[0].year, year);
   assert.equal(s.read().attempts[1].year, nextYear);
+});
+
+test("new attempts use remembered font sizes while saved attempts keep their own sizes", () => {
+  const s = store(), first = s.api.createStudyAttempt(paper, "practice").attempt;
+  s.preferences.setUserPreferences("practice", { fontSize: 24, mobileFontSize: 20 });
+  const second = s.api.createStudyAttempt(paper, "practice").attempt;
+  assert.equal(first.fontSize, 18); assert.equal(first.mobileFontSize, 16);
+  assert.equal(second.fontSize, 24); assert.equal(second.mobileFontSize, 20);
+  assert.equal(s.read().attempts[0].fontSize, 18);
 });
 
 test("submission timestamps are assigned once, drafts remain untimed and navigation preserves locked answers", () => {

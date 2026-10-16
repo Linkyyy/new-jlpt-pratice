@@ -31,6 +31,7 @@ import { useStudyPersistence } from "./use-study-persistence";
 import { useQuestionFontSize } from "./use-question-font-size";
 import { isRandomPeriod, questionPeriod } from "@/data/random-practice";
 import { formatPeriod } from "@/data/bank-catalog";
+import { setUserPreferences, useUserPreferences } from "@/lib/user-preferences";
 
 type ExamPhase = "ready" | "running" | "finished";
 
@@ -47,9 +48,8 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
   const [showResults, setShowResults] = useState(attempt.status === "completed");
   const [timedOut, setTimedOut] = useState(attempt.timedOut);
   const [elapsedSeconds, setElapsedSeconds] = useState(attempt.elapsedSeconds);
-  const [swipeEnabled, setSwipeEnabled] = useState(true);
-  const [buttonsEnabled, setButtonsEnabled] = useState(true);
-  const [keyboardEnabled, setKeyboardEnabled] = useState(true);
+  const preferences = useUserPreferences();
+  const { swipeEnabled, buttonsEnabled, keyboardEnabled } = preferences.data.practice;
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -200,7 +200,8 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
             <ResponsivePanel title={t("答题卡")} className="answer-card-panel" trigger={t(`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`)} headerAction={
               <FloatingSettings title={t(finished ? "复习设置" : "考试设置")}>
             <FontSizeSetting value={fontSize} onChange={setFontSize} />
-            <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} onKeyboardChange={setKeyboardEnabled} />
+            <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={value => setUserPreferences("practice", { swipeEnabled: value })} onButtonsChange={value => setUserPreferences("practice", { buttonsEnabled: value })} onKeyboardChange={value => setUserPreferences("practice", { keyboardEnabled: value })} />
+            {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
         <p className="mt-4 text-xs leading-6 text-slate-500">{t(paper.sourceLabel)} · {translatePeriod(paper.periodLabel ?? paper.year, paper.source, t)}。{t(Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`)}</p>
             <QuestionFeedback question={question} paper={paper} />
               </FloatingSettings>

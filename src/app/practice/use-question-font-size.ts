@@ -2,6 +2,7 @@
 
 import { useState, useSyncExternalStore } from "react";
 import type { StudyAttempt } from "@/lib/study-store";
+import { setUserPreferences } from "@/lib/user-preferences";
 
 const query = "(max-width: 1023px)";
 function subscribe(listener: () => void) {
@@ -16,7 +17,7 @@ export function useQuestionFontSize(attempt: StudyAttempt) {
   const [mobileSize, setMobileSize] = useState(attempt.mobileFontSize ?? 16);
   return {
     fontSize: mobile ? mobileSize : desktopSize,
-    setFontSize: mobile ? setMobileSize : setDesktopSize,
+    setFontSize: (value: number) => { if (mobile) setMobileSize(value); else setDesktopSize(value); setUserPreferences("practice", mobile ? { mobileFontSize: value } : { fontSize: value }); },
     savedFontSizes: { fontSize: desktopSize, mobileFontSize: mobileSize },
   };
 }

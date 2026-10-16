@@ -12,6 +12,7 @@ import FavoriteQuestion, { favoriteTitle } from "./favorite-question";
 import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import FolderManager from "@/components/folder-manager";
 import FavoriteOrganizer from "@/components/favorite-organizer";
+import { setUserPreferences, useUserPreferences, type FavoriteSort } from "@/lib/user-preferences";
 import { levels, questionCategories, type JLPTLevel, type QuestionCategory } from "@/data/practice-question";
 import { type CatalogQuestion } from "@/data/practice-papers";
 import { useFavorites } from "@/lib/favorites-store";
@@ -39,12 +40,14 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
   const view = collectionView(params.get("view"));
   const now = useStudyClock(history.data);
   const desktop = useSyncExternalStore(subscribeDesktop, () => window.matchMedia("(min-width: 1024px)").matches, () => false);
-  const [mode, setMode] = useState<FavoriteViewMode>("preview");
+  const preferences = useUserPreferences();
+  const { mode, fontSize } = preferences.data.favorites;
+  function setMode(value: FavoriteViewMode) { setUserPreferences("favorites", { mode: value }); }
+  function setFontSize(value: number) { setUserPreferences("favorites", { fontSize: value }); }
   const viewMode = desktop ? "preview" : mode;
-  const [sortSelection, setSortSelection] = useState<{ view: CollectionView; value: string }>({ view: "favorites", value: "recent" });
-  const sort = sortSelection.view === view ? sortSelection.value : view === "due" ? "due" : view === "mistakes" ? "wrong" : "recent";
-  function setSort(value: string) { setSortSelection({ view, value }); }
-  const [fontSize, setFontSize] = useState(16);
+  const sortKey = view === "due" ? "dueSort" : view === "mistakes" ? "mistakesSort" : "sort";
+  const sort = preferences.data.favorites[sortKey];
+  function setSort(value: string) { setUserPreferences("favorites", { [sortKey]: value as FavoriteSort }); }
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [mobileDetail, setMobileDetail] = useState(false);
   const paneRef = useRef<HTMLDivElement>(null);
@@ -126,7 +129,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
   function returnToList() { setMobileDetail(false); if (mode === "cards") setMode("preview"); }
   function resetSelection() { setMobileDetail(false); setSelectedId(null); listRef.current?.scrollTo({ top: 0 }); paneRef.current?.scrollTo({ top: 0 }); }
   function changeView(next: CollectionView) {
-    setSortSelection({ view: next, value: next === "favorites" ? "recent" : next === "due" ? "due" : "wrong" }); resetSelection();
+    resetSelection();
     const url = new URL(window.location.href);
     if (next === "favorites") url.searchParams.delete("view"); else url.searchParams.set("view", next);
     window.history.replaceState(null, "", url);
@@ -161,8 +164,9 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
                 ] as const).map(([value, label, description]) => <label key={value} className="flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 p-3"><input type="radio" name="favorite-view" value={value} checked={mode === value} onChange={() => { setMode(value); resetSelection(); paneRef.current?.scrollTo({ top: 0 }); }} className="mt-1 accent-indigo-600" /><span className="text-sm"><span className="block font-semibold">{t(label)}</span><span className="mt-1 block text-xs leading-5 text-slate-500">{t(description)}</span></span></label>)}</div></fieldset>}
 
                 <div className="mt-3"><FontSizeSetting value={fontSize} onChange={setFontSize} /></div>
+                {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
                 <div className="mt-4 flex flex-wrap gap-2 border-t border-slate-200 pt-4"><FavoriteOrganizer catalog={[...catalogById.values()]} initialFolderId={view === "favorites" ? activeFolder : "all"} /><FolderManager /></div>
-                <p className="mt-4 text-xs leading-6 text-slate-500">{t("备份包含全部收藏夹、收藏题目与做题记录，不受当前筛选影响。")}</p>
+                <p className="mt-4 text-xs leading-6 text-slate-500">{t("备份包含全部收藏夹、收藏题目、做题记录和个人设置，不受当前筛选影响。")}</p>
               </FloatingSettings>
             </div>
           </section>

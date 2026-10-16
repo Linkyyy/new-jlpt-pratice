@@ -4,6 +4,7 @@ import { useSyncExternalStore } from "react";
 import { calculatePracticeScore } from "./practice-scoring";
 import { withoutStudyHistory } from "./study-history-data";
 import { isStudyData } from "./backup-validation";
+import { readUserPreferences } from "./user-preferences";
 export { isStudyData } from "./backup-validation";
 import type { JLPTLevel, OptionId, QuestionCategory } from "@/data/practice-question";
 import type { PracticePaper, QuestionType } from "@/data/practice-papers";
@@ -94,13 +95,14 @@ function commit(update: (data: StudyData) => StudyData): StudyResult {
 }
 export function createStudyAttempt(paper: PracticePaper, mode: PracticeMode) {
   const now = Date.now();
+  const preferences = readUserPreferences().data.practice;
   const attempt: StudyAttempt = {
     id: globalThis.crypto?.randomUUID?.() ?? `study-${now.toString(36)}-${Math.random().toString(36).slice(2)}`,
     paperId: paper.id, source: paper.source ?? "original", level: paper.level, year: paper.year,
     type: (types.find(t => paper.id.endsWith(`-${t}`)) ?? "all") as QuestionType,
     typeLabel: paper.typeLabel, periodLabel: paper.periodLabel ?? `${paper.year} 原创版`, mode,
     createdAt: now, updatedAt: now, completedAt: null, status: mode === "exam" ? "ready" : "active",
-    questionIndex: 0, answers: {}, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize: 18, mobileFontSize: 16,
+    questionIndex: 0, answers: {}, deadline: null, elapsedSeconds: 0, timedOut: false, fontSize: preferences.fontSize, mobileFontSize: preferences.mobileFontSize,
     questions: paper.questions.map(q => ({ id: q.id, level: q.level, category: q.category, correctOptionId: q.correctOptionId, optionIds: q.options.map(o => o.id), sourceQuestionNumber: q.sourceQuestionNumber })),
   };
   const result = commit(data => ({ ...data, attempts: [...data.attempts, attempt] }));
