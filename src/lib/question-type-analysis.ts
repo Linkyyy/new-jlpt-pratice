@@ -84,5 +84,5 @@ export function questionTypePracticeHref(paper: PracticePaper, group: QuestionTy
     return `/favorites/practice?${new URLSearchParams({ folder: "all", category: group.category, level: "all", fresh: "1" })}`;
   }
   const types: Record<QuestionCategory, string> = { "词汇": "vocabulary", "语法": "grammar", "阅读": "reading", "听力": "listening" };
-  return `/practice?${new URLSearchParams({ source: paper.source ?? "original", level: group.level, year: paper.year, type: types[group.category], mode: "practice", fresh: "1" })}`;
+  return `/practice?${new URLSearchParams({ source: paper.source ?? "original", level: group.level, year: paper.year.startsWith("random-") ? "random" : paper.year, type: types[group.category], mode: "practice", fresh: "1" })}`;
 }

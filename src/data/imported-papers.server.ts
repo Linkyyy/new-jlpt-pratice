@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { cache } from "react";
-import { formatPeriod, getImportedGroup } from "./bank-catalog";
+import { formatPeriod, getBankPeriods, getImportedGroup } from "./bank-catalog";
+import { isRandomPeriod, RANDOM_PERIOD, selectRandomQuestions } from "./random-practice";
 import { getPracticePaper, getQuestionCatalog, questionTypes, type CatalogQuestion, type PracticePaper, type QuestionType } from "./practice-papers";
 import { levels, type JLPTLevel, type PracticeQuestion } from "./practice-question";
 import { isPracticeQuestion, isRecord } from "./question-validation";
@@ -18,6 +19,14 @@ const readGroup = cache(async (level: JLPTLevel, period: string, type: QuestionT
 });
 
 export async function loadPracticePaper(source: "original" | "imported", level: JLPTLevel, period: string, type: QuestionType): Promise<PracticePaper> {
+  if (isRandomPeriod(period)) {
+    if (period === RANDOM_PERIOD || type === "all") throw new Error("Random practice requires a seed and a single category");
+    const papers = await Promise.all(getBankPeriods(source, level).map(period => loadPracticePaper(source, level, period, type)));
+    return { id: `${source === "imported" ? "imported-" : ""}${level}-${period}-${type}`, source, level, year: period,
+      typeLabel: questionTypes.find(item => item.value === type)!.label, periodLabel: "随机练习",
+      sourceLabel: source === "imported" ? "用户提供题库" : "原创模拟题库", excludedCount: 0,
+      questions: selectRandomQuestions(papers.flatMap(paper => paper.questions), period) };
+  }
   if (source === "original") return { ...getPracticePaper(level, period, type), source, periodLabel: formatPeriod(period), sourceLabel: "原创模拟题库", excludedCount: 0 };
   const selectedTypes: readonly Exclude<QuestionType, "all">[] = type === "all" ? ["vocabulary", "grammar", "reading", "listening"] : [type];
   const questions = (await Promise.all(selectedTypes.map((selectedType) => readGroup(level, period, selectedType)))).flat();

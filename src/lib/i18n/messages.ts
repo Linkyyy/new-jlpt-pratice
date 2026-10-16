@@ -1,4 +1,9 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["随机", "ランダム", "Random"],
+  ["随机练习", "ランダム練習", "Random practice"],
+  ["题池 {0} 题", "問題プール {0} 問", "Pool: {0} questions"],
+  ["从当前等级、单项的全部场次随机抽取约 20 题；题组完整保留，题量不足时使用全部题目。", "選択したレベル・分野の全実施回から約20問を抽出します。長文・共通音声の問題はまとめて出題し、20問未満の場合は全問を使用します。", "Draws about 20 questions across sessions for this level and category. Passage and shared-audio groups stay together; smaller pools use all questions."],
+  ["题目来源：{0}", "出典：{0}", "Question source: {0}"],
   ["继续上次", "前回の続き", "Resume last session"],
   ["上次未完成", "前回の未完了セッション", "Last unfinished session"],
   ["开始新练习", "新しい練習を始める", "Start new practice"],

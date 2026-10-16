@@ -1,9 +1,12 @@
 import type { PracticeQuestion } from "@/data/practice-question";
 
+function sourcePaper(question: PracticeQuestion): string {
+  return question.id.startsWith("imported:") ? question.id.split(":").slice(0, 4).join(":") : question.id.match(/^N[1-5]-\d{4}/)?.[0] ?? question.level;
+}
+
 function listeningGroupKey(question: PracticeQuestion): string | null {
   if (question.category !== "听力" || !question.media?.audio) return null;
-  const paper = question.id.startsWith("imported:") ? question.id.split(":").slice(0, 4).join(":") : question.level;
-  return JSON.stringify(["听力", paper, question.media.audio]);
+  return JSON.stringify(["听力", sourcePaper(question), question.media.audio]);
 }
 
 export function usesArticleDrawer(question: PracticeQuestion, questions: readonly PracticeQuestion[] = []): boolean {
@@ -14,7 +17,7 @@ export function usesArticleDrawer(question: PracticeQuestion, questions: readonl
 
 export function articleGroupKey(question: PracticeQuestion): string {
   return listeningGroupKey(question) ?? (usesArticleDrawer(question)
-    ? JSON.stringify([question.category, question.passage?.trim() ?? "", question.richText ?? false, question.media?.images ?? [], question.media?.audio ?? null])
+    ? JSON.stringify([question.category, sourcePaper(question), question.passage?.trim() ?? "", question.richText ?? false, question.media?.images ?? [], question.media?.audio ?? null])
     : question.id);
 }
 

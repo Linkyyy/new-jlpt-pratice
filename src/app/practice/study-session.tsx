@@ -5,7 +5,8 @@ import { useI18n } from "@/lib/i18n";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { createRandomPeriod, isRandomPeriod } from "@/data/random-practice";
 import type { PracticePaper } from "@/data/practice-papers";
 import type { PracticeMode } from "@/data/practice-modes";
 import { createStudyAttempt, readStudySnapshot, type StudyAttempt } from "@/lib/study-store";
@@ -17,6 +18,7 @@ interface Props { paper: PracticePaper; mode: PracticeMode; initialQuestionIndex
 export default function StudySession({ paper, mode, initialQuestionIndex = 0, requestedQuestion }: Props) {
   const { t } = useI18n();
   const params = useSearchParams();
+  const router = useRouter();
   // Next preserves page state during back/forward navigation. The URL must select
   // the saved attempt even when a previous exercise component is being reused.
   const attemptId = params.get("attempt") ?? undefined;
@@ -54,6 +56,11 @@ export default function StudySession({ paper, mode, initialQuestionIndex = 0, re
     window.history.replaceState(null, "", url);
   }, [attemptId, fresh, initialQuestionIndex, mode, paper, requested]);
   function restart() {
+    if (isRandomPeriod(paper.year)) {
+      const search = new URLSearchParams({ source: paper.source ?? "original", level: paper.level, year: createRandomPeriod(), type: session?.attempt.type ?? "vocabulary", mode, fresh: "1" });
+      router.push(`/practice?${search}`);
+      return;
+    }
     const created = createStudyAttempt(paper, mode);
     initialized.current = `${paper.id}:${mode}:${created.attempt.id}`;
     setSession({ ...created, paper, index: 0 });

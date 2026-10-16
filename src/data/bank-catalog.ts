@@ -1,6 +1,7 @@
 import manifest from "./imported-bank/index.json";
 import { levels, type JLPTLevel } from "./practice-question";
 import { questionTypes, years, type QuestionType } from "./practice-papers";
+import { isRandomPeriod } from "./random-practice";
 
 export type QuestionBankSource = "original" | "imported";
 export const bankSources = [
@@ -9,6 +10,7 @@ export const bankSources = [
 ] as const;
 
 export function formatPeriod(period: string): string {
+  if (isRandomPeriod(period)) return "随机练习";
   return /^\d{6}$/.test(period) ? `${period.slice(0, 4)}年${Number(period.slice(4))}月` : `${period} 原创版`;
 }
 
@@ -20,7 +22,11 @@ export function getBankPeriods(source: QuestionBankSource, level: JLPTLevel): re
   return source === "original" ? years : [...new Set(manifest.groups.filter((group) => group.level === level).map((group) => group.period))].sort().reverse();
 }
 
-export function getBankCount(source: QuestionBankSource, level: JLPTLevel, period: string, type: QuestionType) {
+export function getBankCount(source: QuestionBankSource, level: JLPTLevel, period: string, type: QuestionType): { available: number; excluded: number } {
+  if (isRandomPeriod(period)) {
+    const counts = getBankPeriods(source, level).map(period => getBankCount(source, level, period, type));
+    return { available: counts.reduce((sum, count) => sum + count.available, 0), excluded: counts.reduce((sum, count) => sum + count.excluded, 0) };
+  }
   if (source === "original") return { available: type === "listening" ? 0 : type === "all" ? 9 : 3, excluded: 0 };
   const groups = manifest.groups.filter((group) => group.level === level && group.period === period && (type === "all" || group.type === type));
   return { available: groups.reduce((sum, group) => sum + group.availableCount, 0), excluded: groups.reduce((sum, group) => sum + group.unavailableCount, 0) };

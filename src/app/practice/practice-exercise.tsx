@@ -27,6 +27,8 @@ import QuestionBody from "@/components/question-body";
 import type { StudyAttempt } from "@/lib/study-store";
 import { useStudyPersistence } from "./use-study-persistence";
 import { useQuestionFontSize } from "./use-question-font-size";
+import { isRandomPeriod, questionPeriod } from "@/data/random-practice";
+import { formatPeriod } from "@/data/bank-catalog";
 
 interface PracticeExerciseProps {
   paper: PracticePaper;
@@ -256,6 +258,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           }}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">{t("第 {0} 题 · {1}", { 0: questionIndex + 1, 1: t(question.category) })}{question.sourceQuestionNumber != null && t(" · 原题号 {0}", { 0: question.sourceQuestionNumber })}</h1>
+          {isRandomPeriod(paper.year) && questionPeriod(question) && <p className="mt-1 text-xs leading-5 text-slate-500">{t("题目来源：{0}", { 0: t(formatPeriod(questionPeriod(question)!)) })}</p>}
           <p id="answer-help" className="sr-only">{t(finished ? "解析回顾：本次练习已交卷，答案不可修改。" : submitted ? "本题已提交，答案已锁定。查看解析后可继续作答或交卷。" : article ? "先完成本篇所有小题，再一次提交本篇答案。切换小题会保留选择。" : instantFeedback ? "点击选项立即显示答案和解析，并锁定本题；已有草稿可再次点击已选项进行判定。" : "选择答案后提交，切题会保留选择。")}</p>
           <FavoriteButton key={`favorite-${question.id}`} questionId={question.id} />
           <QuestionBody question={question} part={article ? "question" : "all"} />

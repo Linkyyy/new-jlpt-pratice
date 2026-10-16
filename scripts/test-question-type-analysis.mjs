@@ -116,6 +116,14 @@ test("analysis leaves frozen source questions and answers untouched", () => {
   assert.deepEqual(answers, { q: "A" });
 });
 
+test("a random report starts a new random category round instead of reusing its seed", () => {
+  const group = analyzeQuestionTypes([question("g", "语法")], {})[0];
+  const url = new URL(questionTypePracticeHref({ source: "imported", year: `random-${"a".repeat(32)}` }, group), "https://test.local");
+  assert.equal(url.searchParams.get("year"), "random");
+  assert.equal(url.searchParams.get("type"), "grammar");
+  assert.equal(url.searchParams.get("fresh"), "1");
+});
+
 test("mistake and spaced review reports retry the mistake bank even when questions were never favorited", () => {
   const group = analyzeQuestionTypes([question("g", "语法")], {})[0];
   for (const id of ["mistakes-practice", "due-practice"]) {

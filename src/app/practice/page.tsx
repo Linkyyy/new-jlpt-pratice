@@ -11,6 +11,10 @@ import { getBankLevels, getBankPeriods, type QuestionBankSource } from "@/data/b
 import { loadPracticePaper } from "@/data/imported-papers.server";
 import StudySession from "./study-session";
 import { practiceModes, type PracticeMode } from "@/data/practice-modes";
+import { isRandomPeriod, RANDOM_PERIOD } from "@/data/random-practice";
+import { randomUUID } from "node:crypto";
+import { redirect } from "next/navigation";
+import { connection } from "next/server";
 
 export const metadata: Metadata = {
   title: "日语题库练习 | JLPT Practice",
@@ -51,8 +55,14 @@ async function SelectedExercise({ searchParams }: PageProps<"/practice">) {
   const type = params.type ?? "all";
   const mode = params.mode ?? "practice";
 
-  if (typeof year !== "string" || !getBankLevels(source).includes(level) || !getBankPeriods(source, level).includes(year) || !isQuestionType(type) || !isPracticeMode(mode)) {
+  if (typeof year !== "string" || !getBankLevels(source).includes(level) || !getBankPeriods(source, level).includes(year) && !isRandomPeriod(year) || !isQuestionType(type) || !isPracticeMode(mode) || isRandomPeriod(year) && type === "all") {
     return <InvalidSelection />;
+  }
+
+  if (year === RANDOM_PERIOD) {
+    await connection();
+    const search = new URLSearchParams({ source, level, year: `random-${randomUUID().replaceAll("-", "")}`, type, mode, fresh: "1" });
+    redirect(`/practice?${search}`);
   }
 
   const paper = await loadPracticePaper(source, level, year, type);

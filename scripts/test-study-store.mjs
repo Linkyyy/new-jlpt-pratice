@@ -33,6 +33,22 @@ function controlledClock(initial = Date.parse("2026-10-16T00:00:00Z")) {
   return { Clock, tick: milliseconds => { now += milliseconds; return now; } };
 }
 
+test("random practice URLs preserve the saved seed and restarting creates independent records", () => {
+  const year = `random-${"a".repeat(32)}`, randomPaper = { ...paper, id: `N2-${year}-vocabulary`, year, periodLabel: "随机练习" };
+  const s = store(), first = s.api.createStudyAttempt(randomPaper, "practice").attempt;
+  assert.equal(s.api.isStudyData(s.read()), true);
+  assert.equal(first.type, "vocabulary");
+  const url = new URL(s.api.studyAttemptUrl(first), "https://test.local");
+  assert.equal(url.searchParams.get("year"), year);
+  assert.equal(url.searchParams.get("attempt"), first.id);
+  assert.equal(url.searchParams.has("fresh"), false);
+  const nextYear = `random-${"b".repeat(32)}`;
+  s.api.createStudyAttempt({ ...randomPaper, id: `N2-${nextYear}-vocabulary`, year: nextYear }, "practice");
+  assert.equal(s.read().attempts.length, 2);
+  assert.equal(s.read().attempts[0].year, year);
+  assert.equal(s.read().attempts[1].year, nextYear);
+});
+
 test("submission timestamps are assigned once, drafts remain untimed and navigation preserves locked answers", () => {
   const clock = controlledClock(), s = store(undefined, clock.Clock);
   const a = s.api.createStudyAttempt(paper, "practice").attempt;
