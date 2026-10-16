@@ -1,4 +1,13 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["继续上次", "前回の続き", "Resume last session"],
+  ["上次未完成", "前回の未完了セッション", "Last unfinished session"],
+  ["开始新练习", "新しい練習を始める", "Start new practice"],
+  ["本卷练习记录", "このセットの学習履歴", "Set history"],
+  ["累计已练 {0}/{1} 题", "演習済み {0}/{1} 問", "Practiced {0}/{1}"],
+  ["累计统计已提交题目，重复练习只计一次。", "提出済みの問題を累計します。同じ問題は一度だけ集計します。", "Counts submitted questions across sessions; repeats count once."],
+  ["已提交 {0}/{1} 题", "提出済み {0}/{1} 問", "Submitted {0}/{1}"],
+  ["已选择 {0}/{1} 题", "選択済み {0}/{1} 問", "Selected {0}/{1}"],
+  ["训练时长：{0} 分钟", "練習時間：{0} 分", "Time limit: {0} minutes"],
   ["批量整理收藏", "お気に入りをまとめて整理", "Organize favorites"],
   ["关闭批量整理", "一括整理を閉じる", "Close organizer"],
   ["搜索收藏题目", "お気に入りを検索", "Search favorites"],

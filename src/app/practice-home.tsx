@@ -11,7 +11,7 @@ import { useI18n } from "@/lib/i18n";
 import { useMemo, useState, useTransition, type FormEvent } from "react";
 import Link from "next/link";
 import { AttemptCard, studyCard } from "@/components/study-dashboard";
-import { latestStudyAttempt, questionTrails, studyScore, useStudyHistory } from "@/lib/study-store";
+import { questionTrails, studyScore, useStudyHistory } from "@/lib/study-store";
 import type { JLPTLevel } from "@/data/practice-question";
 import { questionTypes, type QuestionType } from "@/data/practice-papers";
 import { getExamDuration, practiceModes, type PracticeMode } from "@/data/practice-modes";
@@ -38,7 +38,6 @@ export default function PracticeHome() {
   const { data, ready, error } = useStudyHistory();
   const trails = useMemo(() => questionTrails(data), [data]);
   const paperId = `${source === "imported" ? "imported-" : ""}${activeLevel}-${activePeriod}-${type}`;
-  const active = latestStudyAttempt(data, paperId, mode);
   const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
   const completed = data.attempts.filter(a => a.paperId === paperId && a.mode === mode && a.status === "completed");
   const best = completed.map(studyScore).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
@@ -46,7 +45,6 @@ export default function PracticeHome() {
     const samePaper = source === "imported" ? id.startsWith(`imported:${activePeriod}:${activeLevel}:`) : id.startsWith(`${activeLevel}-${activePeriod}-`);
     return samePaper && (selection.category === null || q.category === selection.category);
   }).length;
-  const newUrl = `/practice?${new URLSearchParams({ source, level: activeLevel, year: activePeriod, type, mode, fresh: "1" })}`;
 
   function beginPractice(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -69,6 +67,7 @@ export default function PracticeHome() {
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">{t("选择练习")}</h2>
           <form action="/practice" method="get" onSubmit={beginPractice} className="mt-4">
+            <input type="hidden" name="fresh" value="1" />
             <label className="mb-4 block text-sm font-semibold">{t("题库来源")}<select name="source" value={source} onChange={(event) => { const next = bankSources.find((item) => item.value === event.target.value); if (next) setSource(next.value); }} className={selectClassName}>
                 {bankSources.map((item) => <option key={item.value} value={item.value} disabled={item.value === "imported" && importedBankSummary.available === 0}>{t(item.label)}</option>)}
               </select>
@@ -99,17 +98,17 @@ export default function PracticeHome() {
                 </select>
               </label>
             </div>
-            <div aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
-              <div className="flex items-center justify-between gap-3 text-sm"><p className="font-semibold text-slate-700">{t("本卷足迹")}</p><p className="tabular-nums text-indigo-600">{t("已练")}{ready ? Math.min(done, questionCount) : "—"} / {questionCount} {t("题")}</p></div>
-              <progress aria-label={t("本卷已练题目")} value={Math.min(done, questionCount)} max={questionCount || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
-              <p className="mt-3 text-xs leading-5 text-slate-500">{(best ? t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore }) : t("完成作答后点亮足迹，同一道题重复练习只计入一次。"))}{t(mode === "exam" ? ` · 训练 ${getExamDuration(questionCount) / 60} 分钟` : "")}</p>
-            </div>
             {source === "original" && type === "all" && <p className="mt-3 text-xs leading-6 text-amber-800">{t("原创卷尚无听力题，整卷估分会标记为不完整。完整整卷请选用户提供题库。")}</p>}
-            <div className="mt-5 flex flex-wrap items-center gap-4">
-              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={active ? mode === "exam" ? "继续考试" : "继续练习" : mode === "exam" ? "进入考试准备" : "开始练习"} />
-              {active && <Link href={newUrl} className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-500 hover:text-indigo-600">{t("重新开始")}</Link>}
+            {mode === "exam" && <p className="mt-3 text-xs leading-6 text-slate-500">{t("训练时长：{0} 分钟", { 0: getExamDuration(questionCount) / 60 })}</p>}
+            <div className="mt-5 flex">
+              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={mode === "exam" ? "进入考试准备" : "开始新练习"} />
             </div>
           </form>
+          <section aria-label={t("本卷练习记录")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷练习记录")}</h3><p className="tabular-nums text-slate-600">{t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, questionCount) : "—", 1: questionCount })}</p></div>
+            <progress aria-label={t("本卷已练题目")} value={Math.min(done, questionCount)} max={questionCount || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
+            <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p>{t("累计统计已提交题目，重复练习只计一次。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
+          </section>
         </section>
 
         <aside className="space-y-5">
