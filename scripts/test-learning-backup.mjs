@@ -47,7 +47,42 @@ test("combined backup round-trips folders, multiple memberships, answers and com
   assert.deepEqual(JSON.parse(JSON.stringify(data.favorites)), favorites);
   assert.equal(data.study.attempts[0].id, id);
   assert.equal(data.study.attempts[0].answers.q1.selectedOptionId, "B");
+  assert.equal(data.study.attempts[0].answers.q1.submittedAt, backup.data.study.attempts[0].answers.q1.submittedAt);
+  assert.equal(Number.isSafeInteger(data.study.attempts[0].answers.q1.submittedAt), true);
   assert.equal(restored.study.studyScore(data.study.attempts[0]).percent, 0);
+});
+
+test("legacy untimed submissions export without rewriting bytes and round-trip without invented timestamps", () => {
+  const source = environment({ [favoriteKey]: favorites });
+  completed(source);
+  const legacy = JSON.parse(source.raw.get(studyKey));
+  delete legacy.attempts[0].answers.q1.submittedAt;
+  const bytes = JSON.stringify(legacy, null, 2);
+  const saved = environment({ [favoriteKey]: favorites, [studyKey]: bytes });
+  const backup = saved.backup.createLearningBackup();
+  assert.equal(backup.ok, true);
+  assert.equal(Object.hasOwn(backup.data.study.attempts[0].answers.q1, "submittedAt"), false);
+  assert.equal(saved.raw.get(studyKey), bytes);
+  const destination = environment();
+  assert.equal(destination.backup.importLearningBackup(JSON.parse(JSON.stringify(backup.data))).ok, true);
+  const restored = destination.backup.createLearningBackup().data.study.attempts[0];
+  assert.equal(Object.hasOwn(restored.answers.q1, "submittedAt"), false);
+  assert.equal(destination.study.studyScore(restored).percent, 0);
+});
+
+test("invalid answer timestamps in combined backups are rejected before favorites or history changes", () => {
+  const source = environment({ [favoriteKey]: favorites });
+  completed(source);
+  const valid = source.backup.createLearningBackup().data;
+  const attempt = valid.study.attempts[0];
+  for (const value of [attempt.createdAt - 1, attempt.updatedAt + 1, 0, -1, 1.5, "123", null]) {
+    const incoming = JSON.parse(JSON.stringify(valid));
+    incoming.study.attempts[0].answers.q1.submittedAt = value;
+    const destination = environment({ [favoriteKey]: { version: 2, folders: [favorites.folders[0]], entries: [] } });
+    const before = [...destination.raw];
+    assert.equal(destination.backup.importLearningBackup(incoming).ok, false, `invalid timestamp ${String(value)}`);
+    assert.deepEqual([...destination.raw], before);
+  }
 });
 
 test("folder ID collisions are remapped, matching names merge, repeat imports deduplicate", () => {

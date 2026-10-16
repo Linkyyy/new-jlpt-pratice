@@ -19,6 +19,8 @@ import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
 import FontSizeSetting from "./font-size-setting";
 import { useQuestionSwipe } from "./use-question-swipe";
+import { useQuestionKeyboard } from "./use-question-keyboard";
+import QuestionFeedback from "@/components/question-feedback";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
 import QuestionBody from "@/components/question-body";
@@ -53,6 +55,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
   const { fontSize, setFontSize, savedFontSizes } = useQuestionFontSize(attempt);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
+  const [keyboardEnabled, setKeyboardEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -134,6 +137,10 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    submitAnswers();
+  }
+
+  function submitAnswers() {
     if (finished || submitted || selectedOptionId === null) return;
     if (article) {
       if (!groupComplete) return;
@@ -167,6 +174,35 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
     onRestart();
   }
 
+  function advanceQuestion() {
+    if (finished) {
+      if (lastQuestion) setShowResults(true);
+      else goToQuestion(questionIndex + 1);
+      return;
+    }
+    if (article && !submitted) {
+      if (groupComplete) submitAnswers();
+      else if (selectedOptionId !== null && firstGroupDraft) goToQuestion(firstGroupDraft.index);
+      return;
+    }
+    if (!submitted) {
+      submitAnswers();
+      return;
+    }
+    if (article && nextArticleIndex < totalQuestions) goToQuestion(nextArticleIndex);
+    else if (!article && !lastQuestion) goToQuestion(questionIndex + 1);
+    else if (remainingQuestions > 0) goToQuestion(firstIncompleteIndex);
+    else finishPaper();
+  }
+
+  useQuestionKeyboard({
+    enabled: keyboardEnabled && !showResults,
+    anchorRef: headingRef,
+    onSelect: (index) => { const option = question.options[index]; if (option) selectOption(option.id); },
+    onAdvance: advanceQuestion,
+    onNavigate: (direction) => goToQuestion(questionIndex + direction),
+  });
+
   const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction), swipeEnabled);
 
   return (
@@ -199,8 +235,9 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500">{t("文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。")}</p>
         </fieldset>
-        <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
+        <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} onKeyboardChange={setKeyboardEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{t("进度自动保存在当前浏览器，可从首页继续练习。")}{t(Boolean(paper.excludedCount) && ` ${paper.excludedCount} 题因资源缺失未计入本次练习。`)}</p>
+        <QuestionFeedback question={question} paper={paper} />
           </FloatingSettings>
         }>
           <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {

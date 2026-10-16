@@ -13,13 +13,19 @@ const field = "mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white 
 const primary = "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-40";
 const secondary = "inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-40";
 
-export default function CloudBackup({ disabled }: { disabled: boolean }) {
+export default function CloudBackup({ disabled, onAccountChange }: { disabled: boolean; onAccountChange?: (username: string | null) => void }) {
   const { t, locale } = useI18n();
   const id = useId();
   const dialog = useRef<HTMLDialogElement>(null);
   const deletion = useRef<HistoryDeletionHandle>(null);
   const clearHistoryButton = useRef<HTMLButtonElement>(null);
   const [state, setState] = useState<CloudState | null>(null);
+  const lastUsername = useRef<string | null | undefined>(undefined);
+  function changeCloudState(next: CloudState) {
+    setState(next);
+    const current = next.user?.username ?? null;
+    if (lastUsername.current !== current) { lastUsername.current = current; onAccountChange?.(current); }
+  }
   const [busy, setBusy] = useState<string | null>(null);
   const [message, setMessage] = useState<FeedbackMessage | null>(null);
   const [mode, setMode] = useState<"login" | "register">("login");
@@ -31,13 +37,13 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
     try { await action(); }
     catch (error) {
       setMessage({ text: error instanceof RequestError ? error.message : "连接失败，请检查网络后重试。", error: true });
-      if (error instanceof RequestError && error.status === 401) { setState({ configured: true, user: null, backup: null }); setConfirm(null); }
-      if (error instanceof RequestError && error.status === 409) { setConfirm(null); try { setState(await api("/auth")); } catch { /* Keep the original conflict message. */ } }
+      if (error instanceof RequestError && error.status === 401) { changeCloudState({ configured: true, user: null, backup: null }); setConfirm(null); }
+      if (error instanceof RequestError && error.status === 409) { setConfirm(null); try { changeCloudState(await api("/auth")); } catch { /* Keep the original conflict message. */ } }
     } finally { setBusy(null); }
   }
   function open() {
     dialog.current?.showModal(); setConfirm(null);
-    void run("正在连接云备份……", async () => { setState(await api("/auth")); });
+    void run("正在连接云备份……", async () => { changeCloudState(await api("/auth")); });
   }
   function clearHistory() {
     if (busy || disabled) return;
@@ -51,7 +57,7 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
     // Clearing can update the remote revision even when a local write fails.
     // Refresh on every return, including cancellation, before another backup.
     void run("正在连接云备份……", async () => {
-      setState(await api("/auth"));
+      changeCloudState(await api("/auth"));
       if (message) setMessage(message);
     }).finally(() => clearHistoryButton.current?.focus());
   }
@@ -64,7 +70,7 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
     }
     const credentials = { action: mode, username: username.current?.value, password: password.current?.value, ...(mode === "register" ? { confirmPassword: confirmPassword.current?.value } : {}) };
     void run(mode === "login" ? "正在登录……" : "正在创建账号……", async () => {
-      setState(await api("/auth", credentials));
+      changeCloudState(await api("/auth", credentials));
       if (password.current) password.current.value = "";
       if (confirmPassword.current) confirmPassword.current.value = "";
       setMessage({ text: mode === "login" ? "登录成功。" : "账号已创建并登录。", error: false });
@@ -114,7 +120,7 @@ export default function CloudBackup({ disabled }: { disabled: boolean }) {
 
       </>}
       {disabled && <p className="mt-3 text-xs leading-6 text-amber-800">{t("本地记录尚未就绪或无法读取，请检查存储权限后重试。")}</p>}
-      <div className="mt-4 flex items-center justify-between gap-4">{state?.user ? <button type="button" disabled={Boolean(busy)} onClick={() => { void run("正在退出……", async () => { await api("/auth", { action: "logout" }); setState({ configured: true, user: null, backup: null }); setConfirm(null); setMessage({ text: "已退出云备份账号，本地记录保留。", error: false }); }); }} className="min-h-11 text-sm font-semibold text-slate-500 disabled:opacity-40">{t("退出账号")}</button> : <span />}<button ref={clearHistoryButton} type="button" disabled={Boolean(busy) || disabled} onClick={clearHistory} aria-label={t("清空做题记录")} className="inline-flex min-h-11 items-center text-xs text-rose-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500 disabled:opacity-40">{t("清空记录")}</button></div>
+      <div className="mt-4 flex items-center justify-between gap-4">{state?.user ? <button type="button" disabled={Boolean(busy)} onClick={() => { void run("正在退出……", async () => { await api("/auth", { action: "logout" }); changeCloudState({ configured: true, user: null, backup: null }); setConfirm(null); setMessage({ text: "已退出云备份账号，本地记录保留。", error: false }); }); }} className="min-h-11 text-sm font-semibold text-slate-500 disabled:opacity-40">{t("退出账号")}</button> : <span />}<button ref={clearHistoryButton} type="button" disabled={Boolean(busy) || disabled} onClick={clearHistory} aria-label={t("清空做题记录")} className="inline-flex min-h-11 items-center text-xs text-rose-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500 disabled:opacity-40">{t("清空记录")}</button></div>
       <MessageToast message={message} onDismiss={() => setMessage(null)} />
     </dialog>
     <HistoryDeletion ref={deletion} onClose={returnFromHistory} />

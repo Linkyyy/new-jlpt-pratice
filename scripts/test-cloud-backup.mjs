@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import vm from "node:vm";
 import { createRequire } from "node:module";
@@ -7,14 +8,14 @@ import test from "node:test";
 import ts from "typescript";
 
 const require = createRequire(import.meta.url);
-const compiled = Object.fromEntries(["cloud-backup.server", "backup-validation", "study-history-data"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
+const compiled = Object.fromEntries(["cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
 const base = "https://jlpt.example";
 const emptyBackup = () => ({ format: "jlpt-practice-backup", version: 1, exportedAt: new Date().toISOString(), favorites: { version: 2, folders: [{ id: "default", name: "默认收藏夹" }], entries: [] }, study: { version: 1, attempts: [], activityDays: [] } });
 function environment(configured = true) {
   const database = new DatabaseSync(":memory:");
   database.exec(fs.readFileSync(new URL("../migrations/0001-cloud-backup.sql", import.meta.url), "utf8"));
   const env = configured ? { CLOUDFLARE_ACCOUNT_ID: "test-account", CLOUDFLARE_D1_DATABASE_ID: "test-database", CLOUDFLARE_D1_API_TOKEN: "test-secret-not-real" } : {};
-  let online = true, now = Date.now(), beforeUpdate = null;
+  let online = true, now = Date.now(), beforeUpdate = null, databaseRequests = 0;
   class Clock extends Date { static now() { return now; } }
   const modules = {};
   function load(name) {
@@ -22,6 +23,7 @@ function environment(configured = true) {
       const exports = {}; modules[name] = exports;
       vm.runInNewContext(compiled[name], { exports, require: name => name.startsWith("./") ? load(name.slice(2)) : require(name), process: { env }, Date: Clock, Buffer, URL, Response, Request, AbortSignal, Uint8Array,
         fetch: async (url, options) => {
+          databaseRequests++;
           assert.equal(url, "https://api.cloudflare.com/client/v4/accounts/test-account/d1/database/test-database/query");
           assert.equal(options.headers.Authorization, "Bearer test-secret-not-real");
           assert.equal(options.cache, "no-store");
@@ -42,7 +44,7 @@ function environment(configured = true) {
   }
   const read = (cookie, account = "alice") => api.cloudRead(request(`/api/cloud-backup?account=${account}`, undefined, cookie));
   const write = (cookie, data = emptyBackup(), expectedRevision = null, expectedUsername = "alice") => api.cloudWrite(request("/api/cloud-backup", { data, expectedRevision, expectedUsername }, cookie));
-  return { api, database, auth, request, read, write, beforeUpdate: callback => { beforeUpdate = callback; }, offline: () => { online = false; }, advance: seconds => { now += seconds * 1000; } };
+  return { api, database, auth, request, read, write, now: () => now, databaseRequests: () => databaseRequests, beforeUpdate: callback => { beforeUpdate = callback; }, offline: () => { online = false; }, advance: seconds => { now += seconds * 1000; } };
 }
 
 test("password hashes use distinct salts and reject incorrect passwords", async () => {
@@ -114,6 +116,33 @@ test("durable login throttling resets after its time window", async () => {
   assert.equal((await e.auth("alice", "login")).response.status, 429);
   e.advance(901);
   assert.equal((await e.auth("alice", "login")).response.status, 200);
+});
+test("blocked login retries return Retry-After without further D1 queries or writes", async () => {
+  const e = environment(); await e.auth();
+  for (let i = 0; i < 14; i++) await e.auth("alice", "login", "wrong-password");
+  const queriesBefore = e.databaseRequests();
+  const rowsBefore = e.database.prepare("SELECT * FROM cloud_rate_limits ORDER BY key").all();
+  for (let i = 0; i < 20; i++) {
+    const response = (await e.auth("alice", "login")).response;
+    assert.equal(response.status, 429);
+    assert.ok(Number(response.headers.get("retry-after")) > 0);
+    assert.match(response.headers.get("cache-control"), /no-store/);
+  }
+  assert.equal(e.databaseRequests(), queriesBefore);
+  assert.deepEqual(e.database.prepare("SELECT * FROM cloud_rate_limits ORDER BY key").all(), rowsBefore);
+  e.advance(901);
+  assert.equal((await e.auth("alice", "login")).response.status, 200);
+});
+test("a fresh instance does not update an already full durable rate-limit bucket", async () => {
+  const e = environment(); await e.auth();
+  const account = createHash("sha256").update(`auth-account:alice:${Math.floor(e.now() / 900000)}`).digest("hex");
+  e.database.prepare("UPDATE cloud_rate_limits SET count = 15 WHERE key = ?").run(account);
+  const first = (await e.auth("alice", "login")).response;
+  assert.equal(first.status, 429);
+  assert.equal(e.database.prepare("SELECT count FROM cloud_rate_limits WHERE key = ?").get(account).count, 15);
+  const queriesBefore = e.databaseRequests();
+  assert.equal((await e.auth("alice", "login")).response.status, 429);
+  assert.equal(e.databaseRequests(), queriesBefore);
 });
 test("unconfigured or unavailable D1 responds safely without secrets", async () => {
   const missing = environment(false);

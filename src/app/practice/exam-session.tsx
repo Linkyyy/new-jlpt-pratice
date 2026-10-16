@@ -20,6 +20,8 @@ import ReviewToolbar from "./review-toolbar";
 import NavigationSettings from "./navigation-settings";
 import FontSizeSetting from "./font-size-setting";
 import { useQuestionSwipe } from "./use-question-swipe";
+import { useQuestionKeyboard } from "./use-question-keyboard";
+import QuestionFeedback from "@/components/question-feedback";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import { useExamTimer } from "./use-exam-timer";
 import FavoriteButton from "@/components/favorite-button";
@@ -45,6 +47,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
   const [elapsedSeconds, setElapsedSeconds] = useState(attempt.elapsedSeconds);
   const [swipeEnabled, setSwipeEnabled] = useState(true);
   const [buttonsEnabled, setButtonsEnabled] = useState(true);
+  const [keyboardEnabled, setKeyboardEnabled] = useState(true);
   const [confirmationAction, setConfirmationAction] = useState<ConfirmationAction | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -139,6 +142,18 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
     }
   }
 
+  useQuestionKeyboard({
+    enabled: keyboardEnabled && phase !== "ready" && !showResults,
+    anchorRef: headingRef,
+    onSelect: (index) => { const option = question.options[index]; if (option) selectOption(option.id); },
+    onAdvance: () => {
+      if (finished && lastQuestion) setShowResults(true);
+      else if (!lastQuestion) goToQuestion(questionIndex + 1);
+      else requestConfirmation("submit");
+    },
+    onNavigate: (direction) => goToQuestion(questionIndex + direction),
+  });
+
   const swipe = useQuestionSwipe((direction) => goToQuestion(questionIndex + direction), swipeEnabled);
 
   return (
@@ -183,8 +198,9 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
             <ResponsivePanel title={t("答题卡")} className="answer-card-panel" trigger={t(`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`)} headerAction={
               <FloatingSettings title={t(finished ? "复习设置" : "考试设置")}>
             <FontSizeSetting value={fontSize} onChange={setFontSize} />
-            <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} />
+            <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={setSwipeEnabled} onButtonsChange={setButtonsEnabled} onKeyboardChange={setKeyboardEnabled} />
         <p className="mt-4 text-xs leading-6 text-slate-500">{t(paper.sourceLabel)} · {translatePeriod(paper.periodLabel ?? paper.year, paper.source, t)}。{t(Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`)}</p>
+            <QuestionFeedback question={question} paper={paper} />
               </FloatingSettings>
             }>
             <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />

@@ -1,5 +1,10 @@
 .favorites-shell { max-width: 1536px; margin-inline: auto; display: flex; flex-direction: column; gap: 16px; }
 .favorites-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.collection-tabs { display: flex; flex-shrink: 0; gap: 6px; padding: 4px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.collection-tabs button { flex: 1; min-height: 44px; padding: 8px 12px; white-space: nowrap; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.collection-tabs button:hover { background: var(--surface-muted); }
+.collection-tabs button.collection-tab-current { background: var(--accent-surface); color: var(--accent-text); }
+.collection-tabs button:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .favorites-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; }
 .favorites-filters select { min-width: 0; }
 .favorites-list { display: grid; align-content: start; gap: 10px; padding: 3px; }

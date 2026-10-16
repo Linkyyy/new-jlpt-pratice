@@ -16,17 +16,125 @@ vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/practi
 const nodeRequire = createRequire(import.meta.url);
 const require = specifier => specifier === "./backup-validation" ? validation : specifier === "./study-history-data" ? historyData : specifier === "./practice-scoring" ? practiceScoring : nodeRequire(specifier), key = "jlpt-practice.study.v1";
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", source: "original", questions: ["one", "two"].map(id => ({ id, level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] })) };
-function store(initial) {
+function store(initial, clock = Date) {
   const values = new Map(initial === undefined ? [] : [[key, typeof initial === "string" ? initial : JSON.stringify(initial)]]);
   let fail = false, writes = 0;
   const exports = {};
-  vm.runInNewContext(compiled, { exports, require, Intl, Date, URLSearchParams, window: { localStorage: {
+  vm.runInNewContext(compiled, { exports, require, Intl, Date: clock, URLSearchParams, window: { localStorage: {
     getItem: name => values.get(name) ?? null,
     setItem: (name, value) => { if (fail) throw new Error("Quota exceeded"); writes++; values.set(name, value); },
   } } });
   return { api: exports, read: () => JSON.parse(values.get(key)), raw: () => values.get(key), writes: () => writes, fail: () => { fail = true; } };
 }
 const state = a => ({ answers: {}, status: a.status, questionIndex: a.questionIndex, deadline: a.deadline, elapsedSeconds: a.elapsedSeconds, timedOut: a.timedOut, fontSize: a.fontSize });
+function controlledClock(initial = Date.parse("2026-10-16T00:00:00Z")) {
+  let now = initial;
+  class Clock extends Date { static now() { return now; } }
+  return { Clock, tick: milliseconds => { now += milliseconds; return now; } };
+}
+
+test("submission timestamps are assigned once, drafts remain untimed and navigation preserves locked answers", () => {
+  const clock = controlledClock(), s = store(undefined, clock.Clock);
+  const a = s.api.createStudyAttempt(paper, "practice").attempt;
+  clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "B", submitted: false, submittedAt: 1 } } }).ok, true);
+  assert.equal(Object.hasOwn(s.read().attempts[0].answers.one, "submittedAt"), false);
+
+  const submittedAt = clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "B", submitted: true, submittedAt: 1 } } }).ok, true);
+  assert.equal(s.read().attempts[0].answers.one.submittedAt, submittedAt);
+  const navigatedAt = clock.tick(60_000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), questionIndex: 1, answers: { one: { selectedOptionId: "B", submitted: true }, two: { selectedOptionId: "A", submitted: false } } }).ok, true);
+  const navigated = s.read().attempts[0];
+  assert.equal(navigated.updatedAt, navigatedAt);
+  assert.equal(navigated.answers.one.submittedAt, submittedAt);
+  assert.equal(Object.hasOwn(navigated.answers.two, "submittedAt"), false);
+
+  clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "B", submitted: true, submittedAt: navigatedAt } } }).ok, true);
+  assert.equal(s.read().attempts[0].answers.one.submittedAt, submittedAt);
+  const locked = s.raw();
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, false);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "B", submitted: false } } }).ok, false);
+  assert.equal(s.raw(), locked);
+
+  const finishedAt = clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), status: "completed", answers: { one: { selectedOptionId: "B", submitted: true }, two: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  const completed = s.read().attempts[0];
+  assert.equal(completed.answers.one.submittedAt, submittedAt);
+  assert.equal(completed.answers.two.submittedAt, finishedAt);
+  assert.equal(completed.completedAt, finishedAt);
+  const bytes = s.raw(), writes = s.writes();
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(completed), answers: { one: { selectedOptionId: "B", submitted: true, submittedAt: 1 }, two: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  assert.equal(s.raw(), bytes);
+  assert.equal(s.writes(), writes);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(completed), answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, false);
+  assert.equal(s.raw(), bytes);
+});
+
+test("exam answers receive timestamps at hand-in and an active exam cannot submit early", () => {
+  const clock = controlledClock(), s = store(undefined, clock.Clock);
+  const a = s.api.createStudyAttempt(paper, "exam").attempt;
+  const deadline = a.createdAt + 60_000;
+  clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), status: "active", deadline, answers: { one: { selectedOptionId: "A", submitted: false, submittedAt: a.createdAt } } }).ok, true);
+  assert.equal(Object.hasOwn(s.read().attempts[0].answers.one, "submittedAt"), false);
+  const before = s.raw();
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), status: "active", deadline, answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, false);
+  assert.equal(s.raw(), before);
+  const handInAt = clock.tick(30_000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), status: "completed", deadline: null, answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  const completed = s.read().attempts[0];
+  assert.equal(completed.answers.one.submittedAt, handInAt);
+  assert.equal(completed.completedAt, handInAt);
+  assert.equal(completed.answers.two, undefined);
+  assert.equal(s.api.studyScore(completed).unanswered, 1);
+});
+
+test("legacy submitted answers remain readable and untimed without rewriting original bytes", () => {
+  const clock = controlledClock(), source = store(undefined, clock.Clock);
+  const a = source.api.createStudyAttempt(paper, "practice").attempt;
+  clock.tick(1000);
+  assert.equal(source.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  const legacy = source.read();
+  delete legacy.attempts[0].answers.one.submittedAt;
+  const bytes = JSON.stringify(legacy, null, 2);
+  const restored = store(bytes, clock.Clock);
+  assert.equal(restored.api.readStudySnapshot().error, null);
+  assert.equal(restored.api.isStudyData(legacy), true);
+  assert.equal(Object.hasOwn(restored.api.readStudySnapshot().data.attempts[0].answers.one, "submittedAt"), false);
+  assert.equal(restored.raw(), bytes);
+  assert.equal(restored.writes(), 0);
+  clock.tick(60_000);
+  assert.equal(restored.api.updateStudyAttempt(a.id, { ...state(a), questionIndex: 1, answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  assert.equal(Object.hasOwn(restored.read().attempts[0].answers.one, "submittedAt"), false);
+});
+
+test("submission timestamp validation enforces integer bounds and rejects timestamped drafts", () => {
+  const clock = controlledClock(), s = store(undefined, clock.Clock);
+  const a = s.api.createStudyAttempt(paper, "practice").attempt;
+  clock.tick(1000);
+  assert.equal(s.api.updateStudyAttempt(a.id, { ...state(a), answers: { one: { selectedOptionId: "A", submitted: true } } }).ok, true);
+  const valid = s.read(), record = valid.attempts[0];
+  for (const value of [record.createdAt, record.updatedAt]) {
+    const incoming = structuredClone(valid);
+    incoming.attempts[0].answers.one.submittedAt = value;
+    assert.equal(s.api.isStudyData(incoming), true);
+  }
+  const before = s.raw();
+  for (const value of [record.createdAt - 1, record.updatedAt + 1, 0, -1, 1.5, NaN, Infinity, "2026-10-16", null]) {
+    const incoming = structuredClone(valid);
+    incoming.attempts[0].answers.one.submittedAt = value;
+    assert.equal(s.api.isStudyData(incoming), false, `invalid timestamp ${String(value)}`);
+    assert.equal(s.api.importStudyData(incoming).ok, false);
+    assert.equal(s.raw(), before);
+  }
+  const draft = structuredClone(valid);
+  draft.attempts[0].answers.one.submitted = false;
+  assert.equal(s.api.isStudyData(draft), false);
+  assert.equal(s.api.importStudyData(draft).ok, false);
+  assert.equal(s.raw(), before);
+});
 
 test("practice drafts survive reload; only submitted answers leave trails; repeated sessions retain separate scores", () => {
   const s = store(), a = s.api.createStudyAttempt(paper, "practice").attempt;

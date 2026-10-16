@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     "/practice": ["./src/data/imported-bank/questions/*.json"],
     "/api/practice/favorites": ["./src/data/imported-bank/questions/*.json"],
     "/api/favorites/questions": ["./src/data/imported-bank/questions/*.json"],
+    "/api/feedback": ["./src/data/imported-bank/questions/*.json"],
   },
   turbopack: {
     rules: {

@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { translatePeriod } from "@/lib/i18n/translate";
 
 import ScoreReport from "@/components/score-report";
+import QuestionTypeReport from "@/components/question-type-report";
 import { calculatePracticeScore } from "@/lib/practice-scoring";
 import Link from "next/link";
 import QuestionOverview from "./question-overview";
@@ -50,6 +51,7 @@ export default function SessionResults({ paper, answers, headingRef, onReview, o
       {exam && <p role="status" className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-6 text-indigo-800">{t(exam.timedOut ? "时间已到，已自动交卷。未作答题目按未得分计算。" : "已提交整份试卷，答案已锁定。")} {t("作答用时：{0}", { 0: formatDuration(exam.elapsedSeconds) })}</p>}
       <ScoreReport result={result} />
       <p className="mt-4 text-sm leading-6 text-slate-600">{t("答对 {0} 题，答错 {1} 题，未作答 {2} 题，共 {3} 题。", { 0: correct, 1: wrong, 2: unanswered, 3: total })} · {t("正确率")} {result.percent}%</p>
+      <QuestionTypeReport paper={paper} answers={answers} onReview={onReview} />
       <div className="mt-5">
         <button type="button" onClick={favoriteWrongQuestions} disabled={!ready || storageError !== null || unsavedWrong.length === 0} className="min-h-11 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-50">{t(wrongIds.length === 0 ? "暂无错题可收藏" : unsavedWrong.length === 0 ? "错题已全部收藏" : `一键收藏错题（${unsavedWrong.length}）`)}</button>
         <p className="mt-2 text-xs leading-6 text-slate-500">{t("新收藏放入默认收藏夹，已收藏题目保留原有收藏夹。未作答题目不计入错题收藏。")}</p>

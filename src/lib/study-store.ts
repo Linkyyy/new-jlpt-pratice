@@ -18,7 +18,7 @@ export interface StudyQuestion {
   readonly optionIds: readonly OptionId[];
   readonly sourceQuestionNumber?: number | null;
 }
-export interface StudyAnswer { readonly selectedOptionId: OptionId; readonly submitted: boolean }
+export interface StudyAnswer { readonly selectedOptionId: OptionId; readonly submitted: boolean; readonly submittedAt?: number }
 export interface StudyAttempt {
   readonly id: string;
   readonly paperId: string;
@@ -112,18 +112,22 @@ export function updateStudyAttempt(id: string, patch: StudyPatch): StudyResult {
   if (snapshot.error) return { ok: false, error: snapshot.error };
   if (!current) return { ok: false, error: "找不到可保存的本地学习记录。请返回首页重新开始。" };
   if (current.status === "completed") {
-    if (Object.entries(patch.answers).some(([key, value]) => JSON.stringify(value) !== JSON.stringify(current.answers[key]))) return { ok: false, error: "这次作答已交卷，历史成绩不可修改。" };
+    if (Object.entries(patch.answers).some(([key, value]) => value?.selectedOptionId !== current.answers[key]?.selectedOptionId || value?.submitted !== current.answers[key]?.submitted)) return { ok: false, error: "这次作答已交卷，历史成绩不可修改。" };
     return { ok: true };
   }
   if (current.mode === "practice" && Object.entries(patch.answers).some(([key, answer]) => current.answers[key]?.submitted && answer && (answer.selectedOptionId !== current.answers[key]?.selectedOptionId || !answer.submitted))) return { ok: false, error: "这道题已在其他页面提交，请刷新以同步记录。" };
   return commit(data => {
     const latest = data.attempts.find(a => a.id === id)!;
     if (latest.status === "completed") return data;
+    const now = Math.max(Date.now(), latest.updatedAt);
     const answers = { ...latest.answers };
     for (const [key, answer] of Object.entries(patch.answers)) {
-      if (answer && !(latest.mode === "practice" && answers[key]?.submitted)) answers[key] = answer;
+      if (answer && !(latest.mode === "practice" && answers[key]?.submitted)) answers[key] = {
+        selectedOptionId: answer.selectedOptionId, submitted: answer.submitted,
+        ...(answer.submitted ? { submittedAt: answers[key]?.submittedAt ?? now } : {}),
+      };
     }
-    const next: StudyAttempt = { ...latest, ...patch, answers, updatedAt: Math.max(Date.now(), latest.updatedAt), completedAt: patch.status === "completed" ? Math.max(Date.now(), latest.createdAt) : null };
+    const next: StudyAttempt = { ...latest, ...patch, answers, updatedAt: now, completedAt: patch.status === "completed" ? now : null };
     const meaningful = Object.keys(patch.answers).length > 0 || patch.status === "completed";
     return { ...data, attempts: data.attempts.map(a => a.id === id ? next : a), activityDays: meaningful ? [...new Set([...data.activityDays, studyDay()])].sort() : data.activityDays };
   });

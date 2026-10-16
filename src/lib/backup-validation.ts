@@ -55,7 +55,8 @@ function isAttempt(v: unknown): v is StudyAttempt {
     || typeof v.timedOut !== "boolean" || !Number.isInteger(v.fontSize) || Number(v.fontSize) < 14 || Number(v.fontSize) > 28
     || v.mobileFontSize !== undefined && (!Number.isInteger(v.mobileFontSize) || Number(v.mobileFontSize) < 14 || Number(v.mobileFontSize) > 28)) return false;
   const questions = new Map((v.questions as StudyQuestion[]).map(q => [q.id, q]));
-  if (!Object.entries(v.answers).every(([id, a]) => record(a) && typeof a.submitted === "boolean" && questions.get(id)?.optionIds.includes(a.selectedOptionId as OptionId))) return false;
+  if (!Object.entries(v.answers).every(([id, a]) => record(a) && typeof a.submitted === "boolean" && questions.get(id)?.optionIds.includes(a.selectedOptionId as OptionId)
+    && (a.submittedAt === undefined || a.submitted && timestamp(a.submittedAt) && a.submittedAt >= Number(v.createdAt) && a.submittedAt <= Number(v.updatedAt)))) return false;
   if (v.status === "completed" && (!timestamp(v.completedAt) || v.completedAt < v.createdAt || v.deadline !== null)) return false;
   if (v.status !== "completed" && v.completedAt !== null) return false;
   if (v.mode === "exam" && v.status === "active" && v.deadline === null) return false;

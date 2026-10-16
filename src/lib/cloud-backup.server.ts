@@ -1,13 +1,14 @@
 import { createHash, randomBytes, randomUUID, scrypt, timingSafeEqual } from "node:crypto";
 import { withoutStudyHistory } from "./study-history-data";
 import { isLearningBackup, isRecord } from "./backup-validation";
+import { checkApiRateLimit, requestClientIp } from "./request-limits";
 
 const COOKIE = "jlpt-cloud-session";
 const SESSION_SECONDS = 30 * 24 * 60 * 60;
 export const MAX_CLOUD_BACKUP_BYTES = 1024 * 1024; // D1 limits a row to 2 MB; leave headroom.
 type Row = Record<string, unknown>;
 class CloudError extends Error {
-  constructor(readonly status: number, message: string) { super(message); }
+  constructor(readonly status: number, message: string, readonly retryAfter?: number) { super(message); }
 }
 function config() {
   const account = process.env.CLOUDFLARE_ACCOUNT_ID, database = process.env.CLOUDFLARE_D1_DATABASE_ID, token = process.env.CLOUDFLARE_D1_API_TOKEN;
@@ -76,17 +77,40 @@ async function requireSession(request: Request) {
   if (!user) throw new CloudError(401, "请先登录云备份账号。");
   return user;
 }
+const durableBlocks = new Map<string, number>();
+let nextRateLimitCleanup = 0;
+export function checkCloudRateLimit(scope: string, key: string, seconds: number) {
+  const now = Date.now(), window = Math.floor(now / (seconds * 1000)), expiresAt = (window + 1) * seconds * 1000;
+  if ((durableBlocks.get(hash(`${scope}:${key}:${window}`)) ?? 0) > now) throw new CloudError(429, "操作过于频繁，请稍后重试。", Math.max(1, Math.ceil((expiresAt - now) / 1000)));
+}
 async function rateLimit(scope: string, key: string, limit: number, seconds: number) {
-  const now = Date.now(), window = Math.floor(now / (seconds * 1000));
-  await query("DELETE FROM cloud_rate_limits WHERE key IN (SELECT key FROM cloud_rate_limits WHERE expires_at <= ? LIMIT 100)", [now]);
-  const result = await query<{ count: number }>("INSERT INTO cloud_rate_limits (key, count, expires_at) VALUES (?, 1, ?) ON CONFLICT(key) DO UPDATE SET count = count + 1 RETURNING count", [hash(`${scope}:${key}:${window}`), (window + 1) * seconds * 1000]);
-  if (result[0].count > limit) throw new CloudError(429, "操作过于频繁，请稍后重试。");
+  const now = Date.now(), window = Math.floor(now / (seconds * 1000)), expiresAt = (window + 1) * seconds * 1000;
+  const storedKey = hash(`${scope}:${key}:${window}`), retryAfter = Math.max(1, Math.ceil((expiresAt - now) / 1000));
+  checkCloudRateLimit(scope, key, seconds);
+  if (now >= nextRateLimitCleanup) {
+    nextRateLimitCleanup = now + 5 * 60 * 1000;
+    for (const [entry, expiry] of durableBlocks) if (expiry <= now) durableBlocks.delete(entry);
+    await query("DELETE FROM cloud_rate_limits WHERE key IN (SELECT key FROM cloud_rate_limits WHERE expires_at <= ? LIMIT 100)", [now]);
+  }
+  // Once a bucket is full, the conditional UPSERT performs no row update. Cached
+  // rejections on this instance do not contact D1 at all.
+  const result = await query<{ count: number }>("INSERT INTO cloud_rate_limits (key, count, expires_at) VALUES (?, 1, ?) ON CONFLICT(key) DO UPDATE SET count = count + 1 WHERE cloud_rate_limits.count < ? RETURNING count", [storedKey, expiresAt, limit]);
+  if (!result.length || result[0].count >= limit) {
+    if (durableBlocks.size < 10000) durableBlocks.set(storedKey, expiresAt);
+    if (!result.length) throw new CloudError(429, "操作过于频繁，请稍后重试。", retryAfter);
+  }
+}
+function limitCloudRequest(request: Request, scope: string, ipLimit: number, sessionLimit?: number) {
+  const limited = checkApiRateLimit(request, { scope, limit: ipLimit, windowSeconds: 60 });
+  if (limited) return limited;
+  const token = cookie(request);
+  return token && sessionLimit ? checkApiRateLimit(request, { scope: `${scope}-session`, key: hash(token), limit: sessionLimit, windowSeconds: 60 }) : null;
 }
 const json = (value: unknown, status = 200, headers?: HeadersInit) => Response.json(value, { status, headers: { "Cache-Control": "no-store, private", "X-Content-Type-Options": "nosniff", ...headers } });
 async function handle(operation: () => Promise<Response>) {
   try { return await operation(); }
   catch (error) {
-    return error instanceof CloudError ? json({ error: error.message }, error.status) : json({ error: "云服务暂时不可用，请稍后重试。" }, 503);
+    return error instanceof CloudError ? json({ error: error.message }, error.status, error.retryAfter ? { "Retry-After": String(error.retryAfter) } : undefined) : json({ error: "云服务暂时不可用，请稍后重试。" }, 503);
   }
 }
 async function metadata(userId: string) {
@@ -95,6 +119,8 @@ async function metadata(userId: string) {
 }
 export function cloudStatus(request: Request) {
   return handle(async () => {
+    const limited = limitCloudRequest(request, "cloud-status", 120, 60);
+    if (limited) return limited;
     if (!config()) return json({ configured: false, user: null, backup: null });
     const user = await session(request);
     return json({ configured: true, user: user ? { username: user.username } : null, backup: user ? await metadata(user.id) : null });
@@ -102,6 +128,8 @@ export function cloudStatus(request: Request) {
 }
 export function cloudAuth(request: Request) {
   return handle(async () => {
+    const limited = limitCloudRequest(request, "cloud-auth", 30);
+    if (limited) return limited;
     sameOrigin(request);
     const body = await input(request, 4096);
     if (body.action === "logout") {
@@ -114,7 +142,12 @@ export function cloudAuth(request: Request) {
     const password = body.password;
     if (!/^[a-z0-9_]{3,32}$/.test(username) || typeof password !== "string" || password.length < 8 || password.length > 128) throw new CloudError(400, "账号需为 3–32 位字母、数字或下划线，密码需为 8–128 位。");
     if (body.action === "register" && body.confirmPassword !== password) throw new CloudError(400, "两次输入的密码不一致。");
-    const ip = (request.headers.get("x-vercel-forwarded-for") ?? request.headers.get("x-forwarded-for") ?? "unknown").split(",")[0].trim();
+    const ip = requestClientIp(request);
+    // Check every cached bucket before charging another bucket for the same
+    // rejected operation (for example an account already blocked for login).
+    checkCloudRateLimit("auth-ip", ip, 900);
+    checkCloudRateLimit("auth-account", username, 900);
+    if (body.action === "register") checkCloudRateLimit("register-ip", ip, 3600);
     await rateLimit("auth-ip", ip, 30, 900);
     await rateLimit("auth-account", username, 15, 900);
     let user: { id: string; username: string };
@@ -138,6 +171,8 @@ export function cloudAuth(request: Request) {
 }
 export function cloudRead(request: Request) {
   return handle(async () => {
+    const limited = limitCloudRequest(request, "cloud-read", 60, 30);
+    if (limited) return limited;
     const user = await requireSession(request);
     if (new URL(request.url).searchParams.get("account") !== user.username) throw new CloudError(409, "登录账号已变化，请刷新后重试。");
     const rows = await query<{ data: string; revision: string; savedAt: number; bytes: number }>("SELECT data, revision, saved_at AS savedAt, bytes FROM cloud_backups WHERE user_id = ?", [user.id]);
@@ -149,6 +184,8 @@ export function cloudRead(request: Request) {
 }
 export function cloudWrite(request: Request) {
   return handle(async () => {
+    const limited = limitCloudRequest(request, "cloud-write", 60, 20);
+    if (limited) return limited;
     sameOrigin(request);
     const user = await requireSession(request);
     await rateLimit("backup", user.id, 20, 60);
@@ -168,6 +205,8 @@ export function cloudWrite(request: Request) {
 
 export function cloudDeleteHistory(request: Request) {
   return handle(async () => {
+    const limited = limitCloudRequest(request, "cloud-history-delete", 30, 20);
+    if (limited) return limited;
     sameOrigin(request);
     const user = await requireSession(request);
     await rateLimit("history-delete", user.id, 20, 60);
@@ -191,3 +230,7 @@ export function cloudDeleteHistory(request: Request) {
     return json({ ok: true, backup: { revision, savedAt, bytes } });
   });
 }
+
+// Share the existing session and D1 transport with the feedback API. No account
+// credentials or session tokens are exposed to the browser by these helpers.
+export { query as queryCloudDatabase, session as getCloudSession, handle as handleCloudRequest, input as readCloudInput, sameOrigin as requireCloudSameOrigin, json as cloudJson, CloudError as CloudServiceError, rateLimit as applyCloudRateLimit };

@@ -4,13 +4,14 @@ import { useRouter } from "next/navigation";
 import PracticeStartButton from "@/components/practice-start-button";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import DisplaySettings from "@/components/display-settings";
+import LearningNextCard from "@/components/learning-next-card";
 import ActionLabel, { actionButtonClass } from "@/components/action-label";
 import { useI18n } from "@/lib/i18n";
 
 import { useMemo, useState, useTransition, type FormEvent } from "react";
 import Link from "next/link";
-import { AttemptCard, attemptTitle, studyCard } from "@/components/study-dashboard";
-import { latestStudyAttempt, questionTrails, studyAttemptUrl, studyScore, useStudyHistory } from "@/lib/study-store";
+import { AttemptCard, studyCard } from "@/components/study-dashboard";
+import { latestStudyAttempt, questionTrails, studyScore, useStudyHistory } from "@/lib/study-store";
 import type { JLPTLevel } from "@/data/practice-question";
 import { questionTypes, type QuestionType } from "@/data/practice-papers";
 import { getExamDuration, practiceModes, type PracticeMode } from "@/data/practice-modes";
@@ -38,7 +39,6 @@ export default function PracticeHome() {
   const trails = useMemo(() => questionTrails(data), [data]);
   const paperId = `${source === "imported" ? "imported-" : ""}${activeLevel}-${activePeriod}-${type}`;
   const active = latestStudyAttempt(data, paperId, mode);
-  const latest = latestStudyAttempt(data);
   const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
   const completed = data.attempts.filter(a => a.paperId === paperId && a.mode === mode && a.status === "completed");
   const best = completed.map(studyScore).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
@@ -64,7 +64,7 @@ export default function PracticeHome() {
           <nav aria-label={t("个人学习")} className="flex items-center gap-2"><Link href="/history" aria-label={t("学习记录")} title={t("学习记录")} className={actionButtonClass}><ActionLabel icon="history">{t("学习记录")}</ActionLabel></Link><Link href="/favorites" aria-label={t("我的收藏")} title={t("我的收藏")} className={actionButtonClass}><ActionLabel icon="favorites">{t("我的收藏")}</ActionLabel></Link><DisplaySettings /></nav>
         </header>
         {error && <p role="alert" className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{t(error)}</p>}
-        {latest && <section aria-label={t("继续上次学习")} className="flex items-center justify-between gap-4 rounded-2xl border border-indigo-200 bg-indigo-50 p-4 sm:px-6"><div className="min-w-0"><p className="text-xs font-semibold text-indigo-600">{t("接着上次练习")}</p><p className="mt-1 text-sm font-semibold leading-6 text-slate-800">{attemptTitle(latest, t)}</p></div><Link href={studyAttemptUrl(latest)} className="inline-flex min-h-11 shrink-0 items-center rounded-xl bg-indigo-600 px-4 text-sm font-semibold text-white hover:bg-indigo-700">{t("继续 →")}</Link></section>}
+        <LearningNextCard data={data} ready={ready} />
         <div className="grid items-start gap-5 lg:grid-cols-[1.05fr_1fr]">
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">{t("选择练习")}</h2>
