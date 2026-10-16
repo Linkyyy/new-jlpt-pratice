@@ -160,7 +160,7 @@ test("deletion rejects changed or corrupt local data and preserves bytes on stor
   assert.equal(corrupt.raw(), "{broken");
 });
 
-test("stored scores use JLPT section maxima, preserve raw accuracy and never grade drafts", () => {
+test("stored scores use category weights, preserve raw accuracy and never grade drafts", () => {
   const make = (category, count) => Array.from({ length: count }, (_, index) => ({ id: `${category}-${index}`, level: "N2", category, correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }));
   const full = { ...paper, id: "N2-2026-all", typeLabel: "整卷练习", questions: [...make("词汇", 30), ...make("语法", 21), ...make("阅读", 18), ...make("听力", 30)] };
   const s = store(), a = s.api.createStudyAttempt(full, "practice").attempt;
@@ -172,9 +172,95 @@ test("stored scores use JLPT section maxima, preserve raw accuracy and never gra
   const exam = s.api.createStudyAttempt(full, "exam").attempt;
   s.api.updateStudyAttempt(exam.id, { ...state(exam), status: "active", deadline: Date.now() + 60000, answers: { [full.questions[0].id]: { selectedOptionId: "A", submitted: false } } });
   const draft = s.api.studyScore(s.read().attempts.find(x => x.id === exam.id));
-  assert.equal(draft.score, 0); assert.equal(draft.answered, 0);
+  assert.equal(draft.score, 0); assert.equal(draft.answered, 0); assert.equal(draft.unanswered, full.questions.length);
   const single = s.api.createStudyAttempt(paper, "practice").attempt;
-  assert.equal(s.api.studyScore(single).maxScore, 60);
+  assert.equal(s.api.studyScore(single).maxScore, 30);
   const collection = s.api.createStudyAttempt({ ...full, id: "favorites-practice", source: "favorites" }, "practice").attempt;
-  assert.equal(s.api.studyScore(collection).maxScore, 60);
+  assert.equal(s.api.studyScore(collection).maxScore, 180);
+});
+
+test("completed legacy and cloud-imported snapshots recalculate category scores without rewriting saved bytes", () => {
+  const original = store(), attempt = original.api.createStudyAttempt(paper, "practice").attempt;
+  assert.equal(original.api.updateStudyAttempt(attempt.id, { ...state(attempt), status: "completed", answers: { one: { selectedOptionId: "A", submitted: true }, two: { selectedOptionId: "B", submitted: true } } }).ok, true);
+  const legacy = original.read();
+  delete legacy.attempts[0].mobileFontSize;
+  const bytes = JSON.stringify(legacy, null, 2);
+  const restored = store(bytes), saved = restored.api.readStudySnapshot().data.attempts[0];
+  const snapshotBytes = JSON.stringify(saved), score = restored.api.studyScore(saved);
+  assert.equal(score.score, 15);
+  assert.equal(score.maxScore, 30);
+  assert.equal(score.percent, 50);
+  assert.equal(score.correct, 1);
+  assert.equal(saved.questions[0].correctOptionId, "A");
+  assert.equal(JSON.stringify(saved), snapshotBytes);
+  assert.equal(restored.raw(), bytes);
+  assert.equal(restored.writes(), 0);
+
+  // A new bank answer key must not replace the answers captured by the old attempt.
+  const revised = { ...paper, questions: paper.questions.map(question => ({ ...question, correctOptionId: question.id === "one" ? "B" : "A" })) };
+  assert.equal(restored.api.matchesStudyPaper(saved, revised, "practice"), false);
+  assert.equal(practiceScoring.calculatePracticeScore(revised, { one: "A", two: "B" }).score, 0);
+  assert.equal(restored.api.studyScore(saved).score, 15);
+  assert.equal(restored.raw(), bytes);
+
+  const imported = store();
+  assert.equal(imported.api.importStudyData(legacy).ok, true);
+  const importedBytes = imported.raw(), writes = imported.writes();
+  const importedScore = imported.api.studyScore(imported.api.readStudySnapshot().data.attempts[0]);
+  assert.equal(importedScore.score, score.score);
+  assert.equal(importedScore.maxScore, score.maxScore);
+  assert.equal(imported.raw(), importedBytes);
+  assert.equal(imported.writes(), writes);
+});
+
+test("mixed-level favorite snapshots retain category caps and only submitted answers earn points", () => {
+  const favorites = {
+    ...paper, id: "favorites-practice", source: "favorites", level: "混合", typeLabel: "收藏题练习",
+    questions: [
+      { ...paper.questions[0], id: "vocabulary", level: "N1" },
+      { ...paper.questions[0], id: "grammar", category: "语法", level: "N2" },
+      { ...paper.questions[0], id: "reading", category: "阅读", level: "N3" },
+      { ...paper.questions[0], id: "listening", category: "听力", level: "N5" },
+    ],
+  };
+  const s = store(), attempt = s.api.createStudyAttempt(favorites, "practice").attempt;
+  assert.equal(s.api.updateStudyAttempt(attempt.id, {
+    ...state(attempt), answers: {
+      vocabulary: { selectedOptionId: "A", submitted: true },
+      grammar: { selectedOptionId: "A", submitted: false },
+      reading: { selectedOptionId: "B", submitted: true },
+      listening: { selectedOptionId: "A", submitted: true },
+    },
+  }).ok, true);
+  const raw = s.raw(), score = s.api.studyScore(s.read().attempts[0]);
+  assert.equal(score.score, 90);
+  assert.equal(score.maxScore, 180);
+  assert.equal(score.answered, 3);
+  assert.equal(score.correct, 2);
+  assert.equal(score.wrong, 1);
+  assert.equal(score.unanswered, 1);
+  assert.equal(score.percent, 50);
+  assert.deepEqual(JSON.parse(JSON.stringify(score.sections.map(section => [section.score, section.maxScore]))), [[30, 60], [0, 60], [60, 60]]);
+  assert.equal(s.raw(), raw);
+  for (const [category, maxScore] of [["词汇", 30], ["语法", 30], ["阅读", 60], ["听力", 60]]) {
+    const single = s.api.createStudyAttempt({ ...favorites, questions: favorites.questions.filter(question => question.category === category) }, "practice").attempt;
+    assert.equal(s.api.studyScore(single).maxScore, maxScore);
+  }
+});
+
+test("legacy written-only full papers retain 180-point caps and missing category weights are never redistributed", () => {
+  const written = {
+    ...paper, id: "N2-2026-all", typeLabel: "整套文字练习",
+    questions: ["词汇", "语法", "阅读"].map((category, index) => ({ ...paper.questions[0], id: `written-${index}`, category })),
+  };
+  const s = store(), attempt = s.api.createStudyAttempt(written, "practice").attempt;
+  assert.equal(s.api.updateStudyAttempt(attempt.id, { ...state(attempt), status: "completed", answers: Object.fromEntries(written.questions.map(question => [question.id, { selectedOptionId: "A", submitted: true }])) }).ok, true);
+  const restored = store(s.raw()), raw = restored.raw(), score = restored.api.studyScore(restored.read().attempts[0]);
+  assert.equal(score.score, 120);
+  assert.equal(score.maxScore, 180);
+  assert.equal(score.percent, 100);
+  assert.equal(score.missingSections, true);
+  assert.equal(score.sections.find(section => section.id === "listening").available, false);
+  assert.equal(restored.raw(), raw);
+  assert.equal(restored.writes(), 0);
 });
