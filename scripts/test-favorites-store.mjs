@@ -74,3 +74,67 @@ test("invalid existing storage and empty memberships are preserved on rejected w
   assert.equal(good.api.saveFavorite("old-question", []).ok, false);
   assert.equal(good.writes(), 0);
 });
+
+const organized = {
+  version: 2,
+  folders: [...legacy.folders, { id: "reading", name: "阅读" }],
+  entries: [
+    { questionId: "shared", folderIds: ["grammar", "reading"], savedAt: date },
+    { questionId: "grammar-only", folderIds: ["grammar"], savedAt: date },
+    { questionId: "unselected", folderIds: ["default"], savedAt: date },
+  ],
+};
+
+test("batch organization adds memberships without replacing others or original save dates", () => {
+  const s = store(organized);
+  const result = s.api.organizeFavorites(["shared", "grammar-only", "grammar-only"], "add-to-folder", "reading");
+  assert.equal(result.ok, true);
+  assert.equal(result.changedCount, 1);
+  assert.equal(s.writes(), 1);
+  assert.deepEqual(s.read().entries.slice(0, 2).map(entry => entry.folderIds), [["grammar", "reading"], ["grammar", "reading"]]);
+  assert.ok(s.read().entries.every(entry => entry.savedAt === date));
+  assert.deepEqual(s.read().entries[2], organized.entries[2]);
+  assert.equal(s.api.organizeFavorites(["shared", "grammar-only"], "add-to-folder", "reading").changedCount, 0);
+  assert.equal(s.writes(), 1, "unchanged batches do not write or trigger backup changes");
+});
+
+test("removing a folder membership retains other folders and gives orphaned favorites a default", () => {
+  const s = store(organized);
+  assert.equal(s.api.organizeFavorites(["shared", "grammar-only"], "remove-from-folder", "grammar").changedCount, 2);
+  assert.equal(s.writes(), 1);
+  assert.deepEqual(s.read().entries.map(entry => entry.folderIds), [["reading"], ["default"], ["default"]]);
+  assert.equal(s.api.organizeFavorites(["grammar-only"], "remove-from-folder", "default").changedCount, 0);
+  assert.equal(s.writes(), 1);
+  assert.equal(s.read().entries.length, 3);
+});
+
+test("unfavorite removes only selected questions in one write, including all of their memberships", () => {
+  const s = store(organized);
+  assert.equal(s.api.organizeFavorites(["shared", "shared", "grammar-only"], "unfavorite").changedCount, 2);
+  assert.equal(s.writes(), 1);
+  assert.deepEqual(s.read(), { ...organized, entries: [organized.entries[2]] });
+});
+
+test("invalid or stale batch selections are rejected without partially changing favorites", () => {
+  for (const [ids, action, folder] of [
+    [[], "add-to-folder", "grammar"],
+    [["shared"], "invalid-action", "grammar"],
+    [["shared"], "remove-from-folder", "deleted-folder"],
+    [["shared", "deleted-question"], "add-to-folder", "reading"],
+    [["shared", "deleted-question"], "unfavorite"],
+  ]) {
+    const s = store(organized), before = s.raw();
+    assert.equal(s.api.organizeFavorites(ids, action, folder).ok, false);
+    assert.equal(s.raw(), before);
+    assert.equal(s.writes(), 0);
+  }
+});
+
+test("failed batch writes preserve all favorite entries and folder memberships", () => {
+  for (const action of ["add-to-folder", "remove-from-folder", "unfavorite"]) {
+    const s = store(organized), before = s.raw();
+    s.fail();
+    assert.equal(s.api.organizeFavorites(["shared", "grammar-only"], action, "reading").ok, false);
+    assert.equal(s.raw(), before);
+  }
+});

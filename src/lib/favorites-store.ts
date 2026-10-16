@@ -30,7 +30,7 @@ interface FavoritesSnapshot {
   readonly error: string | null;
 }
 
-export type FavoriteActionResult = { readonly ok: true; readonly folderId?: string; readonly addedCount?: number } | { readonly ok: false; readonly error: string };
+export type FavoriteActionResult = { readonly ok: true; readonly folderId?: string; readonly addedCount?: number; readonly changedCount?: number } | { readonly ok: false; readonly error: string };
 
 const emptyData: FavoritesData = { version: 2, folders: [{ id: DEFAULT_FOLDER_ID, name: "默认收藏夹" }], entries: [] };
 const serverSnapshot: FavoritesSnapshot = { data: emptyData, ready: false, error: null };
@@ -130,6 +130,7 @@ function commit(update: (data: FavoritesData) => FavoritesData): FavoriteActionR
   if (snapshot.error) return { ok: false, error: snapshot.error };
   try {
     const data = update(snapshot.data);
+    if (data === snapshot.data) return { ok: true };
     if (!isFavoritesData(data)) return { ok: false, error: "收藏操作无效，原数据未修改。" };
     window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(data));
     cachedRaw = undefined;
@@ -220,4 +221,32 @@ export function saveFavorites(questionIds: readonly string[]): FavoriteActionRes
 
 export function removeFavorite(questionId: string): FavoriteActionResult {
   return commit((data) => ({ ...data, entries: data.entries.filter((entry) => entry.questionId !== questionId) }));
+}
+
+export type FavoriteBatchAction = "add-to-folder" | "remove-from-folder" | "unfavorite";
+
+/** Update existing favorites in one write; membership edits never delete a question. */
+export function organizeFavorites(questionIds: readonly string[], action: FavoriteBatchAction, folderId?: string): FavoriteActionResult {
+  const snapshot = getSnapshot();
+  if (snapshot.error) return { ok: false, error: snapshot.error };
+  const ids = new Set(questionIds);
+  if (!ids.size) return { ok: false, error: "请先选择要整理的收藏题。" };
+  if (!["add-to-folder", "remove-from-folder", "unfavorite"].includes(action)) return { ok: false, error: "收藏操作无效，原数据未修改。" };
+  if (action !== "unfavorite" && !snapshot.data.folders.some(folder => folder.id === folderId)) return { ok: false, error: "收藏夹已不存在，请重新选择。" };
+  const existingIds = new Set(snapshot.data.entries.map(entry => entry.questionId));
+  if ([...ids].some(id => !existingIds.has(id))) return { ok: false, error: "部分题目已不在收藏中，请重新选择。" };
+  let changedCount = 0;
+  const result = commit(data => {
+    const entries = data.entries.flatMap(entry => {
+      if (!ids.has(entry.questionId)) return [entry];
+      if (action === "unfavorite") { changedCount++; return []; }
+      let folderIds = action === "add-to-folder" ? [...new Set([...entry.folderIds, folderId!])] : entry.folderIds.filter(id => id !== folderId);
+      if (!folderIds.length) folderIds = [DEFAULT_FOLDER_ID];
+      if (folderIds.length === entry.folderIds.length && folderIds.every(id => entry.folderIds.includes(id))) return [entry];
+      changedCount++;
+      return [{ ...entry, folderIds }];
+    });
+    return changedCount ? { ...data, entries } : data;
+  });
+  return result.ok ? { ok: true, changedCount } : result;
 }
