@@ -104,13 +104,18 @@ export default function PracticeHome() {
               </label>
               <label className="text-sm font-semibold">
                 {t("场次／版本")}<select name="year" value={activePeriod} onChange={(event) => { const period = event.target.value; setUserPreferences("home", { year: period, type: period === RANDOM_PERIOD && type === "all" ? "vocabulary" : type }); }} className={selectClassName}>
+                  <option value={RANDOM_PERIOD}>{t("全部题库随机")}</option>
                   {periods.map((period) => <option key={period} value={period}>{t(formatPeriod(period))}</option>)}
-                  <option value={RANDOM_PERIOD}>{t("随机")}</option>
                 </select>
               </label>
               <label className="col-span-2 text-sm font-semibold sm:col-span-1">
                 {t("题目类型")}<select name="type" value={type} onChange={(event) => { const next = questionTypes.find((type) => type.value === event.target.value); if (next) setUserPreferences("home", { type: next.value }); }} className={selectClassName}>
-                  {questionTypes.map((type) => { const count = getBankCount(source, activeLevel, activePeriod, type.value); return <option key={type.value} value={type.value} disabled={count.available === 0 || random && type.value === "all"}>{t(type.label)} · {random ? t("题池 {0} 题", { 0: count.available }) : <>{count.available} {t("题")}{t(count.excluded > 0 ? `（${count.excluded} 题暂不可用）` : "")}</>}</option>; })}
+                  {questionTypes.filter((item) => !random || item.value !== "all").map((item) => {
+                    const count = getBankCount(source, activeLevel, activePeriod, item.value);
+                    const plannedCount = Math.min(RANDOM_QUESTION_TARGET, count.available);
+                    const approximate = random && count.available > RANDOM_QUESTION_TARGET && item.value !== "vocabulary";
+                    return <option key={item.value} value={item.value} disabled={count.available === 0}>{t(item.label)} · {random ? approximate ? t("约 {0} 题", { 0: plannedCount }) : `${plannedCount} ${t("题")}` : <>{count.available} {t("题")}{t(count.excluded > 0 ? `（${count.excluded} 题暂不可用）` : "")}</>}</option>;
+                  })}
                 </select>
               </label>
             </div>
@@ -123,8 +128,8 @@ export default function PracticeHome() {
             </div>
           </form>
           <section aria-label={t("本卷历史足迹")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
-            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷历史足迹")}</h3><p className="tabular-nums text-slate-600">{t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, counts.available) : "—", 1: counts.available })}</p></div>
-            <progress aria-label={t("本卷已练题目")} value={Math.min(done, counts.available)} max={counts.available || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm"><h3 className="font-semibold text-slate-700">{t("本卷历史足迹")}</h3><p className="tabular-nums text-slate-600">{random ? t("累计已练 {0} 题", { 0: ready ? Math.min(done, counts.available) : "—" }) : t("累计已练 {0}/{1} 题", { 0: ready ? Math.min(done, counts.available) : "—", 1: counts.available })}</p></div>
+            {!random && <progress aria-label={t("本卷已练题目")} value={Math.min(done, counts.available)} max={counts.available || 1} className="mt-3 block h-1.5 w-full overflow-hidden rounded-full [&::-moz-progress-bar]:bg-indigo-500 [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:bg-indigo-500" />}
             <div className="mt-3 space-y-1 text-xs leading-5 text-slate-500"><p className="text-[clamp(10px,2.9vw,12px)]">{t("累计完成题目，重复只计一次，非上次进度。")}</p>{best && <p>{t("已完成 {0} 次 · 最佳 {1}/{2}", { 0: completed.length, 1: best.score, 2: best.maxScore })}</p>}</div>
           </section>
         </section>
