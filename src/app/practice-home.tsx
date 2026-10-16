@@ -38,6 +38,7 @@ export default function PracticeHome() {
   const { data, ready, error } = useStudyHistory();
   const trails = useMemo(() => questionTrails(data), [data]);
   const paperId = `${source === "imported" ? "imported-" : ""}${activeLevel}-${activePeriod}-${type}`;
+  const resumable = [...data.attempts].filter(a => a.paperId === paperId && a.mode === mode && a.status !== "completed").sort((a, b) => b.updatedAt - a.updatedAt)[0];
   const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
   const completed = data.attempts.filter(a => a.paperId === paperId && a.mode === mode && a.status === "completed");
   const best = completed.map(studyScore).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
@@ -45,6 +46,7 @@ export default function PracticeHome() {
     const samePaper = source === "imported" ? id.startsWith(`imported:${activePeriod}:${activeLevel}:`) : id.startsWith(`${activeLevel}-${activePeriod}-`);
     return samePaper && (selection.category === null || q.category === selection.category);
   }).length;
+  const newUrl = `/practice?${new URLSearchParams({ source, level: activeLevel, year: activePeriod, type, mode, fresh: "1" })}`;
 
   function beginPractice(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -67,7 +69,7 @@ export default function PracticeHome() {
         <section aria-labelledby="selection-title" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 id="selection-title" className="text-xl font-bold">{t("选择练习")}</h2>
           <form action="/practice" method="get" onSubmit={beginPractice} className="mt-4">
-            <input type="hidden" name="fresh" value="1" />
+            <input type="hidden" name={resumable ? "attempt" : "fresh"} value={resumable?.id ?? "1"} />
             <label className="mb-4 block text-sm font-semibold">{t("题库来源")}<select name="source" value={source} onChange={(event) => { const next = bankSources.find((item) => item.value === event.target.value); if (next) setSource(next.value); }} className={selectClassName}>
                 {bankSources.map((item) => <option key={item.value} value={item.value} disabled={item.value === "imported" && importedBankSummary.available === 0}>{t(item.label)}</option>)}
               </select>
@@ -100,8 +102,9 @@ export default function PracticeHome() {
             </div>
             {source === "original" && type === "all" && <p className="mt-3 text-xs leading-6 text-amber-800">{t("原创卷尚无听力题，整卷估分会标记为不完整。完整整卷请选用户提供题库。")}</p>}
             {mode === "exam" && <p className="mt-3 text-xs leading-6 text-slate-500">{t("训练时长：{0} 分钟", { 0: getExamDuration(questionCount) / 60 })}</p>}
-            <div className="mt-5 flex">
-              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={mode === "exam" ? "进入考试准备" : "开始新练习"} />
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <PracticeStartButton pending={starting} disabled={!ready || questionCount === 0} label={resumable ? "继续上次" : mode === "exam" ? "进入考试准备" : "开始练习"} />
+              {resumable && <Link href={newUrl} className="inline-flex min-h-12 items-center rounded-xl px-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 hover:text-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">{t("重新开始")}</Link>}
             </div>
           </form>
           <section aria-label={t("本卷练习记录")} aria-live="polite" aria-atomic="true" className="mt-5 rounded-xl bg-slate-50 p-4">
