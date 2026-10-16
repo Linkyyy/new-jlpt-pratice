@@ -1,4 +1,10 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["全屏查看题目图片", "問題の画像を全画面表示", "View question image full screen"],
+  ["题目图片预览", "問題の画像プレビュー", "Question image preview"],
+  ["关闭图片预览", "画像プレビューを閉じる", "Close image preview"],
+  ["放大图片", "画像を拡大", "Zoom in"],
+  ["缩小图片", "画像を縮小", "Zoom out"],
+  ["适应屏幕", "画面に合わせる", "Fit to screen"],
   ["听力材料", "聴解音声", "Listening material"],
   ["听力题目抽屉", "聴解問題パネル", "Listening question drawer"],
   ["本段共", "この音声は", "This recording has "],

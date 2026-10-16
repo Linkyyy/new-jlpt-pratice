@@ -21,6 +21,7 @@ export default function PopupPositioning() {
       return element instanceof HTMLDialogElement ? element.open && element.matches(":modal") : element.matches(":popover-open");
     }
     function place(element: HTMLElement, origin: Origin) {
+      if (element.hasAttribute("data-fullscreen")) { reset(element); return; }
       if (!element.isConnected || !isOpen(element)) { reset(element); return; }
       if (!desktop.matches) { delete element.dataset.cursorPopup; return; }
       element.dataset.cursorPopup = "";
@@ -45,6 +46,7 @@ export default function PopupPositioning() {
     function onToggle(event: Event) {
       const element = event.target;
       if (!(element instanceof HTMLElement) || !element.matches("dialog, [popover]")) return;
+      if (element.hasAttribute("data-fullscreen")) { reset(element); return; }
       if ((event as ToggleEvent).newState !== "open") { reset(element); return; }
       const focus = document.activeElement;
       const rect = focus instanceof HTMLElement && focus !== document.body ? focus.getBoundingClientRect() : null;
