@@ -1,4 +1,6 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["收藏工具栏", "お気に入りツールバー", "Collection toolbar"],
+  ["筛选与排序", "絞り込みと並べ替え", "Filter and sort"],
   ["题型分析", "問題タイプ別の分析", "Question type analysis"],
   ["按本次作答统计；题量较少时，建议结合多次练习判断。", "今回の解答に基づく集計です。問題数が少ない場合は、複数回の練習と合わせて判断してください。", "Based on this session. For small samples, compare several sessions before drawing conclusions."],
   ["{0}题型分析", "{0}の問題タイプ別分析", "{0} question type analysis"],

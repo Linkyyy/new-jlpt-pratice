@@ -5,8 +5,14 @@
 .collection-tabs button:hover { background: var(--surface-muted); }
 .collection-tabs button.collection-tab-current { background: var(--accent-surface); color: var(--accent-text); }
 .collection-tabs button:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
-.favorites-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; }
-.favorites-filters select { min-width: 0; }
+.collection-toolbar { display: flex; align-items: center; gap: 12px; min-width: 0; flex-shrink: 0; }
+.collection-toolbar > .floating-settings { flex: 1; min-width: 0; }
+.collection-filter-trigger { display: inline-flex; width: 100%; min-width: 0; min-height: 44px; align-items: center; gap: 8px; padding: 8px 4px; border-radius: 10px; color: var(--ink); text-align: left; font-size: 15px; }
+.collection-filter-trigger:hover { background: var(--surface-muted); }
+.collection-filter-trigger:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
+.collection-toolbar-actions { display: flex; flex-shrink: 0; align-items: center; gap: 8px; }
+.collection-filter-fields { display: grid; gap: 16px; }
+.collection-filter-fields select { min-width: 0; }
 .favorites-list { display: grid; align-content: start; gap: 10px; padding: 3px; }
 .favorite-preview { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 16px; text-align: left; overflow-wrap: anywhere; color: var(--subtle); }
 .favorite-preview:hover { border-color: var(--accent-line); }
@@ -23,8 +29,7 @@
 @media (min-width: 1024px) {
   .favorites-page { height: 100dvh; min-height: 0; overflow: hidden; }
   .favorites-shell { height: 100%; min-height: 0; }
-  .favorites-header, .favorites-filters { flex-shrink: 0; }
-  .favorites-filters { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 16px; }
+  .favorites-header { flex-shrink: 0; }
   .favorites-browser { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(260px, 340px) minmax(0, 1fr); gap: 20px; }
   .favorites-list, .favorites-detail-pane { overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
   .favorites-detail-pane { position: relative; padding: 3px 4px 3px 0; scroll-padding-top: 3px; }
