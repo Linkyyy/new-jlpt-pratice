@@ -1,0 +1,31 @@
+flowchart LR
+  subgraph CLIENT["终端浏览器：手机 / 平板 / 电脑"]
+    direction TB
+    UI["React 19.3 客户端交互"]
+    LOGIC["判题、计分、复习计划与周报"]
+    LOCAL[("localStorage：作答 / 收藏 / 设置")]
+    UI --> LOGIC --> LOCAL
+  end
+  subgraph VERCEL["Vercel：Next.js 16.4 全栈应用"]
+    direction TB
+    WEB["App Router 页面 / Server Components"]
+    API["Route Handlers / Node.js<br/>会话、备份、收藏查询、反馈、限流"]
+    BANK[("部署内 JSON 题库与索引")]
+    WEB --> BANK
+    API --> BANK
+  end
+  subgraph CF["Cloudflare 云服务"]
+    direction TB
+    D1[("D1 / SQLite<br/>账号 / 会话 / 备份 / 限流 / 反馈")]
+    R2[("R2 公开对象存储<br/>audio MP3 / pic 图片")]
+  end
+  UI -->|"页面与选中试卷"| WEB
+  UI -->|"同源 HTTPS API；HttpOnly Cookie"| API
+  API -->|"D1 HTTP API；服务端 Token + 参数化 SQL"| D1
+  UI -->|"媒体按需直连；音频 Range 请求"| R2
+  classDef client fill:#f2efff,stroke:#8472df,color:#202844;
+  classDef server fill:#eaf2ff,stroke:#6090ca,color:#202844;
+  classDef cloud fill:#fff2e3,stroke:#d3a069,color:#443324;
+  class UI,LOGIC,LOCAL client;
+  class WEB,API,BANK server;
+  class D1,R2 cloud;

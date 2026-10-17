@@ -1,0 +1,27 @@
+sequenceDiagram
+  actor U as 用户
+  participant B as 浏览器与本地数据
+  participant A as Vercel 云备份 API
+  participant D as Cloudflare D1
+  U->>B: 答题、收藏、调整设置
+  B->>B: 自动保存到 localStorage
+  Note over B,D: 日常答题不逐题写 D1，跨设备使用手动备份与导入
+  U->>B: 登录云备份账号
+  B->>A: 账号与密码（注册需确认密码）
+  A->>D: 校验密码哈希 / 保存会话 Token 哈希
+  A-->>B: HttpOnly 会话 Cookie
+  U->>B: 点击备份到云端
+  B->>A: 收藏 + 学习记录 + 设置 + expectedRevision
+  A->>A: 校验来源、会话、格式、大小与频率
+  A->>D: 按 revision 条件写入最新 JSON 快照
+  alt 版本冲突
+    A-->>B: 409，保留原数据并提示刷新
+  else 保存成功
+    A-->>B: 新 revision 与保存时间
+  end
+  U->>B: 在另一设备点击从云端导入
+  B->>A: 读取当前账号的备份
+  A->>D: 查询最新快照
+  D-->>A: 备份 JSON
+  A-->>B: 校验后的备份
+  B->>B: 合并收藏和记录，恢复设置；失败尝试回退

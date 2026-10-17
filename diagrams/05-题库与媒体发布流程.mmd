@@ -1,0 +1,14 @@
+flowchart LR
+  RAW["原始题库 JSON"] --> IMPORT["导入脚本：字段标准化 / 父子题继承 / 数据校验"]
+  IMPORT --> INDEX["轻量索引 index.json"]
+  IMPORT --> QUESTIONS["按等级、场次、题型拆分的 questions JSON"]
+  INDEX --> HOME["首页选题与数量显示"]
+  QUESTIONS --> SERVER["服务端按选择读取 / 随机保留完整题组"]
+  SERVER --> PAPER["浏览器当前练习卷"]
+  FILES["本地 MP3 / 图片资源"] --> UPLOAD["Node.js 批量上传 / 保留原目录"]
+  UPLOAD --> R2[("R2：audio/... 与 pic/...")]
+  PAPER --> URL["统一音频 / 图片 URL 生成函数"]
+  URL --> MEDIA["浏览器按需播放 / 显示"]
+  R2 --> MEDIA
+  CHECK["本地校验 / 可选远端资源检查"] -.-> QUESTIONS
+  CHECK -.-> R2

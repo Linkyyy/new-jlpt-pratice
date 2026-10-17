@@ -1,0 +1,40 @@
+erDiagram
+  cloud_users ||--o{ cloud_sessions : "拥有会话"
+  cloud_users ||--o| cloud_backups : "保留一份最新备份"
+  cloud_users {
+    TEXT id PK
+    TEXT username UK
+    TEXT password_hash
+    INTEGER created_at
+  }
+  cloud_sessions {
+    TEXT token_hash PK
+    TEXT user_id FK
+    INTEGER expires_at
+  }
+  cloud_backups {
+    TEXT user_id PK,FK
+    TEXT data "JSON快照"
+    TEXT revision
+    INTEGER saved_at
+    INTEGER bytes
+  }
+  cloud_rate_limits {
+    TEXT key PK "散列后的限流键"
+    INTEGER count
+    INTEGER expires_at
+  }
+  question_feedback {
+    TEXT id PK
+    TEXT question_id "引用题库ID，无SQL外键"
+    TEXT level
+    TEXT period
+    TEXT category
+    TEXT source
+    INTEGER question_number
+    TEXT issue_type
+    TEXT description
+    TEXT status
+    INTEGER created_at
+    INTEGER updated_at
+  }
