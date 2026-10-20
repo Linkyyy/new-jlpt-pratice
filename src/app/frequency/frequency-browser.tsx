@@ -5,12 +5,13 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import LoadingSkeleton from '@/components/loading-skeleton';
 import { useI18n } from '@/lib/i18n';
-import { defaultFrequencyFilters, parseFrequencyFilters, type FrequencyFilters, type FrequencyMetadata, type FrequencyResult, type FrequencySubtype } from '@/lib/bank-frequency.mjs';
+import { defaultFrequencyFilters, frequencyLevelScopes, parseFrequencyFilters, type FrequencyFilters, type FrequencyMetadata, type FrequencyResult, type FrequencySubtype } from '@/lib/bank-frequency.mjs';
 
 const selectClass = 'mt-2 min-h-11 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-normal text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500';
 const buttonClass = 'inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-40';
 const categories = [['vocabulary', '词汇'], ['grammar', '语法'], ['reading', '阅读'], ['listening', '听力']];
 const kindLabels = [['word', '单词'], ['grammar', '语法表达'], ['connective', '接续表达']] as const;
+const levelScopeLabels: Record<string, string> = { all: '全部词条（不排除低等级）', N1: 'N1 独有（N2–N5 未出现）', N2: 'N2 及以上独有（N3–N5 未出现）', N3: 'N3 及以上独有（N4–N5 未出现）', N4: 'N4 及以上独有（N5 未出现）' };
 
 function periodLabel(period: string, t: (value: string) => string) {
   return /^\d{6}$/.test(period) ? t(`${period.slice(0, 4)}年${Number(period.slice(4))}月`) : t(`${period} 原创版`);
@@ -93,6 +94,12 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const { data, error, loading } = useFrequencyRequest(query, `${query}:${retry}`);
   const update = (patch: Partial<FrequencyFilters>, push = false) => {
     const next = { ...filters, ...patch, page: patch.page ?? 1 };
+    if (next.exclusive !== 'all') {
+      const limit = Number(next.exclusive.slice(1));
+      if (next.level !== 'all' && Number(next.level.slice(1)) > limit) next.level = 'all';
+      const subtypeLevel = metadata.subtypes.find(item => item.id === next.subtype)?.level;
+      if (subtypeLevel && Number(subtypeLevel.slice(1)) > limit) next.subtype = 'all';
+    }
     const params = queryString(next);
     window.history[push ? 'pushState' : 'replaceState'](null, '', `/frequency${params ? `?${params}` : ''}`);
   };
@@ -119,10 +126,11 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const reset = () => window.history.pushState(null, '', '/frequency');
   const page = data?.filters.page ?? filters.page;
   const pages = Math.max(1, Math.ceil((data?.total ?? 0) / filters.size));
-  const subtypes = metadata.subtypes.filter(item => (filters.category === 'all' || item.category === filters.category) && (!item.level || filters.level === 'all' || item.level === filters.level));
+  const levels = metadata.levels.filter(level => filters.exclusive === 'all' || Number(level.slice(1)) <= Number(filters.exclusive.slice(1)));
+  const subtypes = metadata.subtypes.filter(item => (filters.category === 'all' || item.category === filters.category) && (!item.level || levels.includes(item.level)) && (!item.level || filters.level === 'all' || item.level === filters.level));
   const stats = [['纳入题目', data?.questionCount], ['覆盖场次', data?.paperCount], ['匹配词条', data?.total], ['出现总次数', data?.totalOccurrences]] as const;
   const mainError = parsed.error || error;
-  const activeFilters = (['source', 'level', 'period', 'category', 'subtype', 'field', 'pos', 'order', 'min'] as const).filter(key => filters[key] !== defaultFrequencyFilters[key]).length;
+  const activeFilters = (['source', 'level', 'exclusive', 'period', 'category', 'subtype', 'field', 'pos', 'order', 'min'] as const).filter(key => filters[key] !== defaultFrequencyFilters[key]).length;
   return <main className="min-h-screen bg-slate-50 px-4 py-5 text-slate-900 sm:px-8 sm:py-8"><div className="mx-auto max-w-6xl space-y-5">
     <header><Link href="/" className="inline-flex min-h-10 items-center text-sm font-semibold text-indigo-600">{t('← 首页')}</Link><div className="mt-2 flex flex-wrap items-end gap-x-4 gap-y-2"><h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('题库词频统计')}</h1><p className="pb-0.5 text-xs text-slate-500">{t('从题库正文看高频词与表达')}</p></div></header>
     <section aria-label={t('统计筛选')} className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
@@ -131,7 +139,8 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
       <div className="mt-3 flex items-center justify-between gap-3 lg:hidden"><button type="button" aria-expanded={filtersOpen} aria-controls="frequency-filter-controls" onClick={() => setFiltersOpen(value => !value)} className="inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-indigo-600"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-4 w-4"><path d="M4 7h7m5 0h4M4 17h2m5 0h9"/><circle cx="13.5" cy="7" r="2.5"/><circle cx="8.5" cy="17" r="2.5"/></svg>{t('筛选与排序')}{activeFilters > 0 && <span className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs tabular-nums">{activeFilters}</span>}<span aria-hidden="true" className="text-xs">{filtersOpen ? '▴' : '▾'}</span></button><button type="button" onClick={reset} className="min-h-10 px-2 text-xs font-semibold text-slate-500">{t('重置筛选')}</button></div>
       <div id="frequency-filter-controls" className={`${filtersOpen ? '' : 'hidden'} mt-3 grid-cols-2 gap-x-3 gap-y-4 ${filtersOpen ? 'grid' : ''} lg:mt-4 lg:grid lg:grid-cols-4`}>
         <label className="text-xs font-semibold text-slate-600">{t('题库来源')}<select aria-label={t('题库来源')} value={filters.source} onChange={event => update({ source: event.target.value })} className={selectClass}><option value="all">{t('全部题库')}</option><option value="imported">{t('用户提供题库')}</option><option value="original">{t('原创模拟题库')}</option></select></label>
-        <label className="text-xs font-semibold text-slate-600">{t('日语等级')}<select aria-label={t('日语等级')} value={filters.level} onChange={event => update({ level: event.target.value, subtype: 'all' })} className={selectClass}><option value="all">{t('全部等级')}</option>{metadata.levels.map(level => <option key={level}>{level}</option>)}</select></label>
+        <label className="text-xs font-semibold text-slate-600">{t('日语等级')}<select aria-label={t('日语等级')} value={filters.level} onChange={event => update({ level: event.target.value, subtype: 'all' })} className={selectClass}><option value="all">{t(filters.exclusive === 'all' ? '全部等级' : '范围内全部等级')}</option>{levels.map(level => <option key={level}>{level}</option>)}</select></label>
+        <label className="col-span-2 text-xs font-semibold text-slate-600">{t('等级独有范围')}<select aria-label={t('等级独有范围')} aria-describedby={filters.exclusive === 'all' ? undefined : 'frequency-exclusive-note'} value={filters.exclusive} onChange={event => update({ exclusive: event.target.value })} className={selectClass}>{frequencyLevelScopes.map(scope => <option key={scope} value={scope}>{t(levelScopeLabels[scope])}</option>)}</select></label>
         <label className="text-xs font-semibold text-slate-600">{t('题目类型')}<select aria-label={t('题目类型')} value={filters.category} onChange={event => update({ category: event.target.value, subtype: 'all' })} className={selectClass}><option value="all">{t('全部题型')}</option>{categories.map(([key, label]) => <option key={key} value={key}>{t(label)}</option>)}</select></label>
         <label className="text-xs font-semibold text-slate-600">{t('子题型')}<select aria-label={t('子题型')} value={filters.subtype} onChange={event => update({ subtype: event.target.value })} className={selectClass}><option value="all">{t('全部子题型')}</option>{subtypes.map(item => <option key={item.id} value={item.id}>{subtypeLabel(item, t)}</option>)}</select></label>
         <label className="text-xs font-semibold text-slate-600">{t('场次／版本')}<select aria-label={t('场次／版本')} value={filters.period} onChange={event => update({ period: event.target.value })} className={selectClass}><option value="all">{t('全部场次')}</option>{metadata.periods.map(period => <option key={period} value={period}>{periodLabel(period, t)}</option>)}</select></label>
@@ -139,6 +148,7 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
         <label className="text-xs font-semibold text-slate-600">{t('排序方式')}<select aria-label={t('排序方式')} value={filters.order} onChange={event => update({ order: event.target.value })} className={selectClass}>{[['occurrences', '出现次数（多到少）'], ['occurrences-asc', '出现次数（少到多）'], ['questions', '覆盖题目优先'], ['papers', '覆盖场次优先'], ['alphabetical', '五十音顺序']].map(([value, label]) => <option key={value} value={value}>{t(label)}</option>)}</select></label>
         <div className="flex items-end"><button onClick={reset} type="button" className={`${buttonClass} w-full px-2 text-xs text-slate-500`}>{t('重置筛选')}</button></div>
       </div>
+      {filters.exclusive !== 'all' && <div id="frequency-exclusive-note" className="mt-4 rounded-xl bg-indigo-50 p-3 text-xs leading-6 text-indigo-700"><p className="font-semibold">{t(levelScopeLabels[filters.exclusive])}</p><p>{t('低等级对照使用全部题库、场次、题型和文本；这是题库差集，不是官方词汇分级。')}</p></div>}
       <details className={`${filtersOpen ? '' : 'hidden'} mt-4 border-t border-slate-100 pt-3 lg:block`}><summary className="cursor-pointer text-xs font-semibold text-slate-500">{t('更多筛选')}</summary><div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3"><label className="text-xs font-semibold text-slate-600">{t('词性')}<select aria-label={t('词性')} value={filters.pos} disabled={filters.kind !== 'word'} onChange={event => update({ pos: event.target.value })} className={`${selectClass} disabled:opacity-40`}><option value="all">{t('全部词性')}</option>{['名词', '动词', '形容词', '副词', '连体词'].map(pos => <option key={pos} value={pos}>{t(pos)}</option>)}</select></label><label className="text-xs font-semibold text-slate-600">{t('最少出现次数')}<input aria-label={t('最少出现次数')} type="number" min={1} max={100000} defaultValue={filters.min} key={filters.min} onBlur={event => { const value = Number(event.target.value); if (Number.isSafeInteger(value) && value >= 1 && value <= 100000) update({ min: value }); else event.target.value = String(filters.min); }} className={selectClass} /></label><label className="text-xs font-semibold text-slate-600">{t('每页条数')}<select aria-label={t('每页条数')} value={filters.size} onChange={event => update({ size: Number(event.target.value) })} className={selectClass}>{[30, 50, 100].map(size => <option key={size} value={size}>{size}</option>)}</select></label></div></details>
     </section>
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-4" aria-live="polite" aria-busy={loading}>{stats.map(([label, value]) => <div key={label} className="rounded-xl border border-slate-200 bg-white px-4 py-3"><p className="text-xs text-slate-500">{t(label)}</p><p className="mt-1 text-xl font-bold tabular-nums">{loading || value === undefined ? '—' : value.toLocaleString()}</p></div>)}</div>

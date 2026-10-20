@@ -2,7 +2,7 @@ export type FrequencyKind = 'word' | 'grammar' | 'connective';
 export interface FrequencySubtype { id: string; category: string; label: string; level?: string; problem?: string }
 export interface FrequencySummary { questions: number; papers: number; units: number; terms: number; listeningQuestions: number; transcripts: number; grammarExpressions: number }
 export interface FrequencyMetadata { version: number; revision: string; summary: FrequencySummary; levels: string[]; periods: string[]; subtypes: FrequencySubtype[] }
-export interface FrequencyFilters { source: string; level: string; period: string; category: string; subtype: string; field: string; kind: FrequencyKind; pos: string; order: string; min: number; q: string; page: number; size: number }
+export interface FrequencyFilters { source: string; level: string; exclusive: string; period: string; category: string; subtype: string; field: string; kind: FrequencyKind; pos: string; order: string; min: number; q: string; page: number; size: number }
 export interface FrequencyRow { id: number; label: string; reading: string; pos: string; occurrences: number; questions: number; papers: number; rank: number }
 export interface FrequencyExample { id: string; source: string; level: string; period: string; category: string; subtype: string; number: number | null; available: boolean; fields: string[]; preview?: { prompt: string; passage?: string; options: string[] } }
 export interface FrequencyResult { revision: string; filters: FrequencyFilters; total: number; totalOccurrences: number; questionCount: number; paperCount: number; unitCount: number; rows: FrequencyRow[]; detail: (Omit<FrequencyRow, 'rank'> & { exampleTotal: number; examplePage: number; exampleSize: number; sourcePapers: { id: number; source: string; level: string; period: string; questions: number }[]; examples: FrequencyExample[] }) | null }
@@ -11,6 +11,7 @@ export const defaultFrequencyFilters: FrequencyFilters;
 export const frequencyKinds: string[];
 export const frequencyFields: string[];
 export const frequencyOrders: string[];
+export const frequencyLevelScopes: string[];
 export class FrequencyInputError extends Error {}
 export function frequencyText(value?: string): string;
 export function listeningTranscript(explanation: string[]): string;

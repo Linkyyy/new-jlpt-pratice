@@ -137,3 +137,85 @@ test('occurrence ascending/descending and full exports keep the same filtered ro
   assert.equal(all.rows.length, all.total); assert.deepEqual(all.rows.map(row => row.rank), [1, 2]);
   assert.equal(all.rows[0].label, '学生');
 });
+
+test('exclusive scopes subtract all lower levels while retaining words shared by eligible upper levels', () => {
+  const c = build([
+    question('n1', { level: 'N1', prompt: '学校。抽象。抽象。懸念。' }),
+    question('n2', { level: 'N2', prompt: '学校。抽象。提案。' }),
+    question('n3', { level: 'N3', prompt: '学校。提案。' }),
+    question('n4', { level: 'N4', prompt: '学校。' }),
+    question('n5', { level: 'N5', prompt: '学校。' }),
+  ]);
+  assert.ok(find(c, '学校', { level: 'N1' })); // Existing per-paper level filtering stays unchanged.
+  assert.deepEqual(query(c, { exclusive: 'N1' }).rows.map(r => r.label), ['懸念']);
+  const n2 = query(c, { exclusive: 'N2' });
+  assert.deepEqual(n2.rows.map(r => [r.label, r.occurrences]), [['抽象', 3], ['懸念', 1]]);
+  assert.equal(n2.questionCount, 2); assert.equal(n2.paperCount, 2);
+  assert.equal(find(c, '抽象', { exclusive: 'N2', level: 'N2' }).occurrences, 1);
+  assert.equal(find(c, '提案', { exclusive: 'N2' }), undefined);
+  assert.ok(find(c, '提案', { exclusive: 'N3' }));
+  assert.equal(find(c, '学校', { exclusive: 'N4' }), undefined);
+  const id = find(c, '抽象', { exclusive: 'N2' }).id;
+  const detail = queryFrequency(c, { ...defaultFrequencyFilters, exclusive: 'N2' }, id).detail;
+  assert.deepEqual(new Set(detail.examples.map(q => q.level)), new Set(['N1', 'N2']));
+  const excluded = find(c, '学校').id;
+  assert.equal(queryFrequency(c, { ...defaultFrequencyFilters, exclusive: 'N1' }, excluded).detail, null);
+});
+
+test('lower-level comparison ignores current bank, date, subtype and field filters, including unavailable resources', () => {
+  const c = build([
+    question('upper', { source: 'original', level: 'N1', category: '语法', instruction: '問題1 次の文の', prompt: '学生。学校。読んだ。懸念。' }),
+    question('lower-a', { period: '201007', level: 'N5', category: '听力', explanation: ['听力原文\n学生は読む。'] }),
+    question('lower-b', { period: '201407', level: 'N4', available: false, options: [{ text: '学校。' }] }),
+  ]);
+  const filters = { exclusive: 'N1', source: 'original', period: '202412', category: 'grammar', subtype: 'grammar-choice', field: 'prompt', pos: '名词' };
+  assert.deepEqual(query(c, filters).rows.map(r => r.label), ['懸念']);
+  assert.equal(find(c, '読む', { ...filters, pos: 'all' }), undefined);
+  assert.ok(find(c, '学生', { ...filters, exclusive: 'all' }));
+});
+
+test('lower-level lemma presence crosses POS tags, while word and expression inventories remain separate', () => {
+  const c = build([question('upper', { level: 'N1', prompt: '学生。' }), question('lower', { level: 'N5', prompt: '学生。' })]);
+  const duplicate = c.terms.length;
+  c.terms.push(['学生', 'がくせい', '副词', 'word']);
+  c.units.find(unit => unit[1].includes(1))[2] = [duplicate, 1];
+  assert.equal(find(c, '学生', { exclusive: 'N1', pos: '名词' }), undefined);
+  assert.ok(find(c, '学生', { pos: '名词' }));
+  const expressions = build([
+    question('n1', { level: 'N1', prompt: '学生にしては上手だ。しかし、学校。' }),
+    question('n2', { level: 'N2', prompt: 'しかし、学校。' }),
+  ]);
+  assert.ok(find(expressions, 'にしては', { exclusive: 'N1', kind: 'grammar' }));
+  assert.equal(find(expressions, 'しかし', { exclusive: 'N1', kind: 'connective' }), undefined);
+});
+
+test('exclusive parameters validate scope/level compatibility and exported rows retain the same difference', () => {
+  const c = build([question('n1', { level: 'N1', prompt: '抽象。懸念。' }), question('n2', { level: 'N2', prompt: '抽象。' }), question('n5', { level: 'N5', prompt: '学校。' })]);
+  const metadata = frequencyMetadata(c);
+  for (const raw of ['exclusive=N0', 'exclusive=N5', 'exclusive=bad', 'exclusive=N1&level=N2', 'exclusive=N1&subtype=reading-N5-10']) {
+    assert.throws(() => parseFrequencyFilters(new URLSearchParams(raw), metadata), FrequencyInputError, raw);
+  }
+  const filters = parseFrequencyFilters(new URLSearchParams('exclusive=N2&level=N1&size=1&page=2&order=occurrences-asc'), metadata);
+  const page = queryFrequency(c, filters);
+  const all = queryFrequency(c, filters, undefined, { allRows: true });
+  assert.equal(page.filters.exclusive, 'N2');
+  assert.equal(all.total, 2); assert.equal(all.rows.length, 2);
+  assert.deepEqual(all.rows.map(row => row.rank), [1, 2]);
+  assert.equal(query(c, { exclusive: 'N1', q: '学校' }).total, 0);
+});
+
+test('every production exclusive result is absent from all excluded levels, across all three inventories', () => {
+  const c = JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
+  for (const exclusive of ['N1', 'N2', 'N3', 'N4']) {
+    const excluded = new Set();
+    for (const [, ids, counts] of c.units) {
+      if (!ids.some(id => Number(c.questions[id][2].slice(1)) > Number(exclusive.slice(1)))) continue;
+      for (let i = 0; i < counts.length; i += 2) { const term = c.terms[counts[i]]; excluded.add(`${term[3]}:${term[0]}`); }
+    }
+    for (const kind of ['word', 'grammar', 'connective']) {
+      const result = queryFrequency(c, { ...defaultFrequencyFilters, exclusive, kind }, undefined, { allRows: true });
+      assert.ok(result.rows.every(row => !excluded.has(`${kind}:${row.label}`)));
+      if (kind === 'word') assert.ok(result.total > 0);
+    }
+  }
+});

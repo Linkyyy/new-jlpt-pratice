@@ -9,6 +9,7 @@ const translations = {
   en: { title: 'Question-bank frequencies', note: 'Text frequency does not equal exam-point frequency.', fields: ['Rank', 'Term', 'Reading', 'Part of speech', 'Occurrences', 'Questions', 'Sessions'], results: 'Frequency ranking', summary: 'Query details', filters: 'Filters', rows: 'Terms', date: 'Exported at', empty: 'No matching terms', all: 'All' },
 };
 const values = {
+  exclusive: { all: ['全部词条（不排除低等级）','すべての語句（下位レベルも含む）','All terms (include lower levels)'], N1: ['N1 独有（N2–N5 未出现）','N1 のみ（N2〜N5 には未出現）','N1 only (absent from N2–N5)'], N2: ['N2 及以上独有（N3–N5 未出现）','N2 以上のみ（N3〜N5 には未出現）','N2 and above only (absent from N3–N5)'], N3: ['N3 及以上独有（N4–N5 未出现）','N3 以上のみ（N4〜N5 には未出現）','N3 and above only (absent from N4–N5)'], N4: ['N4 及以上独有（N5 未出现）','N4 以上のみ（N5 には未出現）','N4 and above only (absent from N5)'] },
   source: { all: ['全部题库','すべての問題集','All banks'], imported: ['用户提供题库','ユーザー提供問題集','Imported'], original: ['原创模拟题库','オリジナル模擬問題','Original'] },
   category: { all: ['全部题型','すべての分野','All categories'], vocabulary: ['词汇','語彙','Vocabulary'], grammar: ['语法','文法','Grammar'], reading: ['阅读','読解','Reading'], listening: ['听力','聴解','Listening'] },
   field: { all: ['全部题文','すべての本文','All text'], passage: ['文章','文章','Passages'], prompt: ['题干','設問','Prompts'], options: ['选项','選択肢','Options'], transcript: ['听力原文','聴解原文','Transcripts'] },
@@ -24,6 +25,7 @@ export function frequencyExportDescription(filters, metadata, locale = 'zh') {
   const subtypeName = subtype ? (locale === 'zh' ? subtype.label : subtypeNames[subtype.label]?.[locale === 'ja' ? 0 : 1] ?? translated('category', subtype.category, locale)) : labels.all;
   const subtypeLabel = subtype ? [subtypeName, subtype.level, subtype.problem && `#${subtype.problem}`].filter(Boolean).join(' ') : labels.all;
   return [translated('source', filters.source, locale), filters.level === 'all' ? labels.all : filters.level, filters.period === 'all' ? labels.all : filters.period,
+    ...(filters.exclusive && filters.exclusive !== 'all' ? [translated('exclusive', filters.exclusive, locale), ({ zh: '低等级对照涵盖全部题库、场次、题型和文本；非官方词汇分级', ja: '下位レベルは全問題集・実施回・分野・本文で比較。公式の語彙分類ではありません', en: 'Lower-level comparison covers all banks, sessions, categories and text; not an official vocabulary level' })[locale]] : []),
     translated('kind', filters.kind, locale), translated('category', filters.category, locale), subtypeLabel,
     translated('field', filters.field, locale), translated('pos', filters.pos, locale), translated('order', filters.order, locale),
     `min=${filters.min}`, ...(filters.q ? [`search=${filters.q}`] : [])].join(' · ');

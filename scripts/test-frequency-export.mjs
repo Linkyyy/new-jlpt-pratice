@@ -56,3 +56,17 @@ test('exports reject a page-only payload instead of silently losing rows and all
   assert.equal(book.worksheets[0].rowCount, 1);
   assert.match((await createFrequencyPdf(empty, metadata)).toString('latin1'), /%%EOF\s*$/);
 });
+
+test('exclusive exports preserve all filtered terms and explain the global lower-level comparison in each language', async () => {
+  const result = queryFrequency(corpus, { ...defaultFrequencyFilters, exclusive: 'N2', level: 'N2', size: 1, page: 2 }, undefined, { allRows: true });
+  assert.ok(result.total > 1);
+  for (const [locale, pattern, note] of [['zh', /N2 及以上独有/, /全部题库、场次、题型和文本/], ['ja', /N2 以上のみ/, /全問題集/], ['en', /N2 and above only/, /all banks, sessions, categories and text/]]) {
+    const description = frequencyExportDescription(result.filters, metadata, locale);
+    assert.match(description, pattern); assert.match(description, note);
+    const book = new ExcelJS.Workbook(); await book.xlsx.load(await createFrequencyWorkbook(result, metadata, locale, now));
+    assert.equal(book.worksheets[0].rowCount, result.total + 1);
+    assert.deepEqual(book.worksheets[0].getColumn('B').values.slice(2), result.rows.map(row => row.label));
+    assert.match(book.worksheets[1].getCell('B2').value, note);
+  }
+  assert.match((await createFrequencyPdf({ ...result, total: 5, rows: result.rows.slice(0, 5) }, metadata, 'en', now)).toString('latin1'), /%%EOF\s*$/);
+});

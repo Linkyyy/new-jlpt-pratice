@@ -3,6 +3,7 @@ import { grammarExpressions, connectiveExpressions, wordStopList } from './frequ
 export const frequencyKinds = ['word', 'grammar', 'connective'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
 export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'papers', 'alphabetical'];
+export const frequencyLevelScopes = ['all', 'N1', 'N2', 'N3', 'N4'];
 const types = { 词汇: 'vocabulary', 语法: 'grammar', 阅读: 'reading', 听力: 'listening' };
 const entities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ensp: ' ', emsp: ' ' };
 export function frequencyText(value = '') {
@@ -137,11 +138,11 @@ export function createFrequencyBuilder(tokenize) {
     },
   };
 }
-export const defaultFrequencyFilters = { source: 'all', level: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, q: '', page: 1, size: 30 };
+export const defaultFrequencyFilters = { source: 'all', level: 'all', exclusive: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, q: '', page: 1, size: 30 };
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], level: ['all', ...metadata.levels], period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: frequencyKinds, pos: ['all', '名词', '动词', '形容词', '副词', '连体词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: frequencyKinds, pos: ['all', '名词', '动词', '形容词', '副词', '连体词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -159,6 +160,11 @@ export function parseFrequencyFilters(params, metadata) {
     filters.q = params.get('q').trim();
   }
   if (filters.subtype !== 'all' && filters.category !== 'all' && metadata.subtypes.find(x => x.id === filters.subtype)?.category !== filters.category) throw new FrequencyInputError('子题型与题目类型不一致。');
+  if (filters.exclusive !== 'all') {
+    const limit = Number(filters.exclusive.slice(1));
+    const subtypeLevel = metadata.subtypes.find(x => x.id === filters.subtype)?.level;
+    if ((filters.level !== 'all' && Number(filters.level.slice(1)) > limit) || (subtypeLevel && Number(subtypeLevel.slice(1)) > limit)) throw new FrequencyInputError('日语等级不在所选独有范围内。');
+  }
   return filters;
 }
 export function frequencyMetadata(corpus) {
@@ -168,15 +174,46 @@ export function frequencyMetadata(corpus) {
     subtypes: corpus.subtypes,
   };
 }
+// Cache all-corpus presence once per loaded index. Lower-level comparison must
+// never inherit the user's source, session, subtype, field or POS filters.
+const corpusLevelPresence = new WeakMap();
+function levelPresence(corpus) {
+  if (corpusLevelPresence.has(corpus)) return corpusLevelPresence.get(corpus);
+  const presence = new Uint8Array(corpus.terms.length);
+  for (const [, references, counts] of corpus.units) {
+    let levels = 0;
+    for (const index of references) {
+      const level = corpus.questions[index][2];
+      if (/^N[1-5]$/.test(level)) levels |= 1 << (Number(level.slice(1)) - 1);
+    }
+    for (let i = 0; i < counts.length; i += 2) presence[counts[i]] |= levels;
+  }
+  // A lemma seen at a lower level is still familiar if its POS differs there.
+  // Keep the three inventories separate: a nested word is not an expression.
+  const labels = new Map();
+  corpus.terms.forEach((term, id) => {
+    const key = `${term[3]}\t${frequencySearchText(term[0])}`;
+    labels.set(key, (labels.get(key) ?? 0) | presence[id]);
+  });
+  corpus.terms.forEach((term, id) => { presence[id] = labels.get(`${term[3]}\t${frequencySearchText(term[0])}`); });
+  corpusLevelPresence.set(corpus, presence);
+  return presence;
+}
 export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
+  const exclusive = filters.exclusive ?? 'all';
+  const limit = exclusive === 'all' ? 5 : Number(exclusive.slice(1));
+  const lowerMask = 31 ^ ((1 << limit) - 1);
+  const presence = exclusive === 'all' ? null : levelPresence(corpus);
   const mask = new Uint8Array(corpus.questions.length), paperIds = new Set();
   let questionCount = 0;
   corpus.questions.forEach((question, index) => {
+    if (exclusive !== 'all' && Number(question[2].slice(1)) > limit) return;
     if (['source', 'level', 'period', 'category', 'subtype'].some((key, n) => filters[key] !== 'all' && filters[key] !== question[n + 1])) return;
     mask[index] = 1; questionCount++; paperIds.add(question[8]);
   });
   const search = frequencySearchText(filters.q), wanted = new Uint8Array(corpus.terms.length);
   corpus.terms.forEach((term, index) => {
+    if (presence && (presence[index] & lowerMask)) return;
     if (term[3] === filters.kind && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
   });
   const matched = new Map(); let unitCount = 0;

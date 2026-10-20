@@ -1,4 +1,13 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["等级独有范围","レベル別の固有範囲","Level exclusivity"],
+  ["范围内全部等级","範囲内のすべてのレベル","All levels in scope"],
+  ["全部词条（不排除低等级）","すべての語句（下位レベルも含む）","All terms (include lower levels)"],
+  ["N1 独有（N2–N5 未出现）","N1 のみ（N2〜N5 には未出現）","N1 only (absent from N2–N5)"],
+  ["N2 及以上独有（N3–N5 未出现）","N2 以上のみ（N3〜N5 には未出現）","N2 and above only (absent from N3–N5)"],
+  ["N3 及以上独有（N4–N5 未出现）","N3 以上のみ（N4〜N5 には未出現）","N3 and above only (absent from N4–N5)"],
+  ["N4 及以上独有（N5 未出现）","N4 以上のみ（N5 には未出現）","N4 and above only (absent from N5)"],
+  ["低等级对照使用全部题库、场次、题型和文本；这是题库差集，不是官方词汇分级。","下位レベルとの比較は全問題集・実施回・分野・本文を対象にします。問題集内の差分であり、公式の語彙レベル分類ではありません。","Lower-level comparison uses all banks, sessions, categories and text. This is a bank-based difference, not an official vocabulary level."],
+  ["日语等级不在所选独有范围内。","選択したレベルが固有範囲に含まれていません。","The selected level is outside the exclusivity scope."],
   ["显示当前筛选范围内的全部出处，可按试卷筛选或翻页。","現在の条件に該当する全出典を、実施回やページで確認できます。","Browse all matching sources by paper or page."],
   ["出处试卷","出典の実施回","Source paper"],
   ["全部试卷","すべての実施回","All papers"],
