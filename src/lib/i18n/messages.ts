@@ -1,4 +1,7 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["导出","ダウンロード","Export"],
+  ["表格，便于筛选整理","表で絞り込み・整理","Spreadsheet for filtering and organizing"],
+  ["文档，便于打印复习","印刷・復習用の文書","Document for printing and review"],
   ["表记","表記","Orthography"],
   ["词语构成","語形成","Word formation"],
   ["文脉规定","文脈規定","Contextual meaning"],
