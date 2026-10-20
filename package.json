@@ -20,7 +20,9 @@
     "test:frequency": "node --test scripts/test-bank-frequency.mjs"
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "next": "16.4.0",
+    "pdfkit": "^0.20.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
@@ -28,6 +30,7 @@
     "@aws-sdk/client-s3": "^3.1152.0",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

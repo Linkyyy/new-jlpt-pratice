@@ -2,7 +2,7 @@ import { grammarExpressions, connectiveExpressions, wordStopList } from './frequ
 
 export const frequencyKinds = ['word', 'grammar', 'connective'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
-export const frequencyOrders = ['occurrences', 'questions', 'papers', 'alphabetical'];
+export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'papers', 'alphabetical'];
 const types = { 词汇: 'vocabulary', 语法: 'grammar', 阅读: 'reading', 听力: 'listening' };
 const entities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ensp: ' ', emsp: ' ' };
 export function frequencyText(value = '') {
@@ -168,7 +168,7 @@ export function frequencyMetadata(corpus) {
     subtypes: corpus.subtypes,
   };
 }
-export function queryFrequency(corpus, filters, selectedTerm) {
+export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const mask = new Uint8Array(corpus.questions.length), paperIds = new Set();
   let questionCount = 0;
   corpus.questions.forEach((question, index) => {
@@ -190,21 +190,51 @@ export function queryFrequency(corpus, filters, selectedTerm) {
       let found = matched.get(id);
       if (!found) { found = { id, occurrences: 0, questions: new Set(), papers: new Set(), fields: new Set() }; matched.set(id, found); }
       found.occurrences += unit[2][i + 1]; found.fields.add(unit[0]);
-      for (const index of references) { found.questions.add(index); found.papers.add(corpus.questions[index][8]); }
+      for (const index of references) {
+        found.questions.add(index); found.papers.add(corpus.questions[index][8]);
+        if (id === selectedTerm) { found.locations ??= new Map(); if (!found.locations.has(index)) found.locations.set(index, new Set()); found.locations.get(index).add(unit[0]); }
+      }
     }
   }
   let rows = [...matched.values()].filter(row => row.occurrences >= filters.min);
   const alphabetical = (a, b) => (corpus.terms[a.id][1] || corpus.terms[a.id][0]).localeCompare(corpus.terms[b.id][1] || corpus.terms[b.id][0], 'ja') || corpus.terms[a.id][0].localeCompare(corpus.terms[b.id][0], 'ja');
-  rows.sort((a, b) => filters.order === 'alphabetical' ? alphabetical(a, b) : (filters.order === 'questions' ? b.questions.size - a.questions.size : filters.order === 'papers' ? b.papers.size - a.papers.size : b.occurrences - a.occurrences) || b.occurrences - a.occurrences || alphabetical(a, b));
+  rows.sort((a, b) => filters.order === 'alphabetical' ? alphabetical(a, b) : (filters.order === 'questions' ? b.questions.size - a.questions.size : filters.order === 'papers' ? b.papers.size - a.papers.size : filters.order === 'occurrences-asc' ? a.occurrences - b.occurrences : b.occurrences - a.occurrences) || b.occurrences - a.occurrences || alphabetical(a, b));
   const total = rows.length, totalOccurrences = rows.reduce((n, row) => n + row.occurrences, 0);
-  const page = Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
+  const page = options.allRows ? 1 : Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
   const shape = row => ({ id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size });
   const selected = selectedTerm === undefined ? null : rows.find(row => row.id === selectedTerm);
+  let detail = null;
+  if (selected) {
+    const paperCounts = new Map();
+    for (const index of selected.questions) { const paperId = corpus.questions[index][8]; paperCounts.set(paperId, (paperCounts.get(paperId) ?? 0) + 1); }
+    const comparePapers = (a, b) => corpus.papers[b][2].localeCompare(corpus.papers[a][2]) || corpus.papers[a][1].localeCompare(corpus.papers[b][1]) || corpus.papers[a][0].localeCompare(corpus.papers[b][0]);
+    const references = [...selected.questions].filter(index => options.examplePaper === undefined || corpus.questions[index][8] === options.examplePaper)
+      .sort((a, b) => comparePapers(corpus.questions[a][8], corpus.questions[b][8]) || corpus.questions[a][4].localeCompare(corpus.questions[b][4]) || (corpus.questions[a][6] ?? 0) - (corpus.questions[b][6] ?? 0) || a - b);
+    const exampleSize = options.exampleSize ?? 20;
+    const examplePage = Math.min(options.examplePage ?? 1, Math.max(1, Math.ceil(references.length / exampleSize)));
+    detail = { ...shape(selected), exampleTotal: references.length, examplePage, exampleSize,
+      sourcePapers: [...paperCounts.keys()].sort(comparePapers).map(id => ({ id, source: corpus.papers[id][0], level: corpus.papers[id][1], period: corpus.papers[id][2], questions: paperCounts.get(id) })),
+      examples: references.slice((examplePage - 1) * exampleSize, examplePage * exampleSize).map(index => {
+        const q = corpus.questions[index];
+        return { id: q[0], source: q[1], level: q[2], period: q[3], category: q[4], subtype: q[5], number: q[6] ?? (q[1] === 'original' ? Number(q[0].match(/-(\d+)$/)?.[1]) || null : null), available: q[7], fields: [...(selected.locations?.get(index) ?? [])] };
+      }) };
+  }
   return { revision: corpus.revision, filters: { ...filters, page }, total, totalOccurrences, questionCount, paperCount: paperIds.size, unitCount,
-    rows: rows.slice((page - 1) * filters.size, page * filters.size).map((row, index) => ({ ...shape(row), rank: (page - 1) * filters.size + index + 1 })),
-    detail: selected ? { ...shape(selected), examples: [...selected.questions].slice(0, 8).map(index => {
-      const q = corpus.questions[index];
-      return { id: q[0], source: q[1], level: q[2], period: q[3], category: q[4], subtype: q[5], number: q[6], available: q[7] };
-    }) } : null,
+    rows: (options.allRows ? rows : rows.slice((page - 1) * filters.size, page * filters.size)).map((row, index) => ({ ...shape(row), rank: (page - 1) * filters.size + index + 1 })), detail,
   };
+}
+export function parseFrequencyDetailOptions(params, corpus) {
+  const options = {};
+  for (const [key, max] of [['examplePage', 100000], ['exampleSize', 50]]) {
+    if (!params.has(key)) continue;
+    const value = params.get(key);
+    if (!/^[1-9]\d{0,5}$/.test(value ?? '') || Number(value) > max) throw new FrequencyInputError('统计筛选条件无效。');
+    options[key] = Number(value);
+  }
+  if (params.has('examplePaper')) {
+    const value = params.get('examplePaper');
+    if (!/^\d{1,6}$/.test(value ?? '') || Number(value) >= corpus.papers.length) throw new FrequencyInputError('统计筛选条件无效。');
+    options.examplePaper = Number(value);
+  }
+  return options;
 }

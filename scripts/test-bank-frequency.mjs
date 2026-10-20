@@ -5,7 +5,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { gunzipSync } from 'node:zlib';
 import kuromoji from 'kuromoji';
-import { createFrequencyBuilder, frequencyMetadata, frequencySubtype, frequencyText, listeningTranscript, queryFrequency, parseFrequencyFilters, defaultFrequencyFilters, FrequencyInputError } from '../src/lib/bank-frequency.mjs';
+import { createFrequencyBuilder, frequencyMetadata, frequencySubtype, frequencyText, listeningTranscript, queryFrequency, parseFrequencyFilters, defaultFrequencyFilters, parseFrequencyDetailOptions, FrequencyInputError } from '../src/lib/bank-frequency.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, value) => error ? reject(error) : resolve(value)));
@@ -113,4 +113,27 @@ test('the production corpus covers every available and unavailable question plus
     assert.ok(result.rows.every(row => row.questions <= result.questionCount && row.papers <= result.paperCount));
     assert.ok(Buffer.byteLength(JSON.stringify(result)) < 30000);
   }
+});
+
+
+test('every source remains reachable through pagination and a paper filter without duplicate references', () => {
+  const c = build(Array.from({ length: 43 }, (_, i) => question(`source-${i}`, { prompt: '学生は本を読む。', period: ['202412', '202407', '202312'][i % 3] })));
+  const id = find(c, '学生').id;
+  const pages = [1, 2, 3].map(examplePage => queryFrequency(c, defaultFrequencyFilters, id, { examplePage, exampleSize: 20 }).detail);
+  assert.deepEqual(pages.map(p => p.examples.length), [20, 20, 3]);
+  assert.equal(pages[0].exampleTotal, 43); assert.equal(pages[0].sourcePapers.reduce((sum, p) => sum + p.questions, 0), 43);
+  assert.equal(new Set(pages.flatMap(p => p.examples.map(q => q.id))).size, 43);
+  const paper = pages[0].sourcePapers[1];
+  const detail = queryFrequency(c, defaultFrequencyFilters, id, { examplePaper: paper.id, exampleSize: 50 }).detail;
+  assert.equal(detail.exampleTotal, paper.questions);
+  assert.ok(detail.examples.every(q => q.period === paper.period && q.fields.includes('prompt')));
+  for (const raw of ['examplePage=0','exampleSize=51','examplePaper=-1','examplePaper=999999']) assert.throws(() => parseFrequencyDetailOptions(new URLSearchParams(raw), c), FrequencyInputError);
+});
+test('occurrence ascending/descending and full exports keep the same filtered rows and correct ranks', () => {
+  const c = build([question('a', { prompt: '学生。学校。学校。学校。' })]);
+  assert.equal(query(c).rows[0].label, '学校');
+  assert.equal(query(c, { order: 'occurrences-asc' }).rows[0].label, '学生');
+  const all = queryFrequency(c, { ...defaultFrequencyFilters, size: 1, page: 2, order: 'occurrences-asc' }, undefined, { allRows: true });
+  assert.equal(all.rows.length, all.total); assert.deepEqual(all.rows.map(row => row.rank), [1, 2]);
+  assert.equal(all.rows[0].label, '学生');
 });

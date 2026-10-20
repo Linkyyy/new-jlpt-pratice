@@ -44,7 +44,12 @@ function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: 
   const { t } = useI18n();
   const dialog = useRef<HTMLDialogElement>(null);
   const [retry, setRetry] = useState(0);
-  const url = `${query}${query ? '&' : ''}term=${id}`;
+  const [examplePage, setExamplePage] = useState(1);
+  const [examplePaper, setExamplePaper] = useState('all');
+  const params = new URLSearchParams(query);
+  params.set('term', String(id)); params.set('examplePage', String(examplePage));
+  if (examplePaper !== 'all') params.set('examplePaper', examplePaper);
+  const url = params.toString();
   const { data, error, loading } = useFrequencyRequest(url, `${url}:${retry}`);
   useEffect(() => { dialog.current?.showModal(); }, []);
   return <dialog ref={dialog} onClose={onClose} onClick={event => {
@@ -55,20 +60,22 @@ function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: 
     <div className="flex items-start justify-between gap-3"><h2 id="frequency-detail-title" className="text-xl font-bold">{data?.detail?.label ?? t('词条出处')}</h2><button type="button" onClick={() => dialog.current?.close()} aria-label={t('关闭')} className={`${buttonClass} shrink-0 px-3`}>✕</button></div>
     {loading ? <div className="mt-5"><LoadingSkeleton label="正在加载词频统计……" /></div> : error ? <div role="alert" className="mt-5"><p>{t(error)}</p><button className={`${buttonClass} mt-3`} onClick={() => setRetry(value => value + 1)}>{t('重试')}</button></div> : data?.detail ? <>
       <p className="mt-3 text-sm leading-6 text-slate-500">{t('出现 {0} 次 · 覆盖 {1} 题 · {2} 个场次', { 0: data.detail.occurrences, 1: data.detail.questions, 2: data.detail.papers })}</p>
-      <p className="mt-2 text-xs leading-5 text-slate-500">{t('以下展示当前筛选范围内的部分出处。')}</p>
+      <p className="mt-2 text-xs leading-5 text-slate-500">{t('显示当前筛选范围内的全部出处，可按试卷筛选或翻页。')}</p>
+      <label className="mt-4 block text-xs font-semibold text-slate-600">{t('出处试卷')}<select aria-label={t('出处试卷')} value={examplePaper} onChange={event => { setExamplePaper(event.target.value); setExamplePage(1); dialog.current?.scrollTo(0, 0); }} className={selectClass}><option value="all">{t('全部试卷')}</option>{data.detail.sourcePapers.map(paper => <option key={paper.id} value={paper.id}>{paper.level} · {periodLabel(paper.period, t)} · {t(paper.source === 'imported' ? '用户提供题库' : '原创模拟题库')} · {paper.questions} {t('题')}</option>)}</select></label>
       <ul className="mt-4 space-y-2">{data.detail.examples.map(example => {
         const subtype = metadata.subtypes.find(item => item.id === example.subtype);
         const label = `${example.level} · ${periodLabel(example.period, t)} · ${t(categories.find(([key]) => key === example.category)?.[1] ?? example.category)}`;
         const href = `/practice?${new URLSearchParams({ source: example.source, level: example.level, year: example.period, type: example.category, mode: 'practice', question: example.id })}`;
-        return <li key={example.id} className="rounded-xl border border-slate-200 bg-slate-50 p-3"><p className="text-sm font-semibold">{label}</p><p className="mt-1 text-xs leading-5 text-slate-500">{subtype && subtypeLabel(subtype, t)}{example.number !== null && ` · ${t('原题号 {0}', { 0: example.number })}`}</p>{example.available ? <Link href={href} prefetch={false} className="mt-2 inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t('查看题目')} →</Link> : <p className="mt-2 text-xs text-slate-500">{t('该题资源暂不完整，仅参与文本统计。')}</p>}</li>;
+        return <li key={example.id} className="rounded-xl border border-slate-200 bg-slate-50 p-3"><p className="text-sm font-semibold">{label}</p><p className="mt-1 text-xs leading-5 text-slate-500">{subtype && subtypeLabel(subtype, t)}{example.number !== null && ` · ${t(example.source === 'original' ? '题目 {0}' : '原题号 {0}', { 0: example.number })}`}</p><p className="mt-2 text-xs text-indigo-600">{t('出现位置')}：{example.fields.map(field => t(({ passage: '文章', prompt: '题干', options: '选项', transcript: '听力原文' } as Record<string, string>)[field] ?? field)).join(' · ')}</p>{example.preview && <details className="mt-2 text-sm"><summary className="cursor-pointer text-slate-600">{t('预览题目')}</summary><div className="mt-2 space-y-2 rounded-lg bg-white p-3 text-xs leading-6" lang="ja"><p className="whitespace-pre-line">{example.preview.prompt}</p>{example.preview.passage && <p className="whitespace-pre-line text-slate-500">{example.preview.passage}</p>}<ol className="list-inside list-decimal space-y-1">{example.preview.options.map((option, index) => <li key={index}>{option}</li>)}</ol></div></details>}{example.available ? <Link href={href} prefetch={false} className="mt-2 inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t('查看题目')} →</Link> : <p className="mt-2 text-xs text-slate-500">{t('该题资源暂不完整，仅参与文本统计。')}</p>}</li>;
       })}</ul>
+      <nav aria-label={t('出处分页')} className="mt-4 flex items-center justify-between gap-2"><button type="button" disabled={data.detail.examplePage <= 1} onClick={() => { setExamplePage(data.detail!.examplePage - 1); dialog.current?.scrollTo(0, 0); }} className={buttonClass}>{t('上一页')}</button><span className="text-xs tabular-nums text-slate-500">{t('第 {0} / {1} 页', { 0: data.detail.examplePage, 1: Math.max(1, Math.ceil(data.detail.exampleTotal / data.detail.exampleSize)) })} · {data.detail.exampleTotal} {t('题')}</span><button type="button" disabled={data.detail.examplePage >= Math.ceil(data.detail.exampleTotal / data.detail.exampleSize)} onClick={() => { setExamplePage(data.detail!.examplePage + 1); dialog.current?.scrollTo(0, 0); }} className={buttonClass}>{t('下一页')}</button></nav>
       <p className="mt-4 text-xs leading-6 text-slate-500">{t('词条可能出现在文章、题干或选项中，不表示它就是该题考点。')}</p>
     </> : <p className="mt-5 text-sm text-slate-500">{t('当前筛选下没有这个词条。')}</p>}
   </dialog>;
 }
 
 export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMetadata }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const searchParams = useSearchParams();
   const input = searchParams.toString();
   const parsed = useMemo(() => {
@@ -79,6 +86,9 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const query = queryString(filters);
   const [retry, setRetry] = useState(0);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [exporting, setExporting] = useState<'xlsx' | 'pdf' | null>(null);
+  const [exportMessage, setExportMessage] = useState('');
+  const [exportError, setExportError] = useState(false);
   const [selected, setSelected] = useState<{ query: string; id: number } | null>(null);
   const { data, error, loading } = useFrequencyRequest(query, `${query}:${retry}`);
   const update = (patch: Partial<FrequencyFilters>, push = false) => {
@@ -89,6 +99,22 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   function search(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     update({ q: String(new FormData(event.currentTarget).get('q') ?? '').trim() }, true);
+  }
+  async function exportResults(format: 'xlsx' | 'pdf') {
+    if (exporting) return;
+    setExporting(format); setExportMessage(''); setExportError(false);
+    try {
+      const params = new URLSearchParams(query); params.set('format', format); params.set('locale', locale);
+      const response = await fetch(`/api/frequency/export?${params}`, { signal: AbortSignal.timeout(120000) });
+      if (!response.ok) { const body = await response.json(); throw new Error(body.error ?? '导出失败，请重试。'); }
+      const blob = await response.blob();
+      const href = URL.createObjectURL(blob), link = document.createElement('a');
+      link.href = href; link.download = `jlpt-frequency-${filters.kind}.${format}`;
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(href), 60000);
+      setExportMessage('导出成功，文件已开始下载。');
+    } catch (error) { setExportError(true); setExportMessage(error instanceof Error && error.name !== 'TimeoutError' ? error.message : '导出失败，请重试。'); }
+    finally { setExporting(null); }
   }
   const reset = () => window.history.pushState(null, '', '/frequency');
   const page = data?.filters.page ?? filters.page;
@@ -110,14 +136,14 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
         <label className="text-xs font-semibold text-slate-600">{t('子题型')}<select aria-label={t('子题型')} value={filters.subtype} onChange={event => update({ subtype: event.target.value })} className={selectClass}><option value="all">{t('全部子题型')}</option>{subtypes.map(item => <option key={item.id} value={item.id}>{subtypeLabel(item, t)}</option>)}</select></label>
         <label className="text-xs font-semibold text-slate-600">{t('场次／版本')}<select aria-label={t('场次／版本')} value={filters.period} onChange={event => update({ period: event.target.value })} className={selectClass}><option value="all">{t('全部场次')}</option>{metadata.periods.map(period => <option key={period} value={period}>{periodLabel(period, t)}</option>)}</select></label>
         <label className="text-xs font-semibold text-slate-600">{t('文本范围')}<select aria-label={t('文本范围')} value={filters.field} onChange={event => update({ field: event.target.value })} className={selectClass}>{[['all', '全部题文'], ['passage', '文章'], ['prompt', '题干'], ['options', '选项'], ['transcript', '听力原文']].map(([value, label]) => <option key={value} value={value}>{t(label)}</option>)}</select></label>
-        <label className="text-xs font-semibold text-slate-600">{t('排序方式')}<select aria-label={t('排序方式')} value={filters.order} onChange={event => update({ order: event.target.value })} className={selectClass}>{[['occurrences', '出现次数优先'], ['questions', '覆盖题目优先'], ['papers', '覆盖场次优先'], ['alphabetical', '五十音顺序']].map(([value, label]) => <option key={value} value={value}>{t(label)}</option>)}</select></label>
+        <label className="text-xs font-semibold text-slate-600">{t('排序方式')}<select aria-label={t('排序方式')} value={filters.order} onChange={event => update({ order: event.target.value })} className={selectClass}>{[['occurrences', '出现次数（多到少）'], ['occurrences-asc', '出现次数（少到多）'], ['questions', '覆盖题目优先'], ['papers', '覆盖场次优先'], ['alphabetical', '五十音顺序']].map(([value, label]) => <option key={value} value={value}>{t(label)}</option>)}</select></label>
         <div className="flex items-end"><button onClick={reset} type="button" className={`${buttonClass} w-full px-2 text-xs text-slate-500`}>{t('重置筛选')}</button></div>
       </div>
       <details className={`${filtersOpen ? '' : 'hidden'} mt-4 border-t border-slate-100 pt-3 lg:block`}><summary className="cursor-pointer text-xs font-semibold text-slate-500">{t('更多筛选')}</summary><div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3"><label className="text-xs font-semibold text-slate-600">{t('词性')}<select aria-label={t('词性')} value={filters.pos} disabled={filters.kind !== 'word'} onChange={event => update({ pos: event.target.value })} className={`${selectClass} disabled:opacity-40`}><option value="all">{t('全部词性')}</option>{['名词', '动词', '形容词', '副词', '连体词'].map(pos => <option key={pos} value={pos}>{t(pos)}</option>)}</select></label><label className="text-xs font-semibold text-slate-600">{t('最少出现次数')}<input aria-label={t('最少出现次数')} type="number" min={1} max={100000} defaultValue={filters.min} key={filters.min} onBlur={event => { const value = Number(event.target.value); if (Number.isSafeInteger(value) && value >= 1 && value <= 100000) update({ min: value }); else event.target.value = String(filters.min); }} className={selectClass} /></label><label className="text-xs font-semibold text-slate-600">{t('每页条数')}<select aria-label={t('每页条数')} value={filters.size} onChange={event => update({ size: Number(event.target.value) })} className={selectClass}>{[30, 50, 100].map(size => <option key={size} value={size}>{size}</option>)}</select></label></div></details>
     </section>
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-4" aria-live="polite" aria-busy={loading}>{stats.map(([label, value]) => <div key={label} className="rounded-xl border border-slate-200 bg-white px-4 py-3"><p className="text-xs text-slate-500">{t(label)}</p><p className="mt-1 text-xl font-bold tabular-nums">{loading || value === undefined ? '—' : value.toLocaleString()}</p></div>)}</div>
     <section aria-labelledby="frequency-ranking-title" aria-busy={loading} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-100 p-4 sm:px-6"><h2 id="frequency-ranking-title" className="font-bold">{t(kindLabels.find(([kind]) => kind === filters.kind)![1])} · {t('出现频率排名')}</h2><p className="mt-2 text-xs leading-5 text-slate-500">{t('同篇文章与共用听力原文去重，点击词条查看出处。')}</p></div>
+      <div className="border-b border-slate-100 p-4 sm:px-6"><div className="flex flex-wrap items-center justify-between gap-3"><h2 id="frequency-ranking-title" className="font-bold">{t(kindLabels.find(([kind]) => kind === filters.kind)![1])} · {t('出现频率排名')}</h2><div className="flex flex-wrap items-center gap-2"><button type="button" aria-label={t('切换出现次数排序')} onClick={() => update({ order: filters.order === 'occurrences' ? 'occurrences-asc' : 'occurrences' })} className="inline-flex min-h-9 items-center gap-1 px-2 text-xs font-semibold text-indigo-600">{t('出现次数')}{filters.order === 'occurrences-asc' ? ' ↑' : filters.order === 'occurrences' ? ' ↓' : ' ↕'}</button>{(['xlsx', 'pdf'] as const).map(format => <button type="button" key={format} disabled={loading || Boolean(parsed.error) || Boolean(exporting) || !data} onClick={() => exportResults(format)} aria-label={t(format === 'xlsx' ? '导出 Excel' : '导出 PDF')} className={`${buttonClass} min-h-9 px-3 py-1 text-xs`}>{exporting === format ? t('正在导出……') : format === 'xlsx' ? 'Excel' : 'PDF'}</button>)}</div></div><p className="mt-2 text-xs leading-5 text-slate-500">{t('同篇文章与共用听力原文去重，点击词条查看出处。')}</p><p className="mt-1 text-xs text-slate-500">{t('导出包含当前筛选的全部排名结果，不限当前页。')}</p>{exportMessage && <p role={exportError ? 'alert' : 'status'} className={`mt-2 text-xs ${exportError ? 'text-rose-700' : 'text-indigo-600'}`}>{t(exportMessage)}</p>}</div>
       {mainError ? <div role="alert" className="p-6"><p className="text-sm text-rose-700">{t(mainError)}</p><div className="mt-3 flex gap-2"><button onClick={() => setRetry(value => value + 1)} className={buttonClass}>{t('重试')}</button><button onClick={reset} className={buttonClass}>{t('重置筛选')}</button></div></div> : loading ? <div className="p-5"><LoadingSkeleton label="正在加载词频统计……" /></div> : data?.rows.length ? <>
         <ul className="divide-y divide-slate-100 sm:hidden">{data.rows.map(row => <li key={row.id} className="flex items-start gap-3 px-4 py-4"><span className={`w-6 shrink-0 pt-0.5 text-sm font-semibold tabular-nums ${row.rank <= 3 ? 'text-indigo-600' : 'text-slate-400'}`}>{row.rank}</span><div className="min-w-0 flex-1"><button onClick={() => setSelected({ query, id: row.id })} className="max-w-full break-words text-left font-semibold text-slate-900 hover:text-indigo-600" lang="ja">{row.label}</button><p className="mt-1 break-words text-xs text-slate-500"><span lang="ja">{row.reading}</span>{row.reading && ' · '}{t(row.pos)}</p><p className="mt-2 text-xs text-slate-500">{t('覆盖 {0} 题 · {1} 个场次', { 0: row.questions, 1: row.papers })}</p></div><div className="shrink-0 text-right"><p className="font-bold tabular-nums text-indigo-600">{row.occurrences.toLocaleString()}</p><p className="mt-1 text-xs text-slate-400">{t('次')}</p></div></li>)}</ul>
         <table className="hidden w-full text-left text-sm sm:table"><caption className="sr-only">{t('出现频率排名')}</caption><thead className="bg-slate-50 text-xs text-slate-500"><tr>{['排名', '词条', '出现次数', '覆盖题目', '覆盖场次'].map(label => <th key={label} className="px-5 py-3 font-semibold first:w-20">{t(label)}</th>)}</tr></thead><tbody>{data.rows.map(row => <tr key={row.id} className="border-t border-slate-100 hover:bg-slate-50"><td className={`px-5 py-4 font-semibold tabular-nums ${row.rank <= 3 ? 'text-indigo-600' : 'text-slate-400'}`}>{row.rank}</td><td className="px-5 py-3"><button onClick={() => setSelected({ query, id: row.id })} className="text-left font-semibold text-slate-900 hover:text-indigo-600 hover:underline" lang="ja">{row.label}</button><p className="mt-1 text-xs text-slate-500"><span lang="ja">{row.reading}</span>{row.reading && ' · '}{t(row.pos)}</p></td><td className="px-5 py-3 font-bold tabular-nums text-indigo-600">{row.occurrences.toLocaleString()}</td><td className="px-5 py-3 tabular-nums text-slate-600">{row.questions.toLocaleString()}</td><td className="px-5 py-3 tabular-nums text-slate-600">{row.papers.toLocaleString()}</td></tr>)}</tbody></table>
