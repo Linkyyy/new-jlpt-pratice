@@ -139,6 +139,7 @@ export default function PracticeHome() {
         </aside>
         </div>
         <details className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-500"><summary className="cursor-pointer font-semibold text-slate-700">{t("题库说明与记录帮助")}</summary><div className="mt-3 space-y-2 text-xs leading-6"><p>{t("进度、历史成绩与做题足迹自动保存在当前浏览器，可在学习记录中登录账号备份到云端，在其他设备导入。学习天数按日本时间计算。")}</p><p>{t("题号右上角的小圆点表示曾练习；当前作答仍用颜色显示正误。整篇阅读与长文语法题统一提交后才留下足迹。")}</p><p>{t("用户题库已导入")}{importedBankSummary.files} {t("个文件、")}{importedBankSummary.available} {t("道可作答题；资源不完整的")}{importedBankSummary.unavailable} {t("道题暂不参与作答。原创题库不代表官方真题。题量、时长及成绩不等同于正式 JLPT 评分。")}</p></div></details>
+        <footer className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 py-3 text-xs text-slate-500"><span>{t("学习工具")}</span><span aria-hidden="true">·</span><Link href="/frequency" prefetch={false} className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">{t("题库词频统计")} <span aria-hidden="true">↗</span></Link></footer>
       </div>
     </main>
   );

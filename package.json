@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-audio-assets.mjs",
+    "prebuild": "node scripts/check-audio-assets.mjs && node scripts/build-bank-frequency.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -15,7 +15,9 @@
     "test:audio": "node --test scripts/test-audio.mjs",
     "setup:cloud": "node --env-file-if-exists=.env.local scripts/setup-cloud-backup.mjs",
     "setup:feedback": "node --env-file-if-exists=.env.local scripts/setup-question-feedback.mjs",
-    "test:cloud": "node --test scripts/test-cloud-backup.mjs"
+    "test:cloud": "node --test scripts/test-cloud-backup.mjs",
+    "build:frequency": "node scripts/build-bank-frequency.mjs",
+    "test:frequency": "node --test scripts/test-bank-frequency.mjs"
   },
   "dependencies": {
     "next": "16.4.0",
@@ -30,6 +32,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
+    "kuromoji": "0.1.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

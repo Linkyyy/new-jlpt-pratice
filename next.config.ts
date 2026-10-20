@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     "/api/practice/favorites": ["./src/data/imported-bank/questions/*.json"],
     "/api/favorites/questions": ["./src/data/imported-bank/questions/*.json"],
     "/api/feedback": ["./src/data/imported-bank/questions/*.json"],
+    "/api/frequency": ["./src/data/bank-frequency/corpus.json.gz"],
   },
   turbopack: {
     rules: {
