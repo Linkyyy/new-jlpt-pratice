@@ -1,0 +1,3 @@
+79d42ee387240fe9580078be1e5dd1afbcae234d01eca3f78695a153a52bbb5d  jlpt-revision-jpg.zip
+0339f79624c4b6812fd9400efdce3faf1000846f62af7fc58c1ea615ed9f5358  jlpt-revision-materials.zip
+b261a6119994e6e2f812ce5493094f610ac395216cdd6a62ef7bae4b46677f89  jlpt-revision-source.zip
