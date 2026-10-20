@@ -1,6 +1,7 @@
 import { grammarExpressions, connectiveExpressions, wordStopList } from './frequency-lexicon.mjs';
+import { classifyFrequencySubtype, officialFrequencySubtypes } from './frequency-subtypes.mjs';
 
-export const frequencyKinds = ['word', 'grammar', 'connective'];
+export const frequencyKinds = ['word', 'grammar'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
 export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'papers', 'alphabetical'];
 export const frequencyLevelScopes = ['all', 'N1', 'N2', 'N3', 'N4'];
@@ -20,18 +21,7 @@ export function frequencySubtype(question) {
   const candidate = instruction || (question.source === 'original' ? frequencyText(question.prompt) : '');
   const number = instruction.match(/問[題题]\s*(\d+)/)?.[1];
   const category = types[question.category];
-  if (category === 'grammar') {
-    if (/文章を読|文章全体/.test(candidate)) return { id: 'grammar-passage', category, label: '文章语法' };
-    if (/[★☆]/.test(candidate)) return { id: 'grammar-order', category, label: '语句排序' };
-    if (/文の|ぶんの/.test(candidate) || question.source === 'original') return { id: 'grammar-choice', category, label: '语法选择' };
-  }
-  if (category === 'vocabulary') {
-    for (const [pattern, id, label] of [[/読み方|よみかた/, 'reading', '汉字读音'], [/漢字で|かんじで/, 'writing', '汉字书写'], [/意味が最も近|意味がいちばん近|最も近い意味/, 'synonym', '近义表达'], [/使い方|つかいかた/, 'usage', '词语用法']]) {
-      if (pattern.test(candidate)) return { id: `vocabulary-${id}`, category, label };
-    }
-    if (number) return { id: `vocabulary-${question.level}-${number}`, category, label: '词汇填空', level: question.level, problem: number };
-  }
-  return { id: `${category}-${question.level}-${number ?? 'other'}`, category, label: question.category, level: question.level, ...(number ? { problem: number } : {}) };
+  return classifyFrequencySubtype(question, candidate, category, number);
 }
 /** Only the explicitly labelled Japanese transcript; never count translations or repeated copies after them. */
 export function listeningTranscript(explanation) {
@@ -99,7 +89,7 @@ export function createFrequencyBuilder(tokenize) {
         if (!starts.has(at) || !ends.has(end) || occupied[expression.kind].some(([left, right]) => at < right && end > left)) continue;
         if (expression.kind === 'connective' && ambiguousConnectives.has(expression.form) && tokensAt.get(at)?.pos !== '接続詞' && !/(?:^|[。！？!?\n「『])\s*$/.test(text.slice(0, at))) continue;
         occupied[expression.kind].push([at, end]);
-        add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续表达', expression.kind));
+        add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续词', expression.kind));
       }
     }
     return [...counts].flat();
@@ -125,7 +115,7 @@ export function createFrequencyBuilder(tokenize) {
       const passage = frequencyText(question.passage ?? ''), prompt = frequencyText(question.prompt);
       addUnit(passage, 'passage', index, true);
       // Imported listening prompts are Chinese UI placeholders; never treat them as Japanese corpus.
-      if (prompt !== passage && !/^听力第\s*\d+\s*题/.test(prompt)) addUnit(prompt, 'prompt', index, false);
+      if (prompt !== passage && !/^(?:听力第\s*\d+\s*题|请选择第\s*\d+\s*题)/.test(prompt)) addUnit(prompt, 'prompt', index, false);
       for (const option of question.options) addUnit(frequencyText(option.text), 'options', index, false);
       if (question.category === '听力') {
         listeningQuestions++;
@@ -142,7 +132,7 @@ export const defaultFrequencyFilters = { source: 'all', level: 'all', exclusive:
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: frequencyKinds, pos: ['all', '名词', '动词', '形容词', '副词', '连体词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -159,19 +149,22 @@ export function parseFrequencyFilters(params, metadata) {
     if (params.get('q').length > 80) throw new FrequencyInputError('搜索词最多 80 个字符。');
     filters.q = params.get('q').trim();
   }
+  // Preserve bookmarked links to the former third tab without exposing it again.
+  if (filters.kind === 'connective') { filters.kind = 'word'; filters.pos = '接续词'; }
   if (filters.subtype !== 'all' && filters.category !== 'all' && metadata.subtypes.find(x => x.id === filters.subtype)?.category !== filters.category) throw new FrequencyInputError('子题型与题目类型不一致。');
+  const subtype = metadata.subtypes.find(x => x.id === filters.subtype);
+  if (filters.level !== 'all' && subtype?.levels && !subtype.levels.includes(filters.level)) throw new FrequencyInputError('子题型与日语等级不一致。');
   if (filters.exclusive !== 'all') {
     const limit = Number(filters.exclusive.slice(1));
-    const subtypeLevel = metadata.subtypes.find(x => x.id === filters.subtype)?.level;
-    if ((filters.level !== 'all' && Number(filters.level.slice(1)) > limit) || (subtypeLevel && Number(subtypeLevel.slice(1)) > limit)) throw new FrequencyInputError('日语等级不在所选独有范围内。');
+    if ((filters.level !== 'all' && Number(filters.level.slice(1)) > limit) || (subtype?.levels && !subtype.levels.some(level => Number(level.slice(1)) <= limit))) throw new FrequencyInputError('日语等级不在所选独有范围内。');
   }
   return filters;
 }
 export function frequencyMetadata(corpus) {
-  return { version: corpus.version, revision: corpus.revision, summary: corpus.summary,
+  return { version: corpus.version, revision: corpus.revision, summary: corpus.summary, ...(corpus.definitionSummary ? {definitionSummary: corpus.definitionSummary} : {}),
     levels: [...new Set(corpus.questions.map(q => q[2]))].sort(),
     periods: [...new Set(corpus.questions.map(q => q[3]))].sort().reverse(),
-    subtypes: corpus.subtypes,
+    subtypes: [...officialFrequencySubtypes, ...corpus.subtypes.filter(item => !officialFrequencySubtypes.some(official => official.id === item.id))],
   };
 }
 // Cache all-corpus presence once per loaded index. Lower-level comparison must
@@ -189,13 +182,13 @@ function levelPresence(corpus) {
     for (let i = 0; i < counts.length; i += 2) presence[counts[i]] |= levels;
   }
   // A lemma seen at a lower level is still familiar if its POS differs there.
-  // Keep the three inventories separate: a nested word is not an expression.
+  // Conjunctions share the word scope; grammar expressions remain separate.
   const labels = new Map();
   corpus.terms.forEach((term, id) => {
-    const key = `${term[3]}\t${frequencySearchText(term[0])}`;
+    const key = `${term[3] === 'grammar' ? 'grammar' : 'word'}\t${frequencySearchText(term[0])}`;
     labels.set(key, (labels.get(key) ?? 0) | presence[id]);
   });
-  corpus.terms.forEach((term, id) => { presence[id] = labels.get(`${term[3]}\t${frequencySearchText(term[0])}`); });
+  corpus.terms.forEach((term, id) => { presence[id] = labels.get(`${term[3] === 'grammar' ? 'grammar' : 'word'}\t${frequencySearchText(term[0])}`); });
   corpusLevelPresence.set(corpus, presence);
   return presence;
 }
@@ -214,7 +207,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const search = frequencySearchText(filters.q), wanted = new Uint8Array(corpus.terms.length);
   corpus.terms.forEach((term, index) => {
     if (presence && (presence[index] & lowerMask)) return;
-    if (term[3] === filters.kind && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
+    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
   });
   const matched = new Map(); let unitCount = 0;
   for (const unit of corpus.units) {
@@ -238,7 +231,9 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   rows.sort((a, b) => filters.order === 'alphabetical' ? alphabetical(a, b) : (filters.order === 'questions' ? b.questions.size - a.questions.size : filters.order === 'papers' ? b.papers.size - a.papers.size : filters.order === 'occurrences-asc' ? a.occurrences - b.occurrences : b.occurrences - a.occurrences) || b.occurrences - a.occurrences || alphabetical(a, b));
   const total = rows.length, totalOccurrences = rows.reduce((n, row) => n + row.occurrences, 0);
   const page = options.allRows ? 1 : Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
-  const shape = row => ({ id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size });
+  const shape = row => ({ id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size,
+    definition: corpus.definitions?.[row.id] ?? {meaning: '', usage: '', source: 'missing'},
+  });
   const selected = selectedTerm === undefined ? null : rows.find(row => row.id === selectedTerm);
   let detail = null;
   if (selected) {

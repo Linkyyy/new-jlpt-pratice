@@ -70,3 +70,14 @@ test('exclusive exports preserve all filtered terms and explain the global lower
   }
   assert.match((await createFrequencyPdf({ ...result, total: 5, rows: result.rows.slice(0, 5) }, metadata, 'en', now)).toString('latin1'), /%%EOF\s*$/);
 });
+
+test('Excel includes actual Chinese meanings, grammar usage, conjunction POS and reusable source attribution',async()=>{
+  for(const filters of [{kind:'grammar',q:'にしては'},{kind:'word',pos:'接续词',q:'しかし'}]){
+    const result=queryFrequency(corpus,{...defaultFrequencyFilters,...filters},undefined,{allRows:true});assert.ok(result.total>0);
+    const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,'zh',now));const sheet=book.worksheets[0];
+    assert.equal(sheet.getCell('H1').value,'中文释义');assert.equal(sheet.getCell('I1').value,'用法／接续');
+    assert.equal(sheet.getCell('H2').value,result.rows[0].definition.meaning);assert.equal(sheet.getCell('I2').value,result.rows[0].definition.usage);
+    if(filters.pos)assert.equal(sheet.getCell('D2').value,'接续词');
+    assert.match(book.worksheets[1].getCell('B7').value,/CC BY-SA 4.0/);
+  }
+});

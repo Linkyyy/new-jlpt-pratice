@@ -1,14 +1,19 @@
 {
   "version": 1,
-  "revision": "6f1be857ff70a016168d223eb86a43dbe99f20bfbd7b5c5bb2e2664917450047",
+  "revision": "dcbdc21b71d9058190e51e7badfbcaa4c69d779876a03229bb4a45567be7e57f",
   "summary": {
     "questions": 8759,
     "papers": 94,
-    "units": 38056,
-    "terms": 17006,
+    "units": 37941,
+    "terms": 17003,
     "listeningQuestions": 2634,
     "transcripts": 2633,
-    "grammarExpressions": 237
+    "grammarExpressions": 238
+  },
+  "definitionSummary": {
+    "matched": 11864,
+    "missing": 5139,
+    "total": 17003
   },
   "levels": [
     "N1",
@@ -54,341 +59,247 @@
     {
       "id": "vocabulary-reading",
       "category": "vocabulary",
-      "label": "汉字读音"
-    },
-    {
-      "id": "vocabulary-N1-2",
-      "category": "vocabulary",
-      "label": "词汇填空",
-      "level": "N1",
-      "problem": "2"
-    },
-    {
-      "id": "vocabulary-synonym",
-      "category": "vocabulary",
-      "label": "近义表达"
-    },
-    {
-      "id": "vocabulary-usage",
-      "category": "vocabulary",
-      "label": "词语用法"
-    },
-    {
-      "id": "grammar-choice",
-      "category": "grammar",
-      "label": "语法选择"
-    },
-    {
-      "id": "grammar-order",
-      "category": "grammar",
-      "label": "语句排序"
-    },
-    {
-      "id": "grammar-passage",
-      "category": "grammar",
-      "label": "文章语法"
-    },
-    {
-      "id": "reading-N1-8",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "8"
-    },
-    {
-      "id": "reading-N1-9",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "9"
-    },
-    {
-      "id": "reading-N1-10",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "10"
-    },
-    {
-      "id": "reading-N1-11",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "11"
-    },
-    {
-      "id": "reading-N1-12",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "12"
-    },
-    {
-      "id": "reading-N1-13",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1",
-      "problem": "13"
-    },
-    {
-      "id": "listening-N1-1",
-      "category": "listening",
-      "label": "听力",
-      "level": "N1",
-      "problem": "1"
-    },
-    {
-      "id": "listening-N1-2",
-      "category": "listening",
-      "label": "听力",
-      "level": "N1",
-      "problem": "2"
-    },
-    {
-      "id": "listening-N1-3",
-      "category": "listening",
-      "label": "听力",
-      "level": "N1",
-      "problem": "3"
-    },
-    {
-      "id": "listening-N1-4",
-      "category": "listening",
-      "label": "听力",
-      "level": "N1",
-      "problem": "4"
-    },
-    {
-      "id": "listening-N1-5",
-      "category": "listening",
-      "label": "听力",
-      "level": "N1",
-      "problem": "5"
+      "label": "汉字读音",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
     },
     {
       "id": "vocabulary-writing",
       "category": "vocabulary",
-      "label": "汉字书写"
+      "label": "表记",
+      "levels": [
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
     },
     {
-      "id": "vocabulary-N2-3",
+      "id": "vocabulary-formation",
       "category": "vocabulary",
-      "label": "词汇填空",
-      "level": "N2",
-      "problem": "3"
+      "label": "词语构成",
+      "levels": [
+        "N2"
+      ]
     },
     {
-      "id": "vocabulary-N2-4",
+      "id": "vocabulary-context",
       "category": "vocabulary",
-      "label": "词汇填空",
-      "level": "N2",
-      "problem": "4"
+      "label": "文脉规定",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
     },
     {
-      "id": "reading-N2-10",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2",
-      "problem": "10"
-    },
-    {
-      "id": "reading-N2-11",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2",
-      "problem": "11"
-    },
-    {
-      "id": "reading-N2-12",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2",
-      "problem": "12"
-    },
-    {
-      "id": "reading-N2-13",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2",
-      "problem": "13"
-    },
-    {
-      "id": "reading-N2-14",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2",
-      "problem": "14"
-    },
-    {
-      "id": "listening-N2-1",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2",
-      "problem": "1"
-    },
-    {
-      "id": "listening-N2-2",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2",
-      "problem": "2"
-    },
-    {
-      "id": "listening-N2-3",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2",
-      "problem": "3"
-    },
-    {
-      "id": "listening-N2-4",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2",
-      "problem": "4"
-    },
-    {
-      "id": "listening-N2-5",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2",
-      "problem": "5"
-    },
-    {
-      "id": "vocabulary-N3-3",
+      "id": "vocabulary-synonym",
       "category": "vocabulary",
-      "label": "词汇填空",
-      "level": "N3",
-      "problem": "3"
+      "label": "近义替换",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
     },
     {
-      "id": "reading-N3-4",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N3",
-      "problem": "4"
-    },
-    {
-      "id": "reading-N3-5",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N3",
-      "problem": "5"
-    },
-    {
-      "id": "reading-N3-6",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N3",
-      "problem": "6"
-    },
-    {
-      "id": "reading-N3-7",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N3",
-      "problem": "7"
-    },
-    {
-      "id": "listening-N3-1",
-      "category": "listening",
-      "label": "听力",
-      "level": "N3",
-      "problem": "1"
-    },
-    {
-      "id": "listening-N3-2",
-      "category": "listening",
-      "label": "听力",
-      "level": "N3",
-      "problem": "2"
-    },
-    {
-      "id": "listening-N3-3",
-      "category": "listening",
-      "label": "听力",
-      "level": "N3",
-      "problem": "3"
-    },
-    {
-      "id": "listening-N3-4",
-      "category": "listening",
-      "label": "听力",
-      "level": "N3",
-      "problem": "4"
-    },
-    {
-      "id": "listening-N3-5",
-      "category": "listening",
-      "label": "听力",
-      "level": "N3",
-      "problem": "5"
-    },
-    {
-      "id": "listening-N2-other",
-      "category": "listening",
-      "label": "听力",
-      "level": "N2"
-    },
-    {
-      "id": "vocabulary-N5-other",
+      "id": "vocabulary-usage",
       "category": "vocabulary",
-      "label": "词汇",
-      "level": "N5"
+      "label": "用法",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4"
+      ]
     },
     {
-      "id": "reading-N5-other",
+      "id": "grammar-choice",
+      "category": "grammar",
+      "label": "句子语法1（语法形式判断）",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "grammar-order",
+      "category": "grammar",
+      "label": "句子语法2（句子组合）",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "grammar-passage",
+      "category": "grammar",
+      "label": "文章语法",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "reading-short",
       "category": "reading",
-      "label": "阅读",
-      "level": "N5"
+      "label": "内容理解（短篇）",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
     },
     {
-      "id": "vocabulary-N4-other",
+      "id": "reading-medium",
+      "category": "reading",
+      "label": "内容理解（中篇）",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "reading-long",
+      "category": "reading",
+      "label": "内容理解（长篇）",
+      "levels": [
+        "N1",
+        "N3"
+      ]
+    },
+    {
+      "id": "reading-integrated",
+      "category": "reading",
+      "label": "综合理解",
+      "levels": [
+        "N1",
+        "N2"
+      ]
+    },
+    {
+      "id": "reading-thematic",
+      "category": "reading",
+      "label": "主张理解（长篇）",
+      "levels": [
+        "N1",
+        "N2"
+      ]
+    },
+    {
+      "id": "reading-information",
+      "category": "reading",
+      "label": "信息检索",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "listening-task",
+      "category": "listening",
+      "label": "课题理解",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "listening-point",
+      "category": "listening",
+      "label": "要点理解",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "listening-gist",
+      "category": "listening",
+      "label": "概要理解",
+      "levels": [
+        "N1",
+        "N2",
+        "N3"
+      ]
+    },
+    {
+      "id": "listening-expression",
+      "category": "listening",
+      "label": "发话表现",
+      "levels": [
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "listening-response",
+      "category": "listening",
+      "label": "即时应答",
+      "levels": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ]
+    },
+    {
+      "id": "listening-integrated",
+      "category": "listening",
+      "label": "综合理解",
+      "levels": [
+        "N1",
+        "N2"
+      ]
+    },
+    {
+      "id": "listening-other",
+      "category": "listening",
+      "label": "听力（未分类）"
+    },
+    {
+      "id": "vocabulary-other",
       "category": "vocabulary",
-      "label": "词汇",
-      "level": "N4"
+      "label": "词汇（未分类）"
     },
     {
-      "id": "reading-N4-other",
+      "id": "reading-other",
       "category": "reading",
-      "label": "阅读",
-      "level": "N4"
-    },
-    {
-      "id": "vocabulary-N3-other",
-      "category": "vocabulary",
-      "label": "词汇",
-      "level": "N3"
-    },
-    {
-      "id": "reading-N3-other",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N3"
-    },
-    {
-      "id": "vocabulary-N2-other",
-      "category": "vocabulary",
-      "label": "词汇",
-      "level": "N2"
-    },
-    {
-      "id": "reading-N2-other",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N2"
-    },
-    {
-      "id": "vocabulary-N1-other",
-      "category": "vocabulary",
-      "label": "词汇",
-      "level": "N1"
-    },
-    {
-      "id": "reading-N1-other",
-      "category": "reading",
-      "label": "阅读",
-      "level": "N1"
+      "label": "阅读（未分类）"
     }
   ]
 }

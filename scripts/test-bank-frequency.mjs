@@ -6,6 +6,9 @@ import { createRequire } from 'node:module';
 import { gunzipSync } from 'node:zlib';
 import kuromoji from 'kuromoji';
 import { createFrequencyBuilder, frequencyMetadata, frequencySubtype, frequencyText, listeningTranscript, queryFrequency, parseFrequencyFilters, defaultFrequencyFilters, parseFrequencyDetailOptions, FrequencyInputError } from '../src/lib/bank-frequency.mjs';
+import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
+import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-lexicon.mjs';
+import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, value) => error ? reject(error) : resolve(value)));
@@ -218,4 +221,81 @@ test('every production exclusive result is absent from all excluded levels, acro
       if (kind === 'word') assert.ok(result.total > 0);
     }
   }
+});
+
+test('official item categories distinguish N2 word formation from context and reading types across levels', () => {
+  const type = (level, category, number) => frequencySubtype(question('official', {level, category, instruction: `問題${number} 次のものを選んでください。`}));
+  assert.equal(type('N2', '词汇', 3).id, 'vocabulary-formation');
+  assert.equal(type('N2', '词汇', 4).id, 'vocabulary-context');
+  assert.equal(type('N1', '词汇', 2).id, 'vocabulary-context');
+  assert.equal(type('N3', '词汇', 3).id, 'vocabulary-context');
+  for (const [level, start, expected] of [
+    ['N1',8,['short','medium','long','integrated','thematic','information']],
+    ['N2',10,['short','medium','integrated','thematic','information']],
+    ['N3',4,['short','medium','long','information']],
+    ['N4',4,['short','medium','information']],
+    ['N5',4,['short','medium','information']],
+  ]) assert.deepEqual(expected.map((_, i) => type(level, '阅读', start + i).id), expected.map(name => `reading-${name}`));
+  assert.equal(type('N1', '阅读', 8).id, type('N2', '阅读', 10).id);
+  assert.equal(frequencySubtype(question('unknown', {source:'original', instruction:'', prompt:'これは例です。'})).id, 'reading-other');
+});
+
+test('official listening categories respect N1/N2 versus N3/N4/N5 differences', () => {
+  for (const [level, names] of [
+    ['N1',['task','point','gist','response','integrated']],
+    ['N2',['task','point','gist','response','integrated']],
+    ['N3',['task','point','gist','expression','response']],
+    ['N4',['task','point','expression','response']],
+    ['N5',['task','point','expression','response']],
+  ]) {
+    assert.deepEqual(names.map((_, i) => frequencySubtype(question('l', {level, category:'听力', instruction:`問題${i+1} 聞いてください。`})).id), names.map(name => `listening-${name}`));
+  }
+  const meta = frequencyMetadata(build([question('n1',{level:'N1'})]));
+  for (const raw of ['level=N1&subtype=listening-expression','level=N2&subtype=reading-long','level=N3&subtype=vocabulary-formation']) {
+    const complete = {...meta, levels:['N1','N2','N3','N4','N5']};
+    assert.throws(() => parseFrequencyFilters(new URLSearchParams(raw), complete), FrequencyInputError);
+  }
+});
+
+test('conjunctions are included under words, filter by POS, and old third-tab links resolve to that filter', () => {
+  const c = build([question('a',{prompt:'しかし、学生は勉強する。そして、学校へ行く。'})]);
+  assert.equal(find(c,'しかし').pos,'接续词');
+  assert.deepEqual(query(c,{pos:'接续词'}).rows.map(row=>row.label).sort(),['しかし','そして']);
+  assert.equal(find(c,'しかし',{pos:'名词'}),undefined);
+  const filters=parseFrequencyFilters(new URLSearchParams('kind=connective'),frequencyMetadata(c));
+  assert.equal(filters.kind,'word');assert.equal(filters.pos,'接续词');
+  assert.deepEqual(queryFrequency(c,filters).rows.map(row=>row.label).sort(),['しかし','そして']);
+});
+
+test('definitions preserve Chinese meanings, usage and attribution without guessing missing words or homophone readings', () => {
+  const c = build([question('a',{prompt:'学生にしては上手だ。しかし、猫。霞。学校。'})]);
+  annotateFrequencyCorpus(c,{
+    '学生':[{word:'学生',pos:'noun',readings:['がくせい'],glosses:['學生；在學校學習的人']}],
+    '猫':[{word:'猫',pos:'noun',readings:['ねこ'],glosses:['猫；家猫']}],
+    '霞':[{word:'霞',pos:'noun',readings:['べつのよみ'],glosses:['不该用于这个读音的释义']}],
+  });
+  const student=find(c,'学生');assert.equal(student.definition.meaning,'學生；在學校學習的人');assert.equal(student.definition.source,'wiktionary');assert.equal(student.definition.word,'学生');
+  assert.equal(find(c,'猫').definition.meaning,'猫；家猫');
+  assert.equal(find(c,'霞').definition.source,'missing');assert.equal(find(c,'霞').definition.meaning,'');
+  const grammar=find(c,'にしては',{kind:'grammar'});assert.match(grammar.definition.meaning,/就/);assert.match(grammar.definition.usage,/名词/);
+  assert.equal(find(c,'しかし').definition.source,'editorial');
+  const detail=queryFrequency(c,defaultFrequencyFilters,student.id).detail;assert.deepEqual(detail.definition,student.definition);
+});
+
+test('every grammar and listed conjunction has a meaning and usage; opposite grammar senses stay separate', () => {
+  for(const [label] of grammarExpressions){assert.ok(grammarStudyNotes[label]?.meaning,label);assert.ok(grammarStudyNotes[label]?.usage,label)}
+  for(const [label] of connectiveExpressions){assert.ok(connectiveStudyNotes[label]?.meaning,label);assert.ok(connectiveStudyNotes[label]?.usage,label)}
+  const c=annotateFrequencyCorpus(build([question('a',{prompt:'雨にもかかわらず出かける。年齢にかかわらず参加できる。'})]),{});
+  assert.match(find(c,'にもかかわらず',{kind:'grammar'}).definition.meaning,/尽管/);
+  assert.match(find(c,'にかかわらず',{kind:'grammar'}).definition.meaning,/不论/);
+});
+
+test('Chinese UI placeholder prompts are not Japanese vocabulary and the generated corpus contains aligned definitions',()=>{
+  const c=build([question('a',{prompt:'请选择第 48 题的答案（对应文章或音频中的题号）。',options:[{text:'学校'}]})]);
+  assert.equal(find(c,'题'),undefined);assert.equal(find(c,'学校').occurrences,1);
+  const actual=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
+  assert.equal(actual.definitions.length,actual.terms.length);
+  assert.equal(actual.definitionSummary.matched+actual.definitionSummary.missing,actual.terms.length);
+  for(let i=0;i<actual.terms.length;i++)if(actual.terms[i][3]==='grammar')assert.ok(actual.definitions[i].meaning&&actual.definitions[i].usage,actual.terms[i][0]);
+  assert.ok(find(actual,'学生').definition.meaning);
 });
