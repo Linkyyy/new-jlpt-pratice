@@ -124,3 +124,14 @@ test('reference-grade exports retain cross-level original sources, grades and no
   assert.match(book.worksheets[1].getCell('B10').value,/Jonathan Waller/);
   const bytes=await createFrequencyPdf(result,metadata,'zh',now);assert.match(bytes.toString('latin1'),/%%EOF\s*$/);
 });
+
+test('grammar and idiom exports include whole-expression grades or an explicit ungraded label, plus the grammar reference source', async () => {
+  for (const filters of [{kind:'grammar',grade:'N2',q:'にしては'}, {kind:'idiom',grade:'N3',q:'気に入る'}, {kind:'idiom',grade:'ungraded',q:'腹が立つ'}]) {
+    const result=queryFrequency(corpus,{...defaultFrequencyFilters,...filters},undefined,{allRows:true});assert.ok(result.total>0);
+    const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,'zh',now));
+    assert.equal(book.worksheets[0].getCell('K2').value,filters.grade==='ungraded'?'未分级':filters.grade);
+    assert.match(book.worksheets[1].getCell('B12').value,/Kindrix/);assert.match(book.worksheets[1].getCell('B12').value,/draft/);
+    if(filters.grade==='ungraded')assert.match(book.worksheets[1].getCell('B2').value,/未分级/);
+    assert.match((await createFrequencyPdf(result,metadata,'zh',now)).toString('latin1'),/%%EOF\s*$/);
+  }
+});

@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "revision": "d465bf0ff2dac4e4bf74f3ee6968cc585d14602f6c7647df4905e0041b3a8aca",
+  "revision": "28611372ce798cba6b7a52767ddce24a2c721a26bb36afa908c90a154fc5c144",
   "summary": {
     "questions": 8759,
     "papers": 94,
     "units": 37925,
-    "terms": 16772,
+    "terms": 15190,
     "listeningQuestions": 2634,
     "transcripts": 2633,
     "excludedFragments": 1933,
@@ -13,9 +13,9 @@
     "idiomExpressions": 114
   },
   "definitionSummary": {
-    "matched": 15478,
-    "missing": 1294,
-    "total": 16772
+    "matched": 15103,
+    "missing": 87,
+    "total": 15190
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
@@ -25,6 +25,24 @@
     "sha256": "3e01813305505183b9b2d3624e77d9ef40c8e4a625faf7cd0afd912c4a1e74f7",
     "entries": 8113,
     "note": "Public reference levels, not an official JLPT vocabulary syllabus. Match spelling and reading; retain multiple reference levels when supplied."
+  },
+  "referenceExpressionSource": {
+    "name": "Justin Kindrix and contributors · Japanese Language Data (grammar reference)",
+    "url": "https://github.com/jkindrix/japanese-language-data",
+    "revision": "04014e06019fc9d4af76e6dbb64ec709fe863c4d",
+    "path": "data/grammar/grammar.json",
+    "sha256": "952c709d1448ba1473e7a1a8baa4c9cd59c2149ed8df804e4b51f85ba2ddc442",
+    "license": "CC BY-SA 4.0",
+    "entries": 181,
+    "note": "Unofficial community-curated draft levels, not native-reviewed. Explicit whole-pattern mappings only; no component-word or substring-based level inference."
+  },
+  "qualitySummary": {
+    "excludedTerms": 1582,
+    "reasons": {
+      "personal_or_organization_name": 419,
+      "unverified_word_or_spelling": 1156,
+      "symbol_or_placeholder": 7
+    }
   },
   "levels": [
     "N1",

@@ -1,0 +1,1450 @@
+[
+  {
+    "kind": "grammar",
+    "label": "ている",
+    "level": "N5",
+    "sourceId": "te-imasu-progressive",
+    "sourcePattern": "Verb-て + います",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てある",
+    "level": "N3",
+    "sourceId": "te-aru",
+    "sourcePattern": "Transitive verb-て form + ある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ておく",
+    "level": "N3",
+    "sourceId": "te-oku",
+    "sourcePattern": "Verb-て form + おく",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てしまう",
+    "level": "N3",
+    "sourceId": "te-shimau",
+    "sourcePattern": "Verb-て form + しまう",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てみる",
+    "level": "N3",
+    "sourceId": "te-miru",
+    "sourcePattern": "Verb-て form + みる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ていく",
+    "level": "N3",
+    "sourceId": "te-iku",
+    "sourcePattern": "Verb-て form + いく",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てくる",
+    "level": "N3",
+    "sourceId": "te-kuru",
+    "sourcePattern": "Verb-て form + くる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てもいい",
+    "level": "N4",
+    "sourceId": "te-mo-ii-permission",
+    "sourcePattern": "Verb-て + もいい / もいいです",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てはいけない",
+    "level": "N4",
+    "sourceId": "te-wa-ikenai-prohibition",
+    "sourcePattern": "Verb-て + はいけない / はいけません",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "なくてもいい",
+    "level": "N4",
+    "sourceId": "nakute-mo-ii",
+    "sourcePattern": "Verb-なく + てもいい",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "なければならない",
+    "level": "N4",
+    "sourceId": "nakereba-naranai",
+    "sourcePattern": "Verb-ない stem + なければならない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "たことがある",
+    "level": "N4",
+    "sourceId": "ta-koto-ga-aru",
+    "sourcePattern": "Verb-た + ことがある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ことができる",
+    "level": "N4",
+    "sourceId": "koto-ga-dekiru",
+    "sourcePattern": "V plain non-past + ことができる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ようにする",
+    "level": "N4",
+    "sourceId": "you-ni-suru",
+    "sourcePattern": "Verb plain non-past + ようにする / ようにしている",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ことにする",
+    "level": "N4",
+    "sourceId": "koto-ni-suru-decide",
+    "sourcePattern": "V plain non-past / V ない + ことにする",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ことになる",
+    "level": "N4",
+    "sourceId": "koto-ni-naru-be-decided",
+    "sourcePattern": "V plain non-past / V ない + ことになる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "つもりだ",
+    "level": "N4",
+    "sourceId": "tsumori-intention",
+    "sourcePattern": "Verb (dictionary form) + つもり",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ために",
+    "level": "N3",
+    "sourceId": "tame-ni",
+    "sourcePattern": "V plain / noun + の + ために",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ように",
+    "level": "N3",
+    "sourceId": "you-ni-purpose",
+    "sourcePattern": "V plain non-past (potential / intransitive / ない-form) + ように",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ところだ",
+    "level": "N3",
+    "sourceId": "ta-tokoro",
+    "sourcePattern": "Verb form + ところ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ばかりだ",
+    "level": "N2",
+    "sourceId": "bakari-no",
+    "sourcePattern": "Verb ます-stem / plain form + ばかりの / ばかりだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "たばかり",
+    "level": "N3",
+    "sourceId": "ta-bakari",
+    "sourcePattern": "Verb-た form + ばかり",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ばかりでなく",
+    "level": "N3",
+    "sourceId": "bakari-de-naku",
+    "sourcePattern": "Plain form + ばかりでなく",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "だけでなく",
+    "level": "N3",
+    "sourceId": "dake-de-naku",
+    "sourcePattern": "Plain form + だけでなく",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "だけあって",
+    "level": "N3",
+    "sourceId": "dake-atte-as-expected",
+    "sourcePattern": "Plain form + だけあって",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "だけに",
+    "level": "N3",
+    "sourceId": "dake-ni-precisely",
+    "sourcePattern": "Plain form + だけに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "だけのことはある",
+    "level": "N2",
+    "sourceId": "dake-no-koto-wa-aru",
+    "sourcePattern": "Plain form + だけのことはある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ほど",
+    "level": "N3",
+    "sourceId": "hodo-extent",
+    "sourcePattern": "Noun / verb plain + ほど; also A は B ほど [adj]-ない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ほどではない",
+    "level": "N2",
+    "sourceId": "hodo-dewa-nai",
+    "sourcePattern": "Plain form + ほどではない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "くらい",
+    "level": "N3",
+    "sourceId": "kurai-extent",
+    "sourcePattern": "Noun / verb plain + くらい / ぐらい",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "によって",
+    "level": "N3",
+    "sourceId": "ni-yotte",
+    "sourcePattern": "Noun + によって",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "について",
+    "level": "N3",
+    "sourceId": "ni-tsuite",
+    "sourcePattern": "Noun + について",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に関して",
+    "level": "N3",
+    "sourceId": "ni-kanshite-regarding",
+    "sourcePattern": "Noun + に関して / に関する",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に対して",
+    "level": "N3",
+    "sourceId": "ni-taishite-toward",
+    "sourcePattern": "Noun + に対して",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にとって",
+    "level": "N3",
+    "sourceId": "ni-totte",
+    "sourcePattern": "Noun + にとって",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "として",
+    "level": "N3",
+    "sourceId": "toshite-as",
+    "sourcePattern": "Noun + として",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "において",
+    "level": "N3",
+    "sourceId": "ni-oite-in-at",
+    "sourcePattern": "Noun + において / における",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に応じて",
+    "level": "N2",
+    "sourceId": "ni-oujite-depending",
+    "sourcePattern": "Noun + に応じて",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に従って",
+    "level": "N2",
+    "sourceId": "ni-shitagatte",
+    "sourcePattern": "Noun + にしたがって / V plain + にしたがって",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "につれて",
+    "level": "N3",
+    "sourceId": "ni-tsurete-as",
+    "sourcePattern": "V plain non-past / noun + につれて",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に伴って",
+    "level": "N2",
+    "sourceId": "ni-tomonatte-accompany",
+    "sourcePattern": "Noun / V plain + に伴って / に伴い",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "とともに",
+    "level": "N3",
+    "sourceId": "to-tomoni-together",
+    "sourcePattern": "Noun / V plain + とともに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "一方で",
+    "level": "N3",
+    "sourceId": "ippou-de-one-hand",
+    "sourcePattern": "Plain form + 一方で",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かわりに",
+    "level": "N3",
+    "sourceId": "kawari-ni-instead",
+    "sourcePattern": "V plain / noun + の + 代わりに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "わりに",
+    "level": "N3",
+    "sourceId": "warini-considering",
+    "sourcePattern": "Plain form + わりに(は)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "くせに",
+    "level": "N3",
+    "sourceId": "kuse-ni-despite",
+    "sourcePattern": "Plain form + くせに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "のに",
+    "level": "N3",
+    "sourceId": "noni-although",
+    "sourcePattern": "Plain form + のに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にもかかわらず",
+    "level": "N2",
+    "sourceId": "ni-mo-kakawarazu-despite",
+    "sourcePattern": "Plain form + にもかかわらず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にかかわらず",
+    "level": "N2",
+    "sourceId": "ni-kakawarazu-regardless",
+    "sourcePattern": "Plain form / noun + にかかわらず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものの",
+    "level": "N2",
+    "sourceId": "mono-no-although",
+    "sourcePattern": "Plain form + ものの",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "とはいえ",
+    "level": "N2",
+    "sourceId": "to-wa-ie",
+    "sourcePattern": "Plain form + とはいえ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ながらも",
+    "level": "N1",
+    "sourceId": "nagara-mo",
+    "sourcePattern": "V ます-stem / i-adj / noun + ながらも",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ながら",
+    "level": "N3",
+    "sourceId": "nagara",
+    "sourcePattern": "Verb ます-stem + ながら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "つつある",
+    "level": "N2",
+    "sourceId": "tsutsu-aru",
+    "sourcePattern": "Verb ます-stem + つつある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "つつ",
+    "level": "N2",
+    "sourceId": "tsutsu-while",
+    "sourcePattern": "Verb ます-stem + つつ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "たびに",
+    "level": "N3",
+    "sourceId": "tabi-ni-every-time",
+    "sourcePattern": "V plain non-past / noun-の + たびに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "最中に",
+    "level": "N3",
+    "sourceId": "saichu-in-the-middle",
+    "sourcePattern": "Noun / V 〜ている + 最中",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "うちに",
+    "level": "N3",
+    "sourceId": "uchi-ni",
+    "sourcePattern": "V plain non-past / V ない-form / い-adj / noun-の / な-adj + な + うちに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "間に",
+    "level": "N3",
+    "sourceId": "aida-ni",
+    "sourcePattern": "V 〜ている / noun-の / adj + 間 or 間に",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "以来",
+    "level": "N3",
+    "sourceId": "irai-since",
+    "sourcePattern": "V-て form / noun + 以来",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "てから",
+    "level": "N4",
+    "sourceId": "te-kara-after-doing",
+    "sourcePattern": "Verb-て form + から",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に先立って",
+    "level": "N2",
+    "sourceId": "ni-sakidatte-prior",
+    "sourcePattern": "V plain / noun + に先立って / に先立ち",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にあたって",
+    "level": "N2",
+    "sourceId": "ni-atatte-occasion",
+    "sourcePattern": "V plain non-past / noun + にあたって / にあたり",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "際に",
+    "level": "N2",
+    "sourceId": "sai-ni",
+    "sourcePattern": "V plain / noun + の + 際(に)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "上で",
+    "level": "N3",
+    "sourceId": "ue-de-upon",
+    "sourcePattern": "V-た form / noun + の + 上で",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "上に",
+    "level": "N2",
+    "sourceId": "ue-ni-in-addition",
+    "sourcePattern": "Plain form + 上に",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "上は",
+    "level": "N2",
+    "sourceId": "ue-wa-now",
+    "sourcePattern": "V plain + 上は",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "以上は",
+    "level": "N2",
+    "sourceId": "ijou-since",
+    "sourcePattern": "Plain form + 以上(は)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "からには",
+    "level": "N2",
+    "sourceId": "kara-ni-wa",
+    "sourcePattern": "Plain form + からには",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かと思うと",
+    "level": "N2",
+    "sourceId": "ka-to-omou-to",
+    "sourcePattern": "V-た form + かと思うと / かと思ったら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かのうちに",
+    "level": "N2",
+    "sourceId": "ka-nai-ka-no-uchi-ni",
+    "sourcePattern": "V dict + か + V ない + かのうちに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "次第",
+    "level": "N3",
+    "sourceId": "shidai-depending",
+    "sourcePattern": "Noun + 次第 / V ます-stem + 次第",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "次第で",
+    "level": "N2",
+    "sourceId": "shidai-de",
+    "sourcePattern": "Noun + 次第で / 次第では",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "につき",
+    "level": "N2",
+    "sourceId": "ni-tsuki-due-to",
+    "sourcePattern": "Noun + につき",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "おそれがある",
+    "level": "N2",
+    "sourceId": "osore-ga-aru",
+    "sourcePattern": "V plain / noun + の + 恐れがある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に違いない",
+    "level": "N3",
+    "sourceId": "ni-chigainai-must",
+    "sourcePattern": "Plain form + にちがいない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に決まっている",
+    "level": "N3",
+    "sourceId": "ni-kimatte-iru",
+    "sourcePattern": "Plain form + に決まっている",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "はずだ",
+    "level": "N4",
+    "sourceId": "hazu-expected",
+    "sourcePattern": "Plain form + はず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "わけだ",
+    "level": "N3",
+    "sourceId": "wake-da-meaning",
+    "sourcePattern": "Plain form + わけだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "わけではない",
+    "level": "N3",
+    "sourceId": "wake-dewa-nai",
+    "sourcePattern": "Plain form + わけではない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "わけがない",
+    "level": "N3",
+    "sourceId": "wake-ga-nai",
+    "sourcePattern": "Plain form + わけがない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にほかならない",
+    "level": "N1",
+    "sourceId": "ni-hoka-naranai",
+    "sourcePattern": "Noun + に他ならない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ということだ",
+    "level": "N2",
+    "sourceId": "to-iu-koto-da",
+    "sourcePattern": "Plain form + ということだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "というものだ",
+    "level": "N2",
+    "sourceId": "to-iu-mono-da",
+    "sourcePattern": "Plain form + というものだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "というものではない",
+    "level": "N2",
+    "sourceId": "to-iu-mono-dewa-nai",
+    "sourcePattern": "Plain form + というものではない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "とは限らない",
+    "level": "N3",
+    "sourceId": "to-wa-kagiranai",
+    "sourcePattern": "Plain form + とは限らない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かもしれない",
+    "level": "N4",
+    "sourceId": "kamoshirenai-might",
+    "sourcePattern": "Plain form + かもしれない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ようだ",
+    "level": "N3",
+    "sourceId": "you-da-appearance",
+    "sourcePattern": "Plain form + ようだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "らしい",
+    "level": "N3",
+    "sourceId": "rashii-seems",
+    "sourcePattern": "Plain form / noun + らしい",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "みたいだ",
+    "level": "N3",
+    "sourceId": "mitai-looks-like",
+    "sourcePattern": "Plain form / noun + みたい(だ/です)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かねない",
+    "level": "N2",
+    "sourceId": "kane-nai-might",
+    "sourcePattern": "Verb ます-stem + かねない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かねる",
+    "level": "N2",
+    "sourceId": "kane-ru-hard-to",
+    "sourcePattern": "Verb ます-stem + かねる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ざるを得ない",
+    "level": "N2",
+    "sourceId": "zaru-wo-enai",
+    "sourcePattern": "V negative stem + ざるを得ない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ずにはいられない",
+    "level": "N2",
+    "sourceId": "zu-ni-wa-irarenai",
+    "sourcePattern": "V negative stem + ずにはいられない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ずに",
+    "level": "N3",
+    "sourceId": "zu-ni",
+    "sourcePattern": "Verb negative stem + ずに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ずにはおかない",
+    "level": "N1",
+    "sourceId": "zu-ni-wa-okanai",
+    "sourcePattern": "V negative stem + ずにはおかない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ずにはすまない",
+    "level": "N1",
+    "sourceId": "zu-ni-wa-sumanai",
+    "sourcePattern": "V negative stem + ずにはすまない / ないではすまない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にすぎない",
+    "level": "N2",
+    "sourceId": "ni-suginai",
+    "sourcePattern": "Noun / plain form + にすぎない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "さえ",
+    "level": "N3",
+    "sourceId": "sae-even",
+    "sourcePattern": "Noun + さえ (+ negative or extreme statement)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "までもない",
+    "level": "N2",
+    "sourceId": "made-mo-nai",
+    "sourcePattern": "Verb dict-form + までもない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ことから",
+    "level": "N2",
+    "sourceId": "koto-kara-from-fact",
+    "sourcePattern": "Plain form + ことから",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ことに",
+    "level": "N3",
+    "sourceId": "koto-ni-surprise",
+    "sourcePattern": "i-adj / na-adj (+ な) / V-た + ことに(は)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものだから",
+    "level": "N2",
+    "sourceId": "mono-dakara",
+    "sourcePattern": "Plain form + ものだから / もので",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものなら",
+    "level": "N2",
+    "sourceId": "mono-nara-if-possible",
+    "sourcePattern": "V potential form + ものなら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものだ",
+    "level": "N3",
+    "sourceId": "mono-da-general",
+    "sourcePattern": "Plain form + ものだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものがある",
+    "level": "N2",
+    "sourceId": "mono-ga-aru",
+    "sourcePattern": "Plain form + ものがある",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ものとして",
+    "level": "N2",
+    "sourceId": "mono-to-shite",
+    "sourcePattern": "Noun + ものとして",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にしては",
+    "level": "N2",
+    "sourceId": "ni-shite-wa",
+    "sourcePattern": "Noun + にしては",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にしても",
+    "level": "N3",
+    "sourceId": "ni-shitemo-even",
+    "sourcePattern": "Plain form + にしても",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にしろ",
+    "level": "N2",
+    "sourceId": "ni-shiro-ni-seyo",
+    "sourcePattern": "Plain form + にしろ / にせよ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "としても",
+    "level": "N2",
+    "sourceId": "toshite-mo-even-as",
+    "sourcePattern": "Plain form + としても",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "としたら",
+    "level": "N2",
+    "sourceId": "to-sureba",
+    "sourcePattern": "Plain form + とすれば / とすると / としたら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "たとえ",
+    "level": "N3",
+    "sourceId": "tatoe-temo",
+    "sourcePattern": "たとえ + V-て form + も",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ならでは",
+    "level": "N1",
+    "sourceId": "narade-wa-no",
+    "sourcePattern": "Noun + ならでは(の)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を問わず",
+    "level": "N2",
+    "sourceId": "wo-towazu-regardless",
+    "sourcePattern": "Noun + を問わず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をはじめ",
+    "level": "N3",
+    "sourceId": "wo-hajime-including",
+    "sourcePattern": "Noun + をはじめ(として / とする)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を中心に",
+    "level": "N2",
+    "sourceId": "wo-chuushin-ni-centered",
+    "sourcePattern": "Noun + を中心に(して)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を通して",
+    "level": "N2",
+    "sourceId": "wo-tsuujite-through",
+    "sourcePattern": "Noun + を通じて / を通して",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をもとに",
+    "level": "N2",
+    "sourceId": "wo-motoni-based-on",
+    "sourcePattern": "Noun + をもとに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をきっかけに",
+    "level": "N2",
+    "sourceId": "wo-kikkake-ni",
+    "sourcePattern": "Noun / V plain + をきっかけに(して)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を契機に",
+    "level": "N2",
+    "sourceId": "wo-keiki-ni",
+    "sourcePattern": "Noun + を契機に / を契機として",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をこめて",
+    "level": "N2",
+    "sourceId": "wo-komete",
+    "sourcePattern": "Noun + を込めて",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "抜きで",
+    "level": "N1",
+    "sourceId": "nuki-de",
+    "sourcePattern": "Noun + 抜きで / 抜きでは / 抜きに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に限って",
+    "level": "N2",
+    "sourceId": "ni-kagitte-only",
+    "sourcePattern": "Noun + に限って",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に限らず",
+    "level": "N2",
+    "sourceId": "ni-kagirazu-not-only",
+    "sourcePattern": "Noun + に限らず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "限り",
+    "level": "N3",
+    "sourceId": "kagiri-as-long-as",
+    "sourcePattern": "V plain / i-adj / noun + である + 限り",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に比べて",
+    "level": "N3",
+    "sourceId": "ni-kurabete-compared",
+    "sourcePattern": "Noun + に比べて / に比べ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にわたって",
+    "level": "N2",
+    "sourceId": "ni-wataru-span",
+    "sourcePattern": "Noun + にわたって / にわたり / にわたる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に沿って",
+    "level": "N2",
+    "sourceId": "ni-sotte-along",
+    "sourcePattern": "Noun + に沿って",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にかけて",
+    "level": "N3",
+    "sourceId": "ni-kakete-through",
+    "sourcePattern": "Noun + から + Noun + にかけて",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "からこそ",
+    "level": "N2",
+    "sourceId": "kara-koso-precisely-because",
+    "sourcePattern": "Plain form + からこそ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "おかげで",
+    "level": "N3",
+    "sourceId": "okage-sei-de",
+    "sourcePattern": "V plain / noun-の + おかげで (positive) or せいで (negative)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "せいで",
+    "level": "N3",
+    "sourceId": "okage-sei-de",
+    "sourcePattern": "V plain / noun-の + おかげで (positive) or せいで (negative)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "あまり",
+    "level": "N2",
+    "sourceId": "amari-too-much",
+    "sourcePattern": "V plain / i-adj / na-adj な / noun の + あまり",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "あげく",
+    "level": "N2",
+    "sourceId": "ageku-ni-end-up",
+    "sourcePattern": "V-た form / noun + の + あげく(に)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "結果",
+    "level": "N2",
+    "sourceId": "kekka-result",
+    "sourcePattern": "V-た form / noun + の + 結果",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "一方だ",
+    "level": "N3",
+    "sourceId": "ippou-da-keeps",
+    "sourcePattern": "Verb plain non-past + 一方だ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ばかりか",
+    "level": "N3",
+    "sourceId": "bakari-ka-not-only",
+    "sourcePattern": "Plain form + ばかりか",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "どころか",
+    "level": "N3",
+    "sourceId": "dokoro-ka-far-from",
+    "sourcePattern": "Plain form + どころか",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "どころではない",
+    "level": "N3",
+    "sourceId": "dokoro-dewa-nai-no-time",
+    "sourcePattern": "Noun / V plain + どころではない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にして",
+    "level": "N2",
+    "sourceId": "ni-shite",
+    "sourcePattern": "Noun + にして",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に至るまで",
+    "level": "N2",
+    "sourceId": "ni-itaru-made",
+    "sourcePattern": "Noun + に至るまで",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に至っては",
+    "level": "N1",
+    "sourceId": "ni-itatte-wa",
+    "sourcePattern": "Noun + に至っては",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に至る",
+    "level": "N2",
+    "sourceId": "ni-itaru",
+    "sourcePattern": "Noun + に至る",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にたえる",
+    "level": "N1",
+    "sourceId": "ni-taeru",
+    "sourcePattern": "Verb dict / noun + に堪える",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にたえない",
+    "level": "N1",
+    "sourceId": "ni-taenai",
+    "sourcePattern": "Verb dict / noun + に堪えない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を余儀なくされる",
+    "level": "N1",
+    "sourceId": "wo-yogi-naku-sareru",
+    "sourcePattern": "Noun + を余儀なくされる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を禁じ得ない",
+    "level": "N1",
+    "sourceId": "wo-kinjienai",
+    "sourcePattern": "Noun (emotion) + を禁じ得ない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に足る",
+    "level": "N1",
+    "sourceId": "ni-taru",
+    "sourcePattern": "Verb dict-form / noun + に足る",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "に足りない",
+    "level": "N1",
+    "sourceId": "ni-tari-nai",
+    "sourcePattern": "Noun / V dict-form + に足りない",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "べきだ",
+    "level": "N3",
+    "sourceId": "beki-da",
+    "sourcePattern": "Verb (dictionary form) + べきだ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "べく",
+    "level": "N2",
+    "sourceId": "beku-in-order-to",
+    "sourcePattern": "Verb dict-form + べく",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "べからず",
+    "level": "N1",
+    "sourceId": "bekarazu",
+    "sourcePattern": "V dict-form + べからず / べからざる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "べからざる",
+    "level": "N1",
+    "sourceId": "bekarazu",
+    "sourcePattern": "V dict-form + べからず / べからざる",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "まい",
+    "level": "N2",
+    "sourceId": "mai-not-likely",
+    "sourcePattern": "Verb dict / ます-stem + まい",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かたわら",
+    "level": "N1",
+    "sourceId": "katawara",
+    "sourcePattern": "V plain / noun + の + かたわら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "がてら",
+    "level": "N1",
+    "sourceId": "gatera-while",
+    "sourcePattern": "Verb ます-stem / noun + がてら",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "かたがた",
+    "level": "N1",
+    "sourceId": "katagata-combining",
+    "sourcePattern": "V ます-stem / noun + かたがた",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "そばから",
+    "level": "N2",
+    "sourceId": "sobakara",
+    "sourcePattern": "Verb plain / V-た form + そばから",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "なりに",
+    "level": "N1",
+    "sourceId": "nari-ni-in-own-way",
+    "sourcePattern": "Noun + なりに / なりの",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "なり",
+    "level": "N1",
+    "sourceId": "nari-as-soon-as",
+    "sourcePattern": "V dict-form + なり",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ともなく",
+    "level": "N2",
+    "sourceId": "to-mo-naku",
+    "sourcePattern": "Verb dict-form + ともなく / ともなしに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "とあって",
+    "level": "N2",
+    "sourceId": "to-atte",
+    "sourcePattern": "Plain form + とあって",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "とあれば",
+    "level": "N2",
+    "sourceId": "to-areba",
+    "sourcePattern": "Noun / plain form + とあれば",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "といえども",
+    "level": "N1",
+    "sourceId": "to-iedomo",
+    "sourcePattern": "Plain form + といえども",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "といった",
+    "level": "N3",
+    "sourceId": "to-itta-such-as",
+    "sourcePattern": "Noun + といった + noun",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "といっても",
+    "level": "N3",
+    "sourceId": "to-itte-mo-although",
+    "sourcePattern": "Plain form + と言っても",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "というより",
+    "level": "N3",
+    "sourceId": "to-iu-yori-rather",
+    "sourcePattern": "Plain form + というより",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "というか",
+    "level": "N2",
+    "sourceId": "to-iu-ka",
+    "sourcePattern": "X というか Y",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "にもまして",
+    "level": "N1",
+    "sourceId": "ni-mo-mashite",
+    "sourcePattern": "Noun + にもまして",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をよそに",
+    "level": "N2",
+    "sourceId": "wo-yoso-ni",
+    "sourcePattern": "Noun + をよそに",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "をものともせず",
+    "level": "N1",
+    "sourceId": "wo-mono-to-mo-sezu",
+    "sourcePattern": "Noun + をものともせず(に)",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "を顧みず",
+    "level": "N1",
+    "sourceId": "wo-kaerimi-zu",
+    "sourcePattern": "Noun + を顧みず",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ずくめ",
+    "level": "N2",
+    "sourceId": "zukume-nothing-but",
+    "sourcePattern": "Noun + ずくめ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "だらけ",
+    "level": "N3",
+    "sourceId": "darake-full-of",
+    "sourcePattern": "Noun + だらけ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "まみれ",
+    "level": "N2",
+    "sourceId": "mamire-smeared",
+    "sourcePattern": "Noun + まみれ",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "っぽい",
+    "level": "N3",
+    "sourceId": "ppoi-seems",
+    "sourcePattern": "Noun / i-adj stem / V stem + っぽい",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "気味",
+    "level": "N3",
+    "sourceId": "gimi-tendency",
+    "sourcePattern": "Noun / V ます-stem + 気味",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "っぱなし",
+    "level": "N3",
+    "sourceId": "pponashi-left",
+    "sourcePattern": "Verb ます-stem + っぱなし",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "grammar",
+    "label": "ぬく",
+    "level": "N2",
+    "sourceId": "nuku-fully-do",
+    "sourcePattern": "Verb ます-stem + 抜く",
+    "reviewStatus": "draft"
+  },
+  {
+    "kind": "idiom",
+    "label": "気がする",
+    "level": "N3",
+    "sourceId": "ki-ga-suru-feel-like",
+    "sourcePattern": "Plain form + 気がする",
+    "reviewStatus": "draft"
+  }
+]

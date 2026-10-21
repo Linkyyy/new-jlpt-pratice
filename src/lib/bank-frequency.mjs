@@ -145,7 +145,7 @@ export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'al
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -164,7 +164,7 @@ export function parseFrequencyFilters(params, metadata) {
   }
   // Preserve bookmarked links to the former third tab without exposing it again.
   if (filters.kind === 'connective') { filters.kind = 'word'; filters.pos = '接续词'; }
-  if (filters.grade !== 'all' && (filters.kind !== 'word' || filters.source === 'original')) throw new FrequencyInputError('参考分级仅适用于真题单词。');
+  if (filters.grade !== 'all' && filters.source === 'original') throw new FrequencyInputError('参考分级仅适用于真题词条。');
   if (filters.subtype !== 'all' && filters.category !== 'all' && metadata.subtypes.find(x => x.id === filters.subtype)?.category !== filters.category) throw new FrequencyInputError('子题型与题目类型不一致。');
   const subtype = metadata.subtypes.find(x => x.id === filters.subtype);
   if (filters.level !== 'all' && subtype?.levels && !subtype.levels.includes(filters.level)) throw new FrequencyInputError('子题型与日语等级不一致。');
@@ -177,6 +177,8 @@ export function parseFrequencyFilters(params, metadata) {
 export function frequencyMetadata(corpus) {
   return { version: corpus.version, revision: corpus.revision, summary: corpus.summary, ...(corpus.definitionSummary ? {definitionSummary: corpus.definitionSummary} : {}),
     referenceSource: corpus.referenceSource,
+    referenceExpressionSource: corpus.referenceExpressionSource,
+    qualitySummary: corpus.qualitySummary,
     levels: [...new Set(corpus.questions.map(q => q[2]))].sort(),
     periods: [...new Set(corpus.questions.map(q => q[3]))].sort().reverse(),
     subtypes: [...officialFrequencySubtypes, ...corpus.subtypes.filter(item => !officialFrequencySubtypes.some(official => official.id === item.id))],
@@ -222,7 +224,9 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   });
   const search = frequencySearchText(filters.q), wanted = new Uint8Array(corpus.terms.length);
   corpus.terms.forEach((term, index) => {
-    if (filters.grade && filters.grade !== 'all' && !corpus.referenceLevels?.[index]?.includes(filters.grade)) return;
+    const grades = corpus.referenceLevels?.[index] ?? [];
+    if (filters.grade === 'ungraded' && grades.length) return;
+    if (filters.grade && !['all', 'ungraded'].includes(filters.grade) && !grades.includes(filters.grade)) return;
     if (presence && (presence[index] & lowerMask)) return;
     if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
   });

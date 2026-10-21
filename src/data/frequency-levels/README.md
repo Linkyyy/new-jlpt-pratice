@@ -21,3 +21,11 @@ npm run build:frequency
 ```
 
 构建与运行均使用仓库内快照，不依赖在线词表接口。首次导入对上游数据唯一的修改是抽取表记、读音和等级到紧凑数组；页面只显示其中在现有真题中出现的词。
+
+## 语法与惯用句
+
+语法新增参考来源：Justin Kindrix 及贡献者的 [Japanese Language Data](https://github.com/jkindrix/japanese-language-data)，快照 `04014e06019fc9d4af76e6dbb64ec709fe863c4d`，`data/grammar/grammar.json`。上游为社区整理的 **draft**，尚未经母语专家审核，等级只作复习参考。只抽取站内表达对应的 pattern / level / id / review_status，不引入上游例句、词典、翻译或其他数据集。许可见 [EXPRESSION-LICENSE.txt](EXPRESSION-LICENSE.txt)，哈希和出处见 [expression-source.json](expression-source.json)。本地的修改是建立站内表达到上游完整语法结构的显式映射，统一显示原样的等级；不把语法片段或组成词的等级当成整条表达的等级。
+
+[expression-entries.json](expression-entries.json) 记录 180 条语法及「気がする」的参考分类，每条保留上游 id 和完整结构。复核时从指定快照打开相应 id，核对 pattern、level 与 review_status；需要修改映射时同时更新此文件和来源说明，然后运行 `npm run build:frequency`。
+
+惯用句还可按**整条表达**及已确认的表记变体，精确匹配原有 Waller 词表。例如「気に入る」「気を付ける」。不拆成「気」「入る」「付ける」来推断等级。未在两份资料中找到整条表达的惯用句、语法保持未分级，筛选、列表、详情和导出均明确标记，不自动给所有惯用句强行分配 N1–N5。

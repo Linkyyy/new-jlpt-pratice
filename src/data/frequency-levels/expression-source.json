@@ -1,0 +1,10 @@
+{
+  "name": "Justin Kindrix and contributors · Japanese Language Data (grammar reference)",
+  "url": "https://github.com/jkindrix/japanese-language-data",
+  "revision": "04014e06019fc9d4af76e6dbb64ec709fe863c4d",
+  "path": "data/grammar/grammar.json",
+  "sha256": "952c709d1448ba1473e7a1a8baa4c9cd59c2149ed8df804e4b51f85ba2ddc442",
+  "license": "CC BY-SA 4.0",
+  "entries": 181,
+  "note": "Unofficial community-curated draft levels, not native-reviewed. Explicit whole-pattern mappings only; no component-word or substring-based level inference."
+}

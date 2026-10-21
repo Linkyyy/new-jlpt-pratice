@@ -10,6 +10,7 @@ import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-lexicon.mjs';
 import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
+import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { simplifiedDefinition } from '../src/lib/frequency-simplified.mjs';
 import { frequencySort, frequencyOrders } from '../src/lib/bank-frequency.mjs';
@@ -447,7 +448,7 @@ test('reference grades match exact spellings/readings and remain independent of 
   const detail = queryFrequency(c, {...defaultFrequencyFilters, grade: 'N2', level: 'N1'}, result.rows[0].id).detail;
   assert.deepEqual(detail.examples.map(row => row.id), ['n1']); assert.deepEqual(detail.referenceLevels, ['N2']);
   assert.throws(() => parseFrequencyFilters(new URLSearchParams('grade=official'), frequencyMetadata(c)), FrequencyInputError);
-  assert.throws(() => parseFrequencyFilters(new URLSearchParams('grade=N2&kind=grammar'), frequencyMetadata(c)), FrequencyInputError);
+  assert.equal(parseFrequencyFilters(new URLSearchParams('grade=N2&kind=grammar'), frequencyMetadata(c)).kind, 'grammar');
 });
 test('every sorting metric can reverse direction without switching to occurrence sorting', () => {
   const c = build([question('one', {prompt: '学校。学校。学校。学生。'}), question('two', {period: '202407', prompt: '学生。'})]);
@@ -463,4 +464,52 @@ test('every sorting metric can reverse direction without switching to occurrence
   assert.equal(query(c, {order: 'questions-asc'}).rows[0].label, '学校');
   assert.equal(query(c, {order: 'papers'}).rows[0].label, '学生');
   assert.equal(query(c, {order: 'papers-asc'}).rows[0].label, '学校');
+});
+
+
+test('quality review removes screenshot artifacts, unverified spellings and names, and remaps postings without changing questions', () => {
+  const labels = ['!」「〇〇', ')〇〇', '々:', '々(', 'ージー', 'ード', 'イペント', '学生', '雲', '田中', '東京', 'Tシャツ', 'にしては', '気に入る', '寛大'];
+  const c = {revision:'quality-fixture', terms: labels.map(label => [label, '', '名词', label === 'にしては' ? 'grammar' : label === '気に入る' ? 'idiom' : 'word']),
+    definitions: labels.map(label => ({meaning: ['学生','雲','田中','東京','Tシャツ','にしては','気に入る'].includes(label) ? label : '', usage:'',source:label === 'にしては' || label === '気に入る' ? 'editorial' : 'wiktionary'})),
+    referenceLevels: labels.map(() => []), questions:[['a','imported','N2','202412','reading','r',1,true,0]], units:[['prompt',[0],labels.flatMap((_,i)=>[i,i+1])]], summary:{terms:labels.length}};
+  const questions=JSON.stringify(c.questions);
+  const report=reviewFrequencyCorpus(c,{trustedWords:new Set(['寛大']), referenceReadings:new Set(), tokenize:label=>[{surface_form:label,pos_detail_1:label === '田中'?'固有名詞':'一般',pos_detail_2:'人名'}]});
+  assert.equal(JSON.stringify(c.questions),questions);assert.equal(report.excludedTerms,8);
+  assert.deepEqual(c.terms.map(t=>t[0]),['学生','雲','東京','Tシャツ','にしては','気に入る','寛大']);
+  assert.equal(c.definitions.length,c.terms.length);assert.equal(c.referenceLevels.length,c.terms.length);assert.equal(c.definitionSummary.missing,1);
+  assert.deepEqual(c.units[0][2],[0,8,1,9,2,11,3,12,4,13,5,14,6,15]);
+  assert.ok(report.excluded.every(row=>row.examples[0]==='a'&&row.occurrences>0));
+  assert.ok(report.excluded.some(row=>row.label==='田中'&&row.reason==='personal_or_organization_name'));
+  assert.ok(c.terms.some(row=>row[0]==='寛大')); // A missing Chinese gloss alone never deletes a verified headword.
+});
+test('grammar and idiom levels use whole expressions, support ungraded, and never inherit component-word grades', () => {
+  const c=build([question('expressions',{level:'N1',prompt:'学生にしては上手だ。この店が気に入る。気をつける。気が付く。'})]);
+  annotateFrequencyLevels(c,[['気に入る','きにいる','N3'],['気をつける','きをつける','N2'],['気','き','N5'],['付く','つく','N4']], {name:'vocab'}, [{kind:'grammar',label:'にしては',level:'N2',sourceId:'ni-shite-wa'}],{name:'grammar'});
+  assert.deepEqual(query(c,{kind:'grammar',grade:'N2'}).rows.map(r=>r.label),['にしては']);
+  assert.deepEqual(query(c,{kind:'idiom',grade:'N3'}).rows.map(r=>r.label),['気に入る']);
+  assert.deepEqual(query(c,{kind:'idiom',grade:'N2'}).rows.map(r=>r.label),['気を付ける']);
+  assert.equal(query(c,{kind:'idiom',grade:'N4'}).total,0);
+  assert.deepEqual(query(c,{kind:'idiom',grade:'ungraded'}).rows.map(r=>r.label),['気が付く']);
+  assert.ok(query(c,{kind:'grammar',grade:'ungraded'}).rows.every(r=>r.referenceLevels.length===0));
+  assert.equal(parseFrequencyFilters(new URLSearchParams('kind=idiom&grade=ungraded'),frequencyMetadata(c)).grade,'ungraded');
+});
+test('the rebuilt production index excludes audited artifacts from every query and retains aligned sourced expression grades', () => {
+  const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
+  const report=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/quality-report.json',import.meta.url)));
+  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,8759);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
+  for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
+  assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
+  for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);
+  assert.ok(query(c,{kind:'idiom',grade:'N3'}).total>0);assert.ok(query(c,{kind:'idiom',grade:'ungraded'}).total>0);
+  assert.match(c.referenceExpressionSource.name,/Kindrix/);
+  for(const [, , counts]of c.units)for(let i=0;i<counts.length;i+=2)assert.ok(Number.isSafeInteger(counts[i])&&counts[i]>=0&&counts[i]<c.terms.length);
+});
+
+
+test('reviewed reading corrections require exact original errors and source evidence, and leave alternative readings intact', () => {
+  const c={terms:[['授ける','さづける','动词','word'],['厳密','いむひそか','名词','word'],['灯','あかり','名词','word']]};
+  const dictionary={'授ける':[{readings:['さずける']}],'厳密':[{readings:['げんみつ']}],'灯':[{readings:['とう']}]};
+  const corrected=correctFrequencyReadings(c,dictionary);assert.equal(corrected.length,2);
+  assert.deepEqual(c.terms.map(t=>t[1]),['さずける','げんみつ','あかり']);
+  assert.throws(()=>correctFrequencyReadings({terms:[['授ける','さづける','动词','word']]},{}),/Unverified/);
 });

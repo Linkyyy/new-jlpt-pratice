@@ -1,4 +1,10 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["未分级", "未分類", "Ungraded"],
+  ["真题词条（参考分级）", "実際の問題の語句（参考分類）", "Past-paper terms (reference level)"],
+  ["参考分级仅适用于真题词条。", "参考分類は実際の問題の語句にのみ使用できます。", "Reference levels apply only to past-paper terms."],
+  ["排名 {0}", "順位 {0}", "Rank {0}"],
+  ["参考等级来自公开词表与语法资料，非官方分级；仅显示真题词条，可独立选择试卷等级。未核实的表达保留为未分级。", "公開語彙リスト・文法資料による非公式の参考レベルです。実際の問題の語句のみ表示し、試験のレベルは別に選べます。未確認の表現は未分類のままです。", "Unofficial public vocabulary and grammar references. Shows past-paper terms; paper levels can be filtered independently. Unverified expression levels remain ungraded."],
+  ["语法参考等级：Japanese Language Data，Justin Kindrix 等整理，CC BY-SA 4.0，社区草稿、非官方分级；惯用句仅匹配整条表达，未收录的保持未分级。", "文法の参考レベル：Japanese Language Data、Justin Kindrix 他、CC BY-SA 4.0。コミュニティの草稿で非公式です。慣用句は表現全体を照合し、未収録のものは未分類です。", "Grammar reference levels: Japanese Language Data by Justin Kindrix and contributors, CC BY-SA 4.0; community draft, unofficial. Idioms match complete expressions only; unlisted expressions remain ungraded."],
   ["试卷等级", "試験のレベル", "Paper level"],
   ["词条参考等级", "語彙の参考レベル", "Vocabulary reference level"],
   ["全部参考等级", "すべての参考レベル", "All reference levels"],
