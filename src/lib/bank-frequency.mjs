@@ -159,7 +159,7 @@ export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'al
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词', '复合词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词', '复合词', '片假名词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -225,6 +225,16 @@ function levelPresence(corpus) {
   corpusLevelPresence.set(corpus, presence);
   return presence;
 }
+function matchesPartOfSpeech(corpus, term, index, pos) {
+  if (pos === 'all') return true;
+  if (pos === '复合词') return corpus.compounds?.[index] === true;
+  if (pos === '片假名词') {
+    const normalized = term[0].normalize('NFKC');
+    return /\p{Script=Katakana}/u.test(normalized) && /^[\p{Script=Katakana}ー・]+$/u.test(normalized);
+  }
+  return (corpus.partsOfSpeech?.[index] ?? [term[2]]).includes(pos);
+}
+
 export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const exclusive = filters.exclusive ?? 'all';
   const limit = exclusive === 'all' ? 5 : Number(exclusive.slice(1));
@@ -244,7 +254,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
     if (filters.grade === 'ungraded' && grades.length) return;
     if (filters.grade && !['all', 'ungraded'].includes(filters.grade) && !grades.includes(filters.grade)) return;
     if (presence && (presence[index] & lowerMask)) return;
-    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || (filters.pos === '复合词' ? corpus.compounds?.[index] === true : (corpus.partsOfSpeech?.[index] ?? [term[2]]).includes(filters.pos))) && (!search || frequencySearchText([term[0], term[1], ...(corpus.aliases?.[index] ?? [])].join('\n')).includes(search))) wanted[index] = 1;
+    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || matchesPartOfSpeech(corpus, term, index, filters.pos)) && (!search || frequencySearchText([term[0], term[1], ...(corpus.aliases?.[index] ?? [])].join('\n')).includes(search))) wanted[index] = 1;
   });
   const matched = new Map(); let unitCount = 0;
   for (const unit of corpus.units) {

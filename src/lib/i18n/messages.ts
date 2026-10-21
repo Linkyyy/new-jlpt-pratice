@@ -44,6 +44,8 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["其他写法", "別表記", "Other spellings"],
   ["复合词仅收录可核对的构词组合；词条与组成词分别统计，不能相加当作原文总词数。", "確認できる構成の複合語のみ収録します。語句と構成語を別々に数えるため、合計は原文の総語数ではありません。", "Compounds require verifiable word formation. They and their components count separately, so their sum is not the source token count."],
   ["复合词", "複合語", "Compound words"],
+  ["片假名词", "カタカナ語", "Katakana words"],
+  ["片假名词按词条本身的片假名写法筛选，保留原词性。", "カタカナ語は見出し語自体のカタカナ表記で抽出し、元の品詞を保持します。", "Katakana words are filtered by the headword's own katakana spelling, while preserving their original parts of speech."],
   ["（估级）", "（推定）", " (estimated)"],
   ["站内复核的学习估级，不是公开词表给出的等级。", "本サイトが確認した学習用の推定で、公開リストのレベルではありません。", "Site-reviewed learning estimate, not a grade supplied by a published word list."],
   ["参考等级含公开词表及复核补充；标注“估级”的为站内学习估级。均非官方等级，试卷等级可独立选择。", "公開リストと追加照合による参考分類です。「推定」は本サイトの学習用評価です。すべて非公式で、試験レベルは別に選べます。", "Reference grades combine public lists and reviewed supplements. Estimated labels mark site study estimates. All grades are unofficial; paper levels are independent."],

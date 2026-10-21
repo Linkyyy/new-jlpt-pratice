@@ -25,6 +25,25 @@ const build = questions => { const builder = createFrequencyBuilder(text => toke
 const query = (corpus, overrides = {}) => queryFrequency(corpus, { ...defaultFrequencyFilters, ...overrides });
 const find = (corpus, label, overrides = {}) => query(corpus, { q: label, size: 100, ...overrides }).rows.find(row => row.label === label);
 
+test('katakana filtering recognizes full/half-width headwords but excludes kanji with katakana aliases, preserving grammatical POS', () => {
+  const terms = [
+    ['コンピューター', 'こんぴゅーたー', '名词', 'word'], ['ｺｰﾋｰ', 'こーひー', '名词', 'word'],
+    ['パーティー', 'ぱーてぃー', '名词', 'word'], ['ケース・スタディー', 'けーす・すたでぃー', '名词', 'word'],
+    ['図書館', 'としょかん', '名词', 'word'], ['かたかな', 'かたかな', '名词', 'word'],
+    ['片仮名', 'かたかな', '名词', 'word'], ['ー・', '', '名词', 'word'],
+    ['CDプレーヤー', 'しーでぃーぷれーやー', '名词', 'word'], ['テスト', '', '语法表达', 'grammar'],
+  ];
+  const c = {terms, aliases: terms.map((_, id) => id === 6 ? ['カタカナ'] : []),
+    questions: [['test','imported','N1','202412','vocabulary','test',1,true,0]], papers: [['imported','N1','202412']],
+    units: [['prompt',[0],terms.flatMap((_, id) => [id, id + 1])]], subtypes:[], summary:{}, version:1, revision:'test'};
+  const filters = parseFrequencyFilters(new URLSearchParams({pos:'片假名词'}), frequencyMetadata(c));
+  const rows = queryFrequency(c, filters).rows;
+  assert.deepEqual(new Set(rows.map(row => row.label)), new Set(['コンピューター','ｺｰﾋｰ','パーティー','ケース・スタディー']));
+  assert.ok(rows.every(row => row.pos === '名词'));
+  assert.deepEqual(query(c,{pos:'片假名词',max:2}).rows.map(row => row.label),['ｺｰﾋｰ','コンピューター']);
+  assert.equal(query(c,{pos:'名词'}).total,9);
+});
+
 test('visible text removes scripts and ruby readings, decodes full-width text, and preserves paragraph boundaries', () => {
   assert.equal(frequencyText('<p>問題１&nbsp;<ruby>学校<rt>がっこう</rt></ruby></p><p>学生&#x3002;</p><script>evil()</script>'), '問題1 学校\n学生。');
   assert.equal(frequencyText('男：学生です。\n女：はい。'), '学生です。\nはい。');

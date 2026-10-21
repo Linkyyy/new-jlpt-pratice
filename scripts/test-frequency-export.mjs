@@ -11,6 +11,20 @@ const filters = { ...defaultFrequencyFilters, source: 'original', level: 'N5', p
 const all = queryFrequency(corpus, filters, undefined, { allRows: true });
 const now = new Date('2026-10-20T00:00:00Z');
 
+test('katakana filtering exports only matching rows, preserves POS and localizes its filter description', async () => {
+  const result = queryFrequency(corpus, {...defaultFrequencyFilters, pos:'片假名词', q:'コーヒー'}, undefined, {allRows:true});
+  assert.ok(result.total > 0);
+  assert.ok(result.rows.every(row => /^[\p{Script=Katakana}ー・]+$/u.test(row.label.normalize('NFKC'))));
+  for (const [locale, label] of [['zh','片假名词'],['ja','カタカナ語'],['en','Katakana words']]) {
+    const book = new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,locale,now));
+    assert.equal(book.worksheets[0].rowCount,result.total+1);
+    assert.match(book.worksheets[1].getCell('B2').value,new RegExp(label));
+    assert.equal(book.worksheets[0].getCell('B2').value,result.rows[0].label);
+    assert.ok(result.rows.every(row => row.pos !== '片假名词'));
+  }
+  assert.match((await createFrequencyPdf(result,metadata,'zh',now)).toString('latin1'),/^%PDF-/);
+});
+
 test('Excel is a real workbook containing all filtered rows, numeric counts and query provenance', async () => {
   assert.ok(all.total > 1); assert.equal(all.rows.length, all.total);
   const bytes = await createFrequencyWorkbook(all, metadata, 'zh', now);
