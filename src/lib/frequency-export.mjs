@@ -1,6 +1,7 @@
 import ExcelJS from 'exceljs';
 import PDFDocument from 'pdfkit';
 import path from 'node:path';
+import { defaultFrequencyPdfOptions } from './frequency-pdf-options.mjs';
 
 export const frequencyExportLimit = 25000;
 const translations = {
@@ -69,66 +70,120 @@ export async function createFrequencyWorkbook(result, metadata, locale = 'zh', n
   summary.getColumn(2).alignment = { wrapText: true, vertical: 'top' }; summary.getRow(2).height = 65;
   return Buffer.from(await book.xlsx.writeBuffer());
 }
-export async function createFrequencyPdf(result, metadata, locale = 'zh', now = new Date(), fontPath = path.join(process.cwd(), 'src/data/export-fonts/NotoSansCJKjp-Regular.otf')) {
+export async function createFrequencyPdf(result, metadata, locale = 'zh', now = new Date(), fontPath = path.join(process.cwd(), 'src/data/export-fonts/NotoSansCJKjp-Regular.otf'), options = defaultFrequencyPdfOptions) {
   verifyRows(result);
-  const labels = translations[locale];
-  const doc = new PDFDocument({ size: 'A4', margin: 34, font: fontPath, compress: true, info: { Title: labels.title, Author: 'JLPT Practice', CreationDate: now } });
+  const labels = translations[locale], study = studyLabels[locale];
+  const shown = new Set(options.fields), fontSize = options.fontSize, lineHeight = fontSize * 1.5;
+  const doc = new PDFDocument({ size: options.paper, layout: options.orientation, margin: 34, font: fontPath, compress: true, info: { Title: labels.title, Author: 'JLPT Practice', CreationDate: now } });
   const chunks = [];
   const done = new Promise((resolve, reject) => { doc.on('data', data => chunks.push(data)); doc.on('end', () => resolve(Buffer.concat(chunks))); doc.on('error', reject); });
-  // Attach a rejection handler immediately: a synchronous layout failure must not leave an unhandled rejection.
   done.catch(() => {});
   try {
-    const widths = [30, 147, 126, 65, 65, 94];
-    const headers = [labels.fields[0], labels.fields[1], `${labels.fields[2]} / ${referenceLabel(locale)}`, labels.fields[4], labels.fields[5], labels.fields[6]];
-    const left = 34, right = 561, bottom = 788;
-    let page = 0, y = 0;
-    function header(first = false) {
-      page++;
-      doc.fillColor('#202B46').fontSize(17).text(labels.title, left, 31, { width: right - left });
-      doc.fillColor('#6B7280').fontSize(8).text(`JLPT Practice · ${now.toISOString().slice(0, 10)} · ${result.total} ${labels.rows}`, left, 57, { width: right - left });
-      y = 79;
-      if (first) {
-        const description = frequencyExportDescription(result.filters, metadata, locale);
-        doc.fontSize(8).text(description, left, y, { width: right - left, lineGap: 2 });
-        y = doc.y + 9;
-        doc.fontSize(7.5).text(labels.note, left, y, { width: right - left }); y = doc.y + 12;
-        doc.fontSize(7).text(studyLabels[locale].attribution, left, y, { width: right - left }); y = doc.y + 10;
-        if (metadata.referenceSource || metadata.referenceExpressionSource) { doc.text(referenceNote(locale), left, y, {width: right - left}); y = doc.y + 10; }
-        if (metadata.referenceSource) { doc.text(`${referenceLabel(locale)}: ${metadata.referenceSource.name} · ${metadata.referenceSource.license} · ${metadata.referenceSource.url}`, left, y, {width: right - left}); y = doc.y + 10; }
-        if (metadata.referenceExpressionSource) { doc.text(`${referenceLabel(locale)}: ${metadata.referenceExpressionSource.name} · ${metadata.referenceExpressionSource.license} · ${metadata.referenceExpressionSource.url}`, left, y, {width: right - left}); y = doc.y + 10; }
+    const left = 34, width = doc.page.width - 68, bottom = doc.page.height - 64;
+    const metaLabel = [shown.has('reading') && labels.fields[2], shown.has('level') && referenceLabel(locale)].filter(Boolean).join(' / ');
+    const columns = [
+      ...(shown.has('rank') ? [{key: 'rank', label: labels.fields[0], weight: 0.65}] : []),
+      {key: 'label', label: labels.fields[1], weight: 3},
+      ...(metaLabel ? [{key: 'meta', label: metaLabel, weight: 3}] : []),
+      ...['occurrences', 'questions', 'papers'].filter(key => shown.has(key)).map(key => ({key, label: labels.fields[{occurrences: 4, questions: 5, papers: 6}[key]], weight: 1.5})),
+      ...(options.layout === 'table' ? [
+        {key: 'pos', label: labels.fields[3], weight: 1.4},
+        {key: 'meaning', label: study.meaning, weight: 4},
+        {key: 'usage', label: study.usage, weight: 4.5},
+        {key: 'source', label: study.source, weight: 4},
+      ].filter(column => shown.has(column.key)) : []),
+    ];
+    const weights = columns.reduce((sum, column) => sum + column.weight, 0);
+    const minimum = Math.min(30, width / columns.length / 2);
+    columns.forEach(column => { column.width = minimum + (width - minimum * columns.length) * column.weight / weights; });
+    const glyphWidths = new Map();
+    // Wrap explicitly so even a very long definition can span pages without losing the table heading.
+    function wrap(text, available, size = fontSize) {
+      doc.fontSize(size);
+      const lines = [];
+      for (const paragraph of String(text ?? '').replace(/\t/g, ' ').split('\n')) {
+        let line = '', measured = 0;
+        for (const character of paragraph) {
+          const key = `${size}:${character}`;
+          if (!glyphWidths.has(key)) glyphWidths.set(key, doc.widthOfString(character));
+          const next = glyphWidths.get(key);
+          if (line && measured + next > available - 1) { lines.push(line); line = ''; measured = 0; }
+          line += character; measured += next;
+        }
+        lines.push(line);
       }
-      doc.rect(left, y, right - left, 24).fill('#EEECFF');
-      let x = left;
-      headers.forEach((label, i) => { doc.fillColor('#3E376F').fontSize(8).text(label, x + 4, y + 7, { width: widths[i] - 8, lineBreak: false }); x += widths[i]; });
-      y += 28;
-      doc.fillColor('#7B8495').fontSize(8).text(`${page}`, left, 795, { width: right - left, align: 'right', lineBreak: false });
+      return lines;
     }
-    header(true);
-    if (!result.rows.length) doc.fillColor('#6B7280').fontSize(10).text(labels.empty, left, y + 15);
-    for (const row of result.rows) {
-      const readingAndLevel = [row.reading, row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)].filter(Boolean).join(' · ');
-      const cells = [row.rank, row.label, readingAndLevel, row.occurrences, row.questions, row.papers].map(String);
-      doc.fontSize(8.5);
-      const dataHeight = Math.max(19, ...cells.map((text, i) => doc.heightOfString(text, { width: widths[i] - 8, lineGap: 1 }) + 8));
-      const study = studyLabels[locale];
-      const notes = [
-        `${labels.fields[3]}: ${translated('pos', row.pos, locale)}`,
-        `${study.meaning}: ${row.definition?.meaning || study.missing}`,
-        ...(row.definition?.usage ? [`${study.usage}: ${row.definition.usage}`] : []),
-        `${study.source}: ${definitionSource(row.definition, locale)}`,
-      ];
-      const notesHeight = notes.reduce((sum, text) => sum + doc.heightOfString(text, {width: right - left - 12, lineGap: 1}) + 4, 0);
-      const height = dataHeight + notesHeight + 10;
-      if (y + height > bottom) { doc.addPage(); header(); }
-      if (row.rank % 2 === 0) doc.rect(left, y - 2, right - left, height).fill('#F6F7FB');
+    function textLine(text, x, y, available, size = fontSize, color = '#28324A') {
+      doc.fillColor(color).fontSize(size).text(text, x, y, {width: available, lineBreak: false});
+    }
+    let page = 0, y = 0, contentTop = 79;
+    function heading() {
+      const size = Math.min(9, fontSize), step = size * 1.5;
+      const lines = columns.map(column => wrap(column.label, column.width - 8, size));
+      const height = Math.max(...lines.map(line => line.length)) * step + 12;
+      if (y + height + lineHeight + 12 > bottom) startPage(false);
+      doc.rect(left, y, width, height).fill('#EEECFF');
       let x = left;
-      cells.forEach((text, i) => { doc.fillColor('#28324A').fontSize(8.5).text(text, x + 4, y + 2, { width: widths[i] - 8, lineGap: 1 }); x += widths[i]; });
-      y += dataHeight;
-      for (const note of notes) {
-        doc.fillColor('#525E75').fontSize(8.5).text(note, left + 6, y, {width: right - left - 12, lineGap: 1});
-        y = doc.y + 4;
+      columns.forEach((column, index) => { lines[index].forEach((line, i) => textLine(line, x + 4, y + 6 + i * step, column.width - 8, size, '#3E376F')); x += column.width; });
+      y += height + 4; contentTop = y;
+    }
+    function startPage(table = true) {
+      if (page) doc.addPage();
+      page++;
+      textLine(labels.title, left, 28, width, 17, '#202B46');
+      textLine(`JLPT Practice · ${now.toISOString().slice(0, 10)} · ${result.total} ${labels.rows}`, left, 55, width, 8, '#6B7280');
+      doc.fillColor('#7B8495').fontSize(8).text(String(page), left, doc.page.height - 48, {width, align: 'right', lineBreak: false});
+      y = 79;
+      if (table) heading();
+    }
+    function introduction(text) {
+      for (const line of wrap(text, width, 7)) {
+        if (y + 12 > bottom) startPage(false);
+        textLine(line, left, y, width, 7, '#6B7280'); y += 11;
       }
-      y += 10;
+      y += 6;
+    }
+    startPage(false);
+    introduction(frequencyExportDescription(result.filters, metadata, locale));
+    introduction(labels.note);
+    introduction(study.attribution);
+    if (metadata.referenceSource || metadata.referenceExpressionSource) introduction(referenceNote(locale));
+    for (const source of [metadata.referenceSource, metadata.referenceExpressionSource].filter(Boolean)) introduction(`${referenceLabel(locale)}: ${source.name} · ${source.license} · ${source.url}`);
+    heading();
+    // Both table rows and full-width study notes can continue across pages, including A5/large fonts.
+    function block(lines, widths, shaded) {
+      const total = Math.max(...lines.map(cell => cell.length));
+      let offset = 0;
+      while (offset < total) {
+        if (y + lineHeight + 12 > bottom) startPage();
+        const count = Math.min(total - offset, Math.floor((bottom - y - 12) / lineHeight));
+        const height = count * lineHeight + 12;
+        if (shaded) doc.rect(left, y, width, height).fill('#F6F7FB');
+        let x = left;
+        lines.forEach((cell, index) => {
+          for (let i = 0; i < count; i++) if (cell[offset + i]) textLine(cell[offset + i], x + 4, y + 5 + i * lineHeight, widths[index] - 8);
+          x += widths[index];
+        });
+        y += height; offset += count;
+      }
+    }
+    if (!result.rows.length) textLine(labels.empty, left, y + 15, width, fontSize, '#6B7280');
+    for (const row of result.rows) {
+      const values = {...row,
+        meta: [shown.has('reading') && row.reading, shown.has('level') && (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale))].filter(Boolean).join(' · '),
+        pos: translated('pos', row.pos, locale), meaning: row.definition?.meaning || study.missing,
+        usage: row.definition?.usage ?? '', source: definitionSource(row.definition, locale),
+      };
+      const lines = columns.map(column => wrap(values[column.key], column.width - 8));
+      const notes = options.layout === 'detailed' ? ['pos', 'meaning', 'usage', 'source'].filter(key => shown.has(key) && values[key]).flatMap(key => wrap(`${({pos: labels.fields[3], meaning: study.meaning, usage: study.usage, source: study.source})[key]}: ${values[key]}`, width - 8)) : [];
+      const height = (Math.max(...lines.map(cell => cell.length)) + notes.length) * lineHeight + (notes.length ? 24 : 12) + 5;
+      // Keep ordinary rows intact; oversized rows are split deliberately by block().
+      if (height <= bottom - contentTop && y + height > bottom) startPage();
+      const shaded = row.rank % 2 === 0;
+      block(lines, columns.map(column => column.width), shaded);
+      if (notes.length) block([notes], [width], shaded);
+      y += 5;
     }
     doc.end();
     return await done;

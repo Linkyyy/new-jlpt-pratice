@@ -17,7 +17,8 @@
     "setup:feedback": "node --env-file-if-exists=.env.local scripts/setup-question-feedback.mjs",
     "test:cloud": "node --test scripts/test-cloud-backup.mjs",
     "build:frequency": "node scripts/build-bank-frequency.mjs",
-    "test:frequency": "node --test scripts/test-bank-frequency.mjs"
+    "test:frequency": "node --test scripts/test-bank-frequency.mjs",
+    "test:frequency-export": "node --test scripts/test-frequency-export.mjs scripts/test-frequency-pdf-options.mjs"
   },
   "dependencies": {
     "exceljs": "^4.4.0",
