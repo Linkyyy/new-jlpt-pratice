@@ -30,7 +30,7 @@ export function frequencyExportDescription(filters, metadata, locale = 'zh') {
   const subtypeName = subtype ? (locale === 'zh' ? subtype.label : subtypeNames[subtype.label]?.[locale === 'ja' ? 0 : 1] ?? translated('category', subtype.category, locale)) : labels.all;
   const subtypeLabel = subtype ? [subtypeName, subtype.level, subtype.problem && `#${subtype.problem}`].filter(Boolean).join(' ') : labels.all;
   return [translated('source', filters.source, locale), filters.level === 'all' ? labels.all : filters.level, filters.period === 'all' ? labels.all : filters.period,
-    ...(filters.grade && filters.grade !== 'all' ? [`${referenceLabel(locale)}: ${filters.grade === 'ungraded' ? ungradedLabel(locale) : filters.grade}`, referenceNote(locale)] : []),
+    ...(filters.grade && filters.grade !== 'all' ? [`${referenceLabel(locale)}: ${filters.grade === 'ungraded' ? ungradedLabel(locale) : filters.grade}`] : []),
     ...(filters.exclusive && filters.exclusive !== 'all' ? [translated('exclusive', filters.exclusive, locale), ({ zh: '低等级对照涵盖全部题库、场次、题型和文本；非官方词汇分级', ja: '下位レベルは全問題集・実施回・分野・本文で比較。公式の語彙分類ではありません', en: 'Lower-level comparison covers all banks, sessions, categories and text; not an official vocabulary level' })[locale]] : []),
     translated('kind', filters.kind, locale), translated('category', filters.category, locale), subtypeLabel,
     translated('field', filters.field, locale), translated('pos', filters.pos, locale), translated('order', filters.order, locale),
@@ -40,7 +40,7 @@ function definitionSource(definition, locale) {
   const labels = studyLabels[locale];
   return definition?.source === 'wiktionary' ? `${labels.dictionary} · https://zh.wiktionary.org/wiki/${encodeURIComponent(definition.word ?? '')}` : definition?.source === 'editorial' ? labels.editorial : labels.missing;
 }
-const referenceLabel = locale => ({zh: '参考等级（非官方）', ja: '参考レベル（非公式）', en: 'Reference level (unofficial)'})[locale];
+const referenceLabel = locale => ({zh: '参考等级', ja: '参考レベル', en: 'Reference level'})[locale];
 const ungradedLabel = locale => ({zh: '未分级', ja: '未分類', en: 'Ungraded'})[locale];
 const referenceNote = locale => ({zh: '公开词表与语法资料的非官方分级，仅收录真题词条；未核实的表达保留为未分级。词条等级与试卷等级分别筛选。', ja: '公開語彙リスト・文法資料による非公式分類。実際の問題の語句のみ。未確認の表現は未分類です。語句と試験のレベルは別条件。', en: 'Unofficial public vocabulary and grammar references; past-paper terms only. Unverified expression levels remain ungraded. Term and paper levels are independent.'})[locale];
 function exportCells(row, locale) { return [row.rank, row.label, row.reading, translated('pos', row.pos, locale), row.occurrences, row.questions, row.papers, row.definition?.meaning || studyLabels[locale].missing, row.definition?.usage ?? '', definitionSource(row.definition, locale), row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)]; }
@@ -79,7 +79,7 @@ export async function createFrequencyPdf(result, metadata, locale = 'zh', now = 
   done.catch(() => {});
   try {
     const widths = [30, 147, 126, 65, 65, 94];
-    const headers = [labels.fields[0], labels.fields[1], labels.fields[2], labels.fields[4], labels.fields[5], labels.fields[6]];
+    const headers = [labels.fields[0], labels.fields[1], `${labels.fields[2]} / ${referenceLabel(locale)}`, labels.fields[4], labels.fields[5], labels.fields[6]];
     const left = 34, right = 561, bottom = 788;
     let page = 0, y = 0;
     function header(first = false) {
@@ -93,8 +93,9 @@ export async function createFrequencyPdf(result, metadata, locale = 'zh', now = 
         y = doc.y + 9;
         doc.fontSize(7.5).text(labels.note, left, y, { width: right - left }); y = doc.y + 12;
         doc.fontSize(7).text(studyLabels[locale].attribution, left, y, { width: right - left }); y = doc.y + 10;
+        if (metadata.referenceSource || metadata.referenceExpressionSource) { doc.text(referenceNote(locale), left, y, {width: right - left}); y = doc.y + 10; }
         if (metadata.referenceSource) { doc.text(`${referenceLabel(locale)}: ${metadata.referenceSource.name} · ${metadata.referenceSource.license} · ${metadata.referenceSource.url}`, left, y, {width: right - left}); y = doc.y + 10; }
-        if (metadata.referenceExpressionSource) { doc.text(`${referenceLabel(locale)}: ${metadata.referenceExpressionSource.name} · ${metadata.referenceExpressionSource.license} · ${metadata.referenceExpressionSource.url} · draft / nonofficial`, left, y, {width: right - left}); y = doc.y + 10; }
+        if (metadata.referenceExpressionSource) { doc.text(`${referenceLabel(locale)}: ${metadata.referenceExpressionSource.name} · ${metadata.referenceExpressionSource.license} · ${metadata.referenceExpressionSource.url}`, left, y, {width: right - left}); y = doc.y + 10; }
       }
       doc.rect(left, y, right - left, 24).fill('#EEECFF');
       let x = left;
@@ -105,13 +106,13 @@ export async function createFrequencyPdf(result, metadata, locale = 'zh', now = 
     header(true);
     if (!result.rows.length) doc.fillColor('#6B7280').fontSize(10).text(labels.empty, left, y + 15);
     for (const row of result.rows) {
-      const cells = [row.rank, row.label, row.reading, row.occurrences, row.questions, row.papers].map(String);
+      const readingAndLevel = [row.reading, row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)].filter(Boolean).join(' · ');
+      const cells = [row.rank, row.label, readingAndLevel, row.occurrences, row.questions, row.papers].map(String);
       doc.fontSize(8.5);
       const dataHeight = Math.max(19, ...cells.map((text, i) => doc.heightOfString(text, { width: widths[i] - 8, lineGap: 1 }) + 8));
       const study = studyLabels[locale];
       const notes = [
         `${labels.fields[3]}: ${translated('pos', row.pos, locale)}`,
-        `${referenceLabel(locale)}: ${row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)}`,
         `${study.meaning}: ${row.definition?.meaning || study.missing}`,
         ...(row.definition?.usage ? [`${study.usage}: ${row.definition.usage}`] : []),
         `${study.source}: ${definitionSource(row.definition, locale)}`,

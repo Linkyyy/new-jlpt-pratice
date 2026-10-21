@@ -28,7 +28,7 @@ function DefinitionText({definition, full = false}: {definition: FrequencyDefini
 }
 function TermLabel({row, onSelect}: {row: FrequencyRow; onSelect: () => void}) {
   const {t} = useI18n();
-  return <><button onClick={onSelect} className="max-w-full break-words text-left font-semibold text-slate-900 hover:text-indigo-600 hover:underline" lang="ja">{row.label}</button><p className="mt-1 break-words text-xs font-normal text-slate-500"><span lang="ja">{row.reading}</span>{row.reading && ' · '}{t(row.pos)}</p><p className="mt-1 text-[11px] font-normal text-indigo-600">{t('参考等级')} {row.referenceLevels?.length ? row.referenceLevels.join(' / ') : t('未分级')}</p></>;
+  return <><button onClick={onSelect} className="max-w-full break-words text-left font-semibold text-slate-900 hover:text-indigo-600 hover:underline" lang="ja">{row.label}</button><p className="mt-1 break-words text-xs font-normal text-slate-500"><span lang="ja">{row.reading}</span>{row.reading && ' · '}{t(row.pos)}<span className="ml-2 whitespace-nowrap text-indigo-600">{t('参考等级')} {row.referenceLevels?.length ? row.referenceLevels.join(' / ') : t('未分级')}</span></p></>;
 }
 function queryString(filters: FrequencyFilters) {
   const params = new URLSearchParams();
@@ -71,7 +71,7 @@ function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: 
   }} aria-labelledby="frequency-detail-title" className="fixed inset-0 m-auto max-h-[85dvh] w-[calc(100%-2rem)] max-w-xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-5 text-slate-900 shadow-xl backdrop:bg-slate-900/40 sm:p-6">
     <div className="flex items-start justify-between gap-3"><h2 id="frequency-detail-title" className="text-xl font-bold">{data?.detail?.label ?? t('词条出处')}</h2><button type="button" onClick={() => dialog.current?.close()} aria-label={t('关闭')} className={`${buttonClass} shrink-0 px-3`}>✕</button></div>
     {loading ? <div className="mt-5"><LoadingSkeleton label="正在加载词频统计……" /></div> : error ? <div role="alert" className="mt-5"><p>{t(error)}</p><button className={`${buttonClass} mt-3`} onClick={() => setRetry(value => value + 1)}>{t('重试')}</button></div> : data?.detail ? <>
-      <p className="mt-3 text-xs font-semibold text-indigo-600">{t('参考等级')}：{data.detail.referenceLevels?.length ? data.detail.referenceLevels.join(' / ') : t('未分级')} · {t('非官方分级')}</p>
+      <p className="mt-3 text-xs font-semibold text-indigo-600"><span lang="ja">{data.detail.reading}</span>{data.detail.reading && ' · '}{t(data.detail.pos)}<span className="ml-2 whitespace-nowrap">{t('参考等级')} {data.detail.referenceLevels?.length ? data.detail.referenceLevels.join(' / ') : t('未分级')}</span></p>
       <div className="mt-4 rounded-xl bg-slate-50 p-3"><DefinitionText definition={data.detail.definition} full /></div>
       <p className="mt-3 text-sm leading-6 text-slate-500">{t('出现 {0} 次 · 覆盖 {1} 题 · {2} 个场次', { 0: data.detail.occurrences, 1: data.detail.questions, 2: data.detail.papers })}</p>
       <p className="mt-2 text-xs leading-5 text-slate-500">{t('显示当前筛选范围内的全部出处，可按试卷筛选或翻页。')}</p>
@@ -100,7 +100,7 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const query = queryString(filters);
   const sort = frequencySort(filters.order);
   const metricLabels = {occurrences: '出现次数', questions: '覆盖题目', papers: '覆盖场次', label: '五十音顺序'};
-  const columns = [sort.metric, ...(['rank', 'label', 'definition', 'occurrences', 'questions', 'papers'] as const).filter(key => key !== sort.metric)];
+  const columns = ['rank', sort.metric, ...(['label', 'definition', 'occurrences', 'questions', 'papers'] as const).filter(key => key !== sort.metric)];
   const columnLabels: Record<string, string> = {...metricLabels, rank: '排名', definition: '中文释义／用法', label: '词条'};
   const [retry, setRetry] = useState(0);
   const [filtersOpen, setFiltersOpen] = useState(false);
