@@ -8,7 +8,8 @@ import kuromoji from 'kuromoji';
 import { createFrequencyBuilder, frequencyMetadata } from '../src/lib/bank-frequency.mjs';
 import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
-import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { annotateFrequencyOccurrenceLevels, annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -18,7 +19,7 @@ const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.
 const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-word-supplements.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
 inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 'src/data/frequency-levels/entries.json', 'src/data/frequency-levels/source.json');
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
-inputs.push('src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
+inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }
@@ -70,9 +71,16 @@ quality.morphologyReview = corpus.morphologyReview;
 quality.morphologySummary = Object.groupBy(corpus.morphologyReview, row => row.reason);
 quality.morphologySummary = Object.fromEntries(Object.entries(quality.morphologySummary).map(([reason, rows]) => [reason, {forms: rows.length, occurrences: rows.reduce((sum, row) => sum + row.occurrences, 0)}]));
 delete corpus.morphologyReview;
+quality.variants = mergeFrequencyWordVariants(corpus, dictionaryEntries);
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
 const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));
+gradeReview.occurrence = annotateFrequencyOccurrenceLevels(corpus);
+for (const row of gradeReview.occurrence.added) {
+  const totals = gradeReview.totals[row.kind]; totals.addedTemporary = (totals.addedTemporary ?? 0) + 1; totals.after++;
+}
+const temporarilyGraded = new Set(gradeReview.occurrence.added.map(row => `${row.kind}\t${row.label}\t${row.reading}`));
+gradeReview.unresolved = gradeReview.unresolved.filter(row => !temporarilyGraded.has(`${row.kind}\t${row.label}\t${row.reading}`));
 gradeReview.compounds = annotateFrequencyCompounds(corpus, {tokenize: text => tokenizer.tokenize(text), trustedWords});
 await fs.mkdir(output, { recursive: true });
 await fs.writeFile(path.join(output, 'level-review-report.json'), JSON.stringify(gradeReview, null, 2) + '\n');

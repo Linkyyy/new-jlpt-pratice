@@ -14,7 +14,8 @@ export function annotateFrequencySupplements(corpus, entries, reviewed, source) 
     report.totals[group] ??= {total: 0, before: 0, addedSourced: 0, addedEstimates: 0, after: 0};
     const totals = report.totals[group]; totals.total++;
     if (corpus.referenceLevels[id]?.length) { totals.before++; totals.after++; return 'reference'; }
-    const entry = index.get(keyFor(kind, label, reading));
+    const candidates = [label, ...(corpus.aliases?.[id] ?? [])].map(form => index.get(keyFor(kind, form, reading))).filter(Boolean);
+    const entry = candidates.find(row => row.method !== 'editorial') ?? candidates[0];
     if (!entry) { report.unresolved.push({kind: group, label, reading, reason: 'No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used.'}); return 'ungraded'; }
     if (!entry.levels.length || !entry.levels.every(level => /^N[1-5]$/.test(level))) throw new Error(`Invalid reviewed level: ${label}`);
     corpus.referenceLevels[id] = [...new Set(entry.levels)].sort();

@@ -12,8 +12,9 @@ import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-st
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
-import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { annotateFrequencyOccurrenceLevels, annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { simplifiedDefinition } from '../src/lib/frequency-simplified.mjs';
+import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { frequencySort, frequencyOrders } from '../src/lib/bank-frequency.mjs';
 import { supplementalWordEntries, findSupplementalWordNote } from '../src/lib/frequency-word-supplements.mjs';
 
@@ -586,4 +587,53 @@ test('a homophone surname or noun cannot define a reviewed common verb, adjectiv
   const terms=[['かなり','かなり','副词','word'],['すすむ','すすむ','动词','word'],['わかい','わかい','形容词','word'],['からっと','からっと','副词','word']];
   const c={terms};annotateFrequencyCorpus(c,{'かなり':[{word:'金成',pos:'name',readings:['かなり'],glosses:['姓氏']}]});
   assert.match(c.definitions[0].meaning,/相当/);assert.match(c.definitions[1].meaning,/前进/);assert.match(c.definitions[2].meaning,/年轻/);assert.match(c.definitions[3].meaning,/清爽/);
+});
+
+test('dictionary-attested kana/kanji spellings merge counts, deduplicate shared coverage and preserve both source links', () => {
+  const c=build([question('kanji',{level:'N1',passage:'華々しい。はなばなしい。'}),question('shared',{level:'N1',passage:'華々しい。はなばなしい。'}),question('kana',{level:'N2',prompt:'はなばなしい。'})]);
+  const dictionary={'華々しい':[{word:'華々しい',pos:'adj',readings:['はなばなしい']}],'はなばなしい':[{word:'華々しい',pos:'adj',readings:['はなばなしい']}]};
+  const questions=JSON.stringify(c.questions), references=JSON.stringify(c.units.map(u=>u.slice(0,2)));
+  const total=find(c,'華々しい').occurrences+find(c,'はなばなしい').occurrences;
+  const report=mergeFrequencyWordVariants(c,dictionary);
+  assert.equal(report.mergedTerms,1);assert.equal(JSON.stringify(c.questions),questions);assert.equal(JSON.stringify(c.units.map(u=>u.slice(0,2))),references);
+  const row=find(c,'華々しい');assert.equal(row.occurrences,total);assert.equal(row.occurrences,3);assert.equal(row.questions,3);assert.equal(row.papers,2);assert.deepEqual(row.aliases,['はなばなしい']);
+  assert.deepEqual(query(c,{q:'はなばなしい'}).rows.map(r=>r.label),['華々しい']);
+  assert.equal(queryFrequency(c,{...defaultFrequencyFilters,q:'華々しい'},row.id).detail.examples.length,3);
+  for(const [, , counts]of c.units)assert.equal(new Set(counts.filter((_,i)=>i%2===0)).size,counts.length/2);
+  annotateFrequencyLevels(c,[['はなばなしい','はなばなしい','N1']],{});assert.deepEqual(find(c,'華々しい').referenceLevels,['N1']);
+  // All-corpus lower-level comparison uses the merged occurrence, not the
+  // current spelling, source field or current N1-only filter.
+  assert.equal(query(c,{q:'華々しい',level:'N1',exclusive:'N1'}).total,0);
+});
+test('homophones, mismatched readings and POS never merge merely because a dictionary contains a kanji spelling', () => {
+  const c=build([question('ambiguous',{prompt:'会う。あう。橋。箸。はし。見る。診る。みる。'})]);
+  const dictionary={'みる':[{word:'診る',pos:'verb',readings:['みる']}],'見る':[{word:'見る',pos:'unknown',readings:[]}],'あう':[{word:'会う',pos:'verb',readings:['あう']}],'会う':[{word:'会う',pos:'verb',readings:['あう']}],'合う':[{word:'合う',pos:'verb',readings:['あう']}],'はし':[{word:'橋',pos:'noun',readings:['はし']},{word:'箸',pos:'noun',readings:['はし']}]};
+  assert.equal(mergeFrequencyWordVariants(c,dictionary).mergedTerms,0);
+  const bad={terms:[['華々しい','はなばなしい','形容词','word'],['はなばなしい','はなばなしい','名词','word'],['はなばなしい','ちがう','形容词','word']],units:[],summary:{terms:3}};
+  assert.equal(mergeFrequencyWordVariants(bad,{'はなばなしい':[{word:'華々しい',pos:'adj',readings:['はなばなしい']}]}).mergedTerms,0);
+});
+test('merged spellings preserve a published alias grade ahead of a canonical editorial estimate', () => {
+  const c={terms:[['華々しい','はなばなしい','形容词','word']],aliases:[['はなばなしい']],referenceLevels:[[]]};
+  annotateFrequencySupplements(c,[{kind:'word',label:'はなばなしい',reading:'はなばなしい',levels:['N1'],method:'word-list'}],[{kind:'word',label:'華々しい',reading:'はなばなしい',levels:['N2'],method:'editorial'}],{});
+  assert.deepEqual(c.referenceLevels,[['N1']]);assert.deepEqual(c.referenceBasis,['supplemental']);
+});
+test('provisional grades fill only ungraded single-level N1/N2/N3 words and grammar across the entire imported bank', () => {
+  const labels=['単独一','単独二','単独三','複数','下級共通','既存','原創','同詞','同詞','にしては','慣用表現','四級'];
+  const terms=labels.map((label,id)=>[label,label,id===8?'副词':id===9?'语法表达':id===10?'惯用句':'名词',id===9?'grammar':id===10?'idiom':'word']);
+  const questions=['N1','N2','N3','N4','N5'].map((level,id)=>['q'+id,'imported',level,'202412','reading','reading-short',id,true,id]);questions.push(['original','original','N2','2026','reading','reading-short',1,true,5]);
+  const c={terms,questions,units:[['passage',[0],[0,1,3,1,4,1,5,1,7,1,10,1]],['options',[1],[1,1,3,1,8,1]],['transcript',[2],[2,1,9,1]],['prompt',[3],[4,1,11,1]],['passage',[5],[6,1,0,1]]],referenceLevels:terms.map((_,id)=>id===5?['N5']:[])};
+  const report=annotateFrequencyOccurrenceLevels(c);
+  for(const [id,level]of [[0,'N1'],[1,'N2'],[2,'N3'],[9,'N3']]){assert.deepEqual(c.referenceLevels[id],[level]);assert.equal(c.referenceBasis[id],'occurrence');}
+  for(const id of [3,4,6,7,8,10,11])assert.deepEqual(c.referenceLevels[id],[],labels[id]);
+  assert.deepEqual(c.referenceLevels[5],['N5']);assert.equal(c.referenceBasis[5],'reference');
+  assert.equal(report.added.length,4);assert.equal(annotateFrequencyOccurrenceLevels(c).added.length,0);
+});
+test('production merges 華々しい and はなばなしい and provisional grades remain globally verifiable', () => {
+  const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
+  assert.equal(c.aliases.length,c.terms.length);const row=find(c,'華々しい');assert.ok(row.aliases.includes('はなばなしい'));assert.equal(c.terms.some(t=>t[0]==='はなばなしい'),false);
+  assert.deepEqual(query(c,{q:'はなばなしい'}).rows.map(r=>r.label),['華々しい']);
+  const gradeReport=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/level-review-report.json',import.meta.url)));
+  const ungradedCopy={...c,referenceLevels:c.referenceLevels.map((levels,id)=>c.referenceBasis[id]==='occurrence'?[]:levels),referenceBasis:[...c.referenceBasis]};
+  const report=annotateFrequencyOccurrenceLevels(ungradedCopy);assert.ok(report.added.length>0);assert.equal(report.added.length,gradeReport.occurrence.added.length);
+  assert.deepEqual(ungradedCopy.referenceLevels,c.referenceLevels);assert.ok(queryFrequency(c,{...defaultFrequencyFilters,grade:'N1'},undefined,{allRows:true}).rows.some(r=>r.referenceBasis==='occurrence'));
 });

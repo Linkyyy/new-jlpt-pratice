@@ -43,9 +43,10 @@ function definitionSource(definition, locale) {
 }
 const referenceLabel = locale => ({zh: '参考等级', ja: '参考レベル', en: 'Reference level'})[locale];
 const ungradedLabel = locale => ({zh: '未分级', ja: '未分類', en: 'Ungraded'})[locale];
-const referenceNote = locale => ({zh: '非官方参考分级；标注“估级”为站内复核结果，其他等级来自公开词表及整词写法核对。词条等级与试卷等级分别筛选。', ja: '非公式の参考分類。「推定」は本サイトの学習用評価、その他は公開リストと語句全体の表記照合に基づきます。試験のレベルとは別条件です。', en: 'Unofficial reference levels. Estimated labels identify site-reviewed study estimates; other grades use public lists and verified whole-word variants. Term and paper levels are independent.'})[locale];
+const referenceNote = locale => ({zh: '非官方参考分级；“估级”为站内复核；“暂定”为未分级词汇、语法仅在当前真题库 N1/N2/N3 中某一级出现时按该级补充。其他等级来自公开词表及整词写法核对。', ja: '非公式の参考分類。「推定」は本サイトの評価。「暫定」は未分類の語彙・文法が現在の過去問で N1/N2/N3 の唯一のレベルに出現する場合の分類。他は公開リストと表記照合によります。', en: 'Unofficial reference levels. Estimated marks site study assessments; provisional fills ungraded vocabulary/grammar appearing at only one of N1/N2/N3 in the current past-paper bank. Other grades use public lists and whole-word variants.'})[locale];
 const estimateLabel = locale => ({zh: '（估级）', ja: '（推定）', en: ' (estimated)'})[locale];
-const gradeText = (row, locale) => (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)) + (row.referenceBasis === 'editorial' ? estimateLabel(locale) : '');
+const provisionalLabel = locale => ({zh: '（暂定）', ja: '（暫定）', en: ' (provisional)'})[locale];
+const gradeText = (row, locale) => (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)) + (row.referenceBasis === 'editorial' ? estimateLabel(locale) : row.referenceBasis === 'occurrence' ? provisionalLabel(locale) : '');
 const posText = (row, locale) => translated('pos', row.pos, locale) + (row.compound ? ` / ${translated('pos', '复合词', locale)}` : '');
 function exportCells(row, locale) { return [row.rank, row.label, row.reading, posText(row, locale), row.occurrences, row.questions, row.papers, row.definition?.meaning || studyLabels[locale].missing, row.definition?.usage ?? '', definitionSource(row.definition, locale), gradeText(row, locale)]; }
 function verifyRows(result) {
