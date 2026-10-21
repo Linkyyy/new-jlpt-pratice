@@ -1,0 +1,21 @@
+{
+  "appCommit": "b605832",
+  "date": "2026-10-21",
+  "wordAndGrammarFilters": {
+    "source": "imported",
+    "level": "N1",
+    "grade": "N1"
+  },
+  "idiomFilters": {
+    "source": "imported",
+    "level": "N1",
+    "grade": "all"
+  },
+  "notes": [
+    "All word/grammar screenshots use actual N1 reference grades; not official JLPT grades.",
+    "The idiom example is selected from N1 papers; ungraded expressions are not assigned N1 grades.",
+    "No browser chrome, address bars or URL labels are included.",
+    "PDF screenshot is page 2 of the actual N1 grammar export, excluding source URLs printed on page 1."
+  ],
+  "errors": []
+}
