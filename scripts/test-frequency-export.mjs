@@ -157,3 +157,11 @@ test('verified spelling variants export as one canonical row without inferred gr
   const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(ungraded,metadata,'zh',now));
   assert.equal(book.worksheets[0].getCell('K2').value,'未分级');
 });
+
+test('maximum occurrence filters export every bounded result and record the requested range', async () => {
+  const filters={...defaultFrequencyFilters,source:'imported',kind:'grammar',min:2,max:3,size:1,page:2};
+  const result=queryFrequency(corpus,filters,undefined,{allRows:true});assert.ok(result.total>1);assert.equal(result.rows.length,result.total);assert.ok(result.rows.every(row=>row.occurrences>=2&&row.occurrences<=3));
+  for(const locale of ['zh','ja','en'])assert.match(frequencyExportDescription(filters,metadata,locale),/min=2 · max=3/);
+  const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,'zh',now));assert.equal(book.worksheets[0].rowCount,result.total+1);
+  assert.match(book.worksheets[1].getCell('B2').value,/min=2 · max=3/);
+});

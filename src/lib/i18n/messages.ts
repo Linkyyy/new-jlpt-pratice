@@ -1,4 +1,7 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["不限", "制限なし", "No limit"],
+  ["最多出现次数", "最大出現回数", "Maximum occurrences"],
+  ["最多出现次数不能小于最少出现次数。", "最大出現回数は最小出現回数以上にしてください。", "Maximum occurrences must be at least the minimum."],
   ["其他写法", "別表記", "Other spellings"],
   ["复合词仅收录可核对的构词组合；词条与组成词分别统计，不能相加当作原文总词数。", "確認できる構成の複合語のみ収録します。語句と構成語を別々に数えるため、合計は原文の総語数ではありません。", "Compounds require verifiable word formation. They and their components count separately, so their sum is not the source token count."],
   ["复合词", "複合語", "Compound words"],

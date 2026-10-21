@@ -632,3 +632,20 @@ test('production retains merged spellings and grades only from word lists and re
   assert.deepEqual(c.referenceLevels,verified.referenceLevels);
   assert.deepEqual(c.referenceBasis,verified.referenceBasis);
 });
+
+test('maximum occurrences bounds whole filtered counts inclusively before paging and leaves unlimited queries unchanged', () => {
+  const c=build([question('range-a',{period:'202412',prompt:'学生。学生。学校。学校。雲。'}),question('range-b',{period:'202407',prompt:'学生。'})]);
+  const meta=frequencyMetadata(c),filters=parseFrequencyFilters(new URLSearchParams('min=2&max=2'),meta);
+  assert.deepEqual(queryFrequency(c,filters).rows.map(r=>[r.label,r.occurrences]),[['学校',2]]);
+  assert.deepEqual(query(c,{max:1}).rows.map(r=>r.label),['雲']);
+  assert.equal(find(c,'学生',{period:'202412',max:2}).occurrences,2); // Bound the selected scope, not the corpus-global count.
+  assert.equal(find(c,'学生',{max:2}),undefined);
+  const paged=query(c,{max:2,size:1,page:2});assert.equal(paged.total,2);assert.equal(paged.rows.length,1);assert.equal(paged.totalOccurrences,3);
+  assert.equal(queryFrequency(c,{...filters,max:0}).total,2);
+  for(const raw of ['max=0','max=-1','max=2.5','max=1e2','max=100001','min=3&max=2'])assert.throws(()=>parseFrequencyFilters(new URLSearchParams(raw),meta),FrequencyInputError,raw);
+  assert.equal(parseFrequencyFilters(new URLSearchParams(),meta).max,0);
+  for(const kind of ['grammar','idiom']){
+    const expressions=build([question('expressions',{prompt:kind==='grammar'?'学生にしては上手だ。学生にしては上手だ。':'気に入る。気に入る。'})]);
+    assert.ok(query(expressions,{kind,max:2}).total>0);assert.equal(query(expressions,{kind,max:1}).total,0);
+  }
+});

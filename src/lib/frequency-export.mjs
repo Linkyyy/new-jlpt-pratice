@@ -35,7 +35,7 @@ export function frequencyExportDescription(filters, metadata, locale = 'zh') {
     ...(filters.exclusive && filters.exclusive !== 'all' ? [translated('exclusive', filters.exclusive, locale), ({ zh: '低等级对照涵盖全部题库、场次、题型和文本；非官方词汇分级', ja: '下位レベルは全問題集・実施回・分野・本文で比較。公式の語彙分類ではありません', en: 'Lower-level comparison covers all banks, sessions, categories and text; not an official vocabulary level' })[locale]] : []),
     translated('kind', filters.kind, locale), translated('category', filters.category, locale), subtypeLabel,
     translated('field', filters.field, locale), translated('pos', filters.pos, locale), translated('order', filters.order, locale),
-    `min=${filters.min}`, ...(filters.q ? [`search=${filters.q}`] : [])].join(' · ');
+    `min=${filters.min}`, ...(filters.max ? [`max=${filters.max}`] : []), ...(filters.q ? [`search=${filters.q}`] : [])].join(' · ');
 }
 function definitionSource(definition, locale) {
   const labels = studyLabels[locale];

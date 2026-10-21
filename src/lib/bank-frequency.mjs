@@ -155,7 +155,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
     },
   };
 }
-export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'all', exclusive: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, q: '', page: 1, size: 30 };
+export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'all', exclusive: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, max: 0, q: '', page: 1, size: 30 };
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
@@ -166,12 +166,13 @@ export function parseFrequencyFilters(params, metadata) {
     if (!values.includes(value)) throw new FrequencyInputError('统计筛选条件无效。');
     filters[key] = value;
   }
-  for (const [key, max] of [['page', 100000], ['size', 100], ['min', 100000]]) {
+  for (const [key, max] of [['page', 100000], ['size', 100], ['min', 100000], ['max', 100000]]) {
     if (!params.has(key)) continue;
     const value = params.get(key);
     if (!/^[1-9]\d{0,5}$/.test(value ?? '') || Number(value) > max) throw new FrequencyInputError('统计筛选条件无效。');
     filters[key] = Number(value);
   }
+  if (filters.max && filters.max < filters.min) throw new FrequencyInputError('最多出现次数不能小于最少出现次数。');
   if (params.has('q')) {
     if (params.get('q').length > 80) throw new FrequencyInputError('搜索词最多 80 个字符。');
     filters.q = params.get('q').trim();
@@ -262,7 +263,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
       }
     }
   }
-  let rows = [...matched.values()].filter(row => row.occurrences >= filters.min);
+  let rows = [...matched.values()].filter(row => row.occurrences >= filters.min && (!filters.max || row.occurrences <= filters.max));
   const alphabetical = (a, b) => (corpus.terms[a.id][1] || corpus.terms[a.id][0]).localeCompare(corpus.terms[b.id][1] || corpus.terms[b.id][0], 'ja') || corpus.terms[a.id][0].localeCompare(corpus.terms[b.id][0], 'ja');
   const sort = frequencySort(filters.order);
   const metricValue = row => sort.metric === 'occurrences' ? row.occurrences : row[sort.metric].size;
