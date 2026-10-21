@@ -10,6 +10,7 @@ import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-lexicon.mjs';
 import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
+import { supplementalWordEntries, findSupplementalWordNote } from '../src/lib/frequency-word-supplements.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, value) => error ? reject(error) : resolve(value)));
@@ -334,6 +335,76 @@ test('every grammar and listed conjunction has a meaning and usage; opposite gra
   const c=annotateFrequencyCorpus(build([question('a',{prompt:'雨にもかかわらず出かける。年齢にかかわらず参加できる。'})]),{});
   assert.match(find(c,'にもかかわらず',{kind:'grammar'}).definition.meaning,/尽管/);
   assert.match(find(c,'にかかわらず',{kind:'grammar'}).definition.meaning,/不论/);
+});
+
+test('legacy Japanese POS markers do not discard existing Chinese dictionary meanings', () => {
+  const terms = [
+    ['表現', 'ひょうげん', '表現【ひょうげん】\n名·他サ 表现。', '表现。'],
+    ['申請', 'しんせい', '申請【しんせい】\n名·他サ 申请。', '申请。'],
+    ['集中', 'しゅうちゅう', '?自他サ 集中。', '集中。'],
+    ['重視', 'じゅうし', '重視【じゅうし】\n名?他サ 重视。', '重视。'],
+    ['細密', 'さいみつ', '細密【さいみつ】\n名.形动 细致，精密。\n細密な計画', '细致，精密。'],
+  ];
+  const c = {terms: terms.map(([label, reading]) => [label, reading, '名词', 'word'])};
+  annotateFrequencyCorpus(c, Object.fromEntries(terms.map(([word, reading, gloss]) => [word, [{word, pos: 'unknown', readings: [reading], glosses: [gloss]}]])));
+  terms.forEach(([, , , expected], index) => {
+    assert.equal(c.definitions[index].meaning, expected);
+    assert.equal(c.definitions[index].source, 'wiktionary');
+  });
+});
+
+test('a source variant gloss uses its supplied Chinese meaning without inventing a translation from the reference', () => {
+  const c = {terms: [['棲む','すむ','动词','word'], ['未収録語','みしゅうろくご','名词','word']]};
+  annotateFrequencyCorpus(c, {
+    '棲む': [{word:'棲む', pos:'verb', readings:['すむ'], glosses:['住む (“棲息、生存”)的另一種寫法']}],
+    '未収録語': [{word:'未収録語', pos:'noun', readings:['みしゅうろくご'], glosses:['かなだけの語 (kana)的另一種寫法']}],
+  });
+  assert.equal(c.definitions[0].meaning, '棲息、生存');
+  assert.equal(c.definitions[0].source, 'wiktionary');
+  assert.equal(c.definitions[0].word, '棲む');
+  assert.equal(c.definitions[1].source, 'missing');
+});
+
+test('common missing vocabulary, polite expressions and potential verbs have Chinese definitions and clear expression usage', () => {
+  const labels = [['当たり前','あたりまえ'],['歯','は'],['もうすぐ','もうすぐ'],['話しかける','はなしかける'],['選べる','えらべる'],['ご存じ','ごぞんじ'],['というのも','というのも']];
+  const c = {terms: labels.map(([label, reading]) => [label, reading, '名词', 'word'])};
+  annotateFrequencyCorpus(c, {});
+  assert.deepEqual(c.definitions.map(row => row.source), labels.map(() => 'editorial'));
+  assert.deepEqual(c.definitions.slice(0, 5).map(row => row.meaning), ['理所当然；普通；平常','牙齿；齿状部分','马上；不久就……','向……搭话','可以选择']);
+  assert.match(c.definitions[4].usage, /可能形式/);
+  assert.match(c.definitions[5].usage, /尊敬/);
+  assert.match(c.definitions[6].usage, /理由/);
+});
+
+test('word notes also cover conjunction-tagged rows without losing dedicated conjunction usage', () => {
+  const c = build([question('expressions', {prompt:'いや、まずは勉強する。それと、休む。しかし、続ける。'})]);
+  annotateFrequencyCorpus(c, {});
+  for (const word of ['いや','まずは','それと','しかし']) assert.ok(find(c, word).definition.meaning, word);
+  assert.equal(find(c, 'しかし').pos, '接续词');
+  assert.ok(find(c, 'しかし').definition.usage);
+});
+
+test('reviewed supplements require the exact headword and reading and never translate unknown fragments by resemblance', () => {
+  assert.equal(new Set(supplementalWordEntries.map(row => row.label)).size, supplementalWordEntries.length);
+  for (const entry of supplementalWordEntries) {
+    assert.ok(entry.meaning && entry.readings.length, entry.label);
+    assert.ok(entry.readings.every(reading => reading && !/\s/.test(reading)), entry.label);
+    assert.ok(findSupplementalWordNote(entry.label, entry.readings[0]), entry.label);
+    assert.equal(findSupplementalWordNote(entry.label, 'べつのよみ'), null, entry.label);
+  }
+  assert.equal(findSupplementalWordNote('話しかける','はなしかける').meaning, '向……搭话');
+  for (const label of ['ぎじゅつを','ゃってください','選へる','話しかけるx','未知の人名']) assert.equal(findSupplementalWordNote(label,label), null);
+  const homonym = annotateFrequencyCorpus({terms:[['案','つくえ','名词','word'],['海','かい','名词','word']]}, {});
+  assert.ok(homonym.definitions.every(row => row.source === 'missing'));
+});
+
+test('production Chinese definitions cover over ninety percent of indexed terms and retain the source detail', () => {
+  const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
+  assert.ok(c.definitionSummary.matched / c.definitionSummary.total > 0.9);
+  for (const label of ['表現','申請','当たり前','歯','もうすぐ','話しかける','選べる','ご存じ','というのも']) {
+    const row=find(c,label); assert.ok(row?.definition.meaning,label);
+    assert.deepEqual(queryFrequency(c,defaultFrequencyFilters,row.id).detail.definition,row.definition,label);
+  }
 });
 
 test('Chinese UI placeholder prompts are not Japanese vocabulary and the generated corpus contains aligned definitions',()=>{

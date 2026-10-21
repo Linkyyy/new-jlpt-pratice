@@ -99,3 +99,17 @@ test('idiom Excel and PDF exports retain the full filtered ranking, Chinese mean
   const bytes = await createFrequencyPdf(result, metadata, 'zh', now);
   assert.match(bytes.toString('latin1'), /^%PDF-/); assert.match(bytes.toString('latin1'), /%%EOF\s*$/);
 });
+
+test('new common-word and expression definitions are included in actual exported cells and PDFs', async () => {
+  for (const label of ['表現', '歯', '話しかける', '選べる', 'ご存じ', 'というのも']) {
+    const result = queryFrequency(corpus, {...defaultFrequencyFilters, q: label}, undefined, {allRows: true});
+    const target = result.rows.findIndex(row => row.label === label);
+    assert.ok(target >= 0 && result.rows[target].definition.meaning, label);
+    const book = new ExcelJS.Workbook(); await book.xlsx.load(await createFrequencyWorkbook(result, metadata, 'zh', now));
+    assert.equal(book.worksheets[0].getCell(`H${target + 2}`).value, result.rows[target].definition.meaning);
+    assert.equal(book.worksheets[0].getCell(`I${target + 2}`).value, result.rows[target].definition.usage || '');
+  }
+  const result = queryFrequency(corpus, {...defaultFrequencyFilters, q: '話しかける'}, undefined, {allRows:true});
+  const bytes = await createFrequencyPdf(result, metadata, 'zh', now);
+  assert.match(bytes.toString('latin1'), /^%PDF-/); assert.match(bytes.toString('latin1'), /%%EOF\s*$/);
+});

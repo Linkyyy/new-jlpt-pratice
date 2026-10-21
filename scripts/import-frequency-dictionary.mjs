@@ -33,8 +33,7 @@ for await (const line of createInterface({ input: createReadStream(filename).pip
     }
     if (reading && kana.test(reading + row.word.slice(cursor))) readings.add(hiragana(reading + row.word.slice(cursor)));
   }
-  const legacyReading = glosses.join('\n').match(/【([ぁ-んァ-ヶー]+)】/);
-  if (legacyReading) readings.add(hiragana(legacyReading[1]));
+  for (const match of glosses.join('\n').matchAll(/【([ぁ-んァ-ヶー]+)】/g)) readings.add(hiragana(match[1]));
   if (kana.test(row.word)) readings.add(hiragana(row.word));
   const aliases = new Set([row.word, ...(row.forms ?? []).filter(form => form.tags?.some(tag => ['canonical', 'alternative'].includes(tag))).map(form => form.form)]);
   // Kana spellings are valid only when the source gives that exact reading.

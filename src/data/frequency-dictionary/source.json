@@ -5,5 +5,5 @@
   "url": "https://github.com/Hanbin-Zhang-JPN/nichu-offline-dictionary",
   "snapshotSha256": "4b19151f8b38b2d8d630b96a853227b2230666adc5b058be9eac3c4767860c82",
   "modifications": "保留当前词频索引所需的词头、源明确读音、词性及最多八个中文义项；派生查询视图。",
-  "headwords": 11741
+  "headwords": 11752
 }
