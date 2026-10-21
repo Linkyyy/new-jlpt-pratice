@@ -1,11 +1,9 @@
-import { isActivated } from "@/lib/activation.server";
 import { loadFavoriteQuestions } from "@/data/imported-papers.server";
 import { apiErrorResponse, checkApiRateLimit, readLimitedJson } from "@/lib/request-limits";
 
 export async function POST(request: Request) {
   const limited = checkApiRateLimit(request, { scope: "favorite-question-data", limit: 120, windowSeconds: 60 });
   if (limited) return limited;
-  if (!await isActivated()) return Response.json({ error: "请先输入暗号。" }, { status: 401 });
   let body: unknown;
   try { body = await readLimitedJson(request, 30000); } catch (error) { return apiErrorResponse(error); }
   if (typeof body !== "object" || body === null || !("ids" in body) || !Array.isArray(body.ids) || body.ids.length > 100) return Response.json({ error: "每次最多读取 100 个题目 ID" }, { status: 400 });

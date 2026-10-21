@@ -10,4 +10,4 @@ export function proxy(request: NextRequest) {
   response.headers.set('Cache-Control', 'private, no-store');
   return response;
 }
-export const config = {matcher: ['/((?!api(?:/|$)|access(?:/|$)|_next/|favicon.ico|robots.txt|sitemap.xml|.*\\.(?:png|jpg|jpeg|svg|webp|ico|mp3|pdf|zip)$).*)']};
+export const config = {matcher: ['/frequency/:path*']};

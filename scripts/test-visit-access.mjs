@@ -4,16 +4,19 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import crypto from 'node:crypto';
 import ts from 'typescript';
-import {previousVisit, safeAccessReturnPath} from '../src/lib/visit-access.mjs';
+import {readVisitToken, VISIT_ACCESS_KEY, safeAccessReturnPath} from '../src/lib/visit-access.mjs';
 
-test('legacy visitors are recognized from saved records/settings, without modifying them or granting access to empty/corrupt storage', () => {
-  for (const [key, value] of [['study', {version:1,attempts:[]}], ['favorites',{version:2,entries:[]}], ['preferences',{version:1,home:{},practice:{}}], ['display',{theme:'system',locale:'ja'}]]) {
-    const data = new Map([[`jlpt-practice.${key}.v1`, JSON.stringify(value)]]);
-    assert.equal(previousVisit({getItem:key=>data.get(key)}),true);
-    assert.equal(data.size,1);
-  }
-  for (const value of [null, 'broken JSON', '{}', '{"version":1}', '{"locale":"xx","theme":"system"}']) assert.equal(previousVisit({getItem:()=>value}),false);
-  assert.equal(previousVisit({getItem:()=>{throw new Error('blocked')}}),false);
+test('only the saved access token restores statistics access; study, favorites and display preferences never replace verification', () => {
+  const data = new Map([
+    ['jlpt-practice.study.v1', JSON.stringify({version:1,attempts:[]})],
+    ['jlpt-practice.favorites.v1', JSON.stringify({version:2,entries:[]})],
+    ['jlpt-practice.display.v1', JSON.stringify({theme:'light',locale:'zh'})],
+  ]);
+  const storage={getItem:key=>data.get(key)};
+  assert.equal(readVisitToken(storage),null);
+  data.set(VISIT_ACCESS_KEY,'a'.repeat(64));assert.equal(readVisitToken(storage),'a'.repeat(64));
+  for (const value of ['', '112233', 'corrupt', null]) {data.set(VISIT_ACCESS_KEY,value);assert.equal(readVisitToken(storage),null);}
+  assert.equal(readVisitToken({getItem:()=>{throw new Error('blocked')}}),null);
 });
 test('return targets preserve direct links but cannot redirect outside the site or loop to the access form', () => {
   assert.equal(safeAccessReturnPath('/frequency?grade=N2&level=N1'),'/frequency?grade=N2&level=N1');

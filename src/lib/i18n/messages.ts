@@ -1,4 +1,8 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["输入暗号查看词频统计", "頻度統計の合言葉を入力", "Enter the frequency statistics passphrase"],
+  ["仅首次查看词频统计需要验证，刷题无需暗号。", "頻度統計の初回利用時のみ確認します。問題練習に合言葉は不要です。", "Verification is required only on your first visit to frequency statistics. Practice needs no passphrase."],
+  ["验证并查看", "確認して表示", "Verify and view"],
+  ["返回刷题首页", "問題練習のホームへ", "Back to practice home"],
   ["未分级", "未分類", "Ungraded"],
   ["真题词条（参考分级）", "実際の問題の語句（参考分類）", "Past-paper terms (reference level)"],
   ["参考分级仅适用于真题词条。", "参考分類は実際の問題の語句にのみ使用できます。", "Reference levels apply only to past-paper terms."],
