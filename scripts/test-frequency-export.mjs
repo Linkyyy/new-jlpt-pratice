@@ -138,7 +138,7 @@ test('grammar and idiom exports include whole-expression grades or an explicit u
 
 
 test('exported rows retain compound POS and estimated-grade labels, while unknown grades stay explicitly ungraded', async () => {
-  const row={...all.rows[0], pos:'名词', compound:true, referenceLevels:['N3'],referenceBasis:'editorial'};
+  const row={...all.rows[0], pos:'名词', partsOfSpeech:['名词'], compound:true, referenceLevels:['N3'],referenceBasis:'editorial'};
   const result={...all,total:1,rows:[row]};const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata));
   assert.equal(book.worksheets[0].getCell('D2').value,'名词 / 复合词');assert.equal(book.worksheets[0].getCell('K2').value,'N3（估级）');
   const missing={...result,rows:[{...row,referenceLevels:[],referenceBasis:'ungraded'}]};const empty=new ExcelJS.Workbook();await empty.xlsx.load(await createFrequencyWorkbook(missing,metadata));assert.equal(empty.worksheets[0].getCell('K2').value,'未分级');

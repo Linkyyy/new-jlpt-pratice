@@ -1,5 +1,5 @@
 {
-  "revision": "23c1afa3c02d0f22408bba54063ec76d5259da01d5ebd8915f5bb7dc6ff8956e",
+  "revision": "d659e57f56102eb07ccaa7490d8eed5f3576667ce54e3a383a6cf367fdefd63d",
   "excludedTerms": 1578,
   "reasons": {
     "personal_or_organization_name": 420,
@@ -29272,6 +29272,2092 @@
         "aliases": [
           "とぐ"
         ]
+      }
+    ]
+  },
+  "duplicates": {
+    "groups": 151,
+    "removedRows": 152,
+    "merged": [
+      {
+        "label": "本気",
+        "reading": "ほんき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "主",
+        "reading": "あるじ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "退屈",
+        "reading": "たいくつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不満",
+        "reading": "ふまん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不便",
+        "reading": "ふべん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "失礼",
+        "reading": "しつれい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "反対",
+        "reading": "はんたい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "確か",
+        "reading": "たしか",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無気力",
+        "reading": "むきりょく",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "対等",
+        "reading": "たいとう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "同じ",
+        "reading": "おなじ",
+        "partsOfSpeech": [
+          "连体词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "格別",
+        "reading": "かくべつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "過激",
+        "reading": "かげき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "敏感",
+        "reading": "びんかん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "上手",
+        "reading": "じょうず",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "純",
+        "reading": "じゅん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "もっとも",
+        "reading": "もっとも",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "重",
+        "reading": "おも",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "満足",
+        "reading": "まんぞく",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "精巧",
+        "reading": "せいこう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "複雑",
+        "reading": "ふくざつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "別",
+        "reading": "べつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "適切",
+        "reading": "てきせつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無用",
+        "reading": "むよう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "内的",
+        "reading": "ないてき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "こんな",
+        "reading": "こんな",
+        "partsOfSpeech": [
+          "连体词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ビッグ",
+        "reading": "びっぐ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "急",
+        "reading": "きゅう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "安価",
+        "reading": "あんか",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "単純",
+        "reading": "たんじゅん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "色々",
+        "reading": "いろいろ",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "結構",
+        "reading": "けっこう",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "小型",
+        "reading": "こがた",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "巧み",
+        "reading": "たくみ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "様々",
+        "reading": "さまざま",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "雑",
+        "reading": "ざつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "大げさ",
+        "reading": "おおげさ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "本当",
+        "reading": "ほんとう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "清潔",
+        "reading": "せいけつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "相当",
+        "reading": "そうとう",
+        "partsOfSpeech": [
+          "名词",
+          "副词",
+          "形容词"
+        ],
+        "originalRows": 3
+      },
+      {
+        "label": "高価",
+        "reading": "こうか",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "幸運",
+        "reading": "こううん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "簡略",
+        "reading": "かんりゃく",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "簡潔",
+        "reading": "かんけつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "平凡",
+        "reading": "へいぼん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "オリジナル",
+        "reading": "おりじなる",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無意識",
+        "reading": "むいしき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "単調",
+        "reading": "たんちょう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "恐縮",
+        "reading": "きょうしゅく",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "欲張り",
+        "reading": "よくばり",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "上品",
+        "reading": "じょうひん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ぴったり",
+        "reading": "ぴったり",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "安心",
+        "reading": "あんしん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "秘密",
+        "reading": "ひみつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "親密",
+        "reading": "しんみつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "プライベート",
+        "reading": "ぷらいべーと",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "暇",
+        "reading": "ひま",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "手頃",
+        "reading": "てごろ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "温厚",
+        "reading": "おんこう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "わがまま",
+        "reading": "わがまま",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "完璧",
+        "reading": "かんぺき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "膨大",
+        "reading": "ぼうだい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "寝坊",
+        "reading": "ねぼう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "最適",
+        "reading": "さいてき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不順",
+        "reading": "ふじゅん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不注意",
+        "reading": "ふちゅうい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "異質",
+        "reading": "いしつ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "多額",
+        "reading": "たがく",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "幸い",
+        "reading": "さいわい",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "堪能",
+        "reading": "たんのう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "沢山",
+        "reading": "たくさん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "丁寧",
+        "reading": "ていねい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "大きめ",
+        "reading": "おおきめ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ぼんやり",
+        "reading": "ぼんやり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "粗末",
+        "reading": "そまつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "精一杯",
+        "reading": "せいいっぱい",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "偶然",
+        "reading": "ぐうぜん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不得手",
+        "reading": "ふえて",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "多め",
+        "reading": "おおめ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ホット",
+        "reading": "ほっと",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "多量",
+        "reading": "たりょう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ぺこぺこ",
+        "reading": "ぺこぺこ",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "感心",
+        "reading": "かんしん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "平気",
+        "reading": "へいき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無謀",
+        "reading": "むぼう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "質素",
+        "reading": "しっそ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "本意",
+        "reading": "ほんい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "莫大",
+        "reading": "ばくだい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "贅沢",
+        "reading": "ぜいたく",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "リアル",
+        "reading": "りある",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "メイン",
+        "reading": "めいん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "頑丈",
+        "reading": "がんじょう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "知的",
+        "reading": "ちてき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "短気",
+        "reading": "たんき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "モダン",
+        "reading": "もだん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "有数",
+        "reading": "ゆうすう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "邪魔",
+        "reading": "じゃま",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無知",
+        "reading": "むち",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "確定",
+        "reading": "かくてい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "頑固",
+        "reading": "がんこ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ごろごろ",
+        "reading": "ごろごろ",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "とことん",
+        "reading": "とことん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "黄色",
+        "reading": "きいろ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "平行",
+        "reading": "へいこう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ストレート",
+        "reading": "すとれーと",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "絶大",
+        "reading": "ぜつだい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ゆううつ",
+        "reading": "ゆううつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "平ら",
+        "reading": "たいら",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "抜群",
+        "reading": "ばつぐん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "固有",
+        "reading": "こゆう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "億劫",
+        "reading": "おっくう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "高性能",
+        "reading": "こうせいのう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "タフ",
+        "reading": "たふ",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "煩雑",
+        "reading": "はんざつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "凡庸",
+        "reading": "ぼんよう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "純粋",
+        "reading": "じゅんすい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "気の毒",
+        "reading": "きのどく",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不自由",
+        "reading": "ふじゆう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "余分",
+        "reading": "よぶん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "乱暴",
+        "reading": "らんぼう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "淡白",
+        "reading": "たんぱく",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "裏腹",
+        "reading": "うらはら",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不向き",
+        "reading": "ふむき",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "臆病",
+        "reading": "おくびょう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "フェア",
+        "reading": "ふぇあ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "利口",
+        "reading": "りこう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "多彩",
+        "reading": "たさい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "過度",
+        "reading": "かど",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "安静",
+        "reading": "あんせい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "遥か",
+        "reading": "はるか",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "けち",
+        "reading": "けち",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "単一",
+        "reading": "たんいつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "非常識",
+        "reading": "ひじょうしき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "少量",
+        "reading": "しょうりょう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "閑静",
+        "reading": "かんせい",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "過密",
+        "reading": "かみつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "長め",
+        "reading": "ながめ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "コンスタント",
+        "reading": "こんすたんと",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "入念",
+        "reading": "にゅうねん",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "垂直",
+        "reading": "すいちょく",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "快調",
+        "reading": "かいちょう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "不平",
+        "reading": "ふへい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "でたらめ",
+        "reading": "でたらめ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "気がかり",
+        "reading": "きがかり",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "露骨",
+        "reading": "ろこつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "均等",
+        "reading": "きんとう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "新奇",
+        "reading": "しんき",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "洋風",
+        "reading": "ようふう",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "痛烈",
+        "reading": "つうれつ",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "頑迷",
+        "reading": "がんめい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "敏捷",
+        "reading": "びんしょう",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      }
+    ],
+    "retainedAmbiguous": [
+      {
+        "label": "はく",
+        "reading": "はく",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "かなり",
+        "reading": "かなり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "まま",
+        "reading": "まま",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "バラバラ",
+        "reading": "ばらばら",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ふつう",
+        "reading": "ふつう",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "普通",
+        "reading": "ふつう",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "格別",
+        "reading": "かくべつ",
+        "partsOfSpeech": [
+          "名词",
+          "副词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "かかる",
+        "reading": "かかる",
+        "partsOfSpeech": [
+          "动词",
+          "连体词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "たつ",
+        "reading": "たつ",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "よく",
+        "reading": "よく",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "たま",
+        "reading": "たま",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "もっとも",
+        "reading": "もっとも",
+        "partsOfSpeech": [
+          "副词",
+          "形容词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "もつ",
+        "reading": "もつ",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "なす",
+        "reading": "なす",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "いかん",
+        "reading": "いかん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "略",
+        "reading": "りゃく",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "来る",
+        "reading": "くる",
+        "partsOfSpeech": [
+          "动词",
+          "连体词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "かく",
+        "reading": "かく",
+        "partsOfSpeech": [
+          "动词",
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "いくら",
+        "reading": "いくら",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ゆう",
+        "reading": "ゆう",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "とう",
+        "reading": "とう",
+        "partsOfSpeech": [
+          "副词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ひとり",
+        "reading": "ひとり",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "とく",
+        "reading": "とく",
+        "partsOfSpeech": [
+          "名词",
+          "副词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "思い切り",
+        "reading": "おもいきり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "うっかり",
+        "reading": "うっかり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "さかん",
+        "reading": "さかん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "どきどき",
+        "reading": "どきどき",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "だいたい",
+        "reading": "だいたい",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "にこにこ",
+        "reading": "にこにこ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ばん",
+        "reading": "ばん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "一見",
+        "reading": "いっけん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "平常",
+        "reading": "へいじょう",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "さく",
+        "reading": "さく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ぎりぎり",
+        "reading": "ぎりぎり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "いか",
+        "reading": "いか",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "至急",
+        "reading": "しきゅう",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "元来",
+        "reading": "がんらい",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "からから",
+        "reading": "からから",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ふく",
+        "reading": "ふく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "近頃",
+        "reading": "ちかごろ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "しょう",
+        "reading": "しょう",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "極",
+        "reading": "ごく",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "がらがら",
+        "reading": "がらがら",
+        "partsOfSpeech": [
+          "副词",
+          "名词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ばらばら",
+        "reading": "ばらばら",
+        "partsOfSpeech": [
+          "副词",
+          "名词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "精一杯",
+        "reading": "せいいっぱい",
+        "partsOfSpeech": [
+          "副词",
+          "形容词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "そもそも",
+        "reading": "そもそも",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ほっと",
+        "reading": "ほっと",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "急ぎ",
+        "reading": "いそぎ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "わく",
+        "reading": "わく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "したたか",
+        "reading": "したたか",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "みつ",
+        "reading": "みつ",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "おなじ",
+        "reading": "おなじ",
+        "partsOfSpeech": [
+          "连体词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "余計",
+        "reading": "よけい",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "無理やり",
+        "reading": "むりやり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "一体",
+        "reading": "いったい",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ぜったい",
+        "reading": "ぜったい",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "そこそこ",
+        "reading": "そこそこ",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "めった",
+        "reading": "めった",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "いらいら",
+        "reading": "いらいら",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "あく",
+        "reading": "あく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "年中",
+        "reading": "ねんじゅう",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "一目",
+        "reading": "いちもく",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ぶつ",
+        "reading": "ぶつ",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "根こそぎ",
+        "reading": "ねこそぎ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "元々",
+        "reading": "もともと",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "およそ",
+        "reading": "およそ",
+        "partsOfSpeech": [
+          "副词",
+          "连体词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "是非",
+        "reading": "ぜひ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "よし",
+        "reading": "よし",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "人一倍",
+        "reading": "ひといちばい",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "りん",
+        "reading": "りん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "今更",
+        "reading": "いまさら",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "当て",
+        "reading": "あて",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "そこら",
+        "reading": "そこら",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "しっくり",
+        "reading": "しっくり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "何分",
+        "reading": "なにぶん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "イライラ",
+        "reading": "いらいら",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ピン",
+        "reading": "ぴん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "転",
+        "reading": "てん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
+      },
+      {
+        "label": "ふつふつ",
+        "reading": "ふつふつ",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "reason": "homonym_or_insufficient_evidence"
       }
     ]
   }

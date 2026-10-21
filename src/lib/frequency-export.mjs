@@ -46,7 +46,7 @@ const ungradedLabel = locale => ({zh: '未分级', ja: '未分類', en: 'Ungrade
 const referenceNote = locale => ({zh: '非官方参考分级；标注“估级”为站内复核结果，其他等级来自公开词表及整词写法核对。词条等级与试卷等级分别筛选。', ja: '非公式の参考分類。「推定」は本サイトの学習用評価、その他は公開リストと語句全体の表記照合に基づきます。試験のレベルとは別条件です。', en: 'Unofficial reference levels. Estimated labels identify site-reviewed study estimates; other grades use public lists and verified whole-word variants. Term and paper levels are independent.'})[locale];
 const estimateLabel = locale => ({zh: '（估级）', ja: '（推定）', en: ' (estimated)'})[locale];
 const gradeText = (row, locale) => (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)) + (row.referenceBasis === 'editorial' ? estimateLabel(locale) : '');
-const posText = (row, locale) => translated('pos', row.pos, locale) + (row.compound ? ` / ${translated('pos', '复合词', locale)}` : '');
+const posText = (row, locale) => (row.partsOfSpeech ?? [row.pos]).map(pos => translated('pos', pos, locale)).join(' / ') + (row.compound ? ` / ${translated('pos', '复合词', locale)}` : '');
 function exportCells(row, locale) { return [row.rank, row.label, row.reading, posText(row, locale), row.occurrences, row.questions, row.papers, row.definition?.meaning || studyLabels[locale].missing, row.definition?.usage ?? '', definitionSource(row.definition, locale), gradeText(row, locale)]; }
 function verifyRows(result) {
   if (result.rows.length !== result.total) throw new Error('Export requires the entire filtered result');

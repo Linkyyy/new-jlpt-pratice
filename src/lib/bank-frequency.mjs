@@ -244,7 +244,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
     if (filters.grade === 'ungraded' && grades.length) return;
     if (filters.grade && !['all', 'ungraded'].includes(filters.grade) && !grades.includes(filters.grade)) return;
     if (presence && (presence[index] & lowerMask)) return;
-    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || (filters.pos === '复合词' ? corpus.compounds?.[index] === true : term[2] === filters.pos)) && (!search || frequencySearchText([term[0], term[1], ...(corpus.aliases?.[index] ?? [])].join('\n')).includes(search))) wanted[index] = 1;
+    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || (filters.pos === '复合词' ? corpus.compounds?.[index] === true : (corpus.partsOfSpeech?.[index] ?? [term[2]]).includes(filters.pos))) && (!search || frequencySearchText([term[0], term[1], ...(corpus.aliases?.[index] ?? [])].join('\n')).includes(search))) wanted[index] = 1;
   });
   const matched = new Map(); let unitCount = 0;
   for (const unit of corpus.units) {
@@ -271,6 +271,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const total = rows.length, totalOccurrences = rows.reduce((n, row) => n + row.occurrences, 0);
   const page = options.allRows ? 1 : Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
   const shape = row => ({ aliases: corpus.aliases?.[row.id] ?? [], id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size,
+    partsOfSpeech: corpus.partsOfSpeech?.[row.id] ?? [corpus.terms[row.id][2]],
     referenceLevels: corpus.referenceLevels?.[row.id] ?? [],
     referenceBasis: corpus.referenceBasis?.[row.id] ?? 'reference', compound: corpus.compounds?.[row.id] ?? false,
     definition: corpus.definitions?.[row.id] ?? {meaning: '', usage: '', source: 'missing'},
