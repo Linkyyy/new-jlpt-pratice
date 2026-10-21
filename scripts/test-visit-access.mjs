@@ -26,7 +26,7 @@ test('return targets preserve direct links but cannot redirect outside the site 
 test('browser tokens are opaque, cookie persistence is long-lived, and malformed or stale tokens are rejected', () => {
   const exports = {};
   const source = fs.readFileSync(new URL('../src/lib/browser-access.server.ts', import.meta.url),'utf8');
-  vm.runInNewContext(ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,{exports,Buffer,require: name=>name==='node:crypto'?crypto:{ACTIVATION_CODE_DIGEST:crypto.createHash('sha256').update('112233').digest('hex')}});
+  vm.runInNewContext(ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,{exports,Buffer,process:{env:{}},require: name=>name==='node:crypto'?crypto:{ACTIVATION_CODE_DIGEST:crypto.createHash('sha256').update('112233').digest('hex')}});
   const token=exports.browserAccessToken();
   assert.match(token,/^[a-f0-9]{64}$/); assert.equal(exports.verifyBrowserAccessToken(token),true);
   for (const value of [undefined, null, 123, '112233', 'a'.repeat(64), token+'x']) assert.equal(exports.verifyBrowserAccessToken(value),false);

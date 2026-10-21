@@ -4,10 +4,15 @@ import { loadFavoriteQuestions } from '@/data/imported-papers.server';
 import { parseTermStudyKey } from '@/lib/term-study-data';
 import { findFrequencyTerm, loadFrequencyCorpus } from '@/lib/bank-frequency.server';
 import { apiErrorResponse, checkApiRateLimit } from '@/lib/request-limits';
+import { checkFrequencyAccess } from '@/lib/frequency-access.server';
 
 export async function GET(request: Request) {
+  const access = checkFrequencyAccess(request);
+  if (access) return access;
   const denied = checkApiRateLimit(request, { scope: 'bank-frequency', limit: 60, windowSeconds: 60 });
   if (denied) return denied;
+  const hourly = checkApiRateLimit(request, { scope: 'bank-frequency-hour', limit: 1200, windowSeconds: 3600 });
+  if (hourly) return hourly;
   try {
     const url = new URL(request.url);
     if (url.search.length > 2000) throw new FrequencyInputError('统计筛选条件无效。');
@@ -37,7 +42,7 @@ export async function GET(request: Request) {
       });
     }
     return Response.json(result, {
-      headers: { 'Cache-Control': 'public, max-age=60, s-maxage=300, stale-while-revalidate=600', 'X-Content-Type-Options': 'nosniff' },
+      headers: { 'Cache-Control': 'private, no-store', 'X-Content-Type-Options': 'nosniff' },
     });
   } catch (error) {
     if (error instanceof FrequencyInputError) return Response.json({ error: error.message }, { status: 400, headers: { 'Cache-Control': 'no-store' } });

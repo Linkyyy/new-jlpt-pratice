@@ -4,12 +4,18 @@ import { FrequencyInputError, parseFrequencyFilters, queryFrequency } from '@/li
 import { loadFrequencyCorpus } from '@/lib/bank-frequency.server';
 import { createFrequencyPdf, createFrequencyWorkbook, frequencyExportLimit } from '@/lib/frequency-export.mjs';
 import { apiErrorResponse, checkApiRateLimit, HttpRequestError } from '@/lib/request-limits';
+import { checkFrequencyAccess } from '@/lib/frequency-access.server';
 
 export const maxDuration = 60;
 let active = 0;
 export async function GET(request: Request) {
+  const access = checkFrequencyAccess(request);
+  if (access) return access;
+  if (process.env.FREQUENCY_EXPORT_ENABLED === 'false') return apiErrorResponse(new HttpRequestError(503, '导出暂时关闭，请稍后重试。', 300));
   const denied = checkApiRateLimit(request, { scope: 'frequency-export', limit: 6, windowSeconds: 60 });
   if (denied) return denied;
+  const hourly = checkApiRateLimit(request, { scope: 'frequency-export-hour', limit: 20, windowSeconds: 3600 });
+  if (hourly) return hourly;
   if (active >= 1) return apiErrorResponse(new HttpRequestError(429, '导出正在处理中，请稍后重试。', 5));
   active++;
   try {

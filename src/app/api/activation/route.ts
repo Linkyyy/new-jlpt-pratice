@@ -3,11 +3,16 @@ import { PASSPHRASE_REQUIRED } from "@/lib/access-config.server";
 import { verifyActivationCode } from "@/lib/activation.server";
 import { ACTIVATION_COOKIE, ACTIVATION_MAX_AGE, browserAccessToken, verifyBrowserAccessToken } from '@/lib/browser-access.server';
 import { apiErrorResponse, checkApiRateLimit, readLimitedJson } from "@/lib/request-limits";
+import { checkApiOrigin } from '@/lib/request-security';
 
 export async function POST(request: Request) {
+  const origin = checkApiOrigin(request);
+  if (origin) return origin;
   if (!PASSPHRASE_REQUIRED) return Response.json({ activated: true, required: false }, { headers: { "Cache-Control": "no-store" } });
   const limited = checkApiRateLimit(request, { scope: "activation", limit: 20, windowSeconds: 60 });
   if (limited) return limited;
+  const hourly = checkApiRateLimit(request, { scope: 'activation-hour', limit: 100, windowSeconds: 3600 });
+  if (hourly) return hourly;
   let input: unknown;
   try { input = await readLimitedJson(request, 1000); } catch (error) { return apiErrorResponse(error); }
   const data = typeof input === 'object' && input !== null ? input as Record<string, unknown> : {};
