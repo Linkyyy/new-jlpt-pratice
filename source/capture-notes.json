@@ -1,0 +1,28 @@
+{
+  "appCommit": "d888d5f",
+  "filters": {
+    "source": "imported",
+    "level": "N1",
+    "grade": "N1",
+    "kind": "grammar",
+    "min": 5,
+    "order": "occurrences-asc"
+  },
+  "pdfOptions": {
+    "layout": "detailed",
+    "paper": "A4",
+    "orientation": "portrait",
+    "fontSize": 11,
+    "hidden": [
+      "occurrences",
+      "questions",
+      "papers",
+      "source"
+    ]
+  },
+  "notes": [
+    "Screenshots show the actual app and its own PDF export, not recreated UI.",
+    "The PDF table is cropped to omit introduction/source URLs and later entries.",
+    "No entry text, count or reference level is edited."
+  ]
+}
