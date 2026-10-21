@@ -8,7 +8,7 @@ import test from "node:test";
 import ts from "typescript";
 
 const require = createRequire(import.meta.url);
-const compiled = Object.fromEntries(["cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
+const compiled = Object.fromEntries(["term-study-data", "cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
 const base = "https://jlpt.example";
 const emptyBackup = () => ({ format: "jlpt-practice-backup", version: 1, exportedAt: new Date().toISOString(), favorites: { version: 2, folders: [{ id: "default", name: "默认收藏夹" }], entries: [] }, study: { version: 1, attempts: [], activityDays: [] } });
 function environment(configured = true) {
@@ -248,4 +248,13 @@ test("D1 backups retain personal preferences and display settings through upload
   const invalid = structuredClone(data); invalid.preferences.practice.fontSize = 99;
   assert.equal((await e.write(user.cookie, invalid, cleared.backup.revision)).status, 400);
   assert.deepEqual((await (await e.read(user.cookie)).json()).data.preferences, data.preferences);
+});
+
+test('cloud backups retain term review states and history clearing preserves them', async()=>{
+ const e=environment(),user=await e.auth(),data=emptyBackup(),now=e.now();
+ const identity={kind:'word',label:'華々しい',reading:'はなばなしい',pos:'形容词'};
+ data.terms={version:1,entries:[{...identity,key:JSON.stringify([identity.kind,identity.label,identity.reading,identity.pos]),meaning:'华丽；壮烈',usage:'',savedAt:now,updatedAt:now,reviewedAt:now,reviews:1,status:'mastered'}]};
+ assert.equal((await e.write(user.cookie,data)).status,200);const saved=await(await e.read(user.cookie)).json();assert.deepEqual(saved.data.terms,data.terms);
+ assert.equal((await removeHistory(e,user.cookie,null,saved.backup.revision)).status,200);const cleared=await(await e.read(user.cookie)).json();assert.deepEqual(cleared.data.terms,data.terms);
+ const invalid=structuredClone(data);invalid.terms.entries[0].status='invalid';assert.equal((await e.write(user.cookie,invalid,cleared.backup.revision)).status,400);assert.deepEqual((await(await e.read(user.cookie)).json()).data.terms,data.terms);
 });

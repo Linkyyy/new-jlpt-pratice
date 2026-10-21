@@ -7,7 +7,8 @@ import ts from "typescript";
 
 const require = createRequire(import.meta.url), key = "jlpt-practice.preferences.v1";
 const compile = name => ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-const validation = {}; vm.runInNewContext(compile("backup-validation"), { exports: validation });
+const terms = {}; vm.runInNewContext(compile("term-study-data"), {exports: terms});
+const validation = {}; vm.runInNewContext(compile("backup-validation"), { exports: validation, require: name => name === "./term-study-data" ? terms : require(name) });
 const compiled = compile("user-preferences");
 function environment(initial) {
   let raw = initial ?? null, writes = 0, fail = false;

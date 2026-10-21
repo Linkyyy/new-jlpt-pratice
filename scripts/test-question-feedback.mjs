@@ -7,7 +7,7 @@ import test from "node:test";
 import ts from "typescript";
 
 const require = createRequire(import.meta.url);
-const compiled = Object.fromEntries(["question-feedback", "question-feedback.server", "cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
+const compiled = Object.fromEntries(["frequency-feedback.server", "term-study-data", "frequency-term-feedback", "question-feedback", "question-feedback.server", "cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
 const base = "https://jlpt.example", questionId = "imported:201407:N3:3:8363:73";
 const valid = () => ({ questionId, issueType: "image", description: "最后一题的图片内容显示有误。" });
 function environment({ configured = true, migrated = true, admins = "owner" } = {}) {
@@ -21,7 +21,7 @@ function environment({ configured = true, migrated = true, admins = "owner" } = 
   function load(name) {
     if (!modules[name]) {
       const exports = {}; modules[name] = exports;
-      vm.runInNewContext(compiled[name], { exports, require: dependency => dependency === "@/data/imported-papers.server" ? { loadFavoriteQuestions: async ids => ids.filter(id => id === questionId || id === "N1-2026-词汇-1").map(id => ({ question: { id, level: id === questionId ? "N3" : "N1", category: id === questionId ? "阅读" : "词汇", sourceQuestionNumber: id === questionId ? 73 : null }, year: id === questionId ? "201407" : "2026", source: id === questionId ? "imported" : "original" })) } : dependency.startsWith("./") ? load(dependency.slice(2)) : require(dependency), process: { env }, Date: Clock, Buffer, URL, Response, Request, AbortSignal, Uint8Array,
+      vm.runInNewContext(compiled[name], { exports, require: dependency => dependency === "./bank-frequency.server" ? {loadFrequencyCorpus:async()=>({revision:"test-revision",terms:[["華々しい","はなばなしい","形容词","word"]],questions:[[questionId,"imported","N1","201007","vocabulary"]],units:[["prompt",[0],[0,1]]]}),findFrequencyTerm:(_corpus,term)=>["華々しい","はなばなしい"].includes(term.label)&&term.reading==="はなばなしい"&&term.pos==="形容词"&&term.kind==="word"?0:-1} : dependency === "@/data/imported-papers.server" ? { loadFavoriteQuestions: async ids => ids.filter(id => id === questionId || id === "N1-2026-词汇-1").map(id => ({ question: { id, level: id === questionId ? "N3" : "N1", category: id === questionId ? "阅读" : "词汇", sourceQuestionNumber: id === questionId ? 73 : null }, year: id === questionId ? "201407" : "2026", source: id === questionId ? "imported" : "original" })) } : dependency.startsWith("./") ? load(dependency.slice(2)) : require(dependency), process: { env }, Date: Clock, Buffer, URL, Response, Request, AbortSignal, Uint8Array,
         fetch: async (_url, options) => {
           if (!online) return Response.json({ success: false }, { status: 403 });
           const { sql, params } = JSON.parse(options.body);
@@ -40,7 +40,7 @@ function environment({ configured = true, migrated = true, admins = "owner" } = 
     assert.equal(response.status, 200);
     return response.headers.get("set-cookie").split(";")[0];
   }
-  return { api, authApi, database, request, auth, advance: seconds => { now += seconds * 1000; }, offline: () => { online = false; }, rules: load("question-feedback") };
+  return { frequencyApi: load("frequency-feedback.server"), termModel: load("term-study-data"), api, authApi, database, request, auth, advance: seconds => { now += seconds * 1000; }, offline: () => { online = false; }, rules: load("question-feedback") };
 }
 
 test("known question metadata is resolved server-side and a report excludes private data", async () => {
@@ -127,4 +127,19 @@ test("repeated feedback requests hit 429 without unbounded writes", async () => 
   assert.equal(e.database.prepare("SELECT COUNT(*) AS count FROM question_feedback").get().count, 10);
   e.advance(3601);
   assert.equal((await e.api.submitQuestionFeedback(e.request("/api/feedback", valid()))).status, 201);
+});
+
+test("term corrections reuse the existing feedback table and admin permissions, with canonical server snapshots",async()=>{
+ const e=environment(),owner=await e.auth();const term={kind:"word",label:"はなばなしい",reading:"はなばなしい",pos:"形容词"};const body={key:e.termModel.termStudyKey(term),revision:"test-revision",issueType:"definition",description:"这个词的中文释义需要核对",label:"spoofed",ip:"private",password:"private"};
+ const sent=await e.frequencyApi.submitFrequencyFeedback(e.request("/api/frequency/feedback",body));assert.equal(sent.status,201);const id=(await sent.json()).id;
+ const stored=e.database.prepare("SELECT * FROM question_feedback WHERE id=?").get(id);assert.ok(stored.question_id.startsWith("frequency:"));assert.equal(stored.issue_type,"other");assert.ok(!stored.description.includes("private"));assert.equal(JSON.parse(stored.description).term.label,"華々しい");
+ assert.equal((await e.api.listQuestionFeedback(e.request("/api/feedback"))).status,401);
+ const record=(await(await e.api.listQuestionFeedback(e.request("/api/feedback",undefined,owner))).json()).items[0];assert.equal(record.termFeedback.term.label,"華々しい");assert.equal(record.termFeedback.issue,"definition");assert.equal(record.description,body.description);assert.deepEqual(record.termFeedback.exampleIds,[questionId]);
+ assert.equal((await e.api.updateQuestionFeedback(e.request("/api/feedback",{id,status:"resolved"},owner,{method:"PATCH"}))).status,200);
+});
+test("term corrections reject stale index, unknown terms, malformed payloads and cross-origin requests",async()=>{
+ const e=environment(),body={key:e.termModel.termStudyKey({kind:"word",label:"華々しい",reading:"はなばなしい",pos:"形容词"}),revision:"test-revision",issueType:"pos",description:"请检查这个词条的词性分类"};
+ for(const[patch,status]of [[{revision:"old"},409],[{key:"12"},400],[{issueType:"not-a-type"},400],[{description:"短"},400],[{key:e.termModel.termStudyKey({kind:"word",label:"不存在",reading:"ない",pos:"名词"})},404]])assert.equal((await e.frequencyApi.submitFrequencyFeedback(e.request("/api/frequency/feedback",{...body,...patch}))).status,status);
+ assert.equal((await e.frequencyApi.submitFrequencyFeedback(e.request("/api/frequency/feedback",body,undefined,{origin:"https://evil.example"}))).status,403);assert.equal(e.database.prepare("SELECT COUNT(*) AS n FROM question_feedback").get().n,0);
+ const missing=environment({configured:false});assert.equal((await missing.frequencyApi.submitFrequencyFeedback(missing.request("/api/frequency/feedback",body))).status,503);
 });

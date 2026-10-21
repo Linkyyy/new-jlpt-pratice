@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import metadata from '@/data/bank-frequency/manifest.json';
+import type { TermIdentity } from './term-study-data';
 import type { FrequencyCorpus } from './bank-frequency.mjs';
 
 let pending: Promise<FrequencyCorpus> | undefined;
@@ -12,4 +13,10 @@ export function loadFrequencyCorpus(): Promise<FrequencyCorpus> {
     return corpus;
   }).catch(error => { pending = undefined; throw error; });
   return pending;
+}
+
+export function findFrequencyTerm(corpus: FrequencyCorpus, term: TermIdentity): number {
+  const normalize = (value: string) => value.normalize('NFKC');
+  return corpus.terms.findIndex(([label, reading, pos, kind], id) => (kind === 'connective' ? 'word' : kind) === term.kind && pos === term.pos && normalize(reading) === normalize(term.reading)
+    && [label, ...(corpus.aliases?.[id] ?? [])].some(form => normalize(form) === normalize(term.label)));
 }

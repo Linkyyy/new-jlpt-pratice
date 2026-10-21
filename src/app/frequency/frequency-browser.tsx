@@ -1,5 +1,9 @@
 "use client";
 
+import TermStudyCollection, {TermStudyActions} from './term-study';
+import TermFeedback from './term-feedback';
+import CloudBackup from '@/components/cloud-backup';
+import {termStudyKey} from '@/lib/term-study-data';
 import FrequencyPdfOptionsDialog from './frequency-pdf-options';
 import { defaultFrequencyPdfOptions, type FrequencyPdfOptions } from '@/lib/frequency-pdf-options.mjs';
 import Link from 'next/link';
@@ -54,14 +58,15 @@ function useFrequencyRequest(query: string, requestKey: string, revision: string
   return state.key === requestKey ? { data: state.data, error: state.error, loading: false } : { data: undefined, error: undefined, loading: true };
 }
 
-function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: number; metadata: FrequencyMetadata; onClose: () => void }) {
+function FrequencyDetail({ query, id, entry, metadata, onClose }: { query: string; id?: number; entry?: string; metadata: FrequencyMetadata; onClose: () => void }) {
   const { t } = useI18n();
   const dialog = useRef<HTMLDialogElement>(null);
   const [retry, setRetry] = useState(0);
   const [examplePage, setExamplePage] = useState(1);
   const [examplePaper, setExamplePaper] = useState('all');
   const params = new URLSearchParams(query);
-  params.set('term', String(id)); params.set('examplePage', String(examplePage));
+  if (entry) params.set('entry', entry); else if (id !== undefined) params.set('term', String(id));
+  params.set('examplePage', String(examplePage));
   if (examplePaper !== 'all') params.set('examplePaper', examplePaper);
   const url = params.toString();
   const { data, error, loading } = useFrequencyRequest(url, `${url}:${retry}`, metadata.revision);
@@ -75,6 +80,7 @@ function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: 
     {loading ? <div className="mt-5"><LoadingSkeleton label="正在加载词频统计……" /></div> : error ? <div role="alert" className="mt-5"><p>{t(error)}</p><button className={`${buttonClass} mt-3`} onClick={() => setRetry(value => value + 1)}>{t('重试')}</button></div> : data?.detail ? <>
       <p className="mt-3 text-xs font-semibold text-indigo-600"><span lang="ja">{data.detail.reading}</span>{data.detail.reading && ' · '}{t(data.detail.pos)}{data.detail.compound && ` · ${t('复合词')}`}<span className="ml-2 whitespace-nowrap">{data.detail.referenceLevels?.length ? data.detail.referenceLevels.join(' / ') : t('未分级')}{data.detail.referenceBasis === 'editorial' && <span title={t('站内复核的学习估级，不是公开词表给出的等级。')}>{t('（估级）')}</span>}</span></p>
       {!!data.detail.aliases?.length && <p className="mt-2 text-xs text-slate-500">{t('其他写法')}：<span lang="ja">{data.detail.aliases.join(' / ')}</span></p>}
+      <div className="mt-3 flex flex-wrap items-start justify-between gap-3"><TermStudyActions term={{kind: data.filters.kind === 'connective' ? 'word' : data.filters.kind, label: data.detail.label, reading: data.detail.reading, pos: data.detail.pos, meaning: data.detail.definition.meaning, usage: data.detail.definition.usage}} /><TermFeedback term={{kind: data.filters.kind === 'connective' ? 'word' : data.filters.kind, label: data.detail.label, reading: data.detail.reading, pos: data.detail.pos}} revision={data.revision} /></div>
       <div className="mt-4 rounded-xl bg-slate-50 p-3"><DefinitionText definition={data.detail.definition} full /></div>
       <p className="mt-3 text-sm leading-6 text-slate-500">{t('出现 {0} 次 · 覆盖 {1} 题 · {2} 个场次', { 0: data.detail.occurrences, 1: data.detail.questions, 2: data.detail.papers })}</p>
       <p className="mt-2 text-xs leading-5 text-slate-500">{t('显示当前筛选范围内的全部出处，可按试卷筛选或翻页。')}</p>
@@ -87,7 +93,7 @@ function FrequencyDetail({ query, id, metadata, onClose }: { query: string; id: 
       })}</ul>
       <nav aria-label={t('出处分页')} className="mt-4 flex items-center justify-between gap-2"><button type="button" disabled={data.detail.examplePage <= 1} onClick={() => { setExamplePage(data.detail!.examplePage - 1); dialog.current?.scrollTo(0, 0); }} className={buttonClass}>{t('上一页')}</button><span className="text-xs tabular-nums text-slate-500">{t('第 {0} / {1} 页', { 0: data.detail.examplePage, 1: Math.max(1, Math.ceil(data.detail.exampleTotal / data.detail.exampleSize)) })} · {data.detail.exampleTotal} {t('题')}</span><button type="button" disabled={data.detail.examplePage >= Math.ceil(data.detail.exampleTotal / data.detail.exampleSize)} onClick={() => { setExamplePage(data.detail!.examplePage + 1); dialog.current?.scrollTo(0, 0); }} className={buttonClass}>{t('下一页')}</button></nav>
       <p className="mt-4 text-xs leading-6 text-slate-500">{t('词条可能出现在文章、题干或选项中，不表示它就是该题考点。')}</p>
-    </> : <p className="mt-5 text-sm text-slate-500">{t('当前筛选下没有这个词条。')}</p>}
+    </> : <p className="mt-5 text-sm text-slate-500">{t(entry ? '该词条已更新或不在题库中，收藏中的释义仍保留。' : '当前筛选下没有这个词条。')}</p>}
   </dialog>;
 }
 
@@ -112,7 +118,7 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const [exporting, setExporting] = useState<'xlsx' | 'pdf' | null>(null);
   const [exportMessage, setExportMessage] = useState('');
   const [exportError, setExportError] = useState(false);
-  const [selected, setSelected] = useState<{ query: string; id: number } | null>(null);
+  const [selected, setSelected] = useState<{ query: string; id?: number; entry?: string } | null>(null);
   const { data, error, loading } = useFrequencyRequest(query, `${query}:${retry}`, metadata.revision);
   const update = (patch: Partial<FrequencyFilters>, push = false) => {
     const next = { ...filters, ...patch, page: patch.page ?? 1 };
@@ -166,7 +172,8 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
   const mainError = parsed.error || error;
   const activeFilters = (['source', 'level', 'grade', 'exclusive', 'period', 'category', 'subtype', 'field', 'pos', 'order', 'min', 'max'] as const).filter(key => filters[key] !== defaultFrequencyFilters[key]).length;
   return <main className="min-h-screen bg-slate-50 px-4 py-5 text-slate-900 sm:px-8 sm:py-8"><div className="mx-auto max-w-6xl space-y-5">
-    <header><Link href="/" className="inline-flex min-h-10 items-center text-sm font-semibold text-indigo-600">{t('← 首页')}</Link><div className="mt-2 flex flex-wrap items-end gap-x-4 gap-y-2"><h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('题库词频统计')}</h1><p className="pb-0.5 text-xs text-slate-500">{t('从题库正文看高频词与表达')}</p></div></header>
+    <div className="flex items-center justify-between gap-2"><Link href="/" className="inline-flex min-h-10 items-center text-sm font-semibold text-indigo-600">{t('← 首页')}</Link><div className="flex items-center gap-2"><CloudBackup disabled={false} /><TermStudyCollection onSelect={term => setSelected({query: new URLSearchParams({kind: term.kind}).toString(), entry: termStudyKey(term)})} /></div></div>
+    <header><div className="mt-2 flex flex-wrap items-end gap-x-4 gap-y-2"><h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{t('题库词频统计')}</h1><p className="pb-0.5 text-xs text-slate-500">{t('从题库正文看高频词与表达')}</p></div></header>
     <section aria-label={t('统计筛选')} className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
       <div role="group" aria-label={t('统计内容')} className="grid grid-cols-3 gap-1 rounded-xl bg-slate-50 p-1">{kindLabels.map(([kind, label]) => <button type="button" key={kind} aria-pressed={filters.kind === kind} onClick={() => update({ kind, pos: kind === 'word' ? filters.pos : 'all' })} className={`min-h-11 rounded-lg px-2 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 ${filters.kind === kind ? 'bg-indigo-50 text-indigo-700' : 'text-slate-500 hover:bg-white'}`}>{t(label)}</button>)}</div>
       <form onSubmit={search} role="search" className="mt-4 flex items-center gap-2"><label className="block min-w-0 flex-1"><span className="sr-only">{t('搜索词条或读音')}</span><input key={filters.q} type="search" name="q" defaultValue={filters.q} maxLength={80} placeholder={t('搜索词条或读音')} className={`${fieldClass} h-11`} /></label><button type="submit" className={`${buttonClass} h-11 shrink-0 border-indigo-200 text-indigo-600`}>{t('搜索')}</button></form>
@@ -200,5 +207,5 @@ export default function FrequencyBrowser({ metadata }: { metadata: FrequencyMeta
     <p className="px-1 text-xs leading-6 text-slate-500">{t('词条参考等级：Jonathan Waller／Tanos，由 Stephen Kraus 整理，CC BY-SA 4.0；非官方分级，不代表每场考试的考查范围。')} <a href="https://github.com/stephenmk/yomitan-jlpt-vocab" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">{t('分级来源')}</a></p>
     <p className="px-1 text-xs leading-6 text-slate-500">{t('语法参考等级：Japanese Language Data，Justin Kindrix 等整理，CC BY-SA 4.0，社区草稿、非官方分级；惯用句仅匹配整条表达，未收录的保持未分级。')} <a href="https://github.com/jkindrix/japanese-language-data" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">{t('分级来源')}</a></p>
     <p className="px-1 text-xs leading-6 text-slate-500">{t('中文词典来源：中文维基词典贡献者，经 Wiktextract／Kaikki.org、Nichū 整理，CC BY-SA 4.0。语法用法为站内学习说明。未覆盖的词条标注“释义待补充”。')} <a href="https://github.com/Linkyyy/new-jlpt-pratice/tree/main/src/data/frequency-dictionary" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">{t('数据来源与许可')}</a></p><footer className="pb-3 text-center text-xs text-slate-500"><Link href="/" className="inline-flex min-h-9 items-center hover:text-indigo-600">JLPT Practice · {t('返回刷题网站')}</Link></footer>
-  </div>{pdfOptionsOpen && <FrequencyPdfOptionsDialog options={pdfOptions} onChange={setPdfOptions} onClose={() => setPdfOptionsOpen(false)} onExport={() => { void exportResults('pdf'); }} busy={Boolean(exporting)} error={exportError ? exportMessage : undefined} />}{selected?.query === query && <FrequencyDetail key={`${query}:${selected.id}`} query={query} id={selected.id} metadata={metadata} onClose={() => setSelected(null)} />}</main>;
+  </div>{pdfOptionsOpen && <FrequencyPdfOptionsDialog options={pdfOptions} onChange={setPdfOptions} onClose={() => setPdfOptionsOpen(false)} onExport={() => { void exportResults('pdf'); }} busy={Boolean(exporting)} error={exportError ? exportMessage : undefined} />}{selected && (selected.entry || selected.query === query) && <FrequencyDetail key={`${selected.query}:${selected.entry ?? selected.id}`} query={selected.query} id={selected.id} entry={selected.entry} metadata={metadata} onClose={() => setSelected(null)} />}</main>;
 }

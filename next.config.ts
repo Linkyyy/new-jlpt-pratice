@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
     "/api/favorites/questions": ["./src/data/imported-bank/questions/*.json"],
     "/api/feedback": ["./src/data/imported-bank/questions/*.json"],
     "/api/frequency": ["./src/data/bank-frequency/corpus.json.gz", "./src/data/imported-bank/questions/*.json"],
+    "/api/frequency/feedback": ["./src/data/bank-frequency/corpus.json.gz", "./src/data/imported-bank/questions/*.json"],
     "/api/frequency/export": ["./src/data/bank-frequency/corpus.json.gz", "./src/data/export-fonts/*"],
   },
   turbopack: {

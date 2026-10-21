@@ -1,7 +1,8 @@
 import metadata from '@/data/bank-frequency/manifest.json';
 import { FrequencyInputError, frequencyText, listeningTranscript, parseFrequencyDetailOptions, parseFrequencyFilters, queryFrequency } from '@/lib/bank-frequency.mjs';
 import { loadFavoriteQuestions } from '@/data/imported-papers.server';
-import { loadFrequencyCorpus } from '@/lib/bank-frequency.server';
+import { parseTermStudyKey } from '@/lib/term-study-data';
+import { findFrequencyTerm, loadFrequencyCorpus } from '@/lib/bank-frequency.server';
 import { apiErrorResponse, checkApiRateLimit } from '@/lib/request-limits';
 
 export async function GET(request: Request) {
@@ -15,7 +16,11 @@ export async function GET(request: Request) {
     if (term !== null && !/^\d{1,6}$/.test(term)) throw new FrequencyInputError('统计筛选条件无效。');
     const corpus = await loadFrequencyCorpus();
     if (term !== null && Number(term) >= corpus.terms.length) throw new FrequencyInputError('统计筛选条件无效。');
-    const result = queryFrequency(corpus, filters, term === null ? undefined : Number(term), parseFrequencyDetailOptions(url.searchParams, corpus));
+    const entry = url.searchParams.get('entry');
+    const identity = entry === null ? null : parseTermStudyKey(entry);
+    if (entry !== null && !identity) throw new FrequencyInputError('统计筛选条件无效。');
+    const selectedId = identity ? findFrequencyTerm(corpus, identity) : term === null ? undefined : Number(term);
+    const result = queryFrequency(corpus, filters, selectedId, parseFrequencyDetailOptions(url.searchParams, corpus));
     if (result.detail) {
       const records = await loadFavoriteQuestions(result.detail.examples.filter(example => example.available).map(example => example.id));
       const questions = new Map(records.map(record => [record.question.id, record.question]));

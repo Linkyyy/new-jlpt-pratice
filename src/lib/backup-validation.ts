@@ -1,3 +1,4 @@
+import { isTermStudyData } from "./term-study-data";
 import type { OptionId } from "@/data/practice-question";
 import type { FavoriteFolder, FavoriteEntry, FavoritesData } from "./favorites-store";
 import type { StudyQuestion, StudyAnswer, StudyAttempt, StudyData } from "./study-store";
@@ -76,6 +77,7 @@ export function isLearningBackup(value: unknown): value is LearningBackup {
   return isRecord(value) && value.format === "jlpt-practice-backup" && value.version === 1
     && typeof value.exportedAt === "string" && Number.isFinite(Date.parse(value.exportedAt))
     && isFavoritesData(value.favorites) && isStudyData(value.study)
+    && (value.terms === undefined || isTermStudyData(value.terms))
     && (value.preferences === undefined || isUserPreferences(value.preferences))
     && (value.display === undefined || isDisplayPreferences(value.display));
 }

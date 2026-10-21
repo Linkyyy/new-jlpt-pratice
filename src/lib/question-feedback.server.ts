@@ -1,3 +1,4 @@
+import { decodeTermFeedback } from "./frequency-term-feedback";
 import { randomUUID } from "node:crypto";
 import { loadFavoriteQuestions } from "@/data/imported-papers.server";
 import { applyCloudRateLimit, checkCloudRateLimit, cloudJson, CloudServiceError, getCloudSession, handleCloudRequest, queryCloudDatabase, requireCloudSameOrigin } from "./cloud-backup.server";
@@ -5,7 +6,7 @@ import { checkApiRateLimit, HttpRequestError, readLimitedJson, requestClientIp }
 import { isFeedbackIssueType, isFeedbackQuestionId, isFeedbackStatus, type QuestionFeedbackRecord } from "./question-feedback";
 
 const columns = "id, question_id AS questionId, level, period, category, source, question_number AS questionNumber, issue_type AS issueType, description, status, created_at AS createdAt, updated_at AS updatedAt";
-async function feedbackInput(request: Request, maxBytes: number): Promise<Record<string, unknown>> {
+export async function feedbackInput(request: Request, maxBytes: number): Promise<Record<string, unknown>> {
   try {
     const value = await readLimitedJson(request, maxBytes);
     if (typeof value !== "object" || value === null || Array.isArray(value)) throw new CloudServiceError(400, "请求格式无效。");
@@ -60,7 +61,7 @@ export function listQuestionFeedback(request: Request) {
       where.push("(created_at, id) < (?, ?)"); params.push(Number(time), id);
     }
     const rows = await queryCloudDatabase<QuestionFeedbackRecord>(`SELECT ${columns} FROM question_feedback${where.length ? ` WHERE ${where.join(" AND ")}` : ""} ORDER BY created_at DESC, id DESC LIMIT 51`, params);
-    const items = rows.slice(0, 50), last = items.at(-1);
+    const items = rows.slice(0, 50).map(decodeTermFeedback), last = items.at(-1);
     return cloudJson({ items, nextCursor: rows.length > 50 && last ? `${last.createdAt}:${last.id}` : null });
   });
 }

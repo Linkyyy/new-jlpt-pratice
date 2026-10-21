@@ -8,7 +8,7 @@ import ts from "typescript";
 const require = createRequire(import.meta.url);
 const favoriteKey = "jlpt-practice.favorites.v1", studyKey = "jlpt-practice.study.v1";
 const compile = name => ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-const compiled = Object.fromEntries(["favorites-store", "study-store", "learning-backup", "backup-validation", "study-history-data", "practice-scoring", "user-preferences", "display-preferences"].map(name => [name, compile(name)]));
+const compiled = Object.fromEntries(["term-study-data", "term-study-store", "favorites-store", "study-store", "learning-backup", "backup-validation", "study-history-data", "practice-scoring", "user-preferences", "display-preferences"].map(name => [name, compile(name)]));
 const favorites = { version: 2, folders: [{ id: "default", name: "默认收藏夹" }, { id: "folder-a", name: "语法" }], entries: [{ questionId: "q1", folderIds: ["default", "folder-a"], savedAt: "2026-10-01T00:00:00Z" }] };
 const paper = { id: "N2-2026-vocabulary", level: "N2", year: "2026", typeLabel: "词汇", questions: [{ id: "q1", level: "N2", category: "词汇", correctOptionId: "A", options: [{ id: "A" }, { id: "B" }] }] };
 function environment(initial = {}) {
@@ -27,7 +27,7 @@ function environment(initial = {}) {
     }
     return modules[name];
   }
-  return { backup: load("learning-backup"), favorite: load("favorites-store"), study: load("study-store"), raw, preferences: load("user-preferences"), display: load("display-preferences"), failWrite: offset => { failAt = writes + offset; }, failNextSecondWrite: () => { failAt = writes + 2; } };
+  return { terms: load("term-study-store"), backup: load("learning-backup"), favorite: load("favorites-store"), study: load("study-store"), raw, preferences: load("user-preferences"), display: load("display-preferences"), failWrite: offset => { failAt = writes + offset; }, failNextSecondWrite: () => { failAt = writes + 2; } };
 }
 function completed(env, option = "B") {
   const a = env.study.createStudyAttempt(paper, "practice").attempt;
@@ -200,4 +200,18 @@ test("failure writing either settings field rolls back favorites, study, prefere
     assert.equal(destination.preferences.readUserPreferences().data.home.level, "N1");
     assert.equal(destination.display.readDisplayPreferences().locale, "en");
   }
+});
+
+const sampleTerm = {kind:"word",label:"華々しい",reading:"はなばなしい",pos:"形容词",meaning:"华丽；壮烈",usage:""};
+test("term collections and review states round-trip, merge idempotently, and old backups preserve them",()=>{
+  const source=environment();source.terms.updateTermStudy(sampleTerm,"save");source.terms.updateTermStudy(sampleTerm,"mastered");
+  const backup=JSON.parse(JSON.stringify(source.backup.createLearningBackup().data));assert.equal(backup.terms.entries[0].status,"mastered");
+  const local=environment();assert.equal(local.backup.importLearningBackup(backup).ok,true);assert.equal(local.backup.importLearningBackup(backup).ok,true);assert.equal(local.terms.readTermStudySnapshot().data.entries.length,1);assert.equal(local.terms.readTermStudySnapshot().data.entries[0].reviews,1);
+  const old={...backup};delete old.terms;assert.equal(local.backup.importLearningBackup(old).ok,true);assert.equal(local.terms.readTermStudySnapshot().data.entries.length,1);
+  const bad=JSON.parse(JSON.stringify(backup));bad.terms.entries[0].key="numeric-index";const before=[...local.raw];assert.equal(local.backup.importLearningBackup(bad).ok,false);assert.deepEqual([...local.raw],before);
+});
+test("failure writing term collection rolls back all backup fields and corrupt term storage is preserved",()=>{
+  const source=environment();source.terms.updateTermStudy(sampleTerm,"save");const backup=source.backup.createLearningBackup().data;
+  const local=environment();const before=[...local.raw];local.failWrite(5);assert.equal(local.backup.importLearningBackup(backup).ok,false);assert.deepEqual([...local.raw],before);
+  const broken=environment({"jlpt-practice.term-study.v1":"{broken"});assert.equal(broken.backup.createLearningBackup().ok,false);assert.equal(broken.backup.importLearningBackup(backup).ok,false);assert.equal(broken.raw.get("jlpt-practice.term-study.v1"),"{broken");
 });
