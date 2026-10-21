@@ -1,6 +1,6 @@
-export type FrequencyKind = 'word' | 'grammar' | 'connective';
+export type FrequencyKind = 'word' | 'grammar' | 'idiom' | 'connective';
 export interface FrequencySubtype { id: string; category: string; label: string; level?: string; problem?: string; levels?: string[] }
-export interface FrequencySummary { questions: number; papers: number; units: number; terms: number; listeningQuestions: number; transcripts: number; grammarExpressions: number }
+export interface FrequencySummary { questions: number; papers: number; units: number; terms: number; listeningQuestions: number; transcripts: number; grammarExpressions: number; idiomExpressions?: number }
 export interface FrequencyMetadata { version: number; revision: string; summary: FrequencySummary; levels: string[]; periods: string[]; subtypes: FrequencySubtype[]; definitionSummary?: { matched: number; missing: number; total: number } }
 export interface FrequencyFilters { source: string; level: string; exclusive: string; period: string; category: string; subtype: string; field: string; kind: FrequencyKind; pos: string; order: string; min: number; q: string; page: number; size: number }
 export interface FrequencyDefinition { meaning: string; usage: string; source: 'wiktionary' | 'editorial' | 'missing'; word?: string }

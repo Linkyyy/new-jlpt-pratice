@@ -1,7 +1,8 @@
 import { grammarExpressions, connectiveExpressions, wordStopList } from './frequency-lexicon.mjs';
 import { classifyFrequencySubtype, officialFrequencySubtypes } from './frequency-subtypes.mjs';
+import { createIdiomMatcher, idiomEntries } from './frequency-idioms.mjs';
 
-export const frequencyKinds = ['word', 'grammar'];
+export const frequencyKinds = ['word', 'grammar', 'idiom'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
 export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'papers', 'alphabetical'];
 export const frequencyLevelScopes = ['all', 'N1', 'N2', 'N3', 'N4'];
@@ -51,6 +52,7 @@ const ambiguousConnectives = new Set(['では', 'でも', 'だから', 'だけ�
 
 /** Tokenizer is a build-time dependency. This module and the deployed API never load its dictionaries. */
 export function createFrequencyBuilder(tokenize) {
+  const matchIdioms = createIdiomMatcher(tokenize);
   const questions = [], units = [], terms = [], papers = [], subtypes = new Map();
   const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map();
   let transcripts = 0, listeningQuestions = 0;
@@ -92,6 +94,7 @@ export function createFrequencyBuilder(tokenize) {
         add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续词', expression.kind));
       }
     }
+    for (const label of matchIdioms(tokens)) add(termId(label, readingFor(label), '惯用句', 'idiom'));
     return [...counts].flat();
   }
   function addUnit(text, field, questionIndex, shared) {
@@ -124,7 +127,7 @@ export function createFrequencyBuilder(tokenize) {
       }
     },
     finish(revision) {
-      return { version: 1, revision, terms, questions, units, papers, subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, grammarExpressions: grammarExpressions.length } };
+      return { version: 1, revision, terms, questions, units, papers, subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
     },
   };
 }
@@ -182,13 +185,13 @@ function levelPresence(corpus) {
     for (let i = 0; i < counts.length; i += 2) presence[counts[i]] |= levels;
   }
   // A lemma seen at a lower level is still familiar if its POS differs there.
-  // Conjunctions share the word scope; grammar expressions remain separate.
+  // Conjunctions share the word scope; grammar and idioms have separate scopes.
   const labels = new Map();
   corpus.terms.forEach((term, id) => {
-    const key = `${term[3] === 'grammar' ? 'grammar' : 'word'}\t${frequencySearchText(term[0])}`;
+    const key = `${term[3] === 'connective' ? 'word' : term[3]}\t${frequencySearchText(term[0])}`;
     labels.set(key, (labels.get(key) ?? 0) | presence[id]);
   });
-  corpus.terms.forEach((term, id) => { presence[id] = labels.get(`${term[3] === 'grammar' ? 'grammar' : 'word'}\t${frequencySearchText(term[0])}`); });
+  corpus.terms.forEach((term, id) => { presence[id] = labels.get(`${term[3] === 'connective' ? 'word' : term[3]}\t${frequencySearchText(term[0])}`); });
   corpusLevelPresence.set(corpus, presence);
   return presence;
 }

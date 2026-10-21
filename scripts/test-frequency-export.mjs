@@ -81,3 +81,21 @@ test('Excel includes actual Chinese meanings, grammar usage, conjunction POS and
     assert.match(book.worksheets[1].getCell('B7').value,/CC BY-SA 4.0/);
   }
 });
+
+test('idiom Excel and PDF exports retain the full filtered ranking, Chinese meanings and usage in every UI language', async () => {
+  const result = queryFrequency(corpus, { ...defaultFrequencyFilters, kind: 'idiom', page: 2, size: 1 }, undefined, { allRows: true });
+  assert.ok(result.total > 1); assert.equal(result.rows.length, result.total);
+  for (const [locale, kind, pos] of [['zh', '惯用句', '惯用句'], ['ja', '慣用句', '慣用句'], ['en', 'Idioms', 'Idiom']]) {
+    assert.match(frequencyExportDescription(result.filters, metadata, locale), new RegExp(kind));
+    const workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(await createFrequencyWorkbook(result, metadata, locale, now));
+    const sheet = workbook.worksheets[0];
+    assert.equal(sheet.rowCount, result.total + 1); assert.equal(sheet.getCell('D2').value, pos);
+    assert.deepEqual(sheet.getColumn('B').values.slice(2), result.rows.map(row => row.label));
+    for (let i = 0; i < result.total; i++) {
+      assert.equal(sheet.getCell(`H${i + 2}`).value, result.rows[i].definition.meaning);
+      assert.equal(sheet.getCell(`I${i + 2}`).value, result.rows[i].definition.usage);
+    }
+  }
+  const bytes = await createFrequencyPdf(result, metadata, 'zh', now);
+  assert.match(bytes.toString('latin1'), /^%PDF-/); assert.match(bytes.toString('latin1'), /%%EOF\s*$/);
+});

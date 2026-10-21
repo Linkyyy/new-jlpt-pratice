@@ -1,4 +1,6 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["惯用句","慣用句","Idioms"],
+  ["按已收录惯用句及常见活用匹配，不跨句或拼接选项；字面义与惯用义需结合原题判断。","収録した慣用句の表記・活用を照合します。文や選択肢をまたいで連結しません。字義通りか慣用的かは原文で確認してください。","Matches listed idioms and inflections without joining sentences or choices. Check the source question for literal or idiomatic usage."],
   ["导出","ダウンロード","Export"],
   ["表格，便于筛选整理","表で絞り込み・整理","Spreadsheet for filtering and organizing"],
   ["文档，便于打印复习","印刷・復習用の文書","Document for printing and review"],

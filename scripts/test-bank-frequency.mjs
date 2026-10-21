@@ -9,6 +9,7 @@ import { createFrequencyBuilder, frequencyMetadata, frequencySubtype, frequencyT
 import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-lexicon.mjs';
 import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
+import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, value) => error ? reject(error) : resolve(value)));
@@ -67,6 +68,51 @@ test('longest grammar matches do not double count nested expressions', () => {
   assert.equal(find(c, 'ないわけではない', { kind: 'grammar' }).occurrences, 1);
   assert.equal(find(c, 'にしては', { kind: 'grammar' }).occurrences, 1);
 });
+test('idioms merge inflections and spelling variants even when the tokenizer changes segmentation', () => {
+  const c = build([question('idioms', { prompt: 'この店が気に入った。新しい服も気に入ります。気に入らない。気がついた。気が付きました。腹が立った。腹が立ちます。歯が立たなかった。頭が上がらなかった。' })]);
+  assert.deepEqual(query(c, { kind: 'idiom' }).rows.map(row => [row.label, row.occurrences]).sort(), [
+    ['気に入る', 3], ['気が付く', 2], ['腹が立つ', 2], ['歯が立たない', 1], ['頭が上がらない', 1],
+  ].sort());
+  assert.equal(find(c, '気がつく', { kind: 'idiom' }), undefined);
+  assert.equal(find(c, '気に入る', { kind: 'idiom' }).reading, 'きにいる');
+});
+test('idioms require whole consecutive tokens and never join sentences, paragraphs, or separate choices', () => {
+  const c = build([question('boundaries', { prompt: '気に。入る。気にとても入る。気に入り口。気が\n付く。影響を与える。責任を負う。', options: [{ text: '気に' }, { text: '入った' }] })]);
+  assert.equal(query(c, { kind: 'idiom' }).total, 0);
+  const distinct = build([question('choices', { options: [{ text: '目を通した。' }, { text: '目を通す。' }] })]);
+  assert.equal(find(distinct, '目を通す', { kind: 'idiom', field: 'options' }).occurrences, 2);
+});
+test('all curated idiom forms resolve once to their canonical headword with authored meaning and usage', () => {
+  const match = createIdiomMatcher(text => tokenizer.tokenize(text));
+  assert.equal(new Set(idiomEntries.map(entry => entry.label)).size, idiomEntries.length);
+  for (const { label, forms } of idiomEntries) {
+    assert.ok(idiomStudyNotes[label]?.meaning && idiomStudyNotes[label]?.usage, label);
+    for (const form of forms) assert.deepEqual(match(tokenizer.tokenize(form)), [label], form);
+  }
+});
+test('idiom occurrences deduplicate shared passages and transcripts while keeping every original question reference', () => {
+  const c = annotateFrequencyCorpus(build([
+    question('a', { passage: '先に資料に目を通した。' }), question('b', { passage: '先に資料に目を通した。' }),
+    question('c', { period: '202407', category: '听力', explanation: ['听力原文\n資料に目を通す。\n听力译文\n看一遍资料。'] }),
+  ]), {});
+  const row = find(c, '目を通す', { kind: 'idiom' });
+  assert.equal(row.occurrences, 2); assert.equal(row.questions, 3); assert.equal(row.papers, 2);
+  assert.equal(find(c, row.label, { kind: 'idiom', field: 'passage' }).occurrences, 1);
+  assert.equal(find(c, row.label, { kind: 'idiom', category: 'listening', field: 'transcript' }).occurrences, 1);
+  const detail = queryFrequency(c, { ...defaultFrequencyFilters, kind: 'idiom' }, row.id).detail;
+  assert.deepEqual(detail.examples.map(example => example.id).sort(), ['a', 'b', 'c']);
+  assert.equal(detail.definition.source, 'editorial'); assert.match(detail.definition.meaning, /过目/); assert.match(detail.definition.usage, /资料/);
+});
+test('idiom exclusive scopes compare canonical expressions across all text and banks, independently of component words', () => {
+  const c = build([
+    question('upper', { source: 'original', level: 'N1', prompt: 'この店が気に入った。資料に目を通す。' }),
+    question('lower', { level: 'N5', options: [{ text: '気に入ります。目。通す。' }] }),
+  ]);
+  const filters = parseFrequencyFilters(new URLSearchParams('kind=idiom&exclusive=N1&source=original&field=prompt'), frequencyMetadata(c));
+  assert.equal(filters.kind, 'idiom');
+  assert.deepEqual(queryFrequency(c, filters).rows.map(row => row.label), ['目を通す']);
+  assert.ok(find(c, '気に入る', { ...filters, exclusive: 'all' }));
+});
 test('conjunctions do not count identical particle sequences and do not double count POS plus rules', () => {
   const c = build([question('a', { prompt: '学生でも分かる。学生ではない。でも、勉強する。しかし、難しい。' })]);
   assert.equal(find(c, 'でも', { kind: 'connective' }).occurrences, 1);
@@ -111,7 +157,7 @@ test('the production corpus covers every available and unavailable question plus
     assert.equal(counts.length % 2, 0);
     for (let i = 0; i < counts.length; i += 2) { assert.ok(counts[i] < c.terms.length); assert.ok(Number.isInteger(counts[i + 1]) && counts[i + 1] > 0); }
   }
-  for (const kind of ['word', 'grammar', 'connective']) {
+  for (const kind of ['word', 'grammar', 'idiom', 'connective']) {
     const result = query(c, { kind }); assert.ok(result.total > 0); assert.ok(result.rows.length <= 30);
     assert.ok(result.rows.every(row => row.questions <= result.questionCount && row.papers <= result.paperCount));
     assert.ok(Buffer.byteLength(JSON.stringify(result)) < 30000);
@@ -207,7 +253,7 @@ test('exclusive parameters validate scope/level compatibility and exported rows 
   assert.equal(query(c, { exclusive: 'N1', q: '学校' }).total, 0);
 });
 
-test('every production exclusive result is absent from all excluded levels, across all three inventories', () => {
+test('every production exclusive result is absent from all excluded levels, across every inventory', () => {
   const c = JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
   for (const exclusive of ['N1', 'N2', 'N3', 'N4']) {
     const excluded = new Set();
@@ -215,7 +261,7 @@ test('every production exclusive result is absent from all excluded levels, acro
       if (!ids.some(id => Number(c.questions[id][2].slice(1)) > Number(exclusive.slice(1)))) continue;
       for (let i = 0; i < counts.length; i += 2) { const term = c.terms[counts[i]]; excluded.add(`${term[3]}:${term[0]}`); }
     }
-    for (const kind of ['word', 'grammar', 'connective']) {
+    for (const kind of ['word', 'grammar', 'idiom', 'connective']) {
       const result = queryFrequency(c, { ...defaultFrequencyFilters, exclusive, kind }, undefined, { allRows: true });
       assert.ok(result.rows.every(row => !excluded.has(`${kind}:${row.label}`)));
       if (kind === 'word') assert.ok(result.total > 0);
@@ -296,6 +342,6 @@ test('Chinese UI placeholder prompts are not Japanese vocabulary and the generat
   const actual=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   assert.equal(actual.definitions.length,actual.terms.length);
   assert.equal(actual.definitionSummary.matched+actual.definitionSummary.missing,actual.terms.length);
-  for(let i=0;i<actual.terms.length;i++)if(actual.terms[i][3]==='grammar')assert.ok(actual.definitions[i].meaning&&actual.definitions[i].usage,actual.terms[i][0]);
+  for(let i=0;i<actual.terms.length;i++)if(['grammar','idiom'].includes(actual.terms[i][3]))assert.ok(actual.definitions[i].meaning&&actual.definitions[i].usage,actual.terms[i][0]);
   assert.ok(find(actual,'学生').definition.meaning);
 });

@@ -12,7 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'src/data/bank-frequency');
 const imported = path.join(root, 'src/data/imported-bank/questions');
 const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.json$/.test(file)).sort();
-const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
+const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }

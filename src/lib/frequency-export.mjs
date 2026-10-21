@@ -18,9 +18,9 @@ const values = {
   source: { all: ['全部题库','すべての問題集','All banks'], imported: ['用户提供题库','ユーザー提供問題集','Imported'], original: ['原创模拟题库','オリジナル模擬問題','Original'] },
   category: { all: ['全部题型','すべての分野','All categories'], vocabulary: ['词汇','語彙','Vocabulary'], grammar: ['语法','文法','Grammar'], reading: ['阅读','読解','Reading'], listening: ['听力','聴解','Listening'] },
   field: { all: ['全部题文','すべての本文','All text'], passage: ['文章','文章','Passages'], prompt: ['题干','設問','Prompts'], options: ['选项','選択肢','Options'], transcript: ['听力原文','聴解原文','Transcripts'] },
-  kind: { word: ['单词','単語','Words'], grammar: ['语法表达','文法表現','Grammar expressions'], connective: ['接续表达','接続表現','Connectives'] },
+  kind: { idiom: ['惯用句','慣用句','Idioms'], word: ['单词','単語','Words'], grammar: ['语法表达','文法表現','Grammar expressions'], connective: ['接续表达','接続表現','Connectives'] },
   order: { occurrences: ['次数多到少','出現回数の多い順','Occurrences descending'], 'occurrences-asc': ['次数少到多','出現回数の少ない順','Occurrences ascending'], questions: ['覆盖题目优先','該当問題数順','Questions descending'], papers: ['覆盖场次优先','該当実施回数順','Sessions descending'], alphabetical: ['五十音顺序','五十音順','Japanese alphabetical order'] },
-  pos: { all: ['全部词性','すべての品詞','All parts of speech'], 名词: ['名词','名詞','Noun'], 动词: ['动词','動詞','Verb'], 形容词: ['形容词','形容詞','Adjective'], 副词: ['副词','副詞','Adverb'], 连体词: ['连体词','連体詞','Adnominal'], 语法表达: ['语法表达','文法表現','Grammar expression'], 接续表达: ['接续表达','接続表現','Connective'], 接续词: ['接续词','接続詞','Conjunction'] },
+  pos: { 惯用句: ['惯用句','慣用句','Idiom'], all: ['全部词性','すべての品詞','All parts of speech'], 名词: ['名词','名詞','Noun'], 动词: ['动词','動詞','Verb'], 形容词: ['形容词','形容詞','Adjective'], 副词: ['副词','副詞','Adverb'], 连体词: ['连体词','連体詞','Adnominal'], 语法表达: ['语法表达','文法表現','Grammar expression'], 接续表达: ['接续表达','接続表現','Connective'], 接续词: ['接续词','接続詞','Conjunction'] },
 };
 function translated(group, value, locale) { return values[group]?.[value]?.[{ zh: 0, ja: 1, en: 2 }[locale]] ?? value; }
 export function frequencyExportDescription(filters, metadata, locale = 'zh') {
