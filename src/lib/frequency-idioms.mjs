@@ -1,6 +1,8 @@
+import { supplementalIdiomEntries } from './frequency-idiom-supplements.mjs';
+
 // Curated idioms, not arbitrary n-grams or an exhaustive idiom dictionary.
 // Alternate spellings share a headword; inflections are resolved by token lemmas.
-export const idiomEntries = `
+const originalIdiomEntries = `
 気が付く|気がつく|察觉；注意到；意识到|「～に気が付く」表示察觉到某事；也可指恢复知觉。
 気を付ける|気をつける|注意；小心|常用「～に気を付ける」，提醒注意事项或防范危险。
 気になる||在意；挂心；产生兴趣|某事物作主语，表示它引起在意、担心或兴趣。
@@ -119,6 +121,9 @@ export const idiomEntries = `
   const [label, alternates, meaning, usage] = line.split('|');
   return { label, forms: [label, ...alternates.split('、').filter(Boolean)], meaning, usage };
 });
+
+const originalLabels = new Set(originalIdiomEntries.map(entry => entry.label));
+export const idiomEntries = [...originalIdiomEntries, ...supplementalIdiomEntries.filter(entry => !originalLabels.has(entry.label))];
 
 export const idiomStudyNotes = Object.fromEntries(idiomEntries.map(({label, meaning, usage}) => [label, {meaning, usage, source: 'editorial'}]));
 const lemma = token => (token.basic_form && token.basic_form !== '*' ? token.basic_form : token.surface_form).normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));

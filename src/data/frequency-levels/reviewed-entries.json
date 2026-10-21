@@ -1,0 +1,6301 @@
+[
+  {
+    "kind": "word",
+    "label": "社員",
+    "reading": "しゃいん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お願い",
+    "reading": "おねがい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "メール",
+    "reading": "めーる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "インターネット",
+    "reading": "いんたーねっと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お客様",
+    "reading": "おきゃくさま",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お客",
+    "reading": "おきゃく",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "日本語",
+    "reading": "にほんご",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "本当に",
+    "reading": "ほんとうに",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "人々",
+    "reading": "ひとびと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "店長",
+    "reading": "てんちょう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ボランティア",
+    "reading": "ぼらんてぃあ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "若者",
+    "reading": "わかもの",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "考え方",
+    "reading": "かんがえかた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お知らせ",
+    "reading": "おしらせ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ホームページ",
+    "reading": "ほーむぺーじ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "もう少し",
+    "reading": "もうすこし",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "使える",
+    "reading": "つかえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "チケット",
+    "reading": "ちけっと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "サッカー",
+    "reading": "さっかー",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "駅前",
+    "reading": "えきまえ",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ロボット",
+    "reading": "ろぼっと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "高齢",
+    "reading": "こうれい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "思える",
+    "reading": "おもえる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "言える",
+    "reading": "いえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "楽しめる",
+    "reading": "たのしめる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "講座",
+    "reading": "こうざ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "積極",
+    "reading": "せっきょく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "大事",
+    "reading": "だいじ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "イベント",
+    "reading": "いべんと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "そういう",
+    "reading": "そういう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "どういう",
+    "reading": "どういう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "エアコン",
+    "reading": "えあこん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "共有",
+    "reading": "きょうゆう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "生み出す",
+    "reading": "うみだす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "社内",
+    "reading": "しゃない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "セミナー",
+    "reading": "せみなー",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "リーダー",
+    "reading": "りーだー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "使い方",
+    "reading": "つかいかた",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ツアー",
+    "reading": "つあー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "パンフレット",
+    "reading": "ぱんふれっと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "プレゼン",
+    "reading": "ぷれぜん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "作れる",
+    "reading": "つくれる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "納品",
+    "reading": "のうひん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "こうした",
+    "reading": "こうした",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "そうした",
+    "reading": "そうした",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "友だち",
+    "reading": "ともだち",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お世話",
+    "reading": "おせわ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "リサイクル",
+    "reading": "りさいくる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "和紙",
+    "reading": "わし",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "支援",
+    "reading": "しえん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "生き方",
+    "reading": "いきかた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "逆に",
+    "reading": "ぎゃくに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "取り組み",
+    "reading": "とりくみ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "最新",
+    "reading": "さいしん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "後で",
+    "reading": "あとで",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "絵本",
+    "reading": "えほん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "バイト",
+    "reading": "ばいと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "プリンター",
+    "reading": "ぷりんたー",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "大量",
+    "reading": "たいりょう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "サイト",
+    "reading": "さいと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "受講",
+    "reading": "じゅこう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "生態",
+    "reading": "せいたい",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "前回",
+    "reading": "ぜんかい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "そのもの",
+    "reading": "そのもの",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "出せる",
+    "reading": "だせる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "話せる",
+    "reading": "はなせる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "近年",
+    "reading": "きんねん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "国内",
+    "reading": "こくない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "動画",
+    "reading": "どうが",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "早め",
+    "reading": "はやめ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "倫理",
+    "reading": "りんり",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "解消",
+    "reading": "かいしょう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "買える",
+    "reading": "かえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "市内",
+    "reading": "しない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "もらえる",
+    "reading": "もらえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "やる気",
+    "reading": "やるき",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "キャンセル",
+    "reading": "きゃんせる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "市長",
+    "reading": "しちょう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "同時に",
+    "reading": "どうじに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "入力",
+    "reading": "にゅうりょく",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "一人暮らし",
+    "reading": "ひとりぐらし",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "カフェ",
+    "reading": "かふぇ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "昨年",
+    "reading": "さくねん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "転職",
+    "reading": "てんしょく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "マニュアル",
+    "reading": "まにゅある",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "帰国",
+    "reading": "きこく",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "はじめて",
+    "reading": "はじめて",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "部署",
+    "reading": "ぶしょ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "レポーター",
+    "reading": "れぽーたー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "がんばる",
+    "reading": "がんばる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "親子",
+    "reading": "おやこ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "飼い主",
+    "reading": "かいぬし",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "聞き手",
+    "reading": "ききて",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "クッキー",
+    "reading": "くっきー",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "残業",
+    "reading": "ざんぎょう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "前日",
+    "reading": "ぜんじつ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "駐輪場",
+    "reading": "ちゅうりんじょう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "機器",
+    "reading": "きき",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "コスト",
+    "reading": "こすと",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "戦略",
+    "reading": "せんりゃく",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "総務",
+    "reading": "そうむ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "チョコレート",
+    "reading": "ちょこれーと",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "店舗",
+    "reading": "てんぽ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "発送",
+    "reading": "はっそう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "半年",
+    "reading": "はんとし",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "毎回",
+    "reading": "まいかい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "野球",
+    "reading": "やきゅう",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "入会",
+    "reading": "にゅうかい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "飲食",
+    "reading": "いんしょく",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "掲示板",
+    "reading": "けいじばん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "チャレンジ",
+    "reading": "ちゃれんじ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "中学生",
+    "reading": "ちゅうがくせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "作り方",
+    "reading": "つくりかた",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "本屋",
+    "reading": "ほんや",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "皆様",
+    "reading": "みなさま",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "あり方",
+    "reading": "ありかた",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "入り口",
+    "reading": "いりくち",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "カラオケ",
+    "reading": "からおけ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "受賞",
+    "reading": "じゅしょう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "つながり",
+    "reading": "つながり",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ネット",
+    "reading": "ねっと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "花屋",
+    "reading": "はなや",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ファッション",
+    "reading": "ふぁっしょん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "リスク",
+    "reading": "りすく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "選べる",
+    "reading": "えらべる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "視線",
+    "reading": "しせん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "オンライン",
+    "reading": "おんらいん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "スマートフォン",
+    "reading": "すまーとふぉん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "スマホ",
+    "reading": "すまほ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "パソコン",
+    "reading": "ぱそこん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ウェブ",
+    "reading": "うぇぶ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "データ",
+    "reading": "でーた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "アプリ",
+    "reading": "あぷり",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ソフトウェア",
+    "reading": "そふとうぇあ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "プログラム",
+    "reading": "ぷろぐらむ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ダウンロード",
+    "reading": "だうんろーど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "アップロード",
+    "reading": "あっぷろーど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ログイン",
+    "reading": "ろぐいん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "パスワード",
+    "reading": "ぱすわーど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "アンケート",
+    "reading": "あんけーと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "スタッフ",
+    "reading": "すたっふ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "アルバイト",
+    "reading": "あるばいと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "コンビニ",
+    "reading": "こんびに",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "スケジュール",
+    "reading": "すけじゅーる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "デザイン",
+    "reading": "でざいん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "コミュニケーション",
+    "reading": "こみゅにけーしょん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "サービス",
+    "reading": "さーびす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "クレーム",
+    "reading": "くれーむ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "システム",
+    "reading": "しすてむ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "エネルギー",
+    "reading": "えねるぎー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "環境問題",
+    "reading": "かんきょうもんだい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "留学生",
+    "reading": "りゅうがくせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "高校生",
+    "reading": "こうこうせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "大学生",
+    "reading": "だいがくせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "小学生",
+    "reading": "しょうがくせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "先生",
+    "reading": "せんせい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "外国語",
+    "reading": "がいこくご",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "外国人",
+    "reading": "がいこくじん",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "英語",
+    "reading": "えいご",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "中国語",
+    "reading": "ちゅうごくご",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "会社員",
+    "reading": "かいしゃいん",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "新入社員",
+    "reading": "しんにゅうしゃいん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "社会人",
+    "reading": "しゃかいじん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "面接",
+    "reading": "めんせつ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "就活",
+    "reading": "しゅうかつ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "就職活動",
+    "reading": "しゅうしょくかつどう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "働き方",
+    "reading": "はたらきかた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "受け取れる",
+    "reading": "うけとれる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "見える",
+    "reading": "みえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "聞こえる",
+    "reading": "きこえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "いただける",
+    "reading": "いただける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お越し",
+    "reading": "おこし",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お待ち",
+    "reading": "おまち",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お送り",
+    "reading": "おおくり",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "お申し込み",
+    "reading": "おもうしこみ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "申し込み",
+    "reading": "もうしこみ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "取り扱い",
+    "reading": "とりあつかい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "受け付け",
+    "reading": "うけつけ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "問い合わせ",
+    "reading": "といあわせ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "締め切り",
+    "reading": "しめきり",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "持ち物",
+    "reading": "もちもの",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "忘れ物",
+    "reading": "わすれもの",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "待ち合わせ",
+    "reading": "まちあわせ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "話し合い",
+    "reading": "はなしあい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "思い出",
+    "reading": "おもいで",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "知り合い",
+    "reading": "しりあい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "売り上げ",
+    "reading": "うりあげ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "売上",
+    "reading": "うりあげ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "値上げ",
+    "reading": "ねあげ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "値下げ",
+    "reading": "ねさげ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "好み",
+    "reading": "このみ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "便利さ",
+    "reading": "べんりさ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "大切さ",
+    "reading": "たいせつさ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "難しさ",
+    "reading": "むずかしさ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "楽しさ",
+    "reading": "たのしさ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "うれしさ",
+    "reading": "うれしさ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "word",
+    "label": "ありがたさ",
+    "reading": "ありがたさ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+  },
+  {
+    "kind": "grammar",
+    "label": "そうだ",
+    "levels": [
+      "N4"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "sou-da-appearance",
+        "pattern": "Verb-stem / い-adj stem / な-adj root + そう(だ/です)",
+        "level": "N4",
+        "review_status": "draft"
+      },
+      {
+        "id": "sou-da-hearsay",
+        "pattern": "Plain form + そう(だ/です)",
+        "level": "N4",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "ようになる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ないで",
+    "levels": [
+      "N3"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "nai-de-without-doing",
+        "pattern": "Verb ない-form + で",
+        "level": "N3",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "ところに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "しかない",
+    "levels": [
+      "N4"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "shika-nai",
+        "pattern": "Noun (or V plain) + しか + negative predicate",
+        "level": "N4",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "というと",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "予定だ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "がち",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ことはない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ものか",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ないといけない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "うちは",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に向けて",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ことになっている",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "きる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "あまりに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "次第に",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "すら",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "末に",
+    "levels": [
+      "N2"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "sue-ni-after",
+        "pattern": "V-た form / noun + の + 末(に)",
+        "level": "N2",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "ない限り",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "なくてはならない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "べきではない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ものではない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に加えて",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "わけにはいかない",
+    "levels": [
+      "N3"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "wake-ni-wa-ikanai",
+        "pattern": "V plain non-past + わけにはいかない",
+        "level": "N3",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "ことなく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に限り",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "て以来",
+    "levels": [
+      "N3"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "irai-since",
+        "pattern": "V-て form / noun + 以来",
+        "level": "N3",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "はずがない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "とたんに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に反して",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "をめぐって",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "かけだ",
+    "levels": [
+      "N3"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "kakeru-halfway",
+        "pattern": "Verb ます-stem + かける",
+        "level": "N3",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "かわりの",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ことだし",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "さえあれば",
+    "levels": [
+      "N2"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "sae-sureba-if-only",
+        "pattern": "Verb ます-stem / noun + さえ + conditional",
+        "level": "N2",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "つつも",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ないわけではない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に限る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "にかけては",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "限りでは",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ないことには",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "を除いて",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "さえも",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "に至って",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "ばこそ",
+    "levels": [
+      "N2"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "ba-koso-precisely-because",
+        "pattern": "V ば-form + こそ",
+        "level": "N2",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "ものと思われる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "あまりの",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "さえすれば",
+    "levels": [
+      "N2"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "sae-sureba-if-only",
+        "pattern": "Verb ます-stem / noun + さえ + conditional",
+        "level": "N2",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "まいか",
+    "levels": [
+      "N1"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "mai-ka-wonder",
+        "pattern": "V plain / noun + ではまいか / ではあるまいか",
+        "level": "N1",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "を抜きにして",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "grammar",
+    "label": "どころではなく",
+    "levels": [
+      "N3"
+    ],
+    "method": "expression-source",
+    "reason": "Explicit complete-construction/inflection mapping; no substring-based grade inference.",
+    "evidence": [
+      {
+        "id": "dokoro-dewa-nai-no-time",
+        "pattern": "Noun / V plain + どころではない",
+        "level": "N3",
+        "review_status": "draft"
+      }
+    ]
+  },
+  {
+    "kind": "grammar",
+    "label": "にひきかえ",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a complete grammatical construction; study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が付く",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を付ける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気になる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気に入る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気がする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が合う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が向く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が済む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が重い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が散る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を使う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を配る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を落とす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を抜く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を取り直す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を引く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気に掛ける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を許す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭に来る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭が下がる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭を抱える",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭を冷やす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭に入れる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭をひねる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭が上がらない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を通す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を向ける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を引く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を疑う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目に付く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目がない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を配る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目をつぶる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目をそらす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目が届く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目に浮かぶ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目が覚める",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を覚ます",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳を傾ける",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳が痛い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳を貸す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳に入る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳に入れる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口を出す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口が軽い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口が堅い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口をそろえる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口を挟む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口を利く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手に入れる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手に入る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を貸す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手が掛かる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を抜く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を打つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手に負えない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手が離せない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を付ける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を広げる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を伸ばす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手が届く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を焼く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足を運ぶ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足を引っ張る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足が出る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足を伸ばす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足を洗う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腕を磨く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腕が上がる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "顔が広い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "顔を出す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "顔が立つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "顔を立てる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "肩を落とす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "肩の荷が下りる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "肩を持つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "肩を並べる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸が痛む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸を張る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸がいっぱいになる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腰が重い",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腰を上げる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腰を据える",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腹が立つ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腹を立てる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腹を割る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "腹を決める",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "首になる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "首を長くする",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "首を傾げる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "首を突っ込む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "骨が折れる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "骨を折る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "息をのむ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "息が合う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "息をつく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身に付ける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身に付く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身をもって",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身を乗り出す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身に染みる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "水に流す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "水を差す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "油を売る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "道草を食う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "一目置く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "拍車を掛ける",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "羽を伸ばす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "歯が立たない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "馬が合う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "役に立つ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "時間がかかる",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "時間をかける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "人気がある",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "人気が出る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "興味を持つ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "関心を持つ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お世話になる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "世話になる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "世話をする",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お世話になっております",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お目にかかる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "ご覧になる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "力を入れる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "力をつける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "力になる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "力を注ぐ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "声をかける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "声を出す",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "風邪をひく",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "年をとる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "うまくいく",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "仕方がない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "思うように",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "いつの間にか",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "計画を立てる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "体を動かす",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "明らかになる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "意味がある",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "意味がない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "嫌になる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手に取る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "経験を積む",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "役割を果たす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "生活を送る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "話題になる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お腹が空く",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "参考になる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "大切にする",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "様子を見る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "理解を深める",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "印象を与える",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "印象に残る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "責任を持つ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "勉強になる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "例を挙げる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "電話をかける",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "写真を撮る",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "絵を描く",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "相談に乗る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "道に迷う",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "結果を出す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "汗をかく",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "念のため",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "調子が悪い",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を加える",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭に入る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "行動を起こす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "行動に移す",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "嘘をつく",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "仲がいい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "迷惑をかける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "文句を言う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "立場に立つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "成果を上げる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身を守る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気を失う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口に出す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "指示を出す",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "心に残る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "元気が出る",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "興味を引く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "元に戻る",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "元に戻す",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "言葉にする",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気にかかる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が立つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "苦になる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気持ちがいい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気持ちが悪い",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "都合がいい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "都合が悪い",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気のせい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気の毒",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を閉じる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目が合う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "顔を合わせる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "耳を疑う",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手が足りない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手間がかかる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手間をかける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を尽くす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "手を組む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足を止める",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "足が向く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸に刻む",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸をなでおろす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "胸が躍る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "心を込める",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "心を打つ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "心がける",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が進まない",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気が遠くなる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭を切り替える",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭を使う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "頭に浮かぶ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身を置く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身を引く",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "身を任せる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を奪われる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目が離せない",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目を光らせる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目をつける",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "目に留まる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口を開く",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口に合う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口が滑る",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "口を閉ざす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "話が合う",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "話を進める",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "話がつく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "話をつける",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "調子に乗る",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "調子を合わせる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "気分転換",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "一石二鳥",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "試行錯誤",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "自業自得",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "臨機応変",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "一長一短",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "十人十色",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "本末転倒",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "一喜一憂",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "半信半疑",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "相変わらず",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お互い様",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "おかげさまで",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お先に失礼します",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お疲れ様です",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お待たせしました",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "よろしくお願いします",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お願いいたします",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "承知しました",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お手数をおかけします",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お構いなく",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "ご無沙汰しております",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "idiom",
+    "label": "お久しぶりです",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+  },
+  {
+    "kind": "word",
+    "label": "あと",
+    "reading": "あと",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "しれる",
+    "reading": "しれる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "多く",
+    "reading": "おおく",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "中略",
+    "reading": "ちゅうりゃく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "やめる",
+    "reading": "やめる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "なくなる",
+    "reading": "なくなる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "というのは",
+    "reading": "というのは",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "思い",
+    "reading": "おもい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "スーパー",
+    "reading": "すーぱー",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "いま",
+    "reading": "いま",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "行ける",
+    "reading": "いける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "アドバイス",
+    "reading": "あどばいす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "他者",
+    "reading": "たしゃ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "その後",
+    "reading": "そのご",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "まずは",
+    "reading": "まずは",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "お話",
+    "reading": "おはなし",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "やり方",
+    "reading": "やりかた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "抑える",
+    "reading": "おさえる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "週末",
+    "reading": "しゅうまつ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "人数",
+    "reading": "にんずう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "いろんな",
+    "reading": "いろんな",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "市役所",
+    "reading": "しやくしょ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "本日",
+    "reading": "ほんじつ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "こういう",
+    "reading": "こういう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "新入",
+    "reading": "しんにゅう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "アニメ",
+    "reading": "あにめ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "書ける",
+    "reading": "かける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "日本人",
+    "reading": "にっぽんじん",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "自体",
+    "reading": "じたい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "なくす",
+    "reading": "なくす",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "わが",
+    "reading": "わが",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "一方で",
+    "reading": "いっぽうで",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "りんご",
+    "reading": "りんご",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "いっぱい",
+    "reading": "いっぱい",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "あまりに",
+    "reading": "あまりに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "けっこう",
+    "reading": "けっこう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "そういった",
+    "reading": "そういった",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "やってくる",
+    "reading": "やってくる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "株式会社",
+    "reading": "かぶしきがいしゃ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ツバメ",
+    "reading": "つばめ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "とはいえ",
+    "reading": "とはいえ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ちゃう",
+    "reading": "ちゃう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "すし",
+    "reading": "すし",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "適す",
+    "reading": "てきす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "発信",
+    "reading": "はっしん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "見た目",
+    "reading": "みため",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "読める",
+    "reading": "よめる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "アピール",
+    "reading": "あぴーる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ある程度",
+    "reading": "あるていど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "聞ける",
+    "reading": "きける",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "次第に",
+    "reading": "しだいに",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "スムーズ",
+    "reading": "すむーず",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "そもそも",
+    "reading": "そもそも",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "たしかに",
+    "reading": "たしかに",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "眠れる",
+    "reading": "ねむれる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "不可能",
+    "reading": "ふかのう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ペットボトル",
+    "reading": "ぺっとぼとる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "プロジェクト",
+    "reading": "ぷろじぇくと",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "学べる",
+    "reading": "まなべる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "向き合う",
+    "reading": "むきあう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "シンプル",
+    "reading": "しんぷる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "次に",
+    "reading": "つぎに",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "マナー",
+    "reading": "まなー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "一気に",
+    "reading": "いっきに",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "広報",
+    "reading": "こうほう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "他社",
+    "reading": "たしゃ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ニーズ",
+    "reading": "にーず",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "返信",
+    "reading": "へんしん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "アクセス",
+    "reading": "あくせす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "音声",
+    "reading": "おんせい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "活性",
+    "reading": "かっせい",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ターゲット",
+    "reading": "たーげっと",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "チラシ",
+    "reading": "ちらし",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "デジタル",
+    "reading": "でじたる",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "納期",
+    "reading": "のうき",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "微生物",
+    "reading": "びせいぶつ",
+    "levels": [
+      "N1"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "人びと",
+    "reading": "ひとびと",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "不要",
+    "reading": "ふよう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "モノ",
+    "reading": "もの",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ラーメン",
+    "reading": "らーめん",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "カタログ",
+    "reading": "かたろぐ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "初対面",
+    "reading": "しょたいめん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "世界中",
+    "reading": "せかいじゅう",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "店内",
+    "reading": "てんない",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "反論",
+    "reading": "はんろん",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ミーティング",
+    "reading": "みーてぃんぐ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "メリット",
+    "reading": "めりっと",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "思い切る",
+    "reading": "おもいきる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "書き直す",
+    "reading": "かきなおす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ゴルフ",
+    "reading": "ごるふ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "最大",
+    "reading": "さいだい",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "時給",
+    "reading": "じきゅう",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "自治体",
+    "reading": "じちたい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "初心者",
+    "reading": "しょしんしゃ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ストーリー",
+    "reading": "すとーりー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "トマト",
+    "reading": "とまと",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "副業",
+    "reading": "ふくぎょう",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "みかん",
+    "reading": "みかん",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "アート",
+    "reading": "あーと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "イラスト",
+    "reading": "いらすと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "お湯",
+    "reading": "おゆ",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "カラス",
+    "reading": "からす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "加えて",
+    "reading": "くわえて",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "結婚式",
+    "reading": "けっこんしき",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "顧客",
+    "reading": "こきゃく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "次回",
+    "reading": "じかい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "食後",
+    "reading": "しょくご",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "食前",
+    "reading": "しょくぜん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "スキル",
+    "reading": "すきる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "それだけ",
+    "reading": "それだけ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "定着",
+    "reading": "ていちゃく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "パッケージ",
+    "reading": "ぱっけーじ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "プロセス",
+    "reading": "ぷろせす",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ペース",
+    "reading": "ぺーす",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "保育園",
+    "reading": "ほいくえん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "防災",
+    "reading": "ぼうさい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "ホームステイ",
+    "reading": "ほーむすてい",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "レシート",
+    "reading": "れしーと",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "会える",
+    "reading": "あえる",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "おすすめ",
+    "reading": "おすすめ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "お伝え",
+    "reading": "おつたえ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "木々",
+    "reading": "きぎ",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "きのう",
+    "reading": "きのう",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "サポート",
+    "reading": "さぽーと",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "選択肢",
+    "reading": "せんたくし",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "デザイナー",
+    "reading": "でざいなー",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "取り込む",
+    "reading": "とりこむ",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "乗り越える",
+    "reading": "のりこえる",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "無意識",
+    "reading": "むいしき",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "やりがい",
+    "reading": "やりがい",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "来年度",
+    "reading": "らいねんど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "大型",
+    "reading": "おおがた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "開店",
+    "reading": "かいてん",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "後半",
+    "reading": "こうはん",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "小型",
+    "reading": "こがた",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "今年度",
+    "reading": "こんねんど",
+    "levels": [
+      "N3"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "試作",
+    "reading": "しさく",
+    "levels": [
+      "N2"
+    ],
+    "method": "editorial",
+    "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+  },
+  {
+    "kind": "word",
+    "label": "すぐ",
+    "reading": "すぐ",
+    "levels": [
+      "N5"
+    ],
+    "method": "editorial",
+    "overridesVariant": true,
+    "reason": "Reviewed common spelling separately; rare kanji/alternate spelling grade must not be transferred to this elementary word."
+  },
+  {
+    "kind": "word",
+    "label": "クラブ",
+    "reading": "くらぶ",
+    "levels": [
+      "N4"
+    ],
+    "method": "editorial",
+    "overridesVariant": true,
+    "reason": "Reviewed common spelling separately; rare kanji/alternate spelling grade must not be transferred to this elementary word."
+  }
+]

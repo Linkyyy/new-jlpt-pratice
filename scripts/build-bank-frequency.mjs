@@ -7,6 +7,7 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 import kuromoji from 'kuromoji';
 import { createFrequencyBuilder, frequencyMetadata } from '../src/lib/bank-frequency.mjs';
 import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
+import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
 import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 
@@ -16,6 +17,7 @@ const imported = path.join(root, 'src/data/imported-bank/questions');
 const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.json$/.test(file)).sort();
 const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-word-supplements.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
 inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 'src/data/frequency-levels/entries.json', 'src/data/frequency-levels/source.json');
+inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
 inputs.push('src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
@@ -25,7 +27,7 @@ digest.update(dictionary);
 const revision = digest.digest('hex');
 try {
   const previous = JSON.parse(await fs.readFile(path.join(output, 'manifest.json'), 'utf8'));
-  if (previous.revision === revision) { await fs.access(path.join(output, 'corpus.json.gz')); await fs.access(path.join(output, 'quality-report.json')); console.log('题库词频索引已是最新。'); process.exit(0); }
+  if (previous.revision === revision) { await fs.access(path.join(output, 'corpus.json.gz')); await fs.access(path.join(output, 'quality-report.json')); await fs.access(path.join(output, 'level-review-report.json')); console.log('题库词频索引已是最新。'); process.exit(0); }
 } catch (error) { if (error.code !== 'ENOENT') throw error; }
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, result) => error ? reject(error) : resolve(result)));
@@ -66,6 +68,11 @@ const quality = reviewFrequencyCorpus(corpus, {trustedWords, referenceReadings: 
 quality.correctedReadings = correctedReadings;
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
+const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));
+gradeReview.compounds = annotateFrequencyCompounds(corpus, {tokenize: text => tokenizer.tokenize(text), trustedWords});
+await fs.mkdir(output, { recursive: true });
+await fs.writeFile(path.join(output, 'level-review-report.json'), JSON.stringify(gradeReview, null, 2) + '\n');
+console.log('补充分级与复合词复核：', gradeReview.totals, '复合词', gradeReview.compounds);
 await fs.mkdir(output, { recursive: true });
 await fs.writeFile(path.join(output, 'corpus.json.gz'), gzipSync(JSON.stringify(corpus), { level: 9 }));
 await fs.writeFile(path.join(output, 'manifest.json'), JSON.stringify(frequencyMetadata(corpus), null, 2) + '\n');

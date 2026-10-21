@@ -1,7 +1,7 @@
 // Exact, reviewed tokenizer errors. Each replacement must still be attested by
 // the source dictionary; never choose between legitimate alternative readings.
 const readingCorrections = [
-  ['授ける', 'さづける', 'さずける'], ['厳正', 'いむただし', 'げんせい'],
+  ['授ける', 'さづける', 'さずける'], ['預ける', 'あづける', 'あずける'], ['厳正', 'いむただし', 'げんせい'],
   ['武勇', 'たけいさむ', 'ぶゆう'], ['図形', 'づけい', 'ずけい'],
   ['強いて', 'つよいて', 'しいて'], ['厳密', 'いむひそか', 'げんみつ'],
   ['五角形', 'ごかっけい', 'ごかくけい'], ['一杯', 'いちはい', 'いっぱい'],

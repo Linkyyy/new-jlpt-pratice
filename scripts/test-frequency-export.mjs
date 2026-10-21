@@ -126,12 +126,20 @@ test('reference-grade exports retain cross-level original sources, grades and no
 });
 
 test('grammar and idiom exports include whole-expression grades or an explicit ungraded label, plus the grammar reference source', async () => {
-  for (const filters of [{kind:'grammar',grade:'N2',q:'にしては'}, {kind:'idiom',grade:'N3',q:'気に入る'}, {kind:'idiom',grade:'ungraded',q:'腹が立つ'}]) {
+  for (const filters of [{kind:'grammar',grade:'N2',q:'にしては'}, {kind:'idiom',grade:'N3',q:'気に入る'}, {kind:'idiom',grade:'N3',q:'腹が立つ'}]) {
     const result=queryFrequency(corpus,{...defaultFrequencyFilters,...filters},undefined,{allRows:true});assert.ok(result.total>0);
     const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,'zh',now));
-    assert.equal(book.worksheets[0].getCell('K2').value,filters.grade==='ungraded'?'未分级':filters.grade);
+    assert.equal(book.worksheets[0].getCell('K2').value,filters.grade+(result.rows[0].referenceBasis==='editorial'?'（估级）':''));
     assert.match(book.worksheets[1].getCell('B12').value,/Kindrix/);assert.match(book.worksheets[1].getCell('B12').value,/draft/);
     if(filters.grade==='ungraded')assert.match(book.worksheets[1].getCell('B2').value,/未分级/);
     assert.match((await createFrequencyPdf(result,metadata,'zh',now)).toString('latin1'),/%%EOF\s*$/);
   }
+});
+
+
+test('exported rows retain compound POS and estimated-grade labels, while unknown grades stay explicitly ungraded', async () => {
+  const row={...all.rows[0], pos:'名词', compound:true, referenceLevels:['N3'],referenceBasis:'editorial'};
+  const result={...all,total:1,rows:[row]};const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata));
+  assert.equal(book.worksheets[0].getCell('D2').value,'名词 / 复合词');assert.equal(book.worksheets[0].getCell('K2').value,'N3（估级）');
+  const missing={...result,rows:[{...row,referenceLevels:[],referenceBasis:'ungraded'}]};const empty=new ExcelJS.Workbook();await empty.xlsx.load(await createFrequencyWorkbook(missing,metadata));assert.equal(empty.worksheets[0].getCell('K2').value,'未分级');
 });

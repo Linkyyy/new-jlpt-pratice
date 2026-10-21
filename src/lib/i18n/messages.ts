@@ -1,4 +1,13 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["复合词仅收录可核对的构词组合；词条与组成词分别统计，不能相加当作原文总词数。", "確認できる構成の複合語のみ収録します。語句と構成語を別々に数えるため、合計は原文の総語数ではありません。", "Compounds require verifiable word formation. They and their components count separately, so their sum is not the source token count."],
+  ["复合词", "複合語", "Compound words"],
+  ["（估级）", "（推定）", " (estimated)"],
+  ["站内复核的学习估级，不是公开词表给出的等级。", "本サイトが確認した学習用の推定で、公開リストのレベルではありません。", "Site-reviewed learning estimate, not a grade supplied by a published word list."],
+  ["参考等级含公开词表及复核补充；标注“估级”的为站内学习估级。均非官方等级，试卷等级可独立选择。", "公開リストと追加照合による参考分類です。「推定」は本サイトの学習用評価です。すべて非公式で、試験レベルは別に選べます。", "Reference grades combine public lists and reviewed supplements. Estimated labels mark site study estimates. All grades are unofficial; paper levels are independent."],
+  ["包含惯用句、定型表达及常用搭配；按完整表达和活用匹配，不跨句或拼接选项，具体含义结合原题判断。", "慣用句・定型表現・一般的な連語を含みます。表現全体と活用を照合し、文や選択肢を連結しません。意味は原文で確認してください。", "Includes idioms, set phrases and common collocations. Matches whole expressions and inflections without joining sentences or choices; interpret meanings in source context."],
+  ["补充分级经整词及读音核对；“估级”为站内复核，不按试卷等级或组成词推断。复合词保留原词性，依据构词关系筛选。", "追加分類は語句全体と読みを照合します。「推定」は本サイトの評価で、試験や構成語のレベルを転用しません。複合語は元の品詞を保持します。", "Supplemental levels check complete words and readings. Estimates are site-reviewed; paper or component-word levels are never inherited. Compound filters preserve original parts of speech."],
+  ["补充来源与复核说明", "追加資料と確認方針", "Supplement sources and review notes"],
+
   ["PDF 导出设置", "PDF 出力設定", "PDF export settings"],
   ["排版格式", "レイアウト", "Layout"],
   ["详细列表", "詳細リスト", "Detailed list"],

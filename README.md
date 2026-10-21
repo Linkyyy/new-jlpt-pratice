@@ -160,3 +160,5 @@ R2 Bucket、公开域名、上传凭据、批量上传、题库关联和 Vercel 
 选择“导出 → PDF”后，可选择详细列表或紧凑表格、A4/A5 纸张、横向/纵向与 9/11/13 pt 字号。词条始终显示；排名、读音、参考等级、词性、出现次数、覆盖题目、覆盖场次、释义、用法及释义来源均可独立勾选。来源与许可统一保留在文档开头，长词条会自动跨页；Excel 导出仍保留完整字段。
 
 导出回归测试：`npm run test:frequency-export`。其中 PDF 文本与分页检查需要系统安装 Poppler 的 `pdftotext` 和 `pdfinfo`（Ubuntu/Debian：`sudo apt-get install poppler-utils`），网站运行和 Vercel 部署无需安装。
+
+词频页面还支持在词性中筛选复合词（保留原词性），并扩充惯用句、固定表达和常用搭配。参考等级增加词表交叉核对、整词表记核对与标明“估级”的站内复核；完整来源和待确认记录见 [分级说明](src/data/frequency-levels/README.md) 与 `src/data/bank-frequency/level-review-report.json`。

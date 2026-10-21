@@ -1,5 +1,5 @@
 {
-  "revision": "28611372ce798cba6b7a52767ddce24a2c721a26bb36afa908c90a154fc5c144",
+  "revision": "d8d066892f07353427d88c9bbec14ed57c0823a7dba2a805dda5a49afa3ada6f",
   "excludedTerms": 1582,
   "reasons": {
     "personal_or_organization_name": 419,
@@ -18874,6 +18874,12 @@
       "label": "一泊",
       "prior": "いちはく",
       "reading": "いっぱく",
+      "source": "frequency-dictionary"
+    },
+    {
+      "label": "預ける",
+      "prior": "あづける",
+      "reading": "あずける",
       "source": "frequency-dictionary"
     },
     {

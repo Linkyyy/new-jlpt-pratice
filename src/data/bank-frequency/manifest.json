@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "revision": "28611372ce798cba6b7a52767ddce24a2c721a26bb36afa908c90a154fc5c144",
+  "revision": "d8d066892f07353427d88c9bbec14ed57c0823a7dba2a805dda5a49afa3ada6f",
   "summary": {
     "questions": 8759,
     "papers": 94,
     "units": 37925,
-    "terms": 15190,
+    "terms": 15328,
     "listeningQuestions": 2634,
     "transcripts": 2633,
     "excludedFragments": 1933,
     "grammarExpressions": 238,
-    "idiomExpressions": 114
+    "idiomExpressions": 262
   },
   "definitionSummary": {
-    "matched": 15103,
-    "missing": 87,
-    "total": 15190
+    "matched": 15223,
+    "missing": 105,
+    "total": 15328
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
@@ -35,6 +35,38 @@
     "license": "CC BY-SA 4.0",
     "entries": 181,
     "note": "Unofficial community-curated draft levels, not native-reviewed. Explicit whole-pattern mappings only; no component-word or substring-based level inference."
+  },
+  "referenceSupplementSource": {
+    "name": "补充词表交叉核对、整词表记复核与站内估级",
+    "url": "https://github.com/Linkyyy/new-jlpt-pratice/tree/main/src/data/frequency-levels",
+    "revision": "48cdf2a051b130b3a126199baa8b4e7dc696f67f6b2a6d3c2108d83f62f0e72e",
+    "license": "CC BY-SA 4.0 / MIT / site-authored estimates",
+    "entries": 1723,
+    "sources": [
+      {
+        "name": "elzup / Jamie Sinclair, open JLPT word lists; Jonathan Waller / Tanos original data",
+        "url": "https://github.com/elzup/jlpt-word-list",
+        "revision": "13aa3c54b27115be72d8a62cd4071077c68d2171",
+        "license": "MIT (repository), attribution to Jonathan Waller / Tanos retained"
+      },
+      {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "source": "JMdict (examples variant) via scriptin/jmdict-simplified",
+        "source_url": "https://github.com/scriptin/jmdict-simplified",
+        "license": "CC-BY-SA 4.0 (EDRDG License)",
+        "source_version": "3.6.2",
+        "upstream_dict_date": "2026-04-06",
+        "generated": "2026-04-14",
+        "filter": "Common entries only: any word with at least one kanji or kana writing flagged common=true in the upstream JMdict priority markers (news1/ichi1/spec1/spec2/gai1).",
+        "attribution": "This work uses JMdict from the Electronic Dictionary Research and Development Group (EDRDG), used in conformance with the Group's license (https://www.edrdg.org/edrdg/licence.html). Example sentences sourced from the Tatoeba Project (https://tatoeba.org/) under CC-BY 2.0 FR, selected and linked by JMdict editors. Ingested via scriptin/jmdict-simplified (https://github.com/scriptin/jmdict-simplified)."
+      }
+    ],
+    "policy": "Only exact whole-word/reading matches or a unique same-reading JMdict entry may extend published grades. Existing grades are preserved. Site estimates are recorded separately and labelled in UI and exports."
   },
   "qualitySummary": {
     "excludedTerms": 1582,

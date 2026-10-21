@@ -28,4 +28,27 @@ npm run build:frequency
 
 [expression-entries.json](expression-entries.json) 记录 180 条语法及「気がする」的参考分类，每条保留上游 id 和完整结构。复核时从指定快照打开相应 id，核对 pattern、level 与 review_status；需要修改映射时同时更新此文件和来源说明，然后运行 `npm run build:frequency`。
 
-惯用句还可按**整条表达**及已确认的表记变体，精确匹配原有 Waller 词表。例如「気に入る」「気を付ける」。不拆成「気」「入る」「付ける」来推断等级。未在两份资料中找到整条表达的惯用句、语法保持未分级，筛选、列表、详情和导出均明确标记，不自动给所有惯用句强行分配 N1–N5。
+惯用句还可按**整条表达**及已确认的表记变体，精确匹配原有 Waller 词表。例如「気に入る」「気を付ける」。不拆成「気」「入る」「付ける」来推断等级。未在这两份基础资料中找到的表达由下述补充复核单独处理；没有可靠来源且未通过完整表达复核的仍保持未分级，不按组成词或试卷等级强行分配 N1–N5。
+
+## 2026-10-21 补充复核
+
+基础两份快照及已有词条等级保持原样。新增结果分开保存：
+
+- `supplement-entries.json`：补充词表的**词形＋读音精确匹配**，或 JMdict 同一条目中**相同读音**的可靠表记。多义假名词对应多个 JMdict 条目时不自动转移；同条目多个表记提供不同等级时，新增共用写法只保留其中最基础的已见等级，避免把难写法等级套给常见假名；不把同一词的其他读音等级直接套用。来源、固定版本及原始文件指纹见 `supplement-source.json`，补充词表许可见 `SUPPLEMENT-WORD-LICENSE.txt`。
+- 补充词表来自 elzup / Jamie Sinclair 的 `jlpt-word-list`，保留其 Jonathan Waller / Tanos 归属。整词表记核对使用 Japanese Language Data 中的 JMdict 常用词快照（JMdict / EDRDG，CC BY-SA 4.0）；只使用词形、读音和同条目关系，不复制英文例句或翻译。
+- `reviewed-entries.json`：逐条复核的完整词汇、语法和惯用表达。能与现有完整语法结构对应的记录保留上游 id、pattern、level；其余为站内学习估级，记录 `method: editorial`，在列表、详情、Excel 和 PDF 中均附“估级”，不冒称公开词表或官方评级。
+- 估级参考完整表达的含义、构词、语域和学习前置知识；不会按出现在哪一级试卷、出现频次、组成单词等级自动分配。基础词表优先，已分级的词不会被补充估级覆盖。
+- 未能确认的专名、混合读音、多义假名词、资料未覆盖项继续保留未分级，不为提高覆盖率批量按 N1/N2 填充。
+
+统计构建会生成 `src/data/bank-frequency/level-review-report.json`，列明新增等级的依据、仍未确认条目及分类汇总。分级只改变派生检索索引，不改原题题干、答案、评分或做题记录。
+
+补充导入可复现命令（均使用本地快照；构建和部署无需联网）：
+
+```sh
+python scripts/import-frequency-supplements.py /path/to/jlpt-word-list /path/to/yomitan-jlpt-vocab /path/to/core-words.json
+npm run build:frequency
+```
+
+`core-words.json` 为 `jkindrix/japanese-language-data` 指定快照中的 `data/core/words.json`，版本和日期见来源记录。新增题库或参考来源后可重新导入；原有补充分级不会因已经命中而在再次导入时丢失。
+
+惯用表达重扫的候选范围、入库清单与完整表达对应的 JMdict id 见 [idiom-rescan-review.json](idiom-rescan-review.json)。候选发现只用于人工筛选，不直接视作可靠匹配或原题最终频次。

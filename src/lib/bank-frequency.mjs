@@ -1,3 +1,4 @@
+import { createCompoundMatcher } from './frequency-review.mjs';
 import { grammarExpressions, connectiveExpressions, wordStopList } from './frequency-lexicon.mjs';
 import { classifyFrequencySubtype, officialFrequencySubtypes } from './frequency-subtypes.mjs';
 import { createIdiomMatcher, idiomEntries } from './frequency-idioms.mjs';
@@ -59,6 +60,7 @@ const ambiguousConnectives = new Set(['では', 'でも', 'だから', 'だけ�
 /** Tokenizer is a build-time dependency. This module and the deployed API never load its dictionaries. */
 export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}) {
   const matchIdioms = createIdiomMatcher(tokenize);
+  const matchCompounds = createCompoundMatcher(tokenize, trustedWords);
   const questions = [], units = [], terms = [], papers = [], subtypes = new Map();
   const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map();
   let transcripts = 0, listeningQuestions = 0, excludedFragments = 0;
@@ -104,7 +106,8 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
         add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续词', expression.kind));
       }
     }
-    for (const label of matchIdioms(tokens)) add(termId(label, readingFor(label), '惯用句', 'idiom'));
+    for (const label of matchCompounds(text, tokens)) add(termId(label, readingFor(label), '名词', 'word'));
+    for (const label of matchIdioms(tokens)) add(termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom'));
     return [...counts].flat();
   }
   function addUnit(text, field, questionIndex, shared) {
@@ -145,7 +148,7 @@ export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'al
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词', '复合词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -178,6 +181,7 @@ export function frequencyMetadata(corpus) {
   return { version: corpus.version, revision: corpus.revision, summary: corpus.summary, ...(corpus.definitionSummary ? {definitionSummary: corpus.definitionSummary} : {}),
     referenceSource: corpus.referenceSource,
     referenceExpressionSource: corpus.referenceExpressionSource,
+    referenceSupplementSource: corpus.referenceSupplementSource,
     qualitySummary: corpus.qualitySummary,
     levels: [...new Set(corpus.questions.map(q => q[2]))].sort(),
     periods: [...new Set(corpus.questions.map(q => q[3]))].sort().reverse(),
@@ -228,7 +232,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
     if (filters.grade === 'ungraded' && grades.length) return;
     if (filters.grade && !['all', 'ungraded'].includes(filters.grade) && !grades.includes(filters.grade)) return;
     if (presence && (presence[index] & lowerMask)) return;
-    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
+    if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || (filters.pos === '复合词' ? corpus.compounds?.[index] === true : term[2] === filters.pos)) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
   });
   const matched = new Map(); let unitCount = 0;
   for (const unit of corpus.units) {
@@ -256,6 +260,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const page = options.allRows ? 1 : Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
   const shape = row => ({ id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size,
     referenceLevels: corpus.referenceLevels?.[row.id] ?? [],
+    referenceBasis: corpus.referenceBasis?.[row.id] ?? 'reference', compound: corpus.compounds?.[row.id] ?? false,
     definition: corpus.definitions?.[row.id] ?? {meaning: '', usage: '', source: 'missing'},
   });
   const selected = selectedTerm === undefined ? null : rows.find(row => row.id === selectedTerm);

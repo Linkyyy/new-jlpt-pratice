@@ -1,0 +1,2685 @@
+{
+  "date": "2026-10-21",
+  "candidateSource": "JMdict expression entries via jkindrix/japanese-language-data, source version 3.6.2; no upstream examples copied",
+  "candidateEntries": 13220,
+  "matchedCandidates": 2493,
+  "inventory": 262,
+  "previousActiveIdioms": 62,
+  "activeIdioms": 182,
+  "entries": [
+    {
+      "label": "気が付く",
+      "forms": [
+        "気が付く",
+        "気がつく"
+      ],
+      "dictionaryIds": [
+        "1591050"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を付ける",
+      "forms": [
+        "気を付ける",
+        "気をつける"
+      ],
+      "dictionaryIds": [
+        "1591990"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気になる",
+      "forms": [
+        "気になる"
+      ],
+      "dictionaryIds": [
+        "1221690"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気にする",
+      "forms": [
+        "気にする"
+      ],
+      "dictionaryIds": [
+        "1221680"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気に入る",
+      "forms": [
+        "気に入る"
+      ],
+      "dictionaryIds": [
+        "1221740"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気がする",
+      "forms": [
+        "気がする"
+      ],
+      "dictionaryIds": [
+        "1221540"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が合う",
+      "forms": [
+        "気が合う"
+      ],
+      "dictionaryIds": [
+        "1221570"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が向く",
+      "forms": [
+        "気が向く"
+      ],
+      "dictionaryIds": [
+        "2056630"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が済む",
+      "forms": [
+        "気が済む"
+      ],
+      "dictionaryIds": [
+        "1221580"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が重い",
+      "forms": [
+        "気が重い"
+      ],
+      "dictionaryIds": [
+        "1221590"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が散る",
+      "forms": [
+        "気が散る"
+      ],
+      "dictionaryIds": [
+        "2056660"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を使う",
+      "forms": [
+        "気を使う",
+        "気を遣う"
+      ],
+      "dictionaryIds": [
+        "1591980"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を配る",
+      "forms": [
+        "気を配る"
+      ],
+      "dictionaryIds": [
+        "1980910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を落とす",
+      "forms": [
+        "気を落とす"
+      ],
+      "dictionaryIds": [
+        "2110710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を抜く",
+      "forms": [
+        "気を抜く"
+      ],
+      "dictionaryIds": [
+        "2127660"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を取り直す",
+      "forms": [
+        "気を取り直す"
+      ],
+      "dictionaryIds": [
+        "1221850"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を引く",
+      "forms": [
+        "気を引く"
+      ],
+      "dictionaryIds": [
+        "2057100"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気に掛ける",
+      "forms": [
+        "気に掛ける",
+        "気にかける"
+      ],
+      "dictionaryIds": [
+        "1221700"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を許す",
+      "forms": [
+        "気を許す"
+      ],
+      "dictionaryIds": [
+        "1221840"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭に来る",
+      "forms": [
+        "頭に来る",
+        "頭にくる"
+      ],
+      "dictionaryIds": [
+        "1450720"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭が下がる",
+      "forms": [
+        "頭が下がる"
+      ],
+      "dictionaryIds": [
+        "2237310"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭を抱える",
+      "forms": [
+        "頭を抱える"
+      ],
+      "dictionaryIds": [
+        "2275540"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭を冷やす",
+      "forms": [
+        "頭を冷やす"
+      ],
+      "dictionaryIds": [
+        "1450750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭に入れる",
+      "forms": [
+        "頭に入れる"
+      ],
+      "dictionaryIds": [
+        "1856540"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭をひねる",
+      "forms": [
+        "頭をひねる",
+        "頭を捻る"
+      ],
+      "dictionaryIds": [
+        "2453230"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭が上がらない",
+      "forms": [
+        "頭が上がらない"
+      ],
+      "dictionaryIds": [
+        "2182550"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目にする",
+      "forms": [
+        "目にする"
+      ],
+      "dictionaryIds": [
+        "2399540"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を通す",
+      "forms": [
+        "目を通す"
+      ],
+      "dictionaryIds": [
+        "1535250"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を向ける",
+      "forms": [
+        "目を向ける"
+      ],
+      "dictionaryIds": [
+        "2098490"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を引く",
+      "forms": [
+        "目を引く"
+      ],
+      "dictionaryIds": [
+        "2086710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を疑う",
+      "forms": [
+        "目を疑う"
+      ],
+      "dictionaryIds": [
+        "2755550"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目に付く",
+      "forms": [
+        "目に付く",
+        "目につく"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目がない",
+      "forms": [
+        "目がない"
+      ],
+      "dictionaryIds": [
+        "1535080"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を配る",
+      "forms": [
+        "目を配る"
+      ],
+      "dictionaryIds": [
+        "2423690"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目をつぶる",
+      "forms": [
+        "目をつぶる",
+        "目を瞑る"
+      ],
+      "dictionaryIds": [
+        "1535180"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目をそらす",
+      "forms": [
+        "目をそらす",
+        "目を逸らす"
+      ],
+      "dictionaryIds": [
+        "1912050"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目が届く",
+      "forms": [
+        "目が届く"
+      ],
+      "dictionaryIds": [
+        "2789690"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目に浮かぶ",
+      "forms": [
+        "目に浮かぶ"
+      ],
+      "dictionaryIds": [
+        "2012300"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目が覚める",
+      "forms": [
+        "目が覚める"
+      ],
+      "dictionaryIds": [
+        "2143090"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を覚ます",
+      "forms": [
+        "目を覚ます"
+      ],
+      "dictionaryIds": [
+        "1535200"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳にする",
+      "forms": [
+        "耳にする"
+      ],
+      "dictionaryIds": [
+        "2059550"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳を傾ける",
+      "forms": [
+        "耳を傾ける"
+      ],
+      "dictionaryIds": [
+        "2069560"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳が痛い",
+      "forms": [
+        "耳が痛い"
+      ],
+      "dictionaryIds": [
+        "2578130"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳を貸す",
+      "forms": [
+        "耳を貸す"
+      ],
+      "dictionaryIds": [
+        "1317200"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳に入る",
+      "forms": [
+        "耳に入る"
+      ],
+      "dictionaryIds": [
+        "2399890"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳に入れる",
+      "forms": [
+        "耳に入れる"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口にする",
+      "forms": [
+        "口にする"
+      ],
+      "dictionaryIds": [
+        "1275750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口を出す",
+      "forms": [
+        "口を出す"
+      ],
+      "dictionaryIds": [
+        "1275760"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口が軽い",
+      "forms": [
+        "口が軽い"
+      ],
+      "dictionaryIds": [
+        "1275680"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口が堅い",
+      "forms": [
+        "口が堅い",
+        "口が固い"
+      ],
+      "dictionaryIds": [
+        "2134550"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口をそろえる",
+      "forms": [
+        "口をそろえる",
+        "口を揃える"
+      ],
+      "dictionaryIds": [
+        "2679850"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口を挟む",
+      "forms": [
+        "口を挟む",
+        "口をはさむ"
+      ],
+      "dictionaryIds": [
+        "1872190"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口を利く",
+      "forms": [
+        "口を利く",
+        "口をきく"
+      ],
+      "dictionaryIds": [
+        "2086150"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手に入れる",
+      "forms": [
+        "手に入れる"
+      ],
+      "dictionaryIds": [
+        "1327230"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手に入る",
+      "forms": [
+        "手に入る"
+      ],
+      "dictionaryIds": [
+        "1327220"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を貸す",
+      "forms": [
+        "手を貸す"
+      ],
+      "dictionaryIds": [
+        "2126990"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手が掛かる",
+      "forms": [
+        "手が掛かる",
+        "手がかかる"
+      ],
+      "dictionaryIds": [
+        "2089710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を抜く",
+      "forms": [
+        "手を抜く"
+      ],
+      "dictionaryIds": [
+        "1327310"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を打つ",
+      "forms": [
+        "手を打つ"
+      ],
+      "dictionaryIds": [
+        "2200440"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手に負えない",
+      "forms": [
+        "手に負えない"
+      ],
+      "dictionaryIds": [
+        "2084650"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手が離せない",
+      "forms": [
+        "手が離せない",
+        "手が放せない"
+      ],
+      "dictionaryIds": [
+        "2125840"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を付ける",
+      "forms": [
+        "手を付ける",
+        "手をつける"
+      ],
+      "dictionaryIds": [
+        "2222160"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を広げる",
+      "forms": [
+        "手を広げる"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を伸ばす",
+      "forms": [
+        "手を伸ばす"
+      ],
+      "dictionaryIds": [
+        "2848742"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手が届く",
+      "forms": [
+        "手が届く"
+      ],
+      "dictionaryIds": [
+        "2400050"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を焼く",
+      "forms": [
+        "手を焼く"
+      ],
+      "dictionaryIds": [
+        "2028670"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足を運ぶ",
+      "forms": [
+        "足を運ぶ"
+      ],
+      "dictionaryIds": [
+        "2102020"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足を引っ張る",
+      "forms": [
+        "足を引っ張る",
+        "足を引っぱる"
+      ],
+      "dictionaryIds": [
+        "2119830"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足が出る",
+      "forms": [
+        "足が出る"
+      ],
+      "dictionaryIds": [
+        "1404640"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足を伸ばす",
+      "forms": [
+        "足を伸ばす",
+        "足をのばす"
+      ],
+      "dictionaryIds": [
+        "2266910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足を洗う",
+      "forms": [
+        "足を洗う"
+      ],
+      "dictionaryIds": [
+        "1856360"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腕を磨く",
+      "forms": [
+        "腕を磨く"
+      ],
+      "dictionaryIds": [
+        "2102290"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腕が上がる",
+      "forms": [
+        "腕が上がる"
+      ],
+      "dictionaryIds": [
+        "1854800"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "顔が広い",
+      "forms": [
+        "顔が広い"
+      ],
+      "dictionaryIds": [
+        "2139970"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "顔を出す",
+      "forms": [
+        "顔を出す"
+      ],
+      "dictionaryIds": [
+        "2101420"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "顔が立つ",
+      "forms": [
+        "顔が立つ"
+      ],
+      "dictionaryIds": [
+        "1864200"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "顔を立てる",
+      "forms": [
+        "顔を立てる"
+      ],
+      "dictionaryIds": [
+        "1217790"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "肩を落とす",
+      "forms": [
+        "肩を落とす"
+      ],
+      "dictionaryIds": [
+        "2402770"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "肩の荷が下りる",
+      "forms": [
+        "肩の荷が下りる",
+        "肩の荷が降りる"
+      ],
+      "dictionaryIds": [
+        "2119420"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "肩を持つ",
+      "forms": [
+        "肩を持つ"
+      ],
+      "dictionaryIds": [
+        "1258980"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "肩を並べる",
+      "forms": [
+        "肩を並べる"
+      ],
+      "dictionaryIds": [
+        "2102910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸が痛む",
+      "forms": [
+        "胸が痛む"
+      ],
+      "dictionaryIds": [
+        "2786110"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸を張る",
+      "forms": [
+        "胸を張る"
+      ],
+      "dictionaryIds": [
+        "2029360"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸がいっぱいになる",
+      "forms": [
+        "胸がいっぱいになる",
+        "胸が一杯になる"
+      ],
+      "dictionaryIds": [
+        "2705660"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腰が重い",
+      "forms": [
+        "腰が重い"
+      ],
+      "dictionaryIds": [
+        "1640180"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腰を上げる",
+      "forms": [
+        "腰を上げる"
+      ],
+      "dictionaryIds": [
+        "2239080"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腰を据える",
+      "forms": [
+        "腰を据える",
+        "腰をすえる"
+      ],
+      "dictionaryIds": [
+        "1876650"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腹が立つ",
+      "forms": [
+        "腹が立つ"
+      ],
+      "dictionaryIds": [
+        "1626220"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腹を立てる",
+      "forms": [
+        "腹を立てる"
+      ],
+      "dictionaryIds": [
+        "1902600"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腹を割る",
+      "forms": [
+        "腹を割る"
+      ],
+      "dictionaryIds": [
+        "2247100"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "腹を決める",
+      "forms": [
+        "腹を決める"
+      ],
+      "dictionaryIds": [
+        "2403110"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "首になる",
+      "forms": [
+        "首になる",
+        "首に成る"
+      ],
+      "dictionaryIds": [
+        "1640370"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "首を長くする",
+      "forms": [
+        "首を長くする"
+      ],
+      "dictionaryIds": [
+        "1329250"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "首を傾げる",
+      "forms": [
+        "首を傾げる",
+        "首をかしげる"
+      ],
+      "dictionaryIds": [
+        "1329220"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "首を突っ込む",
+      "forms": [
+        "首を突っ込む",
+        "首をつっこむ"
+      ],
+      "dictionaryIds": [
+        "2016320"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "骨が折れる",
+      "forms": [
+        "骨が折れる"
+      ],
+      "dictionaryIds": [
+        "1627350"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "骨を折る",
+      "forms": [
+        "骨を折る"
+      ],
+      "dictionaryIds": [
+        "1908600"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "息をのむ",
+      "forms": [
+        "息をのむ",
+        "息を呑む"
+      ],
+      "dictionaryIds": [
+        "2015880"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "息が合う",
+      "forms": [
+        "息が合う"
+      ],
+      "dictionaryIds": [
+        "2405970"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "息をつく",
+      "forms": [
+        "息をつく",
+        "息を吐く"
+      ],
+      "dictionaryIds": [
+        "1404340",
+        "1858020"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身に付ける",
+      "forms": [
+        "身に付ける",
+        "身につける"
+      ],
+      "dictionaryIds": [
+        "1980660"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身に付く",
+      "forms": [
+        "身に付く",
+        "身につく"
+      ],
+      "dictionaryIds": [
+        "2034480"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身をもって",
+      "forms": [
+        "身をもって",
+        "身を以て"
+      ],
+      "dictionaryIds": [
+        "2431190"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身を乗り出す",
+      "forms": [
+        "身を乗り出す"
+      ],
+      "dictionaryIds": [
+        "2059910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身に染みる",
+      "forms": [
+        "身に染みる",
+        "身にしみる"
+      ],
+      "dictionaryIds": [
+        "1365580"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "水に流す",
+      "forms": [
+        "水に流す"
+      ],
+      "dictionaryIds": [
+        "2227910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "水を差す",
+      "forms": [
+        "水を差す",
+        "水をさす"
+      ],
+      "dictionaryIds": [
+        "1371290"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "油を売る",
+      "forms": [
+        "油を売る"
+      ],
+      "dictionaryIds": [
+        "1538610"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "道草を食う",
+      "forms": [
+        "道草を食う"
+      ],
+      "dictionaryIds": [
+        "2252740"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "一目置く",
+      "forms": [
+        "一目置く"
+      ],
+      "dictionaryIds": [
+        "1627710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "拍車を掛ける",
+      "forms": [
+        "拍車を掛ける",
+        "拍車をかける"
+      ],
+      "dictionaryIds": [
+        "1474810"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "羽を伸ばす",
+      "forms": [
+        "羽を伸ばす"
+      ],
+      "dictionaryIds": [
+        "2537520"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "歯が立たない",
+      "forms": [
+        "歯が立たない"
+      ],
+      "dictionaryIds": [
+        "1313030"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "馬が合う",
+      "forms": [
+        "馬が合う"
+      ],
+      "dictionaryIds": [
+        "1854840"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "役に立つ",
+      "forms": [
+        "役に立つ"
+      ],
+      "dictionaryIds": [
+        "1537980"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "時間がかかる",
+      "forms": [
+        "時間がかかる",
+        "時間が掛かる"
+      ],
+      "dictionaryIds": [
+        "1884400"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "時間をかける",
+      "forms": [
+        "時間をかける",
+        "時間を掛ける"
+      ],
+      "dictionaryIds": [
+        "1884450"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "人気がある",
+      "forms": [
+        "人気がある",
+        "人気のある"
+      ],
+      "dictionaryIds": [
+        "2847376",
+        "2847599"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "人気が出る",
+      "forms": [
+        "人気が出る"
+      ],
+      "dictionaryIds": [
+        "2842212"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "興味を持つ",
+      "forms": [
+        "興味を持つ",
+        "興味をもつ"
+      ],
+      "dictionaryIds": [
+        "2527500"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "関心を持つ",
+      "forms": [
+        "関心を持つ",
+        "関心をもつ"
+      ],
+      "dictionaryIds": [
+        "2767950"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お世話になる",
+      "forms": [
+        "お世話になる",
+        "御世話になる"
+      ],
+      "dictionaryIds": [
+        "1002260"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "世話になる",
+      "forms": [
+        "世話になる"
+      ],
+      "dictionaryIds": [
+        "1374310"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "世話をする",
+      "forms": [
+        "世話をする"
+      ],
+      "dictionaryIds": [
+        "2253800"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お世話になっております",
+      "forms": [
+        "お世話になっております"
+      ],
+      "dictionaryIds": [
+        "2864389"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お目にかかる",
+      "forms": [
+        "お目にかかる",
+        "お目に掛かる"
+      ],
+      "dictionaryIds": [
+        "1535140"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "ご覧になる",
+      "forms": [
+        "ご覧になる",
+        "御覧になる"
+      ],
+      "dictionaryIds": [
+        "2217040"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "力を入れる",
+      "forms": [
+        "力を入れる"
+      ],
+      "dictionaryIds": [
+        "1554860"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "力をつける",
+      "forms": [
+        "力をつける",
+        "力を付ける"
+      ],
+      "dictionaryIds": [
+        "2671000"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "力になる",
+      "forms": [
+        "力になる"
+      ],
+      "dictionaryIds": [
+        "2134530"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "力を注ぐ",
+      "forms": [
+        "力を注ぐ"
+      ],
+      "dictionaryIds": [
+        "1893010"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "声をかける",
+      "forms": [
+        "声をかける",
+        "声を掛ける"
+      ],
+      "dictionaryIds": [
+        "1593080"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "声を出す",
+      "forms": [
+        "声を出す"
+      ],
+      "dictionaryIds": [
+        "2033690"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "風邪をひく",
+      "forms": [
+        "風邪をひく",
+        "風邪を引く"
+      ],
+      "dictionaryIds": [
+        "1499880"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "年をとる",
+      "forms": [
+        "年をとる",
+        "年を取る"
+      ],
+      "dictionaryIds": [
+        "1468190"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "うまくいく",
+      "forms": [
+        "うまくいく",
+        "上手くいく",
+        "上手く行く",
+        "うまく行く"
+      ],
+      "dictionaryIds": [
+        "1310500"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "仕方がない",
+      "forms": [
+        "仕方がない",
+        "しかたがない",
+        "仕様がない",
+        "しょうがない"
+      ],
+      "dictionaryIds": [
+        "1305420",
+        "1305510"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "思うように",
+      "forms": [
+        "思うように"
+      ],
+      "dictionaryIds": [
+        "2826766"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "いつの間にか",
+      "forms": [
+        "いつの間にか",
+        "いつのまにか"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "計画を立てる",
+      "forms": [
+        "計画を立てる"
+      ],
+      "dictionaryIds": [
+        "1873120"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "体を動かす",
+      "forms": [
+        "体を動かす",
+        "身体を動かす"
+      ],
+      "dictionaryIds": [
+        "2844634"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "明らかになる",
+      "forms": [
+        "明らかになる"
+      ],
+      "dictionaryIds": [
+        "1532330"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "意味がある",
+      "forms": [
+        "意味がある"
+      ],
+      "dictionaryIds": [
+        "2746240"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "意味がない",
+      "forms": [
+        "意味がない"
+      ],
+      "dictionaryIds": [
+        "2760390"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "嫌になる",
+      "forms": [
+        "嫌になる",
+        "いやになる"
+      ],
+      "dictionaryIds": [
+        "2805710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手に取る",
+      "forms": [
+        "手に取る",
+        "手にとる"
+      ],
+      "dictionaryIds": [
+        "1895840"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "経験を積む",
+      "forms": [
+        "経験を積む"
+      ],
+      "dictionaryIds": [
+        "2767360"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "役割を果たす",
+      "forms": [
+        "役割を果たす"
+      ],
+      "dictionaryIds": [
+        "2806030"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "生活を送る",
+      "forms": [
+        "生活を送る"
+      ],
+      "dictionaryIds": [
+        "2436050"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "話題になる",
+      "forms": [
+        "話題になる"
+      ],
+      "dictionaryIds": [
+        "2151370"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お腹が空く",
+      "forms": [
+        "お腹が空く",
+        "おなかがすく",
+        "腹が空く"
+      ],
+      "dictionaryIds": [
+        "2021520",
+        "2255990"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "参考になる",
+      "forms": [
+        "参考になる"
+      ],
+      "dictionaryIds": [
+        "2267140"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "大切にする",
+      "forms": [
+        "大切にする"
+      ],
+      "dictionaryIds": [
+        "2794210"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "様子を見る",
+      "forms": [
+        "様子を見る"
+      ],
+      "dictionaryIds": [
+        "2853389"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "理解を深める",
+      "forms": [
+        "理解を深める"
+      ],
+      "dictionaryIds": [
+        "1915510"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "印象を与える",
+      "forms": [
+        "印象を与える"
+      ],
+      "dictionaryIds": [
+        "2207110"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "印象に残る",
+      "forms": [
+        "印象に残る"
+      ],
+      "dictionaryIds": [
+        "2840175"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "責任を持つ",
+      "forms": [
+        "責任を持つ",
+        "責任をもつ"
+      ],
+      "dictionaryIds": [
+        "2104360"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "勉強になる",
+      "forms": [
+        "勉強になる"
+      ],
+      "dictionaryIds": [
+        "2624590"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "例を挙げる",
+      "forms": [
+        "例を挙げる",
+        "例をあげる"
+      ],
+      "dictionaryIds": [
+        "1916540"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "電話をかける",
+      "forms": [
+        "電話をかける",
+        "電話を掛ける"
+      ],
+      "dictionaryIds": [
+        "1896610"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "写真を撮る",
+      "forms": [
+        "写真を撮る",
+        "写真をとる"
+      ],
+      "dictionaryIds": [
+        "1881690"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "絵を描く",
+      "forms": [
+        "絵を描く",
+        "絵をかく"
+      ],
+      "dictionaryIds": [
+        "2249810"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "相談に乗る",
+      "forms": [
+        "相談に乗る",
+        "相談にのる"
+      ],
+      "dictionaryIds": [
+        "1853990"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "道に迷う",
+      "forms": [
+        "道に迷う"
+      ],
+      "dictionaryIds": [
+        "2132030"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "結果を出す",
+      "forms": [
+        "結果を出す"
+      ],
+      "dictionaryIds": [
+        "2845282"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "汗をかく",
+      "forms": [
+        "汗をかく",
+        "汗を掻く"
+      ],
+      "dictionaryIds": [
+        "1213080"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "念のため",
+      "forms": [
+        "念のため"
+      ],
+      "dictionaryIds": [
+        "1469350"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "調子が悪い",
+      "forms": [
+        "調子が悪い"
+      ],
+      "dictionaryIds": [
+        "2788310"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を加える",
+      "forms": [
+        "手を加える"
+      ],
+      "dictionaryIds": [
+        "2120300"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭に入る",
+      "forms": [
+        "頭に入る"
+      ],
+      "dictionaryIds": [
+        "2864523"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "行動を起こす",
+      "forms": [
+        "行動を起こす"
+      ],
+      "dictionaryIds": [
+        "2868682"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "行動に移す",
+      "forms": [
+        "行動に移す"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "嘘をつく",
+      "forms": [
+        "嘘をつく",
+        "うそをつく",
+        "嘘を吐く"
+      ],
+      "dictionaryIds": [
+        "1172440"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "仲がいい",
+      "forms": [
+        "仲がいい",
+        "仲が良い",
+        "仲がよい"
+      ],
+      "dictionaryIds": [
+        "1425720"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "迷惑をかける",
+      "forms": [
+        "迷惑をかける",
+        "迷惑を掛ける"
+      ],
+      "dictionaryIds": [
+        "1911730"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "文句を言う",
+      "forms": [
+        "文句を言う",
+        "文句をいう"
+      ],
+      "dictionaryIds": [
+        "2831372"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "立場に立つ",
+      "forms": [
+        "立場に立つ"
+      ],
+      "dictionaryIds": [
+        "2213860"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "成果を上げる",
+      "forms": [
+        "成果を上げる",
+        "成果をあげる"
+      ],
+      "dictionaryIds": [
+        "2861327"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身を守る",
+      "forms": [
+        "身を守る"
+      ],
+      "dictionaryIds": [
+        "1855750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気を失う",
+      "forms": [
+        "気を失う"
+      ],
+      "dictionaryIds": [
+        "2083650"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口に出す",
+      "forms": [
+        "口に出す"
+      ],
+      "dictionaryIds": [
+        "2128560"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手にする",
+      "forms": [
+        "手にする"
+      ],
+      "dictionaryIds": [
+        "2266810"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "指示を出す",
+      "forms": [
+        "指示を出す"
+      ],
+      "dictionaryIds": [
+        "2553710"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "心に残る",
+      "forms": [
+        "心に残る"
+      ],
+      "dictionaryIds": [
+        "2668990"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "元気が出る",
+      "forms": [
+        "元気が出る"
+      ],
+      "dictionaryIds": [
+        "2788810"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "興味を引く",
+      "forms": [
+        "興味を引く"
+      ],
+      "dictionaryIds": [
+        "2826698"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "元に戻る",
+      "forms": [
+        "元に戻る"
+      ],
+      "dictionaryIds": [
+        "2840218"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "元に戻す",
+      "forms": [
+        "元に戻す"
+      ],
+      "dictionaryIds": [
+        "1980170"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "言葉にする",
+      "forms": [
+        "言葉にする"
+      ],
+      "dictionaryIds": [
+        "2855733"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気にかかる",
+      "forms": [
+        "気にかかる",
+        "気に掛かる"
+      ],
+      "dictionaryIds": [
+        "1639560"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が立つ",
+      "forms": [
+        "気が立つ"
+      ],
+      "dictionaryIds": [
+        "1221650"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "苦になる",
+      "forms": [
+        "苦になる"
+      ],
+      "dictionaryIds": [
+        "1244380"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気持ちがいい",
+      "forms": [
+        "気持ちがいい",
+        "気持ちが良い",
+        "気持ちがよい"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気持ちが悪い",
+      "forms": [
+        "気持ちが悪い"
+      ],
+      "dictionaryIds": [
+        "2833073"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "都合がいい",
+      "forms": [
+        "都合がいい",
+        "都合が良い",
+        "都合がよい"
+      ],
+      "dictionaryIds": [
+        "2264750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "都合が悪い",
+      "forms": [
+        "都合が悪い"
+      ],
+      "dictionaryIds": [
+        "2264760"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気のせい",
+      "forms": [
+        "気のせい"
+      ],
+      "dictionaryIds": [
+        "1221750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気の毒",
+      "forms": [
+        "気の毒",
+        "気の毒だ"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を閉じる",
+      "forms": [
+        "目を閉じる"
+      ],
+      "dictionaryIds": [
+        "2670060"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目が合う",
+      "forms": [
+        "目が合う"
+      ],
+      "dictionaryIds": [
+        "2840180"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "顔を合わせる",
+      "forms": [
+        "顔を合わせる"
+      ],
+      "dictionaryIds": [
+        "1217780"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "耳を疑う",
+      "forms": [
+        "耳を疑う"
+      ],
+      "dictionaryIds": [
+        "2402950"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手が足りない",
+      "forms": [
+        "手が足りない"
+      ],
+      "dictionaryIds": [
+        "1895430"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手間がかかる",
+      "forms": [
+        "手間がかかる",
+        "手間が掛かる"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手間をかける",
+      "forms": [
+        "手間をかける",
+        "手間を掛ける"
+      ],
+      "dictionaryIds": [
+        "2104130"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を尽くす",
+      "forms": [
+        "手を尽くす"
+      ],
+      "dictionaryIds": [
+        "2184570"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "手を組む",
+      "forms": [
+        "手を組む"
+      ],
+      "dictionaryIds": [
+        "1895980"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足を止める",
+      "forms": [
+        "足を止める"
+      ],
+      "dictionaryIds": [
+        "2836134"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "足が向く",
+      "forms": [
+        "足が向く"
+      ],
+      "dictionaryIds": [
+        "2764170"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸に刻む",
+      "forms": [
+        "胸に刻む"
+      ],
+      "dictionaryIds": [
+        "2861571"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸をなでおろす",
+      "forms": [
+        "胸をなでおろす",
+        "胸を撫で下ろす"
+      ],
+      "dictionaryIds": [
+        "2528130"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "胸が躍る",
+      "forms": [
+        "胸が躍る",
+        "胸がおどる"
+      ],
+      "dictionaryIds": [
+        "2178570"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "心を込める",
+      "forms": [
+        "心を込める",
+        "心をこめる"
+      ],
+      "dictionaryIds": [
+        "2027890"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "心を打つ",
+      "forms": [
+        "心を打つ"
+      ],
+      "dictionaryIds": [
+        "1876520"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "心がける",
+      "forms": [
+        "心がける",
+        "心掛ける"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が進まない",
+      "forms": [
+        "気が進まない"
+      ],
+      "dictionaryIds": [
+        "2056640"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気が遠くなる",
+      "forms": [
+        "気が遠くなる"
+      ],
+      "dictionaryIds": [
+        "2056680"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭を切り替える",
+      "forms": [
+        "頭を切り替える"
+      ],
+      "dictionaryIds": [
+        "2841762"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭を使う",
+      "forms": [
+        "頭を使う"
+      ],
+      "dictionaryIds": [
+        "2151890"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "頭に浮かぶ",
+      "forms": [
+        "頭に浮かぶ"
+      ],
+      "dictionaryIds": [
+        "2173500"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身を置く",
+      "forms": [
+        "身を置く"
+      ],
+      "dictionaryIds": [
+        "2756480"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身を引く",
+      "forms": [
+        "身を引く"
+      ],
+      "dictionaryIds": [
+        "2029260"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "身を任せる",
+      "forms": [
+        "身を任せる"
+      ],
+      "dictionaryIds": [
+        "2264260"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を奪われる",
+      "forms": [
+        "目を奪われる"
+      ],
+      "dictionaryIds": [
+        "2424390"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目が離せない",
+      "forms": [
+        "目が離せない"
+      ],
+      "dictionaryIds": [
+        "2756360"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目を光らせる",
+      "forms": [
+        "目を光らせる"
+      ],
+      "dictionaryIds": [
+        "2625640"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目をつける",
+      "forms": [
+        "目をつける",
+        "目を付ける"
+      ],
+      "dictionaryIds": [
+        "2065920"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "目に留まる",
+      "forms": [
+        "目に留まる",
+        "目にとまる",
+        "目に止まる"
+      ],
+      "dictionaryIds": [
+        "1605010"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口を開く",
+      "forms": [
+        "口を開く"
+      ],
+      "dictionaryIds": [
+        "2401910"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口に合う",
+      "forms": [
+        "口に合う"
+      ],
+      "dictionaryIds": [
+        "1872140"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口が滑る",
+      "forms": [
+        "口が滑る",
+        "口がすべる"
+      ],
+      "dictionaryIds": [
+        "1640380"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "口を閉ざす",
+      "forms": [
+        "口を閉ざす"
+      ],
+      "dictionaryIds": [
+        "2402790"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "話が合う",
+      "forms": [
+        "話が合う"
+      ],
+      "dictionaryIds": [
+        "2818950"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "話を進める",
+      "forms": [
+        "話を進める"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "話がつく",
+      "forms": [
+        "話がつく",
+        "話が付く"
+      ],
+      "dictionaryIds": [
+        "1626110"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "話をつける",
+      "forms": [
+        "話をつける",
+        "話を付ける"
+      ],
+      "dictionaryIds": [
+        "1902110"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "調子に乗る",
+      "forms": [
+        "調子に乗る",
+        "調子にのる"
+      ],
+      "dictionaryIds": [
+        "1429180"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "調子を合わせる",
+      "forms": [
+        "調子を合わせる"
+      ],
+      "dictionaryIds": [
+        "2402170"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "気分転換",
+      "forms": [
+        "気分転換"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "一石二鳥",
+      "forms": [
+        "一石二鳥"
+      ],
+      "dictionaryIds": [
+        "1164160"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "試行錯誤",
+      "forms": [
+        "試行錯誤"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "自業自得",
+      "forms": [
+        "自業自得"
+      ],
+      "dictionaryIds": [
+        "1317570"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "臨機応変",
+      "forms": [
+        "臨機応変"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "一長一短",
+      "forms": [
+        "一長一短"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "十人十色",
+      "forms": [
+        "十人十色"
+      ],
+      "dictionaryIds": [
+        "1334840"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "本末転倒",
+      "forms": [
+        "本末転倒"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "一喜一憂",
+      "forms": [
+        "一喜一憂"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "半信半疑",
+      "forms": [
+        "半信半疑"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "相変わらず",
+      "forms": [
+        "相変わらず"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お互い様",
+      "forms": [
+        "お互い様"
+      ],
+      "dictionaryIds": [
+        "1270320"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "おかげさまで",
+      "forms": [
+        "おかげさまで",
+        "お陰様で"
+      ],
+      "dictionaryIds": [
+        "1270220"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お先に失礼します",
+      "forms": [
+        "お先に失礼します"
+      ],
+      "dictionaryIds": [
+        "2196920"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お疲れ様です",
+      "forms": [
+        "お疲れ様です",
+        "お疲れさまです",
+        "おつかれさまです"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お待たせしました",
+      "forms": [
+        "お待たせしました"
+      ],
+      "dictionaryIds": [
+        "2149640"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "よろしくお願いします",
+      "forms": [
+        "よろしくお願いします",
+        "宜しくお願いします"
+      ],
+      "dictionaryIds": [
+        "2133750"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お願いいたします",
+      "forms": [
+        "お願いいたします",
+        "お願い致します"
+      ],
+      "dictionaryIds": [
+        "1001730"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "承知しました",
+      "forms": [
+        "承知しました"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お手数をおかけします",
+      "forms": [
+        "お手数をおかけします"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お構いなく",
+      "forms": [
+        "お構いなく",
+        "おかまいなく"
+      ],
+      "dictionaryIds": [
+        "1001900"
+      ],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "ご無沙汰しております",
+      "forms": [
+        "ご無沙汰しております",
+        "御無沙汰しております"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    },
+    {
+      "label": "お久しぶりです",
+      "forms": [
+        "お久しぶりです"
+      ],
+      "dictionaryIds": [],
+      "review": "Whole expression/collocation reviewed; Chinese meaning and usage are site-authored; grades are separately sourced or explicitly estimated."
+    }
+  ]
+}

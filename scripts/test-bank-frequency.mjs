@@ -11,6 +11,7 @@ import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-
 import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
+import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
 import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { simplifiedDefinition } from '../src/lib/frequency-simplified.mjs';
 import { frequencySort, frequencyOrders } from '../src/lib/bank-frequency.mjs';
@@ -500,7 +501,7 @@ test('the rebuilt production index excludes audited artifacts from every query a
   for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
   assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
   for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);
-  assert.ok(query(c,{kind:'idiom',grade:'N3'}).total>0);assert.ok(query(c,{kind:'idiom',grade:'ungraded'}).total>0);
+  assert.ok(query(c,{kind:'idiom',grade:'N3'}).total>0);assert.equal(query(c,{kind:'idiom',grade:'ungraded'}).total,0); assert.ok(query(c,{kind:'idiom'}).total>150);
   assert.match(c.referenceExpressionSource.name,/Kindrix/);
   for(const [, , counts]of c.units)for(let i=0;i<counts.length;i+=2)assert.ok(Number.isSafeInteger(counts[i])&&counts[i]>=0&&counts[i]<c.terms.length);
 });
@@ -512,4 +513,37 @@ test('reviewed reading corrections require exact original errors and source evid
   const corrected=correctFrequencyReadings(c,dictionary);assert.equal(corrected.length,2);
   assert.deepEqual(c.terms.map(t=>t[1]),['さずける','げんみつ','あかり']);
   assert.throws(()=>correctFrequencyReadings({terms:[['授ける','さづける','动词','word']]},{}),/Unverified/);
+});
+
+
+test('reviewed supplements preserve sourced grades, require exact readings and label estimates independently of paper levels', () => {
+  const c = {terms: [['母','はは','名词','word'], ['母','ぼ','名词','word'], ['未知','みち','名词','word'], ['ようになる','ようになる','语法表达','grammar']], referenceLevels: [['N5'],[],[],[]]};
+  const report=annotateFrequencySupplements(c,[{kind:'word',label:'母',reading:'はは',levels:['N1'],method:'word-list'}], [{kind:'word',label:'未知',reading:'みち',levels:['N2'],method:'editorial'}, {kind:'grammar',label:'ようになる',levels:['N4'],method:'editorial'}],{name:'review'});
+  assert.deepEqual(c.referenceLevels,[['N5'],[],['N2'],['N4']]);assert.deepEqual(c.referenceBasis,['reference','ungraded','editorial','editorial']);
+  assert.equal(report.unresolved[0].reading,'ぼ');assert.equal(report.added.length,2);
+});
+test('compound filters preserve noun/verb POS and never classify a word by character count alone', () => {
+  const labels=['申し込む','問い合わせ','環境問題','日本語','学生','無意識'];
+  const trustedWords=new Set([...labels,'申す','込む','問う','合わせる','問い合わせる','環境','問題','日本','語','意識']);
+  const builder=createFrequencyBuilder(text=>tokenizer.tokenize(text),{trustedWords});builder.addQuestion(question('compounds',{prompt:labels.join('。')+'。'}));const c=builder.finish('compounds');
+  annotateFrequencyCompounds(c,{trustedWords,tokenize:text=>tokenizer.tokenize(text)});
+  const rows=query(c,{pos:'复合词'}).rows;
+  for(const label of ['申し込む','問い合わせ','環境問題','日本語'])assert.ok(rows.some(row=>row.label===label&&row.compound),label);
+  assert.equal(rows.some(row=>row.label==='学生'),false);assert.equal(rows.some(row=>row.label==='無意識'),false);
+  assert.equal(rows.find(row=>row.label==='申し込む').pos,'动词');assert.equal(rows.find(row=>row.label==='環境問題').pos,'名词');
+  assert.equal(parseFrequencyFilters(new URLSearchParams('pos=复合词'),frequencyMetadata(c)).pos,'复合词');
+});
+test('expanded expressions resolve inflections, spelling variants and set phrases while retaining separate option boundaries', () => {
+  const c=build([question('phrases',{prompt:'声をかけた。声を掛けます。経験を積んだ。計画を立てました。よろしくお願いします。',options:[{text:'経験を'},{text:'積んだ。'}]})]);
+  assert.equal(find(c,'声をかける',{kind:'idiom'}).occurrences,2);
+  assert.equal(find(c,'経験を積む',{kind:'idiom'}).occurrences,1);
+  assert.equal(find(c,'計画を立てる',{kind:'idiom'}).occurrences,1);
+  assert.equal(find(c,'よろしくお願いします',{kind:'idiom'}).occurrences,1);
+});
+
+
+test('a reviewed common spelling may override only a supplemental variant, never a primary reference grade', () => {
+ const c={terms:[['すぐ','すぐ','副词','word'],['学生','がくせい','名词','word']],referenceLevels:[[],['N5']]};
+ annotateFrequencySupplements(c,[{kind:'word',label:'すぐ',reading:'すぐ',levels:['N1'],method:'dictionary-variant'}],[{kind:'word',label:'すぐ',reading:'すぐ',levels:['N5'],method:'editorial',overridesVariant:true},{kind:'word',label:'学生',reading:'がくせい',levels:['N1'],method:'editorial',overridesVariant:true}],{});
+ assert.deepEqual(c.referenceLevels,[['N5'],['N5']]);assert.deepEqual(c.referenceBasis,['editorial','reference']);
 });

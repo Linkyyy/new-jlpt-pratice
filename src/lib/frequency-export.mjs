@@ -21,7 +21,7 @@ const values = {
   field: { all: ['全部题文','すべての本文','All text'], passage: ['文章','文章','Passages'], prompt: ['题干','設問','Prompts'], options: ['选项','選択肢','Options'], transcript: ['听力原文','聴解原文','Transcripts'] },
   kind: { idiom: ['惯用句','慣用句','Idioms'], word: ['单词','単語','Words'], grammar: ['语法表达','文法表現','Grammar expressions'], connective: ['接续表达','接続表現','Connectives'] },
   order: { occurrences: ['次数多到少','出現回数の多い順','Occurrences descending'], 'occurrences-asc': ['次数少到多','出現回数の少ない順','Occurrences ascending'], questions: ['覆盖题目多到少','該当問題数の多い順','Questions descending'], 'questions-asc': ['覆盖题目少到多','該当問題数の少ない順','Questions ascending'], papers: ['覆盖场次多到少','該当実施回数の多い順','Sessions descending'], 'papers-asc': ['覆盖场次少到多','該当実施回数の少ない順','Sessions ascending'], alphabetical: ['五十音顺序','五十音順','Japanese alphabetical order'], 'alphabetical-desc': ['五十音倒序','五十音の逆順','Japanese alphabetical descending'] },
-  pos: { 惯用句: ['惯用句','慣用句','Idiom'], all: ['全部词性','すべての品詞','All parts of speech'], 名词: ['名词','名詞','Noun'], 动词: ['动词','動詞','Verb'], 形容词: ['形容词','形容詞','Adjective'], 副词: ['副词','副詞','Adverb'], 连体词: ['连体词','連体詞','Adnominal'], 语法表达: ['语法表达','文法表現','Grammar expression'], 接续表达: ['接续表达','接続表現','Connective'], 接续词: ['接续词','接続詞','Conjunction'] },
+  pos: { 复合词: ['复合词','複合語','Compound words'], 惯用句: ['惯用句','慣用句','Idiom'], all: ['全部词性','すべての品詞','All parts of speech'], 名词: ['名词','名詞','Noun'], 动词: ['动词','動詞','Verb'], 形容词: ['形容词','形容詞','Adjective'], 副词: ['副词','副詞','Adverb'], 连体词: ['连体词','連体詞','Adnominal'], 语法表达: ['语法表达','文法表現','Grammar expression'], 接续表达: ['接续表达','接続表現','Connective'], 接续词: ['接续词','接続詞','Conjunction'] },
 };
 function translated(group, value, locale) { return values[group]?.[value]?.[{ zh: 0, ja: 1, en: 2 }[locale]] ?? value; }
 export function frequencyExportDescription(filters, metadata, locale = 'zh') {
@@ -43,8 +43,11 @@ function definitionSource(definition, locale) {
 }
 const referenceLabel = locale => ({zh: '参考等级', ja: '参考レベル', en: 'Reference level'})[locale];
 const ungradedLabel = locale => ({zh: '未分级', ja: '未分類', en: 'Ungraded'})[locale];
-const referenceNote = locale => ({zh: '公开词表与语法资料的非官方分级，仅收录真题词条；未核实的表达保留为未分级。词条等级与试卷等级分别筛选。', ja: '公開語彙リスト・文法資料による非公式分類。実際の問題の語句のみ。未確認の表現は未分類です。語句と試験のレベルは別条件。', en: 'Unofficial public vocabulary and grammar references; past-paper terms only. Unverified expression levels remain ungraded. Term and paper levels are independent.'})[locale];
-function exportCells(row, locale) { return [row.rank, row.label, row.reading, translated('pos', row.pos, locale), row.occurrences, row.questions, row.papers, row.definition?.meaning || studyLabels[locale].missing, row.definition?.usage ?? '', definitionSource(row.definition, locale), row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)]; }
+const referenceNote = locale => ({zh: '非官方参考分级；标注“估级”为站内复核结果，其他等级来自公开词表及整词写法核对。词条等级与试卷等级分别筛选。', ja: '非公式の参考分類。「推定」は本サイトの学習用評価、その他は公開リストと語句全体の表記照合に基づきます。試験のレベルとは別条件です。', en: 'Unofficial reference levels. Estimated labels identify site-reviewed study estimates; other grades use public lists and verified whole-word variants. Term and paper levels are independent.'})[locale];
+const estimateLabel = locale => ({zh: '（估级）', ja: '（推定）', en: ' (estimated)'})[locale];
+const gradeText = (row, locale) => (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale)) + (row.referenceBasis === 'editorial' ? estimateLabel(locale) : '');
+const posText = (row, locale) => translated('pos', row.pos, locale) + (row.compound ? ` / ${translated('pos', '复合词', locale)}` : '');
+function exportCells(row, locale) { return [row.rank, row.label, row.reading, posText(row, locale), row.occurrences, row.questions, row.papers, row.definition?.meaning || studyLabels[locale].missing, row.definition?.usage ?? '', definitionSource(row.definition, locale), gradeText(row, locale)]; }
 function verifyRows(result) {
   if (result.rows.length !== result.total) throw new Error('Export requires the entire filtered result');
   if (result.total > frequencyExportLimit) throw new Error('Export result exceeds the supported size');
@@ -67,6 +70,7 @@ export async function createFrequencyWorkbook(result, metadata, locale = 'zh', n
   summary.addRows([[studyLabels[locale].source, studyLabels[locale].attribution], ['License', 'https://creativecommons.org/licenses/by-sa/4.0/'], ['Data & modifications', 'https://github.com/Linkyyy/new-jlpt-pratice/tree/main/src/data/frequency-dictionary']]);
   if (metadata.referenceSource) summary.addRows([[referenceLabel(locale), `${metadata.referenceSource.name} · ${metadata.referenceSource.url} · ${metadata.referenceSource.license} · ${metadata.referenceSource.revision}`], [referenceNote(locale)]]);
   if (metadata.referenceExpressionSource) summary.addRows([[referenceLabel(locale), `${metadata.referenceExpressionSource.name} · ${metadata.referenceExpressionSource.url} · ${metadata.referenceExpressionSource.license} · ${metadata.referenceExpressionSource.revision} · draft / nonofficial`]]);
+  if (metadata.referenceSupplementSource) summary.addRows([[referenceLabel(locale), `${metadata.referenceSupplementSource.name} · ${metadata.referenceSupplementSource.url} · ${metadata.referenceSupplementSource.revision}`]]);
   summary.getColumn(2).alignment = { wrapText: true, vertical: 'top' }; summary.getRow(2).height = 65;
   return Buffer.from(await book.xlsx.writeBuffer());
 }
@@ -149,7 +153,7 @@ export async function createFrequencyPdf(result, metadata, locale = 'zh', now = 
     introduction(labels.note);
     introduction(study.attribution);
     if (metadata.referenceSource || metadata.referenceExpressionSource) introduction(referenceNote(locale));
-    for (const source of [metadata.referenceSource, metadata.referenceExpressionSource].filter(Boolean)) introduction(`${referenceLabel(locale)}: ${source.name} · ${source.license} · ${source.url}`);
+    for (const source of [metadata.referenceSource, metadata.referenceExpressionSource, metadata.referenceSupplementSource].filter(Boolean)) introduction(`${referenceLabel(locale)}: ${source.name} · ${source.license} · ${source.url}`);
     heading();
     // Both table rows and full-width study notes can continue across pages, including A5/large fonts.
     function block(lines, widths, shaded) {
@@ -171,8 +175,8 @@ export async function createFrequencyPdf(result, metadata, locale = 'zh', now = 
     if (!result.rows.length) textLine(labels.empty, left, y + 15, width, fontSize, '#6B7280');
     for (const row of result.rows) {
       const values = {...row,
-        meta: [shown.has('reading') && row.reading, shown.has('level') && (row.referenceLevels?.length ? row.referenceLevels.join(' / ') : ungradedLabel(locale))].filter(Boolean).join(' · '),
-        pos: translated('pos', row.pos, locale), meaning: row.definition?.meaning || study.missing,
+        meta: [shown.has('reading') && row.reading, shown.has('level') && gradeText(row, locale)].filter(Boolean).join(' · '),
+        pos: posText(row, locale), meaning: row.definition?.meaning || study.missing,
         usage: row.definition?.usage ?? '', source: definitionSource(row.definition, locale),
       };
       const lines = columns.map(column => wrap(values[column.key], column.width - 8));
