@@ -1,0 +1,39 @@
+{
+  "appCommit": "bb11cc1",
+  "date": "2026-10-21",
+  "wordAndGrammarFilters": {
+    "source": "imported",
+    "level": "N1",
+    "grade": "N1",
+    "wordMin": 8,
+    "grammarMin": 5,
+    "order": "occurrences-asc"
+  },
+  "idiomFilters": {
+    "source": "imported",
+    "level": "N1",
+    "grade": "all",
+    "min": 5,
+    "order": "occurrences-asc"
+  },
+  "notes": [
+    "All word/grammar screenshots use actual N1 reference grades; not official JLPT grades.",
+    "The idiom example is selected from N1 papers; ungraded expressions are not assigned N1 grades.",
+    "No browser chrome, address bars or URL labels are included.",
+    "PDF screenshot is a crop of page 1 of the actual N1 grammar export, showing the table and first four entries (5, 9, 10, 18 occurrences), excluding source URLs in document introduction. No entry data is edited.",
+    "Poster page sequence numbers and numbered copy bullets are omitted. Website rank numbers remain genuine."
+  ],
+  "errors": [],
+  "wordDetail": {
+    "term": "誇張",
+    "occurrences": 5,
+    "referenceLevel": "N1",
+    "paperLevel": "N1"
+  },
+  "grammarExamples": {
+    "かたわら": 5,
+    "にほかならない": 9,
+    "ながらも": 10,
+    "ならでは": 18
+  }
+}
