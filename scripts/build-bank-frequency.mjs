@@ -18,7 +18,7 @@ const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.
 const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-word-supplements.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
 inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 'src/data/frequency-levels/entries.json', 'src/data/frequency-levels/source.json');
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
-inputs.push('src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
+inputs.push('src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }
@@ -66,6 +66,10 @@ const correctedReadings = correctFrequencyReadings(corpus, dictionaryEntries);
 annotateFrequencyCorpus(corpus, dictionaryEntries);
 const quality = reviewFrequencyCorpus(corpus, {trustedWords, referenceReadings: new Set(referenceEntries.map(([word, reading]) => `${word.normalize('NFKC')}\t${reading}`)), tokenize: text => tokenizer.tokenize(text)});
 quality.correctedReadings = correctedReadings;
+quality.morphologyReview = corpus.morphologyReview;
+quality.morphologySummary = Object.groupBy(corpus.morphologyReview, row => row.reason);
+quality.morphologySummary = Object.fromEntries(Object.entries(quality.morphologySummary).map(([reason, rows]) => [reason, {forms: rows.length, occurrences: rows.reduce((sum, row) => sum + row.occurrences, 0)}]));
+delete corpus.morphologyReview;
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
 const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));

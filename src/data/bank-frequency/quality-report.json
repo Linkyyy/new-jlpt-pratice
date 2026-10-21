@@ -1,9 +1,9 @@
 {
-  "revision": "d8d066892f07353427d88c9bbec14ed57c0823a7dba2a805dda5a49afa3ada6f",
-  "excludedTerms": 1582,
+  "revision": "9256c8f3138496ea634e13547eaa2cba2ff2c760e941034486879ce0e5a4c7de",
+  "excludedTerms": 1578,
   "reasons": {
-    "personal_or_organization_name": 419,
-    "unverified_word_or_spelling": 1156,
+    "personal_or_organization_name": 420,
+    "unverified_word_or_spelling": 1151,
     "symbol_or_placeholder": 7
   },
   "excluded": [
@@ -1066,6 +1066,17 @@
       ]
     },
     {
+      "label": "不真面目",
+      "reading": "ふまじめ",
+      "pos": "形容词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201012:N1:1:6261:14"
+      ]
+    },
+    {
       "label": "マネ",
       "reading": "まね",
       "pos": "名词",
@@ -1757,19 +1768,6 @@
         "imported:201012:N2:4:3350:106",
         "imported:201012:N2:4:3351:107",
         "imported:201112:N2:3:2885:66"
-      ]
-    },
-    {
-      "label": "おぞい",
-      "reading": "おぞい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 10,
-      "examples": [
-        "imported:201012:N2:4:3350:106",
-        "imported:201012:N2:4:3351:107",
-        "imported:201107:N3:3:8970:69"
       ]
     },
     {
@@ -3604,17 +3602,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201112:N3:1:8814:14"
-      ]
-    },
-    {
-      "label": "だいじない",
-      "reading": "だいじない",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201112:N3:1:8829:29"
       ]
     },
     {
@@ -5851,13 +5838,24 @@
     {
       "label": "光栄",
       "reading": "こうえい",
-      "pos": "名词",
+      "pos": "形容词",
       "kind": "word",
       "reason": "personal_or_organization_name",
       "occurrences": 2,
       "examples": [
         "imported:201307:N1:4:5805:88",
         "imported:201407:N1:4:5606:102"
+      ]
+    },
+    {
+      "label": "たらい回し",
+      "reading": "たらいまわし",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:4:5813:96"
       ]
     },
     {
@@ -7439,9 +7437,22 @@
       ]
     },
     {
+      "label": "失くす",
+      "reading": "なくす",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N1:3:5560:56",
+        "imported:201407:N1:3:5561:57",
+        "imported:201407:N1:3:5562:58"
+      ]
+    },
+    {
       "label": "ゆたか",
       "reading": "ゆたか",
-      "pos": "名词",
+      "pos": "形容词",
       "kind": "word",
       "reason": "personal_or_organization_name",
       "occurrences": 5,
@@ -7661,17 +7672,6 @@
       ]
     },
     {
-      "label": "乏い",
-      "reading": "ともい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201407:N2:1:2297:10"
-      ]
-    },
-    {
       "label": "西野",
       "reading": "にしの",
       "pos": "名词",
@@ -7797,19 +7797,6 @@
         "imported:201407:N2:3:2350:63",
         "imported:201407:N2:3:2351:64",
         "imported:201407:N2:3:2352:65"
-      ]
-    },
-    {
-      "label": "角い",
-      "reading": "かくい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201407:N2:3:2358:71",
-        "imported:201407:N2:3:2359:72",
-        "imported:201407:N2:3:2360:73"
       ]
     },
     {
@@ -9497,17 +9484,6 @@
       ]
     },
     {
-      "label": "まましい",
-      "reading": "まましい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201507:N3:2:8134:48"
-      ]
-    },
-    {
       "label": "ミン",
       "reading": "みん",
       "pos": "名词",
@@ -10565,18 +10541,6 @@
         "imported:201607:N2:1:1870:11",
         "imported:201912:N2:1:917:6",
         "imported:202012:N2:1:819:10"
-      ]
-    },
-    {
-      "label": "異い",
-      "reading": "あやい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201607:N2:1:1870:11",
-        "imported:202207:N2:1:516:11"
       ]
     },
     {
@@ -11750,14 +11714,12 @@
     {
       "label": "スマート",
       "reading": "すまーと",
-      "pos": "名词",
+      "pos": "形容词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 5,
+      "occurrences": 1,
       "examples": [
-        "imported:201707:N1:3:4913:49",
-        "imported:201807:N1:2:4695:41",
-        "imported:201807:N1:2:4696:42"
+        "imported:201707:N1:3:4913:49"
       ]
     },
     {
@@ -11796,20 +11758,9 @@
       ]
     },
     {
-      "label": "あふる",
-      "reading": "あふる",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201707:N1:3:4919:55"
-      ]
-    },
-    {
       "label": "学的",
       "reading": "がくてき",
-      "pos": "名词",
+      "pos": "形容词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 2,
@@ -12457,17 +12408,6 @@
       ]
     },
     {
-      "label": "えどる",
-      "reading": "えどる",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201712:N1:4:4838:79"
-      ]
-    },
-    {
       "label": "江戸橋",
       "reading": "えどばし",
       "pos": "名词",
@@ -12683,17 +12623,6 @@
       ]
     },
     {
-      "label": "いざる",
-      "reading": "いざる",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201712:N3:1:7580:4"
-      ]
-    },
-    {
       "label": "じゅっ",
       "reading": "じゅっ",
       "pos": "副词",
@@ -12851,6 +12780,19 @@
       "examples": [
         "imported:201807:N1:2:4693:39",
         "imported:202212:N1:2:3865:34"
+      ]
+    },
+    {
+      "label": "スマート",
+      "reading": "すまーと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 4,
+      "examples": [
+        "imported:201807:N1:2:4695:41",
+        "imported:201807:N1:2:4696:42",
+        "imported:201807:N1:2:4697:43"
       ]
     },
     {
@@ -13155,6 +13097,17 @@
       ]
     },
     {
+      "label": "保険証",
+      "reading": "ほけんしょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201807:N2:4:1297:78"
+      ]
+    },
+    {
       "label": "搔",
       "reading": "搔",
       "pos": "名词",
@@ -13186,17 +13139,6 @@
       "examples": [
         "imported:201807:N2:4:1323:104",
         "imported:201807:N2:4:1324:105"
-      ]
-    },
-    {
-      "label": "しおる",
-      "reading": "しおる",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201807:N3:1:7475:1"
       ]
     },
     {
@@ -14818,6 +14760,17 @@
       ]
     },
     {
+      "label": "人相",
+      "reading": "にんそう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201912:N3:1:7176:8"
+      ]
+    },
+    {
       "label": "需",
       "reading": "需",
       "pos": "名词",
@@ -14826,17 +14779,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201912:N3:1:7181:13"
-      ]
-    },
-    {
-      "label": "著い",
-      "reading": "しるい",
-      "pos": "形容词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201912:N3:1:7182:14"
       ]
     },
     {
@@ -15884,6 +15826,17 @@
       "occurrences": 1,
       "examples": [
         "imported:202107:N3:4:7052:86"
+      ]
+    },
+    {
+      "label": "銀箔",
+      "reading": "ぎんぱく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202112:N1:1:4036:6"
       ]
     },
     {
@@ -18924,5 +18877,6753 @@
       "reading": "げんみつ",
       "source": "frequency-dictionary"
     }
-  ]
+  ],
+  "morphologyReview": [
+    {
+      "reason": "na_adjective_pos",
+      "surface": "手薄",
+      "label": "手薄",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "うす",
+      "label": "うすい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "必要",
+      "label": "必要",
+      "pos": "名詞",
+      "occurrences": 977
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "零細",
+      "label": "零細",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "綿密",
+      "label": "綿密",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "繊細",
+      "label": "繊細",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "濃密",
+      "label": "濃密",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ルーズ",
+      "label": "ルーズ",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "意外",
+      "label": "意外",
+      "pos": "名詞",
+      "occurrences": 65
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大切",
+      "label": "大切",
+      "pos": "名詞",
+      "occurrences": 413
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "地味",
+      "label": "地味",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "苦手",
+      "label": "苦手",
+      "pos": "名詞",
+      "occurrences": 88
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "面倒",
+      "label": "面倒",
+      "pos": "名詞",
+      "occurrences": 48
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "退屈",
+      "label": "退屈",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "皮肉",
+      "label": "皮肉",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有名",
+      "label": "有名",
+      "pos": "名詞",
+      "occurrences": 85
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いろいろ",
+      "label": "いろいろ",
+      "pos": "名詞",
+      "occurrences": 173
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不当",
+      "label": "不当",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "完全",
+      "label": "完全",
+      "pos": "名詞",
+      "occurrences": 35
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "好き",
+      "label": "好き",
+      "pos": "名詞",
+      "occurrences": 394
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "確か",
+      "label": "確か",
+      "pos": "名詞",
+      "occurrences": 232
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無気力",
+      "label": "無気力",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "立派",
+      "label": "立派",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "自由",
+      "label": "自由",
+      "pos": "名詞",
+      "occurrences": 168
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "十分",
+      "label": "十分",
+      "pos": "名詞",
+      "occurrences": 154
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "透明",
+      "label": "透明",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "普通",
+      "label": "普通",
+      "pos": "名詞",
+      "occurrences": 84
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "巨大",
+      "label": "巨大",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "勝手",
+      "label": "勝手",
+      "pos": "名詞",
+      "occurrences": 34
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "可能",
+      "label": "可能",
+      "pos": "名詞",
+      "occurrences": 257
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "当たり前",
+      "label": "当たり前",
+      "pos": "名詞",
+      "occurrences": 41
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "過激",
+      "label": "過激",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "敏感",
+      "label": "敏感",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不思議",
+      "label": "不思議",
+      "pos": "名詞",
+      "occurrences": 56
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "寛容",
+      "label": "寛容",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "上手",
+      "label": "上手",
+      "pos": "名詞",
+      "occurrences": 137
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "疑問",
+      "label": "疑問",
+      "pos": "名詞",
+      "occurrences": 50
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "豊富",
+      "label": "豊富",
+      "pos": "名詞",
+      "occurrences": 39
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "温暖",
+      "label": "温暖",
+      "pos": "名詞",
+      "occurrences": 32
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "前向き",
+      "label": "前向き",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不適切",
+      "label": "不適切",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "さまざま",
+      "label": "さまざま",
+      "pos": "名詞",
+      "occurrences": 133
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "正し",
+      "label": "正しい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "新た",
+      "label": "新た",
+      "pos": "名詞",
+      "occurrences": 108
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "肝心",
+      "label": "肝心",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "得意",
+      "label": "得意",
+      "pos": "名詞",
+      "occurrences": 60
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "生",
+      "label": "生",
+      "pos": "名詞",
+      "occurrences": 27
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "精巧",
+      "label": "精巧",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "複雑",
+      "label": "複雑",
+      "pos": "名詞",
+      "occurrences": 58
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "豊か",
+      "label": "豊か",
+      "pos": "名詞",
+      "occurrences": 66
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "簡単",
+      "label": "簡単",
+      "pos": "名詞",
+      "occurrences": 175
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "適切",
+      "label": "適切",
+      "pos": "名詞",
+      "occurrences": 64
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "中途半端",
+      "label": "中途半端",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "きれい",
+      "label": "きれい",
+      "pos": "名詞",
+      "occurrences": 159
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "幸せ",
+      "label": "幸せ",
+      "pos": "名詞",
+      "occurrences": 50
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "正常",
+      "label": "正常",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "奇妙",
+      "label": "奇妙",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無用",
+      "label": "無用",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不快",
+      "label": "不快",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "重要",
+      "label": "重要",
+      "pos": "名詞",
+      "occurrences": 266
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "外的",
+      "label": "外的",
+      "pos": "名詞",
+      "occurrences": 11
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "内的",
+      "label": "内的",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "極端",
+      "label": "極端",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "充分",
+      "label": "充分",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "はるか",
+      "label": "はるか",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ビッグ",
+      "label": "ビッグ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大変",
+      "label": "大変",
+      "pos": "名詞",
+      "occurrences": 290
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "急",
+      "label": "急",
+      "pos": "名詞",
+      "occurrences": 90
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "独特",
+      "label": "独特",
+      "pos": "名詞",
+      "occurrences": 26
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無理",
+      "label": "無理",
+      "pos": "名詞",
+      "occurrences": 145
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "微妙",
+      "label": "微妙",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "元気",
+      "label": "元気",
+      "pos": "名詞",
+      "occurrences": 100
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不便",
+      "label": "不便",
+      "pos": "名詞",
+      "occurrences": 24
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大丈夫",
+      "label": "大丈夫",
+      "pos": "名詞",
+      "occurrences": 147
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高級",
+      "label": "高級",
+      "pos": "名詞",
+      "occurrences": 31
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安定",
+      "label": "安定",
+      "pos": "名詞",
+      "occurrences": 42
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安価",
+      "label": "安価",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "派手",
+      "label": "派手",
+      "pos": "名詞",
+      "occurrences": 19
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "単純",
+      "label": "単純",
+      "pos": "名詞",
+      "occurrences": 57
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "積極",
+      "label": "積極",
+      "pos": "名詞",
+      "occurrences": 96
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "確実",
+      "label": "確実",
+      "pos": "名詞",
+      "occurrences": 39
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多様",
+      "label": "多様",
+      "pos": "名詞",
+      "occurrences": 123
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "むやみ",
+      "label": "むやみ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "夢中",
+      "label": "夢中",
+      "pos": "名詞",
+      "occurrences": 24
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "丈夫",
+      "label": "丈夫",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "色々",
+      "label": "色々",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "困難",
+      "label": "困難",
+      "pos": "名詞",
+      "occurrences": 54
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "結構",
+      "label": "結構",
+      "pos": "名詞",
+      "occurrences": 35
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "だめ",
+      "label": "だめ",
+      "pos": "名詞",
+      "occurrences": 61
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "順調",
+      "label": "順調",
+      "pos": "名詞",
+      "occurrences": 33
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "別々",
+      "label": "別々",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "便利",
+      "label": "便利",
+      "pos": "名詞",
+      "occurrences": 111
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "健康",
+      "label": "健康",
+      "pos": "名詞",
+      "occurrences": 172
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "鮮やか",
+      "label": "鮮やか",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "巧み",
+      "label": "巧み",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "頻繁",
+      "label": "頻繁",
+      "pos": "名詞",
+      "occurrences": 11
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "すき",
+      "label": "すき",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "様々",
+      "label": "様々",
+      "pos": "名詞",
+      "occurrences": 94
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あいまい",
+      "label": "あいまい",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ささやか",
+      "label": "ささやか",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有効",
+      "label": "有効",
+      "pos": "名詞",
+      "occurrences": 38
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大げさ",
+      "label": "大げさ",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "深刻",
+      "label": "深刻",
+      "pos": "名詞",
+      "occurrences": 25
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "とちゅう",
+      "label": "途中",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "明らか",
+      "label": "明らか",
+      "pos": "名詞",
+      "occurrences": 41
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "着実",
+      "label": "着実",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "清潔",
+      "label": "清潔",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "さわやか",
+      "label": "さわやか",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "自然",
+      "label": "自然",
+      "pos": "名詞",
+      "occurrences": 382
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高価",
+      "label": "高価",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不要",
+      "label": "不要",
+      "pos": "名詞",
+      "occurrences": 28
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "非常",
+      "label": "非常",
+      "pos": "名詞",
+      "occurrences": 87
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "慎重",
+      "label": "慎重",
+      "pos": "名詞",
+      "occurrences": 26
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "静か",
+      "label": "静か",
+      "pos": "名詞",
+      "occurrences": 47
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "快適",
+      "label": "快適",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "簡略",
+      "label": "簡略",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "簡潔",
+      "label": "簡潔",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "本気",
+      "label": "本気",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平凡",
+      "label": "平凡",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "嫌",
+      "label": "嫌",
+      "pos": "名詞",
+      "occurrences": 89
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "特別",
+      "label": "特別",
+      "pos": "名詞",
+      "occurrences": 120
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "的確",
+      "label": "的確",
+      "pos": "名詞",
+      "occurrences": 19
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大事",
+      "label": "大事",
+      "pos": "名詞",
+      "occurrences": 129
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ダメ",
+      "label": "ダメ",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "危険",
+      "label": "危険",
+      "pos": "名詞",
+      "occurrences": 76
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有限",
+      "label": "有限",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不十分",
+      "label": "不十分",
+      "pos": "名詞",
+      "occurrences": 19
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "謙虚",
+      "label": "謙虚",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "けん",
+      "label": "ける",
+      "pos": "動詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "身近",
+      "label": "身近",
+      "pos": "名詞",
+      "occurrences": 52
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "めいわく",
+      "label": "めいわく",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "嫌い",
+      "label": "嫌い",
+      "pos": "名詞",
+      "occurrences": 52
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "主",
+      "label": "主",
+      "pos": "名詞",
+      "occurrences": 78
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "単調",
+      "label": "単調",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "けっこう",
+      "label": "けっこう",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いかが",
+      "label": "いかが",
+      "pos": "名詞",
+      "occurrences": 74
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "恐縮",
+      "label": "恐縮",
+      "pos": "名詞",
+      "occurrences": 11
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "とくい",
+      "label": "得意",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "上品",
+      "label": "上品",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "りっぱ",
+      "label": "りっぱ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "さかん",
+      "label": "さかん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "すてき",
+      "label": "すてき",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "熱心",
+      "label": "熱心",
+      "pos": "名詞",
+      "occurrences": 27
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平和",
+      "label": "平和",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大好き",
+      "label": "大好き",
+      "pos": "名詞",
+      "occurrences": 60
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "楽",
+      "label": "楽",
+      "pos": "名詞",
+      "occurrences": 65
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安心",
+      "label": "安心",
+      "pos": "名詞",
+      "occurrences": 27
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ふ",
+      "label": "ふる",
+      "pos": "動詞",
+      "occurrences": 20
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無事",
+      "label": "無事",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "しとやか",
+      "label": "しとやか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "しなやか",
+      "label": "しなやか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "円滑",
+      "label": "円滑",
+      "pos": "名詞",
+      "occurrences": 22
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "性急",
+      "label": "性急",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "緊密",
+      "label": "緊密",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まばら",
+      "label": "まばら",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まじめ",
+      "label": "まじめ",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ふまじめ",
+      "label": "不真面目",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "丹念",
+      "label": "丹念",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "急激",
+      "label": "急激",
+      "pos": "名詞",
+      "occurrences": 24
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "細心",
+      "label": "細心",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "すなお",
+      "label": "素直",
+      "pos": "形容詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ヘルシー",
+      "label": "ヘルシー",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "迷惑",
+      "label": "迷惑",
+      "pos": "名詞",
+      "occurrences": 31
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "過剰",
+      "label": "過剰",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "プライベート",
+      "label": "プライベート",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高度",
+      "label": "高度",
+      "pos": "名詞",
+      "occurrences": 16
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まとも",
+      "label": "まとも",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "冷淡",
+      "label": "冷淡",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "適当",
+      "label": "適当",
+      "pos": "名詞",
+      "occurrences": 27
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "健全",
+      "label": "健全",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "先鋭",
+      "label": "先鋭",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "やみくも",
+      "label": "やみくも",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "公平",
+      "label": "公平",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "必須",
+      "label": "必須",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不可能",
+      "label": "不可能",
+      "pos": "名詞",
+      "occurrences": 30
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "密接",
+      "label": "密接",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "独自",
+      "label": "独自",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "異常",
+      "label": "異常",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "速やか",
+      "label": "速やか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大まか",
+      "label": "大まか",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "容易",
+      "label": "容易",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "格段",
+      "label": "格段",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安易",
+      "label": "安易",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "穏やか",
+      "label": "穏やか",
+      "pos": "名詞",
+      "occurrences": 25
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不機嫌",
+      "label": "不機嫌",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ふる",
+      "label": "ふるい",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "正直",
+      "label": "正直",
+      "pos": "名詞",
+      "occurrences": 29
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "素直",
+      "label": "素直",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "正確",
+      "label": "正確",
+      "pos": "名詞",
+      "occurrences": 49
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "曖昧",
+      "label": "曖昧",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "明確",
+      "label": "明確",
+      "pos": "名詞",
+      "occurrences": 51
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不確か",
+      "label": "不確か",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "肝要",
+      "label": "肝要",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "残念",
+      "label": "残念",
+      "pos": "名詞",
+      "occurrences": 68
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "斬新",
+      "label": "斬新",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "手頃",
+      "label": "手頃",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "素敵",
+      "label": "素敵",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ほんと",
+      "label": "ほんと",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "きぼ",
+      "label": "規模",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "映",
+      "label": "映る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "摂",
+      "label": "摂る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "更",
+      "label": "更",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "わがまま",
+      "label": "わがまま",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "急速",
+      "label": "急速",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "詩的",
+      "label": "詩的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "スムーズ",
+      "label": "スムーズ",
+      "pos": "名詞",
+      "occurrences": 30
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "冷静",
+      "label": "冷静",
+      "pos": "名詞",
+      "occurrences": 22
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有害",
+      "label": "有害",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不明",
+      "label": "不明",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気軽",
+      "label": "気軽",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安楽",
+      "label": "安楽",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "貴重",
+      "label": "貴重",
+      "pos": "名詞",
+      "occurrences": 29
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "下手",
+      "label": "下手",
+      "pos": "名詞",
+      "occurrences": 20
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不安",
+      "label": "不安",
+      "pos": "名詞",
+      "occurrences": 144
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "手軽",
+      "label": "手軽",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "完璧",
+      "label": "完璧",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "膨大",
+      "label": "膨大",
+      "pos": "名詞",
+      "occurrences": 23
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無駄",
+      "label": "無駄",
+      "pos": "名詞",
+      "occurrences": 52
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "個別",
+      "label": "個別",
+      "pos": "名詞",
+      "occurrences": 28
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ち",
+      "label": "ちる",
+      "pos": "動詞",
+      "occurrences": 52
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "シンプル",
+      "label": "シンプル",
+      "pos": "名詞",
+      "occurrences": 28
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "おぞ",
+      "label": "おぞい",
+      "pos": "形容詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "最適",
+      "label": "最適",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安全",
+      "label": "安全",
+      "pos": "名詞",
+      "occurrences": 126
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "画期的",
+      "label": "画期的",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "シビア",
+      "label": "シビア",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "柔軟",
+      "label": "柔軟",
+      "pos": "名詞",
+      "occurrences": 28
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不服",
+      "label": "不服",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "失礼",
+      "label": "失礼",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強引",
+      "label": "強引",
+      "pos": "名詞",
+      "occurrences": 11
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不注意",
+      "label": "不注意",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "特殊",
+      "label": "特殊",
+      "pos": "名詞",
+      "occurrences": 24
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "適度",
+      "label": "適度",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "風流",
+      "label": "風流",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "異質",
+      "label": "異質",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大胆",
+      "label": "大胆",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有用",
+      "label": "有用",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有利",
+      "label": "有利",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "偏狭",
+      "label": "偏狭",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "痛切",
+      "label": "痛切",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "賢明",
+      "label": "賢明",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "愚か",
+      "label": "愚か",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不毛",
+      "label": "不毛",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "甚大",
+      "label": "甚大",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "未熟",
+      "label": "未熟",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "自在",
+      "label": "自在",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳か",
+      "label": "厳か",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "からから",
+      "label": "からから",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真っ白",
+      "label": "真っ白",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ささい",
+      "label": "ささい",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大々的",
+      "label": "大々的",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ユニーク",
+      "label": "ユニーク",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "見事",
+      "label": "見事",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "緻密",
+      "label": "緻密",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "堪能",
+      "label": "堪能",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "取",
+      "label": "取る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不可欠",
+      "label": "不可欠",
+      "pos": "名詞",
+      "occurrences": 22
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "承",
+      "label": "承る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "それどころ",
+      "label": "それどころ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ちんぷんかんぷん",
+      "label": "ちんぷんかんぷん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "優秀",
+      "label": "優秀",
+      "pos": "名詞",
+      "occurrences": 31
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "好調",
+      "label": "好調",
+      "pos": "名詞",
+      "occurrences": 16
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "へんこう",
+      "label": "変更",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "変",
+      "label": "変",
+      "pos": "名詞",
+      "occurrences": 38
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "替",
+      "label": "替る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "詳細",
+      "label": "詳細",
+      "pos": "名詞",
+      "occurrences": 30
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "近",
+      "label": "近い",
+      "pos": "形容詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "公式",
+      "label": "公式",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "活発",
+      "label": "活発",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不調",
+      "label": "不調",
+      "pos": "名詞",
+      "occurrences": 11
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "同様",
+      "label": "同様",
+      "pos": "名詞",
+      "occurrences": 39
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多大",
+      "label": "多大",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "幸い",
+      "label": "幸い",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "盛ん",
+      "label": "盛ん",
+      "pos": "名詞",
+      "occurrences": 29
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不ぞろい",
+      "label": "不ぞろい",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "楽天的",
+      "label": "楽天的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強烈",
+      "label": "強烈",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "直接的",
+      "label": "直接的",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まれ",
+      "label": "まれ",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "正当",
+      "label": "正当",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ばっちり",
+      "label": "ばっちり",
+      "pos": "副詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "小さめ",
+      "label": "小さめ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無口",
+      "label": "無口",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気楽",
+      "label": "気楽",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぎゅうぎゅう",
+      "label": "ぎゅうぎゅう",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ホット",
+      "label": "ホット",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "新鮮",
+      "label": "新鮮",
+      "pos": "名詞",
+      "occurrences": 40
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "おうぼ",
+      "label": "応募",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "安",
+      "label": "安い",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "けんこう",
+      "label": "けんこう",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "湿",
+      "label": "湿る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "多",
+      "label": "多い",
+      "pos": "形容詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大量",
+      "label": "大量",
+      "pos": "名詞",
+      "occurrences": 49
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "重大",
+      "label": "重大",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "けんめい",
+      "label": "けんめい",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "親切",
+      "label": "親切",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "にぎやか",
+      "label": "にぎやか",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平気",
+      "label": "平気",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "強",
+      "label": "強い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無残",
+      "label": "無残",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大幅",
+      "label": "大幅",
+      "pos": "名詞",
+      "occurrences": 18
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まちまち",
+      "label": "まちまち",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "質素",
+      "label": "質素",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "細やか",
+      "label": "細やか",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "本意",
+      "label": "本意",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真面目",
+      "label": "真面目",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "貴",
+      "label": "貴い",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無関係",
+      "label": "無関係",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "孤高",
+      "label": "孤高",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "孤独",
+      "label": "孤独",
+      "pos": "名詞",
+      "occurrences": 30
+    },
+    {
+      "reason": "reviewed_verb_context",
+      "surface": "愛し",
+      "label": "愛する",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "必至",
+      "label": "必至",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "く",
+      "label": "くる",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ひんぱん",
+      "label": "ひんぱん",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "したたか",
+      "label": "したたか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無害",
+      "label": "無害",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "食いしん坊",
+      "label": "食いしん坊",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "莫大",
+      "label": "莫大",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "半端",
+      "label": "半端",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "手ごろ",
+      "label": "手ごろ",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いびつ",
+      "label": "いびつ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大掛かり",
+      "label": "大掛かり",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "些細",
+      "label": "些細",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "満足",
+      "label": "満足",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "割安",
+      "label": "割安",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "率直",
+      "label": "率直",
+      "pos": "名詞",
+      "occurrences": 16
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "贈",
+      "label": "贈る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "悪",
+      "label": "悪い",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "くたくた",
+      "label": "くたくた",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "頑丈",
+      "label": "頑丈",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "仕",
+      "label": "仕る",
+      "pos": "動詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "滑らか",
+      "label": "滑らか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "静的",
+      "label": "静的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "余計",
+      "label": "余計",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "知的",
+      "label": "知的",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "古風",
+      "label": "古風",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無限",
+      "label": "無限",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ほいくえん",
+      "label": "保育園",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "丁寧",
+      "label": "丁寧",
+      "pos": "名詞",
+      "occurrences": 61
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ほ",
+      "label": "ほる",
+      "pos": "動詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "在",
+      "label": "在る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "募",
+      "label": "募る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "きらい",
+      "label": "きらい",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "だいじな",
+      "label": "だいじない",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "かわいそう",
+      "label": "かわいそう",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いや",
+      "label": "いや",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "克明",
+      "label": "克明",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "徹底的",
+      "label": "徹底的",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真剣",
+      "label": "真剣",
+      "pos": "名詞",
+      "occurrences": 20
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "簡素",
+      "label": "簡素",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "クール",
+      "label": "クール",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "モダン",
+      "label": "モダン",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ひそか",
+      "label": "ひそか",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "自動的",
+      "label": "自動的",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有数",
+      "label": "有数",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不正",
+      "label": "不正",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "控え目",
+      "label": "控え目",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "誇らしげ",
+      "label": "誇らしげ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "一様",
+      "label": "一様",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有力",
+      "label": "有力",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "しあわせ",
+      "label": "しあわせ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "せつな",
+      "label": "せつない",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あきらか",
+      "label": "あきらか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ひたむき",
+      "label": "ひたむき",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真摯",
+      "label": "真摯",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ヤワ",
+      "label": "ヤワ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平等",
+      "label": "平等",
+      "pos": "名詞",
+      "occurrences": 23
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "柔らか",
+      "label": "柔らか",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無縁",
+      "label": "無縁",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "寛大",
+      "label": "寛大",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "おもしろ",
+      "label": "おもしろい",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "優美",
+      "label": "優美",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "邪魔",
+      "label": "邪魔",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "同じ",
+      "label": "同じ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "優雅",
+      "label": "優雅",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "緊急",
+      "label": "緊急",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "せっきょく",
+      "label": "せっきょく",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "低",
+      "label": "低い",
+      "pos": "形容詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "少",
+      "label": "少い",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "頑固",
+      "label": "頑固",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "明快",
+      "label": "明快",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無意識",
+      "label": "無意識",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "公正",
+      "label": "公正",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "必死",
+      "label": "必死",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "かって",
+      "label": "かって",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "声高",
+      "label": "声高",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "薄っぺら",
+      "label": "薄っぺら",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "幸福",
+      "label": "幸福",
+      "pos": "名詞",
+      "occurrences": 50
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "たしか",
+      "label": "たしか",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いいかげん",
+      "label": "いいかげん",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ほし",
+      "label": "ほしい",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "うま",
+      "label": "うまい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "淡",
+      "label": "淡い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "寝坊",
+      "label": "寝坊",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぜったい",
+      "label": "ぜったい",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "名誉",
+      "label": "名誉",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "迅速",
+      "label": "迅速",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "愉快",
+      "label": "愉快",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "広大",
+      "label": "広大",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無造作",
+      "label": "無造作",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "おしゃれ",
+      "label": "おしゃれ",
+      "pos": "名詞",
+      "occurrences": 20
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あからさま",
+      "label": "あからさま",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "私的",
+      "label": "私的",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "簡便",
+      "label": "簡便",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "均質",
+      "label": "均質",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ローカル",
+      "label": "ローカル",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "誤",
+      "label": "誤る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "精一杯",
+      "label": "精一杯",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "適任",
+      "label": "適任",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "だいじょうぶ",
+      "label": "だいじょうぶ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "粗末",
+      "label": "粗末",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "速",
+      "label": "速い",
+      "pos": "形容詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "たくみ",
+      "label": "たくみ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "絶大",
+      "label": "絶大",
+      "pos": "名詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "小規模",
+      "label": "小規模",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "念入り",
+      "label": "念入り",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "こんな",
+      "label": "こんな",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "めった",
+      "label": "めった",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "つけい",
+      "label": "つけいる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "穫",
+      "label": "穫る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "織",
+      "label": "織る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "対等",
+      "label": "対等",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不安定",
+      "label": "不安定",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "早急",
+      "label": "早急",
+      "pos": "名詞",
+      "occurrences": 15
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "陽気",
+      "label": "陽気",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "妥当",
+      "label": "妥当",
+      "pos": "名詞",
+      "occurrences": 21
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "みごと",
+      "label": "みごと",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不完全",
+      "label": "不完全",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "決定的",
+      "label": "決定的",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多量",
+      "label": "多量",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "稀",
+      "label": "稀",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不遇",
+      "label": "不遇",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "けんしゅう",
+      "label": "研修",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ぼ",
+      "label": "ぼる",
+      "pos": "動詞",
+      "occurrences": 9
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "まる",
+      "label": "まるい",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "うと",
+      "label": "うとい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ぶ",
+      "label": "ぶる",
+      "pos": "動詞",
+      "occurrences": 16
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "錬",
+      "label": "錬る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "短気",
+      "label": "短気",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "すみやか",
+      "label": "すみやか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "巧妙",
+      "label": "巧妙",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "みょう",
+      "label": "みょう",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "あとち",
+      "label": "跡地",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "かたくな",
+      "label": "かたくな",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いちず",
+      "label": "いちず",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強硬",
+      "label": "強硬",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無謀",
+      "label": "無謀",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "堅実",
+      "label": "堅実",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "優位",
+      "label": "優位",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ゆるやか",
+      "label": "ゆるやか",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "勤勉",
+      "label": "勤勉",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有能",
+      "label": "有能",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "固有",
+      "label": "固有",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あらわ",
+      "label": "あらわ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あらた",
+      "label": "あらた",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強大",
+      "label": "強大",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "がらがら",
+      "label": "がらがら",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "億劫",
+      "label": "億劫",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "分明",
+      "label": "分明",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "むだ",
+      "label": "むだ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "顕著",
+      "label": "顕著",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "フル",
+      "label": "フル",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "軽率",
+      "label": "軽率",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "地道",
+      "label": "地道",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "突っ走",
+      "label": "突っ走る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "奇抜",
+      "label": "奇抜",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "光栄",
+      "label": "光栄",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "たらいまわし",
+      "label": "たらい回し",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高性能",
+      "label": "高性能",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "華やか",
+      "label": "華やか",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "タフ",
+      "label": "タフ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "到",
+      "label": "到る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "浅",
+      "label": "浅い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "軽",
+      "label": "軽い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ていねい",
+      "label": "ていねい",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ふしぎ",
+      "label": "ふしぎ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "お洒落",
+      "label": "お洒落",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "こ",
+      "label": "こい",
+      "pos": "形容詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "痛",
+      "label": "痛い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぺこぺこ",
+      "label": "ぺこぺこ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "バラバラ",
+      "label": "バラバラ",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "つら",
+      "label": "つらい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ひん",
+      "label": "ひる",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "煩雑",
+      "label": "煩雑",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "良好",
+      "label": "良好",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不具合",
+      "label": "不具合",
+      "pos": "名詞",
+      "occurrences": 13
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "身勝手",
+      "label": "身勝手",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ストレート",
+      "label": "ストレート",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "極度",
+      "label": "極度",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "凡庸",
+      "label": "凡庸",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無能",
+      "label": "無能",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "純粋",
+      "label": "純粋",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "素朴",
+      "label": "素朴",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "希薄",
+      "label": "希薄",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "良質",
+      "label": "良質",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平行",
+      "label": "平行",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あたりまえ",
+      "label": "あたりまえ",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厄介",
+      "label": "厄介",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高額",
+      "label": "高額",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不慣れ",
+      "label": "不慣れ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "主流",
+      "label": "主流",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "闊達",
+      "label": "闊達",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "まし",
+      "label": "まし",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "感心",
+      "label": "感心",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "あつ",
+      "label": "あつい",
+      "pos": "形容詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "かか",
+      "label": "かかる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "きつ",
+      "label": "きつい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "疑",
+      "label": "疑る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "怒",
+      "label": "怒る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぜいたく",
+      "label": "ぜいたく",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "かすか",
+      "label": "かすか",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ばくだい",
+      "label": "ばくだい",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不明瞭",
+      "label": "不明瞭",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "かかん",
+      "label": "かかん",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ダイナミック",
+      "label": "ダイナミック",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不規則",
+      "label": "不規則",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "放題",
+      "label": "放題",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "げんき",
+      "label": "げんき",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "借",
+      "label": "借る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "返",
+      "label": "返る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "反対",
+      "label": "反対",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぴったり",
+      "label": "ぴったり",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "綺麗",
+      "label": "綺麗",
+      "pos": "名詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無効",
+      "label": "無効",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多め",
+      "label": "多め",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "健やか",
+      "label": "健やか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "おだやか",
+      "label": "おだやか",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "すこやか",
+      "label": "すこやか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ちゅうすう",
+      "label": "中枢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "偉大",
+      "label": "偉大",
+      "pos": "名詞",
+      "occurrences": 17
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "正式",
+      "label": "正式",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "明瞭",
+      "label": "明瞭",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "鮮烈",
+      "label": "鮮烈",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無関心",
+      "label": "無関心",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "陳腐",
+      "label": "陳腐",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "失くし",
+      "label": "失くす",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無邪気",
+      "label": "無邪気",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無責任",
+      "label": "無責任",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "清らか",
+      "label": "清らか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不自由",
+      "label": "不自由",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ゆたか",
+      "label": "ゆたか",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "濃厚",
+      "label": "濃厚",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "余分",
+      "label": "余分",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大人気",
+      "label": "大人気",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "達者",
+      "label": "達者",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "法的",
+      "label": "法的",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "豪華",
+      "label": "豪華",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ばらばら",
+      "label": "ばらばら",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "著名",
+      "label": "著名",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "雄大",
+      "label": "雄大",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "幼稚",
+      "label": "幼稚",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "よ",
+      "label": "よい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "汚",
+      "label": "汚い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "乏",
+      "label": "乏い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "乱暴",
+      "label": "乱暴",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "器用",
+      "label": "器用",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "淡白",
+      "label": "淡白",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "旺盛",
+      "label": "旺盛",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "鮮明",
+      "label": "鮮明",
+      "pos": "名詞",
+      "occurrences": 12
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "劇的",
+      "label": "劇的",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不満",
+      "label": "不満",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "角",
+      "label": "角い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "主要",
+      "label": "主要",
+      "pos": "名詞",
+      "occurrences": 10
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "和やか",
+      "label": "和やか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "しゅじゅ",
+      "label": "しゅじゅ",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unverified_archaic_adjective_fragment",
+      "surface": "くき",
+      "label": "くい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "しょっき",
+      "label": "食器",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "うぶ",
+      "label": "うぶ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unverified_archaic_adjective_fragment",
+      "surface": "く",
+      "label": "くい",
+      "pos": "形容詞",
+      "occurrences": 14
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳正",
+      "label": "厳正",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気掛かり",
+      "label": "気掛かり",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不用意",
+      "label": "不用意",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不利",
+      "label": "不利",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無意味",
+      "label": "無意味",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "裏腹",
+      "label": "裏腹",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "上等",
+      "label": "上等",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "人一倍",
+      "label": "人一倍",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不器用",
+      "label": "不器用",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "小心",
+      "label": "小心",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気の毒",
+      "label": "気の毒",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "滑稽",
+      "label": "滑稽",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有益",
+      "label": "有益",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "猛烈",
+      "label": "猛烈",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "傲慢",
+      "label": "傲慢",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "心外",
+      "label": "心外",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "神経質",
+      "label": "神経質",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不向き",
+      "label": "不向き",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "控えめ",
+      "label": "控えめ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "格別",
+      "label": "格別",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "臆病",
+      "label": "臆病",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真ん丸",
+      "label": "真ん丸",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "めんどう",
+      "label": "めんどう",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "下等",
+      "label": "下等",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "利口",
+      "label": "利口",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多彩",
+      "label": "多彩",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不順",
+      "label": "不順",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "温",
+      "label": "温い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "稚",
+      "label": "稚い",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "秘密",
+      "label": "秘密",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "こうえん",
+      "label": "こうえん",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安静",
+      "label": "安静",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "自由自在",
+      "label": "自由自在",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "歪",
+      "label": "歪",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "壮大",
+      "label": "壮大",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "親密",
+      "label": "親密",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有意義",
+      "label": "有意義",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "遥か",
+      "label": "遥か",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "確定",
+      "label": "確定",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "窮屈",
+      "label": "窮屈",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "なぶん",
+      "label": "なぶる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "おろそか",
+      "label": "おろそか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "乗り気",
+      "label": "乗り気",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無難",
+      "label": "無難",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "う",
+      "label": "うい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "怖",
+      "label": "怖い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "焦",
+      "label": "焦る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "善",
+      "label": "善い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "放",
+      "label": "放る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "円満",
+      "label": "円満",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "小柄",
+      "label": "小柄",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "もっとも",
+      "label": "もっとも",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "大き",
+      "label": "大きい",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "こうほ",
+      "label": "候補",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "かた",
+      "label": "かたい",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "のぼ",
+      "label": "のぼる",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "困",
+      "label": "困る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ままし",
+      "label": "まましい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "おおらか",
+      "label": "おおらか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "重厚",
+      "label": "重厚",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大ざっぱ",
+      "label": "大ざっぱ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "難解",
+      "label": "難解",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "スピーディ",
+      "label": "スピーディ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ボロ",
+      "label": "ボロい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "身重",
+      "label": "身重",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "筋違い",
+      "label": "筋違い",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "メジャー",
+      "label": "メジャー",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "欲し",
+      "label": "欲しい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ていた",
+      "label": "ていたい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "峻厳",
+      "label": "峻厳",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "動的",
+      "label": "動的",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "微細",
+      "label": "微細",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "単一",
+      "label": "単一",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "なま",
+      "label": "なまる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "空っぽ",
+      "label": "空っぽ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "はずかし",
+      "label": "はずかしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "誠実",
+      "label": "誠実",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "メイン",
+      "label": "メイン",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "のどか",
+      "label": "のどか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "晴やか",
+      "label": "晴やか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "濃やか",
+      "label": "濃やか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "妙",
+      "label": "妙",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不愉快",
+      "label": "不愉快",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "悠長",
+      "label": "悠長",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "終わ",
+      "label": "終わる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "走",
+      "label": "走る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "頼ん",
+      "label": "頼る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "はなやか",
+      "label": "はなやか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "抜群",
+      "label": "抜群",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "へとへと",
+      "label": "へとへと",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "端的",
+      "label": "端的",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "明白",
+      "label": "明白",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "惨め",
+      "label": "惨め",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "過度",
+      "label": "過度",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不幸",
+      "label": "不幸",
+      "pos": "名詞",
+      "occurrences": 8
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "切実",
+      "label": "切実",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "型どおり",
+      "label": "型どおり",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "懸命",
+      "label": "懸命",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "こまめ",
+      "label": "こまめ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "博学",
+      "label": "博学",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平静",
+      "label": "平静",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳格",
+      "label": "厳格",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "やまやま",
+      "label": "やまやま",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "障",
+      "label": "障る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "希",
+      "label": "希",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "異",
+      "label": "異い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "重",
+      "label": "重い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ひきょう",
+      "label": "ひきょう",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "裕福",
+      "label": "裕福",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "別",
+      "label": "別",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "非凡",
+      "label": "非凡",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "欲張り",
+      "label": "欲張り",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "はで",
+      "label": "はで",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "のべん",
+      "label": "のべる",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "緩やか",
+      "label": "緩やか",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "unverified_archaic_adjective_fragment",
+      "surface": "くし",
+      "label": "くい",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "かいしゅうする",
+      "label": "回収",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "たぎ",
+      "label": "たぎる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "閑静",
+      "label": "閑静",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "過密",
+      "label": "過密",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "従順",
+      "label": "従順",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "チャーミング",
+      "label": "チャーミング",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大雑把",
+      "label": "大雑把",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "固",
+      "label": "固い",
+      "pos": "形容詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "硬",
+      "label": "硬い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "なだらか",
+      "label": "なだらか",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "やっかい",
+      "label": "やっかい",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "送",
+      "label": "送る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "台無し",
+      "label": "台無し",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "なくな",
+      "label": "なくなる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "如何",
+      "label": "如何",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "スマート",
+      "label": "スマート",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "鈍感",
+      "label": "鈍感",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "温厚",
+      "label": "温厚",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "コンパクト",
+      "label": "コンパクト",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "あふ",
+      "label": "あふる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高等",
+      "label": "高等",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "学的",
+      "label": "学的",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "同義",
+      "label": "同義",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ぞんざい",
+      "label": "ぞんざい",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不能",
+      "label": "不能",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "尊大",
+      "label": "尊大",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "少な目",
+      "label": "少な目",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "少量",
+      "label": "少量",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ひっぱ",
+      "label": "ひっぱる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "垂直",
+      "label": "垂直",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "治",
+      "label": "治る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "遠",
+      "label": "遠い",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "去",
+      "label": "去る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "散",
+      "label": "散る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大きめ",
+      "label": "大きめ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "長",
+      "label": "長い",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "疎",
+      "label": "疎い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無私",
+      "label": "無私",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "してき",
+      "label": "してき",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "トゲトゲし",
+      "label": "トゲトゲしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "優勢",
+      "label": "優勢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "一目瞭然",
+      "label": "一目瞭然",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "えど",
+      "label": "えどる",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "微か",
+      "label": "微か",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不景気",
+      "label": "不景気",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "採",
+      "label": "採る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "雑",
+      "label": "雑",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強力",
+      "label": "強力",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不平",
+      "label": "不平",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いっせい",
+      "label": "いっせい",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "なめらか",
+      "label": "なめらか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平ら",
+      "label": "平ら",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "いい加減",
+      "label": "いい加減",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "皆無",
+      "label": "皆無",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "すご",
+      "label": "すごい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "多額",
+      "label": "多額",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ラッキー",
+      "label": "ラッキー",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ちょくせつ",
+      "label": "ちょくせつ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "とち",
+      "label": "とちる",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "いざん",
+      "label": "いざる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "遺",
+      "label": "遺る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "な",
+      "label": "ない",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安泰",
+      "label": "安泰",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "エレガント",
+      "label": "エレガント",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気まぐれ",
+      "label": "気まぐれ",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "横暴",
+      "label": "横暴",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不自然",
+      "label": "不自然",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "出ば",
+      "label": "出ばる",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無闇",
+      "label": "無闇",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "破",
+      "label": "破る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "平坦",
+      "label": "平坦",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "忠実",
+      "label": "忠実",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ほけんしょう",
+      "label": "保険証",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unverified_archaic_adjective_fragment",
+      "surface": "くから",
+      "label": "くい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "しろ",
+      "label": "しろい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ひど",
+      "label": "ひどい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "しお",
+      "label": "しおる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "豪快",
+      "label": "豪快",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "にんてい",
+      "label": "認定",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "にんたい",
+      "label": "忍耐",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "圧倒的",
+      "label": "圧倒的",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "盛大",
+      "label": "盛大",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "熱烈",
+      "label": "熱烈",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "カジュアル",
+      "label": "カジュアル",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "邪悪",
+      "label": "邪悪",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "至要",
+      "label": "至要",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳粛",
+      "label": "厳粛",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不可分",
+      "label": "不可分",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "空虚",
+      "label": "空虚",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "虚ろ",
+      "label": "虚ろ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "安らか",
+      "label": "安らか",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "公的",
+      "label": "公的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不得手",
+      "label": "不得手",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不公平",
+      "label": "不公平",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "長め",
+      "label": "長め",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気がかり",
+      "label": "気がかり",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "入念",
+      "label": "入念",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "適正",
+      "label": "適正",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不透明",
+      "label": "不透明",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "悪質",
+      "label": "悪質",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "仰",
+      "label": "仰る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "せいさん",
+      "label": "せいさん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "暇",
+      "label": "暇",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "叱",
+      "label": "叱る",
+      "pos": "動詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "頭ごなし",
+      "label": "頭ごなし",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不意",
+      "label": "不意",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ねっしん",
+      "label": "ねっしん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "退",
+      "label": "退る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不審",
+      "label": "不審",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "でたらめ",
+      "label": "でたらめ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "暗",
+      "label": "暗い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "非合理",
+      "label": "非合理",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "偶然",
+      "label": "偶然",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "寒冷",
+      "label": "寒冷",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "広範囲",
+      "label": "広範囲",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "深遠",
+      "label": "深遠",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "オリジナル",
+      "label": "オリジナル",
+      "pos": "名詞",
+      "occurrences": 6
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "遣",
+      "label": "遣る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "小型",
+      "label": "小型",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "売",
+      "label": "売る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "しげき",
+      "label": "刺激",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "素晴らし",
+      "label": "素晴らしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "いえん",
+      "label": "いえる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "物騒",
+      "label": "物騒",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "リアル",
+      "label": "リアル",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "粗大",
+      "label": "粗大",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真っ暗",
+      "label": "真っ暗",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "もじ",
+      "label": "文字",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "切",
+      "label": "切",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "こうかん",
+      "label": "こうかん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "幸運",
+      "label": "幸運",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "けち",
+      "label": "けち",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "浅薄",
+      "label": "浅薄",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "かぶ",
+      "label": "かぶる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "たまん",
+      "label": "たまる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "むちゃ",
+      "label": "むちゃ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無茶",
+      "label": "無茶",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "偉",
+      "label": "偉い",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "古",
+      "label": "古い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無力",
+      "label": "無力",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "量的",
+      "label": "量的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "質的",
+      "label": "質的",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "重点的",
+      "label": "重点的",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ギリギリ",
+      "label": "ギリギリ",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "にんそう",
+      "label": "人相",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "過",
+      "label": "過る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "代",
+      "label": "代る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "著",
+      "label": "著い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "にが",
+      "label": "にがい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不良",
+      "label": "不良",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "悪辣",
+      "label": "悪辣",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "残虐",
+      "label": "残虐",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "賑やか",
+      "label": "賑やか",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "密",
+      "label": "密",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不揃い",
+      "label": "不揃い",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "心的",
+      "label": "心的",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あやふや",
+      "label": "あやふや",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "定か",
+      "label": "定か",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "あざやか",
+      "label": "あざやか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "純",
+      "label": "純",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ネガティブ",
+      "label": "ネガティブ",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "のけん",
+      "label": "のける",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "召し上が",
+      "label": "召し上がる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "移",
+      "label": "移る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "降",
+      "label": "降る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "おし",
+      "label": "おしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "遺憾",
+      "label": "遺憾",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "真っ赤",
+      "label": "真っ赤",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "寡黙",
+      "label": "寡黙",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "露骨",
+      "label": "露骨",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "浅はか",
+      "label": "浅はか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高慢",
+      "label": "高慢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ちっぽけ",
+      "label": "ちっぽけ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "唐突",
+      "label": "唐突",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "戻",
+      "label": "戻る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳重",
+      "label": "厳重",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "割高",
+      "label": "割高",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "うかつ",
+      "label": "うかつ",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "爽やか",
+      "label": "爽やか",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "停",
+      "label": "停る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "暑",
+      "label": "暑い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "熱",
+      "label": "熱い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ぎんぱく",
+      "label": "銀箔",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "均等",
+      "label": "均等",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無心",
+      "label": "無心",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "流暢",
+      "label": "流暢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "重",
+      "label": "重",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "きふする",
+      "label": "寄付",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "流動的",
+      "label": "流動的",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "とお",
+      "label": "とおい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "よろし",
+      "label": "よろしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "勇敢",
+      "label": "勇敢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ゆうげん",
+      "label": "ゆうげん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "軽快",
+      "label": "軽快",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "気まま",
+      "label": "気まま",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無自覚",
+      "label": "無自覚",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ふつふつ",
+      "label": "ふつふつ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "闇雲",
+      "label": "闇雲",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不適",
+      "label": "不適",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "同然",
+      "label": "同然",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "乗",
+      "label": "乗る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "寒",
+      "label": "寒い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "温和",
+      "label": "温和",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "こまやか",
+      "label": "こまやか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "相当",
+      "label": "相当",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "とろ",
+      "label": "とろい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "やわらか",
+      "label": "やわらかい",
+      "pos": "形容詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無知",
+      "label": "無知",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "新奇",
+      "label": "新奇",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "未定",
+      "label": "未定",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "均一",
+      "label": "均一",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "吸取",
+      "label": "吸取る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "万全",
+      "label": "万全",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "潤沢",
+      "label": "潤沢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "力不足",
+      "label": "力不足",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "せいかん",
+      "label": "せいかん",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "憂",
+      "label": "憂い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ふつう",
+      "label": "ふつう",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "りゅうちょう",
+      "label": "りゅうちょう",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "えん",
+      "label": "える",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "朗らか",
+      "label": "朗らか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "痛烈",
+      "label": "痛烈",
+      "pos": "名詞",
+      "occurrences": 4
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "本当",
+      "label": "本当",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不可解",
+      "label": "不可解",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "好都合",
+      "label": "好都合",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "貪欲",
+      "label": "貪欲",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "絶妙",
+      "label": "絶妙",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "大き目",
+      "label": "大き目",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "削",
+      "label": "削る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "要",
+      "label": "要る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "直",
+      "label": "直る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "精密",
+      "label": "精密",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "強固",
+      "label": "強固",
+      "pos": "名詞",
+      "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "厳密",
+      "label": "厳密",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "頑迷",
+      "label": "頑迷",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "伸びやか",
+      "label": "伸びやか",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "律儀",
+      "label": "律儀",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "贅沢",
+      "label": "贅沢",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "善良",
+      "label": "善良",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "滞",
+      "label": "滞る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "握",
+      "label": "握る",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "非常識",
+      "label": "非常識",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "駄目",
+      "label": "駄目",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "黄色",
+      "label": "黄色",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ゆううつ",
+      "label": "ゆううつ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "コンスタント",
+      "label": "コンスタント",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "わる",
+      "label": "わるい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "高名",
+      "label": "高名",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "負けず嫌い",
+      "label": "負けず嫌い",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "一所懸命",
+      "label": "一所懸命",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "野放図",
+      "label": "野放図",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "不人気",
+      "label": "不人気",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "ふすま",
+      "label": "襖",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "洋風",
+      "label": "洋風",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "短",
+      "label": "短い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "遍",
+      "label": "遍い",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "過酷",
+      "label": "過酷",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "快調",
+      "label": "快調",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "無計画",
+      "label": "無計画",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "かびん",
+      "label": "花瓶",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ほん",
+      "label": "ほる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "くろ",
+      "label": "くろい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "れんしゅうする",
+      "label": "練習",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "ほふ",
+      "label": "ほふる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "奔放",
+      "label": "奔放",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "ほんぽう",
+      "label": "ほんぽう",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "めちゃめちゃ",
+      "label": "めちゃめちゃ",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "迂闊",
+      "label": "迂闊",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "敏捷",
+      "label": "敏捷",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "興味深",
+      "label": "興味深い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "いじ",
+      "label": "いじる",
+      "pos": "動詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "フェア",
+      "label": "フェア",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "暖か",
+      "label": "暖か",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "おいし",
+      "label": "おいしい",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "たど",
+      "label": "たどる",
+      "pos": "動詞",
+      "occurrences": 1
+    }
+  ],
+  "morphologySummary": {
+    "na_adjective_pos": {
+      "forms": 765,
+      "occurrences": 12134
+    },
+    "unsupported_adjective_stem": {
+      "forms": 77,
+      "occurrences": 173
+    },
+    "reviewed_lexeme": {
+      "forms": 28,
+      "occurrences": 52
+    },
+    "unsupported_archaic_verb_fragment": {
+      "forms": 85,
+      "occurrences": 236
+    },
+    "reviewed_verb_context": {
+      "forms": 1,
+      "occurrences": 2
+    },
+    "unverified_archaic_adjective_fragment": {
+      "forms": 4,
+      "occurrences": 21
+    }
+  }
 }

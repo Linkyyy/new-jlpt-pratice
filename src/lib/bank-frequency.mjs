@@ -1,4 +1,5 @@
 import { createCompoundMatcher } from './frequency-review.mjs';
+import { reviewFrequencyTokens, frequencyTokenIssue, frequencyTokenPos } from './frequency-morphology.mjs';
 import { grammarExpressions, connectiveExpressions, wordStopList } from './frequency-lexicon.mjs';
 import { classifyFrequencySubtype, officialFrequencySubtypes } from './frequency-subtypes.mjs';
 import { createIdiomMatcher, idiomEntries } from './frequency-idioms.mjs';
@@ -64,6 +65,12 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
   const questions = [], units = [], terms = [], papers = [], subtypes = new Map();
   const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map();
   let transcripts = 0, listeningQuestions = 0, excludedFragments = 0;
+  const morphologyReview = new Map();
+  const recordMorphology = row => {
+    const key = `${row.reason}\t${row.surface}\t${row.label}\t${row.pos}`;
+    if (!morphologyReview.has(key)) morphologyReview.set(key, {...row, occurrences: 0});
+    morphologyReview.get(key).occurrences++;
+  };
   const readingFor = label => {
     if (!readings.has(label)) readings.set(label, toHiragana(tokenize(label).map(t => t.reading && t.reading !== '*' ? t.reading : t.surface_form).join('')));
     return readings.get(label);
@@ -74,10 +81,10 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
     return termIds.get(key);
   };
   function analyze(text) {
-    const tokens = tokenize(text), counts = new Map();
+    const tokens = reviewFrequencyTokens(text, tokenize(text), recordMorphology), counts = new Map();
     const add = id => counts.set(id, (counts.get(id) ?? 0) + 1);
     const starts = new Set(), ends = new Set(), tokensAt = new Map();
-    for (const token of tokens) {
+    for (const [tokenIndex, token] of tokens.entries()) {
       tokensAt.set(token.word_position - 1, token);
       starts.add(token.word_position - 1); ends.add(token.word_position - 1 + token.surface_form.length);
       if (token.pos === '接続詞') {
@@ -91,7 +98,11 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
           (token.word_type === 'UNKNOWN' && !token.reading && /[ぁ-ゖ]/.test(label) && !trustedWords.has(label))) { excludedFragments++; continue; }
       if ((label.length === 1 && kana.test(label)) || !japanese.test(label) || label.length > 40 || wordStopList.has(label) || !['名詞', '動詞', '形容詞', '副詞', '連体詞'].includes(token.pos)) continue;
       if (['数', '代名詞', '非自立', '接尾'].includes(token.pos_detail_1)) continue;
-      add(termId(label, readingFor(label), ({ 名詞: '名词', 動詞: '动词', 形容詞: '形容词', 副詞: '副词', 連体詞: '连体词' })[token.pos], 'word'));
+      const issue = frequencyTokenIssue(token, tokens[tokenIndex + 1]);
+      if (issue) { excludedFragments++; recordMorphology({reason: issue, surface: token.surface_form, label, pos: token.pos}); continue; }
+      const pos = frequencyTokenPos(token);
+      if (token.pos === '名詞' && pos === '形容词') recordMorphology({reason: 'na_adjective_pos', surface: token.surface_form, label, pos: token.pos});
+      add(termId(label, token.reviewed_reading ? toHiragana(token.reviewed_reading) : readingFor(label), pos, 'word'));
     }
     // Longest non-overlapping expression per kind, with morphological boundaries.
     // Do not concatenate choices or join across a sentence/paragraph boundary.
@@ -140,7 +151,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
       }
     },
     finish(revision) {
-      return { version: 1, revision, terms, questions, units, papers, subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, excludedFragments, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
+      return { version: 1, revision, terms, questions, units, papers, morphologyReview: [...morphologyReview.values()], subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, excludedFragments, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
     },
   };
 }

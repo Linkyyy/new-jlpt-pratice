@@ -498,7 +498,7 @@ test('the rebuilt production index excludes audited artifacts from every query a
   const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   const report=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/quality-report.json',import.meta.url)));
   assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,8759);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
-  for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
+  for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫','遍い','しげい'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
   assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
   for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);
   assert.ok(query(c,{kind:'idiom',grade:'N3'}).total>0);assert.equal(query(c,{kind:'idiom',grade:'ungraded'}).total,0); assert.ok(query(c,{kind:'idiom'}).total>150);
@@ -546,4 +546,44 @@ test('a reviewed common spelling may override only a supplemental variant, never
  const c={terms:[['すぐ','すぐ','副词','word'],['学生','がくせい','名词','word']],referenceLevels:[[],['N5']]};
  annotateFrequencySupplements(c,[{kind:'word',label:'すぐ',reading:'すぐ',levels:['N1'],method:'dictionary-variant'}],[{kind:'word',label:'すぐ',reading:'すぐ',levels:['N5'],method:'editorial',overridesVariant:true},{kind:'word',label:'学生',reading:'がくせい',levels:['N1'],method:'editorial',overridesVariant:true}],{});
  assert.deepEqual(c.referenceLevels,[['N5'],['N5']]);assert.deepEqual(c.referenceBasis,['editorial','reference']);
+});
+
+test('actual N2 choice artifacts do not invent archaic adjectives and correct listening nouns retain their sources', () => {
+  const c=build([
+    question('spelling',{category:'词汇',options:[{text:'短編'},{text:'短遍'},{text:'単遍'}]}),
+    question('reading',{category:'词汇',prompt:'刺激を受けた。',options:[{text:'しげき'}]}),
+    question('listening',{category:'听力',options:[{text:'かびんを運ぶ。しょっきを洗う。'}]}),
+  ]);
+  for(const label of ['遍い','しげい','かびる','しょう'])assert.equal(find(c,label),undefined,label);
+  assert.equal(find(c,'刺激').pos,'名词');assert.equal(find(c,'刺激').reading,'しげき');assert.equal(find(c,'刺激').occurrences,2);
+  assert.deepEqual(queryFrequency(c,{...defaultFrequencyFilters,q:'刺激'},find(c,'刺激').id).detail.examples.map(e=>e.id),['reading']);
+  assert.equal(find(c,'花瓶').pos,'名词');assert.equal(find(c,'食器').reading,'しょっき');
+  const wrongReading=build([question('wrong',{options:[{text:'しょくき'}]})]);
+  assert.equal(find(wrongReading,'食器'),undefined); // Never repair an incorrect reading by inventing a small っ.
+});
+test('contextual stem review keeps legitimate derivations, modern potentials and real literary adjectives', () => {
+  const c=build([question('valid',{prompt:'寒さ。短すぎる。妖しげ。摂れる。おぼしき人。遍い世界。読んでいる。読みます。'})]);
+  for(const label of ['寒い','短い','妖しい','摂る','おぼしい','遍い','読む'])assert.ok(find(c,label),label);
+  assert.equal(find(c,'読む').occurrences,2);
+});
+test('modern lexical repairs distinguish adjective, adverb and noun uses without swallowing adjacent text', () => {
+  const c=build([question('modern',{prompt:'失くした。ばっちりです。すなおに謝る。ほけんしょうを出す。出ばなをくじく。哲学が愛し求める。かいしゅうする。れんしゅうする。きふする。'})]);
+  assert.equal(find(c,'ばっちり').pos,'副词');assert.equal(find(c,'素直').pos,'形容词');
+  for(const label of ['保険証','出ばな','回収','練習','寄付'])assert.equal(find(c,label).pos,'名词',label);
+  assert.equal(find(c,'失くす').pos,'动词');assert.equal(find(c,'失くす').reading,'なくす');assert.equal(find(c,'くい'),undefined);
+  assert.equal(find(c,'愛する').reading,'あいする');assert.equal(find(c,'愛しい'),undefined);
+  for(const label of ['ばっちい','すい','ほける','出ばる','しゅうする','ふする'])assert.equal(find(c,label),undefined,label);
+});
+test('na-adjectives join the adjective filter and common adverbs never become common nouns', () => {
+  const c=build([question('pos',{prompt:'綺麗な花。静かに読む。元気な人。なかなか難しい。ひとまず休む。学生が走る。'})]);
+  for(const label of ['綺麗','静か','元気'])assert.equal(find(c,label).pos,'形容词',label);
+  for(const label of ['学生','花'])assert.equal(find(c,label).pos,'名词',label);
+  for(const label of ['なかなか','ひとまず'])assert.ok(query(c,{pos:'副词',q:label}).rows.length);
+  assert.ok(query(c,{pos:'形容词'}).rows.some(row=>row.label==='綺麗'));
+  assert.ok(!query(c,{pos:'名词'}).rows.some(row=>row.label==='綺麗'));
+});
+test('a homophone surname or noun cannot define a reviewed common verb, adjective or adverb', () => {
+  const terms=[['かなり','かなり','副词','word'],['すすむ','すすむ','动词','word'],['わかい','わかい','形容词','word'],['からっと','からっと','副词','word']];
+  const c={terms};annotateFrequencyCorpus(c,{'かなり':[{word:'金成',pos:'name',readings:['かなり'],glosses:['姓氏']}]});
+  assert.match(c.definitions[0].meaning,/相当/);assert.match(c.definitions[1].meaning,/前进/);assert.match(c.definitions[2].meaning,/年轻/);assert.match(c.definitions[3].meaning,/清爽/);
 });

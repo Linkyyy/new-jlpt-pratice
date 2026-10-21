@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "revision": "d8d066892f07353427d88c9bbec14ed57c0823a7dba2a805dda5a49afa3ada6f",
+  "revision": "9256c8f3138496ea634e13547eaa2cba2ff2c760e941034486879ce0e5a4c7de",
   "summary": {
     "questions": 8759,
     "papers": 94,
     "units": 37925,
-    "terms": 15328,
+    "terms": 15437,
     "listeningQuestions": 2634,
     "transcripts": 2633,
-    "excludedFragments": 1933,
+    "excludedFragments": 2362,
     "grammarExpressions": 238,
     "idiomExpressions": 262
   },
   "definitionSummary": {
-    "matched": 15223,
-    "missing": 105,
-    "total": 15328
+    "matched": 15330,
+    "missing": 107,
+    "total": 15437
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
@@ -69,10 +69,10 @@
     "policy": "Only exact whole-word/reading matches or a unique same-reading JMdict entry may extend published grades. Existing grades are preserved. Site estimates are recorded separately and labelled in UI and exports."
   },
   "qualitySummary": {
-    "excludedTerms": 1582,
+    "excludedTerms": 1578,
     "reasons": {
-      "personal_or_organization_name": 419,
-      "unverified_word_or_spelling": 1156,
+      "personal_or_organization_name": 420,
+      "unverified_word_or_spelling": 1151,
       "symbol_or_placeholder": 7
     }
   },

@@ -2,7 +2,17 @@ import { grammarStudyNotes, connectiveStudyNotes, wordStudyNotes } from './frequ
 import { idiomStudyNotes } from './frequency-idioms.mjs';
 import { findSupplementalWordNote } from './frequency-word-supplements.mjs';
 import { simplifiedDefinition } from './frequency-simplified.mjs';
-const posNames = {名词: ['noun', 'name', 'proper-noun'], 动词: ['verb'], 形容词: ['adj'], 副词: ['adv'], 连体词: ['det', 'adnominal'], 接续词: ['conj', 'phrase']};
+// Exact POS-specific reviews prevent homophone names/nouns from supplying
+// unrelated glosses for common adverbs, verbs or adjectives.
+const reviewedPosNotes = new Map([
+  ['かなり\t副词', '相当；颇；很'],
+  ['すすむ\t动词', '前进；进展；（时间）推进'],
+  ['あんな\t连体词', '那样的；那种的'],
+  ['わかい\t形容词', '年轻的；幼嫩的；经验不足的'],
+  ['からっと\t副词', '干燥清爽地；晴朗地；爽快地'],
+  ['とろい\t形容词', '迟钝的；动作慢的'],
+]);
+const posNames = {名词: ['noun', 'name', 'proper-noun'], 动词: ['verb'], 形容词: ['adj', 'adj_noun'], 副词: ['adv'], 连体词: ['det', 'adnominal'], 接续词: ['conj', 'phrase']};
 
 function cleanGloss(text) {
   const lines = text.replace(/<[^>]*>/g, '').split('\n').map(line => line.trim()).filter(Boolean);
@@ -21,9 +31,11 @@ function cleanGloss(text) {
 }
 export function annotateFrequencyCorpus(corpus, dictionary) {
   corpus.definitions = corpus.terms.map(([label, reading, pos, kind]) => {
+    const reviewed = kind === 'word' && reading === label && reviewedPosNotes.get(`${label}\t${pos}`);
+    if (reviewed) return {meaning: reviewed, usage: '', source: 'editorial'};
     const authored = kind === 'idiom' ? idiomStudyNotes[label] : kind === 'grammar' ? grammarStudyNotes[label] : kind === 'connective' ? connectiveStudyNotes[label] ?? wordStudyNotes[label] : wordStudyNotes[label];
     if (authored) return authored;
-    const candidates = (dictionary[label.normalize('NFKC')] ?? []).filter(entry => !entry.readings.length || !reading || entry.readings.includes(reading));
+    const candidates = (dictionary[label.normalize('NFKC')] ?? []).filter(entry => (!entry.readings.length || !reading || entry.readings.includes(reading)) && (pos === '名词' || !['name', 'proper-noun'].includes(entry.pos)));
     const score = entry => (entry.readings.includes(reading) ? 12 : 0) + (posNames[pos]?.includes(entry.pos) ? 8 : 0) + (entry.word === label ? 3 : 0) + (entry.pos === 'unknown' ? -1 : 0);
     candidates.sort((a, b) => score(b) - score(a));
     for (const entry of candidates) {
