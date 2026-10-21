@@ -1,20 +1,30 @@
 {
   "version": 1,
-  "revision": "a8b9d760cdbeb5c2a83b0a50446146ea1367057d5960a60f60d75b5b5d559a96",
+  "revision": "d465bf0ff2dac4e4bf74f3ee6968cc585d14602f6c7647df4905e0041b3a8aca",
   "summary": {
     "questions": 8759,
     "papers": 94,
-    "units": 37941,
-    "terms": 17065,
+    "units": 37925,
+    "terms": 16772,
     "listeningQuestions": 2634,
     "transcripts": 2633,
+    "excludedFragments": 1933,
     "grammarExpressions": 238,
     "idiomExpressions": 114
   },
   "definitionSummary": {
-    "matched": 15481,
-    "missing": 1584,
-    "total": 17065
+    "matched": 15478,
+    "missing": 1294,
+    "total": 16772
+  },
+  "referenceSource": {
+    "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
+    "url": "https://github.com/stephenmk/yomitan-jlpt-vocab",
+    "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+    "license": "CC BY-SA 4.0",
+    "sha256": "3e01813305505183b9b2d3624e77d9ef40c8e4a625faf7cd0afd912c4a1e74f7",
+    "entries": 8113,
+    "note": "Public reference levels, not an official JLPT vocabulary syllabus. Match spelling and reading; retain multiple reference levels when supplied."
   },
   "levels": [
     "N1",

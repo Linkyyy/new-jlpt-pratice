@@ -113,3 +113,14 @@ test('new common-word and expression definitions are included in actual exported
   const bytes = await createFrequencyPdf(result, metadata, 'zh', now);
   assert.match(bytes.toString('latin1'), /^%PDF-/); assert.match(bytes.toString('latin1'), /%%EOF\s*$/);
 });
+
+test('reference-grade exports retain cross-level original sources, grades and nonofficial attribution', async () => {
+  const filters = {...defaultFrequencyFilters, grade:'N2', level:'N1', order:'questions-asc', q:'資料'};
+  const result = queryFrequency(corpus, filters, undefined, {allRows:true});
+  assert.ok(result.total>0); assert.ok(result.rows.every(row=>row.referenceLevels.includes('N2')));
+  const book = new ExcelJS.Workbook(); await book.xlsx.load(await createFrequencyWorkbook(result, metadata, 'zh', now));
+  const sheet=book.worksheets[0];assert.equal(sheet.getCell('K1').value,'参考等级（非官方）');assert.equal(sheet.getCell('K2').value,'N2');
+  assert.match(book.worksheets[1].getCell('B2').value,/N2/);assert.match(book.worksheets[1].getCell('B2').value,/N1/);assert.match(book.worksheets[1].getCell('B2').value,/非官方/);assert.match(book.worksheets[1].getCell('B2').value,/少到多/);
+  assert.match(book.worksheets[1].getCell('B10').value,/Jonathan Waller/);
+  const bytes=await createFrequencyPdf(result,metadata,'zh',now);assert.match(bytes.toString('latin1'),/%%EOF\s*$/);
+});

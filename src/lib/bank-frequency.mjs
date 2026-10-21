@@ -4,7 +4,13 @@ import { createIdiomMatcher, idiomEntries } from './frequency-idioms.mjs';
 
 export const frequencyKinds = ['word', 'grammar', 'idiom'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
-export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'papers', 'alphabetical'];
+export const frequencyOrders = ['occurrences', 'occurrences-asc', 'questions', 'questions-asc', 'papers', 'papers-asc', 'alphabetical', 'alphabetical-desc'];
+export function frequencySort(order) {
+  const metric = order.startsWith('questions') ? 'questions' : order.startsWith('papers') ? 'papers' : order.startsWith('alphabetical') ? 'label' : 'occurrences';
+  const ascending = order === 'alphabetical' || order.endsWith('-asc');
+  const next = metric === 'label' ? (ascending ? 'alphabetical-desc' : 'alphabetical') : `${metric}${ascending ? '' : '-asc'}`;
+  return {metric, ascending, next};
+}
 export const frequencyLevelScopes = ['all', 'N1', 'N2', 'N3', 'N4'];
 const types = { 词汇: 'vocabulary', 语法: 'grammar', 阅读: 'reading', 听力: 'listening' };
 const entities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ensp: ' ', emsp: ' ' };
@@ -51,11 +57,11 @@ const knownConnectives = new Set(connectiveExpressions.flat());
 const ambiguousConnectives = new Set(['では', 'でも', 'だから', 'だけど', 'けれども', 'けれど', 'すると', 'それで']);
 
 /** Tokenizer is a build-time dependency. This module and the deployed API never load its dictionaries. */
-export function createFrequencyBuilder(tokenize) {
+export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}) {
   const matchIdioms = createIdiomMatcher(tokenize);
   const questions = [], units = [], terms = [], papers = [], subtypes = new Map();
   const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map();
-  let transcripts = 0, listeningQuestions = 0;
+  let transcripts = 0, listeningQuestions = 0, excludedFragments = 0;
   const readingFor = label => {
     if (!readings.has(label)) readings.set(label, toHiragana(tokenize(label).map(t => t.reading && t.reading !== '*' ? t.reading : t.surface_form).join('')));
     return readings.get(label);
@@ -77,6 +83,10 @@ export function createFrequencyBuilder(tokenize) {
         continue;
       }
       const label = token.basic_form && token.basic_form !== '*' ? token.basic_form : token.surface_form;
+      // Unknown kana runs often swallow particles or start mid-word (e.g. ょうしつのじゅんび).
+      // Do not turn unrecognized source spellings/distractors into invented vocabulary.
+      if (/^[ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮ]/.test(label) ||
+          (token.word_type === 'UNKNOWN' && !token.reading && /[ぁ-ゖ]/.test(label) && !trustedWords.has(label))) { excludedFragments++; continue; }
       if ((label.length === 1 && kana.test(label)) || !japanese.test(label) || label.length > 40 || wordStopList.has(label) || !['名詞', '動詞', '形容詞', '副詞', '連体詞'].includes(token.pos)) continue;
       if (['数', '代名詞', '非自立', '接尾'].includes(token.pos_detail_1)) continue;
       add(termId(label, readingFor(label), ({ 名詞: '名词', 動詞: '动词', 形容詞: '形容词', 副詞: '副词', 連体詞: '连体词' })[token.pos], 'word'));
@@ -98,7 +108,7 @@ export function createFrequencyBuilder(tokenize) {
     return [...counts].flat();
   }
   function addUnit(text, field, questionIndex, shared) {
-    if (!text || !japanese.test(text)) return;
+    if (!text || !japanese.test(text) || /^(?:选项\s*[1-4]|[1-4])?\s*[（(]以音频为准[）)]$|^选项\s*[1-4]\s*[（(]以音频为准[）)]$/.test(text)) return;
     const question = questions[questionIndex];
     const key = shared ? `${question[1]}:${question[2]}:${question[3]}:${question[4]}:${field}:${text}` : '';
     if (shared && sharedUnits.has(key)) { units[sharedUnits.get(key)][1].push(questionIndex); return; }
@@ -127,15 +137,15 @@ export function createFrequencyBuilder(tokenize) {
       }
     },
     finish(revision) {
-      return { version: 1, revision, terms, questions, units, papers, subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
+      return { version: 1, revision, terms, questions, units, papers, subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, excludedFragments, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
     },
   };
 }
-export const defaultFrequencyFilters = { source: 'all', level: 'all', exclusive: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, q: '', page: 1, size: 30 };
+export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'all', exclusive: 'all', period: 'all', category: 'all', subtype: 'all', field: 'all', kind: 'word', pos: 'all', order: 'occurrences', min: 1, q: '', page: 1, size: 30 };
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -154,6 +164,7 @@ export function parseFrequencyFilters(params, metadata) {
   }
   // Preserve bookmarked links to the former third tab without exposing it again.
   if (filters.kind === 'connective') { filters.kind = 'word'; filters.pos = '接续词'; }
+  if (filters.grade !== 'all' && (filters.kind !== 'word' || filters.source === 'original')) throw new FrequencyInputError('参考分级仅适用于真题单词。');
   if (filters.subtype !== 'all' && filters.category !== 'all' && metadata.subtypes.find(x => x.id === filters.subtype)?.category !== filters.category) throw new FrequencyInputError('子题型与题目类型不一致。');
   const subtype = metadata.subtypes.find(x => x.id === filters.subtype);
   if (filters.level !== 'all' && subtype?.levels && !subtype.levels.includes(filters.level)) throw new FrequencyInputError('子题型与日语等级不一致。');
@@ -165,6 +176,7 @@ export function parseFrequencyFilters(params, metadata) {
 }
 export function frequencyMetadata(corpus) {
   return { version: corpus.version, revision: corpus.revision, summary: corpus.summary, ...(corpus.definitionSummary ? {definitionSummary: corpus.definitionSummary} : {}),
+    referenceSource: corpus.referenceSource,
     levels: [...new Set(corpus.questions.map(q => q[2]))].sort(),
     periods: [...new Set(corpus.questions.map(q => q[3]))].sort().reverse(),
     subtypes: [...officialFrequencySubtypes, ...corpus.subtypes.filter(item => !officialFrequencySubtypes.some(official => official.id === item.id))],
@@ -203,12 +215,14 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   const mask = new Uint8Array(corpus.questions.length), paperIds = new Set();
   let questionCount = 0;
   corpus.questions.forEach((question, index) => {
+    if (filters.grade && filters.grade !== 'all' && question[1] !== 'imported') return;
     if (exclusive !== 'all' && Number(question[2].slice(1)) > limit) return;
     if (['source', 'level', 'period', 'category', 'subtype'].some((key, n) => filters[key] !== 'all' && filters[key] !== question[n + 1])) return;
     mask[index] = 1; questionCount++; paperIds.add(question[8]);
   });
   const search = frequencySearchText(filters.q), wanted = new Uint8Array(corpus.terms.length);
   corpus.terms.forEach((term, index) => {
+    if (filters.grade && filters.grade !== 'all' && !corpus.referenceLevels?.[index]?.includes(filters.grade)) return;
     if (presence && (presence[index] & lowerMask)) return;
     if ((term[3] === filters.kind || (filters.kind === 'word' && term[3] === 'connective')) && (filters.kind !== 'word' || filters.pos === 'all' || term[2] === filters.pos) && (!search || frequencySearchText(term[0] + '\n' + term[1]).includes(search))) wanted[index] = 1;
   });
@@ -231,10 +245,13 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
   }
   let rows = [...matched.values()].filter(row => row.occurrences >= filters.min);
   const alphabetical = (a, b) => (corpus.terms[a.id][1] || corpus.terms[a.id][0]).localeCompare(corpus.terms[b.id][1] || corpus.terms[b.id][0], 'ja') || corpus.terms[a.id][0].localeCompare(corpus.terms[b.id][0], 'ja');
-  rows.sort((a, b) => filters.order === 'alphabetical' ? alphabetical(a, b) : (filters.order === 'questions' ? b.questions.size - a.questions.size : filters.order === 'papers' ? b.papers.size - a.papers.size : filters.order === 'occurrences-asc' ? a.occurrences - b.occurrences : b.occurrences - a.occurrences) || b.occurrences - a.occurrences || alphabetical(a, b));
+  const sort = frequencySort(filters.order);
+  const metricValue = row => sort.metric === 'occurrences' ? row.occurrences : row[sort.metric].size;
+  rows.sort((a, b) => (sort.metric === 'label' ? alphabetical(a, b) : metricValue(a) - metricValue(b)) * (sort.ascending ? 1 : -1) || b.occurrences - a.occurrences || alphabetical(a, b));
   const total = rows.length, totalOccurrences = rows.reduce((n, row) => n + row.occurrences, 0);
   const page = options.allRows ? 1 : Math.min(filters.page, Math.max(1, Math.ceil(total / filters.size)));
   const shape = row => ({ id: row.id, label: corpus.terms[row.id][0], reading: corpus.terms[row.id][1], pos: corpus.terms[row.id][2], occurrences: row.occurrences, questions: row.questions.size, papers: row.papers.size,
+    referenceLevels: corpus.referenceLevels?.[row.id] ?? [],
     definition: corpus.definitions?.[row.id] ?? {meaning: '', usage: '', source: 'missing'},
   });
   const selected = selectedTerm === undefined ? null : rows.find(row => row.id === selectedTerm);

@@ -7,13 +7,15 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 import kuromoji from 'kuromoji';
 import { createFrequencyBuilder, frequencyMetadata } from '../src/lib/bank-frequency.mjs';
 import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
+import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'src/data/bank-frequency');
 const imported = path.join(root, 'src/data/imported-bank/questions');
 const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.json$/.test(file)).sort();
 const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-word-supplements.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
-const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1');
+inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 'src/data/frequency-levels/entries.json', 'src/data/frequency-levels/source.json');
+const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }
 const dictionary = await fs.readFile(path.join(root, 'src/data/frequency-dictionary/entries.json.gz'));
@@ -25,7 +27,10 @@ try {
 } catch (error) { if (error.code !== 'ENOENT') throw error; }
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, result) => error ? reject(error) : resolve(result)));
-const builder = createFrequencyBuilder(text => tokenizer.tokenize(text));
+const dictionaryEntries = JSON.parse(gunzipSync(dictionary));
+const referenceEntries = JSON.parse(contents.get('src/data/frequency-levels/entries.json'));
+const trustedWords = new Set([...Object.keys(dictionaryEntries), ...referenceEntries.map(([word]) => word)]);
+const builder = createFrequencyBuilder(text => tokenizer.tokenize(text), {trustedWords});
 let count = 0;
 for (const file of files) {
   const paper = JSON.parse(contents.get(`src/data/imported-bank/questions/${file}`));
@@ -52,7 +57,8 @@ for (const [level, periods] of Object.entries(original.papers)) for (const [peri
       options: options.map(text => ({ text })), explanation: Array.isArray(explanation) ? explanation : [explanation] });
   }
 }
-const corpus = annotateFrequencyCorpus(builder.finish(revision), JSON.parse(gunzipSync(dictionary)));
+const corpus = annotateFrequencyCorpus(builder.finish(revision), dictionaryEntries);
+annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')));
 await fs.mkdir(output, { recursive: true });
 await fs.writeFile(path.join(output, 'corpus.json.gz'), gzipSync(JSON.stringify(corpus), { level: 9 }));
 await fs.writeFile(path.join(output, 'manifest.json'), JSON.stringify(frequencyMetadata(corpus), null, 2) + '\n');

@@ -1,0 +1,9 @@
+{
+  "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
+  "url": "https://github.com/stephenmk/yomitan-jlpt-vocab",
+  "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+  "license": "CC BY-SA 4.0",
+  "sha256": "3e01813305505183b9b2d3624e77d9ef40c8e4a625faf7cd0afd912c4a1e74f7",
+  "entries": 8113,
+  "note": "Public reference levels, not an official JLPT vocabulary syllabus. Match spelling and reading; retain multiple reference levels when supplied."
+}

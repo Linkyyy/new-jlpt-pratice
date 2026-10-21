@@ -3,9 +3,8 @@ import { PASSPHRASE_REQUIRED } from "./access-config.server";
 import { createHash, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { ACTIVATION_CODE_DIGEST } from "./activation-code.server";
-
-export const ACTIVATION_COOKIE = "jlpt_activation";
-export const ACTIVATION_MAX_AGE = 60 * 60 * 24 * 30;
+import { ACTIVATION_COOKIE, verifyBrowserAccessToken } from './browser-access.server';
+export { ACTIVATION_COOKIE, ACTIVATION_MAX_AGE } from './browser-access.server';
 
 export function normalizeActivationCode(value: string): string {
   return value.trim().toUpperCase();
@@ -19,7 +18,7 @@ export function verifyActivationCode(value: unknown): boolean {
 
 export async function isActivated(): Promise<boolean> {
   if (!PASSPHRASE_REQUIRED) return true;
-  return verifyActivationCode((await cookies()).get(ACTIVATION_COOKIE)?.value);
+  return verifyBrowserAccessToken((await cookies()).get(ACTIVATION_COOKIE)?.value);
 }
 
 export function practiceReturnPath(path: string, params: Record<string, string | string[] | undefined>): string {

@@ -1,6 +1,7 @@
 import { grammarStudyNotes, connectiveStudyNotes, wordStudyNotes } from './frequency-study-notes.mjs';
 import { idiomStudyNotes } from './frequency-idioms.mjs';
 import { findSupplementalWordNote } from './frequency-word-supplements.mjs';
+import { simplifiedDefinition } from './frequency-simplified.mjs';
 const posNames = {名词: ['noun', 'name', 'proper-noun'], 动词: ['verb'], 形容词: ['adj'], 副词: ['adv'], 连体词: ['det', 'adnominal'], 接续词: ['conj', 'phrase']};
 
 function cleanGloss(text) {
@@ -34,7 +35,7 @@ export function annotateFrequencyCorpus(corpus, dictionary) {
       if (supplemental) return supplemental;
     }
     return {meaning: '', usage: '', source: 'missing'};
-  });
+  }).map(definition => ({...definition, meaning: simplifiedDefinition(definition.meaning), usage: simplifiedDefinition(definition.usage)}));
   const matched = corpus.definitions.filter(item => item.meaning).length;
   corpus.definitionSummary = {matched, missing: corpus.terms.length - matched, total: corpus.terms.length};
   return corpus;

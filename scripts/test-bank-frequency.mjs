@@ -10,12 +10,15 @@ import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { grammarExpressions, connectiveExpressions } from '../src/lib/frequency-lexicon.mjs';
 import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-study-notes.mjs';
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
+import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { simplifiedDefinition } from '../src/lib/frequency-simplified.mjs';
+import { frequencySort, frequencyOrders } from '../src/lib/bank-frequency.mjs';
 import { supplementalWordEntries, findSupplementalWordNote } from '../src/lib/frequency-word-supplements.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve, reject) => kuromoji.builder({ dicPath: path.dirname(require.resolve('kuromoji/dict/base.dat.gz')) }).build((error, value) => error ? reject(error) : resolve(value)));
 const question = (id, overrides = {}) => ({ id, source: 'imported', period: '202412', level: 'N2', category: '阅读', instruction: '問題10 文章を読んで', prompt: '', passage: '', options: [], explanation: [], ...overrides });
-const build = questions => { const builder = createFrequencyBuilder(text => tokenizer.tokenize(text)); questions.forEach(q => builder.addQuestion(q)); return builder.finish('fixture'); };
+const build = questions => { const builder = createFrequencyBuilder(text => tokenizer.tokenize(text), {trustedWords: new Set(['ぎじゅつ'])}); questions.forEach(q => builder.addQuestion(q)); return builder.finish('fixture'); };
 const query = (corpus, overrides = {}) => queryFrequency(corpus, { ...defaultFrequencyFilters, ...overrides });
 const find = (corpus, label, overrides = {}) => query(corpus, { q: label, size: 100, ...overrides }).rows.find(row => row.label === label);
 
@@ -321,7 +324,7 @@ test('definitions preserve Chinese meanings, usage and attribution without guess
     '猫':[{word:'猫',pos:'noun',readings:['ねこ'],glosses:['猫；家猫']}],
     '霞':[{word:'霞',pos:'noun',readings:['べつのよみ'],glosses:['不该用于这个读音的释义']}],
   });
-  const student=find(c,'学生');assert.equal(student.definition.meaning,'學生；在學校學習的人');assert.equal(student.definition.source,'wiktionary');assert.equal(student.definition.word,'学生');
+  const student=find(c,'学生');assert.equal(student.definition.meaning,'学生；在学校学习的人');assert.equal(student.definition.source,'wiktionary');assert.equal(student.definition.word,'学生');
   assert.equal(find(c,'猫').definition.meaning,'猫；家猫');
   assert.equal(find(c,'霞').definition.source,'missing');assert.equal(find(c,'霞').definition.meaning,'');
   const grammar=find(c,'にしては',{kind:'grammar'});assert.match(grammar.definition.meaning,/就/);assert.match(grammar.definition.usage,/名词/);
@@ -359,7 +362,7 @@ test('a source variant gloss uses its supplied Chinese meaning without inventing
     '棲む': [{word:'棲む', pos:'verb', readings:['すむ'], glosses:['住む (“棲息、生存”)的另一種寫法']}],
     '未収録語': [{word:'未収録語', pos:'noun', readings:['みしゅうろくご'], glosses:['かなだけの語 (kana)的另一種寫法']}],
   });
-  assert.equal(c.definitions[0].meaning, '棲息、生存');
+  assert.equal(c.definitions[0].meaning, '栖息、生存');
   assert.equal(c.definitions[0].source, 'wiktionary');
   assert.equal(c.definitions[0].word, '棲む');
   assert.equal(c.definitions[1].source, 'missing');
@@ -415,4 +418,49 @@ test('Chinese UI placeholder prompts are not Japanese vocabulary and the generat
   assert.equal(actual.definitionSummary.matched+actual.definitionSummary.missing,actual.terms.length);
   for(let i=0;i<actual.terms.length;i++)if(['grammar','idiom'].includes(actual.terms[i][3]))assert.ok(actual.definitions[i].meaning&&actual.definitions[i].usage,actual.terms[i][0]);
   assert.ok(find(actual,'学生').definition.meaning);
+});
+
+
+test('unknown kana chunks and listening placeholders are excluded without deleting real Japanese or source questions', () => {
+  const c = build([question('fragment', {prompt: 'ぎじゅつを向上させるため。しょうがっこうにいく。きょうしつのじゅんびをする。雲。歯。あいまい。ぎじゅつ。', options: [{text: '选项 1（以音频为准）'}, {text: '学生。'}]})]);
+  assert.equal(c.questions.length, 1);
+  for (const label of ['ぎじゅつを', 'ょうがっこうにいく', 'ょうしつのじゅんびをする', '选项', '音频']) assert.equal(find(c, label), undefined, label);
+  for (const label of ['向上', '雲', '歯', 'あいまい', 'ぎじゅつ', '学生']) assert.ok(find(c, label), label);
+  assert.ok(c.summary.excludedFragments >= 3);
+});
+test('Chinese definitions become simplified while Japanese examples, headwords, and dictionary links stay Japanese', () => {
+  assert.equal(simplifiedDefinition('學習；練習；用於「勉強する」；「學習」的意思'), '学习；练习；用于「勉強する」；「學習」的意思');
+  const c = annotateFrequencyCorpus({terms: [['図書館', 'としょかん', '名词', 'word']]}, {'図書館': [{word: '図書館', readings: ['としょかん'], pos: 'noun', glosses: ['圖書館；收藏書籍供人閱讀的場所']}]});
+  assert.equal(simplifiedDefinition('「世話」的禮貌說法'), '「世話」的礼貌说法');
+  assert.equal(c.terms[0][0], '図書館'); assert.equal(c.definitions[0].word, '図書館');
+  assert.equal(c.definitions[0].meaning, '图书馆；收藏书籍供人阅读的场所');
+});
+test('reference grades match exact spellings/readings and remain independent of exam levels and lower-level differences', () => {
+  const c = build([question('n1', {level: 'N1', prompt: '学生。曖昧。'}), question('n3', {level: 'N3', prompt: '学生。曖昧。'}), question('orig', {source: 'original', level: 'N1', prompt: '学生。曖昧。'})]);
+  annotateFrequencyLevels(c, [['学生', 'がくせい', 'N5'], ['曖昧', 'あいまい', 'N2'], ['学生', 'なまいき', 'N1']], {name: 'fixture'});
+  const result = query(c, {grade: 'N2', level: 'N1'});
+  assert.deepEqual(result.rows.map(row => row.label), ['曖昧']); assert.equal(result.rows[0].questions, 1);
+  assert.deepEqual(result.rows[0].referenceLevels, ['N2']);
+  assert.equal(query(c, {grade: 'N2', level: 'N3'}).rows[0].label, '曖昧');
+  assert.equal(query(c, {grade: 'N1'}).total, 0);
+  assert.deepEqual(find(c, '学生').referenceLevels, ['N5']);
+  const detail = queryFrequency(c, {...defaultFrequencyFilters, grade: 'N2', level: 'N1'}, result.rows[0].id).detail;
+  assert.deepEqual(detail.examples.map(row => row.id), ['n1']); assert.deepEqual(detail.referenceLevels, ['N2']);
+  assert.throws(() => parseFrequencyFilters(new URLSearchParams('grade=official'), frequencyMetadata(c)), FrequencyInputError);
+  assert.throws(() => parseFrequencyFilters(new URLSearchParams('grade=N2&kind=grammar'), frequencyMetadata(c)), FrequencyInputError);
+});
+test('every sorting metric can reverse direction without switching to occurrence sorting', () => {
+  const c = build([question('one', {prompt: '学校。学校。学校。学生。'}), question('two', {period: '202407', prompt: '学生。'})]);
+  for (const order of frequencyOrders) {
+    const descriptor = frequencySort(order);
+    const reversed = frequencySort(descriptor.next);
+    assert.equal(reversed.metric, descriptor.metric); assert.equal(reversed.ascending, !descriptor.ascending);
+    assert.equal(reversed.next, order);
+    const rows = query(c, {order}).rows;
+    if (descriptor.metric !== 'label') for (let i = 1; i < rows.length; i++) assert.ok((rows[i][descriptor.metric] - rows[i - 1][descriptor.metric]) * (descriptor.ascending ? 1 : -1) >= 0, order);
+  }
+  assert.equal(query(c, {order: 'questions'}).rows[0].label, '学生');
+  assert.equal(query(c, {order: 'questions-asc'}).rows[0].label, '学校');
+  assert.equal(query(c, {order: 'papers'}).rows[0].label, '学生');
+  assert.equal(query(c, {order: 'papers-asc'}).rows[0].label, '学校');
 });
