@@ -12,7 +12,7 @@ import { grammarStudyNotes, connectiveStudyNotes } from '../src/lib/frequency-st
 import { createIdiomMatcher, idiomEntries, idiomStudyNotes } from '../src/lib/frequency-idioms.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
-import { annotateFrequencyOccurrenceLevels, annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { simplifiedDefinition } from '../src/lib/frequency-simplified.mjs';
 import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { frequencySort, frequencyOrders } from '../src/lib/bank-frequency.mjs';
@@ -617,23 +617,18 @@ test('merged spellings preserve a published alias grade ahead of a canonical edi
   annotateFrequencySupplements(c,[{kind:'word',label:'はなばなしい',reading:'はなばなしい',levels:['N1'],method:'word-list'}],[{kind:'word',label:'華々しい',reading:'はなばなしい',levels:['N2'],method:'editorial'}],{});
   assert.deepEqual(c.referenceLevels,[['N1']]);assert.deepEqual(c.referenceBasis,['supplemental']);
 });
-test('provisional grades fill only ungraded single-level N1/N2/N3 words and grammar across the entire imported bank', () => {
-  const labels=['単独一','単独二','単独三','複数','下級共通','既存','原創','同詞','同詞','にしては','慣用表現','四級'];
-  const terms=labels.map((label,id)=>[label,label,id===8?'副词':id===9?'语法表达':id===10?'惯用句':'名词',id===9?'grammar':id===10?'idiom':'word']);
-  const questions=['N1','N2','N3','N4','N5'].map((level,id)=>['q'+id,'imported',level,'202412','reading','reading-short',id,true,id]);questions.push(['original','original','N2','2026','reading','reading-short',1,true,5]);
-  const c={terms,questions,units:[['passage',[0],[0,1,3,1,4,1,5,1,7,1,10,1]],['options',[1],[1,1,3,1,8,1]],['transcript',[2],[2,1,9,1]],['prompt',[3],[4,1,11,1]],['passage',[5],[6,1,0,1]]],referenceLevels:terms.map((_,id)=>id===5?['N5']:[])};
-  const report=annotateFrequencyOccurrenceLevels(c);
-  for(const [id,level]of [[0,'N1'],[1,'N2'],[2,'N3'],[9,'N3']]){assert.deepEqual(c.referenceLevels[id],[level]);assert.equal(c.referenceBasis[id],'occurrence');}
-  for(const id of [3,4,6,7,8,10,11])assert.deepEqual(c.referenceLevels[id],[],labels[id]);
-  assert.deepEqual(c.referenceLevels[5],['N5']);assert.equal(c.referenceBasis[5],'reference');
-  assert.equal(report.added.length,4);assert.equal(annotateFrequencyOccurrenceLevels(c).added.length,0);
-});
-test('production merges 華々しい and はなばなしい and provisional grades remain globally verifiable', () => {
+test('production retains merged spellings and grades only from word lists and reviewed estimates', () => {
   const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   assert.equal(c.aliases.length,c.terms.length);const row=find(c,'華々しい');assert.ok(row.aliases.includes('はなばなしい'));assert.equal(c.terms.some(t=>t[0]==='はなばなしい'),false);
   assert.deepEqual(query(c,{q:'はなばなしい'}).rows.map(r=>r.label),['華々しい']);
   const gradeReport=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/level-review-report.json',import.meta.url)));
-  const ungradedCopy={...c,referenceLevels:c.referenceLevels.map((levels,id)=>c.referenceBasis[id]==='occurrence'?[]:levels),referenceBasis:[...c.referenceBasis]};
-  const report=annotateFrequencyOccurrenceLevels(ungradedCopy);assert.ok(report.added.length>0);assert.equal(report.added.length,gradeReport.occurrence.added.length);
-  assert.deepEqual(ungradedCopy.referenceLevels,c.referenceLevels);assert.ok(queryFrequency(c,{...defaultFrequencyFilters,grade:'N1'},undefined,{allRows:true}).rows.some(r=>r.referenceBasis==='occurrence'));
+  assert.equal(gradeReport.occurrence,undefined);
+  assert.ok(c.referenceBasis.every(basis=>['reference','supplemental','editorial','ungraded'].includes(basis)));
+  for(const label of ['解明','香道','羊'])assert.deepEqual(find(c,label).referenceLevels,[],label);
+  const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/frequency-levels/'+name,import.meta.url)));
+  const verified={...c};
+  annotateFrequencyLevels(verified,read('entries.json'),read('source.json'),read('expression-entries.json'),read('expression-source.json'));
+  annotateFrequencySupplements(verified,read('supplement-entries.json'),read('reviewed-entries.json'),read('supplement-source.json'));
+  assert.deepEqual(c.referenceLevels,verified.referenceLevels);
+  assert.deepEqual(c.referenceBasis,verified.referenceBasis);
 });

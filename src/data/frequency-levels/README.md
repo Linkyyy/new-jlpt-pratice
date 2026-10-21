@@ -52,7 +52,3 @@ npm run build:frequency
 `core-words.json` 为 `jkindrix/japanese-language-data` 指定快照中的 `data/core/words.json`，版本和日期见来源记录。新增题库或参考来源后可重新导入；原有补充分级不会因已经命中而在再次导入时丢失。
 
 惯用表达重扫的候选范围、入库清单与完整表达对应的 JMdict id 见 [idiom-rescan-review.json](idiom-rescan-review.json)。候选发现只用于人工筛选，不直接视作可靠匹配或原题最终频次。
-
-## 未分级条目的暂定规则
-
-在以上公开来源和站内估级之后，仍未分级的词汇、语法，若只在当前完整真题库的 N1／N2／N3 中某一个等级出现，则以该等级暂定。此规则与上述站内估级不同：数据依据标为 `occurrence`，页面、PDF、Excel 标记“暂定”；跨等级、仅 N4/N5、仅原创题的词不补级，也不覆盖已有参考等级。真题库更新后重新构建计算，判定不受当前查询筛选影响。归并已核实的汉字／假名写法后再判定，按同词条跨词性的全部出现合并。

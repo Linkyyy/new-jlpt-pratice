@@ -144,13 +144,16 @@ test('exported rows retain compound POS and estimated-grade labels, while unknow
   const missing={...result,rows:[{...row,referenceLevels:[],referenceBasis:'ungraded'}]};const empty=new ExcelJS.Workbook();await empty.xlsx.load(await createFrequencyWorkbook(missing,metadata));assert.equal(empty.worksheets[0].getCell('K2').value,'未分级');
 });
 
-test('provisional grades are labelled in Excel/PDF and verified spelling variants export as one canonical row', async () => {
+test('verified spelling variants export as one canonical row without inferred grades', async () => {
   const result=queryFrequency(corpus,{...defaultFrequencyFilters,q:'はなばなしい'},undefined,{allRows:true});
   assert.equal(result.total,1);assert.equal(result.rows[0].label,'華々しい');
-  const provisional={...result,rows:[{...result.rows[0],referenceLevels:['N1'],referenceBasis:'occurrence'}]};
-  for(const [locale,mark]of [['zh','暂定'],['ja','暫定'],['en','provisional']]){
-    const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(provisional,metadata,locale,now));
-    assert.equal(book.worksheets[0].getCell('B2').value,'華々しい');assert.ok(book.worksheets[0].getCell('K2').value.includes(mark));
-    assert.match((await createFrequencyPdf(provisional,metadata,locale,now)).toString('latin1'),/%%EOF\s*$/);
+  for(const locale of ['zh','ja','en']){
+    const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,locale,now));
+    assert.equal(book.worksheets[0].getCell('B2').value,'華々しい');assert.equal(book.worksheets[0].getCell('K2').value,'N1');
+    assert.match((await createFrequencyPdf(result,metadata,locale,now)).toString('latin1'),/%%EOF\s*$/);
   }
+  const ungraded=queryFrequency(corpus,{...defaultFrequencyFilters,q:'解明',grade:'ungraded'},undefined,{allRows:true});
+  assert.equal(ungraded.total,1);
+  const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(ungraded,metadata,'zh',now));
+  assert.equal(book.worksheets[0].getCell('K2').value,'未分级');
 });

@@ -8,7 +8,7 @@ import kuromoji from 'kuromoji';
 import { createFrequencyBuilder, frequencyMetadata } from '../src/lib/bank-frequency.mjs';
 import { annotateFrequencyCorpus } from '../src/lib/frequency-definitions.mjs';
 import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src/lib/frequency-review.mjs';
-import { annotateFrequencyOccurrenceLevels, annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
+import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 
@@ -75,12 +75,6 @@ quality.variants = mergeFrequencyWordVariants(corpus, dictionaryEntries);
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
 const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));
-gradeReview.occurrence = annotateFrequencyOccurrenceLevels(corpus);
-for (const row of gradeReview.occurrence.added) {
-  const totals = gradeReview.totals[row.kind]; totals.addedTemporary = (totals.addedTemporary ?? 0) + 1; totals.after++;
-}
-const temporarilyGraded = new Set(gradeReview.occurrence.added.map(row => `${row.kind}\t${row.label}\t${row.reading}`));
-gradeReview.unresolved = gradeReview.unresolved.filter(row => !temporarilyGraded.has(`${row.kind}\t${row.label}\t${row.reading}`));
 gradeReview.compounds = annotateFrequencyCompounds(corpus, {tokenize: text => tokenizer.tokenize(text), trustedWords});
 await fs.mkdir(output, { recursive: true });
 await fs.writeFile(path.join(output, 'level-review-report.json'), JSON.stringify(gradeReview, null, 2) + '\n');
