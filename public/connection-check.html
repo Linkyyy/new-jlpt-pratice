@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>连接检测 · JLPT Practice</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#0f172a;font:16px/1.7 Arial,sans-serif}main{max-width:760px;margin:auto;padding:24px 16px}h1{font-size:26px;margin:16px 0 8px}p{margin:8px 0;color:#475569}a{color:#4338ca}section{margin:20px 0;padding:18px;background:white;border:1px solid #e2e8f0;border-radius:16px}ul{margin:0;padding-left:22px}li{padding:6px 0;overflow-wrap:anywhere}.ok{color:#047857}.failed{color:#be123c}.pending{color:#64748b}button{font:inherit;border:1px solid #c7d2fe;border-radius:12px;padding:10px 16px;background:#fff;color:#4338ca;cursor:pointer}button:disabled{opacity:.5;cursor:default}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}textarea{display:block;width:100%;height:270px;margin:14px 0 0;padding:12px;border:1px solid #cbd5e1;border-radius:12px;font:13px/1.6 monospace;color:#0f172a;background:#f8fafc;resize:vertical}#script-status{padding:12px;background:#eef2ff;border-radius:12px;color:#312e81}@media(prefers-color-scheme:dark){body{background:#141c20;color:#dfe7df}section{background:#1c272c;border-color:#3b4a4f}p{color:#bccac6}a,button{color:#c3b8e5}button,textarea{background:#253238;border-color:#526268;color:#dfe7df}#script-status{background:#2c2f43;color:#e0d6ec}.ok{color:#6ee7b7}.failed{color:#fda4af}.pending{color:#acbbb9}}
+  </style>
+</head>
+<body>
+<main>
+  <a href="/">← 返回首页</a>
+  <h1>连接检测</h1>
+  <p>用于排查白屏、一直加载或资源打不开。页面独立运行，不需要先加载刷题界面。</p>
+  <p id="script-status" role="status">检测脚本尚未运行。如果此提示一直不变，请检查 JavaScript 开关或内容拦截设置。</p>
+  <noscript><p>浏览器的 JavaScript 当前未执行，请开启后重新打开此页。</p></noscript>
+  <section aria-labelledby="checks-title"><h2 id="checks-title">检测进度</h2><ul id="checks" aria-live="polite"><li>等待检测脚本启动……</li></ul><p id="summary" role="status"></p></section>
+  <section aria-labelledby="report-title">
+    <h2 id="report-title">检测结果</h2>
+    <p>可复制结果发给网站维护者。检测不读取收藏、学习记录、密码或账号信息，也不会自动上传结果。</p>
+    <div class="actions"><button id="copy" type="button" disabled>复制检测结果</button><button id="run" type="button" disabled>重新检测</button><span id="copy-status" role="status"></span></div>
+    <textarea id="report" readonly aria-label="检测结果">检测脚本尚未运行。</textarea>
+  </section>
+</main>
+<script>
+(function () {
+  "use strict";
+  var list = document.getElementById("checks"), output = document.getElementById("report");
+  var rerun = document.getElementById("run"), copy = document.getElementById("copy"), summary = document.getElementById("summary");
+  var report;
+  function recentStartup() {
+    try {
+      var value = JSON.parse(sessionStorage.getItem("jlpt-practice.startup-check.v1") || "null");
+      var statuses = ["starting", "ready", "timeout", "resource-error", "script-error", "page-error"];
+      if (!value || value.version !== 1 || typeof value.at !== "number" || statuses.indexOf(value.status) < 0) return null;
+      return {at: value.at, status: value.status, failedResources: Array.isArray(value.failedResources) ? value.failedResources.filter(function (path) { return typeof path === "string" && /^\/_next\/static\/[a-zA-Z0-9_./-]+$/.test(path); }).slice(0, 8) : []};
+    } catch (error) { return null; }
+  }
+  function features() {
+    return {fetch: typeof window.fetch === "function", Promise: typeof window.Promise === "function", URL: typeof window.URL === "function", ResizeObserver: typeof window.ResizeObserver === "function", dialog: typeof window.HTMLDialogElement !== "undefined" && typeof HTMLDialogElement.prototype.showModal === "function", popoverOptional: typeof HTMLElement.prototype.showPopover === "function"};
+  }
+  function updateReport() { output.value = JSON.stringify(report, null, 2); }
+  function row(label) { var node = document.createElement("li"); node.textContent = label + "：检测中……"; node.className = "pending"; list.appendChild(node); return node; }
+  function result(node, record) {
+    node.className = record.ok ? "ok" : "failed";
+    node.textContent = record.label + "：" + (record.ok ? "通过" : record.error || "未通过") + (record.status ? " · HTTP " + record.status : "") + " · " + record.milliseconds + "ms";
+    report.checks.push(record); updateReport();
+  }
+  function readResource(path, expected) {
+    var started = Date.now(), controller = typeof AbortController === "function" ? new AbortController() : null, timer;
+    var work = Promise.resolve().then(function () { return fetch(path, {cache: "no-cache", credentials: "omit", signal: controller ? controller.signal : undefined}); }).then(function (response) {
+      return response.text().then(function (text) {
+        var type = response.headers.get("content-type") || "", reason = "";
+        if (!response.ok) reason = "服务器返回错误或拒绝访问";
+        else if (expected === "html" && type.indexOf("text/html") < 0) reason = "首页没有返回 HTML";
+        else if (expected === "html" && /vercel security checkpoint|verifying your browser|checking your browser/i.test(text)) reason = "返回了安全验证页，请检查平台防护记录";
+        else if (expected === "json" && text.indexOf('"jlpt-static-connectivity"') < 0) reason = "静态文件内容不符合预期";
+        else if (expected === "script" && !/(?:java|ecma)script/i.test(type)) reason = "脚本返回类型不正确";
+        else if (expected === "style" && type.indexOf("text/css") < 0) reason = "样式返回类型不正确";
+        var entries = window.performance && performance.getEntriesByName ? performance.getEntriesByName(new URL(path, location.href).href) : [];
+        var timing = entries[entries.length - 1];
+        return {path: path, ok: !reason, status: response.status, contentType: type, milliseconds: Date.now() - started, protocol: timing && timing.nextHopProtocol || "", error: reason, text: text};
+      });
+    });
+    var timeout = new Promise(function (resolve, reject) { timer = setTimeout(function () { if (controller) controller.abort(); reject(new Error("timeout")); }, 8000); });
+    return Promise.race([work, timeout]).then(function (value) { clearTimeout(timer); return value; }, function (error) {
+      clearTimeout(timer);
+      return {path: path, ok: false, status: null, milliseconds: Date.now() - started, error: error.message === "timeout" || error.name === "AbortError" ? "请求超过 8 秒，未完成" : "请求失败，浏览器未提供网络或拦截的详细原因"};
+    });
+  }
+  function check(label, path, kind) {
+    var node = row(label);
+    return readResource(path, kind).then(function (value) {
+      var text = value.text;
+      delete value.text; value.label = label; result(node, value);
+      return {record: value, text: text};
+    });
+  }
+  function assets(html) {
+    var page = new DOMParser().parseFromString(html, "text/html"), nodes = page.querySelectorAll("script[src], link[rel=stylesheet][href]"), paths = [], seen = {};
+    for (var i = 0; i < nodes.length && paths.length < 20; i++) {
+      var node = nodes[i], address = node.getAttribute("src") || node.getAttribute("href");
+      try {
+        var url = new URL(address, location.href);
+        if (url.origin !== location.origin || url.pathname.indexOf("/_next/static/") !== 0 || seen[url.pathname]) continue;
+        seen[url.pathname] = true; paths.push({path: url.pathname, kind: node.tagName === "SCRIPT" ? "script" : "style"});
+      } catch (error) { /* Only probe same-origin application assets. */ }
+    }
+    return paths;
+  }
+  function run() {
+    rerun.disabled = true; list.textContent = ""; summary.textContent = "正在检查首页和静态资源，每个请求最多等待 8 秒。";
+    var timezone = "unknown"; try { timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (error) { /* Optional platform detail. */ }
+    report = {version: 1, time: new Date().toISOString(), userAgent: navigator.userAgent, language: navigator.language, timezone: timezone, features: features(), recentStartup: recentStartup(), checks: []};
+    updateReport();
+    if (!report.features.fetch || !report.features.Promise || !report.features.URL) { summary.textContent = "浏览器缺少运行检测需要的基础功能。请复制结果。"; rerun.disabled = false; return; }
+    check("静态连接探针", "/connection-check.json", "json").then(function () { return check("首页请求", "/", "html"); }).then(function (home) {
+      if (!home.record.ok) return;
+      var resources = assets(home.text), cursor = 0;
+      report.discoveredAssets = resources.length; updateReport();
+      function worker() {
+        if (cursor >= resources.length) return Promise.resolve();
+        var resource = resources[cursor++];
+        return check((resource.kind === "script" ? "脚本 " : "样式 ") + resource.path.split("/").pop(), resource.path, resource.kind).then(worker);
+      }
+      return Promise.all([worker(), worker()]);
+    }).then(function () {
+      var failed = report.checks.filter(function (item) { return !item.ok; }).length;
+      summary.textContent = failed ? "有 " + failed + " 项请求未通过，请复制检测结果。" : "所检查的资源请求已通过；这不代表页面脚本一定执行成功，请结合启动信息继续排查。";
+      report.summary = failed ? "resource-request-failed" : "resource-requests-passed";
+      rerun.disabled = false; updateReport();
+    }).catch(function () { summary.textContent = "检测未能完成，请复制当前结果。"; rerun.disabled = false; });
+  }
+  function selectReport() { output.focus(); output.select(); output.setSelectionRange(0, output.value.length); }
+  copy.addEventListener("click", function () {
+    var status = document.getElementById("copy-status");
+    function fallback() { selectReport(); try { status.textContent = document.execCommand("copy") ? "已复制" : "请长按结果文字复制"; } catch (error) { status.textContent = "请长按结果文字复制"; } }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(output.value).then(function () { status.textContent = "已复制"; }, fallback);
+    else fallback();
+  });
+  rerun.addEventListener("click", run); copy.disabled = false;
+  document.getElementById("script-status").textContent = "内联 JavaScript 已运行。这只能确认当前域名能送达此检测页，首页和资源连接结果如下。";
+  run();
+})();
+</script>
+</body>
+</html>
