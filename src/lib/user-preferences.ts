@@ -12,13 +12,16 @@ export interface UserPreferences {
   readonly home: { readonly source: "original" | "imported"; readonly level: JLPTLevel; readonly year: string; readonly type: QuestionType; readonly mode: PracticeMode };
   readonly practice: { readonly swipeEnabled: boolean; readonly buttonsEnabled: boolean; readonly keyboardEnabled: boolean; readonly instantFeedback: boolean; readonly fontSize: number; readonly mobileFontSize: number; readonly playbackRate: number };
   readonly favorites: { readonly mode: "preview" | "cards"; readonly fontSize: number; readonly sort: FavoriteSort; readonly mistakesSort: FavoriteSort; readonly dueSort: FavoriteSort };
+  readonly frequency?: { readonly examplesExpanded: boolean; readonly previewsExpanded: boolean };
 }
+export const defaultFrequencyDisplay = { examplesExpanded: true, previewsExpanded: false };
 export const PREFERENCES_STORAGE_KEY = "jlpt-practice.preferences.v1";
 export const defaultPreferences: UserPreferences = {
   version: 1,
   home: { source: "imported", level: "N2", year: "", type: "all", mode: "practice" },
   practice: { swipeEnabled: true, buttonsEnabled: true, keyboardEnabled: true, instantFeedback: false, fontSize: 18, mobileFontSize: 16, playbackRate: 1 },
   favorites: { mode: "preview", fontSize: 16, sort: "recent", mistakesSort: "wrong", dueSort: "due" },
+  frequency: defaultFrequencyDisplay,
 };
 interface Snapshot { readonly data: UserPreferences; readonly ready: boolean; readonly error: string | null }
 const serverSnapshot: Snapshot = { data: defaultPreferences, ready: false, error: null };
@@ -46,10 +49,10 @@ function subscribe(listener: () => void) {
   return () => { listeners.delete(listener); window.removeEventListener("storage", changed); };
 }
 export function useUserPreferences() { return useSyncExternalStore(subscribe, readUserPreferences, () => serverSnapshot); }
-export function setUserPreferences<K extends "home" | "practice" | "favorites">(section: K, patch: Partial<UserPreferences[K]>): boolean {
+export function setUserPreferences<K extends "home" | "practice" | "favorites" | "frequency">(section: K, patch: Partial<NonNullable<UserPreferences[K]>>): boolean {
   const current = readUserPreferences();
   if (!current.ready || current.error === invalid) return false;
-  const data = { ...current.data, [section]: { ...current.data[section], ...patch } };
+  const data = { ...current.data, [section]: { ...(section === "frequency" ? defaultFrequencyDisplay : {}), ...current.data[section], ...patch } };
   if (!isUserPreferences(data)) return false;
   try {
     const raw = JSON.stringify(data);

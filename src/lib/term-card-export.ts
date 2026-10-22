@@ -18,6 +18,20 @@ export function createAnkiText(cards:readonly TermCard[],origin:string):string {
 export function createWordListText(cards:readonly Pick<TermCard,'label'>[]):string {
   return [...new Set(cards.map(card=>card.label.normalize('NFKC').replace(/[\r\n\t]/g,' ').trim()).filter(Boolean))].join('\n')+'\n';
 }
+/** RFC 4180 with a UTF-8 BOM for Excel. Neutralize spreadsheet formula prefixes. */
+export function createTermCsv(cards:readonly TermCard[],origin:string,locale:'zh'|'ja'|'en'='zh'):string {
+  const base=new URL(origin);if(!['http:','https:'].includes(base.protocol))throw Error('Invalid export origin');
+  const labels={zh:['词条','读音','类别','词性','参考等级','中文释义','用法／接续','原题例句','原题信息','原题链接','词条链接'],ja:['語句','読み','種類','品詞','参考レベル','中国語の意味','用法・接続','原文の例文','原文情報','問題リンク','語句リンク'],en:['Term','Reading','Type','Part of speech','Reference level','Chinese meaning','Usage','Source example','Source information','Question link','Term link']}[locale];
+  const cell=(value:string)=>'"'+(/^[\s\uFEFF]*[=+\-@]/.test(value)?"'"+value:value).replace(/"/g,'""')+'"';
+  const seen=new Set<string>(),rows=[labels];
+  for(const card of cards){const key=termStudyKey(card);if(seen.has(key))continue;seen.add(key);const example=card.example&&/^\/practice\?/.test(card.example.path)&&!/[\\\r\n]/.test(card.example.path)?card.example:undefined;
+    rows.push([card.label,card.reading,card.kind,card.pos,(card.referenceLevels??[]).join(' / '),card.meaning,card.usage,example?.text??'',example?.label??'',example?new URL(example.path,base.origin).href:'',new URL('/frequency?'+new URLSearchParams({kind:card.kind,entry:key}),base.origin).href]);
+  }
+  return '\uFEFF'+rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
+}
+export function downloadTermBlob(blob:Blob,filename:string):void {
+  const href=URL.createObjectURL(blob),link=document.createElement('a');link.href=href;link.download=filename;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(href),60000);
+}
 export function downloadTermText(text:string,filename:string):void {
-  const href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})),link=document.createElement('a');link.href=href;link.download=filename;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(href),60000);
+  downloadTermBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),filename);
 }

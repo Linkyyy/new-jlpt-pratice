@@ -95,5 +95,6 @@ export function isUserPreferences(value: unknown): value is UserPreferences {
     && ["swipeEnabled", "buttonsEnabled", "keyboardEnabled", "instantFeedback"].every(key => typeof practice[key] === "boolean")
     && size(practice.fontSize) && size(practice.mobileFontSize) && [0.75, 1, 1.25, 1.5].includes(practice.playbackRate as number)
     && ["preview", "cards"].includes(String(favorites.mode)) && size(favorites.fontSize)
-    && ["sort", "mistakesSort", "dueSort"].every(key => ["recent", "wrong", "due", "paper"].includes(String(favorites[key])));
+    && ["sort", "mistakesSort", "dueSort"].every(key => ["recent", "wrong", "due", "paper"].includes(String(favorites[key])))
+    && (value.frequency === undefined || isRecord(value.frequency) && typeof value.frequency.examplesExpanded === "boolean" && typeof value.frequency.previewsExpanded === "boolean");
 }

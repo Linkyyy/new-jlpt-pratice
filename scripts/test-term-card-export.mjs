@@ -13,3 +13,12 @@ test('Anki TSV has recognized headers, exactly three columns, safe HTML and work
 test('plain word-list export is normalized, deduplicated, one word per line and never masquerades as a verified proprietary format',()=>{
  assert.equal(exports.createWordListText([card,card,{label:'ｺｰﾋｰ'},{label:'コーヒー'}]),'華々しい\nコーヒー\n');assert.equal(exports.createWordListText([{label:'x\ny\tz'}]),'x y z\n');
 });
+test('personal CSV preserves meanings, examples, stable/source links, commas and quotes, and blocks spreadsheet formulas',()=>{
+  const text=exports.createTermCsv([card,card,{...card,label:'=HYPERLINK("bad")',reading:' +SUM(1,2)',meaning:'第一行, "引号"\n第二行',example:{...card.example,path:'//evil.example'}}],'https://jlpt.example');
+  assert.ok(text.startsWith('\uFEFF"词条","读音"'));
+  assert.equal((text.match(/"華々しい"/g)??[]).length,1);
+  assert.ok(text.includes(card.example.text));assert.ok(text.includes('https://jlpt.example/practice?'));
+  assert.ok(text.includes('"\'=HYPERLINK(""bad"")"'));assert.ok(text.includes('"\' +SUM(1,2)"'));
+  assert.ok(text.includes('"第一行, ""引号""\n第二行"'));assert.equal(text.includes('evil.example'),false);
+  for(const locale of ['ja','en'])assert.equal(exports.createTermCsv([card],'https://jlpt.example',locale).split('\r\n').length,3);
+});

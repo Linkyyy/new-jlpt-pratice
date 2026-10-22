@@ -61,3 +61,15 @@ test("corrupt stored settings are preserved and quota errors can be retried with
   good.fail(false); assert.equal(good.api.setUserPreferences("home", { level: "N1" }), true);
   assert.equal(good.api.readUserPreferences().error, null);
 });
+test("example/preview defaults persist, old preferences remain valid and invalid display flags are rejected", () => {
+  const old=JSON.parse(JSON.stringify(environment().api.defaultPreferences));delete old.frequency;
+  assert.equal(validation.isUserPreferences(old),true);
+  const e=environment(JSON.stringify(old));
+  assert.equal(e.api.setUserPreferences('frequency',{examplesExpanded:false}),true);
+  let saved=environment(e.raw()).api.readUserPreferences().data;
+  assert.equal(saved.frequency.examplesExpanded,false);assert.equal(saved.frequency.previewsExpanded,false);
+  assert.equal(e.api.setUserPreferences('frequency',{previewsExpanded:true}),true);
+  saved=environment(e.raw()).api.readUserPreferences().data;
+  assert.equal(saved.frequency.examplesExpanded,false);assert.equal(saved.frequency.previewsExpanded,true);
+  const before=e.raw();assert.equal(e.api.setUserPreferences('frequency',{examplesExpanded:'false'}),false);assert.equal(e.raw(),before);
+});

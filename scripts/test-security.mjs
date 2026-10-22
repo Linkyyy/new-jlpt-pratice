@@ -75,9 +75,11 @@ test('route handlers gate queries, exports and feedback before their heavy depen
     vm.runInNewContext(ts.transpileModule(source, {compilerOptions: {module: ts.ModuleKind.CommonJS}}).outputText, {exports, Response, Request, URL, process: {env: {}}, require: dependency => {
       if (dependency === '@/lib/frequency-access.server') return e.load('frequency-access.server');
       if (dependency === '@/lib/request-limits') return e.load('request-limits');
+      if (dependency === '@/lib/request-security') return e.load('request-security');
       return {loadFrequencyCorpus: () => {heavyCalls++; throw Error('must not load');}, submitFrequencyFeedback: () => {heavyCalls++; throw Error('must not submit');}};
     }});
     assert.equal((await (exports.GET ?? exports.POST)(req())).status, 401);
+    if(path==='app/api/frequency/export/route')assert.equal((await exports.POST(req('/api/frequency/export?format=pdf',{method:'POST'}))).status,401);
     assert.equal(heavyCalls, 0, path);
   }
 });

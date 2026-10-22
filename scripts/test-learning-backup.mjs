@@ -163,6 +163,7 @@ test("cloud backups round-trip remembered selections, practice/favorite settings
   source.preferences.setUserPreferences("home", { level: "N3", year: "random", type: "grammar", mode: "exam" });
   source.preferences.setUserPreferences("practice", { swipeEnabled: false, buttonsEnabled: false, keyboardEnabled: false, instantFeedback: true, fontSize: 24, mobileFontSize: 20, playbackRate: 1.5 });
   source.preferences.setUserPreferences("favorites", { mode: "cards", sort: "paper", fontSize: 22 });
+  source.preferences.setUserPreferences("frequency", { examplesExpanded: false, previewsExpanded: true });
   source.display.setDisplayPreferences({ theme: "dark", locale: "ja" });
   const backup = JSON.parse(JSON.stringify(source.backup.createLearningBackup().data));
   const destination = environment();
@@ -170,6 +171,8 @@ test("cloud backups round-trip remembered selections, practice/favorite settings
   assert.deepEqual(JSON.parse(destination.raw.get("jlpt-practice.preferences.v1")), backup.preferences);
   assert.deepEqual(JSON.parse(destination.raw.get("jlpt-practice.display.v1")), backup.display);
   assert.equal(destination.preferences.readUserPreferences().data.practice.fontSize, 24);
+  assert.equal(destination.preferences.readUserPreferences().data.frequency.examplesExpanded, false);
+  assert.equal(destination.preferences.readUserPreferences().data.frequency.previewsExpanded, true);
   assert.equal(destination.display.readDisplayPreferences().locale, "ja");
   destination.study.deleteStudyHistory(null);
   assert.deepEqual(destination.backup.createLearningBackup().data.preferences, destination.preferences.readUserPreferences().data);
