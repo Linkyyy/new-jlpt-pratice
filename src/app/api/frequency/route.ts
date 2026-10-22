@@ -1,5 +1,6 @@
 import metadata from '@/data/bank-frequency/manifest.json';
-import { FrequencyInputError, frequencyText, listeningTranscript, parseFrequencyDetailOptions, parseFrequencyFilters, queryFrequency } from '@/lib/bank-frequency.mjs';
+import { FrequencyInputError, parseFrequencyDetailOptions, parseFrequencyFilters, queryFrequency } from '@/lib/bank-frequency.mjs';
+import {frequencyExamplePreview} from '@/lib/frequency-evidence.mjs';
 import { loadFavoriteQuestions } from '@/data/imported-papers.server';
 import { parseTermStudyKey } from '@/lib/term-study-data';
 import { findFrequencyTerm, loadFrequencyCorpus } from '@/lib/bank-frequency.server';
@@ -27,18 +28,15 @@ export async function GET(request: Request) {
     const selectedId = identity ? findFrequencyTerm(corpus, identity) : term === null ? undefined : Number(term);
     const result = queryFrequency(corpus, filters, selectedId, parseFrequencyDetailOptions(url.searchParams, corpus));
     if (result.detail) {
+      result.detail.review=corpus.termReview?.[result.detail.id];
+      result.detail.referenceEvidence=corpus.referenceEvidence?.[result.detail.id]??[];
+      const forms=[result.detail.label,...(result.detail.aliases??[]),...(corpus.surfaceForms?.[result.detail.id]??[])];
       const records = await loadFavoriteQuestions(result.detail.examples.filter(example => example.available).map(example => example.id));
       const questions = new Map(records.map(record => [record.question.id, record.question]));
       result.detail.examples = result.detail.examples.map(example => {
         const question = questions.get(example.id);
         if (!question) return example;
-        const passage = example.fields.includes('transcript') ? listeningTranscript([...question.explanation]) : frequencyText(question.passage ?? '');
-        const position = passage.indexOf(result.detail!.label);
-        const start = Math.max(0, position - 55);
-        return { ...example, preview: { prompt: frequencyText(question.prompt).slice(0, 200),
-          ...((example.fields.includes('passage') || example.fields.includes('transcript')) && passage ? { passage: `${start ? '…' : ''}${passage.slice(start, start + 240)}${passage.length > start + 240 ? '…' : ''}` } : {}),
-          options: question.options.map(option => frequencyText(option.text).slice(0, 180)),
-        } };
+        return { ...example, preview:frequencyExamplePreview(question,example.fields,forms)};
       });
     }
     return Response.json(result, {

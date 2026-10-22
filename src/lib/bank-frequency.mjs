@@ -63,7 +63,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
   const matchIdioms = createIdiomMatcher(tokenize);
   const matchCompounds = createCompoundMatcher(tokenize, trustedWords);
   const questions = [], units = [], terms = [], papers = [], subtypes = new Map();
-  const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map();
+  const termIds = new Map(), paperIds = new Map(), sharedUnits = new Map(), ids = new Set(), readings = new Map(), surfaces = [];
   let transcripts = 0, listeningQuestions = 0, excludedFragments = 0;
   const morphologyReview = new Map();
   const recordMorphology = row => {
@@ -77,18 +77,18 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
   };
   const termId = (label, reading, pos, kind) => {
     const key = `${kind}\t${label}\t${pos}`;
-    if (!termIds.has(key)) { termIds.set(key, terms.length); terms.push([label, reading, pos, kind]); }
+    if (!termIds.has(key)) { termIds.set(key, terms.length); terms.push([label, reading, pos, kind]); surfaces.push(new Set()); }
     return termIds.get(key);
   };
   function analyze(text) {
     const tokens = reviewFrequencyTokens(text, tokenize(text), recordMorphology), counts = new Map();
-    const add = id => counts.set(id, (counts.get(id) ?? 0) + 1);
+    const add = (id, surface) => { counts.set(id, (counts.get(id) ?? 0) + 1); if (surface) surfaces[id].add(surface); };
     const starts = new Set(), ends = new Set(), tokensAt = new Map();
     for (const [tokenIndex, token] of tokens.entries()) {
       tokensAt.set(token.word_position - 1, token);
       starts.add(token.word_position - 1); ends.add(token.word_position - 1 + token.surface_form.length);
       if (token.pos === '接続詞') {
-        if (!knownConnectives.has(token.surface_form)) add(termId(token.surface_form, toHiragana(token.reading ?? ''), '接续词', 'connective'));
+        if (!knownConnectives.has(token.surface_form)) add(termId(token.surface_form, toHiragana(token.reading ?? ''), '接续词', 'connective'), token.surface_form);
         continue;
       }
       const label = token.basic_form && token.basic_form !== '*' ? token.basic_form : token.surface_form;
@@ -102,7 +102,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
       if (issue) { excludedFragments++; recordMorphology({reason: issue, surface: token.surface_form, label, pos: token.pos}); continue; }
       const pos = frequencyTokenPos(token);
       if (token.pos === '名詞' && pos === '形容词') recordMorphology({reason: 'na_adjective_pos', surface: token.surface_form, label, pos: token.pos});
-      add(termId(label, token.reviewed_reading ? toHiragana(token.reviewed_reading) : readingFor(label), pos, 'word'));
+      add(termId(label, token.reviewed_reading ? toHiragana(token.reviewed_reading) : readingFor(label), pos, 'word'), token.surface_form);
     }
     // Longest non-overlapping expression per kind, with morphological boundaries.
     // Do not concatenate choices or join across a sentence/paragraph boundary.
@@ -114,11 +114,11 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
         if (!starts.has(at) || !ends.has(end) || occupied[expression.kind].some(([left, right]) => at < right && end > left)) continue;
         if (expression.kind === 'connective' && ambiguousConnectives.has(expression.form) && tokensAt.get(at)?.pos !== '接続詞' && !/(?:^|[。！？!?\n「『])\s*$/.test(text.slice(0, at))) continue;
         occupied[expression.kind].push([at, end]);
-        add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续词', expression.kind));
+        add(termId(expression.label, readingFor(expression.label), expression.kind === 'grammar' ? '语法表达' : '接续词', expression.kind), expression.form);
       }
     }
-    for (const label of matchCompounds(text, tokens)) add(termId(label, readingFor(label), '名词', 'word'));
-    for (const label of matchIdioms(tokens)) add(termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom'));
+    for (const label of matchCompounds(text, tokens)) add(termId(label, readingFor(label), '名词', 'word'), label);
+    for (const label of matchIdioms(tokens, (label, surface) => surfaces[termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom')].add(surface))) add(termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom'));
     return [...counts].flat();
   }
   function addUnit(text, field, questionIndex, shared) {
@@ -151,7 +151,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
       }
     },
     finish(revision) {
-      return { version: 1, revision, terms, questions, units, papers, morphologyReview: [...morphologyReview.values()], subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, excludedFragments, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
+      return { version: 1, revision, terms, surfaceForms: surfaces.map(forms => [...forms].sort()), questions, units, papers, morphologyReview: [...morphologyReview.values()], subtypes: [...subtypes.values()], summary: { questions: questions.length, papers: papers.length, units: units.length, terms: terms.length, listeningQuestions, transcripts, excludedFragments, grammarExpressions: grammarExpressions.length, idiomExpressions: idiomEntries.length } };
     },
   };
 }

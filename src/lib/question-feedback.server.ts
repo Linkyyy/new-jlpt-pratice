@@ -1,4 +1,5 @@
 import { decodeTermFeedback } from "./frequency-term-feedback";
+import { loadFrequencyCorpus } from './bank-frequency.server';
 import { randomUUID } from "node:crypto";
 import { loadFavoriteQuestions } from "@/data/imported-papers.server";
 import { applyCloudRateLimit, checkCloudRateLimit, cloudJson, CloudServiceError, getCloudSession, handleCloudRequest, queryCloudDatabase, requireCloudSameOrigin } from "./cloud-backup.server";
@@ -17,7 +18,7 @@ export async function feedbackInput(request: Request, maxBytes: number): Promise
   }
 }
 const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
-async function requireFeedbackAdmin(request: Request) {
+export async function requireFeedbackAdmin(request: Request) {
   const allowed = (process.env.FEEDBACK_ADMIN_USERS ?? "").split(",").map(value => value.trim().toLowerCase()).filter(value => /^[a-z0-9_]{3,32}$/.test(value));
   if (!allowed.length) throw new CloudServiceError(403, "反馈管理尚未配置，请设置管理员账号。");
   const user = await getCloudSession(request);
@@ -71,8 +72,20 @@ export function updateQuestionFeedback(request: Request) {
     const denied = checkApiRateLimit(request, { scope: "feedback-update", limit: 60, windowSeconds: 60 });
     if (denied) return denied;
     await requireFeedbackAdmin(request);
-    const body = await feedbackInput(request, 1024);
+    const body = await feedbackInput(request, 8192);
     if (typeof body.id !== "string" || !uuid.test(body.id) || !isFeedbackStatus(body.status)) throw new CloudServiceError(400, "反馈状态无效。");
+    if(body.note!==undefined&&(typeof body.note!=='string'||body.note.trim().length>1000))throw new CloudServiceError(400,'处理说明最多 1000 字。');
+    const records=await queryCloudDatabase<{question_id:string;description:string}>('SELECT question_id, description FROM question_feedback WHERE id = ?',[body.id]);
+    if(!records.length)throw new CloudServiceError(404,'未找到这条反馈。');
+    if(records[0].question_id.startsWith('frequency:')) {
+      const context=JSON.parse(records[0].description);
+      if(body.status==='resolved'&&(typeof body.note!=='string'||body.note.trim().length<5))throw new CloudServiceError(400,'请填写至少 5 字的处理说明，再标记已处理。');
+      if(typeof body.note==='string'&&body.note.trim())context.resolution={note:body.note.trim(),revision:(await loadFrequencyCorpus()).revision,updatedAt:Date.now()};
+      // Keep the private receipt digest and original report snapshot intact.
+      const updated=await queryCloudDatabase('UPDATE question_feedback SET status = ?, description = ?, updated_at = ? WHERE id = ? RETURNING id',[body.status,JSON.stringify(context),Date.now(),body.id]);
+      if(!updated.length)throw new CloudServiceError(404,'未找到这条反馈。');
+      return cloudJson({ok:true,resolution:context.resolution??null});
+    }
     const updated = await queryCloudDatabase("UPDATE question_feedback SET status = ?, updated_at = ? WHERE id = ? RETURNING id", [body.status, Date.now(), body.id]);
     if (!updated.length) throw new CloudServiceError(404, "未找到这条反馈。");
     return cloudJson({ ok: true });

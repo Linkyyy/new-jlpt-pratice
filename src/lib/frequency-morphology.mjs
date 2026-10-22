@@ -2,6 +2,8 @@
 // Only match complete, contiguous source tokens: never join choices, sentences,
 // substrings of a longer token, or silently rewrite the original question.
 const repairs = [
+  ['たまご', '卵', 'タマゴ', '名詞'],
+  ['あたま', '頭', 'アタマ', '名詞'],
   ['失くし', '失くす', 'ナクス', '動詞'],
   ['しげき', '刺激', 'シゲキ', '名詞'],
   ['ばっちり', 'ばっちり', 'バッチリ', '副詞'],

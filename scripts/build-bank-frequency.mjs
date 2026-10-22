@@ -11,6 +11,7 @@ import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src
 import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { mergeFrequencyDuplicateWords } from '../src/lib/frequency-duplicates.mjs';
+import { annotateFrequencyAudit } from '../src/lib/frequency-audit.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -22,6 +23,7 @@ inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
 inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 inputs.push('src/lib/frequency-duplicates.mjs');
+inputs.push('src/lib/frequency-audit.mjs');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }
@@ -79,6 +81,7 @@ annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/d
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
 const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));
 gradeReview.compounds = annotateFrequencyCompounds(corpus, {tokenize: text => tokenizer.tokenize(text), trustedWords});
+quality.audit = annotateFrequencyAudit(corpus, dictionaryEntries);
 await fs.mkdir(output, { recursive: true });
 await fs.writeFile(path.join(output, 'level-review-report.json'), JSON.stringify(gradeReview, null, 2) + '\n');
 console.log('补充分级与复合词复核：', gradeReview.totals, '复合词', gradeReview.compounds);

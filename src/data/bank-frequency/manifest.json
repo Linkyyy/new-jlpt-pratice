@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "revision": "a885cb9965292e72acd79a2a6af301571043dc42e75a3beadcbb1e5334d5fabf",
+  "revision": "b2a03aee8fc1c54e26e24a12ef31b595032ebadaad5981ddcf4020ebc3b1c6b7",
   "summary": {
     "questions": 8759,
     "papers": 94,
     "units": 37925,
-    "terms": 14826,
+    "terms": 14825,
     "listeningQuestions": 2634,
     "transcripts": 2633,
     "excludedFragments": 2362,
@@ -13,9 +13,9 @@
     "idiomExpressions": 262
   },
   "definitionSummary": {
-    "matched": 14719,
+    "matched": 14718,
     "missing": 107,
-    "total": 14826
+    "total": 14825
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",

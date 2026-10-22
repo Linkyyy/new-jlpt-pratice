@@ -7,7 +7,7 @@ import test from "node:test";
 import ts from "typescript";
 
 const require = createRequire(import.meta.url);
-const compiled = Object.fromEntries(["frequency-feedback.server", "term-study-data", "frequency-term-feedback", "question-feedback", "question-feedback.server", "cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
+const compiled = Object.fromEntries(["frequency-quality-review.server", "frequency-feedback.server", "term-study-data", "frequency-term-feedback", "question-feedback", "question-feedback.server", "cloud-backup.server", "backup-validation", "study-history-data", "request-limits"].map(name => [name, ts.transpileModule(fs.readFileSync(new URL(`../src/lib/${name}.ts`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText]));
 const base = "https://jlpt.example", questionId = "imported:201407:N3:3:8363:73";
 const valid = () => ({ questionId, issueType: "image", description: "最后一题的图片内容显示有误。" });
 function environment({ configured = true, migrated = true, admins = "owner" } = {}) {
@@ -21,7 +21,7 @@ function environment({ configured = true, migrated = true, admins = "owner" } = 
   function load(name) {
     if (!modules[name]) {
       const exports = {}; modules[name] = exports;
-      vm.runInNewContext(compiled[name], { exports, require: dependency => dependency === "./bank-frequency.server" ? {loadFrequencyCorpus:async()=>({revision:"test-revision",terms:[["華々しい","はなばなしい","形容词","word"]],questions:[[questionId,"imported","N1","201007","vocabulary"]],units:[["prompt",[0],[0,1]]]}),findFrequencyTerm:(_corpus,term)=>["華々しい","はなばなしい"].includes(term.label)&&term.reading==="はなばなしい"&&term.pos==="形容词"&&term.kind==="word"?0:-1} : dependency === "@/data/imported-papers.server" ? { loadFavoriteQuestions: async ids => ids.filter(id => id === questionId || id === "N1-2026-词汇-1").map(id => ({ question: { id, level: id === questionId ? "N3" : "N1", category: id === questionId ? "阅读" : "词汇", sourceQuestionNumber: id === questionId ? 73 : null }, year: id === questionId ? "201407" : "2026", source: id === questionId ? "imported" : "original" })) } : dependency.startsWith("./") ? load(dependency.slice(2)) : require(dependency), process: { env }, Date: Clock, Buffer, URL, Response, Request, AbortSignal, Uint8Array,
+      vm.runInNewContext(compiled[name], { exports, require: dependency => dependency === "./bank-frequency.server" ? {loadFrequencyCorpus:async()=>({revision:"test-revision",terms:[["華々しい","はなばなしい","形容词","word"]],questions:[[questionId,"imported","N1","201007","vocabulary"]],termReview:[{flags:["token","level"],reasons:["test"],occurrences:1,questions:1,papers:1}],auditSummary:{total:1,token:1,level:1},definitions:[{meaning:"华丽",usage:"",source:"editorial"}],referenceLevels:[[]],referenceBasis:["ungraded"],units:[["prompt",[0],[0,1]]]}),findFrequencyTerm:(_corpus,term)=>["華々しい","はなばなしい"].includes(term.label)&&term.reading==="はなばなしい"&&term.pos==="形容词"&&term.kind==="word"?0:-1} : dependency === "@/data/imported-papers.server" ? { loadFavoriteQuestions: async ids => ids.filter(id => id === questionId || id === "N1-2026-词汇-1").map(id => ({ question: { id, level: id === questionId ? "N3" : "N1", category: id === questionId ? "阅读" : "词汇", sourceQuestionNumber: id === questionId ? 73 : null }, year: id === questionId ? "201407" : "2026", source: id === questionId ? "imported" : "original" })) } : dependency.startsWith("./") ? load(dependency.slice(2)) : require(dependency), process: { env }, Date: Clock, Buffer, URL, Response, Request, AbortSignal, Uint8Array,
         fetch: async (_url, options) => {
           if (!online) return Response.json({ success: false }, { status: 403 });
           const { sql, params } = JSON.parse(options.body);
@@ -40,7 +40,7 @@ function environment({ configured = true, migrated = true, admins = "owner" } = 
     assert.equal(response.status, 200);
     return response.headers.get("set-cookie").split(";")[0];
   }
-  return { frequencyApi: load("frequency-feedback.server"), termModel: load("term-study-data"), api, authApi, database, request, auth, advance: seconds => { now += seconds * 1000; }, offline: () => { online = false; }, rules: load("question-feedback") };
+  return { qualityApi:load("frequency-quality-review.server"), frequencyApi: load("frequency-feedback.server"), termModel: load("term-study-data"), api, authApi, database, request, auth, advance: seconds => { now += seconds * 1000; }, offline: () => { online = false; }, rules: load("question-feedback") };
 }
 
 test("known question metadata is resolved server-side and a report excludes private data", async () => {
@@ -135,11 +135,36 @@ test("term corrections reuse the existing feedback table and admin permissions, 
  const stored=e.database.prepare("SELECT * FROM question_feedback WHERE id=?").get(id);assert.ok(stored.question_id.startsWith("frequency:"));assert.equal(stored.issue_type,"other");assert.ok(!stored.description.includes("private"));assert.equal(JSON.parse(stored.description).term.label,"華々しい");
  assert.equal((await e.api.listQuestionFeedback(e.request("/api/feedback"))).status,401);
  const record=(await(await e.api.listQuestionFeedback(e.request("/api/feedback",undefined,owner))).json()).items[0];assert.equal(record.termFeedback.term.label,"華々しい");assert.equal(record.termFeedback.issue,"definition");assert.equal(record.description,body.description);assert.deepEqual(record.termFeedback.exampleIds,[questionId]);
- assert.equal((await e.api.updateQuestionFeedback(e.request("/api/feedback",{id,status:"resolved"},owner,{method:"PATCH"}))).status,200);
+ assert.equal((await e.api.updateQuestionFeedback(e.request("/api/feedback",{id,status:"resolved",note:"已核对原文并修正释义。"},owner,{method:"PATCH"}))).status,200);
 });
 test("term corrections reject stale index, unknown terms, malformed payloads and cross-origin requests",async()=>{
  const e=environment(),body={key:e.termModel.termStudyKey({kind:"word",label:"華々しい",reading:"はなばなしい",pos:"形容词"}),revision:"test-revision",issueType:"pos",description:"请检查这个词条的词性分类"};
  for(const[patch,status]of [[{revision:"old"},409],[{key:"12"},400],[{issueType:"not-a-type"},400],[{description:"短"},400],[{key:e.termModel.termStudyKey({kind:"word",label:"不存在",reading:"ない",pos:"名词"})},404]])assert.equal((await e.frequencyApi.submitFrequencyFeedback(e.request("/api/frequency/feedback",{...body,...patch}))).status,status);
  assert.equal((await e.frequencyApi.submitFrequencyFeedback(e.request("/api/frequency/feedback",body,undefined,{origin:"https://evil.example"}))).status,403);assert.equal(e.database.prepare("SELECT COUNT(*) AS n FROM question_feedback").get().n,0);
  const missing=environment({configured:false});assert.equal((await missing.frequencyApi.submitFrequencyFeedback(missing.request("/api/frequency/feedback",body))).status,503);
+});
+
+test('term feedback receipt closes the submit-review-status loop without leaking reports or receipt digests',async()=>{
+  const e=environment(),owner=await e.auth(),body={key:e.termModel.termStudyKey({kind:'word',label:'華々しい',reading:'はなばなしい',pos:'形容词'}),revision:'test-revision',issueType:'level',description:'请核对这个词的参考等级。'};
+  const sent=await(await e.frequencyApi.submitFrequencyFeedback(e.request('/api/frequency/feedback',body))).json();assert.match(sent.receipt,/^[a-f0-9]{64}$/);
+  const stored=JSON.parse(e.database.prepare('SELECT description FROM question_feedback WHERE id=?').get(sent.id).description);assert.notEqual(stored.receiptHash,sent.receipt);
+  const status=()=>e.frequencyApi.readFrequencyFeedbackStatus(e.request('/api/frequency/feedback/status',{id:sent.id,receipt:sent.receipt}));
+  let response=await status();assert.equal(response.status,200);assert.equal((await response.json()).status,'new');
+  assert.equal((await e.frequencyApi.readFrequencyFeedbackStatus(e.request('/api/frequency/feedback/status',{id:sent.id,receipt:'0'.repeat(64)}))).status,404);
+  assert.equal((await e.frequencyApi.readFrequencyFeedbackStatus(e.request('/api/frequency/feedback/status',{id:sent.id,receipt:sent.receipt},undefined,{origin:'https://evil.example'}))).status,403);
+  assert.equal((await e.api.updateQuestionFeedback(e.request('/api/feedback',{id:sent.id,status:'resolved'},owner,{method:'PATCH'}))).status,400);
+  assert.equal((await e.api.updateQuestionFeedback(e.request('/api/feedback',{id:sent.id,status:'reviewing'},owner,{method:'PATCH'}))).status,200);
+  assert.equal((await(await status()).json()).status,'reviewing');
+  const note='已核对参考词表，保留当前参考等级。';assert.equal((await e.api.updateQuestionFeedback(e.request('/api/feedback',{id:sent.id,status:'resolved',note},owner,{method:'PATCH'}))).status,200);
+  response=await status();const data=await response.json();assert.equal(data.status,'resolved');assert.equal(data.resolution.note,note);assert.equal(data.resolution.revision,'test-revision');assert.match(response.headers.get('cache-control'),/no-store/);
+  assert.equal(JSON.stringify(data).includes('receiptHash'),false);assert.equal(JSON.stringify(data).includes(body.description),false);
+  const list=await(await e.api.listQuestionFeedback(e.request('/api/feedback',undefined,owner))).json();assert.equal(list.items[0].termFeedback.resolution.note,note);assert.equal(JSON.stringify(list).includes('receiptHash'),false);
+});
+
+test('central quality review requires administrator access and validates filter/pagination parameters',async()=>{
+  const e=environment(),owner=await e.auth(),regular=await e.auth('learner');
+  assert.equal((await e.qualityApi.listFrequencyQualityReview(e.request('/api/feedback/quality'))).status,401);
+  assert.equal((await e.qualityApi.listFrequencyQualityReview(e.request('/api/feedback/quality',undefined,regular))).status,403);
+  const response=await e.qualityApi.listFrequencyQualityReview(e.request('/api/feedback/quality?flag=token',undefined,owner));assert.equal(response.status,200);const data=await response.json();assert.equal(data.items.length,1);assert.equal(data.items[0].label,'華々しい');assert.equal(data.total,1);assert.match(response.headers.get('cache-control'),/private/);
+  for(const search of ['flag=bad','page=0','page=100000','q='+ 'x'.repeat(81)])assert.equal((await e.qualityApi.listFrequencyQualityReview(e.request('/api/feedback/quality?'+search,undefined,owner))).status,400);
 });

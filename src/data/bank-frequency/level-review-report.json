@@ -30965,16 +30965,6 @@
     },
     {
       "kind": "word",
-      "label": "よく",
-      "reading": "よく",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "たもつ",
       "reading": "たもつ",
       "levels": [
@@ -33208,12 +33198,6 @@
       "kind": "word",
       "label": "東南アジア",
       "reading": "とうなんあじあ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "たま",
-      "reading": "たま",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -71948,6 +71932,12 @@
     },
     {
       "kind": "word",
+      "label": "よく",
+      "reading": "よく",
+      "reason": "Homonymous 欲 is not the adverb よく in the N5 reference list."
+    },
+    {
+      "kind": "word",
       "label": "排",
       "reading": "はい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -75273,11 +75263,11 @@
   ],
   "totals": {
     "word": {
-      "total": 14423,
+      "total": 14422,
       "before": 5635,
-      "addedSourced": 1369,
+      "addedSourced": 1368,
       "addedEstimates": 277,
-      "after": 7281
+      "after": 7280
     },
     "grammar": {
       "total": 221,

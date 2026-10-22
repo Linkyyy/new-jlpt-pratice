@@ -11,6 +11,12 @@ const reviewedPosNotes = new Map([
   ['わかい\t形容词', '年轻的；幼嫩的；经验不足的'],
   ['からっと\t副词', '干燥清爽地；晴朗地；爽快地'],
   ['とろい\t形容词', '迟钝的；动作慢的'],
+  ['いくら\t副词', '多少；无论怎样……，也……'],
+  ['いくら\t名词', '多少；多少钱；价钱'],
+  ['たま\t副词', '偶尔；很少，常见「たまに」'],
+  ['いかん\t副词', '如何；怎样，常见「いかんともしがたい」（无可奈何）'],
+  ['かく\t副词', '如此；这样，见于书面语或古典表达'],
+  ['かなり\t名词', '相当的程度；颇多'],
 ]);
 const posNames = {名词: ['noun', 'name', 'proper-noun'], 动词: ['verb'], 形容词: ['adj', 'adj_noun'], 副词: ['adv'], 连体词: ['det', 'adnominal'], 接续词: ['conj', 'phrase']};
 
@@ -38,6 +44,10 @@ export function annotateFrequencyCorpus(corpus, dictionary) {
     const candidates = (dictionary[label.normalize('NFKC')] ?? []).filter(entry => (!entry.readings.length || !reading || entry.readings.includes(reading)) && (pos === '名词' || !['name', 'proper-noun'].includes(entry.pos)));
     const score = entry => (entry.readings.includes(reading) ? 12 : 0) + (posNames[pos]?.includes(entry.pos) ? 8 : 0) + (entry.word === label ? 3 : 0) + (entry.pos === 'unknown' ? -1 : 0);
     candidates.sort((a, b) => score(b) - score(a));
+    const senses = candidates.filter(entry => /^[ぁ-ゖー]+$/.test(label) && posNames[pos]?.includes(entry.pos) && !['name','proper-noun'].includes(entry.pos))
+      .map(entry => ({word:entry.word,meaning:simplifiedDefinition([...new Set(entry.glosses.map(cleanGloss).filter(Boolean))].join('；')).slice(0,400)})).filter(sense=>sense.meaning);
+    const uniqueSenses=[...new Map(senses.map(sense=>[`${sense.word}:${sense.meaning}`,sense])).values()];
+    if(new Set(uniqueSenses.map(sense=>sense.word)).size>1)return {meaning:uniqueSenses.map(sense=>`${sense.word}：${sense.meaning}`).join('；').slice(0,1600),usage:'同音词的可能义项，请结合原题核对，不自动判定当前句子的含义。',source:'wiktionary',senses:uniqueSenses.slice(0,8)};
     for (const entry of candidates) {
       const meaning = [...new Set(entry.glosses.map(cleanGloss).filter(Boolean))].join('；').slice(0, 1600);
       if (meaning) return {meaning, usage: '', source: 'wiktionary', word: entry.word};

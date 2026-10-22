@@ -57,7 +57,7 @@ export function reviewFrequencyCorpus(corpus, {trustedWords = new Set(), referen
   for (const row of excluded) reasons[row.reason] = (reasons[row.reason] ?? 0) + 1;
   const report = {revision: corpus.revision, excludedTerms: excluded.length, reasons,
     excluded: excluded.map(({label, reading, pos, kind, reason, occurrences, examples}) => ({label, reading, pos, kind, reason, occurrences, examples}))};
-  for (const key of ['terms', 'definitions', 'referenceLevels']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
+  for (const key of ['terms', 'definitions', 'referenceLevels', 'surfaceForms']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
   corpus.units = units;
   corpus.summary.terms = retained.length;
   corpus.qualitySummary = {excludedTerms: excluded.length, reasons};

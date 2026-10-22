@@ -1,5 +1,5 @@
 {
-  "revision": "a885cb9965292e72acd79a2a6af301571043dc42e75a3beadcbb1e5334d5fabf",
+  "revision": "b2a03aee8fc1c54e26e24a12ef31b595032ebadaad5981ddcf4020ebc3b1c6b7",
   "excludedTerms": 1578,
   "reasons": {
     "personal_or_organization_name": 420,
@@ -19139,6 +19139,13 @@
       "occurrences": 50
     },
     {
+      "reason": "reviewed_lexeme",
+      "surface": "たまご",
+      "label": "卵",
+      "pos": "名詞",
+      "occurrences": 5
+    },
+    {
       "reason": "na_adjective_pos",
       "surface": "豊富",
       "label": "豊富",
@@ -21179,6 +21186,13 @@
       "reason": "na_adjective_pos",
       "surface": "くたくた",
       "label": "くたくた",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "reviewed_lexeme",
+      "surface": "あたま",
+      "label": "頭",
       "pos": "名詞",
       "occurrences": 1
     },
@@ -25610,8 +25624,8 @@
       "occurrences": 173
     },
     "reviewed_lexeme": {
-      "forms": 28,
-      "occurrences": 52
+      "forms": 30,
+      "occurrences": 58
     },
     "unsupported_archaic_verb_fragment": {
       "forms": 85,
@@ -30733,15 +30747,6 @@
         "reason": "homonym_or_insufficient_evidence"
       },
       {
-        "label": "たま",
-        "reading": "たま",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
         "label": "もっとも",
         "reading": "もっとも",
         "partsOfSpeech": [
@@ -31360,5 +31365,14 @@
         "reason": "homonym_or_insufficient_evidence"
       }
     ]
+  },
+  "audit": {
+    "total": 14825,
+    "polysemy": 2397,
+    "token": 412,
+    "level": 7822,
+    "ungraded": 7142,
+    "estimates": 488,
+    "multipleGrades": 2
   }
 }

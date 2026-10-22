@@ -1,0 +1,7 @@
+import {isFeedbackStatus,type FeedbackStatus} from './question-feedback';
+import type {TermFeedbackResolution} from './frequency-term-feedback';
+export type FeedbackReceipt={id:string;receipt:string;key:string;status:FeedbackStatus;updatedAt:number;resolution?:TermFeedbackResolution|null};
+const storageKey='jlpt-practice.term-feedback-receipts.v1';
+function valid(value:unknown):value is FeedbackReceipt {if(!value||typeof value!=='object')return false;const row=value as Record<string,unknown>,resolution=row.resolution as Record<string,unknown>|null|undefined;return typeof row.id==='string'&&/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(row.id)&&typeof row.receipt==='string'&&/^[a-f0-9]{64}$/.test(row.receipt)&&typeof row.key==='string'&&row.key.length<=1000&&isFeedbackStatus(row.status)&&Number.isSafeInteger(row.updatedAt)&&Number(row.updatedAt)>0&&(!resolution||(typeof resolution.note==='string'&&resolution.note.length<=1000&&typeof resolution.revision==='string'&&resolution.revision.length<=128&&Number.isSafeInteger(resolution.updatedAt)));}
+export function readFeedbackReceipts():FeedbackReceipt[] {try{const data:unknown=JSON.parse(localStorage.getItem(storageKey)??'[]');return Array.isArray(data)?data.filter(valid).slice(0,100):[];}catch{return [];}}
+export function rememberFeedbackReceipt(receipt:FeedbackReceipt):boolean {if(!valid(receipt))return false;try{const data=[receipt,...readFeedbackReceipts().filter(row=>row.id!==receipt.id)].slice(0,100);localStorage.setItem(storageKey,JSON.stringify(data));return true;}catch{return false;}}

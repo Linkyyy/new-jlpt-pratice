@@ -14,12 +14,16 @@ export function annotateFrequencySupplements(corpus, entries, reviewed, source) 
     report.totals[group] ??= {total: 0, before: 0, addedSourced: 0, addedEstimates: 0, after: 0};
     const totals = report.totals[group]; totals.total++;
     if (corpus.referenceLevels[id]?.length) { totals.before++; totals.after++; return 'reference'; }
+    if (label==='よく' && reading==='よく' && corpus.terms[id][2]==='名词' && kind==='word') { report.unresolved.push({kind:group,label,reading,reason:'Homonymous 欲 is not the adverb よく in the N5 reference list.'}); return 'ungraded'; }
     const candidates = [label, ...(corpus.aliases?.[id] ?? [])].map(form => index.get(keyFor(kind, form, reading))).filter(Boolean);
     const entry = candidates.find(row => row.method !== 'editorial') ?? candidates[0];
     if (!entry) { report.unresolved.push({kind: group, label, reading, reason: 'No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used.'}); return 'ungraded'; }
     if (!entry.levels.length || !entry.levels.every(level => /^N[1-5]$/.test(level))) throw new Error(`Invalid reviewed level: ${label}`);
     corpus.referenceLevels[id] = [...new Set(entry.levels)].sort();
     const basis = entry.method === 'editorial' ? 'editorial' : 'supplemental';
+    corpus.referenceEvidence ??= corpus.terms.map(()=>[]);
+    corpus.referenceEvidence[id] ??= [];
+    corpus.referenceEvidence[id].push({...source,levels:corpus.referenceLevels[id],method:entry.method});
     totals[basis === 'editorial' ? 'addedEstimates' : 'addedSourced']++; totals.after++;
     report.added.push({kind: group, label, reading, levels: corpus.referenceLevels[id], ...entry});
     return basis;

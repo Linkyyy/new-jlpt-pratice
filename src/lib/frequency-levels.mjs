@@ -14,7 +14,9 @@ export function annotateFrequencyLevels(corpus, entries, source, expressionEntri
     if (!expressionIndex.has(key)) expressionIndex.set(key, new Set());
     expressionIndex.get(key).add(level);
   }
-  corpus.referenceLevels = corpus.terms.map(([word, reading, , kind], id) => {
+  corpus.referenceLevels = corpus.terms.map(([word, reading, pos, kind], id) => {
+    // The N5 list's adverb よく must not grade the homonymous noun 欲.
+    if (word === 'よく' && reading === 'よく' && pos === '名词' && kind === 'word') return [];
     if (kind === 'grammar') return [...(expressionIndex.get(`grammar\t${normalize(word)}`) ?? [])].sort();
     const levels = new Set(index.get(`${normalize(word)}\t${normalize(reading)}`) ?? []);
     if (kind === 'word') for (const alias of corpus.aliases?.[id] ?? []) {
@@ -31,5 +33,15 @@ export function annotateFrequencyLevels(corpus, entries, source, expressionEntri
   });
   corpus.referenceSource = source;
   if (expressionSource) corpus.referenceExpressionSource = expressionSource;
+  corpus.referenceEvidence = corpus.terms.map(([word,reading,,kind],id) => {
+    if(!corpus.referenceLevels[id].length)return [];
+    const evidence=[];
+    const forms=kind==='idiom'?(idiomEntries.find(entry=>entry.label===word)?.forms??[word]):[word,...(corpus.aliases?.[id] ?? [])];
+    const wordLevels=new Set(forms.flatMap(form=>[...(index.get(`${normalize(form)}\t${normalize(reading)}`) ?? [])]));
+    if(kind!=='grammar' && wordLevels.size)evidence.push({...source,levels:[...wordLevels].sort(),method:'exact-word-reading'});
+    const expressionLevels=expressionIndex.get(`${kind}\t${normalize(word)}`);
+    if(expressionLevels?.size && expressionSource)evidence.push({...expressionSource,levels:[...expressionLevels].sort(),method:'whole-expression'});
+    return evidence;
+  });
   return corpus;
 }

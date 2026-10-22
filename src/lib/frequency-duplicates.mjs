@@ -57,6 +57,7 @@ export function mergeFrequencyDuplicateWords(corpus, dictionary) {
   for (const key of ['referenceLevels', 'compounds', 'referenceBasis']) if (corpus[key]) corpus[key] = retained.map(id => key === 'referenceLevels'
     ? [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus[key][other] ?? []))].sort()
     : key === 'compounds' ? (merged.get(id) ?? [id]).some(other => corpus[key][other]) : corpus[key][id]);
+  if (corpus.surfaceForms) corpus.surfaceForms = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.surfaceForms[other] ?? []))].sort());
   corpus.terms = retained.map(id => corpus.terms[id]);
   corpus.aliases = aliases; corpus.partsOfSpeech = partsOfSpeech;
   if (definitions) {

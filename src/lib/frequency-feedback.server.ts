@@ -1,4 +1,4 @@
-import { createHash, randomUUID } from "node:crypto";
+import { createHash, randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
 import { loadFrequencyCorpus, findFrequencyTerm } from "./bank-frequency.server";
 import { parseTermStudyKey, termStudyKey } from "./term-study-data";
 import { isTermFeedbackIssue } from "./frequency-term-feedback";
@@ -31,10 +31,27 @@ export function submitFrequencyFeedback(request: Request) {
     }
     // Reuse the existing feedback schema/admin workflow. The tagged snapshot
     // preserves the exact reported term after later index rebuilds.
-    const description = JSON.stringify({version: 1, type: "frequency-term", term, issue: body.issueType, revision: corpus.revision, exampleIds: [...exampleIds], description: body.description.trim()});
+    const receipt = randomBytes(32).toString('hex');
+    const description = JSON.stringify({version: 1, type: "frequency-term", term, issue: body.issueType, revision: corpus.revision, exampleIds: [...exampleIds], description: body.description.trim(), receiptHash:createHash('sha256').update(receipt).digest('hex')});
     const example = corpus.questions.find(q => q[0] === [...exampleIds][0]);
     const id = randomUUID(), now = Date.now(), questionId = `frequency:${createHash("sha256").update(termStudyKey(term)).digest("hex")}`;
     await queryCloudDatabase("INSERT INTO question_feedback (id, question_id, level, period, category, source, question_number, issue_type, description, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'new', ?, ?)", [id, questionId, example?.[2] ?? "", example?.[3] ?? "", "词条", example?.[1] === "original" ? "original" : "imported", null, "other", description, now, now]);
-    return cloudJson({ok: true, id}, 201);
+    return cloudJson({ok: true, id, receipt}, 201);
+  });
+}
+
+/** Receipt holders can check their report without exposing the admin list or other reports. */
+export function readFrequencyFeedbackStatus(request:Request) {
+  return handleCloudRequest(async()=>{
+    requireCloudSameOrigin(request);
+    const denied=checkApiRateLimit(request,{scope:'term-feedback-status',limit:30,windowSeconds:60});
+    if(denied)return denied;
+    const body=await feedbackInput(request,1024);
+    if(typeof body.id!=='string'||!/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(body.id)||typeof body.receipt!=='string'||!/^[a-f0-9]{64}$/.test(body.receipt))throw new CloudServiceError(400,'反馈回执无效。');
+    const rows=await queryCloudDatabase<{question_id:string;description:string;status:string;updated_at:number}>('SELECT question_id, description, status, updated_at FROM question_feedback WHERE id = ?',[body.id]);
+    const row=rows[0];let context;
+    try{context=row?.question_id.startsWith('frequency:')?JSON.parse(row.description):null;}catch{context=null;}
+    if(typeof context?.receiptHash!=='string'||!/^[a-f0-9]{64}$/.test(context.receiptHash)||!timingSafeEqual(Buffer.from(context.receiptHash,'hex'),createHash('sha256').update(body.receipt).digest()))throw new CloudServiceError(404,'未找到对应反馈或回执已失效。');
+    return cloudJson({status:row.status,updatedAt:row.updated_at,resolution:context.resolution?{note:context.resolution.note,revision:context.resolution.revision,updatedAt:context.resolution.updatedAt}:null});
   });
 }

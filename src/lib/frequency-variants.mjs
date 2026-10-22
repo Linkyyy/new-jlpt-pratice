@@ -52,6 +52,7 @@ export function mergeFrequencyWordVariants(corpus, dictionary) {
     for (let i = 0; i < counts.length; i += 2) { const id = remap.get(counts[i]); summed.set(id, (summed.get(id) ?? 0) + counts[i + 1]); }
     return [field, references, [...summed].flat()];
   });
+  if (corpus.surfaceForms) corpus.surfaceForms = retained.map(id => [...new Set([id, ...(groups.get(id) ?? [])].flatMap(other => corpus.surfaceForms[other] ?? []))].sort());
   for (const key of ['terms', 'definitions']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
   corpus.aliases = aliases;
   corpus.summary.terms = retained.length;

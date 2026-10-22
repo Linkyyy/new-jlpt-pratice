@@ -139,7 +139,7 @@ export function createIdiomMatcher(tokenize) {
     firstCharacters.set(pattern[0], candidates);
   }
   for (const candidates of firstCharacters.values()) candidates.sort((a, b) => b.pattern.length - a.pattern.length || b.label.length - a.label.length);
-  return tokens => {
+  return (tokens, onMatch = () => {}) => {
     const normalized = tokens.map(lemma), matches = [];
     const text = normalized.join(''), starts = [], ends = new Map();
     let offset = 0;
@@ -149,7 +149,7 @@ export function createIdiomMatcher(tokenize) {
       // Compare joined lemmas while requiring both ends to be source token boundaries.
       const at = starts[i];
       const matched = firstCharacters.get(text[at])?.find(({pattern}) => text.startsWith(pattern, at) && ends.has(at + pattern.length));
-      if (matched) { matches.push(matched.label); i = ends.get(at + matched.pattern.length); }
+      if (matched) { const end = ends.get(at + matched.pattern.length); onMatch(matched.label, tokens.slice(i, end).map(token => token.surface_form).join('')); matches.push(matched.label); i = end; }
       else i++;
     }
     return matches;
