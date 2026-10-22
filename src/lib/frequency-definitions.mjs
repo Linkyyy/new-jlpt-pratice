@@ -17,6 +17,11 @@ const reviewedPosNotes = new Map([
   ['いかん\t副词', '如何；怎样，常见「いかんともしがたい」（无可奈何）'],
   ['かく\t副词', '如此；这样，见于书面语或古典表达'],
   ['かなり\t名词', '相当的程度；颇多'],
+  ['たいへん\t副词', '非常；很；极其（大変）'],
+  ['いったい\t副词', '到底；究竟（用于强调疑问或惊讶）'],
+  ['しかる\t动词', '责备；训斥（叱る）'],
+  ['ごく\t副词', '极；非常；仅仅（极少量）'],
+  ['ふつう\t副词', '通常；一般来说'],
 ]);
 const posNames = {名词: ['noun', 'name', 'proper-noun'], 动词: ['verb'], 形容词: ['adj', 'adj_noun'], 副词: ['adv'], 连体词: ['det', 'adnominal'], 接续词: ['conj', 'phrase']};
 
@@ -37,7 +42,7 @@ function cleanGloss(text) {
 }
 export function annotateFrequencyCorpus(corpus, dictionary) {
   corpus.definitions = corpus.terms.map(([label, reading, pos, kind]) => {
-    const reviewed = kind === 'word' && reading === label && reviewedPosNotes.get(`${label}\t${pos}`);
+    const reviewed = ['word', 'connective'].includes(kind) && reading === label && (reviewedPosNotes.get(`${label}\t${pos}`) || (label === 'かつ' && pos === '接续词' ? '而且；并且；同时（且つ）' : undefined));
     if (reviewed) return {meaning: reviewed, usage: '', source: 'editorial'};
     const authored = kind === 'idiom' ? idiomStudyNotes[label] : kind === 'grammar' ? grammarStudyNotes[label] : kind === 'connective' ? connectiveStudyNotes[label] ?? wordStudyNotes[label] : wordStudyNotes[label];
     if (authored) return authored;

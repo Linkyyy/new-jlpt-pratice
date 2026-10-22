@@ -1,5 +1,5 @@
 {
-  "revision": "ae64d9b309294dc7cbb85d83b490ecf5ce8884067e407ed2cc19a55249e0e456",
+  "revision": "4053e61d0f8f684082119af6a3b5e33b01a4c7fb25201a88a032b4f09d608150",
   "excludedTerms": 1578,
   "reasons": {
     "personal_or_organization_name": 420,
@@ -18800,6 +18800,12 @@
   ],
   "correctedReadings": [
     {
+      "label": "十分",
+      "prior": "じゅうふん",
+      "reading": "じゅうぶん",
+      "source": "frequency-dictionary"
+    },
+    {
       "label": "一杯",
       "prior": "いちはい",
       "reading": "いっぱい",
@@ -25641,7 +25647,7 @@
     }
   },
   "variants": {
-    "mergedTerms": 459,
+    "mergedTerms": 548,
     "groups": [
       {
         "label": "焼く",
@@ -25649,6 +25655,14 @@
         "pos": "动词",
         "aliases": [
           "やく"
+        ]
+      },
+      {
+        "label": "昔",
+        "reading": "むかし",
+        "pos": "名词",
+        "aliases": [
+          "むかし"
         ]
       },
       {
@@ -25665,6 +25679,22 @@
         "pos": "动词",
         "aliases": [
           "まかなう"
+        ]
+      },
+      {
+        "label": "調べる",
+        "reading": "しらべる",
+        "pos": "动词",
+        "aliases": [
+          "しらべる"
+        ]
+      },
+      {
+        "label": "次々",
+        "reading": "つぎつぎ",
+        "pos": "副词",
+        "aliases": [
+          "つぎつぎ"
         ]
       },
       {
@@ -25692,6 +25722,38 @@
         ]
       },
       {
+        "label": "困る",
+        "reading": "こまる",
+        "pos": "动词",
+        "aliases": [
+          "こまる"
+        ]
+      },
+      {
+        "label": "断る",
+        "reading": "ことわる",
+        "pos": "动词",
+        "aliases": [
+          "ことわる"
+        ]
+      },
+      {
+        "label": "新しい",
+        "reading": "あたらしい",
+        "pos": "形容词",
+        "aliases": [
+          "あたらしい"
+        ]
+      },
+      {
+        "label": "始める",
+        "reading": "はじめる",
+        "pos": "动词",
+        "aliases": [
+          "はじめる"
+        ]
+      },
+      {
         "label": "弱い",
         "reading": "よわい",
         "pos": "形容词",
@@ -25708,11 +25770,27 @@
         ]
       },
       {
+        "label": "逆らう",
+        "reading": "さからう",
+        "pos": "动词",
+        "aliases": [
+          "さからう"
+        ]
+      },
+      {
         "label": "嬉しい",
         "reading": "うれしい",
         "pos": "形容词",
         "aliases": [
           "うれしい"
+        ]
+      },
+      {
+        "label": "面倒",
+        "reading": "めんどう",
+        "pos": "形容词",
+        "aliases": [
+          "めんどう"
         ]
       },
       {
@@ -25724,11 +25802,172 @@
         ]
       },
       {
+        "label": "間違う",
+        "reading": "まちがう",
+        "pos": "动词",
+        "aliases": [
+          "まちがう"
+        ]
+      },
+      {
+        "label": "技術",
+        "reading": "ぎじゅつ",
+        "pos": "名词",
+        "aliases": [
+          "ぎじゅつ"
+        ]
+      },
+      {
+        "label": "出版",
+        "reading": "しゅっぱん",
+        "pos": "名词",
+        "aliases": [
+          "しゅっぱん"
+        ]
+      },
+      {
         "label": "色々",
         "reading": "いろいろ",
         "pos": "形容词",
         "aliases": [
           "いろいろ"
+        ]
+      },
+      {
+        "label": "本",
+        "reading": "ほん",
+        "pos": "名词",
+        "aliases": [
+          "ほん"
+        ]
+      },
+      {
+        "label": "動かす",
+        "reading": "うごかす",
+        "pos": "动词",
+        "aliases": [
+          "うごかす"
+        ]
+      },
+      {
+        "label": "発表",
+        "reading": "はっぴょう",
+        "pos": "名词",
+        "aliases": [
+          "はっぴょう"
+        ]
+      },
+      {
+        "label": "経済",
+        "reading": "けいざい",
+        "pos": "名词",
+        "aliases": [
+          "けいざい"
+        ]
+      },
+      {
+        "label": "食べる",
+        "reading": "たべる",
+        "pos": "动词",
+        "aliases": [
+          "たべる"
+        ]
+      },
+      {
+        "label": "薬",
+        "reading": "くすり",
+        "pos": "名词",
+        "aliases": [
+          "くすり"
+        ]
+      },
+      {
+        "label": "足りる",
+        "reading": "たりる",
+        "pos": "动词",
+        "aliases": [
+          "たりる"
+        ]
+      },
+      {
+        "label": "部屋",
+        "reading": "へや",
+        "pos": "名词",
+        "aliases": [
+          "へや"
+        ]
+      },
+      {
+        "label": "広い",
+        "reading": "ひろい",
+        "pos": "形容词",
+        "aliases": [
+          "ひろい"
+        ]
+      },
+      {
+        "label": "突然",
+        "reading": "とつぜん",
+        "pos": "副词",
+        "aliases": [
+          "とつぜん"
+        ]
+      },
+      {
+        "label": "電話",
+        "reading": "でんわ",
+        "pos": "名词",
+        "aliases": [
+          "でんわ"
+        ]
+      },
+      {
+        "label": "違い",
+        "reading": "ちがい",
+        "pos": "名词",
+        "aliases": [
+          "ちがい"
+        ]
+      },
+      {
+        "label": "人",
+        "reading": "ひと",
+        "pos": "名词",
+        "aliases": [
+          "ひと",
+          "ヒト"
+        ]
+      },
+      {
+        "label": "知る",
+        "reading": "しる",
+        "pos": "动词",
+        "aliases": [
+          "しる"
+        ]
+      },
+      {
+        "label": "好き",
+        "reading": "すき",
+        "pos": "形容词",
+        "aliases": [
+          "すき"
+        ]
+      },
+      {
+        "label": "単に",
+        "reading": "たんに",
+        "pos": "副词",
+        "aliases": [
+          "たんに"
+        ]
+      },
+      {
+        "label": "魚",
+        "reading": "さかな",
+        "pos": "名词",
+        "aliases": [
+          "さかな"
         ]
       },
       {
@@ -25740,11 +25979,68 @@
         ]
       },
       {
+        "label": "残業",
+        "reading": "ざんぎょう",
+        "pos": "名词",
+        "aliases": [
+          "ざんぎょう"
+        ]
+      },
+      {
+        "label": "伝わる",
+        "reading": "つたわる",
+        "pos": "动词",
+        "aliases": [
+          "つたわる"
+        ]
+      },
+      {
         "label": "枯らす",
         "reading": "からす",
         "pos": "动词",
         "aliases": [
           "からす"
+        ]
+      },
+      {
+        "label": "言葉",
+        "reading": "ことば",
+        "pos": "名词",
+        "aliases": [
+          "ことば"
+        ]
+      },
+      {
+        "label": "確か",
+        "reading": "たしか",
+        "pos": "形容词",
+        "aliases": [
+          "たしか"
+        ]
+      },
+      {
+        "label": "教える",
+        "reading": "おしえる",
+        "pos": "动词",
+        "aliases": [
+          "おしえる"
+        ]
+      },
+      {
+        "label": "ばらばら",
+        "reading": "ばらばら",
+        "pos": "副词",
+        "aliases": [
+          "バラバラ",
+          "ばらばら"
+        ]
+      },
+      {
+        "label": "流行る",
+        "reading": "はやる",
+        "pos": "动词",
+        "aliases": [
+          "はやる"
         ]
       },
       {
@@ -25756,11 +26052,60 @@
         ]
       },
       {
+        "label": "結果",
+        "reading": "けっか",
+        "pos": "名词",
+        "aliases": [
+          "けっか"
+        ]
+      },
+      {
+        "label": "普通",
+        "reading": "ふつう",
+        "pos": "形容词",
+        "aliases": [
+          "ふつう",
+          "普通"
+        ]
+      },
+      {
+        "label": "仕草",
+        "reading": "しぐさ",
+        "pos": "名词",
+        "aliases": [
+          "しぐさ"
+        ]
+      },
+      {
+        "label": "面白い",
+        "reading": "おもしろい",
+        "pos": "形容词",
+        "aliases": [
+          "おもしろい"
+        ]
+      },
+      {
+        "label": "出す",
+        "reading": "だす",
+        "pos": "动词",
+        "aliases": [
+          "だす"
+        ]
+      },
+      {
         "label": "贔屓",
         "reading": "ひいき",
         "pos": "名词",
         "aliases": [
           "ひいき"
+        ]
+      },
+      {
+        "label": "勝手",
+        "reading": "かって",
+        "pos": "形容词",
+        "aliases": [
+          "かって"
         ]
       },
       {
@@ -25780,11 +26125,59 @@
         ]
       },
       {
-        "label": "面白い",
-        "reading": "おもしろい",
+        "label": "入る",
+        "reading": "はいる",
+        "pos": "动词",
+        "aliases": [
+          "はいる"
+        ]
+      },
+      {
+        "label": "続ける",
+        "reading": "つづける",
+        "pos": "动词",
+        "aliases": [
+          "つづける"
+        ]
+      },
+      {
+        "label": "抜ける",
+        "reading": "ぬける",
+        "pos": "动词",
+        "aliases": [
+          "ぬける"
+        ]
+      },
+      {
+        "label": "愛す",
+        "reading": "あいす",
+        "pos": "动词",
+        "aliases": [
+          "あいす"
+        ]
+      },
+      {
+        "label": "育てる",
+        "reading": "そだてる",
+        "pos": "动词",
+        "aliases": [
+          "そだてる"
+        ]
+      },
+      {
+        "label": "決して",
+        "reading": "けっして",
+        "pos": "副词",
+        "aliases": [
+          "けっして"
+        ]
+      },
+      {
+        "label": "不思議",
+        "reading": "ふしぎ",
         "pos": "形容词",
         "aliases": [
-          "おもしろい"
+          "ふしぎ"
         ]
       },
       {
@@ -25796,6 +26189,30 @@
         ]
       },
       {
+        "label": "難しい",
+        "reading": "むずかしい",
+        "pos": "形容词",
+        "aliases": [
+          "むずかしい"
+        ]
+      },
+      {
+        "label": "真似",
+        "reading": "まね",
+        "pos": "名词",
+        "aliases": [
+          "まね"
+        ]
+      },
+      {
+        "label": "学ぶ",
+        "reading": "まなぶ",
+        "pos": "动词",
+        "aliases": [
+          "まなぶ"
+        ]
+      },
+      {
         "label": "餌",
         "reading": "えさ",
         "pos": "名词",
@@ -25804,11 +26221,19 @@
         ]
       },
       {
-        "label": "続ける",
-        "reading": "つづける",
+        "label": "比較的",
+        "reading": "ひかくてき",
+        "pos": "副词",
+        "aliases": [
+          "ひかくてき"
+        ]
+      },
+      {
+        "label": "ずれる",
+        "reading": "ずれる",
         "pos": "动词",
         "aliases": [
-          "つづける"
+          "ズレる"
         ]
       },
       {
@@ -25836,11 +26261,83 @@
         ]
       },
       {
+        "label": "長い",
+        "reading": "ながい",
+        "pos": "形容词",
+        "aliases": [
+          "ながい"
+        ]
+      },
+      {
         "label": "酷い",
         "reading": "ひどい",
         "pos": "形容词",
         "aliases": [
           "ひどい"
+        ]
+      },
+      {
+        "label": "呼ぶ",
+        "reading": "よぶ",
+        "pos": "动词",
+        "aliases": [
+          "よぶ"
+        ]
+      },
+      {
+        "label": "形",
+        "reading": "かたち",
+        "pos": "名词",
+        "aliases": [
+          "かたち"
+        ]
+      },
+      {
+        "label": "衣服",
+        "reading": "いふく",
+        "pos": "名词",
+        "aliases": [
+          "いふく"
+        ]
+      },
+      {
+        "label": "支える",
+        "reading": "ささえる",
+        "pos": "动词",
+        "aliases": [
+          "ささえる"
+        ]
+      },
+      {
+        "label": "満足",
+        "reading": "まんぞく",
+        "pos": "名词",
+        "aliases": [
+          "まんぞく"
+        ]
+      },
+      {
+        "label": "新た",
+        "reading": "あらた",
+        "pos": "形容词",
+        "aliases": [
+          "あらた"
+        ]
+      },
+      {
+        "label": "示す",
+        "reading": "しめす",
+        "pos": "动词",
+        "aliases": [
+          "しめす"
+        ]
+      },
+      {
+        "label": "犬",
+        "reading": "いぬ",
+        "pos": "名词",
+        "aliases": [
+          "いぬ"
         ]
       },
       {
@@ -25852,11 +26349,19 @@
         ]
       },
       {
-        "label": "仕草",
-        "reading": "しぐさ",
+        "label": "動く",
+        "reading": "うごく",
+        "pos": "动词",
+        "aliases": [
+          "うごく"
+        ]
+      },
+      {
+        "label": "こころ",
+        "reading": "こころ",
         "pos": "名词",
         "aliases": [
-          "しぐさ"
+          "ココロ"
         ]
       },
       {
@@ -25884,6 +26389,22 @@
         ]
       },
       {
+        "label": "厳しい",
+        "reading": "きびしい",
+        "pos": "形容词",
+        "aliases": [
+          "きびしい"
+        ]
+      },
+      {
+        "label": "幸せ",
+        "reading": "しあわせ",
+        "pos": "形容词",
+        "aliases": [
+          "しあわせ"
+        ]
+      },
+      {
         "label": "何となく",
         "reading": "なんとなく",
         "pos": "副词",
@@ -25900,11 +26421,83 @@
         ]
       },
       {
+        "label": "低い",
+        "reading": "ひくい",
+        "pos": "形容词",
+        "aliases": [
+          "ひくい"
+        ]
+      },
+      {
+        "label": "忘れる",
+        "reading": "わすれる",
+        "pos": "动词",
+        "aliases": [
+          "わすれる"
+        ]
+      },
+      {
         "label": "遥か",
         "reading": "はるか",
         "pos": "形容词",
         "aliases": [
           "はるか"
+        ]
+      },
+      {
+        "label": "待つ",
+        "reading": "まつ",
+        "pos": "动词",
+        "aliases": [
+          "まつ"
+        ]
+      },
+      {
+        "label": "短い",
+        "reading": "みじかい",
+        "pos": "形容词",
+        "aliases": [
+          "みじかい"
+        ]
+      },
+      {
+        "label": "運ぶ",
+        "reading": "はこぶ",
+        "pos": "动词",
+        "aliases": [
+          "はこぶ"
+        ]
+      },
+      {
+        "label": "悪い",
+        "reading": "わるい",
+        "pos": "形容词",
+        "aliases": [
+          "わるい"
+        ]
+      },
+      {
+        "label": "明日",
+        "reading": "あした",
+        "pos": "名词",
+        "aliases": [
+          "あした"
+        ]
+      },
+      {
+        "label": "今度",
+        "reading": "こんど",
+        "pos": "名词",
+        "aliases": [
+          "こんど"
+        ]
+      },
+      {
+        "label": "回る",
+        "reading": "まわる",
+        "pos": "动词",
+        "aliases": [
+          "まわる"
         ]
       },
       {
@@ -25924,11 +26517,27 @@
         ]
       },
       {
-        "label": "回る",
-        "reading": "まわる",
+        "label": "覚える",
+        "reading": "おぼえる",
         "pos": "动词",
         "aliases": [
-          "まわる"
+          "おぼえる"
+        ]
+      },
+      {
+        "label": "元気",
+        "reading": "げんき",
+        "pos": "形容词",
+        "aliases": [
+          "げんき"
+        ]
+      },
+      {
+        "label": "違う",
+        "reading": "ちがう",
+        "pos": "动词",
+        "aliases": [
+          "ちがう"
         ]
       },
       {
@@ -25937,6 +26546,47 @@
         "pos": "副词",
         "aliases": [
           "なにしろ"
+        ]
+      },
+      {
+        "label": "桜",
+        "reading": "さくら",
+        "pos": "名词",
+        "aliases": [
+          "サクラ",
+          "さくら"
+        ]
+      },
+      {
+        "label": "いまいち",
+        "reading": "いまいち",
+        "pos": "副词",
+        "aliases": [
+          "イマイチ"
+        ]
+      },
+      {
+        "label": "置く",
+        "reading": "おく",
+        "pos": "动词",
+        "aliases": [
+          "おく"
+        ]
+      },
+      {
+        "label": "大丈夫",
+        "reading": "だいじょうぶ",
+        "pos": "形容词",
+        "aliases": [
+          "だいじょうぶ"
+        ]
+      },
+      {
+        "label": "寒い",
+        "reading": "さむい",
+        "pos": "形容词",
+        "aliases": [
+          "さむい"
         ]
       },
       {
@@ -25956,6 +26606,62 @@
         ]
       },
       {
+        "label": "寄せる",
+        "reading": "よせる",
+        "pos": "动词",
+        "aliases": [
+          "よせる"
+        ]
+      },
+      {
+        "label": "要する",
+        "reading": "ようする",
+        "pos": "动词",
+        "aliases": [
+          "ようする"
+        ]
+      },
+      {
+        "label": "残る",
+        "reading": "のこる",
+        "pos": "动词",
+        "aliases": [
+          "のこる"
+        ]
+      },
+      {
+        "label": "下げる",
+        "reading": "さげる",
+        "pos": "动词",
+        "aliases": [
+          "さげる"
+        ]
+      },
+      {
+        "label": "響く",
+        "reading": "ひびく",
+        "pos": "动词",
+        "aliases": [
+          "ひびく"
+        ]
+      },
+      {
+        "label": "派手",
+        "reading": "はで",
+        "pos": "形容词",
+        "aliases": [
+          "はで"
+        ]
+      },
+      {
+        "label": "少し",
+        "reading": "すこし",
+        "pos": "副词",
+        "aliases": [
+          "すこし"
+        ]
+      },
+      {
         "label": "無闇",
         "reading": "むやみ",
         "pos": "形容词",
@@ -25972,11 +26678,51 @@
         ]
       },
       {
+        "label": "強い",
+        "reading": "つよい",
+        "pos": "形容词",
+        "aliases": [
+          "つよい"
+        ]
+      },
+      {
         "label": "我が",
         "reading": "わが",
         "pos": "连体词",
         "aliases": [
           "わが"
+        ]
+      },
+      {
+        "label": "願う",
+        "reading": "ねがう",
+        "pos": "动词",
+        "aliases": [
+          "ねがう"
+        ]
+      },
+      {
+        "label": "曲げる",
+        "reading": "まげる",
+        "pos": "动词",
+        "aliases": [
+          "まげる"
+        ]
+      },
+      {
+        "label": "重い",
+        "reading": "おもい",
+        "pos": "形容词",
+        "aliases": [
+          "おもい"
+        ]
+      },
+      {
+        "label": "結構",
+        "reading": "けっこう",
+        "pos": "形容词",
+        "aliases": [
+          "けっこう"
         ]
       },
       {
@@ -25997,11 +26743,35 @@
         ]
       },
       {
-        "label": "愛す",
-        "reading": "あいす",
+        "label": "下がる",
+        "reading": "さがる",
         "pos": "动词",
         "aliases": [
-          "あいす"
+          "さがる"
+        ]
+      },
+      {
+        "label": "通す",
+        "reading": "とおす",
+        "pos": "动词",
+        "aliases": [
+          "とおす"
+        ]
+      },
+      {
+        "label": "一旦",
+        "reading": "いったん",
+        "pos": "副词",
+        "aliases": [
+          "いったん"
+        ]
+      },
+      {
+        "label": "信じる",
+        "reading": "しんじる",
+        "pos": "动词",
+        "aliases": [
+          "しんじる"
         ]
       },
       {
@@ -26021,11 +26791,43 @@
         ]
       },
       {
+        "label": "小さい",
+        "reading": "ちいさい",
+        "pos": "形容词",
+        "aliases": [
+          "ちいさい"
+        ]
+      },
+      {
+        "label": "光",
+        "reading": "ひかり",
+        "pos": "名词",
+        "aliases": [
+          "ひかり"
+        ]
+      },
+      {
+        "label": "お父さん",
+        "reading": "おとうさん",
+        "pos": "名词",
+        "aliases": [
+          "おとうさん"
+        ]
+      },
+      {
         "label": "連れる",
         "reading": "つれる",
         "pos": "动词",
         "aliases": [
           "つれる"
+        ]
+      },
+      {
+        "label": "一番",
+        "reading": "いちばん",
+        "pos": "名词",
+        "aliases": [
+          "いちばん"
         ]
       },
       {
@@ -26037,6 +26839,30 @@
         ]
       },
       {
+        "label": "鮮やか",
+        "reading": "あざやか",
+        "pos": "形容词",
+        "aliases": [
+          "あざやか"
+        ]
+      },
+      {
+        "label": "楽しむ",
+        "reading": "たのしむ",
+        "pos": "动词",
+        "aliases": [
+          "たのしむ"
+        ]
+      },
+      {
+        "label": "頻繁",
+        "reading": "ひんぱん",
+        "pos": "形容词",
+        "aliases": [
+          "ひんぱん"
+        ]
+      },
+      {
         "label": "全然",
         "reading": "ぜんぜん",
         "pos": "副词",
@@ -26045,11 +26871,11 @@
         ]
       },
       {
-        "label": "好き",
-        "reading": "すき",
+        "label": "辛い",
+        "reading": "つらい",
         "pos": "形容词",
         "aliases": [
-          "すき"
+          "つらい"
         ]
       },
       {
@@ -26069,6 +26895,22 @@
         ]
       },
       {
+        "label": "残す",
+        "reading": "のこす",
+        "pos": "动词",
+        "aliases": [
+          "のこす"
+        ]
+      },
+      {
+        "label": "重ねる",
+        "reading": "かさねる",
+        "pos": "动词",
+        "aliases": [
+          "かさねる"
+        ]
+      },
+      {
         "label": "出世",
         "reading": "しゅっせ",
         "pos": "名词",
@@ -26077,11 +26919,59 @@
         ]
       },
       {
+        "label": "出席",
+        "reading": "しゅっせき",
+        "pos": "名词",
+        "aliases": [
+          "しゅっせき"
+        ]
+      },
+      {
+        "label": "忙しい",
+        "reading": "いそがしい",
+        "pos": "形容词",
+        "aliases": [
+          "いそがしい"
+        ]
+      },
+      {
+        "label": "走る",
+        "reading": "はしる",
+        "pos": "动词",
+        "aliases": [
+          "はしる"
+        ]
+      },
+      {
+        "label": "衰える",
+        "reading": "おとろえる",
+        "pos": "动词",
+        "aliases": [
+          "おとろえる"
+        ]
+      },
+      {
         "label": "曖昧",
         "reading": "あいまい",
         "pos": "形容词",
         "aliases": [
           "あいまい"
+        ]
+      },
+      {
+        "label": "切符",
+        "reading": "きっぷ",
+        "pos": "名词",
+        "aliases": [
+          "きっぷ"
+        ]
+      },
+      {
+        "label": "一応",
+        "reading": "いちおう",
+        "pos": "副词",
+        "aliases": [
+          "いちおう"
         ]
       },
       {
@@ -26117,11 +27007,107 @@
         ]
       },
       {
+        "label": "緊張",
+        "reading": "きんちょう",
+        "pos": "名词",
+        "aliases": [
+          "きんちょう"
+        ]
+      },
+      {
+        "label": "過ごす",
+        "reading": "すごす",
+        "pos": "动词",
+        "aliases": [
+          "すごす"
+        ]
+      },
+      {
+        "label": "白い",
+        "reading": "しろい",
+        "pos": "形容词",
+        "aliases": [
+          "しろい"
+        ]
+      },
+      {
+        "label": "続く",
+        "reading": "つづく",
+        "pos": "动词",
+        "aliases": [
+          "つづく"
+        ]
+      },
+      {
+        "label": "合間",
+        "reading": "あいま",
+        "pos": "名词",
+        "aliases": [
+          "あいま"
+        ]
+      },
+      {
+        "label": "明らか",
+        "reading": "あきらか",
+        "pos": "形容词",
+        "aliases": [
+          "あきらか"
+        ]
+      },
+      {
+        "label": "経験",
+        "reading": "けいけん",
+        "pos": "名词",
+        "aliases": [
+          "けいけん"
+        ]
+      },
+      {
+        "label": "死ぬ",
+        "reading": "しぬ",
+        "pos": "动词",
+        "aliases": [
+          "しぬ"
+        ]
+      },
+      {
+        "label": "うける",
+        "reading": "うける",
+        "pos": "动词",
+        "aliases": [
+          "ウケる"
+        ]
+      },
+      {
         "label": "爽やか",
         "reading": "さわやか",
         "pos": "形容词",
         "aliases": [
           "さわやか"
+        ]
+      },
+      {
+        "label": "ぴかぴか",
+        "reading": "ぴかぴか",
+        "pos": "副词",
+        "aliases": [
+          "ピカピカ"
+        ]
+      },
+      {
+        "label": "次第に",
+        "reading": "しだいに",
+        "pos": "副词",
+        "aliases": [
+          "しだいに"
+        ]
+      },
+      {
+        "label": "向かう",
+        "reading": "むかう",
+        "pos": "动词",
+        "aliases": [
+          "むかう"
         ]
       },
       {
@@ -26133,11 +27119,76 @@
         ]
       },
       {
+        "label": "楽しい",
+        "reading": "たのしい",
+        "pos": "形容词",
+        "aliases": [
+          "たのしい"
+        ]
+      },
+      {
         "label": "従う",
         "reading": "したがう",
         "pos": "动词",
         "aliases": [
           "したがう"
+        ]
+      },
+      {
+        "label": "常に",
+        "reading": "つねに",
+        "pos": "副词",
+        "aliases": [
+          "つねに"
+        ]
+      },
+      {
+        "label": "減らす",
+        "reading": "へらす",
+        "pos": "动词",
+        "aliases": [
+          "へらす"
+        ]
+      },
+      {
+        "label": "眼鏡",
+        "reading": "めがね",
+        "pos": "名词",
+        "aliases": [
+          "めがね"
+        ]
+      },
+      {
+        "label": "詳しい",
+        "reading": "くわしい",
+        "pos": "形容词",
+        "aliases": [
+          "くわしい"
+        ]
+      },
+      {
+        "label": "ぴったり",
+        "reading": "ぴったり",
+        "pos": "副词",
+        "aliases": [
+          "ピッタリ",
+          "ぴったり"
+        ]
+      },
+      {
+        "label": "憧れる",
+        "reading": "あこがれる",
+        "pos": "动词",
+        "aliases": [
+          "あこがれる"
+        ]
+      },
+      {
+        "label": "まんが",
+        "reading": "まんが",
+        "pos": "名词",
+        "aliases": [
+          "マンガ"
         ]
       },
       {
@@ -26149,11 +27200,59 @@
         ]
       },
       {
-        "label": "言葉",
-        "reading": "ことば",
+        "label": "ばか",
+        "reading": "ばか",
         "pos": "名词",
         "aliases": [
-          "ことば"
+          "バカ"
+        ]
+      },
+      {
+        "label": "向く",
+        "reading": "むく",
+        "pos": "动词",
+        "aliases": [
+          "むく"
+        ]
+      },
+      {
+        "label": "落とす",
+        "reading": "おとす",
+        "pos": "动词",
+        "aliases": [
+          "おとす"
+        ]
+      },
+      {
+        "label": "恥ずかしい",
+        "reading": "はずかしい",
+        "pos": "形容词",
+        "aliases": [
+          "はずかしい"
+        ]
+      },
+      {
+        "label": "言い訳",
+        "reading": "いいわけ",
+        "pos": "名词",
+        "aliases": [
+          "いいわけ"
+        ]
+      },
+      {
+        "label": "始まる",
+        "reading": "はじまる",
+        "pos": "动词",
+        "aliases": [
+          "はじまる"
+        ]
+      },
+      {
+        "label": "有限",
+        "reading": "ゆうげん",
+        "pos": "形容词",
+        "aliases": [
+          "ゆうげん"
         ]
       },
       {
@@ -26173,20 +27272,19 @@
         ]
       },
       {
-        "label": "出す",
-        "reading": "だす",
+        "label": "揺れる",
+        "reading": "ゆれる",
         "pos": "动词",
         "aliases": [
-          "だす"
+          "ゆれる"
         ]
       },
       {
-        "label": "桜",
-        "reading": "さくら",
-        "pos": "名词",
+        "label": "必ず",
+        "reading": "かならず",
+        "pos": "副词",
         "aliases": [
-          "サクラ",
-          "さくら"
+          "かならず"
         ]
       },
       {
@@ -26198,20 +27296,60 @@
         ]
       },
       {
-        "label": "人",
-        "reading": "ひと",
-        "pos": "名词",
-        "aliases": [
-          "ひと",
-          "ヒト"
-        ]
-      },
-      {
         "label": "見舞う",
         "reading": "みまう",
         "pos": "动词",
         "aliases": [
           "みまう"
+        ]
+      },
+      {
+        "label": "息子",
+        "reading": "むすこ",
+        "pos": "名词",
+        "aliases": [
+          "むすこ"
+        ]
+      },
+      {
+        "label": "転ぶ",
+        "reading": "ころぶ",
+        "pos": "动词",
+        "aliases": [
+          "ころぶ"
+        ]
+      },
+      {
+        "label": "怪我",
+        "reading": "けが",
+        "pos": "名词",
+        "aliases": [
+          "けが",
+          "ケガ"
+        ]
+      },
+      {
+        "label": "遅い",
+        "reading": "おそい",
+        "pos": "形容词",
+        "aliases": [
+          "おそい"
+        ]
+      },
+      {
+        "label": "頑張る",
+        "reading": "がんばる",
+        "pos": "动词",
+        "aliases": [
+          "がんばる"
+        ]
+      },
+      {
+        "label": "吸う",
+        "reading": "すう",
+        "pos": "动词",
+        "aliases": [
+          "すう"
         ]
       },
       {
@@ -26223,6 +27361,30 @@
         ]
       },
       {
+        "label": "たばこ",
+        "reading": "たばこ",
+        "pos": "名词",
+        "aliases": [
+          "タバコ"
+        ]
+      },
+      {
+        "label": "はやり",
+        "reading": "はやり",
+        "pos": "名词",
+        "aliases": [
+          "ハヤリ"
+        ]
+      },
+      {
+        "label": "りんご",
+        "reading": "りんご",
+        "pos": "名词",
+        "aliases": [
+          "リンゴ"
+        ]
+      },
+      {
         "label": "一杯",
         "reading": "いっぱい",
         "pos": "副词",
@@ -26231,35 +27393,35 @@
         ]
       },
       {
-        "label": "新しい",
-        "reading": "あたらしい",
-        "pos": "形容词",
-        "aliases": [
-          "あたらしい"
-        ]
-      },
-      {
-        "label": "結構",
-        "reading": "けっこう",
-        "pos": "形容词",
-        "aliases": [
-          "けっこう"
-        ]
-      },
-      {
-        "label": "置く",
-        "reading": "おく",
+        "label": "承る",
+        "reading": "うけたまわる",
         "pos": "动词",
         "aliases": [
-          "おく"
+          "うけたまわる"
         ]
       },
       {
-        "label": "明日",
-        "reading": "あした",
-        "pos": "名词",
+        "label": "切れる",
+        "reading": "きれる",
+        "pos": "动词",
         "aliases": [
-          "あした"
+          "きれる"
+        ]
+      },
+      {
+        "label": "受かる",
+        "reading": "うかる",
+        "pos": "动词",
+        "aliases": [
+          "うかる"
+        ]
+      },
+      {
+        "label": "相変わらず",
+        "reading": "あいかわらず",
+        "pos": "副词",
+        "aliases": [
+          "あいかわらず"
         ]
       },
       {
@@ -26271,11 +27433,19 @@
         ]
       },
       {
-        "label": "楽しむ",
-        "reading": "たのしむ",
-        "pos": "动词",
+        "label": "仕方",
+        "reading": "しかた",
+        "pos": "名词",
         "aliases": [
-          "たのしむ"
+          "しかた"
+        ]
+      },
+      {
+        "label": "わくわく",
+        "reading": "わくわく",
+        "pos": "副词",
+        "aliases": [
+          "ワクワク"
         ]
       },
       {
@@ -26287,27 +27457,19 @@
         ]
       },
       {
-        "label": "示す",
-        "reading": "しめす",
-        "pos": "动词",
-        "aliases": [
-          "しめす"
-        ]
-      },
-      {
-        "label": "動かす",
-        "reading": "うごかす",
-        "pos": "动词",
-        "aliases": [
-          "うごかす"
-        ]
-      },
-      {
         "label": "通信",
         "reading": "つうしん",
         "pos": "名词",
         "aliases": [
           "つうしん"
+        ]
+      },
+      {
+        "label": "海岸",
+        "reading": "かいがん",
+        "pos": "名词",
+        "aliases": [
+          "かいがん"
         ]
       },
       {
@@ -26343,43 +27505,11 @@
         ]
       },
       {
-        "label": "満足",
-        "reading": "まんぞく",
+        "label": "かぎ",
+        "reading": "かぎ",
         "pos": "名词",
         "aliases": [
-          "まんぞく"
-        ]
-      },
-      {
-        "label": "忙しい",
-        "reading": "いそがしい",
-        "pos": "形容词",
-        "aliases": [
-          "いそがしい"
-        ]
-      },
-      {
-        "label": "恥ずかしい",
-        "reading": "はずかしい",
-        "pos": "形容词",
-        "aliases": [
-          "はずかしい"
-        ]
-      },
-      {
-        "label": "困る",
-        "reading": "こまる",
-        "pos": "动词",
-        "aliases": [
-          "こまる"
-        ]
-      },
-      {
-        "label": "始まる",
-        "reading": "はじまる",
-        "pos": "动词",
-        "aliases": [
-          "はじまる"
+          "カギ"
         ]
       },
       {
@@ -26391,6 +27521,14 @@
         ]
       },
       {
+        "label": "熱心",
+        "reading": "ねっしん",
+        "pos": "形容词",
+        "aliases": [
+          "ねっしん"
+        ]
+      },
+      {
         "label": "お腹",
         "reading": "おなか",
         "pos": "名词",
@@ -26399,11 +27537,43 @@
         ]
       },
       {
-        "label": "少し",
-        "reading": "すこし",
-        "pos": "副词",
+        "label": "濃い",
+        "reading": "こい",
+        "pos": "形容词",
         "aliases": [
-          "すこし"
+          "こい"
+        ]
+      },
+      {
+        "label": "びっくり",
+        "reading": "びっくり",
+        "pos": "名词",
+        "aliases": [
+          "ビックリ"
+        ]
+      },
+      {
+        "label": "ごみ箱",
+        "reading": "ごみばこ",
+        "pos": "名词",
+        "aliases": [
+          "ゴミ箱"
+        ]
+      },
+      {
+        "label": "ごみ",
+        "reading": "ごみ",
+        "pos": "名词",
+        "aliases": [
+          "ゴミ"
+        ]
+      },
+      {
+        "label": "物差し",
+        "reading": "ものさし",
+        "pos": "名词",
+        "aliases": [
+          "ものさし"
         ]
       },
       {
@@ -26412,6 +27582,32 @@
         "pos": "名词",
         "aliases": [
           "えんぴつ"
+        ]
+      },
+      {
+        "label": "どきどき",
+        "reading": "どきどき",
+        "pos": "名词",
+        "aliases": [
+          "どきどき",
+          "ドキドキ"
+        ]
+      },
+      {
+        "label": "手伝う",
+        "reading": "てつだう",
+        "pos": "动词",
+        "aliases": [
+          "てつだう"
+        ]
+      },
+      {
+        "label": "にこにこ",
+        "reading": "にこにこ",
+        "pos": "名词",
+        "aliases": [
+          "にこにこ",
+          "ニコニコ"
         ]
       },
       {
@@ -26431,19 +27627,27 @@
         ]
       },
       {
-        "label": "頑張る",
-        "reading": "がんばる",
-        "pos": "动词",
+        "label": "浅い",
+        "reading": "あさい",
+        "pos": "形容词",
         "aliases": [
-          "がんばる"
+          "あさい"
         ]
       },
       {
-        "label": "本",
-        "reading": "ほん",
-        "pos": "名词",
+        "label": "付き合う",
+        "reading": "つきあう",
+        "pos": "动词",
         "aliases": [
-          "ほん"
+          "つきあう"
+        ]
+      },
+      {
+        "label": "参る",
+        "reading": "まいる",
+        "pos": "动词",
+        "aliases": [
+          "まいる"
         ]
       },
       {
@@ -26479,19 +27683,27 @@
         ]
       },
       {
-        "label": "仕方",
-        "reading": "しかた",
-        "pos": "名词",
+        "label": "激しい",
+        "reading": "はげしい",
+        "pos": "形容词",
         "aliases": [
-          "しかた"
+          "はげしい"
         ]
       },
       {
-        "label": "一旦",
-        "reading": "いったん",
-        "pos": "副词",
+        "label": "召し上がる",
+        "reading": "めしあがる",
+        "pos": "动词",
         "aliases": [
-          "いったん"
+          "めしあがる"
+        ]
+      },
+      {
+        "label": "認める",
+        "reading": "みとめる",
+        "pos": "动词",
+        "aliases": [
+          "みとめる"
         ]
       },
       {
@@ -26511,6 +27723,46 @@
         ]
       },
       {
+        "label": "優れる",
+        "reading": "すぐれる",
+        "pos": "动词",
+        "aliases": [
+          "すぐれる"
+        ]
+      },
+      {
+        "label": "養う",
+        "reading": "やしなう",
+        "pos": "动词",
+        "aliases": [
+          "やしなう"
+        ]
+      },
+      {
+        "label": "通り",
+        "reading": "とおり",
+        "pos": "名词",
+        "aliases": [
+          "とおり"
+        ]
+      },
+      {
+        "label": "北",
+        "reading": "きた",
+        "pos": "名词",
+        "aliases": [
+          "きた"
+        ]
+      },
+      {
+        "label": "罠",
+        "reading": "わな",
+        "pos": "名词",
+        "aliases": [
+          "わな"
+        ]
+      },
+      {
         "label": "辿る",
         "reading": "たどる",
         "pos": "动词",
@@ -26519,19 +27771,83 @@
         ]
       },
       {
-        "label": "死ぬ",
-        "reading": "しぬ",
+        "label": "増す",
+        "reading": "ます",
         "pos": "动词",
         "aliases": [
-          "しぬ"
+          "ます"
         ]
       },
       {
-        "label": "違う",
-        "reading": "ちがう",
+        "label": "眺める",
+        "reading": "ながめる",
         "pos": "动词",
         "aliases": [
-          "ちがう"
+          "ながめる"
+        ]
+      },
+      {
+        "label": "成し遂げる",
+        "reading": "なしとげる",
+        "pos": "动词",
+        "aliases": [
+          "なしとげる"
+        ]
+      },
+      {
+        "label": "値する",
+        "reading": "あたいする",
+        "pos": "动词",
+        "aliases": [
+          "あたいする"
+        ]
+      },
+      {
+        "label": "脆い",
+        "reading": "もろい",
+        "pos": "形容词",
+        "aliases": [
+          "もろい"
+        ]
+      },
+      {
+        "label": "いも",
+        "reading": "いも",
+        "pos": "名词",
+        "aliases": [
+          "イモ"
+        ]
+      },
+      {
+        "label": "眠る",
+        "reading": "ねむる",
+        "pos": "动词",
+        "aliases": [
+          "ねむる"
+        ]
+      },
+      {
+        "label": "速やか",
+        "reading": "すみやか",
+        "pos": "形容词",
+        "aliases": [
+          "すみやか"
+        ]
+      },
+      {
+        "label": "きょろきょろ",
+        "reading": "きょろきょろ",
+        "pos": "副词",
+        "aliases": [
+          "キョロキョロ"
+        ]
+      },
+      {
+        "label": "振り向く",
+        "reading": "ふりむく",
+        "pos": "动词",
+        "aliases": [
+          "ふりむく"
         ]
       },
       {
@@ -26551,11 +27867,27 @@
         ]
       },
       {
-        "label": "始める",
-        "reading": "はじめる",
+        "label": "穏やか",
+        "reading": "おだやか",
+        "pos": "形容词",
+        "aliases": [
+          "おだやか"
+        ]
+      },
+      {
+        "label": "迷う",
+        "reading": "まよう",
         "pos": "动词",
         "aliases": [
-          "はじめる"
+          "まよう"
+        ]
+      },
+      {
+        "label": "踏まえる",
+        "reading": "ふまえる",
+        "pos": "动词",
+        "aliases": [
+          "ふまえる"
         ]
       },
       {
@@ -26583,44 +27915,76 @@
         ]
       },
       {
-        "label": "憧れる",
-        "reading": "あこがれる",
+        "label": "心配",
+        "reading": "しんぱい",
+        "pos": "名词",
+        "aliases": [
+          "しんぱい"
+        ]
+      },
+      {
+        "label": "荒れる",
+        "reading": "あれる",
         "pos": "动词",
         "aliases": [
-          "あこがれる"
+          "あれる"
         ]
       },
       {
-        "label": "怪我",
-        "reading": "けが",
-        "pos": "名词",
+        "label": "狭い",
+        "reading": "せまい",
+        "pos": "形容词",
         "aliases": [
-          "けが",
-          "ケガ"
+          "せまい"
         ]
       },
       {
-        "label": "向かう",
-        "reading": "むかう",
+        "label": "まずい",
+        "reading": "まずい",
+        "pos": "形容词",
+        "aliases": [
+          "マズイ"
+        ]
+      },
+      {
+        "label": "ぎりぎり",
+        "reading": "ぎりぎり",
+        "pos": "副词",
+        "aliases": [
+          "ぎりぎり",
+          "ギリギリ"
+        ]
+      },
+      {
+        "label": "ほんと",
+        "reading": "ほんと",
+        "pos": "形容词",
+        "aliases": [
+          "ホント"
+        ]
+      },
+      {
+        "label": "悲しい",
+        "reading": "かなしい",
+        "pos": "形容词",
+        "aliases": [
+          "かなしい"
+        ]
+      },
+      {
+        "label": "含む",
+        "reading": "ふくむ",
         "pos": "动词",
         "aliases": [
-          "むかう"
+          "ふくむ"
         ]
       },
       {
-        "label": "一番",
-        "reading": "いちばん",
-        "pos": "名词",
+        "label": "情けない",
+        "reading": "なさけない",
+        "pos": "形容词",
         "aliases": [
-          "いちばん"
-        ]
-      },
-      {
-        "label": "眼鏡",
-        "reading": "めがね",
-        "pos": "名词",
-        "aliases": [
-          "めがね"
+          "なさけない"
         ]
       },
       {
@@ -26632,19 +27996,75 @@
         ]
       },
       {
-        "label": "難しい",
-        "reading": "むずかしい",
-        "pos": "形容词",
+        "label": "大人",
+        "reading": "おとな",
+        "pos": "名词",
         "aliases": [
-          "むずかしい"
+          "おとな"
         ]
       },
       {
-        "label": "濃い",
-        "reading": "こい",
+        "label": "流れる",
+        "reading": "ながれる",
+        "pos": "动词",
+        "aliases": [
+          "ながれる"
+        ]
+      },
+      {
+        "label": "抱く",
+        "reading": "いだく",
+        "pos": "动词",
+        "aliases": [
+          "いだく"
+        ]
+      },
+      {
+        "label": "貧しい",
+        "reading": "まずしい",
         "pos": "形容词",
         "aliases": [
-          "こい"
+          "まずしい"
+        ]
+      },
+      {
+        "label": "すらすら",
+        "reading": "すらすら",
+        "pos": "副词",
+        "aliases": [
+          "スラスラ"
+        ]
+      },
+      {
+        "label": "助ける",
+        "reading": "たすける",
+        "pos": "动词",
+        "aliases": [
+          "たすける"
+        ]
+      },
+      {
+        "label": "もち",
+        "reading": "もち",
+        "pos": "名词",
+        "aliases": [
+          "モチ"
+        ]
+      },
+      {
+        "label": "無駄",
+        "reading": "むだ",
+        "pos": "形容词",
+        "aliases": [
+          "むだ"
+        ]
+      },
+      {
+        "label": "到底",
+        "reading": "とうてい",
+        "pos": "副词",
+        "aliases": [
+          "とうてい"
         ]
       },
       {
@@ -26656,11 +28076,59 @@
         ]
       },
       {
+        "label": "らく",
+        "reading": "らく",
+        "pos": "名词",
+        "aliases": [
+          "ラク"
+        ]
+      },
+      {
+        "label": "しり",
+        "reading": "しり",
+        "pos": "名词",
+        "aliases": [
+          "シリ"
+        ]
+      },
+      {
+        "label": "せりふ",
+        "reading": "せりふ",
+        "pos": "名词",
+        "aliases": [
+          "セリフ"
+        ]
+      },
+      {
+        "label": "導く",
+        "reading": "みちびく",
+        "pos": "动词",
+        "aliases": [
+          "みちびく"
+        ]
+      },
+      {
+        "label": "濡れる",
+        "reading": "ぬれる",
+        "pos": "动词",
+        "aliases": [
+          "ぬれる"
+        ]
+      },
+      {
         "label": "逃れる",
         "reading": "のがれる",
         "pos": "动词",
         "aliases": [
           "のがれる"
+        ]
+      },
+      {
+        "label": "こども",
+        "reading": "こども",
+        "pos": "名词",
+        "aliases": [
+          "コドモ"
         ]
       },
       {
@@ -26672,19 +28140,19 @@
         ]
       },
       {
-        "label": "妨げる",
-        "reading": "さまたげる",
-        "pos": "动词",
-        "aliases": [
-          "さまたげる"
-        ]
-      },
-      {
         "label": "遮る",
         "reading": "さえぎる",
         "pos": "动词",
         "aliases": [
           "さえぎる"
+        ]
+      },
+      {
+        "label": "妨げる",
+        "reading": "さまたげる",
+        "pos": "动词",
+        "aliases": [
+          "さまたげる"
         ]
       },
       {
@@ -26696,11 +28164,59 @@
         ]
       },
       {
-        "label": "真似",
-        "reading": "まね",
+        "label": "復興",
+        "reading": "ふっこう",
         "pos": "名词",
         "aliases": [
-          "まね"
+          "ふっこう"
+        ]
+      },
+      {
+        "label": "鍋",
+        "reading": "なべ",
+        "pos": "名词",
+        "aliases": [
+          "なべ"
+        ]
+      },
+      {
+        "label": "夕べ",
+        "reading": "ゆうべ",
+        "pos": "名词",
+        "aliases": [
+          "ゆうべ"
+        ]
+      },
+      {
+        "label": "ねじ",
+        "reading": "ねじ",
+        "pos": "名词",
+        "aliases": [
+          "ネジ"
+        ]
+      },
+      {
+        "label": "癒す",
+        "reading": "いやす",
+        "pos": "动词",
+        "aliases": [
+          "いやす"
+        ]
+      },
+      {
+        "label": "ばかばかしい",
+        "reading": "ばかばかしい",
+        "pos": "形容词",
+        "aliases": [
+          "バカバカしい"
+        ]
+      },
+      {
+        "label": "悩む",
+        "reading": "なやむ",
+        "pos": "动词",
+        "aliases": [
+          "なやむ"
         ]
       },
       {
@@ -26712,6 +28228,30 @@
         ]
       },
       {
+        "label": "苦しい",
+        "reading": "くるしい",
+        "pos": "形容词",
+        "aliases": [
+          "くるしい"
+        ]
+      },
+      {
+        "label": "頼る",
+        "reading": "たよる",
+        "pos": "动词",
+        "aliases": [
+          "たよる"
+        ]
+      },
+      {
+        "label": "等しい",
+        "reading": "ひとしい",
+        "pos": "形容词",
+        "aliases": [
+          "ひとしい"
+        ]
+      },
+      {
         "label": "恐らく",
         "reading": "おそらく",
         "pos": "副词",
@@ -26720,19 +28260,35 @@
         ]
       },
       {
-        "label": "優れる",
-        "reading": "すぐれる",
+        "label": "歪める",
+        "reading": "ゆがめる",
         "pos": "动词",
         "aliases": [
-          "すぐれる"
+          "ゆがめる"
         ]
       },
       {
-        "label": "形",
-        "reading": "かたち",
+        "label": "絶えず",
+        "reading": "たえず",
+        "pos": "副词",
+        "aliases": [
+          "たえず"
+        ]
+      },
+      {
+        "label": "錯覚",
+        "reading": "さっかく",
         "pos": "名词",
         "aliases": [
-          "かたち"
+          "さっかく"
+        ]
+      },
+      {
+        "label": "励む",
+        "reading": "はげむ",
+        "pos": "动词",
+        "aliases": [
+          "はげむ"
         ]
       },
       {
@@ -26744,11 +28300,19 @@
         ]
       },
       {
-        "label": "決して",
-        "reading": "けっして",
-        "pos": "副词",
+        "label": "みるく",
+        "reading": "みるく",
+        "pos": "名词",
         "aliases": [
-          "けっして"
+          "ミルク"
+        ]
+      },
+      {
+        "label": "しみ",
+        "reading": "しみ",
+        "pos": "名词",
+        "aliases": [
+          "シミ"
         ]
       },
       {
@@ -26760,6 +28324,14 @@
         ]
       },
       {
+        "label": "ばね",
+        "reading": "ばね",
+        "pos": "名词",
+        "aliases": [
+          "バネ"
+        ]
+      },
+      {
         "label": "些細",
         "reading": "ささい",
         "pos": "形容词",
@@ -26768,11 +28340,44 @@
         ]
       },
       {
-        "label": "楽しい",
-        "reading": "たのしい",
-        "pos": "形容词",
+        "label": "生き生き",
+        "reading": "いきいき",
+        "pos": "副词",
         "aliases": [
-          "たのしい"
+          "いきいき",
+          "活き活き"
+        ]
+      },
+      {
+        "label": "危ぶむ",
+        "reading": "あやぶむ",
+        "pos": "动词",
+        "aliases": [
+          "あやぶむ"
+        ]
+      },
+      {
+        "label": "溢れる",
+        "reading": "あふれる",
+        "pos": "动词",
+        "aliases": [
+          "あふれる"
+        ]
+      },
+      {
+        "label": "流す",
+        "reading": "ながす",
+        "pos": "动词",
+        "aliases": [
+          "ながす"
+        ]
+      },
+      {
+        "label": "きのこ",
+        "reading": "きのこ",
+        "pos": "名词",
+        "aliases": [
+          "キノコ"
         ]
       },
       {
@@ -26792,38 +28397,6 @@
         ]
       },
       {
-        "label": "願う",
-        "reading": "ねがう",
-        "pos": "动词",
-        "aliases": [
-          "ねがう"
-        ]
-      },
-      {
-        "label": "知る",
-        "reading": "しる",
-        "pos": "动词",
-        "aliases": [
-          "しる"
-        ]
-      },
-      {
-        "label": "激しい",
-        "reading": "はげしい",
-        "pos": "形容词",
-        "aliases": [
-          "はげしい"
-        ]
-      },
-      {
-        "label": "溢れる",
-        "reading": "あふれる",
-        "pos": "动词",
-        "aliases": [
-          "あふれる"
-        ]
-      },
-      {
         "label": "沈む",
         "reading": "しずむ",
         "pos": "动词",
@@ -26832,43 +28405,11 @@
         ]
       },
       {
-        "label": "通り",
-        "reading": "とおり",
-        "pos": "名词",
+        "label": "さっと",
+        "reading": "さっと",
+        "pos": "副词",
         "aliases": [
-          "とおり"
-        ]
-      },
-      {
-        "label": "参る",
-        "reading": "まいる",
-        "pos": "动词",
-        "aliases": [
-          "まいる"
-        ]
-      },
-      {
-        "label": "眺める",
-        "reading": "ながめる",
-        "pos": "动词",
-        "aliases": [
-          "ながめる"
-        ]
-      },
-      {
-        "label": "落とす",
-        "reading": "おとす",
-        "pos": "动词",
-        "aliases": [
-          "おとす"
-        ]
-      },
-      {
-        "label": "付き合う",
-        "reading": "つきあう",
-        "pos": "动词",
-        "aliases": [
-          "つきあう"
+          "サッと"
         ]
       },
       {
@@ -26880,11 +28421,11 @@
         ]
       },
       {
-        "label": "辛い",
-        "reading": "つらい",
-        "pos": "形容词",
+        "label": "ばっちり",
+        "reading": "ばっちり",
+        "pos": "副词",
         "aliases": [
-          "つらい"
+          "バッチリ"
         ]
       },
       {
@@ -26896,11 +28437,19 @@
         ]
       },
       {
-        "label": "狭い",
-        "reading": "せまい",
+        "label": "蜂蜜",
+        "reading": "はちみつ",
+        "pos": "名词",
+        "aliases": [
+          "ハチミツ"
+        ]
+      },
+      {
+        "label": "物足りない",
+        "reading": "ものたりない",
         "pos": "形容词",
         "aliases": [
-          "せまい"
+          "ものたりない"
         ]
       },
       {
@@ -26912,19 +28461,11 @@
         ]
       },
       {
-        "label": "発表",
-        "reading": "はっぴょう",
-        "pos": "名词",
+        "label": "ぺらぺら",
+        "reading": "ぺらぺら",
+        "pos": "副词",
         "aliases": [
-          "はっぴょう"
-        ]
-      },
-      {
-        "label": "重ねる",
-        "reading": "かさねる",
-        "pos": "动词",
-        "aliases": [
-          "かさねる"
+          "ペラペラ"
         ]
       },
       {
@@ -26936,11 +28477,27 @@
         ]
       },
       {
-        "label": "転ぶ",
-        "reading": "ころぶ",
+        "label": "いちご",
+        "reading": "いちご",
+        "pos": "名词",
+        "aliases": [
+          "イチゴ"
+        ]
+      },
+      {
+        "label": "青い",
+        "reading": "あおい",
+        "pos": "形容词",
+        "aliases": [
+          "あおい"
+        ]
+      },
+      {
+        "label": "似合う",
+        "reading": "にあう",
         "pos": "动词",
         "aliases": [
-          "ころぶ"
+          "にあう"
         ]
       },
       {
@@ -26952,11 +28509,19 @@
         ]
       },
       {
-        "label": "入る",
-        "reading": "はいる",
-        "pos": "动词",
+        "label": "封筒",
+        "reading": "ふうとう",
+        "pos": "名词",
         "aliases": [
-          "はいる"
+          "ふうとう"
+        ]
+      },
+      {
+        "label": "醤油",
+        "reading": "しょうゆ",
+        "pos": "名词",
+        "aliases": [
+          "しょうゆ"
         ]
       },
       {
@@ -26968,163 +28533,51 @@
         ]
       },
       {
-        "label": "頻繁",
-        "reading": "ひんぱん",
+        "label": "素早い",
+        "reading": "すばやい",
         "pos": "形容词",
         "aliases": [
-          "ひんぱん"
+          "すばやい"
         ]
       },
       {
-        "label": "揃う",
-        "reading": "そろう",
-        "pos": "动词",
-        "aliases": [
-          "そろう"
-        ]
-      },
-      {
-        "label": "電話",
-        "reading": "でんわ",
+        "label": "矛盾",
+        "reading": "むじゅん",
         "pos": "名词",
         "aliases": [
-          "でんわ"
+          "むじゅん"
         ]
       },
       {
-        "label": "向く",
-        "reading": "むく",
-        "pos": "动词",
-        "aliases": [
-          "むく"
-        ]
-      },
-      {
-        "label": "踏まえる",
-        "reading": "ふまえる",
-        "pos": "动词",
-        "aliases": [
-          "ふまえる"
-        ]
-      },
-      {
-        "label": "荒らす",
-        "reading": "あらす",
-        "pos": "动词",
-        "aliases": [
-          "あらす"
-        ]
-      },
-      {
-        "label": "養う",
-        "reading": "やしなう",
-        "pos": "动词",
-        "aliases": [
-          "やしなう"
-        ]
-      },
-      {
-        "label": "抜ける",
-        "reading": "ぬける",
-        "pos": "动词",
-        "aliases": [
-          "ぬける"
-        ]
-      },
-      {
-        "label": "次々",
-        "reading": "つぎつぎ",
-        "pos": "副词",
-        "aliases": [
-          "つぎつぎ"
-        ]
-      },
-      {
-        "label": "突然",
-        "reading": "とつぜん",
-        "pos": "副词",
-        "aliases": [
-          "とつぜん"
-        ]
-      },
-      {
-        "label": "吠える",
-        "reading": "ほえる",
-        "pos": "动词",
-        "aliases": [
-          "ほえる"
-        ]
-      },
-      {
-        "label": "続く",
-        "reading": "つづく",
-        "pos": "动词",
-        "aliases": [
-          "つづく"
-        ]
-      },
-      {
-        "label": "運ぶ",
-        "reading": "はこぶ",
-        "pos": "动词",
-        "aliases": [
-          "はこぶ"
-        ]
-      },
-      {
-        "label": "鍋",
-        "reading": "なべ",
+        "label": "甲虫",
+        "reading": "かぶとむし",
         "pos": "名词",
         "aliases": [
-          "なべ"
+          "かぶとむし"
         ]
       },
       {
-        "label": "多分",
-        "reading": "たぶん",
-        "pos": "副词",
-        "aliases": [
-          "たぶん"
-        ]
-      },
-      {
-        "label": "強い",
-        "reading": "つよい",
-        "pos": "形容词",
-        "aliases": [
-          "つよい"
-        ]
-      },
-      {
-        "label": "広い",
-        "reading": "ひろい",
-        "pos": "形容词",
-        "aliases": [
-          "ひろい"
-        ]
-      },
-      {
-        "label": "重い",
-        "reading": "おもい",
-        "pos": "形容词",
-        "aliases": [
-          "おもい"
-        ]
-      },
-      {
-        "label": "受かる",
-        "reading": "うかる",
+        "label": "光る",
+        "reading": "ひかる",
         "pos": "动词",
         "aliases": [
-          "うかる"
+          "ひかる"
         ]
       },
       {
-        "label": "悪い",
-        "reading": "わるい",
+        "label": "危うい",
+        "reading": "あやうい",
         "pos": "形容词",
         "aliases": [
-          "わるい"
+          "あやうい"
+        ]
+      },
+      {
+        "label": "叫ぶ",
+        "reading": "さけぶ",
+        "pos": "动词",
+        "aliases": [
+          "さけぶ"
         ]
       },
       {
@@ -27136,91 +28589,187 @@
         ]
       },
       {
-        "label": "部屋",
-        "reading": "へや",
+        "label": "揃う",
+        "reading": "そろう",
+        "pos": "动词",
+        "aliases": [
+          "そろう"
+        ]
+      },
+      {
+        "label": "数える",
+        "reading": "かぞえる",
+        "pos": "动词",
+        "aliases": [
+          "かぞえる"
+        ]
+      },
+      {
+        "label": "ろうそく",
+        "reading": "ろうそく",
         "pos": "名词",
         "aliases": [
-          "へや"
+          "ロウソク"
         ]
       },
       {
-        "label": "海岸",
-        "reading": "かいがん",
-        "pos": "名词",
-        "aliases": [
-          "かいがん"
-        ]
-      },
-      {
-        "label": "濡れる",
-        "reading": "ぬれる",
-        "pos": "动词",
-        "aliases": [
-          "ぬれる"
-        ]
-      },
-      {
-        "label": "短い",
-        "reading": "みじかい",
-        "pos": "形容词",
-        "aliases": [
-          "みじかい"
-        ]
-      },
-      {
-        "label": "断る",
-        "reading": "ことわる",
-        "pos": "动词",
-        "aliases": [
-          "ことわる"
-        ]
-      },
-      {
-        "label": "吸う",
-        "reading": "すう",
-        "pos": "动词",
-        "aliases": [
-          "すう"
-        ]
-      },
-      {
-        "label": "常に",
-        "reading": "つねに",
+        "label": "中でも",
+        "reading": "なかでも",
         "pos": "副词",
         "aliases": [
-          "つねに"
+          "なかでも"
         ]
       },
       {
-        "label": "幸せ",
-        "reading": "しあわせ",
+        "label": "著しい",
+        "reading": "いちじるしい",
         "pos": "形容词",
         "aliases": [
-          "しあわせ"
+          "いちじるしい"
         ]
       },
       {
-        "label": "違い",
-        "reading": "ちがい",
-        "pos": "名词",
+        "label": "襲う",
+        "reading": "おそう",
+        "pos": "动词",
         "aliases": [
-          "ちがい"
+          "おそう"
         ]
       },
       {
-        "label": "次第に",
-        "reading": "しだいに",
+        "label": "荒らす",
+        "reading": "あらす",
+        "pos": "动词",
+        "aliases": [
+          "あらす"
+        ]
+      },
+      {
+        "label": "すっきり",
+        "reading": "すっきり",
         "pos": "副词",
         "aliases": [
-          "しだいに"
+          "スッキリ"
         ]
       },
       {
-        "label": "明らか",
-        "reading": "あきらか",
+        "label": "中級",
+        "reading": "ちゅうきゅう",
+        "pos": "名词",
+        "aliases": [
+          "ちゅうきゅう"
+        ]
+      },
+      {
+        "label": "返品",
+        "reading": "へんぴん",
+        "pos": "名词",
+        "aliases": [
+          "へんぴん"
+        ]
+      },
+      {
+        "label": "こつこつ",
+        "reading": "こつこつ",
+        "pos": "副词",
+        "aliases": [
+          "コツコツ"
+        ]
+      },
+      {
+        "label": "吠える",
+        "reading": "ほえる",
+        "pos": "动词",
+        "aliases": [
+          "ほえる"
+        ]
+      },
+      {
+        "label": "怖がる",
+        "reading": "こわがる",
+        "pos": "动词",
+        "aliases": [
+          "こわがる"
+        ]
+      },
+      {
+        "label": "丁寧",
+        "reading": "ていねい",
         "pos": "形容词",
         "aliases": [
-          "あきらか"
+          "ていねい"
+        ]
+      },
+      {
+        "label": "多分",
+        "reading": "たぶん",
+        "pos": "副词",
+        "aliases": [
+          "たぶん"
+        ]
+      },
+      {
+        "label": "誤解",
+        "reading": "ごかい",
+        "pos": "名词",
+        "aliases": [
+          "ごかい"
+        ]
+      },
+      {
+        "label": "外れる",
+        "reading": "はずれる",
+        "pos": "动词",
+        "aliases": [
+          "はずれる"
+        ]
+      },
+      {
+        "label": "怠る",
+        "reading": "おこたる",
+        "pos": "动词",
+        "aliases": [
+          "おこたる"
+        ]
+      },
+      {
+        "label": "無理やり",
+        "reading": "むりやり",
+        "pos": "副词",
+        "aliases": [
+          "むりやり"
+        ]
+      },
+      {
+        "label": "嫌がる",
+        "reading": "いやがる",
+        "pos": "动词",
+        "aliases": [
+          "いやがる"
+        ]
+      },
+      {
+        "label": "要するに",
+        "reading": "ようするに",
+        "pos": "副词",
+        "aliases": [
+          "ようするに"
+        ]
+      },
+      {
+        "label": "上辺",
+        "reading": "うわべ",
+        "pos": "名词",
+        "aliases": [
+          "うわべ"
+        ]
+      },
+      {
+        "label": "傷つく",
+        "reading": "きずつく",
+        "pos": "动词",
+        "aliases": [
+          "きずつく"
         ]
       },
       {
@@ -27232,19 +28781,35 @@
         ]
       },
       {
+        "label": "挑む",
+        "reading": "いどむ",
+        "pos": "动词",
+        "aliases": [
+          "いどむ"
+        ]
+      },
+      {
+        "label": "ねこ",
+        "reading": "ねこ",
+        "pos": "名词",
+        "aliases": [
+          "ネコ"
+        ]
+      },
+      {
+        "label": "椅子",
+        "reading": "いす",
+        "pos": "名词",
+        "aliases": [
+          "いす"
+        ]
+      },
+      {
         "label": "お婆さん",
         "reading": "おばあさん",
         "pos": "名词",
         "aliases": [
           "おばあさん"
-        ]
-      },
-      {
-        "label": "訳す",
-        "reading": "やくす",
-        "pos": "动词",
-        "aliases": [
-          "やくす"
         ]
       },
       {
@@ -27256,11 +28821,11 @@
         ]
       },
       {
-        "label": "導く",
-        "reading": "みちびく",
+        "label": "訳す",
+        "reading": "やくす",
         "pos": "动词",
         "aliases": [
-          "みちびく"
+          "やくす"
         ]
       },
       {
@@ -27272,27 +28837,11 @@
         ]
       },
       {
-        "label": "詳しい",
-        "reading": "くわしい",
-        "pos": "形容词",
-        "aliases": [
-          "くわしい"
-        ]
-      },
-      {
-        "label": "伝わる",
-        "reading": "つたわる",
+        "label": "込める",
+        "reading": "こめる",
         "pos": "动词",
         "aliases": [
-          "つたわる"
-        ]
-      },
-      {
-        "label": "勝手",
-        "reading": "かって",
-        "pos": "形容词",
-        "aliases": [
-          "かって"
+          "こめる"
         ]
       },
       {
@@ -27312,51 +28861,11 @@
         ]
       },
       {
-        "label": "確か",
-        "reading": "たしか",
-        "pos": "形容词",
-        "aliases": [
-          "たしか"
-        ]
-      },
-      {
         "label": "いい加減",
         "reading": "いいかげん",
         "pos": "形容词",
         "aliases": [
           "いいかげん"
-        ]
-      },
-      {
-        "label": "迷う",
-        "reading": "まよう",
-        "pos": "动词",
-        "aliases": [
-          "まよう"
-        ]
-      },
-      {
-        "label": "流れる",
-        "reading": "ながれる",
-        "pos": "动词",
-        "aliases": [
-          "ながれる"
-        ]
-      },
-      {
-        "label": "動く",
-        "reading": "うごく",
-        "pos": "动词",
-        "aliases": [
-          "うごく"
-        ]
-      },
-      {
-        "label": "必ず",
-        "reading": "かならず",
-        "pos": "副词",
-        "aliases": [
-          "かならず"
         ]
       },
       {
@@ -27368,19 +28877,19 @@
         ]
       },
       {
-        "label": "間違う",
-        "reading": "まちがう",
-        "pos": "动词",
+        "label": "雪",
+        "reading": "ゆき",
+        "pos": "名词",
         "aliases": [
-          "まちがう"
+          "ゆき"
         ]
       },
       {
-        "label": "お父さん",
-        "reading": "おとうさん",
-        "pos": "名词",
+        "label": "飾る",
+        "reading": "かざる",
+        "pos": "动词",
         "aliases": [
-          "おとうさん"
+          "かざる"
         ]
       },
       {
@@ -27408,11 +28917,35 @@
         ]
       },
       {
+        "label": "捕まえる",
+        "reading": "つかまえる",
+        "pos": "动词",
+        "aliases": [
+          "つかまえる"
+        ]
+      },
+      {
         "label": "漂う",
         "reading": "ただよう",
         "pos": "动词",
         "aliases": [
           "ただよう"
+        ]
+      },
+      {
+        "label": "真似る",
+        "reading": "まねる",
+        "pos": "动词",
+        "aliases": [
+          "まねる"
+        ]
+      },
+      {
+        "label": "ずれ",
+        "reading": "ずれ",
+        "pos": "名词",
+        "aliases": [
+          "ズレ"
         ]
       },
       {
@@ -27424,14 +28957,6 @@
         ]
       },
       {
-        "label": "合間",
-        "reading": "あいま",
-        "pos": "名词",
-        "aliases": [
-          "あいま"
-        ]
-      },
-      {
         "label": "敢えて",
         "reading": "あえて",
         "pos": "副词",
@@ -27440,59 +28965,11 @@
         ]
       },
       {
-        "label": "大丈夫",
-        "reading": "だいじょうぶ",
-        "pos": "形容词",
+        "label": "ぱらぱら",
+        "reading": "ぱらぱら",
+        "pos": "副词",
         "aliases": [
-          "だいじょうぶ"
-        ]
-      },
-      {
-        "label": "癒す",
-        "reading": "いやす",
-        "pos": "动词",
-        "aliases": [
-          "いやす"
-        ]
-      },
-      {
-        "label": "出版",
-        "reading": "しゅっぱん",
-        "pos": "名词",
-        "aliases": [
-          "しゅっぱん"
-        ]
-      },
-      {
-        "label": "素早い",
-        "reading": "すばやい",
-        "pos": "形容词",
-        "aliases": [
-          "すばやい"
-        ]
-      },
-      {
-        "label": "食べる",
-        "reading": "たべる",
-        "pos": "动词",
-        "aliases": [
-          "たべる"
-        ]
-      },
-      {
-        "label": "豆",
-        "reading": "まめ",
-        "pos": "名词",
-        "aliases": [
-          "まめ"
-        ]
-      },
-      {
-        "label": "調べる",
-        "reading": "しらべる",
-        "pos": "动词",
-        "aliases": [
-          "しらべる"
+          "パラパラ"
         ]
       },
       {
@@ -27504,11 +28981,36 @@
         ]
       },
       {
-        "label": "醤油",
-        "reading": "しょうゆ",
+        "label": "乾かす",
+        "reading": "かわかす",
+        "pos": "动词",
+        "aliases": [
+          "かわかす"
+        ]
+      },
+      {
+        "label": "豆",
+        "reading": "まめ",
         "pos": "名词",
         "aliases": [
-          "しょうゆ"
+          "まめ"
+        ]
+      },
+      {
+        "label": "いらいら",
+        "reading": "いらいら",
+        "pos": "副词",
+        "aliases": [
+          "イライラ",
+          "いらいら"
+        ]
+      },
+      {
+        "label": "冷える",
+        "reading": "ひえる",
+        "pos": "动词",
+        "aliases": [
+          "ひえる"
         ]
       },
       {
@@ -27520,43 +29022,27 @@
         ]
       },
       {
-        "label": "呼ぶ",
-        "reading": "よぶ",
+        "label": "嘆く",
+        "reading": "なげく",
         "pos": "动词",
         "aliases": [
-          "よぶ"
+          "なげく"
         ]
       },
       {
-        "label": "教える",
-        "reading": "おしえる",
-        "pos": "动词",
-        "aliases": [
-          "おしえる"
-        ]
-      },
-      {
-        "label": "残る",
-        "reading": "のこる",
-        "pos": "动词",
-        "aliases": [
-          "のこる"
-        ]
-      },
-      {
-        "label": "絶えず",
-        "reading": "たえず",
-        "pos": "副词",
-        "aliases": [
-          "たえず"
-        ]
-      },
-      {
-        "label": "緊張",
-        "reading": "きんちょう",
+        "label": "決まり",
+        "reading": "きまり",
         "pos": "名词",
         "aliases": [
-          "きんちょう"
+          "きまり"
+        ]
+      },
+      {
+        "label": "回す",
+        "reading": "まわす",
+        "pos": "动词",
+        "aliases": [
+          "まわす"
         ]
       },
       {
@@ -27568,14 +29054,6 @@
         ]
       },
       {
-        "label": "育てる",
-        "reading": "そだてる",
-        "pos": "动词",
-        "aliases": [
-          "そだてる"
-        ]
-      },
-      {
         "label": "照る",
         "reading": "てる",
         "pos": "动词",
@@ -27584,19 +29062,11 @@
         ]
       },
       {
-        "label": "厳しい",
-        "reading": "きびしい",
-        "pos": "形容词",
+        "label": "はらはら",
+        "reading": "はらはら",
+        "pos": "副词",
         "aliases": [
-          "きびしい"
-        ]
-      },
-      {
-        "label": "速やか",
-        "reading": "すみやか",
-        "pos": "形容词",
-        "aliases": [
-          "すみやか"
+          "ハラハラ"
         ]
       },
       {
@@ -27624,51 +29094,19 @@
         ]
       },
       {
-        "label": "承る",
-        "reading": "うけたまわる",
+        "label": "揉む",
+        "reading": "もむ",
         "pos": "动词",
         "aliases": [
-          "うけたまわる"
+          "もむ"
         ]
       },
       {
-        "label": "抱く",
-        "reading": "いだく",
-        "pos": "动词",
+        "label": "楽々",
+        "reading": "らくらく",
+        "pos": "副词",
         "aliases": [
-          "いだく"
-        ]
-      },
-      {
-        "label": "言い訳",
-        "reading": "いいわけ",
-        "pos": "名词",
-        "aliases": [
-          "いいわけ"
-        ]
-      },
-      {
-        "label": "新た",
-        "reading": "あらた",
-        "pos": "形容词",
-        "aliases": [
-          "あらた"
-        ]
-      },
-      {
-        "label": "襲う",
-        "reading": "おそう",
-        "pos": "动词",
-        "aliases": [
-          "おそう"
-        ]
-      },
-      {
-        "label": "流行る",
-        "reading": "はやる",
-        "pos": "动词",
-        "aliases": [
-          "はやる"
+          "らくらく"
         ]
       },
       {
@@ -27680,27 +29118,11 @@
         ]
       },
       {
-        "label": "無駄",
-        "reading": "むだ",
-        "pos": "形容词",
-        "aliases": [
-          "むだ"
-        ]
-      },
-      {
-        "label": "回す",
-        "reading": "まわす",
-        "pos": "动词",
-        "aliases": [
-          "まわす"
-        ]
-      },
-      {
-        "label": "相変わらず",
-        "reading": "あいかわらず",
+        "label": "がらり",
+        "reading": "がらり",
         "pos": "副词",
         "aliases": [
-          "あいかわらず"
+          "ガラリ"
         ]
       },
       {
@@ -27712,99 +29134,51 @@
         ]
       },
       {
-        "label": "丁寧",
-        "reading": "ていねい",
-        "pos": "形容词",
-        "aliases": [
-          "ていねい"
-        ]
-      },
-      {
-        "label": "情けない",
-        "reading": "なさけない",
-        "pos": "形容词",
-        "aliases": [
-          "なさけない"
-        ]
-      },
-      {
-        "label": "不思議",
-        "reading": "ふしぎ",
-        "pos": "形容词",
-        "aliases": [
-          "ふしぎ"
-        ]
-      },
-      {
-        "label": "真似る",
-        "reading": "まねる",
-        "pos": "动词",
-        "aliases": [
-          "まねる"
-        ]
-      },
-      {
-        "label": "悲しい",
-        "reading": "かなしい",
-        "pos": "形容词",
-        "aliases": [
-          "かなしい"
-        ]
-      },
-      {
-        "label": "苦しい",
-        "reading": "くるしい",
-        "pos": "形容词",
-        "aliases": [
-          "くるしい"
-        ]
-      },
-      {
-        "label": "信じる",
-        "reading": "しんじる",
-        "pos": "动词",
-        "aliases": [
-          "しんじる"
-        ]
-      },
-      {
-        "label": "遅い",
-        "reading": "おそい",
-        "pos": "形容词",
-        "aliases": [
-          "おそい"
-        ]
-      },
-      {
-        "label": "貧しい",
-        "reading": "まずしい",
-        "pos": "形容词",
-        "aliases": [
-          "まずしい"
-        ]
-      },
-      {
-        "label": "下げる",
-        "reading": "さげる",
-        "pos": "动词",
-        "aliases": [
-          "さげる"
-        ]
-      },
-      {
-        "label": "椅子",
-        "reading": "いす",
+        "label": "ひまわり",
+        "reading": "ひまわり",
         "pos": "名词",
         "aliases": [
-          "いす"
+          "ヒマワリ"
         ]
       },
       {
-        "label": "出席",
-        "reading": "しゅっせき",
+        "label": "快い",
+        "reading": "こころよい",
+        "pos": "形容词",
+        "aliases": [
+          "こころよい"
+        ]
+      },
+      {
+        "label": "港",
+        "reading": "みなと",
         "pos": "名词",
         "aliases": [
-          "しゅっせき"
+          "みなと"
+        ]
+      },
+      {
+        "label": "輝く",
+        "reading": "かがやく",
+        "pos": "动词",
+        "aliases": [
+          "かがやく"
+        ]
+      },
+      {
+        "label": "煎餅",
+        "reading": "せんべい",
+        "pos": "名词",
+        "aliases": [
+          "せんべい"
+        ]
+      },
+      {
+        "label": "たんす",
+        "reading": "たんす",
+        "pos": "名词",
+        "aliases": [
+          "タンス"
         ]
       },
       {
@@ -27824,139 +29198,43 @@
         ]
       },
       {
-        "label": "要するに",
-        "reading": "ようするに",
+        "label": "定める",
+        "reading": "さだめる",
+        "pos": "动词",
+        "aliases": [
+          "さだめる"
+        ]
+      },
+      {
+        "label": "すれ違う",
+        "reading": "すれちがう",
+        "pos": "动词",
+        "aliases": [
+          "スレ違う"
+        ]
+      },
+      {
+        "label": "望み",
+        "reading": "のぞみ",
+        "pos": "名词",
+        "aliases": [
+          "のぞみ"
+        ]
+      },
+      {
+        "label": "悪化",
+        "reading": "あっか",
+        "pos": "名词",
+        "aliases": [
+          "あっか"
+        ]
+      },
+      {
+        "label": "ぎくしゃく",
+        "reading": "ぎくしゃく",
         "pos": "副词",
         "aliases": [
-          "ようするに"
-        ]
-      },
-      {
-        "label": "外れる",
-        "reading": "はずれる",
-        "pos": "动词",
-        "aliases": [
-          "はずれる"
-        ]
-      },
-      {
-        "label": "物差し",
-        "reading": "ものさし",
-        "pos": "名词",
-        "aliases": [
-          "ものさし"
-        ]
-      },
-      {
-        "label": "翼",
-        "reading": "つばさ",
-        "pos": "名词",
-        "aliases": [
-          "つばさ"
-        ]
-      },
-      {
-        "label": "贅沢",
-        "reading": "ぜいたく",
-        "pos": "形容词",
-        "aliases": [
-          "ぜいたく"
-        ]
-      },
-      {
-        "label": "微か",
-        "reading": "かすか",
-        "pos": "形容词",
-        "aliases": [
-          "かすか"
-        ]
-      },
-      {
-        "label": "物足りない",
-        "reading": "ものたりない",
-        "pos": "形容词",
-        "aliases": [
-          "ものたりない"
-        ]
-      },
-      {
-        "label": "暮れる",
-        "reading": "くれる",
-        "pos": "动词",
-        "aliases": [
-          "くれる"
-        ]
-      },
-      {
-        "label": "元気",
-        "reading": "げんき",
-        "pos": "形容词",
-        "aliases": [
-          "げんき"
-        ]
-      },
-      {
-        "label": "浅い",
-        "reading": "あさい",
-        "pos": "形容词",
-        "aliases": [
-          "あさい"
-        ]
-      },
-      {
-        "label": "凍る",
-        "reading": "こおる",
-        "pos": "动词",
-        "aliases": [
-          "こおる"
-        ]
-      },
-      {
-        "label": "待つ",
-        "reading": "まつ",
-        "pos": "动词",
-        "aliases": [
-          "まつ"
-        ]
-      },
-      {
-        "label": "結果",
-        "reading": "けっか",
-        "pos": "名词",
-        "aliases": [
-          "けっか"
-        ]
-      },
-      {
-        "label": "手伝う",
-        "reading": "てつだう",
-        "pos": "动词",
-        "aliases": [
-          "てつだう"
-        ]
-      },
-      {
-        "label": "穏やか",
-        "reading": "おだやか",
-        "pos": "形容词",
-        "aliases": [
-          "おだやか"
-        ]
-      },
-      {
-        "label": "歪める",
-        "reading": "ゆがめる",
-        "pos": "动词",
-        "aliases": [
-          "ゆがめる"
-        ]
-      },
-      {
-        "label": "足りる",
-        "reading": "たりる",
-        "pos": "动词",
-        "aliases": [
-          "たりる"
+          "ギクシャク"
         ]
       },
       {
@@ -27968,51 +29246,99 @@
         ]
       },
       {
-        "label": "逆らう",
-        "reading": "さからう",
-        "pos": "动词",
+        "label": "厄介",
+        "reading": "やっかい",
+        "pos": "形容词",
         "aliases": [
-          "さからう"
+          "やっかい"
         ]
       },
       {
-        "label": "今度",
-        "reading": "こんど",
+        "label": "翼",
+        "reading": "つばさ",
         "pos": "名词",
         "aliases": [
-          "こんど"
+          "つばさ"
         ]
       },
       {
-        "label": "過ごす",
-        "reading": "すごす",
+        "label": "囁く",
+        "reading": "ささやく",
         "pos": "动词",
         "aliases": [
-          "すごす"
+          "ささやく"
         ]
       },
       {
-        "label": "雇う",
-        "reading": "やとう",
+        "label": "戸惑う",
+        "reading": "とまどう",
         "pos": "动词",
         "aliases": [
-          "やとう"
+          "とまどう"
         ]
       },
       {
-        "label": "残業",
-        "reading": "ざんぎょう",
+        "label": "贅沢",
+        "reading": "ぜいたく",
+        "pos": "形容词",
+        "aliases": [
+          "ぜいたく"
+        ]
+      },
+      {
+        "label": "補足",
+        "reading": "ほそく",
         "pos": "名词",
         "aliases": [
-          "ざんぎょう"
+          "ほそく"
         ]
       },
       {
-        "label": "覚える",
-        "reading": "おぼえる",
+        "label": "微か",
+        "reading": "かすか",
+        "pos": "形容词",
+        "aliases": [
+          "かすか"
+        ]
+      },
+      {
+        "label": "太い",
+        "reading": "ふとい",
+        "pos": "形容词",
+        "aliases": [
+          "ふとい"
+        ]
+      },
+      {
+        "label": "ひとこと",
+        "reading": "ひとこと",
+        "pos": "名词",
+        "aliases": [
+          "ヒトコト"
+        ]
+      },
+      {
+        "label": "はまる",
+        "reading": "はまる",
         "pos": "动词",
         "aliases": [
-          "おぼえる"
+          "ハマる"
+        ]
+      },
+      {
+        "label": "暮れる",
+        "reading": "くれる",
+        "pos": "动词",
+        "aliases": [
+          "くれる"
+        ]
+      },
+      {
+        "label": "凍る",
+        "reading": "こおる",
+        "pos": "动词",
+        "aliases": [
+          "こおる"
         ]
       },
       {
@@ -28024,59 +29350,67 @@
         ]
       },
       {
-        "label": "怖がる",
-        "reading": "こわがる",
-        "pos": "动词",
-        "aliases": [
-          "こわがる"
-        ]
-      },
-      {
-        "label": "要する",
-        "reading": "ようする",
-        "pos": "动词",
-        "aliases": [
-          "ようする"
-        ]
-      },
-      {
-        "label": "心配",
-        "reading": "しんぱい",
+        "label": "すいか",
+        "reading": "すいか",
         "pos": "名词",
         "aliases": [
-          "しんぱい"
+          "スイカ"
         ]
       },
       {
-        "label": "挑む",
-        "reading": "いどむ",
-        "pos": "动词",
+        "label": "ずばり",
+        "reading": "ずばり",
+        "pos": "副词",
         "aliases": [
-          "いどむ"
+          "ズバリ"
         ]
       },
       {
-        "label": "励む",
-        "reading": "はげむ",
-        "pos": "动词",
+        "label": "たんぱく質",
+        "reading": "たんぱくしつ",
+        "pos": "名词",
         "aliases": [
-          "はげむ"
+          "タンパク質"
         ]
       },
       {
-        "label": "恨む",
-        "reading": "うらむ",
-        "pos": "动词",
+        "label": "悪",
+        "reading": "わる",
+        "pos": "名词",
         "aliases": [
-          "うらむ"
+          "わる"
         ]
       },
       {
-        "label": "拒む",
-        "reading": "こばむ",
+        "label": "ごま",
+        "reading": "ごま",
+        "pos": "名词",
+        "aliases": [
+          "ゴマ"
+        ]
+      },
+      {
+        "label": "鈍い",
+        "reading": "にぶい",
+        "pos": "形容词",
+        "aliases": [
+          "にぶい"
+        ]
+      },
+      {
+        "label": "風呂",
+        "reading": "ふろ",
+        "pos": "名词",
+        "aliases": [
+          "ふろ"
+        ]
+      },
+      {
+        "label": "雇う",
+        "reading": "やとう",
         "pos": "动词",
         "aliases": [
-          "こばむ"
+          "やとう"
         ]
       },
       {
@@ -28088,27 +29422,59 @@
         ]
       },
       {
-        "label": "認める",
-        "reading": "みとめる",
+        "label": "撫でる",
+        "reading": "なでる",
         "pos": "动词",
         "aliases": [
-          "みとめる"
+          "なでる"
         ]
       },
       {
-        "label": "残す",
-        "reading": "のこす",
+        "label": "拒む",
+        "reading": "こばむ",
         "pos": "动词",
         "aliases": [
-          "のこす"
+          "こばむ"
         ]
       },
       {
-        "label": "面倒",
-        "reading": "めんどう",
+        "label": "恨む",
+        "reading": "うらむ",
+        "pos": "动词",
+        "aliases": [
+          "うらむ"
+        ]
+      },
+      {
+        "label": "執着",
+        "reading": "しゅうちゃく",
+        "pos": "名词",
+        "aliases": [
+          "しゅうちゃく"
+        ]
+      },
+      {
+        "label": "だらだら",
+        "reading": "だらだら",
+        "pos": "副词",
+        "aliases": [
+          "ダラダラ"
+        ]
+      },
+      {
+        "label": "騒がしい",
+        "reading": "さわがしい",
         "pos": "形容词",
         "aliases": [
-          "めんどう"
+          "さわがしい"
+        ]
+      },
+      {
+        "label": "裏切る",
+        "reading": "うらぎる",
+        "pos": "动词",
+        "aliases": [
+          "うらぎる"
         ]
       },
       {
@@ -28120,35 +29486,27 @@
         ]
       },
       {
-        "label": "下がる",
-        "reading": "さがる",
-        "pos": "动词",
+        "label": "逞しい",
+        "reading": "たくましい",
+        "pos": "形容词",
         "aliases": [
-          "さがる"
+          "たくましい"
         ]
       },
       {
-        "label": "捕まえる",
-        "reading": "つかまえる",
-        "pos": "动词",
+        "label": "愛しい",
+        "reading": "いとしい",
+        "pos": "形容词",
         "aliases": [
-          "つかまえる"
+          "いとしい"
         ]
       },
       {
-        "label": "夕べ",
-        "reading": "ゆうべ",
+        "label": "くせ",
+        "reading": "くせ",
         "pos": "名词",
         "aliases": [
-          "ゆうべ"
-        ]
-      },
-      {
-        "label": "風呂",
-        "reading": "ふろ",
-        "pos": "名词",
-        "aliases": [
-          "ふろ"
+          "クセ"
         ]
       },
       {
@@ -28176,691 +29534,11 @@
         ]
       },
       {
-        "label": "揉む",
-        "reading": "もむ",
-        "pos": "动词",
-        "aliases": [
-          "もむ"
-        ]
-      },
-      {
-        "label": "定める",
-        "reading": "さだめる",
-        "pos": "动词",
-        "aliases": [
-          "さだめる"
-        ]
-      },
-      {
-        "label": "鈍い",
-        "reading": "にぶい",
-        "pos": "形容词",
-        "aliases": [
-          "にぶい"
-        ]
-      },
-      {
-        "label": "経済",
-        "reading": "けいざい",
-        "pos": "名词",
-        "aliases": [
-          "けいざい"
-        ]
-      },
-      {
-        "label": "値する",
-        "reading": "あたいする",
-        "pos": "动词",
-        "aliases": [
-          "あたいする"
-        ]
-      },
-      {
-        "label": "通す",
-        "reading": "とおす",
-        "pos": "动词",
-        "aliases": [
-          "とおす"
-        ]
-      },
-      {
-        "label": "囁く",
-        "reading": "ささやく",
-        "pos": "动词",
-        "aliases": [
-          "ささやく"
-        ]
-      },
-      {
-        "label": "逞しい",
-        "reading": "たくましい",
-        "pos": "形容词",
-        "aliases": [
-          "たくましい"
-        ]
-      },
-      {
-        "label": "悪",
-        "reading": "わる",
-        "pos": "名词",
-        "aliases": [
-          "わる"
-        ]
-      },
-      {
-        "label": "込める",
-        "reading": "こめる",
-        "pos": "动词",
-        "aliases": [
-          "こめる"
-        ]
-      },
-      {
-        "label": "港",
-        "reading": "みなと",
-        "pos": "名词",
-        "aliases": [
-          "みなと"
-        ]
-      },
-      {
-        "label": "数える",
-        "reading": "かぞえる",
-        "pos": "动词",
-        "aliases": [
-          "かぞえる"
-        ]
-      },
-      {
-        "label": "茹でる",
-        "reading": "ゆでる",
-        "pos": "动词",
-        "aliases": [
-          "ゆでる"
-        ]
-      },
-      {
-        "label": "切符",
-        "reading": "きっぷ",
-        "pos": "名词",
-        "aliases": [
-          "きっぷ"
-        ]
-      },
-      {
-        "label": "大人",
-        "reading": "おとな",
-        "pos": "名词",
-        "aliases": [
-          "おとな"
-        ]
-      },
-      {
-        "label": "嫌がる",
-        "reading": "いやがる",
-        "pos": "动词",
-        "aliases": [
-          "いやがる"
-        ]
-      },
-      {
-        "label": "脆い",
-        "reading": "もろい",
-        "pos": "形容词",
-        "aliases": [
-          "もろい"
-        ]
-      },
-      {
-        "label": "快い",
-        "reading": "こころよい",
-        "pos": "形容词",
-        "aliases": [
-          "こころよい"
-        ]
-      },
-      {
-        "label": "頼もしい",
-        "reading": "たのもしい",
-        "pos": "形容词",
-        "aliases": [
-          "たのもしい"
-        ]
-      },
-      {
-        "label": "頼る",
-        "reading": "たよる",
-        "pos": "动词",
-        "aliases": [
-          "たよる"
-        ]
-      },
-      {
-        "label": "派手",
-        "reading": "はで",
-        "pos": "形容词",
-        "aliases": [
-          "はで"
-        ]
-      },
-      {
-        "label": "低い",
-        "reading": "ひくい",
-        "pos": "形容词",
-        "aliases": [
-          "ひくい"
-        ]
-      },
-      {
-        "label": "決まり",
-        "reading": "きまり",
-        "pos": "名词",
-        "aliases": [
-          "きまり"
-        ]
-      },
-      {
-        "label": "学ぶ",
-        "reading": "まなぶ",
-        "pos": "动词",
-        "aliases": [
-          "まなぶ"
-        ]
-      },
-      {
-        "label": "中級",
-        "reading": "ちゅうきゅう",
-        "pos": "名词",
-        "aliases": [
-          "ちゅうきゅう"
-        ]
-      },
-      {
-        "label": "青葉",
-        "reading": "あおば",
-        "pos": "名词",
-        "aliases": [
-          "あおば"
-        ]
-      },
-      {
-        "label": "北",
-        "reading": "きた",
-        "pos": "名词",
-        "aliases": [
-          "きた"
-        ]
-      },
-      {
-        "label": "厄介",
-        "reading": "やっかい",
-        "pos": "形容词",
-        "aliases": [
-          "やっかい"
-        ]
-      },
-      {
-        "label": "無理やり",
-        "reading": "むりやり",
-        "pos": "副词",
-        "aliases": [
-          "むりやり"
-        ]
-      },
-      {
-        "label": "飾る",
-        "reading": "かざる",
-        "pos": "动词",
-        "aliases": [
-          "かざる"
-        ]
-      },
-      {
-        "label": "眠る",
-        "reading": "ねむる",
-        "pos": "动词",
-        "aliases": [
-          "ねむる"
-        ]
-      },
-      {
-        "label": "輝く",
-        "reading": "かがやく",
-        "pos": "动词",
-        "aliases": [
-          "かがやく"
-        ]
-      },
-      {
-        "label": "曲げる",
-        "reading": "まげる",
-        "pos": "动词",
-        "aliases": [
-          "まげる"
-        ]
-      },
-      {
-        "label": "住まう",
-        "reading": "すまう",
-        "pos": "动词",
-        "aliases": [
-          "すまう"
-        ]
-      },
-      {
-        "label": "準える",
-        "reading": "なぞらえる",
-        "pos": "动词",
-        "aliases": [
-          "なぞらえる"
-        ]
-      },
-      {
-        "label": "冷える",
-        "reading": "ひえる",
-        "pos": "动词",
-        "aliases": [
-          "ひえる"
-        ]
-      },
-      {
-        "label": "撫でる",
-        "reading": "なでる",
-        "pos": "动词",
-        "aliases": [
-          "なでる"
-        ]
-      },
-      {
-        "label": "忘れる",
-        "reading": "わすれる",
-        "pos": "动词",
-        "aliases": [
-          "わすれる"
-        ]
-      },
-      {
-        "label": "復興",
-        "reading": "ふっこう",
-        "pos": "名词",
-        "aliases": [
-          "ふっこう"
-        ]
-      },
-      {
-        "label": "怠る",
-        "reading": "おこたる",
-        "pos": "动词",
-        "aliases": [
-          "おこたる"
-        ]
-      },
-      {
-        "label": "取り消す",
-        "reading": "とりけす",
-        "pos": "动词",
-        "aliases": [
-          "とりけす"
-        ]
-      },
-      {
-        "label": "増す",
-        "reading": "ます",
-        "pos": "动词",
-        "aliases": [
-          "ます"
-        ]
-      },
-      {
-        "label": "支える",
-        "reading": "ささえる",
-        "pos": "动词",
-        "aliases": [
-          "ささえる"
-        ]
-      },
-      {
-        "label": "厚かましい",
-        "reading": "あつかましい",
-        "pos": "形容词",
-        "aliases": [
-          "あつかましい"
-        ]
-      },
-      {
-        "label": "寄せる",
-        "reading": "よせる",
-        "pos": "动词",
-        "aliases": [
-          "よせる"
-        ]
-      },
-      {
-        "label": "外れ",
-        "reading": "はずれ",
-        "pos": "名词",
-        "aliases": [
-          "はずれ"
-        ]
-      },
-      {
-        "label": "戒める",
-        "reading": "いましめる",
-        "pos": "动词",
-        "aliases": [
-          "いましめる"
-        ]
-      },
-      {
-        "label": "一応",
-        "reading": "いちおう",
-        "pos": "副词",
-        "aliases": [
-          "いちおう"
-        ]
-      },
-      {
-        "label": "差し当たり",
-        "reading": "さしあたり",
-        "pos": "副词",
-        "aliases": [
-          "さしあたり"
-        ]
-      },
-      {
-        "label": "昔",
-        "reading": "むかし",
-        "pos": "名词",
-        "aliases": [
-          "むかし"
-        ]
-      },
-      {
-        "label": "甲虫",
-        "reading": "かぶとむし",
-        "pos": "名词",
-        "aliases": [
-          "かぶとむし"
-        ]
-      },
-      {
-        "label": "長い",
-        "reading": "ながい",
-        "pos": "形容词",
-        "aliases": [
-          "ながい"
-        ]
-      },
-      {
-        "label": "誤解",
-        "reading": "ごかい",
-        "pos": "名词",
-        "aliases": [
-          "ごかい"
-        ]
-      },
-      {
-        "label": "手こずる",
-        "reading": "てこずる",
-        "pos": "动词",
-        "aliases": [
-          "てこずる"
-        ]
-      },
-      {
-        "label": "罠",
-        "reading": "わな",
-        "pos": "名词",
-        "aliases": [
-          "わな"
-        ]
-      },
-      {
-        "label": "殊更",
-        "reading": "ことさら",
-        "pos": "副词",
-        "aliases": [
-          "ことさら"
-        ]
-      },
-      {
-        "label": "叫ぶ",
-        "reading": "さけぶ",
-        "pos": "动词",
-        "aliases": [
-          "さけぶ"
-        ]
-      },
-      {
-        "label": "熱心",
-        "reading": "ねっしん",
-        "pos": "形容词",
-        "aliases": [
-          "ねっしん"
-        ]
-      },
-      {
-        "label": "乾かす",
-        "reading": "かわかす",
-        "pos": "动词",
-        "aliases": [
-          "かわかす"
-        ]
-      },
-      {
-        "label": "息子",
-        "reading": "むすこ",
-        "pos": "名词",
-        "aliases": [
-          "むすこ"
-        ]
-      },
-      {
-        "label": "衣服",
-        "reading": "いふく",
-        "pos": "名词",
-        "aliases": [
-          "いふく"
-        ]
-      },
-      {
-        "label": "微笑ましい",
-        "reading": "ほほえましい",
-        "pos": "形容词",
-        "aliases": [
-          "ほほえましい"
-        ]
-      },
-      {
-        "label": "成し遂げる",
-        "reading": "なしとげる",
-        "pos": "动词",
-        "aliases": [
-          "なしとげる"
-        ]
-      },
-      {
-        "label": "悩む",
-        "reading": "なやむ",
-        "pos": "动词",
-        "aliases": [
-          "なやむ"
-        ]
-      },
-      {
-        "label": "衰える",
-        "reading": "おとろえる",
-        "pos": "动词",
-        "aliases": [
-          "おとろえる"
-        ]
-      },
-      {
-        "label": "切れる",
-        "reading": "きれる",
-        "pos": "动词",
-        "aliases": [
-          "きれる"
-        ]
-      },
-      {
-        "label": "走る",
-        "reading": "はしる",
-        "pos": "动词",
-        "aliases": [
-          "はしる"
-        ]
-      },
-      {
-        "label": "執着",
-        "reading": "しゅうちゃく",
-        "pos": "名词",
-        "aliases": [
-          "しゅうちゃく"
-        ]
-      },
-      {
-        "label": "無茶",
-        "reading": "むちゃ",
-        "pos": "形容词",
-        "aliases": [
-          "むちゃ"
-        ]
-      },
-      {
-        "label": "等しい",
-        "reading": "ひとしい",
-        "pos": "形容词",
-        "aliases": [
-          "ひとしい"
-        ]
-      },
-      {
-        "label": "光る",
-        "reading": "ひかる",
-        "pos": "动词",
-        "aliases": [
-          "ひかる"
-        ]
-      },
-      {
-        "label": "振り向く",
-        "reading": "ふりむく",
-        "pos": "动词",
-        "aliases": [
-          "ふりむく"
-        ]
-      },
-      {
-        "label": "屈む",
-        "reading": "かがむ",
-        "pos": "动词",
-        "aliases": [
-          "かがむ"
-        ]
-      },
-      {
-        "label": "寒い",
-        "reading": "さむい",
-        "pos": "形容词",
-        "aliases": [
-          "さむい"
-        ]
-      },
-      {
-        "label": "助ける",
-        "reading": "たすける",
-        "pos": "动词",
-        "aliases": [
-          "たすける"
-        ]
-      },
-      {
-        "label": "白い",
-        "reading": "しろい",
-        "pos": "形容词",
-        "aliases": [
-          "しろい"
-        ]
-      },
-      {
-        "label": "流す",
-        "reading": "ながす",
-        "pos": "动词",
-        "aliases": [
-          "ながす"
-        ]
-      },
-      {
-        "label": "危ぶむ",
-        "reading": "あやぶむ",
-        "pos": "动词",
-        "aliases": [
-          "あやぶむ"
-        ]
-      },
-      {
-        "label": "中でも",
-        "reading": "なかでも",
-        "pos": "副词",
-        "aliases": [
-          "なかでも"
-        ]
-      },
-      {
-        "label": "比較的",
-        "reading": "ひかくてき",
-        "pos": "副词",
-        "aliases": [
-          "ひかくてき"
-        ]
-      },
-      {
-        "label": "鮮やか",
-        "reading": "あざやか",
-        "pos": "形容词",
-        "aliases": [
-          "あざやか"
-        ]
-      },
-      {
-        "label": "魚",
-        "reading": "さかな",
-        "pos": "名词",
-        "aliases": [
-          "さかな"
-        ]
-      },
-      {
-        "label": "望み",
-        "reading": "のぞみ",
-        "pos": "名词",
-        "aliases": [
-          "のぞみ"
-        ]
-      },
-      {
-        "label": "光",
-        "reading": "ひかり",
-        "pos": "名词",
-        "aliases": [
-          "ひかり"
-        ]
-      },
-      {
         "label": "斜め",
         "reading": "ななめ",
         "pos": "名词",
         "aliases": [
           "ななめ"
-        ]
-      },
-      {
-        "label": "嘆く",
-        "reading": "なげく",
-        "pos": "动词",
-        "aliases": [
-          "なげく"
         ]
       },
       {
@@ -28872,291 +29550,35 @@
         ]
       },
       {
-        "label": "著しい",
-        "reading": "いちじるしい",
-        "pos": "形容词",
+        "label": "にわとり",
+        "reading": "にわとり",
+        "pos": "名词",
         "aliases": [
-          "いちじるしい"
+          "ニワトリ"
         ]
       },
       {
-        "label": "傷つく",
-        "reading": "きずつく",
+        "label": "はさみ",
+        "reading": "はさみ",
+        "pos": "名词",
+        "aliases": [
+          "ハサミ"
+        ]
+      },
+      {
+        "label": "茹でる",
+        "reading": "ゆでる",
         "pos": "动词",
         "aliases": [
-          "きずつく"
+          "ゆでる"
         ]
       },
       {
-        "label": "返品",
-        "reading": "へんぴん",
-        "pos": "名词",
-        "aliases": [
-          "へんぴん"
-        ]
-      },
-      {
-        "label": "梅雨",
-        "reading": "つゆ",
-        "pos": "名词",
-        "aliases": [
-          "つゆ"
-        ]
-      },
-      {
-        "label": "持て余す",
-        "reading": "もてあます",
+        "label": "取り消す",
+        "reading": "とりけす",
         "pos": "动词",
         "aliases": [
-          "もてあます"
-        ]
-      },
-      {
-        "label": "薬",
-        "reading": "くすり",
-        "pos": "名词",
-        "aliases": [
-          "くすり"
-        ]
-      },
-      {
-        "label": "召し上がる",
-        "reading": "めしあがる",
-        "pos": "动词",
-        "aliases": [
-          "めしあがる"
-        ]
-      },
-      {
-        "label": "封筒",
-        "reading": "ふうとう",
-        "pos": "名词",
-        "aliases": [
-          "ふうとう"
-        ]
-      },
-      {
-        "label": "錯覚",
-        "reading": "さっかく",
-        "pos": "名词",
-        "aliases": [
-          "さっかく"
-        ]
-      },
-      {
-        "label": "危うい",
-        "reading": "あやうい",
-        "pos": "形容词",
-        "aliases": [
-          "あやうい"
-        ]
-      },
-      {
-        "label": "銀",
-        "reading": "ぎん",
-        "pos": "名词",
-        "aliases": [
-          "ぎん"
-        ]
-      },
-      {
-        "label": "這う",
-        "reading": "はう",
-        "pos": "动词",
-        "aliases": [
-          "はう"
-        ]
-      },
-      {
-        "label": "悪化",
-        "reading": "あっか",
-        "pos": "名词",
-        "aliases": [
-          "あっか"
-        ]
-      },
-      {
-        "label": "最寄り",
-        "reading": "もより",
-        "pos": "名词",
-        "aliases": [
-          "もより"
-        ]
-      },
-      {
-        "label": "含む",
-        "reading": "ふくむ",
-        "pos": "动词",
-        "aliases": [
-          "ふくむ"
-        ]
-      },
-      {
-        "label": "上辺",
-        "reading": "うわべ",
-        "pos": "名词",
-        "aliases": [
-          "うわべ"
-        ]
-      },
-      {
-        "label": "殴る",
-        "reading": "なぐる",
-        "pos": "动词",
-        "aliases": [
-          "なぐる"
-        ]
-      },
-      {
-        "label": "有限",
-        "reading": "ゆうげん",
-        "pos": "形容词",
-        "aliases": [
-          "ゆうげん"
-        ]
-      },
-      {
-        "label": "戸惑う",
-        "reading": "とまどう",
-        "pos": "动词",
-        "aliases": [
-          "とまどう"
-        ]
-      },
-      {
-        "label": "鵜呑み",
-        "reading": "うのみ",
-        "pos": "名词",
-        "aliases": [
-          "うのみ"
-        ]
-      },
-      {
-        "label": "単に",
-        "reading": "たんに",
-        "pos": "副词",
-        "aliases": [
-          "たんに"
-        ]
-      },
-      {
-        "label": "騒がしい",
-        "reading": "さわがしい",
-        "pos": "形容词",
-        "aliases": [
-          "さわがしい"
-        ]
-      },
-      {
-        "label": "青い",
-        "reading": "あおい",
-        "pos": "形容词",
-        "aliases": [
-          "あおい"
-        ]
-      },
-      {
-        "label": "経験",
-        "reading": "けいけん",
-        "pos": "名词",
-        "aliases": [
-          "けいけん"
-        ]
-      },
-      {
-        "label": "揺れる",
-        "reading": "ゆれる",
-        "pos": "动词",
-        "aliases": [
-          "ゆれる"
-        ]
-      },
-      {
-        "label": "着替える",
-        "reading": "きがえる",
-        "pos": "动词",
-        "aliases": [
-          "きがえる"
-        ]
-      },
-      {
-        "label": "装う",
-        "reading": "よそおう",
-        "pos": "动词",
-        "aliases": [
-          "よそおう"
-        ]
-      },
-      {
-        "label": "普通",
-        "reading": "ふつう",
-        "pos": "形容词",
-        "aliases": [
-          "ふつう"
-        ]
-      },
-      {
-        "label": "流暢",
-        "reading": "りゅうちょう",
-        "pos": "形容词",
-        "aliases": [
-          "りゅうちょう"
-        ]
-      },
-      {
-        "label": "荒れる",
-        "reading": "あれる",
-        "pos": "动词",
-        "aliases": [
-          "あれる"
-        ]
-      },
-      {
-        "label": "楽々",
-        "reading": "らくらく",
-        "pos": "副词",
-        "aliases": [
-          "らくらく"
-        ]
-      },
-      {
-        "label": "太い",
-        "reading": "ふとい",
-        "pos": "形容词",
-        "aliases": [
-          "ふとい"
-        ]
-      },
-      {
-        "label": "補足",
-        "reading": "ほそく",
-        "pos": "名词",
-        "aliases": [
-          "ほそく"
-        ]
-      },
-      {
-        "label": "矛盾",
-        "reading": "むじゅん",
-        "pos": "名词",
-        "aliases": [
-          "むじゅん"
-        ]
-      },
-      {
-        "label": "閃く",
-        "reading": "ひらめく",
-        "pos": "动词",
-        "aliases": [
-          "ひらめく"
-        ]
-      },
-      {
-        "label": "雪",
-        "reading": "ゆき",
-        "pos": "名词",
-        "aliases": [
-          "ゆき"
+          "とりけす"
         ]
       },
       {
@@ -29168,30 +29590,6 @@
         ]
       },
       {
-        "label": "似合う",
-        "reading": "にあう",
-        "pos": "动词",
-        "aliases": [
-          "にあう"
-        ]
-      },
-      {
-        "label": "到底",
-        "reading": "とうてい",
-        "pos": "副词",
-        "aliases": [
-          "とうてい"
-        ]
-      },
-      {
-        "label": "煎餅",
-        "reading": "せんべい",
-        "pos": "名词",
-        "aliases": [
-          "せんべい"
-        ]
-      },
-      {
         "label": "振り回す",
         "reading": "ふりまわす",
         "pos": "动词",
@@ -29200,59 +29598,299 @@
         ]
       },
       {
-        "label": "技術",
-        "reading": "ぎじゅつ",
+        "label": "ひのき",
+        "reading": "ひのき",
         "pos": "名词",
         "aliases": [
-          "ぎじゅつ"
+          "ヒノキ"
         ]
       },
       {
-        "label": "響く",
-        "reading": "ひびく",
-        "pos": "动词",
-        "aliases": [
-          "ひびく"
-        ]
-      },
-      {
-        "label": "減らす",
-        "reading": "へらす",
-        "pos": "动词",
-        "aliases": [
-          "へらす"
-        ]
-      },
-      {
-        "label": "裏切る",
-        "reading": "うらぎる",
-        "pos": "动词",
-        "aliases": [
-          "うらぎる"
-        ]
-      },
-      {
-        "label": "奔放",
-        "reading": "ほんぽう",
+        "label": "頼もしい",
+        "reading": "たのもしい",
         "pos": "形容词",
         "aliases": [
-          "ほんぽう"
+          "たのもしい"
         ]
       },
       {
-        "label": "犬",
-        "reading": "いぬ",
-        "pos": "名词",
+        "label": "ばりばり",
+        "reading": "ばりばり",
+        "pos": "副词",
         "aliases": [
-          "いぬ"
+          "バリバリ"
         ]
       },
       {
-        "label": "蜂蜜",
-        "reading": "はちみつ",
+        "label": "ねた",
+        "reading": "ねた",
         "pos": "名词",
         "aliases": [
-          "ハチミツ"
+          "ネタ"
+        ]
+      },
+      {
+        "label": "青葉",
+        "reading": "あおば",
+        "pos": "名词",
+        "aliases": [
+          "あおば"
+        ]
+      },
+      {
+        "label": "差し当たり",
+        "reading": "さしあたり",
+        "pos": "副词",
+        "aliases": [
+          "さしあたり"
+        ]
+      },
+      {
+        "label": "かに",
+        "reading": "かに",
+        "pos": "名词",
+        "aliases": [
+          "カニ"
+        ]
+      },
+      {
+        "label": "銀",
+        "reading": "ぎん",
+        "pos": "名词",
+        "aliases": [
+          "ぎん"
+        ]
+      },
+      {
+        "label": "住まう",
+        "reading": "すまう",
+        "pos": "动词",
+        "aliases": [
+          "すまう"
+        ]
+      },
+      {
+        "label": "こめ",
+        "reading": "こめ",
+        "pos": "名词",
+        "aliases": [
+          "コメ"
+        ]
+      },
+      {
+        "label": "いるか",
+        "reading": "いるか",
+        "pos": "名词",
+        "aliases": [
+          "イルカ"
+        ]
+      },
+      {
+        "label": "準える",
+        "reading": "なぞらえる",
+        "pos": "动词",
+        "aliases": [
+          "なぞらえる"
+        ]
+      },
+      {
+        "label": "微笑ましい",
+        "reading": "ほほえましい",
+        "pos": "形容词",
+        "aliases": [
+          "ほほえましい"
+        ]
+      },
+      {
+        "label": "外れ",
+        "reading": "はずれ",
+        "pos": "名词",
+        "aliases": [
+          "はずれ"
+        ]
+      },
+      {
+        "label": "厚かましい",
+        "reading": "あつかましい",
+        "pos": "形容词",
+        "aliases": [
+          "あつかましい"
+        ]
+      },
+      {
+        "label": "戒める",
+        "reading": "いましめる",
+        "pos": "动词",
+        "aliases": [
+          "いましめる"
+        ]
+      },
+      {
+        "label": "持て余す",
+        "reading": "もてあます",
+        "pos": "动词",
+        "aliases": [
+          "もてあます"
+        ]
+      },
+      {
+        "label": "最寄り",
+        "reading": "もより",
+        "pos": "名词",
+        "aliases": [
+          "もより"
+        ]
+      },
+      {
+        "label": "手こずる",
+        "reading": "てこずる",
+        "pos": "动词",
+        "aliases": [
+          "てこずる"
+        ]
+      },
+      {
+        "label": "這う",
+        "reading": "はう",
+        "pos": "动词",
+        "aliases": [
+          "はう"
+        ]
+      },
+      {
+        "label": "殊更",
+        "reading": "ことさら",
+        "pos": "副词",
+        "aliases": [
+          "ことさら"
+        ]
+      },
+      {
+        "label": "うし",
+        "reading": "うし",
+        "pos": "名词",
+        "aliases": [
+          "ウシ"
+        ]
+      },
+      {
+        "label": "ふわふわ",
+        "reading": "ふわふわ",
+        "pos": "副词",
+        "aliases": [
+          "フワフワ"
+        ]
+      },
+      {
+        "label": "無茶",
+        "reading": "むちゃ",
+        "pos": "形容词",
+        "aliases": [
+          "むちゃ"
+        ]
+      },
+      {
+        "label": "屈む",
+        "reading": "かがむ",
+        "pos": "动词",
+        "aliases": [
+          "かがむ"
+        ]
+      },
+      {
+        "label": "梅雨",
+        "reading": "つゆ",
+        "pos": "名词",
+        "aliases": [
+          "つゆ"
+        ]
+      },
+      {
+        "label": "こんこん",
+        "reading": "こんこん",
+        "pos": "副词",
+        "aliases": [
+          "コンコン"
+        ]
+      },
+      {
+        "label": "ちかちか",
+        "reading": "ちかちか",
+        "pos": "副词",
+        "aliases": [
+          "チカチカ"
+        ]
+      },
+      {
+        "label": "装う",
+        "reading": "よそおう",
+        "pos": "动词",
+        "aliases": [
+          "よそおう"
+        ]
+      },
+      {
+        "label": "ねぎ",
+        "reading": "ねぎ",
+        "pos": "名词",
+        "aliases": [
+          "ネギ"
+        ]
+      },
+      {
+        "label": "着替える",
+        "reading": "きがえる",
+        "pos": "动词",
+        "aliases": [
+          "きがえる"
+        ]
+      },
+      {
+        "label": "流暢",
+        "reading": "りゅうちょう",
+        "pos": "形容词",
+        "aliases": [
+          "りゅうちょう"
+        ]
+      },
+      {
+        "label": "殴る",
+        "reading": "なぐる",
+        "pos": "动词",
+        "aliases": [
+          "なぐる"
+        ]
+      },
+      {
+        "label": "閃く",
+        "reading": "ひらめく",
+        "pos": "动词",
+        "aliases": [
+          "ひらめく"
+        ]
+      },
+      {
+        "label": "鵜呑み",
+        "reading": "うのみ",
+        "pos": "名词",
+        "aliases": [
+          "うのみ"
+        ]
+      },
+      {
+        "label": "研ぐ",
+        "reading": "とぐ",
+        "pos": "动词",
+        "aliases": [
+          "とぐ"
+        ]
+      },
+      {
+        "label": "ほうれんそう",
+        "reading": "ほうれんそう",
+        "pos": "名词",
+        "aliases": [
+          "ホウレンソウ"
         ]
       },
       {
@@ -29264,35 +29902,28 @@
         ]
       },
       {
-        "label": "愛しい",
-        "reading": "いとしい",
+        "label": "奔放",
+        "reading": "ほんぽう",
         "pos": "形容词",
         "aliases": [
-          "いとしい"
-        ]
-      },
-      {
-        "label": "小さい",
-        "reading": "ちいさい",
-        "pos": "形容词",
-        "aliases": [
-          "ちいさい"
-        ]
-      },
-      {
-        "label": "研ぐ",
-        "reading": "とぐ",
-        "pos": "动词",
-        "aliases": [
-          "とぐ"
+          "ほんぽう"
         ]
       }
     ]
   },
   "duplicates": {
-    "groups": 151,
-    "removedRows": 152,
+    "groups": 231,
+    "removedRows": 240,
     "merged": [
+      {
+        "label": "はく",
+        "reading": "はく",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
       {
         "label": "本気",
         "reading": "ほんき",
@@ -29312,6 +29943,15 @@
         "originalRows": 2
       },
       {
+        "label": "かなり",
+        "reading": "かなり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "退屈",
         "reading": "たいくつ",
         "partsOfSpeech": [
@@ -29326,6 +29966,15 @@
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "まま",
+        "reading": "まま",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -29357,6 +30006,16 @@
         "originalRows": 2
       },
       {
+        "label": "そもそも",
+        "reading": "そもそも",
+        "partsOfSpeech": [
+          "接续词",
+          "名词",
+          "副词"
+        ],
+        "originalRows": 3
+      },
+      {
         "label": "確か",
         "reading": "たしか",
         "partsOfSpeech": [
@@ -29384,6 +30043,15 @@
         "originalRows": 2
       },
       {
+        "label": "また",
+        "reading": "また",
+        "partsOfSpeech": [
+          "接续词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "同じ",
         "reading": "おなじ",
         "partsOfSpeech": [
@@ -29397,7 +30065,17 @@
         "reading": "かくべつ",
         "partsOfSpeech": [
           "名词",
+          "副词",
           "形容词"
+        ],
+        "originalRows": 3
+      },
+      {
+        "label": "かかる",
+        "reading": "かかる",
+        "partsOfSpeech": [
+          "动词",
+          "连体词"
         ],
         "originalRows": 2
       },
@@ -29420,10 +30098,37 @@
         "originalRows": 2
       },
       {
+        "label": "たつ",
+        "reading": "たつ",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "上手",
         "reading": "じょうず",
         "partsOfSpeech": [
           "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ただ",
+        "reading": "ただ",
+        "partsOfSpeech": [
+          "接续词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "よく",
+        "reading": "よく",
+        "partsOfSpeech": [
+          "副词",
           "名词"
         ],
         "originalRows": 2
@@ -29441,10 +30146,12 @@
         "label": "もっとも",
         "reading": "もっとも",
         "partsOfSpeech": [
+          "副词",
+          "接续词",
           "形容词",
           "名词"
         ],
-        "originalRows": 2
+        "originalRows": 4
       },
       {
         "label": "重",
@@ -29469,6 +30176,15 @@
         "reading": "せいこう",
         "partsOfSpeech": [
           "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "もつ",
+        "reading": "もつ",
+        "partsOfSpeech": [
+          "动词",
           "名词"
         ],
         "originalRows": 2
@@ -29501,6 +30217,15 @@
         "originalRows": 2
       },
       {
+        "label": "本当は",
+        "reading": "ほんとうは",
+        "partsOfSpeech": [
+          "接续词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "無用",
         "reading": "むよう",
         "partsOfSpeech": [
@@ -29528,6 +30253,24 @@
         "originalRows": 2
       },
       {
+        "label": "なす",
+        "reading": "なす",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "いかん",
+        "reading": "いかん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "ビッグ",
         "reading": "びっぐ",
         "partsOfSpeech": [
@@ -29537,10 +30280,65 @@
         "originalRows": 2
       },
       {
+        "label": "かつ",
+        "reading": "かつ",
+        "partsOfSpeech": [
+          "接续词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "略",
+        "reading": "りゃく",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "来る",
+        "reading": "くる",
+        "partsOfSpeech": [
+          "动词",
+          "连体词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "かく",
+        "reading": "かく",
+        "partsOfSpeech": [
+          "动词",
+          "名词",
+          "副词"
+        ],
+        "originalRows": 3
+      },
+      {
         "label": "急",
         "reading": "きゅう",
         "partsOfSpeech": [
           "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "いや",
+        "reading": "いや",
+        "partsOfSpeech": [
+          "接续词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "いくら",
+        "reading": "いくら",
+        "partsOfSpeech": [
+          "副词",
           "名词"
         ],
         "originalRows": 2
@@ -29559,6 +30357,15 @@
         "reading": "たんじゅん",
         "partsOfSpeech": [
           "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "一方",
+        "reading": "いっぽう",
+        "partsOfSpeech": [
+          "接续词",
           "名词"
         ],
         "originalRows": 2
@@ -29591,6 +30398,24 @@
         "originalRows": 2
       },
       {
+        "label": "ゆう",
+        "reading": "ゆう",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "次に",
+        "reading": "つぎに",
+        "partsOfSpeech": [
+          "接续词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "巧み",
         "reading": "たくみ",
         "partsOfSpeech": [
@@ -29609,6 +30434,15 @@
         "originalRows": 2
       },
       {
+        "label": "とう",
+        "reading": "とう",
+        "partsOfSpeech": [
+          "副词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "雑",
         "reading": "ざつ",
         "partsOfSpeech": [
@@ -29622,6 +30456,15 @@
         "reading": "おおげさ",
         "partsOfSpeech": [
           "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ついで",
+        "reading": "ついで",
+        "partsOfSpeech": [
+          "接续词",
           "名词"
         ],
         "originalRows": 2
@@ -29664,6 +30507,15 @@
         "originalRows": 2
       },
       {
+        "label": "ひとり",
+        "reading": "ひとり",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "幸運",
         "reading": "こううん",
         "partsOfSpeech": [
@@ -29689,6 +30541,16 @@
           "名词"
         ],
         "originalRows": 2
+      },
+      {
+        "label": "とく",
+        "reading": "とく",
+        "partsOfSpeech": [
+          "名词",
+          "副词",
+          "动词"
+        ],
+        "originalRows": 3
       },
       {
         "label": "平凡",
@@ -29736,6 +30598,15 @@
         "originalRows": 2
       },
       {
+        "label": "思い切り",
+        "reading": "おもいきり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "欲張り",
         "reading": "よくばり",
         "partsOfSpeech": [
@@ -29754,11 +30625,20 @@
         "originalRows": 2
       },
       {
-        "label": "ぴったり",
-        "reading": "ぴったり",
+        "label": "うっかり",
+        "reading": "うっかり",
         "partsOfSpeech": [
           "副词",
-          "形容词"
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "さかん",
+        "reading": "さかん",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -29772,11 +30652,38 @@
         "originalRows": 2
       },
       {
+        "label": "だいたい",
+        "reading": "だいたい",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "とにかく",
+        "reading": "とにかく",
+        "partsOfSpeech": [
+          "副词",
+          "接续词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "秘密",
         "reading": "ひみつ",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ばん",
+        "reading": "ばん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -29799,11 +30706,56 @@
         "originalRows": 2
       },
       {
+        "label": "なお",
+        "reading": "なお",
+        "partsOfSpeech": [
+          "接续词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "一見",
+        "reading": "いっけん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "つまり",
+        "reading": "つまり",
+        "partsOfSpeech": [
+          "接续词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "平常",
+        "reading": "へいじょう",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "暇",
         "reading": "ひま",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "さく",
+        "reading": "さく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -29853,11 +30805,29 @@
         "originalRows": 2
       },
       {
+        "label": "いか",
+        "reading": "いか",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "寝坊",
         "reading": "ねぼう",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "至急",
+        "reading": "しきゅう",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -29907,11 +30877,47 @@
         "originalRows": 2
       },
       {
+        "label": "元来",
+        "reading": "がんらい",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "からから",
+        "reading": "からから",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ふく",
+        "reading": "ふく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "幸い",
         "reading": "さいわい",
         "partsOfSpeech": [
           "副词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "近頃",
+        "reading": "ちかごろ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -29952,6 +30958,34 @@
         "originalRows": 2
       },
       {
+        "label": "しょう",
+        "reading": "しょう",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "極",
+        "reading": "ごく",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "がらがら",
+        "reading": "がらがら",
+        "partsOfSpeech": [
+          "副词",
+          "名词",
+          "形容词"
+        ],
+        "originalRows": 3
+      },
+      {
         "label": "ぼんやり",
         "reading": "ぼんやり",
         "partsOfSpeech": [
@@ -29974,9 +31008,10 @@
         "reading": "せいいっぱい",
         "partsOfSpeech": [
           "副词",
+          "形容词",
           "名词"
         ],
-        "originalRows": 2
+        "originalRows": 3
       },
       {
         "label": "偶然",
@@ -30033,11 +31068,29 @@
         "originalRows": 2
       },
       {
+        "label": "ほっと",
+        "reading": "ほっと",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "感心",
         "reading": "かんしん",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "急ぎ",
+        "reading": "いそぎ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30071,6 +31124,24 @@
       {
         "label": "本意",
         "reading": "ほんい",
+        "partsOfSpeech": [
+          "形容词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "わく",
+        "reading": "わく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "したたか",
+        "reading": "したたか",
         "partsOfSpeech": [
           "形容词",
           "名词"
@@ -30114,11 +31185,38 @@
         "originalRows": 2
       },
       {
+        "label": "みつ",
+        "reading": "みつ",
+        "partsOfSpeech": [
+          "名词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "頑丈",
         "reading": "がんじょう",
         "partsOfSpeech": [
           "形容词",
           "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "おなじ",
+        "reading": "おなじ",
+        "partsOfSpeech": [
+          "连体词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "余計",
+        "reading": "よけい",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30155,6 +31253,24 @@
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "無理やり",
+        "reading": "むりやり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "要するに",
+        "reading": "ようするに",
+        "partsOfSpeech": [
+          "副词",
+          "接续词"
         ],
         "originalRows": 2
       },
@@ -30204,11 +31320,29 @@
         "originalRows": 2
       },
       {
+        "label": "一体",
+        "reading": "いったい",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "とことん",
         "reading": "とことん",
         "partsOfSpeech": [
           "副词",
           "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ぜったい",
+        "reading": "ぜったい",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30240,11 +31374,29 @@
         "originalRows": 2
       },
       {
+        "label": "そこそこ",
+        "reading": "そこそこ",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "絶大",
         "reading": "ぜつだい",
         "partsOfSpeech": [
           "形容词",
           "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "めった",
+        "reading": "めった",
+        "partsOfSpeech": [
+          "名词",
+          "形容词"
         ],
         "originalRows": 2
       },
@@ -30258,11 +31410,29 @@
         "originalRows": 2
       },
       {
+        "label": "あく",
+        "reading": "あく",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "平ら",
         "reading": "たいら",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "年中",
+        "reading": "ねんじゅう",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30276,11 +31446,38 @@
         "originalRows": 2
       },
       {
+        "label": "ともかく",
+        "reading": "ともかく",
+        "partsOfSpeech": [
+          "副词",
+          "接续词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "反面",
+        "reading": "はんめん",
+        "partsOfSpeech": [
+          "接续词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "固有",
         "reading": "こゆう",
         "partsOfSpeech": [
           "形容词",
           "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "一目",
+        "reading": "いちもく",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30312,6 +31509,15 @@
         "originalRows": 2
       },
       {
+        "label": "ぶつ",
+        "reading": "ぶつ",
+        "partsOfSpeech": [
+          "动词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "煩雑",
         "reading": "はんざつ",
         "partsOfSpeech": [
@@ -30330,6 +31536,15 @@
         "originalRows": 2
       },
       {
+        "label": "根こそぎ",
+        "reading": "ねこそぎ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "純粋",
         "reading": "じゅんすい",
         "partsOfSpeech": [
@@ -30339,11 +31554,38 @@
         "originalRows": 2
       },
       {
+        "label": "元々",
+        "reading": "もともと",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "およそ",
+        "reading": "およそ",
+        "partsOfSpeech": [
+          "副词",
+          "连体词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "気の毒",
         "reading": "きのどく",
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "是非",
+        "reading": "ぜひ",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30362,6 +31604,15 @@
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "よし",
+        "reading": "よし",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -30393,11 +31644,29 @@
         "originalRows": 2
       },
       {
+        "label": "人一倍",
+        "reading": "ひといちばい",
+        "partsOfSpeech": [
+          "副词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "不向き",
         "reading": "ふむき",
         "partsOfSpeech": [
           "形容词",
           "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "りん",
+        "reading": "りん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
         ],
         "originalRows": 2
       },
@@ -30447,6 +31716,15 @@
         "originalRows": 2
       },
       {
+        "label": "今更",
+        "reading": "いまさら",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "安静",
         "reading": "あんせい",
         "partsOfSpeech": [
@@ -30461,6 +31739,24 @@
         "partsOfSpeech": [
           "形容词",
           "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "当て",
+        "reading": "あて",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "否",
+        "reading": "いな",
+        "partsOfSpeech": [
+          "接续词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -30483,6 +31779,15 @@
         "originalRows": 2
       },
       {
+        "label": "そこら",
+        "reading": "そこら",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "非常識",
         "reading": "ひじょうしき",
         "partsOfSpeech": [
@@ -30497,6 +31802,15 @@
         "partsOfSpeech": [
           "名词",
           "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "しっくり",
+        "reading": "しっくり",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -30564,6 +31878,15 @@
         "originalRows": 2
       },
       {
+        "label": "何分",
+        "reading": "なにぶん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "不平",
         "reading": "ふへい",
         "partsOfSpeech": [
@@ -30591,6 +31914,15 @@
         "originalRows": 2
       },
       {
+        "label": "ピン",
+        "reading": "ぴん",
+        "partsOfSpeech": [
+          "名词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "露骨",
         "reading": "ろこつ",
         "partsOfSpeech": [
@@ -30600,10 +31932,28 @@
         "originalRows": 2
       },
       {
+        "label": "転",
+        "reading": "てん",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "均等",
         "reading": "きんとう",
         "partsOfSpeech": [
           "名词",
+          "形容词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "ふつふつ",
+        "reading": "ふつふつ",
+        "partsOfSpeech": [
+          "副词",
           "形容词"
         ],
         "originalRows": 2
@@ -30654,725 +32004,15 @@
         "originalRows": 2
       }
     ],
-    "retainedAmbiguous": [
-      {
-        "label": "はく",
-        "reading": "はく",
-        "partsOfSpeech": [
-          "名词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "かなり",
-        "reading": "かなり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "まま",
-        "reading": "まま",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "バラバラ",
-        "reading": "ばらばら",
-        "partsOfSpeech": [
-          "副词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ふつう",
-        "reading": "ふつう",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "普通",
-        "reading": "ふつう",
-        "partsOfSpeech": [
-          "形容词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "格別",
-        "reading": "かくべつ",
-        "partsOfSpeech": [
-          "名词",
-          "副词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "かかる",
-        "reading": "かかる",
-        "partsOfSpeech": [
-          "动词",
-          "连体词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "たつ",
-        "reading": "たつ",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "よく",
-        "reading": "よく",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "もっとも",
-        "reading": "もっとも",
-        "partsOfSpeech": [
-          "副词",
-          "形容词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "もつ",
-        "reading": "もつ",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "なす",
-        "reading": "なす",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "いかん",
-        "reading": "いかん",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "略",
-        "reading": "りゃく",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "来る",
-        "reading": "くる",
-        "partsOfSpeech": [
-          "动词",
-          "连体词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "かく",
-        "reading": "かく",
-        "partsOfSpeech": [
-          "动词",
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "いくら",
-        "reading": "いくら",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ゆう",
-        "reading": "ゆう",
-        "partsOfSpeech": [
-          "名词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "とう",
-        "reading": "とう",
-        "partsOfSpeech": [
-          "副词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ひとり",
-        "reading": "ひとり",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "とく",
-        "reading": "とく",
-        "partsOfSpeech": [
-          "名词",
-          "副词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "思い切り",
-        "reading": "おもいきり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "うっかり",
-        "reading": "うっかり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "さかん",
-        "reading": "さかん",
-        "partsOfSpeech": [
-          "形容词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "どきどき",
-        "reading": "どきどき",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "だいたい",
-        "reading": "だいたい",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "にこにこ",
-        "reading": "にこにこ",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ばん",
-        "reading": "ばん",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "一見",
-        "reading": "いっけん",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "平常",
-        "reading": "へいじょう",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "さく",
-        "reading": "さく",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ぎりぎり",
-        "reading": "ぎりぎり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "いか",
-        "reading": "いか",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "至急",
-        "reading": "しきゅう",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "元来",
-        "reading": "がんらい",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "からから",
-        "reading": "からから",
-        "partsOfSpeech": [
-          "形容词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ふく",
-        "reading": "ふく",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "近頃",
-        "reading": "ちかごろ",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "しょう",
-        "reading": "しょう",
-        "partsOfSpeech": [
-          "名词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "極",
-        "reading": "ごく",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "がらがら",
-        "reading": "がらがら",
-        "partsOfSpeech": [
-          "副词",
-          "名词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ばらばら",
-        "reading": "ばらばら",
-        "partsOfSpeech": [
-          "副词",
-          "名词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "精一杯",
-        "reading": "せいいっぱい",
-        "partsOfSpeech": [
-          "副词",
-          "形容词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "そもそも",
-        "reading": "そもそも",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ほっと",
-        "reading": "ほっと",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "急ぎ",
-        "reading": "いそぎ",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "わく",
-        "reading": "わく",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "したたか",
-        "reading": "したたか",
-        "partsOfSpeech": [
-          "形容词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "みつ",
-        "reading": "みつ",
-        "partsOfSpeech": [
-          "名词",
-          "动词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "おなじ",
-        "reading": "おなじ",
-        "partsOfSpeech": [
-          "连体词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "余計",
-        "reading": "よけい",
-        "partsOfSpeech": [
-          "形容词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "無理やり",
-        "reading": "むりやり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "一体",
-        "reading": "いったい",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ぜったい",
-        "reading": "ぜったい",
-        "partsOfSpeech": [
-          "形容词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "そこそこ",
-        "reading": "そこそこ",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "めった",
-        "reading": "めった",
-        "partsOfSpeech": [
-          "名词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "いらいら",
-        "reading": "いらいら",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "あく",
-        "reading": "あく",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "年中",
-        "reading": "ねんじゅう",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "一目",
-        "reading": "いちもく",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ぶつ",
-        "reading": "ぶつ",
-        "partsOfSpeech": [
-          "动词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "根こそぎ",
-        "reading": "ねこそぎ",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "元々",
-        "reading": "もともと",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "およそ",
-        "reading": "およそ",
-        "partsOfSpeech": [
-          "副词",
-          "连体词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "是非",
-        "reading": "ぜひ",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "よし",
-        "reading": "よし",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "人一倍",
-        "reading": "ひといちばい",
-        "partsOfSpeech": [
-          "副词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "りん",
-        "reading": "りん",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "今更",
-        "reading": "いまさら",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "当て",
-        "reading": "あて",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "そこら",
-        "reading": "そこら",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "しっくり",
-        "reading": "しっくり",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "何分",
-        "reading": "なにぶん",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "イライラ",
-        "reading": "いらいら",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ピン",
-        "reading": "ぴん",
-        "partsOfSpeech": [
-          "名词",
-          "副词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "転",
-        "reading": "てん",
-        "partsOfSpeech": [
-          "副词",
-          "名词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      },
-      {
-        "label": "ふつふつ",
-        "reading": "ふつふつ",
-        "partsOfSpeech": [
-          "副词",
-          "形容词"
-        ],
-        "reason": "homonym_or_insufficient_evidence"
-      }
-    ]
+    "retainedAmbiguous": []
   },
   "audit": {
-    "total": 14825,
-    "polysemy": 2397,
-    "token": 412,
-    "level": 7822,
-    "ungraded": 7142,
-    "estimates": 488,
+    "total": 14648,
+    "polysemy": 2348,
+    "token": 374,
+    "level": 7819,
+    "ungraded": 7041,
+    "estimates": 484,
     "multipleGrades": 2
   }
 }

@@ -23,6 +23,7 @@ inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
 inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 inputs.push('src/lib/frequency-duplicates.mjs');
+inputs.push('src/data/frequency-levels/variant-review.json');
 inputs.push('src/lib/frequency-audit.mjs');
 inputs.push('src/lib/frequency-mimetics.mjs');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
@@ -76,7 +77,7 @@ quality.morphologyReview = corpus.morphologyReview;
 quality.morphologySummary = Object.groupBy(corpus.morphologyReview, row => row.reason);
 quality.morphologySummary = Object.fromEntries(Object.entries(quality.morphologySummary).map(([reason, rows]) => [reason, {forms: rows.length, occurrences: rows.reduce((sum, row) => sum + row.occurrences, 0)}]));
 delete corpus.morphologyReview;
-quality.variants = mergeFrequencyWordVariants(corpus, dictionaryEntries);
+quality.variants = mergeFrequencyWordVariants(corpus, dictionaryEntries, JSON.parse(contents.get('src/data/frequency-levels/variant-review.json')).entries);
 quality.duplicates = mergeFrequencyDuplicateWords(corpus, dictionaryEntries);
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));

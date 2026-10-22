@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "revision": "ae64d9b309294dc7cbb85d83b490ecf5ce8884067e407ed2cc19a55249e0e456",
+  "revision": "4053e61d0f8f684082119af6a3b5e33b01a4c7fb25201a88a032b4f09d608150",
   "summary": {
     "questions": 8759,
     "papers": 94,
     "units": 37925,
-    "terms": 14825,
+    "terms": 14648,
     "listeningQuestions": 2634,
     "transcripts": 2633,
     "excludedFragments": 2362,
@@ -13,9 +13,9 @@
     "idiomExpressions": 262
   },
   "definitionSummary": {
-    "matched": 14718,
-    "missing": 107,
-    "total": 14825
+    "matched": 14543,
+    "missing": 105,
+    "total": 14648
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
@@ -39,7 +39,7 @@
   "referenceSupplementSource": {
     "name": "补充词表交叉核对、整词表记复核与站内估级",
     "url": "https://github.com/Linkyyy/new-jlpt-pratice/tree/main/src/data/frequency-levels",
-    "revision": "48cdf2a051b130b3a126199baa8b4e7dc696f67f6b2a6d3c2108d83f62f0e72e",
+    "revision": "0f8cf724975c8e4639bcc1cffd04b24cfb723718cb8f43fdd4faea210e069991",
     "license": "CC BY-SA 4.0 / MIT / site-authored estimates",
     "entries": 1723,
     "sources": [
@@ -64,9 +64,16 @@
         "generated": "2026-04-14",
         "filter": "Common entries only: any word with at least one kanji or kana writing flagged common=true in the upstream JMdict priority markers (news1/ichi1/spec1/spec2/gai1).",
         "attribution": "This work uses JMdict from the Electronic Dictionary Research and Development Group (EDRDG), used in conformance with the Group's license (https://www.edrdg.org/edrdg/licence.html). Example sentences sourced from the Tatoeba Project (https://tatoeba.org/) under CC-BY 2.0 FR, selected and linked by JMdict editors. Ingested via scriptin/jmdict-simplified (https://github.com/scriptin/jmdict-simplified)."
+      },
+      {
+        "name": "Jamie Sinclair, Open Anki JLPT Decks; Jonathan Waller / Tanos original data",
+        "url": "https://github.com/jamsinclair/open-anki-jlpt-decks/blob/1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0/src/n3.csv",
+        "revision": "1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0",
+        "license": "MIT; attribution to Jonathan Waller / Tanos retained"
       }
     ],
-    "policy": "Only exact whole-word/reading matches or a unique same-reading JMdict entry may extend published grades. Existing grades are preserved. Site estimates are recorded separately and labelled in UI and exports."
+    "policy": "Only exact whole-word/reading matches or a unique same-reading JMdict entry may extend published grades. Existing grades are preserved. Site estimates are recorded separately and labelled in UI and exports.",
+    "reviewRevision": "2026-10-22-whole-word-pos-and-orthography"
   },
   "qualitySummary": {
     "excludedTerms": 1578,

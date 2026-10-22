@@ -6297,5 +6297,640 @@
     "method": "editorial",
     "overridesVariant": true,
     "reason": "Reviewed common spelling separately; rare kanji/alternate spelling grade must not be transferred to this elementary word."
+  },
+  {
+    "kind": "word",
+    "label": "しかる",
+    "reading": "しかる",
+    "pos": [
+      "动词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1319580",
+    "referenceWord": "叱る",
+    "referenceReading": "しかる",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "connective",
+    "label": "かつ",
+    "reading": "かつ",
+    "pos": [
+      "接续词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1208840",
+    "referenceWord": "且つ",
+    "referenceReading": "かつ",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "ごく",
+    "reading": "ごく",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1240180",
+    "referenceWord": "極",
+    "referenceReading": "ごく",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "たいへん",
+    "reading": "たいへん",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N5"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1415000",
+    "referenceWord": "大変",
+    "referenceReading": "たいへん",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "いったい",
+    "reading": "いったい",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1164510",
+    "referenceWord": "一体",
+    "referenceReading": "いったい",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "ふつう",
+    "reading": "ふつう",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N4"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1497190",
+    "referenceWord": "普通",
+    "referenceReading": "ふつう",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "たいして",
+    "reading": "たいして",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N2"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1412970",
+    "referenceWord": "大して",
+    "referenceReading": "たいして",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "わく",
+    "reading": "わく",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-word-sense",
+    "jmdictId": "1562610",
+    "referenceWord": "枠",
+    "referenceReading": "わく",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+  },
+  {
+    "kind": "word",
+    "label": "ソファ",
+    "reading": "そふぁ",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1075480",
+    "referenceWord": "ソファー",
+    "referenceReading": "ソファー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「ソファー／ソファー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "ファクス",
+    "reading": "ふぁくす",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N4"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1108180",
+    "referenceWord": "ファックス",
+    "referenceReading": "ファックス",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「ファックス／ファックス」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "とっても",
+    "reading": "とっても",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N5"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1008630",
+    "referenceWord": "とても",
+    "referenceReading": "とても",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「とても／とても」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "パーティ",
+    "reading": "ぱーてぃ",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N5"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1100760",
+    "referenceWord": "パーティー",
+    "referenceReading": "パーティー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「パーティー／パーティー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "データー",
+    "reading": "でーたー",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1081190",
+    "referenceWord": "データ",
+    "referenceReading": "データ",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「データ／データ」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "悪口",
+    "reading": "わるぐち",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1575730",
+    "referenceWord": "悪口",
+    "referenceReading": "わるくち",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「悪口／わるくち」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "オッケー",
+    "reading": "おっけー",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1031600",
+    "referenceWord": "ＯＫ",
+    "referenceReading": "オーケー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「ＯＫ／オーケー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "アクセサリ",
+    "reading": "あくせさり",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N4"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1015220",
+    "referenceWord": "アクセサリー",
+    "referenceReading": "アクセサリー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「アクセサリー／アクセサリー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "コーナ",
+    "reading": "こーな",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1049110",
+    "referenceWord": "コーナー",
+    "referenceReading": "コーナー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「コーナー／コーナー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "ウエイトレス",
+    "reading": "うえいとれす",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N2"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1025690",
+    "referenceWord": "ウエートレス",
+    "referenceReading": "ウエートレス",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「ウエートレス／ウエートレス」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "スピーカ",
+    "reading": "すぴーか",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N2"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1072240",
+    "referenceWord": "スピーカー",
+    "referenceReading": "スピーカー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「スピーカー／スピーカー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "ずーっと",
+    "reading": "ずーっと",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1006380",
+    "referenceWord": "ずっと",
+    "referenceReading": "ずっと",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「ずっと／ずっと」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "メンバ",
+    "reading": "めんば",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1134370",
+    "referenceWord": "メンバー",
+    "referenceReading": "メンバー",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「メンバー／メンバー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "あったかい",
+    "reading": "あったかい",
+    "pos": [
+      "形容词"
+    ],
+    "levels": [
+      "N5"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1586420",
+    "referenceWord": "暖かい",
+    "referenceReading": "あたたかい",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「暖かい／あたたかい」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "瞑る",
+    "reading": "つむる",
+    "pos": [
+      "动词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1585820",
+    "referenceWord": "瞑る",
+    "referenceReading": "つぶる",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「瞑る／つぶる」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "どっか",
+    "reading": "どっか",
+    "pos": [
+      "副词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1189000",
+    "referenceWord": "どこか",
+    "referenceReading": "どこか",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「どこか／どこか」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "エレベータ",
+    "reading": "えれべーた",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N5"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1030630",
+    "referenceWord": "エレベーター",
+    "referenceReading": "エレベーター",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「エレベーター／エレベーター」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "センタ",
+    "reading": "せんた",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1075040",
+    "referenceWord": "センター",
+    "referenceReading": "センター",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「センター／センター」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "インターホン",
+    "reading": "いんたーほん",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N1"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1022990",
+    "referenceWord": "インターフォン",
+    "referenceReading": "インターフォン",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「インターフォン／インターフォン」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "さみしい",
+    "reading": "さみしい",
+    "pos": [
+      "形容词"
+    ],
+    "levels": [
+      "N4"
+    ],
+    "method": "reviewed-reading-variant",
+    "jmdictId": "1579720",
+    "referenceWord": "寂しい",
+    "referenceReading": "さびしい",
+    "source": {
+      "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+      "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "license": "CC BY-SA 4.0"
+    },
+    "reason": "整词人工复核：与公开词表的「寂しい／さびしい」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+  },
+  {
+    "kind": "word",
+    "label": "表示",
+    "reading": "ひょうじ",
+    "pos": [
+      "名词"
+    ],
+    "levels": [
+      "N3"
+    ],
+    "method": "word-list",
+    "source": {
+      "name": "Jamie Sinclair, Open Anki JLPT Decks; Jonathan Waller / Tanos original data",
+      "url": "https://github.com/jamsinclair/open-anki-jlpt-decks/blob/1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0/src/n3.csv",
+      "revision": "1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0",
+      "license": "MIT; attribution to Jonathan Waller / Tanos retained"
+    },
+    "reason": "公开 N3 词表中表记与读音精确匹配。"
   }
 ]

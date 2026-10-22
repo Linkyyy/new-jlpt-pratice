@@ -1,52 +1,41 @@
 const normalize = value => value.normalize('NFKC').replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
-const tags = {名词: ['noun'], 形容词: ['adj', 'adj_noun'], 副词: ['adv'], 连体词: ['det', 'adnominal']};
 
-/** A noun/na-adjective is one lexeme. Other POS combinations require an
- * unambiguous dictionary headword; kana homonyms and verbs remain separate. */
-function sameWord(a, b, dictionary) {
-  if ([a[2], b[2]].some(pos => !tags[pos])) return false;
-  const poses = new Set([a[2], b[2]]);
-  if (poses.size === 2 && poses.has('名词') && poses.has('形容词') && /[\p{Script=Han}\p{Script=Katakana}]/u.test(a[0])) return true;
-  if (a[0] === '同じ' && a[1] === 'おなじ' && [...poses].every(pos => ['连体词', '形容词'].includes(pos))) return true;
-  if (a[0] === 'こんな' && [...poses].every(pos => ['连体词', '形容词'].includes(pos))) return true;
-  const headwords = term => new Set((dictionary[term[0]] ?? []).filter(entry => tags[term[2]].includes(entry.pos) && entry.readings.some(reading => normalize(reading) === normalize(term[1]))).map(entry => entry.word));
-  const left = headwords(a), right = headwords(b);
-  return left.size === 1 && right.size === 1 && [...left][0] === [...right][0];
-}
-
-export function mergeFrequencyDuplicateWords(corpus, dictionary) {
-  const buckets = new Map(), groups = [], untouched = [];
+/** One displayed headword per spelling/reading, with all POS and senses retained.
+ * This is display aggregation, not a claim that homonymous senses are identical. */
+export function mergeFrequencyDuplicateWords(corpus) {
+  const buckets = new Map();
   corpus.terms.forEach((term, id) => {
-    if (term[3] !== 'word') return;
+    if (!['word', 'connective'].includes(term[3])) return;
     const key = `${term[0].normalize('NFKC')}\t${normalize(term[1])}`;
     if (!buckets.has(key)) buckets.set(key, []);
     buckets.get(key).push(id);
   });
-  for (const ids of buckets.values()) {
-    if (ids.length < 2) continue;
-    const partitions = [];
-    for (const id of ids) {
-      const group = partitions.find(group => group.every(other => sameWord(corpus.terms[id], corpus.terms[other], dictionary)));
-      if (group) group.push(id); else partitions.push([id]);
-    }
-    groups.push(...partitions.filter(group => group.length > 1));
-    if (partitions.length > 1) untouched.push({label: corpus.terms[ids[0]][0], reading: corpus.terms[ids[0]][1], partsOfSpeech: ids.map(id => corpus.terms[id][2]), reason: 'homonym_or_insufficient_evidence'});
-  }
+  const groups = [...buckets.values()].filter(ids => ids.length > 1);
+  const report = {groups: groups.length, removedRows: groups.reduce((total, ids) => total + ids.length - 1, 0), merged: groups.map(ids => ({label: corpus.terms[ids[0]][0], reading: corpus.terms[ids[0]][1], partsOfSpeech: ids.map(id => corpus.terms[id][2]), originalRows: ids.length})), retainedAmbiguous: []};
+  applyFrequencyMerges(corpus, groups);
+  return report;
+}
+
+/** Apply disjoint groups (canonical ID first) to every aligned annotation. */
+export function applyFrequencyMerges(corpus, groups) {
   const targets = corpus.terms.map((_, id) => id), merged = new Map();
   for (const ids of groups) { merged.set(ids[0], ids); for (const id of ids) targets[id] = ids[0]; }
   const retained = targets.map((target, id) => target === id ? id : -1).filter(id => id !== -1);
   const indices = new Map(retained.map((id, index) => [id, index]));
   const remap = targets.map(id => indices.get(id));
-  const report = {groups: groups.length, removedRows: corpus.terms.length - retained.length, merged: groups.map(ids => ({label: corpus.terms[ids[0]][0], reading: corpus.terms[ids[0]][1], partsOfSpeech: ids.map(id => corpus.terms[id][2]), originalRows: ids.length})), retainedAmbiguous: untouched};
   const partsOfSpeech = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.partsOfSpeech?.[other] ?? [corpus.terms[other][2]]))]);
-  const aliases = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.aliases?.[other] ?? []))]);
+  const aliases = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => [corpus.terms[other][0], ...(corpus.aliases?.[other] ?? [])]))].filter(label => label !== corpus.terms[id][0]));
   const definitions = corpus.definitions && retained.map(id => {
     const ids = merged.get(id) ?? [id], definitions = ids.map(other => corpus.definitions[other]);
     const first = definitions.find(definition => definition?.meaning) ?? definitions[0];
     if (ids.length === 1) return first;
     const meanings = [...new Set(definitions.map(definition => definition?.meaning).filter(Boolean))];
     const usage = [...new Set(definitions.map(definition => definition?.usage).filter(Boolean))].join('；');
-    return {...first, meaning: meanings.join('；'), usage, source: definitions.some(definition => definition?.source === 'editorial') ? 'editorial' : first.source};
+    const senses = [...new Map(ids.flatMap(other => {
+      const definition = corpus.definitions[other];
+      return definition?.senses?.length ? definition.senses.map(sense => ({...sense, pos: sense.pos ?? corpus.terms[other][2]})) : definition?.meaning ? [{word: definition.word ?? corpus.terms[other][0], pos: corpus.terms[other][2], meaning: definition.meaning}] : [];
+    }).map(sense => [`${sense.word}\t${sense.pos ?? ''}\t${sense.meaning}`, sense])).values()];
+    return {...first, meaning: meanings.join('；'), usage, ...(meanings.length > 1 ? {senses} : {}), source: definitions.some(definition => definition?.source === 'editorial') ? 'editorial' : first.source};
   });
   corpus.units = corpus.units.map(([field, references, counts]) => {
     const totals = new Map();
@@ -56,9 +45,29 @@ export function mergeFrequencyDuplicateWords(corpus, dictionary) {
   // Preserve aligned annotations if this pass is also used on a built index.
   for (const key of ['referenceLevels', 'compounds', 'referenceBasis']) if (corpus[key]) corpus[key] = retained.map(id => key === 'referenceLevels'
     ? [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus[key][other] ?? []))].sort()
-    : key === 'compounds' ? (merged.get(id) ?? [id]).some(other => corpus[key][other]) : corpus[key][id]);
+    : key === 'compounds' ? (merged.get(id) ?? [id]).some(other => corpus[key][other])
+      : ['reference', 'supplemental', 'editorial', 'ungraded'].find(basis => (merged.get(id) ?? [id]).some(other => corpus[key][other] === basis)) ?? corpus[key][id]);
+  if (corpus.referenceEvidence) corpus.referenceEvidence = retained.map(id => [...new Map((merged.get(id) ?? [id]).flatMap(other => corpus.referenceEvidence[other] ?? []).map(row => [JSON.stringify(row), row])).values()]);
   if (corpus.surfaceForms) corpus.surfaceForms = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.surfaceForms[other] ?? []))].sort());
-  corpus.terms = retained.map(id => corpus.terms[id]);
+  if (corpus.readingAliases) corpus.readingAliases = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.readingAliases[other] ?? []))]);
+  if (corpus.termReview) {
+    const coverage = retained.map(() => ({occurrences: 0, questions: new Set(), papers: new Set()}));
+    for (const [, references, counts] of corpus.units) for (let i = 0; i < counts.length; i += 2) {
+      const row = coverage[counts[i]]; row.occurrences += counts[i + 1];
+      for (const question of references) { row.questions.add(question); row.papers.add(corpus.questions[question][8]); }
+    }
+    corpus.termReview = retained.map((id, index) => ({
+      flags: [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.termReview[other]?.flags ?? []))],
+      reasons: [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.termReview[other]?.reasons ?? []))],
+      occurrences: coverage[index].occurrences, questions: coverage[index].questions.size, papers: coverage[index].papers.size,
+    }));
+    delete corpus.auditSummary; // Recomputed by the audit pass after aggregation.
+  }
+  corpus.terms = retained.map(id => {
+    const term = [...corpus.terms[id]];
+    if (term[3] === 'connective' && (merged.get(id) ?? []).some(other => corpus.terms[other][3] === 'word')) term[3] = 'word';
+    return term;
+  });
   corpus.aliases = aliases; corpus.partsOfSpeech = partsOfSpeech;
   if (definitions) {
     corpus.definitions = definitions;
@@ -66,5 +75,4 @@ export function mergeFrequencyDuplicateWords(corpus, dictionary) {
     corpus.definitionSummary = {matched, missing: retained.length - matched, total: retained.length};
   }
   corpus.summary.terms = retained.length;
-  return report;
 }

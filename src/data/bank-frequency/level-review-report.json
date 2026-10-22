@@ -2124,6 +2124,28 @@
     },
     {
       "kind": "word",
+      "label": "いったい",
+      "reading": "いったい",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1164510",
+      "referenceWord": "一体",
+      "referenceReading": "いったい",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+    },
+    {
+      "kind": "word",
       "label": "解る",
       "reading": "わかる",
       "levels": [
@@ -2429,6 +2451,28 @@
       "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
+      "kind": "connective",
+      "label": "かつ",
+      "reading": "かつ",
+      "levels": [
+        "N1"
+      ],
+      "pos": [
+        "接续词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1208840",
+      "referenceWord": "且つ",
+      "referenceReading": "かつ",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+    },
+    {
       "kind": "word",
       "label": "シゴト",
       "reading": "しごと",
@@ -2444,27 +2488,6 @@
           ],
           "sourceSpellings": [
             "仕事"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "こころ",
-      "reading": "こころ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1360480",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "心"
           ]
         }
       ],
@@ -4776,34 +4799,6 @@
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
     },
     {
-      "kind": "word",
-      "label": "マンガ",
-      "reading": "まんが",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1526920",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "漫画"
-          ]
-        },
-        {
-          "id": "1526920",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "胸を張る",
       "reading": "むねをはる",
@@ -4941,6 +4936,28 @@
     },
     {
       "kind": "word",
+      "label": "ごく",
+      "reading": "ごく",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1240180",
+      "referenceWord": "極",
+      "referenceReading": "ごく",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+    },
+    {
+      "kind": "word",
       "label": "つながり",
       "reading": "つながり",
       "levels": [
@@ -5019,36 +5036,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "ばか",
-      "reading": "ばか",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1601260",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "馬鹿",
-            "破家",
-            "馬稼"
-          ]
-        },
-        {
-          "id": "1601260",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -5702,16 +5689,6 @@
     },
     {
       "kind": "word",
-      "label": "りんご",
-      "reading": "りんご",
-      "levels": [
-        "N5"
-      ],
-      "method": "editorial",
-      "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
       "label": "かじる",
       "reading": "かじる",
       "levels": [
@@ -5815,6 +5792,28 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+    },
+    {
+      "kind": "word",
+      "label": "パーティ",
+      "reading": "ぱーてぃ",
+      "levels": [
+        "N5"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1100760",
+      "referenceWord": "パーティー",
+      "referenceReading": "パーティー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「パーティー／パーティー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -6564,16 +6563,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "たばこ",
-      "reading": "たばこ",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
       "kind": "idiom",
       "label": "絵を描く",
       "reading": "えをかく",
@@ -7287,16 +7276,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a complete grammatical construction; study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "いくら",
-      "reading": "いくら",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "grammar",
@@ -8202,6 +8181,28 @@
     },
     {
       "kind": "word",
+      "label": "データー",
+      "reading": "でーたー",
+      "levels": [
+        "N1"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1081190",
+      "referenceWord": "データ",
+      "referenceReading": "データ",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「データ／データ」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "申しわけ",
       "reading": "もうしわけ",
       "levels": [
@@ -8503,16 +8504,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "次に",
-      "reading": "つぎに",
-      "levels": [
-        "N5"
-      ],
-      "method": "editorial",
-      "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
     },
     {
       "kind": "word",
@@ -10067,28 +10058,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "はやり",
-      "reading": "はやり",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "2834093",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "流行り",
-            "流行"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "身を乗り出す",
       "reading": "みをのりだす",
@@ -10387,16 +10356,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ただ",
-      "reading": "ただ",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -11493,16 +11452,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "そもそも",
-      "reading": "そもそも",
-      "levels": [
-        "N2"
-      ],
-      "method": "editorial",
-      "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
       "kind": "idiom",
       "label": "耳にする",
       "reading": "みみにする",
@@ -11647,6 +11596,28 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+    },
+    {
+      "kind": "word",
+      "label": "たいへん",
+      "reading": "たいへん",
+      "levels": [
+        "N5"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1415000",
+      "referenceWord": "大変",
+      "referenceReading": "たいへん",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
     },
     {
       "kind": "word",
@@ -12015,27 +11986,6 @@
     },
     {
       "kind": "word",
-      "label": "もつ",
-      "reading": "もつ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1315720",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "持つ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "けす",
       "reading": "けす",
       "levels": [
@@ -12146,6 +12096,28 @@
     },
     {
       "kind": "word",
+      "label": "コーナ",
+      "reading": "こーな",
+      "levels": [
+        "N1"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1049110",
+      "referenceWord": "コーナー",
+      "referenceReading": "コーナー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「コーナー／コーナー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "もうしこむ",
       "reading": "もうしこむ",
       "levels": [
@@ -12201,6 +12173,28 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
+    },
+    {
+      "kind": "word",
+      "label": "とっても",
+      "reading": "とっても",
+      "levels": [
+        "N5"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1008630",
+      "referenceWord": "とても",
+      "referenceReading": "とても",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「とても／とても」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -12687,6 +12681,28 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "わく",
+      "reading": "わく",
+      "levels": [
+        "N1"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1562610",
+      "referenceWord": "枠",
+      "referenceReading": "わく",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
     },
     {
       "kind": "word",
@@ -13215,16 +13231,6 @@
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
     },
     {
-      "kind": "word",
-      "label": "ロウソク",
-      "reading": "ろうそく",
-      "levels": [
-        "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
       "kind": "idiom",
       "label": "手に取る",
       "reading": "てにとる",
@@ -13435,6 +13441,28 @@
     },
     {
       "kind": "word",
+      "label": "たいして",
+      "reading": "たいして",
+      "levels": [
+        "N2"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1412970",
+      "referenceWord": "大して",
+      "referenceReading": "たいして",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+    },
+    {
+      "kind": "word",
       "label": "よけい",
       "reading": "よけい",
       "levels": [
@@ -13571,6 +13599,28 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
+      "kind": "word",
+      "label": "しかる",
+      "reading": "しかる",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "动词"
+      ],
+      "method": "reviewed-word-sense",
+      "jmdictId": "1319580",
+      "referenceWord": "叱る",
+      "referenceReading": "しかる",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
+    },
+    {
       "kind": "grammar",
       "label": "ないわけではない",
       "reading": "ないわけではない",
@@ -13606,42 +13656,6 @@
           ],
           "sourceSpellings": [
             "冴える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "いきいき",
-      "reading": "いきいき",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1609130",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "生き生き",
-            "活き活き",
-            "生きいき",
-            "活きいき"
-          ]
-        },
-        {
-          "id": "1609130",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "生き生き",
-            "活き活き",
-            "生きいき",
-            "活きいき"
           ]
         }
       ],
@@ -13844,27 +13858,6 @@
           "sourceSpellings": [
             "見慣れる",
             "見なれる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おなじ",
-      "reading": "おなじ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1451750",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "同じ"
           ]
         }
       ],
@@ -14095,34 +14088,6 @@
             "拘わる",
             "係る"
           ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かぎ",
-      "reading": "かぎ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1260490",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "鍵"
-          ]
-        },
-        {
-          "id": "1260490",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": []
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -14444,27 +14409,6 @@
     },
     {
       "kind": "word",
-      "label": "だいたい",
-      "reading": "だいたい",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1414470",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "大体"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "食後",
       "reading": "しょくご",
       "levels": [
@@ -14528,16 +14472,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かかる",
-      "reading": "かかる",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -15236,34 +15170,6 @@
     },
     {
       "kind": "word",
-      "label": "ネコ",
-      "reading": "ねこ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1467640",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "猫"
-          ]
-        },
-        {
-          "id": "1467640",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "クシ",
       "reading": "くし",
       "levels": [
@@ -15302,52 +15208,10 @@
     },
     {
       "kind": "word",
-      "label": "ほんと",
-      "reading": "ほんと",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1523060",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "本当",
-            "本當"
-          ]
-        },
-        {
-          "id": "1523060",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "本当",
-            "本當"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ちょうだい",
       "reading": "ちょうだい",
       "levels": [
         "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "一見",
-      "reading": "いっけん",
-      "levels": [
-        "N1"
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
@@ -15687,27 +15551,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "ゆう",
-      "reading": "ゆう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1587040",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "言う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -16393,6 +16236,28 @@
     },
     {
       "kind": "word",
+      "label": "ウエイトレス",
+      "reading": "うえいとれす",
+      "levels": [
+        "N2"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1025690",
+      "referenceWord": "ウエートレス",
+      "referenceReading": "ウエートレス",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「ウエートレス／ウエートレス」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "ハンコ",
       "reading": "はんこ",
       "levels": [
@@ -16816,16 +16681,6 @@
     },
     {
       "kind": "word",
-      "label": "つまり",
-      "reading": "つまり",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "めくる",
       "reading": "めくる",
       "levels": [
@@ -17090,6 +16945,25 @@
     },
     {
       "kind": "word",
+      "label": "表示",
+      "reading": "ひょうじ",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "word-list",
+      "source": {
+        "name": "Jamie Sinclair, Open Anki JLPT Decks; Jonathan Waller / Tanos original data",
+        "url": "https://github.com/jamsinclair/open-anki-jlpt-decks/blob/1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0/src/n3.csv",
+        "revision": "1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0",
+        "license": "MIT; attribution to Jonathan Waller / Tanos retained"
+      },
+      "reason": "公开 N3 词表中表记与读音精确匹配。"
+    },
+    {
+      "kind": "word",
       "label": "リスク",
       "reading": "りすく",
       "levels": [
@@ -17097,16 +16971,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "思い切り",
-      "reading": "おもいきり",
-      "levels": [
-        "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -17663,27 +17527,6 @@
     },
     {
       "kind": "word",
-      "label": "いか",
-      "reading": "いか",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1155060",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "以下"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "えがお",
       "reading": "えがお",
       "levels": [
@@ -17966,16 +17809,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "はく",
-      "reading": "はく",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -18876,16 +18709,6 @@
     },
     {
       "kind": "word",
-      "label": "なお",
-      "reading": "なお",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "カラス",
       "reading": "からす",
       "levels": [
@@ -19036,6 +18859,28 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "スピーカ",
+      "reading": "すぴーか",
+      "levels": [
+        "N2"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1072240",
+      "referenceWord": "スピーカー",
+      "referenceReading": "スピーカー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「スピーカー／スピーカー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -19231,27 +19076,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "らく",
-      "reading": "らく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1207230",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "楽"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -19584,6 +19408,28 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "オッケー",
+      "reading": "おっけー",
+      "levels": [
+        "N1"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1031600",
+      "referenceWord": "ＯＫ",
+      "referenceReading": "オーケー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「ＯＫ／オーケー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -20269,28 +20115,6 @@
     },
     {
       "kind": "word",
-      "label": "ヒトコト",
-      "reading": "ひとこと",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1575990",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "一言",
-            "ひと言"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "かいしゃく",
       "reading": "かいしゃく",
       "levels": [
@@ -20802,6 +20626,28 @@
     },
     {
       "kind": "word",
+      "label": "アクセサリ",
+      "reading": "あくせさり",
+      "levels": [
+        "N4"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1015220",
+      "referenceWord": "アクセサリー",
+      "referenceReading": "アクセサリー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「アクセサリー／アクセサリー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "お婆さん",
       "reading": "おばあさん",
       "levels": [
@@ -21238,16 +21084,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "そもそも",
-      "reading": "そもそも",
-      "levels": [
-        "N2"
-      ],
-      "method": "editorial",
-      "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
     },
     {
       "kind": "word",
@@ -22835,16 +22671,6 @@
     },
     {
       "kind": "word",
-      "label": "ついで",
-      "reading": "ついで",
-      "levels": [
-        "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "だく",
       "reading": "だく",
       "levels": [
@@ -22925,30 +22751,6 @@
             "物さし",
             "もの差し",
             "もの指し"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "こども",
-      "reading": "こども",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1307850",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "子供",
-            "子ども",
-            "小供",
-            "子共"
           ]
         }
       ],
@@ -23898,6 +23700,28 @@
     },
     {
       "kind": "word",
+      "label": "ずーっと",
+      "reading": "ずーっと",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1006380",
+      "referenceWord": "ずっと",
+      "referenceReading": "ずっと",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「ずっと／ずっと」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "精算",
       "reading": "せいさん",
       "levels": [
@@ -24256,27 +24080,6 @@
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
     },
     {
-      "kind": "word",
-      "label": "リン",
-      "reading": "りん",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1555700",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "輪"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "心を込める",
       "reading": "こころをこめる",
@@ -24394,16 +24197,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "まずい",
-      "reading": "まずい",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -25315,16 +25108,6 @@
     },
     {
       "kind": "word",
-      "label": "ばかばかしい",
-      "reading": "ばかばかしい",
-      "levels": [
-        "N1"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "にじむ",
       "reading": "にじむ",
       "levels": [
@@ -25793,13 +25576,25 @@
     },
     {
       "kind": "word",
-      "label": "はさみ",
-      "reading": "はさみ",
+      "label": "メンバ",
+      "reading": "めんば",
       "levels": [
         "N3"
       ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1134370",
+      "referenceWord": "メンバー",
+      "referenceReading": "メンバー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「メンバー／メンバー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -25944,6 +25739,28 @@
     },
     {
       "kind": "word",
+      "label": "ファクス",
+      "reading": "ふぁくす",
+      "levels": [
+        "N4"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1108180",
+      "referenceWord": "ファックス",
+      "referenceReading": "ファックス",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「ファックス／ファックス」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "スマートフォン",
       "reading": "すまーとふぉん",
       "levels": [
@@ -26064,34 +25881,6 @@
     },
     {
       "kind": "word",
-      "label": "コメ",
-      "reading": "こめ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1508750",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "米"
-          ]
-        },
-        {
-          "id": "1508750",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "振舞う",
       "reading": "ふるまう",
       "levels": [
@@ -26109,37 +25898,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "うける",
-      "reading": "うける",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1329590",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "受ける",
-            "請ける",
-            "承ける",
-            "享ける"
-          ]
-        },
-        {
-          "id": "1329590",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -26630,16 +26388,6 @@
     },
     {
       "kind": "word",
-      "label": "いらいら",
-      "reading": "いらいら",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "呑み込む",
       "reading": "のみこむ",
       "levels": [
@@ -26693,27 +26441,6 @@
             "取り立てる",
             "取立てる",
             "取りたてる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "さかん",
-      "reading": "さかん",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1379750",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "盛ん"
           ]
         }
       ],
@@ -27349,6 +27076,28 @@
     },
     {
       "kind": "word",
+      "label": "ソファ",
+      "reading": "そふぁ",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1075480",
+      "referenceWord": "ソファー",
+      "referenceReading": "ソファー",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「ソファー／ソファー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
       "label": "ゆるす",
       "reading": "ゆるす",
       "levels": [
@@ -27794,27 +27543,6 @@
     },
     {
       "kind": "word",
-      "label": "ぜったい",
-      "reading": "ぜったい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1386840",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "絶対"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ぶさた",
       "reading": "ぶさた",
       "levels": [
@@ -27977,28 +27705,6 @@
           ],
           "sourceSpellings": [
             "歯科"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "なす",
-      "reading": "なす",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "2861111",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "為す",
-            "爲す"
           ]
         }
       ],
@@ -28203,34 +27909,6 @@
         },
         {
           "id": "1471560",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ウシ",
-      "reading": "うし",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1231490",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "牛"
-          ]
-        },
-        {
-          "id": "1231490",
           "levels": [
             "N3"
           ],
@@ -28569,30 +28247,6 @@
     },
     {
       "kind": "word",
-      "label": "ひとり",
-      "reading": "ひとり",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1576150",
-          "levels": [
-            "N3",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "一人",
-            "１人",
-            "独り"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "貴い",
       "reading": "とうとい",
       "levels": [
@@ -28600,6 +28254,28 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
+    },
+    {
+      "kind": "word",
+      "label": "あったかい",
+      "reading": "あったかい",
+      "levels": [
+        "N5"
+      ],
+      "pos": [
+        "形容词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1586420",
+      "referenceWord": "暖かい",
+      "referenceReading": "あたたかい",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「暖かい／あたたかい」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -28626,16 +28302,6 @@
       "kind": "word",
       "label": "斡旋",
       "reading": "あっせん",
-      "levels": [
-        "N1"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "はらはら",
-      "reading": "はらはら",
       "levels": [
         "N1"
       ],
@@ -28860,16 +28526,6 @@
     },
     {
       "kind": "word",
-      "label": "いらいら",
-      "reading": "いらいら",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "つかまる",
       "reading": "つかまる",
       "levels": [
@@ -29040,6 +28696,28 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a complete grammatical construction; study estimate."
+    },
+    {
+      "kind": "word",
+      "label": "悪口",
+      "reading": "わるぐち",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1575730",
+      "referenceWord": "悪口",
+      "referenceReading": "わるくち",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「悪口／わるくち」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "grammar",
@@ -29447,34 +29125,25 @@
     },
     {
       "kind": "word",
-      "label": "よし",
-      "reading": "よし",
+      "label": "瞑る",
+      "reading": "つむる",
       "levels": [
         "N1"
       ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1152820",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "葦",
-            "蘆",
-            "葭",
-            "芦"
-          ]
-        },
-        {
-          "id": "1152820",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": []
-        }
+      "pos": [
+        "动词"
       ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1585820",
+      "referenceWord": "瞑る",
+      "referenceReading": "つぶる",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「瞑る／つぶる」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -29543,6 +29212,28 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "どっか",
+      "reading": "どっか",
+      "levels": [
+        "N3"
+      ],
+      "pos": [
+        "副词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1189000",
+      "referenceWord": "どこか",
+      "referenceReading": "どこか",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「どこか／どこか」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -29897,29 +29588,6 @@
     },
     {
       "kind": "word",
-      "label": "しり",
-      "reading": "しり",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1358760",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "尻",
-            "臀",
-            "後"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "飲みもの",
       "reading": "のみもの",
       "levels": [
@@ -30143,16 +29811,6 @@
     },
     {
       "kind": "word",
-      "label": "たんす",
-      "reading": "たんす",
-      "levels": [
-        "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "産まれる",
       "reading": "うまれる",
       "levels": [
@@ -30206,6 +29864,28 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "エレベータ",
+      "reading": "えれべーた",
+      "levels": [
+        "N5"
+      ],
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1030630",
+      "referenceWord": "エレベーター",
+      "referenceReading": "エレベーター",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「エレベーター／エレベーター」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -30448,16 +30128,6 @@
     },
     {
       "kind": "word",
-      "label": "およそ",
-      "reading": "およそ",
-      "levels": [
-        "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "籠る",
       "reading": "こもる",
       "levels": [
@@ -30684,31 +30354,25 @@
     },
     {
       "kind": "word",
-      "label": "くせ",
-      "reading": "くせ",
+      "label": "センタ",
+      "reading": "せんた",
       "levels": [
         "N3"
       ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1509350",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "癖"
-          ]
-        },
-        {
-          "id": "1509350",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
-        }
+      "pos": [
+        "名词"
       ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1075040",
+      "referenceWord": "センター",
+      "referenceReading": "センター",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「センター／センター」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "word",
@@ -31355,13 +31019,47 @@
     },
     {
       "kind": "word",
-      "label": "いらいら",
-      "reading": "いらいら",
+      "label": "インターホン",
+      "reading": "いんたーほん",
       "levels": [
-        "N3"
+        "N1"
       ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
+      "pos": [
+        "名词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1022990",
+      "referenceWord": "インターフォン",
+      "referenceReading": "インターフォン",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「インターフォン／インターフォン」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
+    },
+    {
+      "kind": "word",
+      "label": "さみしい",
+      "reading": "さみしい",
+      "levels": [
+        "N4"
+      ],
+      "pos": [
+        "形容词"
+      ],
+      "method": "reviewed-reading-variant",
+      "jmdictId": "1579720",
+      "referenceWord": "寂しい",
+      "referenceReading": "さびしい",
+      "source": {
+        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
+        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+        "license": "CC BY-SA 4.0"
+      },
+      "reason": "整词人工复核：与公开词表的「寂しい／さびしい」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
     },
     {
       "kind": "idiom",
@@ -31456,42 +31154,6 @@
           "sourceSpellings": [
             "履く",
             "穿く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "活き活き",
-      "reading": "いきいき",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1609130",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "生き生き",
-            "活き活き",
-            "生きいき",
-            "活きいき"
-          ]
-        },
-        {
-          "id": "1609130",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "生き生き",
-            "活き活き",
-            "生きいき",
-            "活きいき"
           ]
         }
       ],
@@ -32764,12 +32426,6 @@
     },
     {
       "kind": "word",
-      "label": "バラバラ",
-      "reading": "ばらばら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "善悪",
       "reading": "ぜんあく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -32836,12 +32492,6 @@
     },
     {
       "kind": "word",
-      "label": "ふつう",
-      "reading": "ふつう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "双方",
       "reading": "そうほう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -32874,12 +32524,6 @@
       "kind": "word",
       "label": "仕草",
       "reading": "しぐさ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "十分",
-      "reading": "じゅうふん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -33508,12 +33152,6 @@
     },
     {
       "kind": "word",
-      "label": "いったい",
-      "reading": "いったい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "過当",
       "reading": "かとう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -33690,12 +33328,6 @@
       "kind": "word",
       "label": "トータル",
       "reading": "とーたる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "かつ",
-      "reading": "かつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -34546,12 +34178,6 @@
     },
     {
       "kind": "word",
-      "label": "本当は",
-      "reading": "ほんとうは",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "日本経済新聞",
       "reading": "にほんけいざいしんぶん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -34888,12 +34514,6 @@
     },
     {
       "kind": "word",
-      "label": "ごく",
-      "reading": "ごく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "古",
       "reading": "ふる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -35118,12 +34738,6 @@
       "kind": "word",
       "label": "専業",
       "reading": "せんぎょう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "パーティ",
-      "reading": "ぱーてぃ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -35362,12 +34976,6 @@
     },
     {
       "kind": "word",
-      "label": "ふつう",
-      "reading": "ふつう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "言い返す",
       "reading": "いいかえす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -35376,12 +34984,6 @@
       "kind": "word",
       "label": "送れる",
       "reading": "おくれる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ゴミ箱",
-      "reading": "ごみばこ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -36364,12 +35966,6 @@
     },
     {
       "kind": "word",
-      "label": "イモ",
-      "reading": "いも",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "最小限",
       "reading": "さいしょうげん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -36594,12 +36190,6 @@
       "kind": "word",
       "label": "うろつく",
       "reading": "うろつく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "キョロキョロ",
-      "reading": "きょろきょろ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -36996,12 +36586,6 @@
       "kind": "word",
       "label": "商事",
       "reading": "しょうじ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "データー",
-      "reading": "でーたー",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -37678,12 +37262,6 @@
     },
     {
       "kind": "word",
-      "label": "スラスラ",
-      "reading": "すらすら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "文庫",
       "reading": "ぶんこ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -37840,12 +37418,6 @@
     },
     {
       "kind": "word",
-      "label": "さく",
-      "reading": "さく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "じょする",
       "reading": "じょする",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -37908,12 +37480,6 @@
       "kind": "word",
       "label": "というのも",
       "reading": "というのも",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "かく",
-      "reading": "かく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -39118,12 +38684,6 @@
     },
     {
       "kind": "word",
-      "label": "シミ",
-      "reading": "しみ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "お尋ね",
       "reading": "おたずね",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -39262,12 +38822,6 @@
     },
     {
       "kind": "word",
-      "label": "イマイチ",
-      "reading": "いまいち",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "取り付け",
       "reading": "とりつけ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -39396,12 +38950,6 @@
       "kind": "word",
       "label": "転換期",
       "reading": "てんかんき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "キノコ",
-      "reading": "きのこ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -39868,12 +39416,6 @@
     },
     {
       "kind": "word",
-      "label": "かく",
-      "reading": "かく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "補い",
       "reading": "おぎない",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -40294,12 +39836,6 @@
     },
     {
       "kind": "word",
-      "label": "たいへん",
-      "reading": "たいへん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "向かい合う",
       "reading": "むかいあう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -40432,12 +39968,6 @@
     },
     {
       "kind": "word",
-      "label": "からから",
-      "reading": "からから",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "くわえる",
       "reading": "くわえる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -40540,12 +40070,6 @@
     },
     {
       "kind": "word",
-      "label": "ふく",
-      "reading": "ふく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "持ち歩く",
       "reading": "もちあるく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -40600,26 +40124,8 @@
     },
     {
       "kind": "word",
-      "label": "コーナ",
-      "reading": "こーな",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "かつ",
-      "reading": "かつ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "はたらける",
       "reading": "はたらける",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "とっても",
-      "reading": "とっても",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -41190,12 +40696,6 @@
       "kind": "word",
       "label": "懐かしむ",
       "reading": "なつかしむ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "わく",
-      "reading": "わく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -42322,12 +41822,6 @@
     },
     {
       "kind": "word",
-      "label": "たいして",
-      "reading": "たいして",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "わり",
       "reading": "わり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -42420,12 +41914,6 @@
       "kind": "word",
       "label": "のぞく",
       "reading": "のぞく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "しかる",
-      "reading": "しかる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -43008,12 +42496,6 @@
       "kind": "word",
       "label": "かこう",
       "reading": "かこう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "とう",
-      "reading": "とう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -45454,12 +44936,6 @@
     },
     {
       "kind": "word",
-      "label": "ウエイトレス",
-      "reading": "うえいとれす",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "モーニング",
       "reading": "もーにんぐ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -45522,12 +44998,6 @@
       "kind": "word",
       "label": "走り回る",
       "reading": "はしりまわる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "わく",
-      "reading": "わく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -46282,12 +45752,6 @@
     },
     {
       "kind": "word",
-      "label": "精一杯",
-      "reading": "せいいっぱい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "遮断",
       "reading": "しゃだん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -46612,12 +46076,6 @@
     },
     {
       "kind": "word",
-      "label": "表示",
-      "reading": "ひょうじ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "件数",
       "reading": "けんすう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -46758,12 +46216,6 @@
       "kind": "word",
       "label": "ひっきりなし",
       "reading": "ひっきりなし",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "めった",
-      "reading": "めった",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -47076,12 +46528,6 @@
       "kind": "word",
       "label": "太陽光",
       "reading": "たいようこう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "イチゴ",
-      "reading": "いちご",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -47410,12 +46856,6 @@
     },
     {
       "kind": "word",
-      "label": "がらがら",
-      "reading": "がらがら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "ミラノ",
       "reading": "みらの",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -47664,12 +47104,6 @@
       "kind": "word",
       "label": "リュックサック",
       "reading": "りゅっくさっく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "したたか",
-      "reading": "したたか",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -48126,12 +47560,6 @@
       "kind": "word",
       "label": "余りに",
       "reading": "あまりに",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ばらばら",
-      "reading": "ばらばら",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -48598,12 +48026,6 @@
     },
     {
       "kind": "word",
-      "label": "がらがら",
-      "reading": "がらがら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "増収",
       "reading": "ぞうしゅう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -48802,12 +48224,6 @@
     },
     {
       "kind": "word",
-      "label": "ガラリ",
-      "reading": "がらり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "万々歳",
       "reading": "ばんばんざい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -48982,12 +48398,6 @@
     },
     {
       "kind": "word",
-      "label": "ヒマワリ",
-      "reading": "ひまわり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "町内",
       "reading": "ちょうない",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -49074,12 +48484,6 @@
       "kind": "word",
       "label": "際立つ",
       "reading": "きわだつ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "スピーカ",
-      "reading": "すぴーか",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -49696,12 +49100,6 @@
     },
     {
       "kind": "word",
-      "label": "バラバラ",
-      "reading": "ばらばら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "小中学校",
       "reading": "しょうちゅうがっこう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -49716,12 +49114,6 @@
       "kind": "word",
       "label": "置き場",
       "reading": "おきば",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "オッケー",
-      "reading": "おっけー",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -49746,12 +49138,6 @@
       "kind": "word",
       "label": "Tシャツ",
       "reading": "てぃーしゃつ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "あく",
-      "reading": "あく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -51328,12 +50714,6 @@
     },
     {
       "kind": "word",
-      "label": "ワクワク",
-      "reading": "わくわく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "北山",
       "reading": "きたやま",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -51472,12 +50852,6 @@
     },
     {
       "kind": "word",
-      "label": "スイカ",
-      "reading": "すいか",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "大川",
       "reading": "おおかわ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -51540,12 +50914,6 @@
       "kind": "word",
       "label": "品切れ",
       "reading": "しなぎれ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "アクセサリ",
-      "reading": "あくせさり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -52516,20 +51884,8 @@
     },
     {
       "kind": "word",
-      "label": "みつ",
-      "reading": "みつ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "離せる",
       "reading": "はなせる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ばらばら",
-      "reading": "ばらばら",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -52824,12 +52180,6 @@
       "kind": "word",
       "label": "ふれ合う",
       "reading": "ふれあう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ゴマ",
-      "reading": "ごま",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -53308,12 +52658,6 @@
     },
     {
       "kind": "word",
-      "label": "とく",
-      "reading": "とく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "さまよう",
       "reading": "さまよう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -53464,12 +52808,6 @@
     },
     {
       "kind": "word",
-      "label": "人一倍",
-      "reading": "ひといちばい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "揺る",
       "reading": "ゆる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -53598,12 +52936,6 @@
       "kind": "word",
       "label": "人文",
       "reading": "じんぶん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ダラダラ",
-      "reading": "だらだら",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -53962,12 +53294,6 @@
     },
     {
       "kind": "word",
-      "label": "急ぎ",
-      "reading": "いそぎ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "臨機応変",
       "reading": "りんきおうへん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -54276,12 +53602,6 @@
       "kind": "word",
       "label": "栄冠",
       "reading": "えいかん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "いかん",
-      "reading": "いかん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -55834,12 +55154,6 @@
     },
     {
       "kind": "word",
-      "label": "しょう",
-      "reading": "しょう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "よたる",
       "reading": "よたる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -56176,12 +55490,6 @@
     },
     {
       "kind": "word",
-      "label": "パラパラ",
-      "reading": "ぱらぱら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "こうか",
       "reading": "こうか",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -56322,12 +55630,6 @@
       "kind": "word",
       "label": "ぎが",
       "reading": "ぎが",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "とく",
-      "reading": "とく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -56482,12 +55784,6 @@
     },
     {
       "kind": "word",
-      "label": "否",
-      "reading": "いな",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "たえる",
       "reading": "たえる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -56514,12 +55810,6 @@
       "kind": "word",
       "label": "数種類",
       "reading": "すうしゅるい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ずーっと",
-      "reading": "ずーっと",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -57540,12 +56830,6 @@
       "kind": "word",
       "label": "せんじょう",
       "reading": "せんじょう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "セリフ",
-      "reading": "せりふ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -58822,12 +58106,6 @@
     },
     {
       "kind": "word",
-      "label": "しっくり",
-      "reading": "しっくり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "滑り",
       "reading": "すべり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -58872,12 +58150,6 @@
       "kind": "word",
       "label": "オバチャン",
       "reading": "おばちゃん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "無理やり",
-      "reading": "むりやり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -58980,12 +58252,6 @@
       "kind": "word",
       "label": "ボリュウム",
       "reading": "ぼりゅうむ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "バリバリ",
-      "reading": "ばりばり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -59562,12 +58828,6 @@
       "kind": "word",
       "label": "ネイチャー",
       "reading": "ねいちゃー",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ネタ",
-      "reading": "ねた",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -60394,12 +59654,6 @@
     },
     {
       "kind": "word",
-      "label": "そこそこ",
-      "reading": "そこそこ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "貸し出せる",
       "reading": "かしだせる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -60664,12 +59918,6 @@
     },
     {
       "kind": "word",
-      "label": "メンバ",
-      "reading": "めんば",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "ふりこむ",
       "reading": "ふりこむ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -60930,12 +60178,6 @@
       "kind": "word",
       "label": "ほっとく",
       "reading": "ほっとく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ファクス",
-      "reading": "ふぁくす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -63604,12 +62846,6 @@
     },
     {
       "kind": "word",
-      "label": "ソファ",
-      "reading": "そふぁ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "田舎町",
       "reading": "いなかまち",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -64332,12 +63568,6 @@
       "kind": "word",
       "label": "秘",
       "reading": "ひ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "略",
-      "reading": "りゃく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -65476,12 +64706,6 @@
     },
     {
       "kind": "word",
-      "label": "ギクシャク",
-      "reading": "ぎくしゃく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "相槌",
       "reading": "あいづち",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -65910,12 +65134,6 @@
       "kind": "word",
       "label": "洋式",
       "reading": "ようしき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "たつ",
-      "reading": "たつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -66502,12 +65720,6 @@
     },
     {
       "kind": "word",
-      "label": "あったかい",
-      "reading": "あったかい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "差し込む",
       "reading": "さしこむ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -66678,12 +65890,6 @@
       "kind": "word",
       "label": "士気",
       "reading": "しき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "コツコツ",
-      "reading": "こつこつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -67036,12 +66242,6 @@
     },
     {
       "kind": "word",
-      "label": "カニ",
-      "reading": "かに",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "居座る",
       "reading": "いすわる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -67218,12 +66418,6 @@
       "kind": "word",
       "label": "欠航",
       "reading": "けっこう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "悪口",
-      "reading": "わるぐち",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -67602,12 +66796,6 @@
       "kind": "word",
       "label": "植木鉢",
       "reading": "うえきばち",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "バッチリ",
-      "reading": "ばっちり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -67996,12 +67184,6 @@
     },
     {
       "kind": "word",
-      "label": "反面",
-      "reading": "はんめん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "養育",
       "reading": "よういく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -68104,12 +67286,6 @@
     },
     {
       "kind": "word",
-      "label": "ぎりぎり",
-      "reading": "ぎりぎり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "茶道",
       "reading": "さどう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -68142,12 +67318,6 @@
       "kind": "word",
       "label": "人参",
       "reading": "にんじん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ギリギリ",
-      "reading": "ぎりぎり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -68704,12 +67874,6 @@
     },
     {
       "kind": "word",
-      "label": "瞑る",
-      "reading": "つむる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "コーディネーター",
       "reading": "こーでぃねーたー",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -68998,12 +68162,6 @@
     },
     {
       "kind": "word",
-      "label": "どっか",
-      "reading": "どっか",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "授賞",
       "reading": "じゅしょう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -69042,12 +68200,6 @@
       "kind": "word",
       "label": "とせい",
       "reading": "とせい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "コンコン",
-      "reading": "こんこん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -69348,12 +68500,6 @@
       "kind": "word",
       "label": "一元化",
       "reading": "いちげんか",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "モチ",
-      "reading": "もち",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -69750,12 +68896,6 @@
       "kind": "word",
       "label": "転記",
       "reading": "てんき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ペラペラ",
-      "reading": "ぺらぺら",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -70228,12 +69368,6 @@
     },
     {
       "kind": "word",
-      "label": "ヒノキ",
-      "reading": "ひのき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "遊泳",
       "reading": "ゆうえい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -70260,12 +69394,6 @@
       "kind": "word",
       "label": "足止め",
       "reading": "あしどめ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "エレベータ",
-      "reading": "えれべーた",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -70882,12 +70010,6 @@
     },
     {
       "kind": "word",
-      "label": "ふつふつ",
-      "reading": "ふつふつ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "前頭葉",
       "reading": "ぜんとうよう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -71004,12 +70126,6 @@
       "kind": "word",
       "label": "平然",
       "reading": "へいぜん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ニワトリ",
-      "reading": "にわとり",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -71260,12 +70376,6 @@
     },
     {
       "kind": "word",
-      "label": "イルカ",
-      "reading": "いるか",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "出し入れ",
       "reading": "だしいれ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -71340,12 +70450,6 @@
       "kind": "word",
       "label": "あり",
       "reading": "あり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "センタ",
-      "reading": "せんた",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -71932,12 +71036,6 @@
     },
     {
       "kind": "word",
-      "label": "よく",
-      "reading": "よく",
-      "reason": "Homonymous 欲 is not the adverb よく in the N5 reference list."
-    },
-    {
-      "kind": "word",
       "label": "排",
       "reading": "はい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -72252,12 +71350,6 @@
       "kind": "word",
       "label": "不慮",
       "reading": "ふりょ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "根こそぎ",
-      "reading": "ねこそぎ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -72664,12 +71756,6 @@
     },
     {
       "kind": "word",
-      "label": "インターホン",
-      "reading": "いんたーほん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "リマインド",
       "reading": "りまいんど",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -72684,12 +71770,6 @@
       "kind": "word",
       "label": "香木",
       "reading": "こうぼく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "さみしい",
-      "reading": "さみしい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -72870,12 +71950,6 @@
       "kind": "word",
       "label": "ほうれんそう",
       "reading": "ほうれんそう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ネギ",
-      "reading": "ねぎ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -74482,12 +73556,6 @@
     },
     {
       "kind": "word",
-      "label": "ホウレンソウ",
-      "reading": "ほうれんそう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "シャープペンシル",
       "reading": "しゃーぷぺんしる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -74502,12 +73570,6 @@
       "kind": "word",
       "label": "こうとう",
       "reading": "こうとう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "チカチカ",
-      "reading": "ちかちか",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -74968,12 +74030,6 @@
     },
     {
       "kind": "word",
-      "label": "転",
-      "reading": "てん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "見張る",
       "reading": "みはる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -75263,11 +74319,11 @@
   ],
   "totals": {
     "word": {
-      "total": 14422,
-      "before": 5635,
-      "addedSourced": 1368,
-      "addedEstimates": 277,
-      "after": 7280
+      "total": 14245,
+      "before": 5583,
+      "addedSourced": 1348,
+      "addedEstimates": 273,
+      "after": 7204
     },
     "grammar": {
       "total": 221,
@@ -75284,5 +74340,5 @@
       "after": 182
     }
   },
-  "compounds": 389
+  "compounds": 385
 }

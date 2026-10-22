@@ -16,7 +16,7 @@ export function annotateFrequencyLevels(corpus, entries, source, expressionEntri
   }
   corpus.referenceLevels = corpus.terms.map(([word, reading, pos, kind], id) => {
     // The N5 list's adverb よく must not grade the homonymous noun 欲.
-    if (word === 'よく' && reading === 'よく' && pos === '名词' && kind === 'word') return [];
+    if (word === 'よく' && reading === 'よく' && (corpus.partsOfSpeech?.[id] ?? [pos]).every(value => value === '名词') && kind === 'word') return [];
     if (kind === 'grammar') return [...(expressionIndex.get(`grammar\t${normalize(word)}`) ?? [])].sort();
     const levels = new Set(index.get(`${normalize(word)}\t${normalize(reading)}`) ?? []);
     if (kind === 'word') for (const alias of corpus.aliases?.[id] ?? []) {

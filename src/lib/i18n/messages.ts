@@ -99,6 +99,7 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["参考词表给出多个等级，暂不强行选定。", "参考リストに複数レベルがあるため一つに絞りません。", "Reference lists give multiple grades; no single grade is forced."],
   ["站内学习估级，仍需核对参考依据。", "本サイトの学習用推定で、根拠の再確認が必要です。", "Site study estimate; reference evidence still needs review."],
   ["同音多义，参考等级需按具体词义核对。", "同音多義のため、意味ごとに参考レベルを確認してください。", "Homonymous senses require sense-specific grade verification."],
+  ["词条义项，需结合原题判断", "見出し語の意味・原文で確認", "Entry senses; check source context"],
   ["同音词义项，需结合原题判断", "同音語の意味候補・原文で確認", "Possible homophone senses; check source context"],
   ["未定位到可靠的原文片段，请展开题目核对。", "確かな用例を特定できません。問題を開いて確認してください。", "No reliable excerpt located; expand the question to check."],
   ["核对版本", "確認した版", "Reviewed version"],

@@ -7,15 +7,18 @@ const readingCorrections = [
   ['五角形', 'ごかっけい', 'ごかくけい'], ['一杯', 'いちはい', 'いっぱい'],
   ['一泊', 'いちはく', 'いっぱく'], ['粉薬', 'こぐすり', 'こなぐすり'],
   ['一本調子', 'いっぽんぢょうし', 'いっぽんちょうし'], ['風流', 'ふりゅう', 'ふうりゅう'],
+  ['十分', 'じゅうふん', 'じゅうぶん', '形容词'],
 ];
 export function correctFrequencyReadings(corpus, dictionary) {
   const corrected = [];
-  for (const term of corpus.terms) {
+  for (const [id, term] of corpus.terms.entries()) {
     if (!['word', 'connective'].includes(term[3])) continue;
-    const correction = readingCorrections.find(([label, prior]) => term[0] === label && term[1] === prior);
+    const correction = readingCorrections.find(([label, prior, , pos]) => term[0] === label && term[1] === prior && (!pos || term[2] === pos));
     if (!correction) continue;
     const [label, prior, reading] = correction;
     if (!dictionary[label]?.some(entry => entry.readings.includes(reading))) throw new Error(`Unverified reading correction: ${label}`);
+    corpus.readingAliases ??= corpus.terms.map(() => []);
+    corpus.readingAliases[id].push(prior);
     term[1] = reading;
     corrected.push({label, prior, reading, source: 'frequency-dictionary'});
   }
@@ -57,7 +60,7 @@ export function reviewFrequencyCorpus(corpus, {trustedWords = new Set(), referen
   for (const row of excluded) reasons[row.reason] = (reasons[row.reason] ?? 0) + 1;
   const report = {revision: corpus.revision, excludedTerms: excluded.length, reasons,
     excluded: excluded.map(({label, reading, pos, kind, reason, occurrences, examples}) => ({label, reading, pos, kind, reason, occurrences, examples}))};
-  for (const key of ['terms', 'definitions', 'referenceLevels', 'surfaceForms']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
+  for (const key of ['terms', 'definitions', 'referenceLevels', 'surfaceForms', 'readingAliases']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
   corpus.units = units;
   corpus.summary.terms = retained.length;
   corpus.qualitySummary = {excludedTerms: excluded.length, reasons};

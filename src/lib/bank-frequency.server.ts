@@ -17,6 +17,6 @@ export function loadFrequencyCorpus(): Promise<FrequencyCorpus> {
 
 export function findFrequencyTerm(corpus: FrequencyCorpus, term: TermIdentity): number {
   const normalize = (value: string) => value.normalize('NFKC');
-  return corpus.terms.findIndex(([label, reading, pos, kind], id) => (kind === 'connective' ? 'word' : kind) === term.kind && (corpus.partsOfSpeech?.[id] ?? [pos]).includes(term.pos) && normalize(reading) === normalize(term.reading)
+  return corpus.terms.findIndex(([label, reading, pos, kind], id) => (kind === 'connective' ? 'word' : kind) === term.kind && (corpus.partsOfSpeech?.[id] ?? [pos]).includes(term.pos) && [reading, ...(corpus.readingAliases?.[id] ?? [])].some(form => normalize(form) === normalize(term.reading))
     && [label, ...(corpus.aliases?.[id] ?? [])].some(form => normalize(form) === normalize(term.label)));
 }

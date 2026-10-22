@@ -1,3 +1,5 @@
+import {applyFrequencyMerges} from './frequency-duplicates.mjs';
+
 const normalize = value => value.normalize('NFKC').replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
 const hasKanji = value => /\p{Script=Han}/u.test(value);
 const kanaOnly = value => /^[\p{Script=Hiragana}\p{Script=Katakana}ー]+$/u.test(value);
@@ -5,7 +7,7 @@ const dictionaryPos = {名词: ['noun'], 动词: ['verb'], 形容词: ['adj', 'a
 
 /** Explicit dictionary spelling links, exact reading and POS; never merge just
  * because two words sound alike. Both spellings must occur in the corpus. */
-export function mergeFrequencyWordVariants(corpus, dictionary) {
+export function mergeFrequencyWordVariants(corpus, dictionary, reviewed = []) {
   const existing = new Map(corpus.terms.map(([label, reading, pos, kind], id) => [`${kind}\t${label}\t${normalize(reading)}\t${pos}`, id]));
   const homophones = new Map();
   // Include dictionary senses absent from this bank too: あう must not become
@@ -28,7 +30,9 @@ export function mergeFrequencyWordVariants(corpus, dictionary) {
       homophones.get(key).add(label);
     }
   }
-  const targets = corpus.terms.map((_, id) => id), groups = new Map();
+  const targets = corpus.terms.map((_, id) => id);
+  const root = id => targets[id] === id ? id : (targets[id] = root(targets[id]));
+  const join = (source, target) => { targets[root(source)] = root(target); };
   corpus.terms.forEach(([label, reading, pos, kind], id) => {
     if (kind !== 'word' || !kanaOnly(label)) return;
     const allowed = dictionaryPos[pos] ?? [];
@@ -38,24 +42,20 @@ export function mergeFrequencyWordVariants(corpus, dictionary) {
     if (names.size !== 1 || alternatives.size !== 1) return;
     const canonical = [...names][0], target = existing.get(`${kind}\t${canonical}\t${normalize(reading)}\t${pos}`);
     if (target === undefined || target === id) return;
-    targets[id] = target;
-    if (!groups.has(target)) groups.set(target, []);
-    groups.get(target).push(id);
+    join(id, target);
   });
-  const retained = [], remap = new Map();
-  targets.forEach((target, id) => { if (target === id) { remap.set(id, retained.length); retained.push(id); } });
-  targets.forEach((target, id) => remap.set(id, remap.get(target)));
-  const aliases = retained.map(id => groups.has(id) ? [...new Set(groups.get(id).map(alias => corpus.terms[alias][0]))] : []);
-  const report = {mergedTerms: corpus.terms.length - retained.length, groups: [...groups].map(([id, variants]) => ({label: corpus.terms[id][0], reading: corpus.terms[id][1], pos: corpus.terms[id][2], aliases: variants.map(alias => corpus.terms[alias][0])}))};
-  corpus.units = corpus.units.map(([field, references, counts]) => {
-    const summed = new Map();
-    for (let i = 0; i < counts.length; i += 2) { const id = remap.get(counts[i]); summed.set(id, (summed.get(id) ?? 0) + counts[i + 1]); }
-    return [field, references, [...summed].flat()];
-  });
-  if (corpus.surfaceForms) corpus.surfaceForms = retained.map(id => [...new Set([id, ...(groups.get(id) ?? [])].flatMap(other => corpus.surfaceForms[other] ?? []))].sort());
-  for (const key of ['terms', 'definitions']) if (corpus[key]) corpus[key] = retained.map(id => corpus[key][id]);
-  corpus.aliases = aliases;
-  corpus.summary.terms = retained.length;
-  if (corpus.definitions) { const matched = corpus.definitions.filter(row => row.meaning).length; corpus.definitionSummary = {matched, missing: retained.length - matched, total: retained.length}; }
+  // Script conversion alone is unsafe (ママ/まま, カエル/かえる). These
+  // links are individually reviewed whole words, never a blanket kana fold.
+  for (const entry of reviewed) {
+    const ids = corpus.terms.flatMap(([label, reading, , kind], id) => kind === 'word' && entry.forms.includes(label) && normalize(reading) === normalize(entry.reading) ? [id] : []);
+    if (ids.length < 2) continue;
+    const canonical = ids.find(id => corpus.terms[id][0] === entry.canonical) ?? ids[0];
+    for (const id of ids) join(id, canonical);
+  }
+  const buckets = new Map();
+  targets.forEach((_, id) => { const target = root(id); if (!buckets.has(target)) buckets.set(target, []); buckets.get(target).push(id); });
+  const groups = [...buckets].filter(([, ids]) => ids.length > 1).map(([canonical, ids]) => [canonical, ...ids.filter(id => id !== canonical)]);
+  const report = {mergedTerms: groups.reduce((total, ids) => total + ids.length - 1, 0), groups: groups.map(([id, ...variants]) => ({label: corpus.terms[id][0], reading: corpus.terms[id][1], pos: corpus.terms[id][2], aliases: [...new Set(variants.map(alias => corpus.terms[alias][0]))]}))};
+  applyFrequencyMerges(corpus, groups);
   return report;
 }

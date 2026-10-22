@@ -52,3 +52,12 @@ npm run build:frequency
 `core-words.json` 为 `jkindrix/japanese-language-data` 指定快照中的 `data/core/words.json`，版本和日期见来源记录。新增题库或参考来源后可重新导入；原有补充分级不会因已经命中而在再次导入时丢失。
 
 惯用表达重扫的候选范围、入库清单与完整表达对应的 JMdict id 见 [idiom-rescan-review.json](idiom-rescan-review.json)。候选发现只用于人工筛选，不直接视作可靠匹配或原题最终频次。
+
+## 2026-10-22 整词与词性复核
+
+新增 29 条显式公开词表／整词对应记录（非站内估级）；其中「ふつう」随同词头合并回「普通」，最终加上「十分」的精确读音校正，补全 29 个原未分级词头。`reviewed-entries.json` 中的新记录提供 `pos` 限定、`jmdictId`（有对应时）、`referenceWord` / `referenceReading` 和逐条 `source`，不让接续词、名词的等级溢出到独立的同音词性。
+
+- `reviewed-word-sense`：同一完整词形、读音及已核对词性的公开等级对应。
+- `reviewed-reading-variant`：人工确认的整词长音／口语变体，显式记录词表原读音。**这是逐条例外清单，不是自动将同一词的其他读音套上等级**；异义读法、古旧读法和无法确认的分词继续未分级。
+- 「表示／ひょうじ」精确补充自 Jamie Sinclair 的 [Open Anki JLPT Decks](https://github.com/jamsinclair/open-anki-jlpt-decks)，快照 `1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0`，`src/n3.csv`；保留 Waller / Tanos 原始归属，MIT 许可见 `ANKI-WORD-LICENSE.txt`。
+- 同表记及假名变体合并另见 `variant-review.json` 和 `docs/frequency-duplicate-review.md`；合并关系不用于按试卷等级猜测参考等级。
