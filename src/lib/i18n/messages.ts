@@ -1,4 +1,6 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["拟声拟态词", "オノマトペ・畳語副詞", "Mimetic / reduplicative words"],
+  ["拟声拟态词按核对词表筛选，包含常见叠词副词，保留原词性。", "オノマトペ・畳語副詞は確認済みの語彙リストで絞り込み、元の品詞を保持します。", "This study filter uses a reviewed list of mimetic and reduplicative words and preserves the original grammatical part of speech."],
   ["词条设置", "語句の設定", "Term settings"],
   ["筛选与设置", "絞り込みと設定", "Filters and settings"],
   ["词条显示设置", "語句の表示設定", "Term display settings"],

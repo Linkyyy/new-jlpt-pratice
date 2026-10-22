@@ -3,6 +3,7 @@ import { reviewFrequencyTokens, frequencyTokenIssue, frequencyTokenPos } from '.
 import { grammarExpressions, connectiveExpressions, wordStopList } from './frequency-lexicon.mjs';
 import { classifyFrequencySubtype, officialFrequencySubtypes } from './frequency-subtypes.mjs';
 import { createIdiomMatcher, idiomEntries } from './frequency-idioms.mjs';
+import { isFrequencyMimetic } from './frequency-mimetics.mjs';
 
 export const frequencyKinds = ['word', 'grammar', 'idiom'];
 export const frequencyFields = ['all', 'passage', 'prompt', 'options', 'transcript'];
@@ -159,7 +160,7 @@ export const defaultFrequencyFilters = { source: 'all', level: 'all', grade: 'al
 export class FrequencyInputError extends Error {}
 export function parseFrequencyFilters(params, metadata) {
   const filters = { ...defaultFrequencyFilters };
-  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词', '复合词', '片假名词'], order: frequencyOrders };
+  const allowed = { source: ['all', 'imported', 'original'], grade: ['all', 'ungraded', 'N1', 'N2', 'N3', 'N4', 'N5'], level: ['all', ...metadata.levels], exclusive: frequencyLevelScopes, period: ['all', ...metadata.periods], category: ['all', ...Object.values(types)], subtype: ['all', ...metadata.subtypes.map(x => x.id)], field: frequencyFields, kind: [...frequencyKinds, 'connective'], pos: ['all', '名词', '动词', '形容词', '副词', '连体词', '接续词', '复合词', '片假名词', '拟声拟态词'], order: frequencyOrders };
   for (const [key, values] of Object.entries(allowed)) {
     if (!params.has(key)) continue;
     const value = params.get(key);
@@ -228,6 +229,7 @@ function levelPresence(corpus) {
 function matchesPartOfSpeech(corpus, term, index, pos) {
   if (pos === 'all') return true;
   if (pos === '复合词') return corpus.compounds?.[index] === true;
+  if (pos === '拟声拟态词') return isFrequencyMimetic(term[0], term[1], corpus.aliases?.[index]);
   if (pos === '片假名词') {
     const normalized = term[0].normalize('NFKC');
     return /\p{Script=Katakana}/u.test(normalized) && /^[\p{Script=Katakana}ー・]+$/u.test(normalized);
@@ -284,6 +286,7 @@ export function queryFrequency(corpus, filters, selectedTerm, options = {}) {
     partsOfSpeech: corpus.partsOfSpeech?.[row.id] ?? [corpus.terms[row.id][2]],
     referenceLevels: corpus.referenceLevels?.[row.id] ?? [],
     referenceBasis: corpus.referenceBasis?.[row.id] ?? 'reference', compound: corpus.compounds?.[row.id] ?? false,
+    mimetic: ['word','connective'].includes(corpus.terms[row.id][3]) && isFrequencyMimetic(corpus.terms[row.id][0], corpus.terms[row.id][1], corpus.aliases?.[row.id]),
     definition: corpus.definitions?.[row.id] ?? {meaning: '', usage: '', source: 'missing'},
   });
   const selected = selectedTerm === undefined ? null : rows.find(row => row.id === selectedTerm);

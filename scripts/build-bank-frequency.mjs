@@ -24,6 +24,7 @@ inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements
 inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 inputs.push('src/lib/frequency-duplicates.mjs');
 inputs.push('src/lib/frequency-audit.mjs');
+inputs.push('src/lib/frequency-mimetics.mjs');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }

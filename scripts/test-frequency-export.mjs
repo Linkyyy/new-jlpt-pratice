@@ -25,6 +25,20 @@ test('katakana filtering exports only matching rows, preserves POS and localizes
   assert.match((await createFrequencyPdf(result,metadata,'zh',now)).toString('latin1'),/^%PDF-/);
 });
 
+test('mimetic exports preserve the original adverb classification, exact counts and localized filter labels', async () => {
+  const examples=['わざわざ','めそめそ','そわそわ','じっくり'];
+  for(const label of examples){const result=queryFrequency(corpus,{...defaultFrequencyFilters,pos:'拟声拟态词',q:label},undefined,{allRows:true});
+    const row=result.rows.find(row=>row.label===label);assert.ok(row,label);assert.equal(row.pos,'副词');assert.deepEqual(row.partsOfSpeech,['副词']);assert.equal(row.mimetic,true);
+    const original=queryFrequency(corpus,{...defaultFrequencyFilters,pos:'副词',q:label},undefined,{allRows:true}).rows.find(candidate=>candidate.id===row.id);
+    assert.equal(row.occurrences,original.occurrences);assert.equal(row.questions,original.questions);assert.equal(row.papers,original.papers);
+  }
+  const result=queryFrequency(corpus,{...defaultFrequencyFilters,pos:'拟声拟态词',q:'じっくり'},undefined,{allRows:true});
+  for(const [locale,label] of [['zh','拟声拟态词'],['ja','オノマトペ・畳語副詞'],['en','Mimetic / reduplicative words']]){
+    const book=new ExcelJS.Workbook();await book.xlsx.load(await createFrequencyWorkbook(result,metadata,locale,now));assert.ok(book.worksheets[0].getCell('D2').value.includes(label));assert.ok(book.worksheets[1].getCell('B2').value.includes(label));assert.equal(book.worksheets[0].getCell('E2').value,result.rows[0].occurrences);
+    assert.match((await createFrequencyPdf(result,metadata,locale,now)).toString('latin1'),/^%PDF-/);
+  }
+});
+
 test('Excel is a real workbook containing all filtered rows, numeric counts and query provenance', async () => {
   assert.ok(all.total > 1); assert.equal(all.rows.length, all.total);
   const bytes = await createFrequencyWorkbook(all, metadata, 'zh', now);

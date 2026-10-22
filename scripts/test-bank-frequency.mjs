@@ -44,6 +44,29 @@ test('katakana filtering recognizes full/half-width headwords but excludes kanji
   assert.equal(query(c,{pos:'名词'}).total,9);
 });
 
+test('mimetic filter is an additional whole-word classification: user examples and writing variants retain their POS and counts', () => {
+  const terms = [
+    ['わざわざ','わざわざ','副词','word'], ['めそめそ','めそめそ','副词','word'],
+    ['そわそわ','そわそわ','副词','word'], ['じっくり','じっくり','副词','word'],
+    ['ソワソワ','そわそわ','副词','word'], ['ｶﾞﾗｶﾞﾗ','がらがら','名词','word'],
+    ['態々','わざわざ','副词','word'], ['仮の表記','','副词','word'],
+    ['いろいろ','いろいろ','副词','word'], ['時々','ときどき','副词','word'],
+    ['めそ','めそ','副词','word'], ['わざわざ追加','わざわざついか','名词','word'],
+    ['じっくり','じっくり','语法表达','grammar'],
+  ];
+  const c={terms,aliases:terms.map((_,i)=>i===7?['ジックリ']:[]),
+    questions:[['test','imported','N1','202412','vocabulary','test',1,true,0]],papers:[['imported','N1','202412']],
+    units:[['prompt',[0],terms.flatMap((_,i)=>[i,i+1])]],subtypes:[],summary:{},version:1,revision:'test'};
+  const before=JSON.stringify(c),filters=parseFrequencyFilters(new URLSearchParams({pos:'拟声拟态词'}),frequencyMetadata(c)),filtered=queryFrequency(c,filters);
+  assert.deepEqual(new Set(filtered.rows.map(row=>row.id)),new Set([0,1,2,3,4,5,6,7]));
+  for(const row of filtered.rows){assert.equal(row.mimetic,true);assert.equal(row.pos,terms[row.id][2]);assert.deepEqual(row.partsOfSpeech,[terms[row.id][2]]);assert.equal(row.occurrences,row.id+1);}
+  assert.equal(query(c,{pos:'副词'}).rows.filter(row=>row.mimetic).length,7);
+  assert.equal(query(c,{pos:'名词'}).rows.find(row=>row.label==='ｶﾞﾗｶﾞﾗ').mimetic,true);
+  assert.deepEqual(new Set(query(c,{pos:'拟声拟态词',min:3,max:4}).rows.map(row=>row.label)),new Set(['そわそわ','じっくり']));
+  assert.equal(query(c,{kind:'grammar'}).rows[0].mimetic,false);
+  assert.equal(JSON.stringify(c),before);
+});
+
 test('visible text removes scripts and ruby readings, decodes full-width text, and preserves paragraph boundaries', () => {
   assert.equal(frequencyText('<p>問題１&nbsp;<ruby>学校<rt>がっこう</rt></ruby></p><p>学生&#x3002;</p><script>evil()</script>'), '問題1 学校\n学生。');
   assert.equal(frequencyText('男：学生です。\n女：はい。'), '学生です。\nはい。');
