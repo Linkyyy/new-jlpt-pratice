@@ -61,3 +61,9 @@ npm run build:frequency
 - `reviewed-reading-variant`：人工确认的整词长音／口语变体，显式记录词表原读音。**这是逐条例外清单，不是自动将同一词的其他读音套上等级**；异义读法、古旧读法和无法确认的分词继续未分级。
 - 「表示／ひょうじ」精确补充自 Jamie Sinclair 的 [Open Anki JLPT Decks](https://github.com/jamsinclair/open-anki-jlpt-decks)，快照 `1ad66734417aca9dbcca6b2d5ee440cb13ab3ba0`，`src/n3.csv`；保留 Waller / Tanos 原始归属，MIT 许可见 `ANKI-WORD-LICENSE.txt`。
 - 同表记及假名变体合并另见 `variant-review.json` 和 `docs/frequency-duplicate-review.md`；合并关系不用于按试卷等级猜测参考等级。
+
+## 常用汉字词头显示
+
+`preferred-headwords.json` 是完整词形、读音及词性逐条核对后的显式首选显示表记；来源与 JMdict id 可追溯。它与等级词表分开维护，不能根据新显示的汉字给未命中的假名词自动升降等级。`sourceHeadwords` 保存归并前的原词头组及别名，基础分级与补充分级仍按这些原词头查询；合并时保留各原词头已有的分级依据。假名通常更常用、同音异义或尚不能确认的条目不批量转换。
+
+本次清单及核对结果见 [`docs/frequency-preferred-headwords-review.md`](../../../docs/frequency-preferred-headwords-review.md)。

@@ -1,3 +1,5 @@
+import {frequencySourceHeadwords, frequencySourceHeadwordGroups} from './frequency-headwords.mjs';
+
 const normalize = value => value.normalize('NFKC').replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
 const keyFor = (kind, label, reading = '') => `${kind === 'connective' ? 'word' : kind}\t${normalize(label)}\t${kind === 'word' || kind === 'connective' ? normalize(reading) : ''}`;
 
@@ -17,10 +19,27 @@ export function annotateFrequencySupplements(corpus, entries, reviewed, source) 
     const group = kind === 'connective' ? 'word' : kind;
     report.totals[group] ??= {total: 0, before: 0, addedSourced: 0, addedEstimates: 0, after: 0};
     const totals = report.totals[group]; totals.total++;
-    if (corpus.referenceLevels[id]?.length) { totals.before++; totals.after++; return 'reference'; }
     const poses = corpus.partsOfSpeech?.[id] ?? [corpus.terms[id][2]];
+    const candidatesFor = forms => forms.flatMap(form => index.get(keyFor(kind, form, reading)) ?? []).filter(entry => !entry.pos || entry.pos.some(pos => poses.includes(pos)));
+    if (corpus.referenceLevels[id]?.length) {
+      // A display-only rename can join formerly separate headwords. Preserve
+      // each original group's published supplement when that group had no
+      // primary grade; a primary hit in another group must not erase it.
+      if (corpus.sourceHeadwords?.[id]) {
+        const primaryForms = new Set((corpus.referenceEvidence?.[id] ?? []).flatMap(evidence => evidence.headwords ?? []).map(normalize));
+        for (const forms of frequencySourceHeadwordGroups(corpus, id)) {
+          if (forms.some(form => primaryForms.has(normalize(form)))) continue;
+          const candidates = candidatesFor(forms);
+          const entry = candidates.find(row => row.method !== 'editorial') ?? candidates[0];
+          if (!entry) continue;
+          corpus.referenceLevels[id] = [...new Set([...corpus.referenceLevels[id], ...entry.levels])].sort();
+          corpus.referenceEvidence[id].push({...source,...entry.source,levels:entry.levels,method:entry.method,headwords:forms});
+        }
+      }
+      totals.before++; totals.after++; return 'reference';
+    }
     if (label==='よく' && reading==='よく' && poses.every(pos => pos==='名词') && kind==='word') { report.unresolved.push({kind:group,label,reading,reason:'Homonymous 欲 is not the adverb よく in the N5 reference list.'}); return 'ungraded'; }
-    const candidates = [label, ...(corpus.aliases?.[id] ?? [])].flatMap(form => index.get(keyFor(kind, form, reading)) ?? []).filter(entry => !entry.pos || entry.pos.some(pos => poses.includes(pos)));
+    const candidates = candidatesFor(frequencySourceHeadwords(corpus, id));
     const entry = candidates.find(row => row.method !== 'editorial') ?? candidates[0];
     if (!entry) { report.unresolved.push({kind: group, label, reading, reason: 'No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used.'}); return 'ungraded'; }
     if (!entry.levels.length || !entry.levels.every(level => /^N[1-5]$/.test(level))) throw new Error(`Invalid reviewed level: ${label}`);

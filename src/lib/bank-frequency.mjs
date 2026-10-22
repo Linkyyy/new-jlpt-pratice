@@ -231,8 +231,10 @@ function matchesPartOfSpeech(corpus, term, index, pos) {
   if (pos === '复合词') return corpus.compounds?.[index] === true;
   if (pos === '拟声拟态词') return isFrequencyMimetic(term[0], term[1], corpus.aliases?.[index]);
   if (pos === '片假名词') {
-    const normalized = term[0].normalize('NFKC');
-    return /\p{Script=Katakana}/u.test(normalized) && /^[\p{Script=Katakana}ー・]+$/u.test(normalized);
+    return [term[0], ...(corpus.sourceHeadwords?.[index]?.flat() ?? [])].some(form => {
+      const normalized = form.normalize('NFKC');
+      return /\p{Script=Katakana}/u.test(normalized) && /^[\p{Script=Katakana}ー・]+$/u.test(normalized);
+    });
   }
   return (corpus.partsOfSpeech?.[index] ?? [term[2]]).includes(pos);
 }

@@ -12,27 +12,6 @@
     },
     {
       "kind": "word",
-      "label": "うるおう",
-      "reading": "うるおう",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1341790",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "潤う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ない",
       "reading": "ない",
       "levels": [
@@ -60,51 +39,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "くずす",
-      "reading": "くずす",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1516260",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "崩す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "たおす",
-      "reading": "たおす",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1445770",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "倒す",
-            "斃す",
-            "殪す",
-            "仆す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -213,49 +147,6 @@
     },
     {
       "kind": "word",
-      "label": "めずらしい",
-      "reading": "めずらしい",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1431850",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "珍しい",
-            "珍らしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "わずらわしい",
-      "reading": "わずらわしい",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1481940",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "煩わしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "世界中",
       "reading": "せかいじゅう",
       "levels": [
@@ -263,27 +154,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "すませる",
-      "reading": "すませる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1295040",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "済ませる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -318,27 +188,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "にぎわう",
-      "reading": "にぎわう",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1463500",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "賑わう"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -486,32 +335,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a complete grammatical construction; study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "かかわる",
-      "reading": "かかわる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1589880",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "関わる",
-            "係わる",
-            "拘る",
-            "関る",
-            "拘わる",
-            "係る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -749,32 +572,6 @@
     },
     {
       "kind": "word",
-      "label": "わかる",
-      "reading": "わかる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1606560",
-          "levels": [
-            "N2",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "分かる",
-            "解る",
-            "判る",
-            "分る",
-            "理解る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "父",
       "reading": "ちち",
       "levels": [
@@ -807,31 +604,6 @@
     },
     {
       "kind": "word",
-      "label": "よい",
-      "reading": "よい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1605820",
-          "levels": [
-            "N1",
-            "N3",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "良い",
-            "好い",
-            "善い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "友だち",
       "reading": "ともだち",
       "levels": [
@@ -857,27 +629,6 @@
           "sourceSpellings": [
             "友達",
             "友だち"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "じつは",
-      "reading": "じつは",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1320830",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "実は"
           ]
         }
       ],
@@ -954,27 +705,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "じっさい",
-      "reading": "じっさい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1321110",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "実際"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -1510,49 +1240,6 @@
     },
     {
       "kind": "word",
-      "label": "いのち",
-      "reading": "いのち",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1531940",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "命"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "はじめて",
-      "reading": "はじめて",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1342550",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "初めて",
-            "始めて"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "おこす",
       "reading": "おこす",
       "levels": [
@@ -1658,27 +1345,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "でる",
-      "reading": "でる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1338240",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "出る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "grammar",
       "label": "ようになる",
       "reading": "ようになる",
@@ -1687,49 +1353,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a complete grammatical construction; study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "おきる",
-      "reading": "おきる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1223640",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "起きる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "さまざま",
-      "reading": "さまざま",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1593830",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "様々",
-            "様様"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -1750,27 +1373,6 @@
             "甦る",
             "蘇える",
             "甦える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あたえる",
-      "reading": "あたえる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1544730",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "与える"
           ]
         }
       ],
@@ -1921,27 +1523,6 @@
     },
     {
       "kind": "word",
-      "label": "こころ",
-      "reading": "こころ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1360480",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "心"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "サポート",
       "reading": "さぽーと",
       "levels": [
@@ -2023,30 +1604,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "めざましい",
-      "reading": "めざましい",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1604930",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "目覚ましい",
-            "目覚しい",
-            "目ざましい",
-            "目醒しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "idiom",
@@ -2471,27 +2028,6 @@
         "license": "CC BY-SA 4.0"
       },
       "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
-    },
-    {
-      "kind": "word",
-      "label": "シゴト",
-      "reading": "しごと",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1304970",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "仕事"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "grammar",
@@ -3003,27 +2539,6 @@
     },
     {
       "kind": "word",
-      "label": "つぶれる",
-      "reading": "つぶれる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1433830",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "潰れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ひる",
       "reading": "ひる",
       "levels": [
@@ -3106,31 +2621,6 @@
     },
     {
       "kind": "word",
-      "label": "おもう",
-      "reading": "おもう",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1589350",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "思う",
-            "想う",
-            "懐う",
-            "惟う",
-            "意う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "さらに",
       "reading": "さらに",
       "levels": [
@@ -3145,28 +2635,6 @@
           ],
           "sourceSpellings": [
             "更に"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "くらべる",
-      "reading": "くらべる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1483540",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "比べる",
-            "競べる"
           ]
         }
       ],
@@ -3459,28 +2927,6 @@
     },
     {
       "kind": "word",
-      "label": "いまさら",
-      "reading": "いまさら",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1289150",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "今更",
-            "今さら"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "見習う",
       "reading": "みならう",
       "levels": [
@@ -3522,28 +2968,6 @@
     },
     {
       "kind": "word",
-      "label": "すてる",
-      "reading": "すてる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1322320",
-          "levels": [
-            "N2",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "捨てる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "使い方",
       "reading": "つかいかた",
       "levels": [
@@ -3551,27 +2975,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "さっそく",
-      "reading": "さっそく",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1400300",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "早速"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -3769,28 +3172,6 @@
     },
     {
       "kind": "word",
-      "label": "しぶい",
-      "reading": "しぶい",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1335540",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "渋い",
-            "澁い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "けしき",
       "reading": "けしき",
       "levels": [
@@ -3805,71 +3186,6 @@
           ],
           "sourceSpellings": [
             "景色"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ととのえる",
-      "reading": "ととのえる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1376140",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "整える",
-            "調える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "たくわえる",
-      "reading": "たくわえる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1596860",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "蓄える",
-            "貯える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かかえる",
-      "reading": "かかえる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1516310",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "抱える"
           ]
         }
       ],
@@ -3993,29 +3309,6 @@
     },
     {
       "kind": "word",
-      "label": "ほめる",
-      "reading": "ほめる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1603550",
-          "levels": [
-            "N3",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "褒める",
-            "誉める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "でこぼこ",
       "reading": "でこぼこ",
       "levels": [
@@ -4044,28 +3337,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "ともなう",
-      "reading": "ともなう",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1478370",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "伴う",
-            "伴なう"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -4390,27 +3661,6 @@
     },
     {
       "kind": "word",
-      "label": "きわめて",
-      "reading": "きわめて",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1240200",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "極めて"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "やる気",
       "reading": "やるき",
       "levels": [
@@ -4671,27 +3921,6 @@
     },
     {
       "kind": "word",
-      "label": "とくに",
-      "reading": "とくに",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1454670",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "特に"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "版",
       "reading": "ばん",
       "levels": [
@@ -4762,27 +3991,6 @@
             "時々",
             "時時",
             "時どき"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "しばふ",
-      "reading": "しばふ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1321650",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "芝生"
           ]
         }
       ],
@@ -5082,27 +4290,6 @@
     },
     {
       "kind": "word",
-      "label": "たいした",
-      "reading": "たいした",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1412960",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "大した"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "かっこう",
       "reading": "かっこう",
       "levels": [
@@ -5159,51 +4346,6 @@
           ],
           "sourceSpellings": [
             "客"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "なれる",
-      "reading": "なれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1212670",
-          "levels": [
-            "N2",
-            "N3",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "慣れる",
-            "馴れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ことば",
-      "reading": "ことば",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1264540",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "言葉"
           ]
         }
       ],
@@ -5291,30 +4433,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "たおれる",
-      "reading": "たおれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1445790",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "倒れる",
-            "斃れる",
-            "仆れる",
-            "殪れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -5928,27 +5046,6 @@
     },
     {
       "kind": "word",
-      "label": "なつかしい",
-      "reading": "なつかしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1200490",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "懐かしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "親子",
       "reading": "おやこ",
       "levels": [
@@ -6056,28 +5153,6 @@
           ],
           "sourceSpellings": [
             "発見"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ふやす",
-      "reading": "ふやす",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1602880",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "増やす"
           ]
         }
       ],
@@ -6195,27 +5270,6 @@
     },
     {
       "kind": "word",
-      "label": "かこむ",
-      "reading": "かこむ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1155980",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "囲む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "あん",
       "reading": "あん",
       "levels": [
@@ -6237,16 +5291,6 @@
     },
     {
       "kind": "word",
-      "label": "りっぱ",
-      "reading": "りっぱ",
-      "levels": [
-        "N5"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
       "label": "さかん",
       "reading": "さかん",
       "levels": [
@@ -6261,27 +5305,6 @@
           ],
           "sourceSpellings": [
             "盛ん"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "つかれる",
-      "reading": "つかれる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1483740",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "疲れる"
           ]
         }
       ],
@@ -6346,50 +5369,6 @@
     },
     {
       "kind": "word",
-      "label": "おわる",
-      "reading": "おわる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1589600",
-          "levels": [
-            "N1",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "終わる",
-            "終る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あまる",
-      "reading": "あまる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1543910",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "余る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "かぎ",
       "reading": "かぎ",
       "levels": [
@@ -6425,28 +5404,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "いっしょ",
-      "reading": "いっしょ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1163400",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "一緒",
-            "一しょ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -6542,27 +5499,6 @@
       "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
-      "kind": "word",
-      "label": "おどろく",
-      "reading": "おどろく",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1238680",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "驚く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "絵を描く",
       "reading": "えをかく",
@@ -6591,28 +5527,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "こづかい",
-      "reading": "こづかい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1348030",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "小遣い",
-            "小遣"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -6710,28 +5624,6 @@
     },
     {
       "kind": "word",
-      "label": "さびしい",
-      "reading": "さびしい",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1579720",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "寂しい",
-            "淋しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ペットボトル",
       "reading": "ぺっとぼとる",
       "levels": [
@@ -6780,27 +5672,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "あつかう",
-      "reading": "あつかう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1153440",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "扱う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -6895,49 +5766,6 @@
     },
     {
       "kind": "word",
-      "label": "ごらん",
-      "reading": "ごらん",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1270760",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "ご覧",
-            "御覧"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "すすむ",
-      "reading": "すすむ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1365980",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "進む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "中学生",
       "reading": "ちゅうがくせい",
       "levels": [
@@ -7022,70 +5850,6 @@
             "N3"
           ],
           "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あらためて",
-      "reading": "あらためて",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1200740",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "改めて",
-            "新ためて"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "けずる",
-      "reading": "けずる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1298090",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "削る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "つのる",
-      "reading": "つのる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1514800",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "募る"
-          ]
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -7401,29 +6165,6 @@
     },
     {
       "kind": "word",
-      "label": "はたして",
-      "reading": "はたして",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1600780",
-          "levels": [
-            "N1",
-            "N2"
-          ],
-          "sourceSpellings": [
-            "果たして",
-            "果して"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "すなわち",
       "reading": "すなわち",
       "levels": [
@@ -7481,28 +6222,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "おこなう",
-      "reading": "おこなう",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1589060",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "行う",
-            "行なう"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -7577,27 +6296,6 @@
     },
     {
       "kind": "word",
-      "label": "かぎる",
-      "reading": "かぎる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1264640",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "限る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "日本人",
       "reading": "にっぽんじん",
       "levels": [
@@ -7656,34 +6354,6 @@
     },
     {
       "kind": "word",
-      "label": "えさ",
-      "reading": "えさ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1173340",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "餌"
-          ]
-        },
-        {
-          "id": "1173340",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "振り向く",
       "reading": "ふりむく",
       "levels": [
@@ -7732,29 +6402,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "つきあい",
-      "reading": "つきあい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1495640",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "付き合い",
-            "つき合い",
-            "付合い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -7823,28 +6470,6 @@
             "N2"
           ],
           "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ふるまう",
-      "reading": "ふるまう",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1603090",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "振舞う",
-            "振る舞う"
-          ]
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -8119,51 +6744,6 @@
           "sourceSpellings": [
             "伸びる",
             "延びる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "みがく",
-      "reading": "みがく",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1523940",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "磨く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "きづく",
-      "reading": "きづく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1591330",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "気づく",
-            "気付く",
-            "気ずく",
-            "気附く"
           ]
         }
       ],
@@ -8517,71 +7097,6 @@
     },
     {
       "kind": "word",
-      "label": "ふれる",
-      "reading": "ふれる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1357990",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "触れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "めぐまれる",
-      "reading": "めぐまれる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1611980",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "恵まれる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "となり",
-      "reading": "となり",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1555830",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "隣",
-            "隣り",
-            "鄰"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "たより",
       "reading": "たより",
       "levels": [
@@ -8596,27 +7111,6 @@
           ],
           "sourceSpellings": [
             "便り"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "みだれる",
-      "reading": "みだれる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1548940",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "乱れる"
           ]
         }
       ],
@@ -8826,29 +7320,6 @@
     },
     {
       "kind": "word",
-      "label": "あわてる",
-      "reading": "あわてる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1278830",
-          "levels": [
-            "N1",
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "慌てる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ご存じ",
       "reading": "ごぞんじ",
       "levels": [
@@ -8869,31 +7340,6 @@
     },
     {
       "kind": "word",
-      "label": "におい",
-      "reading": "におい",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1599760",
-          "levels": [
-            "N3",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "匂い",
-            "臭い",
-            "香い",
-            "匂"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "くだ",
       "reading": "くだ",
       "levels": [
@@ -8908,28 +7354,6 @@
           ],
           "sourceSpellings": [
             "管"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "まことに",
-      "reading": "まことに",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1381160",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "誠に",
-            "真に"
           ]
         }
       ],
@@ -9032,28 +7456,6 @@
     },
     {
       "kind": "word",
-      "label": "はたす",
-      "reading": "はたす",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1192850",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "果たす",
-            "果す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "書ける",
       "reading": "かける",
       "levels": [
@@ -9061,30 +7463,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "できあがる",
-      "reading": "できあがる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1340610",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "出来上がる",
-            "でき上がる",
-            "出来あがる",
-            "出来上る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -9261,28 +7639,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "たかめる",
-      "reading": "たかめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1283240",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "高める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "例を挙げる",
       "reading": "れいをあげる",
@@ -9301,27 +7657,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "とどける",
-      "reading": "とどける",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1457210",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "届ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -9378,27 +7713,6 @@
     },
     {
       "kind": "word",
-      "label": "ならべる",
-      "reading": "ならべる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1508390",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "並べる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "チョコレート",
       "reading": "ちょこれーと",
       "levels": [
@@ -9406,50 +7720,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "よろこぶ",
-      "reading": "よろこぶ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1218760",
-          "levels": [
-            "N2",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "喜ぶ",
-            "欣ぶ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "らく",
-      "reading": "らく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1207230",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "楽"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -9551,50 +7821,6 @@
     },
     {
       "kind": "word",
-      "label": "つまる",
-      "reading": "つまる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1226480",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "詰まる",
-            "詰る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おくれる",
-      "reading": "おくれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1589040",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "遅れる",
-            "後れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しまる",
       "reading": "しまる",
       "levels": [
@@ -9677,51 +7903,6 @@
     },
     {
       "kind": "word",
-      "label": "こども",
-      "reading": "こども",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1307850",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "子供",
-            "子ども",
-            "小供",
-            "子共"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "へだてる",
-      "reading": "へだてる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1206360",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "隔てる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しょ",
       "reading": "しょ",
       "levels": [
@@ -9778,48 +7959,6 @@
           ],
           "sourceSpellings": [
             "肝心"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あきらめる",
-      "reading": "あきらめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1436730",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "諦める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "くだく",
-      "reading": "くだく",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1295170",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "砕く"
           ]
         }
       ],
@@ -9889,57 +8028,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "イス",
-      "reading": "いす",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1157070",
-          "levels": [
-            "N3",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "椅子"
-          ]
-        },
-        {
-          "id": "1157070",
-          "levels": [
-            "N3",
-            "N5"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "まかせる",
-      "reading": "まかせる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1467150",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "任せる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "時間をかける",
       "reading": "じかんをかける",
@@ -9977,28 +8065,6 @@
             "頂",
             "頂き",
             "戴き"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "つもる",
-      "reading": "つもる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1382990",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "積もる",
-            "積る"
           ]
         }
       ],
@@ -10069,27 +8135,6 @@
     },
     {
       "kind": "word",
-      "label": "きもの",
-      "reading": "きもの",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1423240",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "着物"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "あらわれる",
       "reading": "あらわれる",
       "levels": [
@@ -10123,30 +8168,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "うまれる",
-      "reading": "うまれる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1378690",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "生まれる",
-            "産まれる",
-            "生れる",
-            "産れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -10450,27 +8471,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "のべる",
-      "reading": "のべる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1340820",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "述べる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -10930,49 +8930,6 @@
     },
     {
       "kind": "word",
-      "label": "ちる",
-      "reading": "ちる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1303490",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "散る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "さそう",
-      "reading": "さそう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1541900",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "誘う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "請う",
       "reading": "こう",
       "levels": [
@@ -11060,27 +9017,6 @@
     },
     {
       "kind": "word",
-      "label": "ちぢむ",
-      "reading": "ちぢむ",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1337560",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "縮む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "なんで",
       "reading": "なんで",
       "levels": [
@@ -11140,16 +9076,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かりに",
-      "reading": "かりに",
-      "levels": [
-        "N1"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -11247,29 +9173,6 @@
     },
     {
       "kind": "word",
-      "label": "かくす",
-      "reading": "かくす",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1170650",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "隠す",
-            "隱す",
-            "隠くす"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "定着",
       "reading": "ていちゃく",
       "levels": [
@@ -11363,29 +9266,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "みつかる",
-      "reading": "みつかる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1604550",
-          "levels": [
-            "N2",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "見つかる",
-            "見付る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -11599,28 +9479,6 @@
     },
     {
       "kind": "word",
-      "label": "たいへん",
-      "reading": "たいへん",
-      "levels": [
-        "N5"
-      ],
-      "pos": [
-        "副词"
-      ],
-      "method": "reviewed-word-sense",
-      "jmdictId": "1415000",
-      "referenceWord": "大変",
-      "referenceReading": "たいへん",
-      "source": {
-        "name": "Jonathan Waller / Tanos via Stephen Kraus; whole-word JMdict variant review",
-        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data",
-        "revision": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
-        "license": "CC BY-SA 4.0"
-      },
-      "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
-    },
-    {
-      "kind": "word",
       "label": "みかん",
       "reading": "みかん",
       "levels": [
@@ -11648,48 +9506,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "こわれる",
-      "reading": "こわれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1199900",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "壊れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "よごれる",
-      "reading": "よごれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1179005",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "汚れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -11870,64 +9686,10 @@
     },
     {
       "kind": "word",
-      "label": "こわい",
-      "reading": "こわい",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1593480",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "怖い",
-            "恐い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "きたない",
-      "reading": "きたない",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1178940",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "汚い",
-            "汚ない"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "いつのまにか",
       "reading": "いつのまにか",
       "levels": [
         "N3"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "にぎやか",
-      "reading": "にぎやか",
-      "levels": [
-        "N5"
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
@@ -11983,27 +9745,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "けす",
-      "reading": "けす",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1350110",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "消す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -12064,28 +9805,6 @@
     },
     {
       "kind": "word",
-      "label": "じつに",
-      "reading": "じつに",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "2820720",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "実に",
-            "實に"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "時給",
       "reading": "じきゅう",
       "levels": [
@@ -12115,54 +9834,6 @@
         "license": "CC BY-SA 4.0"
       },
       "reason": "整词人工复核：与公开词表的「コーナー／コーナー」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
-    },
-    {
-      "kind": "word",
-      "label": "もうしこむ",
-      "reading": "もうしこむ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1362890",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "申し込む",
-            "申込む",
-            "申しこむ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "しめきる",
-      "reading": "しめきる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1594600",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "締め切る",
-            "閉め切る",
-            "〆切る",
-            "閉切る",
-            "締切る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -12220,27 +9891,6 @@
     },
     {
       "kind": "word",
-      "label": "にぶる",
-      "reading": "にぶる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1582440",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "鈍る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "とどこおる",
       "reading": "とどこおる",
       "levels": [
@@ -12255,48 +9905,6 @@
           ],
           "sourceSpellings": [
             "滞る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おとる",
-      "reading": "おとる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1558400",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "劣る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ちぢまる",
-      "reading": "ちぢまる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1337540",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "縮まる"
           ]
         }
       ],
@@ -12415,34 +10023,6 @@
     },
     {
       "kind": "word",
-      "label": "ひざ",
-      "reading": "ひざ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1487320",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "膝"
-          ]
-        },
-        {
-          "id": "1487320",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "あっけない",
       "reading": "あっけない",
       "levels": [
@@ -12492,30 +10072,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "のむ",
-      "reading": "のむ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1169870",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "飲む",
-            "呑む",
-            "飮む",
-            "吞む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -12608,31 +10164,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "にせもの",
-      "reading": "にせもの",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1577800",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "偽物",
-            "贋物",
-            "ニセ物",
-            "にせ物",
-            "偽もの"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -12777,30 +10308,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "ふりかえる",
-      "reading": "ふりかえる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1361290",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "振り返る",
-            "振りかえる",
-            "ふり返る",
-            "振返る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "idiom",
@@ -13462,27 +10969,6 @@
       "reason": "按完整词形、读音与词性核对同一 JMdict 条目及公开词表；排除其他词性的同音词。"
     },
     {
-      "kind": "word",
-      "label": "よけい",
-      "reading": "よけい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1544090",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "余計"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "汗をかく",
       "reading": "あせをかく",
@@ -13536,28 +11022,6 @@
     },
     {
       "kind": "word",
-      "label": "いたる",
-      "reading": "いたる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1311870",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "至る",
-            "到る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "むける",
       "reading": "むける",
       "levels": [
@@ -13572,27 +11036,6 @@
           ],
           "sourceSpellings": [
             "向ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かぎり",
-      "reading": "かぎり",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1264610",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "限り"
           ]
         }
       ],
@@ -13756,30 +11199,6 @@
     },
     {
       "kind": "word",
-      "label": "もとづく",
-      "reading": "もとづく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1605270",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "基づく",
-            "基く",
-            "基ずく",
-            "基付く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "もしくは",
       "reading": "もしくは",
       "levels": [
@@ -13910,28 +11329,6 @@
           ],
           "sourceSpellings": [
             "倍"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "いかす",
-      "reading": "いかす",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1587070",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "生かす",
-            "活かす"
           ]
         }
       ],
@@ -14211,48 +11608,6 @@
     },
     {
       "kind": "word",
-      "label": "もどす",
-      "reading": "もどす",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1535850",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "戻す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "わたす",
-      "reading": "わたす",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1444610",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "渡す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ざい",
       "reading": "ざい",
       "levels": [
@@ -14364,51 +11719,6 @@
     },
     {
       "kind": "word",
-      "label": "ゆるい",
-      "reading": "ゆるい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1214410",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "緩い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "さしあげる",
-      "reading": "さしあげる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1291270",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "差し上げる",
-            "差上げる",
-            "さし上げる",
-            "差しあげる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "食後",
       "reading": "しょくご",
       "levels": [
@@ -14468,29 +11778,6 @@
             "可哀相",
             "可哀そう",
             "可愛そう"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かたづける",
-      "reading": "かたづける",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1511790",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "片付ける",
-            "片づける",
-            "嫁ける"
           ]
         }
       ],
@@ -14892,28 +12179,6 @@
     },
     {
       "kind": "word",
-      "label": "わける",
-      "reading": "わける",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1503000",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "分ける",
-            "頒ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "かぶせる",
       "reading": "かぶせる",
       "levels": [
@@ -15228,28 +12493,6 @@
     },
     {
       "kind": "word",
-      "label": "うめる",
-      "reading": "うめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1524500",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "埋める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しょうじ",
       "reading": "しょうじ",
       "levels": [
@@ -15363,27 +12606,6 @@
     },
     {
       "kind": "word",
-      "label": "とぼしい",
-      "reading": "とぼしい",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1584130",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "乏しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "なぞなぞ",
       "reading": "なぞなぞ",
       "levels": [
@@ -15450,27 +12672,6 @@
           ],
           "sourceSpellings": [
             "諺"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "つたえる",
-      "reading": "つたえる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1441870",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "伝える"
           ]
         }
       ],
@@ -15691,91 +12892,6 @@
     },
     {
       "kind": "word",
-      "label": "あびる",
-      "reading": "あびる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1547450",
-          "levels": [
-            "N3",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "浴びる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "だまる",
-      "reading": "だまる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1534930",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "黙る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "はらう",
-      "reading": "はらう",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1501620",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "払う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "くばる",
-      "reading": "くばる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1472990",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "配る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "かんぜん",
       "reading": "かんぜん",
       "levels": [
@@ -15818,27 +12934,6 @@
     },
     {
       "kind": "word",
-      "label": "うたがう",
-      "reading": "うたがう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1225510",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "疑う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "イヌ",
       "reading": "いぬ",
       "levels": [
@@ -15862,50 +12957,6 @@
             "N5"
           ],
           "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かるい",
-      "reading": "かるい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1252560",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "軽い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "まもる",
-      "reading": "まもる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1327120",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "守る",
-            "戍る",
-            "守護る"
-          ]
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -15970,27 +13021,6 @@
           "sourceSpellings": [
             "温める",
             "暖める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かんじる",
-      "reading": "かんじる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1212260",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "感じる"
           ]
         }
       ],
@@ -16133,27 +13163,6 @@
     },
     {
       "kind": "word",
-      "label": "あそぶ",
-      "reading": "あそぶ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1542160",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "遊ぶ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ラーメン",
       "reading": "らーめん",
       "levels": [
@@ -16161,27 +13170,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "みなみ",
-      "reading": "みなみ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1459870",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "南"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -16429,27 +13417,6 @@
     },
     {
       "kind": "word",
-      "label": "おぼれる",
-      "reading": "おぼれる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1437560",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "溺れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "束ねる",
       "reading": "たばねる",
       "levels": [
@@ -16509,28 +13476,6 @@
           "review_status": "draft"
         }
       ]
-    },
-    {
-      "kind": "word",
-      "label": "かわいらしい",
-      "reading": "かわいらしい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1190740",
-          "levels": [
-            "N1",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "可愛らしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -16636,28 +13581,6 @@
     },
     {
       "kind": "word",
-      "label": "ひろがる",
-      "reading": "ひろがる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1602360",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "広がる",
-            "拡がる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ひろまる",
       "reading": "ひろまる",
       "levels": [
@@ -16695,28 +13618,6 @@
           ],
           "sourceSpellings": [
             "捲る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "じゅうぶん",
-      "reading": "じゅうぶん",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1335080",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "十分",
-            "充分"
           ]
         }
       ],
@@ -16973,28 +13874,6 @@
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
     },
     {
-      "kind": "word",
-      "label": "ごはん",
-      "reading": "ごはん",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1270590",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "ご飯",
-            "御飯"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "手が掛かる",
       "reading": "てがかかる",
@@ -17065,27 +13944,6 @@
     },
     {
       "kind": "word",
-      "label": "おとずれる",
-      "reading": "おとずれる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1518080",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "訪れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "いきおい",
       "reading": "いきおい",
       "levels": [
@@ -17101,71 +13959,6 @@
           "sourceSpellings": [
             "勢い",
             "勢"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "はぶく",
-      "reading": "はぶく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1351040",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "省く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かたよる",
-      "reading": "かたよる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1590420",
-          "levels": [
-            "N1",
-            "N2"
-          ],
-          "sourceSpellings": [
-            "偏る",
-            "片寄る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かたむく",
-      "reading": "かたむく",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1578210",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "傾く"
           ]
         }
       ],
@@ -17230,27 +14023,6 @@
             "N1"
           ],
           "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "たす",
-      "reading": "たす",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1404700",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "足す"
-          ]
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -17398,51 +14170,6 @@
       "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
-      "kind": "word",
-      "label": "あわただしい",
-      "reading": "あわただしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1278810",
-          "levels": [
-            "N1",
-            "N2"
-          ],
-          "sourceSpellings": [
-            "慌ただしい",
-            "慌しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "もれる",
-      "reading": "もれる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1605330",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "漏れる",
-            "洩れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "気分転換",
       "reading": "きぶんてんかん",
@@ -17496,27 +14223,6 @@
     },
     {
       "kind": "word",
-      "label": "うすい",
-      "reading": "うすい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1475480",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "薄い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "来年度",
       "reading": "らいねんど",
       "levels": [
@@ -17541,27 +14247,6 @@
           ],
           "sourceSpellings": [
             "笑顔"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かお",
-      "reading": "かお",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1217730",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "顔"
           ]
         }
       ],
@@ -17640,27 +14325,6 @@
     },
     {
       "kind": "word",
-      "label": "むすぶ",
-      "reading": "むすぶ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1254670",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "結ぶ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ふくしゅう",
       "reading": "ふくしゅう",
       "levels": [
@@ -17682,48 +14346,6 @@
     },
     {
       "kind": "word",
-      "label": "やぶる",
-      "reading": "やぶる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1471200",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "破る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "こげる",
-      "reading": "こげる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1350730",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "焦げる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "はらはら",
       "reading": "はらはら",
       "levels": [
@@ -17731,50 +14353,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "くやしい",
-      "reading": "くやしい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1592350",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "悔しい",
-            "悔やしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "うばう",
-      "reading": "うばう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1416340",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "奪う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -18131,27 +14709,6 @@
     },
     {
       "kind": "word",
-      "label": "ゆるやか",
-      "reading": "ゆるやか",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1214450",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "緩やか"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "つぶる",
       "reading": "つぶる",
       "levels": [
@@ -18231,27 +14788,6 @@
           ],
           "sourceSpellings": [
             "乃至"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "およぶ",
-      "reading": "およぶ",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1228170",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "及ぶ"
           ]
         }
       ],
@@ -18353,28 +14889,6 @@
     },
     {
       "kind": "word",
-      "label": "ふくめる",
-      "reading": "ふくめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1216890",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "含める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "きずく",
       "reading": "きずく",
       "levels": [
@@ -18390,27 +14904,6 @@
           ],
           "sourceSpellings": [
             "築く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ほんらい",
-      "reading": "ほんらい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1523270",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "本来"
           ]
         }
       ],
@@ -18496,28 +14989,6 @@
     },
     {
       "kind": "word",
-      "label": "そろえる",
-      "reading": "そろえる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1406120",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "揃える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しかける",
       "reading": "しかける",
       "levels": [
@@ -18541,28 +15012,6 @@
     },
     {
       "kind": "word",
-      "label": "つかう",
-      "reading": "つかう",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1305990",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "使う",
-            "遣う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "このごろ",
       "reading": "このごろ",
       "levels": [
@@ -18578,30 +15027,6 @@
           ],
           "sourceSpellings": [
             "この頃"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おちる",
-      "reading": "おちる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1548550",
-          "levels": [
-            "N1",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "落ちる",
-            "墜ちる",
-            "落る"
           ]
         }
       ],
@@ -18716,27 +15141,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "いきる",
-      "reading": "いきる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1378520",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "生きる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -18909,28 +15313,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "さきほど",
-      "reading": "さきほど",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1388170",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "先ほど",
-            "先程"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "手間をかける",
       "reading": "てまをかける",
@@ -18939,27 +15321,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "たしかめる",
-      "reading": "たしかめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1205780",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "確かめる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -19144,28 +15505,6 @@
     },
     {
       "kind": "word",
-      "label": "ぐうぜん",
-      "reading": "ぐうぜん",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1246270",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "偶然",
-            "遇然"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "あまり",
       "reading": "あまり",
       "levels": [
@@ -19220,29 +15559,6 @@
     },
     {
       "kind": "word",
-      "label": "でかける",
-      "reading": "でかける",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1598550",
-          "levels": [
-            "N2",
-            "N5"
-          ],
-          "sourceSpellings": [
-            "出かける",
-            "出掛ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しゅちょう",
       "reading": "しゅちょう",
       "levels": [
@@ -19257,27 +15573,6 @@
           ],
           "sourceSpellings": [
             "主張"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "とおい",
-      "reading": "とおい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1177800",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "遠い"
           ]
         }
       ],
@@ -19335,27 +15630,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "たのむ",
-      "reading": "たのむ",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1548370",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "頼む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -19488,27 +15762,6 @@
     },
     {
       "kind": "word",
-      "label": "ぬく",
-      "reading": "ぬく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1478190",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "抜く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "まさしく",
       "reading": "まさしく",
       "levels": [
@@ -19526,49 +15779,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "になう",
-      "reading": "になう",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1599900",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "担う",
-            "荷なう"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かかげる",
-      "reading": "かかげる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1250600",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "掲げる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -19599,30 +15809,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "くりかえす",
-      "reading": "くりかえす",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1247030",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "繰り返す",
-            "くり返す",
-            "繰りかえす",
-            "繰返す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -19850,33 +16036,6 @@
           ],
           "sourceSpellings": [
             "凹む"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あたりまえ",
-      "reading": "あたりまえ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1448800",
-          "levels": [
-            "N1",
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "当たり前",
-            "当り前",
-            "あたり前",
-            "当りまえ",
-            "当たりめー"
           ]
         }
       ],
@@ -20178,60 +16337,6 @@
     },
     {
       "kind": "word",
-      "label": "ばくだい",
-      "reading": "ばくだい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1476060",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "莫大",
-            "ばく大"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "やむをえない",
-      "reading": "やむをえない",
-      "levels": [
-        "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "えがく",
-      "reading": "えがく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1583460",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "描く",
-            "画く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "母国",
       "reading": "ぼこく",
       "levels": [
@@ -20396,28 +16501,6 @@
             "笑う",
             "哂う",
             "咲う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "にげる",
-      "reading": "にげる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1450330",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "逃げる",
-            "迯げる"
           ]
         }
       ],
@@ -20777,28 +16860,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "なかば",
-      "reading": "なかば",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1478780",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "半ば",
-            "中ば"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "grammar",
       "label": "はずがない",
       "reading": "はずがない",
@@ -20826,48 +16887,6 @@
             "当て",
             "宛",
             "宛て"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "とくべつ",
-      "reading": "とくべつ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1455280",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "特別"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ふくらむ",
-      "reading": "ふくらむ",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1519990",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "膨らむ"
           ]
         }
       ],
@@ -20905,34 +16924,6 @@
     },
     {
       "kind": "word",
-      "label": "マンガ",
-      "reading": "まんが",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1526920",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "漫画"
-          ]
-        },
-        {
-          "id": "1526920",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "たる",
       "reading": "たる",
       "levels": [
@@ -20948,34 +16939,6 @@
           "sourceSpellings": [
             "足る"
           ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "クルマ",
-      "reading": "くるま",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1323080",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "車"
-          ]
-        },
-        {
-          "id": "1323080",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": []
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -21184,28 +17147,6 @@
     },
     {
       "kind": "word",
-      "label": "けわしい",
-      "reading": "けわしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1260530",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "険しい",
-            "峻しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "やけど",
       "reading": "やけど",
       "levels": [
@@ -21395,28 +17336,6 @@
     },
     {
       "kind": "word",
-      "label": "われる",
-      "reading": "われる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1208020",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "割れる",
-            "破れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しゅじゅ",
       "reading": "しゅじゅ",
       "levels": [
@@ -21432,69 +17351,6 @@
           "sourceSpellings": [
             "種々",
             "種種"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "わかい",
-      "reading": "わかい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1324300",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "若い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "きらう",
-      "reading": "きらう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1257250",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "嫌う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あきる",
-      "reading": "あきる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1586250",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "飽きる"
           ]
         }
       ],
@@ -21531,27 +17387,6 @@
       ],
       "method": "editorial",
       "reason": "Individually reviewed whole-word study estimate; meaning, reading and register checked."
-    },
-    {
-      "kind": "word",
-      "label": "かせぐ",
-      "reading": "かせぐ",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1194450",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "稼ぐ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -21636,28 +17471,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "みえる",
-      "reading": "みえる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1259140",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "見える",
-            "視える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -21788,28 +17601,6 @@
             "引きずる",
             "引き摺る",
             "引摺る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "めざす",
-      "reading": "めざす",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1535440",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "目指す",
-            "目ざす"
           ]
         }
       ],
@@ -22315,27 +18106,6 @@
     },
     {
       "kind": "word",
-      "label": "あまい",
-      "reading": "あまい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1213400",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "甘い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "動",
       "reading": "どう",
       "levels": [
@@ -22350,28 +18120,6 @@
           ],
           "sourceSpellings": [
             "動"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "こいしい",
-      "reading": "こいしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1558760",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "恋しい",
-            "恋いしい"
           ]
         }
       ],
@@ -22509,72 +18257,6 @@
     },
     {
       "kind": "word",
-      "label": "てぶくろ",
-      "reading": "てぶくろ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1328090",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "手袋",
-            "手ぶくろ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "えらぶ",
-      "reading": "えらぶ",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1588730",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "選ぶ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "くみたてる",
-      "reading": "くみたてる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1397580",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "組み立てる",
-            "組立てる",
-            "組み立る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ぬる",
       "reading": "ぬる",
       "levels": [
@@ -22702,27 +18384,6 @@
     },
     {
       "kind": "word",
-      "label": "きよい",
-      "reading": "きよい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1378140",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "清い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "クレーム",
       "reading": "くれーむ",
       "levels": [
@@ -22730,52 +18391,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "ものさし",
-      "reading": "ものさし",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1502530",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "物差し",
-            "物差",
-            "物さし",
-            "もの差し",
-            "もの指し"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "オトナ",
-      "reading": "おとな",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1414170",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "大人"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -23127,27 +18742,6 @@
     },
     {
       "kind": "word",
-      "label": "あやしい",
-      "reading": "あやしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1586700",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "怪しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "指さす",
       "reading": "ゆびさす",
       "levels": [
@@ -23220,27 +18814,6 @@
       ],
       "method": "editorial",
       "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
-    },
-    {
-      "kind": "word",
-      "label": "もどる",
-      "reading": "もどる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1535880",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "戻る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -23382,70 +18955,6 @@
     },
     {
       "kind": "word",
-      "label": "おれる",
-      "reading": "おれる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1385920",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "折れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ほす",
-      "reading": "ほす",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1603510",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "干す",
-            "乾す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "なげる",
-      "reading": "なげる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1447000",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "投げる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "基",
       "reading": "もと",
       "levels": [
@@ -23470,27 +18979,6 @@
           ],
           "sourceSpellings": [
             "不可"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "いれる",
-      "reading": "いれる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1465610",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "入れる"
           ]
         }
       ],
@@ -23774,33 +19262,6 @@
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
     },
     {
-      "kind": "word",
-      "label": "とりあげる",
-      "reading": "とりあげる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1326800",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "取り上げる",
-            "採り上げる",
-            "取りあげる",
-            "取上げる",
-            "とり上げる",
-            "採りあげる",
-            "採上げる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "手が離せない",
       "reading": "てがはなせない",
@@ -23844,28 +19305,6 @@
     },
     {
       "kind": "word",
-      "label": "あらそう",
-      "reading": "あらそう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1400620",
-          "levels": [
-            "N2",
-            "N3"
-          ],
-          "sourceSpellings": [
-            "争う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "濃やか",
       "reading": "こまやか",
       "levels": [
@@ -23902,49 +19341,6 @@
           ],
           "sourceSpellings": [
             "曇る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "かくれる",
-      "reading": "かくれる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1170660",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "隠れる",
-            "匿れる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "にごる",
-      "reading": "にごる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1415960",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "濁る"
           ]
         }
       ],
@@ -24101,28 +19497,6 @@
     },
     {
       "kind": "word",
-      "label": "かりる",
-      "reading": "かりる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1323560",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "借りる",
-            "貸りる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "代る",
       "reading": "かわる",
       "levels": [
@@ -24140,27 +19514,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "はなやか",
-      "reading": "はなやか",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1600990",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "華やか"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -24537,27 +19890,6 @@
     },
     {
       "kind": "word",
-      "label": "もとめる",
-      "reading": "もとめる",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1229350",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "求める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "まける",
       "reading": "まける",
       "levels": [
@@ -24625,27 +19957,6 @@
     },
     {
       "kind": "word",
-      "label": "したしい",
-      "reading": "したしい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1365050",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "親しい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "じかに",
       "reading": "じかに",
       "levels": [
@@ -24695,27 +20006,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "さぐる",
-      "reading": "さぐる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1418260",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "探る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -24898,27 +20188,6 @@
             "申し込む",
             "申込む",
             "申しこむ"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "とどく",
-      "reading": "とどく",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1457200",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "届く"
           ]
         }
       ],
@@ -25598,27 +20867,6 @@
     },
     {
       "kind": "word",
-      "label": "たがやす",
-      "reading": "たがやす",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1280950",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "耕す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ぬらす",
       "reading": "ぬらす",
       "levels": [
@@ -25679,28 +20927,6 @@
           "sourceSpellings": [
             "会社",
             "會社"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "はばむ",
-      "reading": "はばむ",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1397800",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "阻む",
-            "沮む"
           ]
         }
       ],
@@ -25811,28 +21037,6 @@
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "ヒトコト",
-      "reading": "ひとこと",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1575990",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "一言",
-            "ひと言"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -26161,93 +21365,6 @@
     },
     {
       "kind": "word",
-      "label": "あずける",
-      "reading": "あずける",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1544990",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "預ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "うけつける",
-      "reading": "うけつける",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1329690",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "受け付ける",
-            "受けつける",
-            "受付ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おどる",
-      "reading": "おどる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1538440",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "踊る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おかし",
-      "reading": "おかし",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1001710",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "お菓子",
-            "御菓子"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "りょうしょう",
       "reading": "りょうしょう",
       "levels": [
@@ -26262,27 +21379,6 @@
           ],
           "sourceSpellings": [
             "了承"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ねばる",
-      "reading": "ねばる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1469700",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "粘る"
           ]
         }
       ],
@@ -26618,28 +21714,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "なめらか",
-      "reading": "なめらか",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1208560",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "滑らか",
-            "滑か"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "grammar",
       "label": "さえすれば",
       "reading": "さえすれば",
@@ -26666,27 +21740,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "まちがい",
-      "reading": "まちがい",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1215320",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "間違い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -26800,27 +21853,6 @@
           ],
           "sourceSpellings": [
             "直接"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "きえる",
-      "reading": "きえる",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1350040",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "消える"
           ]
         }
       ],
@@ -27055,27 +22087,6 @@
     },
     {
       "kind": "word",
-      "label": "なぐさめる",
-      "reading": "なぐさめる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1156890",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "慰める"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "ソファ",
       "reading": "そふぁ",
       "levels": [
@@ -27259,27 +22270,6 @@
             "能く",
             "好く",
             "克く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "うく",
-      "reading": "うく",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1497420",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "浮く"
           ]
         }
       ],
@@ -27663,34 +22653,6 @@
     },
     {
       "kind": "word",
-      "label": "ヒマ",
-      "reading": "ひま",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1577280",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "暇"
-          ]
-        },
-        {
-          "id": "1577280",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しか",
       "reading": "しか",
       "levels": [
@@ -27746,51 +22708,6 @@
           ],
           "sourceSpellings": [
             "懲りる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "みつける",
-      "reading": "みつける",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1604570",
-          "levels": [
-            "N2",
-            "N4"
-          ],
-          "sourceSpellings": [
-            "見つける",
-            "見付ける",
-            "見附ける"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "むかえる",
-      "reading": "むかえる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1253190",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "迎える"
           ]
         }
       ],
@@ -28205,27 +23122,6 @@
     },
     {
       "kind": "word",
-      "label": "かならずしも",
-      "reading": "かならずしも",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1487410",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "必ずしも"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "しか",
       "reading": "しか",
       "levels": [
@@ -28415,39 +23311,6 @@
       "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
-      "kind": "word",
-      "label": "ごちそう",
-      "reading": "ごちそう",
-      "levels": [
-        "N4"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "なにげない",
-      "reading": "なにげない",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1599570",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "何気ない",
-            "何気無い",
-            "何げない"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "idiom",
       "label": "気が合う",
       "reading": "きがあう",
@@ -28456,30 +23319,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "ひっこす",
-      "reading": "ひっこす",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1169340",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "引っ越す",
-            "引越す",
-            "引っこす",
-            "ひっ越す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -28575,27 +23414,6 @@
             "組み立てる",
             "組立てる",
             "組み立る"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "まちがえる",
-      "reading": "まちがえる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1215330",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "間違える"
           ]
         }
       ],
@@ -28814,27 +23632,6 @@
     },
     {
       "kind": "word",
-      "label": "いさましい",
-      "reading": "いさましい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1539660",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "勇ましい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "みのがす",
       "reading": "みのがす",
       "levels": [
@@ -28865,27 +23662,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "にくらしい",
-      "reading": "にくらしい",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1403450",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "憎らしい"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -29045,27 +23821,6 @@
           "sourceSpellings": [
             "歳",
             "才"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ちぢめる",
-      "reading": "ちぢめる",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1337570",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "縮める"
           ]
         }
       ],
@@ -29319,27 +24074,6 @@
             "混ぜる",
             "交ぜる",
             "雑ぜる"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "あつめる",
-      "reading": "あつめる",
-      "levels": [
-        "N4"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1333560",
-          "levels": [
-            "N4"
-          ],
-          "sourceSpellings": [
-            "集める"
           ]
         }
       ],
@@ -29713,28 +24447,6 @@
     },
     {
       "kind": "word",
-      "label": "けがす",
-      "reading": "けがす",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1178960",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "汚す",
-            "穢す"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "のこぎり",
       "reading": "のこぎり",
       "levels": [
@@ -30055,27 +24767,6 @@
     },
     {
       "kind": "word",
-      "label": "はたらく",
-      "reading": "はたらく",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1451150",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "働く"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "アワ",
       "reading": "あわ",
       "levels": [
@@ -30373,48 +25064,6 @@
         "license": "CC BY-SA 4.0"
       },
       "reason": "整词人工复核：与公开词表的「センター／センター」为同一词的长音、表记或口语变体；仅此显式记录允许跨读音，不推广到同音词或其他读法。"
-    },
-    {
-      "kind": "word",
-      "label": "くろい",
-      "reading": "くろい",
-      "levels": [
-        "N5"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1287420",
-          "levels": [
-            "N5"
-          ],
-          "sourceSpellings": [
-            "黒い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "ゆかた",
-      "reading": "ゆかた",
-      "levels": [
-        "N2"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1584990",
-          "levels": [
-            "N2"
-          ],
-          "sourceSpellings": [
-            "浴衣"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
       "kind": "word",
@@ -31073,28 +25722,6 @@
     },
     {
       "kind": "word",
-      "label": "ふたたび",
-      "reading": "ふたたび",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1292300",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "再び",
-            "二度"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "とき",
       "reading": "とき",
       "levels": [
@@ -31418,27 +26045,6 @@
             "N1"
           ],
           "sourceSpellings": []
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "おどす",
-      "reading": "おどす",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1238070",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "脅す"
-          ]
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -32528,7 +27134,7 @@
     },
     {
       "kind": "word",
-      "label": "まなざし",
+      "label": "眼差し",
       "reading": "まなざし",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -32630,7 +27236,7 @@
     },
     {
       "kind": "word",
-      "label": "おわび",
+      "label": "お詫び",
       "reading": "おわび",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -33218,7 +27824,7 @@
     },
     {
       "kind": "word",
-      "label": "ふれあう",
+      "label": "触れ合う",
       "reading": "ふれあう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -35684,12 +30290,6 @@
     },
     {
       "kind": "word",
-      "label": "つくりだす",
-      "reading": "つくりだす",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "培える",
       "reading": "つちかえる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -37022,7 +31622,7 @@
     },
     {
       "kind": "word",
-      "label": "あげく",
+      "label": "挙句",
       "reading": "あげく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -38678,12 +33278,6 @@
     },
     {
       "kind": "word",
-      "label": "お詫び",
-      "reading": "おわび",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "お尋ね",
       "reading": "おたずね",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -39970,12 +34564,6 @@
       "kind": "word",
       "label": "くわえる",
       "reading": "くわえる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "やりなおす",
-      "reading": "やりなおす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -41972,7 +36560,7 @@
     },
     {
       "kind": "word",
-      "label": "つくりあげる",
+      "label": "作り上げる",
       "reading": "つくりあげる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -42788,12 +37376,6 @@
     },
     {
       "kind": "word",
-      "label": "ここちよい",
-      "reading": "ここちよい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "こく",
       "reading": "こく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -43076,7 +37658,7 @@
     },
     {
       "kind": "word",
-      "label": "おたがいに",
+      "label": "お互いに",
       "reading": "おたがいに",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -43790,7 +38372,7 @@
     },
     {
       "kind": "word",
-      "label": "とりかかる",
+      "label": "取り掛かる",
       "reading": "とりかかる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -47162,7 +41744,7 @@
     },
     {
       "kind": "word",
-      "label": "かたくな",
+      "label": "頑な",
       "reading": "かたくな",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -47960,7 +42542,7 @@
     },
     {
       "kind": "word",
-      "label": "やどす",
+      "label": "宿す",
       "reading": "やどす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -49520,12 +44102,6 @@
     },
     {
       "kind": "word",
-      "label": "眼差し",
-      "reading": "まなざし",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "首尾",
       "reading": "しゅび",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -49982,12 +44558,6 @@
     },
     {
       "kind": "word",
-      "label": "いまや",
-      "reading": "いまや",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "闊達",
       "reading": "かったつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -50038,12 +44608,6 @@
       "kind": "word",
       "label": "クーポン",
       "reading": "くーぽん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "いっこうに",
-      "reading": "いっこうに",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -50624,12 +45188,6 @@
     },
     {
       "kind": "word",
-      "label": "かかん",
-      "reading": "かかん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "送り先",
       "reading": "おくりさき",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -50942,7 +45500,7 @@
     },
     {
       "kind": "word",
-      "label": "たくす",
+      "label": "託す",
       "reading": "たくす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -52190,12 +46748,6 @@
     },
     {
       "kind": "word",
-      "label": "触れ合う",
-      "reading": "ふれあう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "別紙",
       "reading": "べっし",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -52444,12 +46996,6 @@
       "kind": "word",
       "label": "一転",
       "reading": "いってん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "取り掛かる",
-      "reading": "とりかかる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -53032,12 +47578,6 @@
       "kind": "word",
       "label": "何もの",
       "reading": "なにもの",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "作り上げる",
-      "reading": "つくりあげる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -54218,7 +48758,7 @@
     },
     {
       "kind": "word",
-      "label": "すさまじい",
+      "label": "凄まじい",
       "reading": "すさまじい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -57068,7 +51608,7 @@
     },
     {
       "kind": "word",
-      "label": "いつわる",
+      "label": "偽る",
       "reading": "いつわる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -59918,12 +54458,6 @@
     },
     {
       "kind": "word",
-      "label": "ふりこむ",
-      "reading": "ふりこむ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "たいそう",
       "reading": "たいそう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -59974,12 +54508,6 @@
       "kind": "word",
       "label": "さっきん",
       "reading": "さっきん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "託す",
-      "reading": "たくす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -61070,12 +55598,6 @@
     },
     {
       "kind": "word",
-      "label": "ときには",
-      "reading": "ときには",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "久",
       "reading": "ひさ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -61142,7 +55664,7 @@
     },
     {
       "kind": "word",
-      "label": "ぶた",
+      "label": "豚",
       "reading": "ぶた",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -61826,7 +56348,7 @@
     },
     {
       "kind": "word",
-      "label": "みにつける",
+      "label": "身につける",
       "reading": "みにつける",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -62348,7 +56870,7 @@
     },
     {
       "kind": "word",
-      "label": "いっせいに",
+      "label": "一斉に",
       "reading": "いっせいに",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -62438,13 +56960,13 @@
     },
     {
       "kind": "word",
-      "label": "やりすごす",
+      "label": "やり過ごす",
       "reading": "やりすごす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
       "kind": "word",
-      "label": "はみだす",
+      "label": "はみ出す",
       "reading": "はみだす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -62792,7 +57314,7 @@
     },
     {
       "kind": "word",
-      "label": "ゆだねる",
+      "label": "委ねる",
       "reading": "ゆだねる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -62830,12 +57352,6 @@
       "kind": "word",
       "label": "イヤリング",
       "reading": "いやりんぐ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "くだす",
-      "reading": "くだす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -62998,12 +57514,6 @@
       "kind": "word",
       "label": "やり過ごせる",
       "reading": "やりすごせる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "やり過ごす",
-      "reading": "やりすごす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -63998,7 +58508,7 @@
     },
     {
       "kind": "word",
-      "label": "しぶる",
+      "label": "渋る",
       "reading": "しぶる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -65144,7 +59654,7 @@
     },
     {
       "kind": "word",
-      "label": "はがれる",
+      "label": "剥がれる",
       "reading": "はがれる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -65170,12 +59680,6 @@
       "kind": "word",
       "label": "センサー",
       "reading": "せんさー",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "いさぎよい",
-      "reading": "いさぎよい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -65320,12 +59824,6 @@
       "kind": "word",
       "label": "スローガン",
       "reading": "すろーがん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "クマ",
-      "reading": "くま",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -65738,12 +60236,6 @@
     },
     {
       "kind": "word",
-      "label": "豚",
-      "reading": "ぶた",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "自家製",
       "reading": "じかせい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -65848,12 +60340,6 @@
       "kind": "word",
       "label": "電機",
       "reading": "でんき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "委ねる",
-      "reading": "ゆだねる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -66778,12 +61264,6 @@
       "kind": "word",
       "label": "寄れる",
       "reading": "よれる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "はみ出す",
-      "reading": "はみだす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -69514,12 +63994,6 @@
       "kind": "word",
       "label": "借り物",
       "reading": "かりもの",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "おねがい",
-      "reading": "おねがい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -72554,7 +67028,7 @@
     },
     {
       "kind": "word",
-      "label": "ひょうする",
+      "label": "表する",
       "reading": "ひょうする",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
@@ -73514,12 +67988,6 @@
     },
     {
       "kind": "word",
-      "label": "挙句",
-      "reading": "あげく",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
       "label": "魚介",
       "reading": "ぎょかい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -74319,11 +68787,11 @@
   ],
   "totals": {
     "word": {
-      "total": 14245,
-      "before": 5583,
-      "addedSourced": 1348,
+      "total": 13971,
+      "before": 5580,
+      "addedSourced": 1100,
       "addedEstimates": 273,
-      "after": 7204
+      "after": 6953
     },
     "grammar": {
       "total": 221,
@@ -74340,5 +68808,5 @@
       "after": 182
     }
   },
-  "compounds": 385
+  "compounds": 383
 }

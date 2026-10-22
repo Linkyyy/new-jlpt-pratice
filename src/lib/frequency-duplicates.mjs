@@ -25,6 +25,10 @@ export function applyFrequencyMerges(corpus, groups) {
   const remap = targets.map(id => indices.get(id));
   const partsOfSpeech = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => corpus.partsOfSpeech?.[other] ?? [corpus.terms[other][2]]))]);
   const aliases = retained.map(id => [...new Set((merged.get(id) ?? [id]).flatMap(other => [corpus.terms[other][0], ...(corpus.aliases?.[other] ?? [])]))].filter(label => label !== corpus.terms[id][0]));
+  const sourceHeadwords = corpus.sourceHeadwords && retained.map(id => {
+    const ids = merged.get(id) ?? [id];
+    return ids.some(other => corpus.sourceHeadwords[other]) ? [...new Map(ids.flatMap(other => corpus.sourceHeadwords[other] ?? [[corpus.terms[other][0], ...(corpus.aliases?.[other] ?? [])]]).map(group => [JSON.stringify(group), group])).values()] : null;
+  });
   const definitions = corpus.definitions && retained.map(id => {
     const ids = merged.get(id) ?? [id], definitions = ids.map(other => corpus.definitions[other]);
     const first = definitions.find(definition => definition?.meaning) ?? definitions[0];
@@ -69,6 +73,7 @@ export function applyFrequencyMerges(corpus, groups) {
     return term;
   });
   corpus.aliases = aliases; corpus.partsOfSpeech = partsOfSpeech;
+  if (sourceHeadwords) corpus.sourceHeadwords = sourceHeadwords;
   if (definitions) {
     corpus.definitions = definitions;
     const matched = definitions.filter(definition => definition?.meaning).length;

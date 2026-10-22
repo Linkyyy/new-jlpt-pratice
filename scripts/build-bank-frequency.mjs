@@ -11,6 +11,7 @@ import { annotateFrequencyCompounds, annotateFrequencySupplements } from '../src
 import { annotateFrequencyLevels } from '../src/lib/frequency-levels.mjs';
 import { mergeFrequencyWordVariants } from '../src/lib/frequency-variants.mjs';
 import { mergeFrequencyDuplicateWords } from '../src/lib/frequency-duplicates.mjs';
+import { preferFrequencyHeadwords } from '../src/lib/frequency-headwords.mjs';
 import { annotateFrequencyAudit } from '../src/lib/frequency-audit.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
 
@@ -23,6 +24,7 @@ inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
 inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
 inputs.push('src/lib/frequency-duplicates.mjs');
+inputs.push('src/lib/frequency-headwords.mjs', 'src/data/frequency-levels/preferred-headwords.json');
 inputs.push('src/data/frequency-levels/variant-review.json');
 inputs.push('src/lib/frequency-audit.mjs');
 inputs.push('src/lib/frequency-mimetics.mjs');
@@ -79,6 +81,8 @@ quality.morphologySummary = Object.fromEntries(Object.entries(quality.morphology
 delete corpus.morphologyReview;
 quality.variants = mergeFrequencyWordVariants(corpus, dictionaryEntries, JSON.parse(contents.get('src/data/frequency-levels/variant-review.json')).entries);
 quality.duplicates = mergeFrequencyDuplicateWords(corpus, dictionaryEntries);
+quality.headwords = preferFrequencyHeadwords(corpus, JSON.parse(contents.get('src/data/frequency-levels/preferred-headwords.json')).entries);
+quality.headwordDuplicates = mergeFrequencyDuplicateWords(corpus);
 annotateFrequencyLevels(corpus, referenceEntries, JSON.parse(contents.get('src/data/frequency-levels/source.json')),
   JSON.parse(contents.get('src/data/frequency-levels/expression-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/expression-source.json')));
 const gradeReview = annotateFrequencySupplements(corpus, JSON.parse(contents.get('src/data/frequency-levels/supplement-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/reviewed-entries.json')), JSON.parse(contents.get('src/data/frequency-levels/supplement-source.json')));
