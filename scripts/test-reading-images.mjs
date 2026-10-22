@@ -76,7 +76,7 @@ test("all 168 previously excluded reading questions are available with original 
   const manifest = JSON.parse(await fs.readFile(new URL("../src/data/imported-bank/index.json", import.meta.url)));
   let opened = 0;
   const images = new Set();
-  for (const group of manifest.groups.filter(group => group.type === "reading")) {
+  for (const group of manifest.groups.filter(group => group.type === "reading" && group.sourceFile.startsWith("time_"))) {
     const bank = JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${group.file}`, import.meta.url)));
     const pictures = bank.questions.filter(question => question.media?.images.some(image => image.startsWith("pic/")));
     if (!bank.questions.length) continue;

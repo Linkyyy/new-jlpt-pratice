@@ -540,7 +540,8 @@ test('grammar and idiom levels use whole expressions, support ungraded, and neve
 test('the rebuilt production index excludes audited artifacts from every query and retains aligned sourced expression grades', () => {
   const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   const report=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/quality-report.json',import.meta.url)));
-  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,8759);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
+  const bank=JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json',import.meta.url)));
+  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,bank.report.questions+90);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
   for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫','遍い','しげい'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
   assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
   for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);

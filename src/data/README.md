@@ -46,4 +46,20 @@ npm run import:bank -- --source "题库 JSON 目录" --media "含 pic 的资源�
 
 服务端按选定题型读取 JSON，收藏页面只通过本站只读接口查询已收藏的题目，避免把整份题库传入浏览器。Next.js 文件追踪配置会将标准化 JSON 包含在部署产物中。
 
+### 新版整卷导出格式
+
+包含 `exam`、`sections`、`items` 的整卷 JSON 使用单独的增量导入器，不要传给上面的旧格式全量导入命令：
+
+```sh
+npm run import:exam-bank -- --source "整卷 JSON 目录" --report /tmp/exam-import-report.json
+npm run check:bank
+npm run test:exam-bank
+```
+
+导入器展开阅读／文章语法的 `items`，继承完整文章、题型说明和文章译文，把从 0 开始的 `rightAnswer` 映射到 A–D。N3 优先保留 identity 中的实际印刷题号，不使用整卷累计编号替代。原 objectId、identity、图片路径和源文件校验值保存在每组的 `sourceMetadata`；运行时仍使用原有题目格式和数字 ID，兼容收藏、云备份、纠错和学习记录。
+
+当前不导入该格式的听力题，也不猜测音频文件名。图片只有路径而没有文件或可验证地址的题目保存在 `unavailable`，不参与作答、题数或评分。导入会校对展开后的子题数量和卷面声明，数量不符时终止；原文件仅因把大题当作一条记录而标为 `partial` 的情况，在展开后重新核对。
+
+该命令保留其余场次，重复导入保持 ID 和统计不变；遇到已有非空旧格式分组时拒绝覆盖，避免使旧收藏失效。导入后执行 `npm run build` 会同步重建词频索引。2026-10-22 批次的统计和缺图清单见 [导入说明](../../docs/exam-bank-import-2026-10-22.md)。
+
 这些内容标为“用户提供题库”，不宣称原创或已获得官方授权。公开部署前请自行核实使用权限。

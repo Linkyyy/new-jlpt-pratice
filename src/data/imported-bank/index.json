@@ -3438,30 +3438,30 @@
       "period": "202412",
       "type": "vocabulary",
       "file": "202412-N3-1.json",
-      "sourceFile": "time_202412_level_n3_type_1.json",
-      "availableCount": 0,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "availableCount": 35,
       "unavailableCount": 0,
-      "totalCount": 0
+      "totalCount": 35
     },
     {
       "level": "N3",
       "period": "202412",
       "type": "grammar",
       "file": "202412-N3-2.json",
-      "sourceFile": "time_202412_level_n3_type_2.json",
-      "availableCount": 0,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "availableCount": 22,
       "unavailableCount": 0,
-      "totalCount": 0
+      "totalCount": 22
     },
     {
       "level": "N3",
       "period": "202412",
       "type": "reading",
       "file": "202412-N3-3.json",
-      "sourceFile": "time_202412_level_n3_type_3.json",
-      "availableCount": 0,
-      "unavailableCount": 0,
-      "totalCount": 0
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "availableCount": 14,
+      "unavailableCount": 2,
+      "totalCount": 16
     },
     {
       "level": "N3",
@@ -3472,18 +3472,228 @@
       "availableCount": 0,
       "unavailableCount": 0,
       "totalCount": 0
+    },
+    {
+      "level": "N1",
+      "period": "202512",
+      "type": "vocabulary",
+      "file": "202512-N1-1.json",
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202512",
+      "type": "grammar",
+      "file": "202512-N1-2.json",
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202512",
+      "type": "reading",
+      "file": "202512-N1-3.json",
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202507",
+      "type": "vocabulary",
+      "file": "202507-N1-1.json",
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202507",
+      "type": "grammar",
+      "file": "202507-N1-2.json",
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202507",
+      "type": "reading",
+      "file": "202507-N1-3.json",
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N1",
+      "period": "202607",
+      "type": "vocabulary",
+      "file": "202607-N1-1.json",
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "availableCount": 25,
+      "unavailableCount": 0,
+      "totalCount": 25
+    },
+    {
+      "level": "N1",
+      "period": "202607",
+      "type": "grammar",
+      "file": "202607-N1-2.json",
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "availableCount": 19,
+      "unavailableCount": 0,
+      "totalCount": 19
+    },
+    {
+      "level": "N1",
+      "period": "202607",
+      "type": "reading",
+      "file": "202607-N1-3.json",
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "availableCount": 20,
+      "unavailableCount": 2,
+      "totalCount": 22
+    },
+    {
+      "level": "N2",
+      "period": "202512",
+      "type": "vocabulary",
+      "file": "202512-N2-1.json",
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202512",
+      "type": "grammar",
+      "file": "202512-N2-2.json",
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202512",
+      "type": "reading",
+      "file": "202512-N2-3.json",
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202507",
+      "type": "vocabulary",
+      "file": "202507-N2-1.json",
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202507",
+      "type": "grammar",
+      "file": "202507-N2-2.json",
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202507",
+      "type": "reading",
+      "file": "202507-N2-3.json",
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N2",
+      "period": "202607",
+      "type": "vocabulary",
+      "file": "202607-N2-1.json",
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "availableCount": 30,
+      "unavailableCount": 0,
+      "totalCount": 30
+    },
+    {
+      "level": "N2",
+      "period": "202607",
+      "type": "grammar",
+      "file": "202607-N2-2.json",
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "availableCount": 21,
+      "unavailableCount": 0,
+      "totalCount": 21
+    },
+    {
+      "level": "N2",
+      "period": "202607",
+      "type": "reading",
+      "file": "202607-N2-3.json",
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "availableCount": 18,
+      "unavailableCount": 2,
+      "totalCount": 20
+    },
+    {
+      "level": "N3",
+      "period": "202512",
+      "type": "vocabulary",
+      "file": "202512-N3-1.json",
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "availableCount": 35,
+      "unavailableCount": 0,
+      "totalCount": 35
+    },
+    {
+      "level": "N3",
+      "period": "202512",
+      "type": "grammar",
+      "file": "202512-N3-2.json",
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "availableCount": 22,
+      "unavailableCount": 0,
+      "totalCount": 22
+    },
+    {
+      "level": "N3",
+      "period": "202512",
+      "type": "reading",
+      "file": "202512-N3-3.json",
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "availableCount": 13,
+      "unavailableCount": 3,
+      "totalCount": 16
     }
   ],
   "report": {
-    "files": 347,
-    "sourceRecords": 9301,
-    "containers": 632,
-    "questions": 8669,
-    "available": 8608,
-    "unavailable": 61,
+    "files": 368,
+    "sourceRecords": 9954,
+    "containers": 728,
+    "questions": 9226,
+    "available": 9148,
+    "unavailable": 78,
     "inheritedMetadata": 632,
     "reasons": {
-      "缺少配套图片": 61
+      "缺少配套图片": 78
     },
     "errors": []
   }

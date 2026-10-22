@@ -1,0 +1,1122 @@
+{
+  "version": 1,
+  "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+  "period": "202607",
+  "level": "N1",
+  "type": "vocabulary",
+  "questions": [
+    {
+      "id": "imported:202607:N1:1:257334964302807:1",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "相手チームの多彩な攻撃に<u>翻弄</u>された。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ばんろう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ほんりょう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ほんろう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ばんりょう"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[1]ばんろう（对应词不存在）；[2]ほんりょう（对应词不存在）；[3]ほんろう：摆布、玩弄；[4]ばんりょう（对应词不存在）。因此选[3]。"
+      ],
+      "sourceQuestionNumber": 1,
+      "sourceId": 257334964302807
+    },
+    {
+      "id": "imported:202607:N1:1:72627704430813:2",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "仲間が裏切ったと<u>悟った</u>主人公は、その場から脱出した。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "さとった"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "あせった"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "さぐった"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "うたがった"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1]さとった：察觉、悟到；[2]あせった：慌张；[3]さぐった：探查；[4]うたがった：怀疑。因此选[1]。"
+      ],
+      "sourceQuestionNumber": 2,
+      "sourceId": 72627704430813
+    },
+    {
+      "id": "imported:202607:N1:1:186847049406070:3",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "歴史書は、現代に生きる私たちにも多くの<u>示唆</u>を与えてくれる。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "しげき"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "しや"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "しさく"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "しさ"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[1]しげき：刺激（不是「示唆」的读音）；[2]しや：视野；[3]しさく：施策、政策；[4]しさ：暗示、启示。因此选[4]。"
+      ],
+      "sourceQuestionNumber": 3,
+      "sourceId": 186847049406070
+    },
+    {
+      "id": "imported:202607:N1:1:201070450366425:4",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "社長になってからも、彼は常に<u>謙虚</u>だ。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "けんりょ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "げんきよ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "けんきょ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "げんりよ"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[1]けんりょ：卓见，高见；[2]げんきょ（不是该词的读音）；[3]けんきょ：谦虚；[4]げんりょ（对应词不存在）。因此选[3]。"
+      ],
+      "sourceQuestionNumber": 4,
+      "sourceId": 201070450366425
+    },
+    {
+      "id": "imported:202607:N1:1:131718982714606:5",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "このクリームを塗ると、肌が<u>滑らか</u>になります。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "やわらか"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "なめらか"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "きよらか"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "なだらか"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[1]やわらか：柔软的；[2]なめらか：光滑、平滑；[3]きよらか：纯洁、清澈；[4]なだらか：平缓、坡度小。因此选[2]。"
+      ],
+      "sourceQuestionNumber": 5,
+      "sourceId": 131718982714606
+    },
+    {
+      "id": "imported:202607:N1:1:135082030141307:6",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "先に本人の<u>承諾</u>を得たほうがいい。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "しどうだく"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "しょうだく"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "しどうどく"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "しょどく"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[1]しどうだく（对应词不存在）；[2]しょうだく：承诺、同意；[3]しどうどく（对应词不存在）；[4]しょどく（对应词不存在）。因此选[2]。"
+      ],
+      "sourceQuestionNumber": 6,
+      "sourceId": 135082030141307
+    },
+    {
+      "id": "imported:202607:N1:1:199924265424537:7",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "このゴムのボールは、（　　）があるので、手で押して潰してもすぐに元の形に戻る。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "迫力"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "効力"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "弾力"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "活力"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确项[3]「弾力」：弾力：弹性，符合球被压后恢复原状。错误项[1]：迫力：气势、魄力；错误项[2]：効力：效力、法律效果；错误项[4]：活力：活力。"
+      ],
+      "sourceQuestionNumber": 7,
+      "sourceId": 199924265424537
+    },
+    {
+      "id": "imported:202607:N1:1:231187040875633:8",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "このダムは完成までに20年という年月を(　　)。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ふるまった"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ささげた"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "尽くした"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "費やした"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确项[4]「費やした」：費やした：花费、耗费。错误项[1]：ふるまった：款待；举止；错误项[2]：ささげた：奉献；错误项[3]：尽くした：用尽、竭尽（与“20年”搭配不自然）。"
+      ],
+      "sourceQuestionNumber": 8,
+      "sourceId": 231187040875633
+    },
+    {
+      "id": "imported:202607:N1:1:229417698771307:9",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "この劇場は座席が狭くて、座っている間、足を伸ばすことができず(　　)だった。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "煩雑"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "窮屈"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "過密"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "濃厚"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确项[2]「窮屈」：窮屈：狭窄、不舒服，符合座位狭窄。错误项[1]：煩雑：繁杂；错误项[3]：過密：过密；错误项[4]：濃厚：浓厚。"
+      ],
+      "sourceQuestionNumber": 9,
+      "sourceId": 229417698771307
+    },
+    {
+      "id": "imported:202607:N1:1:58579620036642:10",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "彼のデザインは、花や木などの自然を(　　)にしたものが多い。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "メモリー"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "モチーフ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ムード"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ニーズ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确项[2]「モチーフ」：モチーフ：创作主题、题材。错误项[1]：メモリー：记忆；错误项[3]：ムード：气氛；错误项[4]：ニーズ：需求。"
+      ],
+      "sourceQuestionNumber": 10,
+      "sourceId": 58579620036642
+    },
+    {
+      "id": "imported:202607:N1:1:275487805526220:11",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "登山道のあちこちに登山者の注意を(　　)するための看板がある。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "喚起"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "挑発"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "誘導"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "増進"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确项[1]「喚起」：喚起：唤起、引起，固定搭配为「注意を喚起する」。错误项[2]：挑発：挑衅；错误项[3]：誘導：引导；错误项[4]：増進：增进。"
+      ],
+      "sourceQuestionNumber": 11,
+      "sourceId": 275487805526220
+    },
+    {
+      "id": "imported:202607:N1:1:137568823549310:12",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "「30年以上の付き合いなのに相談もしてくれないなんて（　　）なあ」と友人は言った。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "水くさい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "はかない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "手ぬるい"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "とぼしい"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确项[1]「水くさい」：水くさい：见外、客气。错误项[2]：はかない：短暂、虚幻；错误项[3]：手ぬるい：不严厉、不得力；错误项[4]：とぼしい：缺乏。"
+      ],
+      "sourceQuestionNumber": 12,
+      "sourceId": 137568823549310
+    },
+    {
+      "id": "imported:202607:N1:1:248085289993910:13",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "プレゼンの途中で予想外の質問があり、すぐに答えられず、（　　）資料を探してしまい恥ずかしかった。",
+      "instruction": "問題2 （　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "くるくると"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "じろじろと"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ごしごしと"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "あたふたと"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确项[4]「あたふたと」：あたふたと：慌慌张张，符合急忙找资料。错误项[1]：くるくると：转来转去；错误项[2]：じろじろと：盯着看；错误项[3]：ごしごしと：用力擦。"
+      ],
+      "sourceQuestionNumber": 13,
+      "sourceId": 248085289993910
+    },
+    {
+      "id": "imported:202607:N1:1:189577961169097:14",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "今年は<u>不況で</u>、ボーナスが支給されなかった。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "成績が悪くて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "売り上げが悪くて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "景気が悪くて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "態度が悪くて"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确项[3]「景気が悪くて」：景気が悪くて：经济不景气，等同于「不況」。错误项[1]：成績が悪くて：成绩不好；错误项[2]：売り上げが悪くて：销售额不好；错误项[4]：態度が悪くて：态度不好。"
+      ],
+      "sourceQuestionNumber": 14,
+      "sourceId": 189577961169097
+    },
+    {
+      "id": "imported:202607:N1:1:133214464052795:15",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "この記事には、うまく仕事を<u>こなす</u>方法が書かれている。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "依頼する"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "指導する"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "習得する"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "処理する"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确项[4]「処理する」：処理する：处理、完成，符合“把工作做好”。错误项[1]：依頼する：委托；错误项[2]：指導する：指导；错误项[3]：習得する：学会、掌握。"
+      ],
+      "sourceQuestionNumber": 15,
+      "sourceId": 133214464052795
+    },
+    {
+      "id": "imported:202607:N1:1:61905148901117:16",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "私も<u>倹約する</u>ことにした。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "時間を無駄に使わない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "お金を無駄に使わない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "スペースを無駄に使わない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "エネルギーを無駄に使わない"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确项[2]「お金を無駄に使わない」：钱不浪费，符合「倹約」。错误项[1]：时间不浪费；错误项[3]：空间不浪费；错误项[4]：能源不浪费。"
+      ],
+      "sourceQuestionNumber": 16,
+      "sourceId": 61905148901117
+    },
+    {
+      "id": "imported:202607:N1:1:93213275616408:17",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "その件については、<u>断固</u>抗議をする。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "即座に"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "じっくり"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "きっぱりと"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "当然"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确项[3]「きっぱりと」：きっぱりと：断然、坚决地，符合「断固」。错误项[1]：即座に：立即；错误项[2]：じっくり：仔细、充分地；错误项[4]：当然：当然。"
+      ],
+      "sourceQuestionNumber": 17,
+      "sourceId": 93213275616408
+    },
+    {
+      "id": "imported:202607:N1:1:202340153586018:18",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "相手側は裁判も辞さないという<u>構え</u>だ。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "姿勢"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "主張"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "印象"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "決断"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确项[1]「姿勢」：姿勢：姿态、立场，符合「構え」。错误项[2]：主張：主张；错误项[3]：印象：印象；错误项[4]：決断：决断。"
+      ],
+      "sourceQuestionNumber": 18,
+      "sourceId": 202340153586018
+    },
+    {
+      "id": "imported:202607:N1:1:80209840072527:19",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "期待していた試合の内容は<u>あっけない</u>ものだった。",
+      "instruction": "問題3 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "もったいない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ありえない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "物足りない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "みっともない"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确项[3]「物足りない」：物足りない：不过瘾、不够满足。错误项[1]：もったいない：可惜、浪费；错误项[2]：ありえない：不可能；错误项[4]：みっともない：难看、丢脸。"
+      ],
+      "sourceQuestionNumber": 19,
+      "sourceId": 80209840072527
+    },
+    {
+      "id": "imported:202607:N1:1:199447507693197:20",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "納入",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "議会では新制度をいつ<u>納入</u>するかを検討している。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "販売店に新商品を<u>納入</u>する日は、来月の10日に決まった。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "この時期の子どもたちは知識を<u>納入</u>するのが早い。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "私の家では押し入れに布団と衣類を<u>納入</u>している。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确项[2]「販売店に新商品を納入する」：納入表示把商品交付给销售店，搭配正确。错误项[1]应使用「導入」等表示引入制度；[3]“纳入知识”不成立；[4]衣物应说「収納」而不是「納入」。"
+      ],
+      "sourceQuestionNumber": 20,
+      "sourceId": 199447507693197
+    },
+    {
+      "id": "imported:202607:N1:1:252509268210893:21",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "格差",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "鈴木さんは、見た目と性格の<u>格差</u>が激しいので誤解されやすい。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "社会人になってから、学生と話していると話題の<u>格差</u>を感じる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "大企業と中小企業では賃金に<u>格差</u>があると指摘されている。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "弟はマラソン大会で、二位の選手に<u>格差</u>をつけて優勝した。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确项[3]「大企業と中小企業では賃金に格差がある」：「格差」表示不同群体、地区、阶层等之间在程度、水平上的差距，常见搭配有「賃金格差」「所得格差」「地域格差」等，搭配正确。错误项[1]外表与性格之间的反差应使用「ギャップ」等；[2]与学生聊天时感受到话题或观念上的差异，用「違い」「ずれ」等更自然；[4]比赛中拉开差距应说「差をつける」，不能说「格差をつける」。"
+      ],
+      "sourceQuestionNumber": 21,
+      "sourceId": 252509268210893
+    },
+    {
+      "id": "imported:202607:N1:1:217157047615338:22",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "引き締まる",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "長時間パソコンの作業をしていると、肩が<u>引き締まる</u>。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "大谷さんは、疑うような<u>引き締まった</u>視線を向けてきた。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "佐藤さんと話をしたが、退職の意思は<u>引き締まって</u>いるようだ。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "重要な仕事を任されて、気持ちが<u>引き締まる</u>思いがする。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确项[4]「気持ちが引き締まる」：「引き締まる」除表示身体、肌肉等变得紧实外，也可表示精神、心情因紧张感或责任感而振作、严肃起来，「気持ちが引き締まる」是常见搭配。错误项[1]长时间使用电脑导致肩膀僵硬，应使用「肩が凝る」；[2]表示怀疑、质疑的目光，应使用「疑うような視線」「厳しい視線」等，「引き締まった視線」搭配不自然；[3]表示辞职的意志坚定，应使用「意思が固い／固まっている」等。"
+      ],
+      "sourceQuestionNumber": 22,
+      "sourceId": 217157047615338
+    },
+    {
+      "id": "imported:202607:N1:1:75495805182928:23",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "満喫",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "私たちは科学の発達により、様々な恩恵を<u>満喫</u>している。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "短期間だったが、観光をしたり名物を食べたりして、旅を<u>満喫</u>できた。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "就職が決まったからといって、将来を<u>満喫</u>するのはまだ早い。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "久しぶりの休暇で、疲れをいやし、心を<u>満喫</u>することができた。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确项[2]「旅を満喫する」：「満喫」表示充分地享受、体验某种事物带来的乐趣或满足感，常见搭配有「旅行を満喫する」「休暇を満喫する」「自然を満喫する」等，搭配正确。错误项[1]「恩恵」通常搭配「受ける」「享受する」等，「恩恵を満喫する」不自然；[3]「将来」不是可以直接享受的对象，应根据语境使用「将来を楽観する」等；[4]表示消除疲劳、放松身心，应说「心身を休める」「リフレッシュする」等，不能说「心を満喫する」。"
+      ],
+      "sourceQuestionNumber": 23,
+      "sourceId": 75495805182928
+    },
+    {
+      "id": "imported:202607:N1:1:165824803934031:24",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "所定",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "正月は家でのんびりテレビを見るのが、私たち家族の<u>所定</u>の過ごし方になっている。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "機械によるエラーは、どんなに点検や整備をしても<u>所定</u>の確率で起こるものだ。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "わが社とA社の合併は<u>所定</u>のことで、今から変更できるものではない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "証明書が必要な人は、<u>所定</u>の申込書に記入して提出してください。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确项[4]「所定の申込書」：「所定」表示按照规定预先确定好的，常用于手续、格式、时间、地点等，如「所定の用紙」「所定の手続き」「所定の場所」，搭配正确。错误项[1]表示一家人每年固定的过年方式，可使用「恒例の過ごし方」；[2]表示一定概率，应使用「一定の確率」；[3]表示合并已经确定、无法更改，应使用「決定事項」「既定のこと」等，不能使用「所定のこと」。"
+      ],
+      "sourceQuestionNumber": 24,
+      "sourceId": 165824803934031
+    },
+    {
+      "id": "imported:202607:N1:1:104087502767861:25",
+      "level": "N1",
+      "category": "词汇",
+      "prompt": "はつらつ",
+      "instruction": "問題4 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "体育館に、若者たちの<u>はつらつ</u>としたあいさつの声が響く。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "外は気持ちよく晴れて、空が<u>はつらつ</u>としている。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "今朝とれたばかりの魚で作った<u>はつらつ</u>とした刺身を食べた。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "小島さんに初めて会った日のことは、今でも<u>はつらつ</u>と覚えている。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确项[1]「若者たちのはつらつとしたあいさつの声」：「はつらつ」表示充满活力、精神饱满的样子，多用于形容人的神态、动作、声音等，「はつらつとした声」搭配自然。错误项[2]不能用「はつらつ」形容天空晴朗，应使用「晴れ渡っている」等；[3]表示刚捕获的鱼或刺身新鲜，应使用「新鮮な」；[4]表示对过去的事情仍记得非常清楚，应使用「はっきりと」「鮮明に」等，不能说「はつらつと覚えている」。"
+      ],
+      "sourceQuestionNumber": 25,
+      "sourceId": 104087502767861
+    }
+  ],
+  "unavailable": [],
+  "sourceMetadata": {
+    "format": "jlpt-practice/import-exam-bank/v1",
+    "checksum": "cff6f2876c5159ae4d9590e144ac4e8382538f3c8e268f526a744de77da5b685",
+    "examId": "nqEAYSojLF",
+    "sourceStatus": "partial",
+    "questions": [
+      {
+        "id": "imported:202607:N1:1:257334964302807:1",
+        "objectId": "hSuWT3dkyj",
+        "identity": "202607N1010101001*01",
+        "globalQuestionNumber": 1,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:72627704430813:2",
+        "objectId": "Tby67ZdZZA",
+        "identity": "202607N1010101002*02",
+        "globalQuestionNumber": 2,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:186847049406070:3",
+        "objectId": "3Flp7qbjU6",
+        "identity": "202607N1010101003*03",
+        "globalQuestionNumber": 3,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:201070450366425:4",
+        "objectId": "yTYXHBmYDT",
+        "identity": "202607N1010101004*04",
+        "globalQuestionNumber": 4,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:131718982714606:5",
+        "objectId": "EgcfQXIjuY",
+        "identity": "202607N1010101005*05",
+        "globalQuestionNumber": 5,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:135082030141307:6",
+        "objectId": "DpM3D0bGm8",
+        "identity": "202607N1010101006*06",
+        "globalQuestionNumber": 6,
+        "sectionId": "fQ9DB5YaIA",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202607:N1:1:199924265424537:7",
+        "objectId": "TKG6G76hvZ",
+        "identity": "202607N1010104007*07",
+        "globalQuestionNumber": 7,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:231187040875633:8",
+        "objectId": "fLIgaJlLRh",
+        "identity": "202607N1010104008*08",
+        "globalQuestionNumber": 8,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:229417698771307:9",
+        "objectId": "TMuyhEXusR",
+        "identity": "202607N1010104009*09",
+        "globalQuestionNumber": 9,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:58579620036642:10",
+        "objectId": "zQozcDv29b",
+        "identity": "202607N1010104010*10",
+        "globalQuestionNumber": 10,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:275487805526220:11",
+        "objectId": "JLJh8ambCn",
+        "identity": "202607N1010104011*11",
+        "globalQuestionNumber": 11,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:137568823549310:12",
+        "objectId": "Hv9JXlC29T",
+        "identity": "202607N1010104012*12",
+        "globalQuestionNumber": 12,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:248085289993910:13",
+        "objectId": "IpinG9o5U0",
+        "identity": "202607N1010104013*13",
+        "globalQuestionNumber": 13,
+        "sectionId": "K0GKp0IH9Q",
+        "questionType": 14
+      },
+      {
+        "id": "imported:202607:N1:1:189577961169097:14",
+        "objectId": "jSFrRDTJzm",
+        "identity": "202607N1010105014*14",
+        "globalQuestionNumber": 14,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:133214464052795:15",
+        "objectId": "CN9F8nEv4M",
+        "identity": "202607N1010105015*15",
+        "globalQuestionNumber": 15,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:61905148901117:16",
+        "objectId": "ioOGDDwZz2",
+        "identity": "202607N1010105016*16",
+        "globalQuestionNumber": 16,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:93213275616408:17",
+        "objectId": "9mlxqXzUY3",
+        "identity": "202607N1010105017*17",
+        "globalQuestionNumber": 17,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:202340153586018:18",
+        "objectId": "8FqlzTRayV",
+        "identity": "202607N1010105018*18",
+        "globalQuestionNumber": 18,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:80209840072527:19",
+        "objectId": "TEC887YguP",
+        "identity": "202607N1010105019*19",
+        "globalQuestionNumber": 19,
+        "sectionId": "JtIwMBWkU4",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202607:N1:1:199447507693197:20",
+        "objectId": "4adzs9m1bg",
+        "identity": "202607N1010106020*20",
+        "globalQuestionNumber": 20,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202607:N1:1:252509268210893:21",
+        "objectId": "5CNDn0uv5m",
+        "identity": "202607N1010106021*21",
+        "globalQuestionNumber": 21,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202607:N1:1:217157047615338:22",
+        "objectId": "hDP59g6Q2A",
+        "identity": "202607N1010106022*22",
+        "globalQuestionNumber": 22,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202607:N1:1:75495805182928:23",
+        "objectId": "KSUroiq5pE",
+        "identity": "202607N1010106023*23",
+        "globalQuestionNumber": 23,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202607:N1:1:165824803934031:24",
+        "objectId": "CUEPAiykWs",
+        "identity": "202607N1010106024*24",
+        "globalQuestionNumber": 24,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202607:N1:1:104087502767861:25",
+        "objectId": "I6PFu5h08p",
+        "identity": "202607N1010106025*25",
+        "globalQuestionNumber": 25,
+        "sectionId": "Emrkun8sRe",
+        "questionType": 16
+      }
+    ]
+  },
+  "importStats": {
+    "sourceRecords": 25,
+    "containers": 0
+  }
+}

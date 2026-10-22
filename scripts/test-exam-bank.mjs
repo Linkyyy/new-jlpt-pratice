@@ -1,0 +1,130 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import test from 'node:test';
+import {convertExamBank, importExamBanks} from './import-exam-bank.mjs';
+
+const sourceFile = 'N1_2025年7月_fixture.json';
+const context = sectionId => ({examId: 'exam-one', examTag: 'N1', examTitle: '2025年7月', sectionId});
+const leaf = (id, number, answer = '0', extra = {}) => ({objectId: id, title: `<u>言葉${number}</u>\r\n`, questionType: 11,
+  identity: [`202507N1010101${String(number).padStart(3, '0')}*${number}`], options: ['一', '二', '三', '四'], rightAnswer: answer, analysis: `解析${number}`, ...extra});
+function fixture() {
+  return {exam: {id: 'exam-one', tag: 'N1', title: '2025年7月'}, status: 'partial',
+    examMetadata: {tag: 'N1', title: '2025年7月', vocabularyNum: 4, grammarNum: 2, readingNum: 2, listeningNum: 1},
+    sections: [
+      {objectId: 'vocabulary', title: '問題1 読み方', questionType: 11, questionsNum: 4},
+      {objectId: 'grammar', title: '問題7 次の文章を読んで', questionType: 23, questionsNum: 2},
+      {objectId: 'reading', title: '問題9 次の文章を読んで', questionType: 32, questionsNum: 2},
+      {objectId: 'listening', title: '問題1 聞いてください', questionType: 41, questionsNum: 1},
+    ],
+    items: [
+      ...[0, 1, 2, 3].map(answer => leaf(`v${answer}`, answer + 1, String(answer), {_parent: context('vocabulary')})),
+      {objectId: 'grammar-parent', questionType: 23, title: '<p>文章（5）（6）</p><MOJiTest_URL>', translation: '<p>文章译文</p>', _parent: context('grammar'),
+        items: [leaf('g5', 5, '1', {title: '\n', questionType: 23}), leaf('g6', 6, '2', {title: '<p><br></p>', questionType: 23})]},
+      {objectId: 'reading-parent', questionType: 32, title: '<p>同じ記事。</p>', _parent: context('reading'),
+        items: [leaf('r7', 7, '0', {questionType: 32}), leaf('r8', 8, '3', {questionType: 32})]},
+      {objectId: 'listening-parent', questionType: 41, title: '', subtitle: 'Do not use as a prompt', mediaId: 'remote/unknown.mp3', _parent: context('listening'),
+        items: [leaf('l9', 9, '1', {questionType: 41})]},
+    ]};
+}
+const convert = input => convertExamBank(input, {sourceFile});
+
+test('zero-based answers retain the four original positions and numeric labels', () => {
+  const {groups, report} = convert(fixture());
+  const vocabulary = groups.find(group => group.payload.type === 'vocabulary').payload;
+  assert.deepEqual(vocabulary.questions.map(question => question.correctOptionId), ['A', 'B', 'C', 'D']);
+  assert.deepEqual(vocabulary.questions[0].options.map(option => option.label), ['1', '2', '3', '4']);
+  assert.equal(vocabulary.questions[0].prompt, '<u>言葉1</u>');
+  assert.equal(report.written, 8); assert.equal(report.available, 8);
+  for (const question of vocabulary.questions) {
+    assert.match(question.id, /^imported:202507:N1:1:\d+:\d+$/);
+    assert.ok(Number.isSafeInteger(question.sourceId));
+  }
+});
+
+test('passage children share complete articles, keep their own answers and explanations, and recover false partial counts', () => {
+  const {groups, report} = convert(fixture());
+  const grammar = groups[1].payload.questions, reading = groups[2].payload.questions;
+  assert.equal(report.expandedSectionsComplete, true); assert.equal(report.sourceStatus, 'partial');
+  assert.equal(grammar.length, 2); assert.equal(grammar[0].passage, '<p>文章（5）（6）</p>');
+  assert.equal(grammar[0].passage, grammar[1].passage);
+  assert.match(grammar[0].prompt, /第 5 题/); assert.match(grammar[1].prompt, /第 6 题/);
+  assert.equal(grammar[0].explanation[0], '解析5'); assert.equal(grammar[1].explanation[0], '解析6');
+  assert.match(grammar[0].explanation[1], /文章译文/);
+  assert.equal(reading[0].passage, reading[1].passage);
+  assert.equal(reading[0].instruction, '問題9 次の文章を読んで');
+});
+
+test('listening is counted as skipped without importing transcripts, audio paths or listening groups', () => {
+  const {groups, report} = convert(fixture());
+  assert.equal(report.listeningSkipped, 1);
+  assert.deepEqual(groups.map(group => group.payload.type), ['vocabulary', 'grammar', 'reading']);
+  assert.doesNotMatch(JSON.stringify(groups), /remote\/unknown|Do not use as a prompt|听力/);
+});
+
+test('missing passage and question images quarantine all affected children and preserve exact source references', () => {
+  const input = fixture();
+  input.items[5].imageId = 'mojitest/exams/picture/article.png';
+  input.items[5].items[0].imageId = 'mojitest/exams/picture/question.png';
+  const {groups, report} = convert(input);
+  const reading = groups[2].payload;
+  assert.equal(reading.questions.length, 0); assert.equal(report.unavailable, 2);
+  assert.deepEqual(reading.unavailable[0].reasons, ['缺少配套图片']);
+  assert.deepEqual(reading.sourceMetadata.questions[0].images, {passage: 'mojitest/exams/picture/article.png', question: 'mojitest/exams/picture/question.png'});
+  assert.equal(reading.unavailable[0].raw.article, '<p>同じ記事。</p>');
+  assert.equal(reading.unavailable[0].raw.option1, '一');
+});
+
+test('invalid answer positions or empty options are excluded instead of shifting choices or guessing answers', () => {
+  const input = fixture(); input.items[0].rightAnswer = '4'; input.items[1].options[0] = '';
+  const payload = convert(input).groups[0].payload;
+  assert.equal(payload.questions.length, 2); assert.equal(payload.unavailable.length, 2);
+  assert.equal(payload.unavailable[1].raw.option1, ''); assert.equal(payload.unavailable[1].raw.option2, '二');
+});
+
+test('the containing section corrects an inconsistent item subtype and printed numbering wins over global identity numbering', () => {
+  const input = fixture(); input.items[5].items[0].questionType = 33;
+  input.items[5].items[0].identity = ['202507N1010310059*23'];
+  const {groups, report} = convert(input);
+  assert.equal(groups[2].payload.questions[0].sourceQuestionNumber, 23);
+  assert.equal(groups[2].payload.sourceMetadata.questions[0].globalQuestionNumber, 59);
+  assert.equal(groups[2].payload.sourceMetadata.questions[0].questionType, 32);
+  assert.equal(report.warnings[0].issue, 'question-type-mismatch');
+});
+
+test('incomplete sections, duplicate source IDs and foreign exam metadata fail validation', () => {
+  const incomplete = fixture(); incomplete.items.pop(); assert.throws(() => convert(incomplete), /section count mismatch/);
+  const duplicate = fixture(); duplicate.items[1].objectId = duplicate.items[0].objectId; assert.throws(() => convert(duplicate), /Duplicate source object/);
+  const foreign = fixture(); foreign.items[0]._parent.examId = 'another-exam'; assert.throws(() => convert(foreign), /different exam/);
+  const wrongIdentity = fixture(); wrongIdentity.items[0].identity = ['202412N1010101001*1']; assert.throws(() => convert(wrongIdentity), /identity/);
+});
+
+test('incremental imports preserve unrelated questions, merge idempotently and refuse to replace populated legacy groups', async () => {
+  const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'jlpt-exam-import-'));
+  try {
+    const sourceDirectory = path.join(temp, 'source'), outputDirectory = path.join(temp, 'bank'), questions = path.join(outputDirectory, 'questions');
+    await fs.mkdir(sourceDirectory); await fs.mkdir(questions, {recursive: true});
+    await fs.writeFile(path.join(sourceDirectory, sourceFile), JSON.stringify(fixture()));
+    const original = {version: 1, sourceFile: 'legacy.json', period: '202412', level: 'N2', type: 'listening',
+      questions: [{id: 'imported:202412:N2:4:123:1'}], unavailable: []};
+    const oldFile = path.join(questions, '202412-N2-4.json'), oldText = JSON.stringify(original);
+    await fs.writeFile(oldFile, oldText);
+    await fs.writeFile(path.join(outputDirectory, 'index.json'), JSON.stringify({version: 1, generatedBy: 'jlpt-practice/import-question-bank/v1', sourceLabel: '用户提供题库',
+      groups: [{level: 'N2', period: '202412', type: 'listening', file: '202412-N2-4.json', availableCount: 1, unavailableCount: 0, totalCount: 1}],
+      report: {files: 1, sourceRecords: 1, containers: 0, questions: 1, available: 1, unavailable: 0, inheritedMetadata: 0, reasons: {}, errors: []}}));
+    const first = await importExamBanks({sourceDirectory, outputDirectory});
+    assert.equal(first.available, 8); assert.equal(first.listeningSkipped, 1);
+    const firstIndex = await fs.readFile(path.join(outputDirectory, 'index.json'), 'utf8');
+    assert.equal(await fs.readFile(oldFile, 'utf8'), oldText);
+    const manifest = JSON.parse(firstIndex); assert.equal(manifest.report.available, 9); assert.equal(manifest.groups.length, 4);
+    await importExamBanks({sourceDirectory, outputDirectory});
+    assert.equal(await fs.readFile(path.join(outputDirectory, 'index.json'), 'utf8'), firstIndex);
+    const newFile = path.join(questions, '202507-N1-1.json'), populated = JSON.parse(await fs.readFile(newFile, 'utf8'));
+    delete populated.sourceMetadata;
+    const legacyText = JSON.stringify(populated); await fs.writeFile(newFile, legacyText);
+    await assert.rejects(importExamBanks({sourceDirectory, outputDirectory}), /populated legacy group/);
+    assert.equal(await fs.readFile(newFile, 'utf8'), legacyText);
+    assert.equal(await fs.readFile(path.join(outputDirectory, 'index.json'), 'utf8'), firstIndex);
+  } finally { await fs.rm(temp, {recursive: true, force: true}); }
+});

@@ -1,0 +1,870 @@
+{
+  "format": "jlpt-practice/import-exam-bank/v1",
+  "files": 8,
+  "written": 557,
+  "available": 540,
+  "unavailable": 17,
+  "listeningSkipped": 236,
+  "papers": [
+    {
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "checksum": "19a9f3b8c4f4028d36a6faa8e3899159998c053ffe52e839360d62ca80f939ee",
+      "level": "N1",
+      "period": "202512",
+      "sourceStatus": "partial",
+      "written": 66,
+      "available": 64,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "v78tmVud40",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "WCptxalxb4",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "xniDCYFUxJ",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "4nyAtZFqI4",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "rWYwcQGhdi",
+          "expected": 10,
+          "actual": 10
+        },
+        {
+          "id": "o4dJghsjQT",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "JUlD8D3u04",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "zrFUE1KH8A",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "jqrYmSbIYc",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "DA3pXq3JEi",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "MiTTzEbmvX",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "XlY69FIqxZ",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "CpIWh3ihOF",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "jPLXrx9rv7",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "fpdq1KHAR9",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "lnbKirAu1W",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "c94KRSK9Da",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "vgy2ceU1Q0",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "checksum": "3c70f1bd5567645dba934921acc942402b9251b8fd90c335197705b74b953faf",
+      "level": "N1",
+      "period": "202507",
+      "sourceStatus": "partial",
+      "written": 66,
+      "available": 64,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "LzBq7xB5ig",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "vI7wDIYoGC",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "9CJtXYuwc6",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "tB4XSiEMIr",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "FBd0M6eRcX",
+          "expected": 10,
+          "actual": 10
+        },
+        {
+          "id": "QlYPvNAw6r",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "1tnOXSmyDH",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "bk5xrol0E5",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "zzEMBNkNY7",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "WGGEkdVECF",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "Qv5Rp3ETEs",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "YHxRpaLJMW",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "xYtpAlmCmM",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "gxGjW6C8V8",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "weX0A72Go7",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "CDzwCCvRH7",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "WOSIKEN9Fh",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "13bUcJxGfo",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "checksum": "cff6f2876c5159ae4d9590e144ac4e8382538f3c8e268f526a744de77da5b685",
+      "level": "N1",
+      "period": "202607",
+      "sourceStatus": "partial",
+      "written": 66,
+      "available": 64,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "fQ9DB5YaIA",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "K0GKp0IH9Q",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "JtIwMBWkU4",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "Emrkun8sRe",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "7QsVI9Vyi9",
+          "expected": 10,
+          "actual": 10
+        },
+        {
+          "id": "FYjU8AjuUS",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "lZwTdZqidJ",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "b7gv7nbCFL",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "8NwOc2QtLR",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "iGreQtCW48",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "QAVMokPUBm",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "H2ub81DBkm",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "9NQ0qZD4x9",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "F0FyYhuhXk",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "4MgTZ3QhKg",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "5C4JI6CvSD",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "lVXA8Gu4cG",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "tNXJcZYEL5",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "checksum": "7ce4adc729a43fdb84f9e389ae463b4a9ff5b0a8ce14d63babf33876f211a382",
+      "level": "N2",
+      "period": "202512",
+      "sourceStatus": "partial",
+      "written": 71,
+      "available": 69,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "I8ScdSCqkO",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "d6DfTdUs4O",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "oCJAjvWvmr",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "mJLSkn6VL3",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "ATZFt3fFj5",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "lG0h4PnuaK",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "gYHDY7DWG9",
+          "expected": 12,
+          "actual": 12
+        },
+        {
+          "id": "gadGomt419",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "NkOLMgKslP",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "egCWEwH2lp",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "DCvXnvDwpo",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "rBDQzQimxG",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "Nx5H3FGKeW",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "1KJAfqUc5z",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "0qqjIdFZaM",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "IOexBC5v8d",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "KFWNVyVFhO",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "AfTyaAZ64U",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "q3kpBokELX",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "checksum": "70e2627d1bba6efcbe4c3f56f49bdfec917bf619755b719e9c08dafba204a299",
+      "level": "N2",
+      "period": "202507",
+      "sourceStatus": "partial",
+      "written": 71,
+      "available": 69,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "TJ2auPaIVR",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "ADEiL5LzAV",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "dAR48ytAoN",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "bCwlffqFbT",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "wpbWpgVW4A",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "EezHPwEWAG",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "lwIepO2K5d",
+          "expected": 12,
+          "actual": 12
+        },
+        {
+          "id": "wFhlvoP4Dd",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "JsL5rXnfgl",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "hpbYundbXM",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "b7ehmTdaXr",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "0HkBRixkcX",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "vgNTqzbrJD",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "9S042JPqKX",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "JkVwtFnMRw",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "hjLkKKjvrk",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "reT1bduqlg",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "qLyvFWeeOA",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "AFGrN8wqJ9",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "checksum": "ea356c0229eee78c6fff716b8bd95bfc4396948fe5d58e845492d02923923254",
+      "level": "N2",
+      "period": "202607",
+      "sourceStatus": "partial",
+      "written": 71,
+      "available": 69,
+      "unavailable": 2,
+      "listeningSkipped": 30,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "7tDuDO8zKn",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "oVwZl2thYO",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "XcfdU3ZXNu",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "7XWxo2Gs4N",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "id": "I0wzLe5w0T",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "IOZxnWx82G",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "2OqJ3EW3yd",
+          "expected": 12,
+          "actual": 12
+        },
+        {
+          "id": "fKPMqKkuTZ",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "ycbSpXMVQD",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "FuT1LC8zgD",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "YfdK7KbEYc",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "pGMZBj3pcs",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "AoftChedvB",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "sHDAKnyXHO",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "GcTsXu2VEi",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "C0pbyyj4l6",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "GWeWhjuWj1",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "BDtEzSvAkB",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "6N66wHIae4",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "warnings": [
+        {
+          "id": "imported:202607:N2:3:62013979844806:65",
+          "issue": "question-type-mismatch",
+          "sourceType": 33,
+          "sectionType": 34,
+          "resolution": "Use the enclosing section type"
+        },
+        {
+          "id": "imported:202607:N2:3:199622483053241:66",
+          "issue": "question-type-mismatch",
+          "sourceType": 33,
+          "sectionType": 34,
+          "resolution": "Use the enclosing section type"
+        }
+      ]
+    },
+    {
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "checksum": "37f1702cafa3b47a1e931bc211b10fe884be7f9c0af6ef5e67db749cf1d03b5e",
+      "level": "N3",
+      "period": "202412",
+      "sourceStatus": "partial",
+      "written": 73,
+      "available": 71,
+      "unavailable": 2,
+      "listeningSkipped": 28,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "VhR9Bp6lC2",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "MVv9nP6UCI",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "I8fIYMucrh",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "EACZFEWf5g",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "0HChvXgBOW",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "0gUJjMz9oj",
+          "expected": 13,
+          "actual": 13
+        },
+        {
+          "id": "7crMbICNlA",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "X54C73cyUd",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "xxS1eW6Zpy",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "483UgsxyAi",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "DuEVRxMk62",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "Tos7z5ZRed",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "M5KrvVyQ23",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "ydEXQy6M3y",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "BoLGaBEsFd",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "WDCO6ReYMy",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "A3OWiXx7wB",
+          "expected": 9,
+          "actual": 9
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "checksum": "02d8988b2f2018c735a99069fa61aa80239719e54c3374b30b463d670027c7ae",
+      "level": "N3",
+      "period": "202512",
+      "sourceStatus": "partial",
+      "written": 73,
+      "available": 70,
+      "unavailable": 3,
+      "listeningSkipped": 28,
+      "expandedSectionsComplete": true,
+      "sectionCounts": [
+        {
+          "id": "RF5wDkuf6k",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "id": "NeAEnYlAiI",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "R7joRZr2DG",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "id": "Y2FfzE6LyB",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "33hYNF2XGf",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "txvPyAOCXe",
+          "expected": 13,
+          "actual": 13
+        },
+        {
+          "id": "UR7Ju9ubW5",
+          "expected": 5,
+          "actual": 5
+        },
+        {
+          "id": "EYkiGFZglQ",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "7Fk0SyMlkK",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "iPRr4BZVZv",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "gRsTHALyOq",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "VOQeDWRh8e",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "iMxCp0WCVy",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "2in2SOf67W",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "id": "64OQS5tqcX",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "7lIVuaEMfP",
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "id": "ZprDdx9PL3",
+          "expected": 9,
+          "actual": 9
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

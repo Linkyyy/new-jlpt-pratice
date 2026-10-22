@@ -1,0 +1,1562 @@
+{
+  "version": 1,
+  "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+  "period": "202512",
+  "level": "N3",
+  "type": "vocabulary",
+  "questions": [
+    {
+      "id": "imported:202512:N3:1:112003933076403:1",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "これは<u>西洋</u>の建物の写真です。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "せよう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "せいゆう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "せいよう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "せゆう"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] せいよう，对应“西洋”，意为“西方，西洋”，与题干完全对应。\n[2] せいゆう，对应“声优”，意为“配音演员”，不符合题意。\n其余两项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 1,
+      "sourceId": 112003933076403
+    },
+    {
+      "id": "imported:202512:N3:1:67603907392541:2",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "今回はとても<u>苦しい</u>試合だった。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "おしい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "くるしい"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "くやしい"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "きびしい"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] くるしい，对应“苦しい”，意为“艰难，痛苦”，最符合比赛过程很辛苦的语境。\n[1] おしい，对应“惜しい”，意为“可惜”，不符合题意。\n[3] くやしい，对应“悔しい”，意为“不甘心”，侧重点不同。\n[4] きびしい，对应“厳しい”，意为“严厉，严峻”，不是该词读法。"
+      ],
+      "sourceQuestionNumber": 2,
+      "sourceId": 67603907392541
+    },
+    {
+      "id": "imported:202512:N3:1:73985016359197:3",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "この手紙は<u>他人</u>に見せないでください。<br>",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "たんじん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "たじん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "たんにん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "たにん"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] たにん，对应“他人”，意为“别人”，与题干意思一致。\n其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 3,
+      "sourceId": 73985016359197
+    },
+    {
+      "id": "imported:202512:N3:1:201520710714650:4",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "昨日は<u>腹痛</u>で学校を休みました。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ふくつう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ふくつ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ずつう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ずつ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] ふくつう，对应“腹痛”，意为“腹痛，肚子疼”，符合题意。\n[3] ずつう，对应“頭痛”，意为“头痛”，不是题干汉字。\n其余两项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 4,
+      "sourceId": 201520710714650
+    },
+    {
+      "id": "imported:202512:N3:1:140588014376015:5",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "次の駅が<u>終点</u>です。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "しゅうでん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "しゅうてん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "じゅうてん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "じゅうでん"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] しゅうてん，对应“終点”，意为“终点”，与题干一致。\n[1] しゅうでん，对应“終電”，意为“末班电车”，词义不同。\n[3] じゅうてん，对应“重点”，意为“重点”。\n[4] じゅうでん，对应“充電”，意为“充电”。"
+      ],
+      "sourceQuestionNumber": 5,
+      "sourceId": 140588014376015
+    },
+    {
+      "id": "imported:202512:N3:1:18679459833766:6",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "森田さんが<u>泣いて</u>いました。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "はたらいて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "おどろいて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ないて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "やいて"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] ないて，对应“泣いて”，意为“哭”。\n[1] はたらいて，对应“働いて”，意为“工作”。\n[2] おどろいて，对应“驚いて”，意为“吃惊”。\n[4] やいて，对应“焼いて”，意为“烤，烧”。"
+      ],
+      "sourceQuestionNumber": 6,
+      "sourceId": 18679459833766
+    },
+    {
+      "id": "imported:202512:N3:1:108259924607160:7",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "この着物の<u>帯</u>は美しいです。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "おび"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "えり"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "そで"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "いと"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] おび，对应“帯”，意为“腰带，带子”，符合题意。\n[2] えり，对应“襟”，意为“衣领”。\n[3] そで，对应“袖”，意为“袖子”。\n[4] いと，对应“糸”，意为“线”。"
+      ],
+      "sourceQuestionNumber": 7,
+      "sourceId": 108259924607160
+    },
+    {
+      "id": "imported:202512:N3:1:92776502324252:8",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "昨日母から<u>郵便</u>が届いた。",
+      "instruction": "問題1 _____の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ようべん"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ようびん"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ゆうべん"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ゆうびん"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] ゆうびん，对应“郵便”，意为“邮寄邮件，邮政”，与题意一致。\n其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 8,
+      "sourceId": 92776502324252
+    },
+    {
+      "id": "imported:202512:N3:1:175139333263951:9",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "この<u>あたり</u>はマンションが多い。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "通り"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "辺り"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "返り"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "迎り"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 辺り，意为“这一带，附近”，与「あたり」完全对应。\n[1] 通り，意为“道路，通过”。\n[3] 返り，意为“返回”。\n[4] 迎り，无常用对应。"
+      ],
+      "sourceQuestionNumber": 9,
+      "sourceId": 175139333263951
+    },
+    {
+      "id": "imported:202512:N3:1:71396082286762:10",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "次の<u>ず</u>を見てください。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "絵"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "図"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "表"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "例"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 図，意为“图，图示”，对应「ず」。\n[1] 絵，意为“画”。\n[3] 表，意为“表格”。\n[4] 例，意为“例子”。"
+      ],
+      "sourceQuestionNumber": 10,
+      "sourceId": 71396082286762
+    },
+    {
+      "id": "imported:202512:N3:1:272151030017989:11",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "貯金が少し<u>へりました</u>。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "細りました"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "低りました"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "消りました"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "減りました"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 減りました，意为“减少了”，最符合“存款变少”的语境。\n其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 11,
+      "sourceId": 272151030017989
+    },
+    {
+      "id": "imported:202512:N3:1:63583712603892:12",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "来年、ここに<u>ほどう</u>ができるそうだ。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "歩動"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "走道"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "歩道"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "走動"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 歩道，意为“人行道”，与「ほどう」一致。\n其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 12,
+      "sourceId": 63583712603892
+    },
+    {
+      "id": "imported:202512:N3:1:248014583316563:13",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "パソコンのキーボードを<u>うつ</u>音が聞こえる。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "打つ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "押つ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "指つ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "折つ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] 打つ，意为“敲，打”，常用于“敲键盘”。\n其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 13,
+      "sourceId": 248014583316563
+    },
+    {
+      "id": "imported:202512:N3:1:52486340679902:14",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "山田さんは、まじめな<u>せいかく</u>だ。",
+      "instruction": "問題2 _____の言葉を漢字で書くとき、最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "姓格"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "性各"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "性格"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "性各"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 性格，意为“性格”，与「せいかく」完全对应。\n[4] 其余三项为干扰项，排除。"
+      ],
+      "sourceQuestionNumber": 14,
+      "sourceId": 52486340679902
+    },
+    {
+      "id": "imported:202512:N3:1:212606308811015:15",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "私の国と日本は（　　　）が12時間あるので、昼と夜が反対だ。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "時代"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "時期"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "時速"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "時差"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 時差，意为“时差”。题干强调两地相差12小时，导致昼夜相反，只有“时差”能准确解释这种现象。\n[1] 時代，意为“时代”，和两地时间差无关。\n[2] 時期，意为“时期”，不表示具体时差。\n[3] 時速，意为“时速”，用于速度表达。"
+      ],
+      "sourceQuestionNumber": 15,
+      "sourceId": 212606308811015
+    },
+    {
+      "id": "imported:202512:N3:1:275542590472453:16",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "自転車が壊れてしまい、（　　　）ので歩いて家に帰りました。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "くわしい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "だらしない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "しかたない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "うらやましい"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] しかたない，意为“没办法”。自行车坏了，只能走路回家，这里需要表达“不得不如此”的无奈判断。\n[1] くわしい，意为“详细，熟悉”，与题干不连贯。\n[2] だらしない，意为“散漫，不像样”，不符合原因关系。\n[4] うらやましい，意为“羡慕”，与上下文无关。"
+      ],
+      "sourceQuestionNumber": 16,
+      "sourceId": 275542590472453
+    },
+    {
+      "id": "imported:202512:N3:1:145032164018359:17",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "病気の人を治したくて、高校生のときに医者になることを（　　　）した。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "予想"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "決心"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "証明"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "仮定"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 決心，意为“下决心”。“成为医生”是一个人生决定，与「～する」搭配最自然的是“决心”。\n[1] 予想，意为“预想”，不能和“成为医生”构成主动决定。\n[3] 証明，意为“证明”，语义不通。\n[4] 仮定，意为“假设”，不符合题意。"
+      ],
+      "sourceQuestionNumber": 17,
+      "sourceId": 145032164018359
+    },
+    {
+      "id": "imported:202512:N3:1:247127316372401:18",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "彼は、いつも（　　　）を言って、みんなを笑わせる面白い人だ。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "感想"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "文句"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "冗談"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "自慢"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 冗談，意为“玩笑”。题干说他总能把大家逗笑，最自然的就是“说玩笑话”。\n[1] 感想，意为“感想”，不会直接让大家发笑。\n[2] 文句，意为“抱怨，牢骚”，语气消极。\n[4] 自慢，意为“自夸”，不符合“有趣的人”的语境。"
+      ],
+      "sourceQuestionNumber": 18,
+      "sourceId": 247127316372401
+    },
+    {
+      "id": "imported:202512:N3:1:162078264835398:19",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "ホテルに到着したが、まだ部屋に入れなかったので、受付に荷物を（　　　）出かけた。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "預けて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "泊めて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "配って"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "与えて"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] 預けて，意为“寄存”。还不能进房间时，把行李放在前台寄存，最符合酒店场景。\n[2] 泊めて，意为“让……住宿”，对象通常不是行李。\n[3] 配って，意为“分发”，语义错误。\n[4] 与えて，意为“给予”，不符合实际情境。"
+      ],
+      "sourceQuestionNumber": 19,
+      "sourceId": 162078264835398
+    },
+    {
+      "id": "imported:202512:N3:1:32094618662682:20",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "空港に着いたとき、飛行機の出発が遅れるという（　　　）が聞こえた。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ガイダンス"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "アナウンス"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "コマーシャル"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "スピーチ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] アナウンス，意为“广播通知”。机场里关于航班延误的信息通常通过广播发布，因此最贴切。\n[1] ガイダンス，意为“指导，说明”，不常用于现场播报航班信息。\n[3] コマーシャル，意为“广告”。\n[4] スピーチ，意为“演讲”，不符合机场广播场景。"
+      ],
+      "sourceQuestionNumber": 20,
+      "sourceId": 32094618662682
+    },
+    {
+      "id": "imported:202512:N3:1:261919845027175:21",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "休日で渋滞すると思いましたが、（　　　）道はすいていました。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "突然"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "当然"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "年中"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "案外"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 案外，意为“意外地”。前半句先说“以为会堵车”，后半句转为“路却很空”，正好体现出与预想不同。\n[1] 突然，意为“突然”，不是对预期落差的评价。\n[2] 当然，意为“当然”，与“原以为会堵”矛盾。\n[3] 年中，意为“全年，总是”，不符合句意。"
+      ],
+      "sourceQuestionNumber": 21,
+      "sourceId": 261919845027175
+    },
+    {
+      "id": "imported:202512:N3:1:156446722597426:22",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "彼は若いとき非常に苦労したが、一生懸命（　　　）して、立派な政治家になった。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "努力"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "納得"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "期待"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "注意"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] 努力，意为“努力”。前句说年轻时吃了很多苦，后句说最终成为优秀政治家，中间最合理的是“一直拼命努力”。\n[2] 納得，意为“理解并接受”，不能说明成功原因。\n[3] 期待，意为“期待”，不表示本人行动。\n[4] 注意，意为“注意”，语义过弱。"
+      ],
+      "sourceQuestionNumber": 22,
+      "sourceId": 156446722597426
+    },
+    {
+      "id": "imported:202512:N3:1:274782956712789:23",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "時間がなくて、朝も昼もご飯を食べられなかったので、おなかが（　　　）だ。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ぺらぺら"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "からから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ぺこぺこ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ときどき"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] ぺこぺこ，意为“饿得前胸贴后背”。前面说早饭和午饭都没吃，正是肚子很饿的状态。\n[1] ぺらぺら，常表示“流利”或“薄薄的”，不合适。\n[2] からから，常表示“干燥”或“口渴”。\n[4] ときどき，意为“有时”，词性也不合适。"
+      ],
+      "sourceQuestionNumber": 23,
+      "sourceId": 274782956712789
+    },
+    {
+      "id": "imported:202512:N3:1:78952934286205:24",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "林さんが会社を辞めるというのは、林さんから直接聞いたので（　　　）情報です。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "満足な"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "正常な"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "完全な"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "確実な"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 確実な，意为“确实的，可靠的”。因为是直接从本人那里听来的，所以信息可信度最高。\n[1] 満足な，意为“令人满足的”，不修饰信息来源。\n[2] 正常な，意为“正常的”，不合语境。\n[3] 完全な，意为“完整的”，重点不在真实性。"
+      ],
+      "sourceQuestionNumber": 24,
+      "sourceId": 78952934286205
+    },
+    {
+      "id": "imported:202512:N3:1:103106310852870:25",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "電気の工事の人が来て、部屋の壁にエアコンを（　　　）くれた。",
+      "instruction": "問題3（　　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "取り付けて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "取り上げて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "受け入れて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "引き受けて"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] 取り付けて，意为“安装上去”。空调装在墙上，最自然的动作就是“安装”。\n[2] 取り上げて，意为“拿起，采纳”，不符合家电安装场景。\n[3] 受け入れて，意为“接收，接受”，语义不通。\n[4] 引き受けて，意为“接受委托”，不是具体动作。"
+      ],
+      "sourceQuestionNumber": 25,
+      "sourceId": 103106310852870
+    },
+    {
+      "id": "imported:202512:N3:1:121855135287692:26",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<u>清潔な</u>タオルで拭いてください。",
+      "instruction": "問題4 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "柔らかい"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ぬれた"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "乾いた"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "きれいな"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] きれいな，意为“干净的”，与“清潔な”意思最接近。\n[1] 柔らかい，意为“柔软的”。\n[2] ぬれた，意为“湿的”。\n[3] 乾いた，意为“干的”，不等于“清洁”。"
+      ],
+      "sourceQuestionNumber": 26,
+      "sourceId": 121855135287692
+    },
+    {
+      "id": "imported:202512:N3:1:129101873624028:27",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "<u>さっき</u>ご飯を食べました。",
+      "instruction": "問題4 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "急いで"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "少し遅れて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "少し前に"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ゆっくり"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 少し前に，意为“不久前，刚刚”，与“さっき”完全对应。\n[1] 急いで，意为“急忙地”。\n[2] 少し遅れて，意为“稍微晚了一点”。\n[4] ゆっくり，意为“慢慢地”。"
+      ],
+      "sourceQuestionNumber": 27,
+      "sourceId": 129101873624028
+    },
+    {
+      "id": "imported:202512:N3:1:234438705101829:28",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "これは<u>キッチン</u>に置いてください。",
+      "instruction": "問題4 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "居間"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "台所"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "廊下"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "風呂"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 台所，意为“厨房”，与“キッチン”意思相同。\n[1] 居間，意为“客厅”。\n[3] 廊下，意为“走廊”。\n[4] 風呂，意为“浴室”。"
+      ],
+      "sourceQuestionNumber": 28,
+      "sourceId": 234438705101829
+    },
+    {
+      "id": "imported:202512:N3:1:11804194505447:29",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "今、野口さんが<u>指導して</u>います。",
+      "instruction": "問題4 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "調べて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "答えて"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "聞いて"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "教えて"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 教えて，意为“教，指导”，与“指導している”最接近。\n[1] 調べて，意为“调查，查找”。\n[2] 答えて，意为“回答”。\n[3] 聞いて，意为“听，问”。"
+      ],
+      "sourceQuestionNumber": 29,
+      "sourceId": 11804194505447
+    },
+    {
+      "id": "imported:202512:N3:1:27769024156697:30",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "そろそろ<u>おしまいにしましょう</u>。",
+      "instruction": "問題4 _____の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "休みましょう"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "食事にしましょう"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "終わりにしましょう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "寝ましょう"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 終わりにしましょう，意为“结束吧”，与“おしまいにしましょう”意思一致。\n[1] 休みましょう，意为“休息吧”。\n[2] 食事にしましょう，意为“去吃饭吧”。\n[4] 寝ましょう，意为“睡觉吧”。"
+      ],
+      "sourceQuestionNumber": 30,
+      "sourceId": 27769024156697
+    },
+    {
+      "id": "imported:202512:N3:1:188096029995759:31",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "にぎる",
+      "instruction": "問題5 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "昨日の引っ越しで何度も重い家具を<u>にぎった</u>ので体が痛い。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "お祭りで弟が迷子にならないように、弟の手をしっかりと<u>にぎった</u>。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "風で帽子が飛ばされたが、石原さんが走って<u>にぎって</u>くれた。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "母親が、生まれたばかりの赤ちゃんを大事そうに<u>にぎって</u>いる。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] “为了不让弟弟在祭典上走丢，紧紧握住了弟弟的手。”「にぎる」表示“握住”，与“手”搭配自然，语境准确。\n[1] 重家具应该是“搬、抬”，不是“握”。\n[3] 帽子被风吹走，应该是“抓住、捡起”，这里用「にぎる」不自然。\n[4] 刚出生的婴儿应是“抱着”，不能说“握着”。"
+      ],
+      "sourceQuestionNumber": 31,
+      "sourceId": 188096029995759
+    },
+    {
+      "id": "imported:202512:N3:1:199166449801150:32",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "修理",
+      "instruction": "問題5 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "今朝、妻とけんかしたので、早く仲を<u>修理</u>したい。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "腕をけがしたとき、この病院で<u>修理</u>してもらった。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "自転車が壊れたので、買ったお店で<u>修理</u>してもらった。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "私が間違えた漢字を、先生が赤いペンで<u>修理</u>してくれた。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] “自行车坏了，所以拿到买车的店里去修理。”「修理する」用于修机器、器具、自行车等，搭配正确。\n[1] 夫妻关系变好应说“修复关系”，这里日语不说「仲を修理する」。\n[2] 手臂受伤应是“治疗”，不是“修理”。\n[4] 改正错字应说“訂正する、直す”，不用「修理」"
+      ],
+      "sourceQuestionNumber": 32,
+      "sourceId": 199166449801150
+    },
+    {
+      "id": "imported:202512:N3:1:245534689062559:33",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "目的",
+      "instruction": "問題5 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "今日はたくさん商品が売れて、<u>目的</u>の10万円を超えました。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "お店を予約するとき、窓側の席がいいと<u>目的</u>を伝えた。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "来週から1か月海外に出張する<u>目的</u>なので、準備が忙しい。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "この研究の<u>目的</u>は、新しい薬の効果を調べることです。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] “这项研究的目的是调查新药的效果。”「目的」表示“要达到的目标”，与研究内容搭配最自然。\n[1] 超过十万元说的是“目标”或“指标”，句子不自然。\n[2] 预约时说明的是“要求、希望”，不是“目的”。\n[3] 出差一个月表示“安排、计划”，这里不是“目的”。"
+      ],
+      "sourceQuestionNumber": 33,
+      "sourceId": 245534689062559
+    },
+    {
+      "id": "imported:202512:N3:1:87359063845014:34",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "懐かしい",
+      "instruction": "問題5 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "子どものときの写真を見て、<u>懐かしい</u>気持ちになった。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ここは800年前に建てられた<u>懐かしい</u>寺なので、見学の人が多い。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "結婚して30年たつので、妻とは<u>懐かしい</u>関係だ。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "私と田村さんは、会ってすぐに<u>懐かしい</u>友達になった。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] “看到小时候的照片，产生了怀念的感觉。”「懐かしい」正是对过去熟悉事物产生怀念感时使用，完全正确。\n[2] 寺庙很古老不等于“令人怀念”。\n[3] 夫妻关系不能直接用“怀念的关系”来形容。\n[4] 刚见面马上成为“怀念的朋友”明显不合逻辑。"
+      ],
+      "sourceQuestionNumber": 34,
+      "sourceId": 87359063845014
+    },
+    {
+      "id": "imported:202512:N3:1:225600653518691:35",
+      "level": "N3",
+      "category": "词汇",
+      "prompt": "変化",
+      "instruction": "問題5 次の言葉の使い方として最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "友達の都合が悪くなって、食事の約束が来週に<u>変化</u>してしまった。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "引っ越して住所が<u>変化</u>したので、みんなに知らせた。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "インターネットが登場して、人々の生活は大きく<u>変化</u>した。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "会議の司会は、水野さんから高橋さんに<u>変化</u>するそうだ。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] “互联网出现后，人们的生活发生了很大变化。”「変化する」表示状态、情况发生改变，这里用法自然准确。\n[1] 约好吃饭日期改到下周，更自然说“変更になった”。\n[2] 地址改变通常说“変わった”或“変更した”。\n[4] 主持人更换更常用“交代する、変わる”，这里表达生硬。"
+      ],
+      "sourceQuestionNumber": 35,
+      "sourceId": 225600653518691
+    }
+  ],
+  "unavailable": [],
+  "sourceMetadata": {
+    "format": "jlpt-practice/import-exam-bank/v1",
+    "checksum": "02d8988b2f2018c735a99069fa61aa80239719e54c3374b30b463d670027c7ae",
+    "examId": "JIcIGb0sPS",
+    "sourceStatus": "partial",
+    "questions": [
+      {
+        "id": "imported:202512:N3:1:112003933076403:1",
+        "objectId": "VzCPoLxA1M",
+        "identity": "202512N3010101001*01",
+        "globalQuestionNumber": 1,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:67603907392541:2",
+        "objectId": "ISYRzzo69X",
+        "identity": "202512N3010101002*02",
+        "globalQuestionNumber": 2,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:73985016359197:3",
+        "objectId": "21v7bXnLuD",
+        "identity": "202512N3010101003*03",
+        "globalQuestionNumber": 3,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:201520710714650:4",
+        "objectId": "4esIJE7JFW",
+        "identity": "202512N3010101004*04",
+        "globalQuestionNumber": 4,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:140588014376015:5",
+        "objectId": "pbSOD5GK0Z",
+        "identity": "202512N3010101005*05",
+        "globalQuestionNumber": 5,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:18679459833766:6",
+        "objectId": "50IhcW1pkL",
+        "identity": "202512N3010101006*06",
+        "globalQuestionNumber": 6,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:108259924607160:7",
+        "objectId": "e37x341PCI",
+        "identity": "202512N3010101007*07",
+        "globalQuestionNumber": 7,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:92776502324252:8",
+        "objectId": "Ot8BPb36Ds",
+        "identity": "202512N3010101008*08",
+        "globalQuestionNumber": 8,
+        "sectionId": "RF5wDkuf6k",
+        "questionType": 11
+      },
+      {
+        "id": "imported:202512:N3:1:175139333263951:9",
+        "objectId": "VhB74TuGPf",
+        "identity": "202512N3010102009*09",
+        "globalQuestionNumber": 9,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:71396082286762:10",
+        "objectId": "pxgdEqNZcQ",
+        "identity": "202512N3010102010*10",
+        "globalQuestionNumber": 10,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:272151030017989:11",
+        "objectId": "ifiLyA5MiP",
+        "identity": "202512N3010102011*11",
+        "globalQuestionNumber": 11,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:63583712603892:12",
+        "objectId": "WM5hLkwsDQ",
+        "identity": "202512N3010102012*12",
+        "globalQuestionNumber": 12,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:248014583316563:13",
+        "objectId": "5xJ2ABzXPD",
+        "identity": "202512N3010102013*13",
+        "globalQuestionNumber": 13,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:52486340679902:14",
+        "objectId": "exRfbA6bDD",
+        "identity": "202512N3010102014*14",
+        "globalQuestionNumber": 14,
+        "sectionId": "NeAEnYlAiI",
+        "questionType": 12
+      },
+      {
+        "id": "imported:202512:N3:1:212606308811015:15",
+        "objectId": "UEVWL3IfN0",
+        "identity": "202512N3010103015*15",
+        "globalQuestionNumber": 15,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:275542590472453:16",
+        "objectId": "g9bA49qlx2",
+        "identity": "202512N3010103016*16",
+        "globalQuestionNumber": 16,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:145032164018359:17",
+        "objectId": "uA3I2REoHs",
+        "identity": "202512N3010103017*17",
+        "globalQuestionNumber": 17,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:247127316372401:18",
+        "objectId": "W2BO2dTN3N",
+        "identity": "202512N3010103018*18",
+        "globalQuestionNumber": 18,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:162078264835398:19",
+        "objectId": "EI0YjQSNsJ",
+        "identity": "202512N3010103019*19",
+        "globalQuestionNumber": 19,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:32094618662682:20",
+        "objectId": "eU46WZY0Gn",
+        "identity": "202512N3010103020*20",
+        "globalQuestionNumber": 20,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:261919845027175:21",
+        "objectId": "6eYjRZszJc",
+        "identity": "202512N3010103021*21",
+        "globalQuestionNumber": 21,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:156446722597426:22",
+        "objectId": "GVNRadKoOg",
+        "identity": "202512N3010103022*22",
+        "globalQuestionNumber": 22,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:274782956712789:23",
+        "objectId": "sWiW8uoYSf",
+        "identity": "202512N3010103023*23",
+        "globalQuestionNumber": 23,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:78952934286205:24",
+        "objectId": "xGT1AfLhaf",
+        "identity": "202512N3010103024*24",
+        "globalQuestionNumber": 24,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:103106310852870:25",
+        "objectId": "dT2CsaHHqa",
+        "identity": "202512N3010103025*25",
+        "globalQuestionNumber": 25,
+        "sectionId": "R7joRZr2DG",
+        "questionType": 13
+      },
+      {
+        "id": "imported:202512:N3:1:121855135287692:26",
+        "objectId": "tQueOhMhax",
+        "identity": "202512N3010105026*26",
+        "globalQuestionNumber": 26,
+        "sectionId": "Y2FfzE6LyB",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202512:N3:1:129101873624028:27",
+        "objectId": "B9kwg5eiEP",
+        "identity": "202512N3010105027*27",
+        "globalQuestionNumber": 27,
+        "sectionId": "Y2FfzE6LyB",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202512:N3:1:234438705101829:28",
+        "objectId": "VxFqxA694z",
+        "identity": "202512N3010105028*28",
+        "globalQuestionNumber": 28,
+        "sectionId": "Y2FfzE6LyB",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202512:N3:1:11804194505447:29",
+        "objectId": "H8wx9wynBm",
+        "identity": "202512N3010105029*29",
+        "globalQuestionNumber": 29,
+        "sectionId": "Y2FfzE6LyB",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202512:N3:1:27769024156697:30",
+        "objectId": "sRWJcKotqJ",
+        "identity": "202512N3010105030*30",
+        "globalQuestionNumber": 30,
+        "sectionId": "Y2FfzE6LyB",
+        "questionType": 15
+      },
+      {
+        "id": "imported:202512:N3:1:188096029995759:31",
+        "objectId": "wFzGO33haj",
+        "identity": "202512N3010106031*31",
+        "globalQuestionNumber": 31,
+        "sectionId": "33hYNF2XGf",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202512:N3:1:199166449801150:32",
+        "objectId": "5Afdm0H25o",
+        "identity": "202512N3010106032*32",
+        "globalQuestionNumber": 32,
+        "sectionId": "33hYNF2XGf",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202512:N3:1:245534689062559:33",
+        "objectId": "6RcFe5tT6N",
+        "identity": "202512N3010106033*33",
+        "globalQuestionNumber": 33,
+        "sectionId": "33hYNF2XGf",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202512:N3:1:87359063845014:34",
+        "objectId": "aqyJ1TXseX",
+        "identity": "202512N3010106034*34",
+        "globalQuestionNumber": 34,
+        "sectionId": "33hYNF2XGf",
+        "questionType": 16
+      },
+      {
+        "id": "imported:202512:N3:1:225600653518691:35",
+        "objectId": "dMUoY2Qv98",
+        "identity": "202512N3010106035*35",
+        "globalQuestionNumber": 35,
+        "sectionId": "33hYNF2XGf",
+        "questionType": 16
+      }
+    ]
+  },
+  "importStats": {
+    "sourceRecords": 35,
+    "containers": 0
+  }
+}

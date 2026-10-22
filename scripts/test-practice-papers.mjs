@@ -79,3 +79,31 @@ test("mixed favorites still load original, listening and written question IDs in
   assert.equal(favorites[0].source, "original");
   assert.equal(favorites[1].source, "imported");
 });
+
+test("new nested exam exports expose only complete written questions and remain compatible with favorites", async () => {
+  const report = require("../docs/exam-bank-import-2026-10-22.json");
+  let count = 0, excluded = 0;
+  const selected = [];
+  for (const {level, period, available, unavailable} of report.papers) {
+    const paper = await papers.loadPracticePaper("imported", level, period, "all");
+    assert.equal(paper.questions.length, available, `${level}/${period}`);
+    assert.equal(paper.excludedCount, unavailable, `${level}/${period}`);
+    assert.equal(paper.questions.some(question => question.category === "听力" || question.media?.audio), false);
+    assert.equal((await papers.loadPracticePaper("imported", level, period, "listening")).questions.length, 0);
+    for (const question of paper.questions) {
+      assert.match(question.id, /^imported:\d{6}:N[1-3]:[1-3]:\d+:\d+$/);
+      assert.equal(question.options.length, 4);
+      assert.ok(question.prompt.trim());
+      if (question.category === "阅读") assert.ok(question.passage.trim());
+      assert.doesNotMatch(JSON.stringify(question), /MOJiTest_URL/);
+    }
+    selected.push(paper.questions[0].id, paper.questions.at(-1).id);
+    count += paper.questions.length; excluded += paper.excludedCount;
+  }
+  assert.equal(count, 540); assert.equal(excluded, 17);
+  assert.equal((await papers.loadFavoriteQuestions(selected)).map(item => item.question.id).join(","), selected.join(","));
+  const july = await papers.loadPracticePaper("imported", "N1", "202507", "vocabulary");
+  assert.match(july.questions[0].prompt, /<u>余暇<\/u>/);
+  assert.equal(july.questions[0].correctOptionId, "B");
+  assert.equal(july.questions[0].options[1].text, "よか");
+});

@@ -1324,27 +1324,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "くるう",
-      "reading": "くるう",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1237510",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "狂う"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "grammar",
       "label": "ようになる",
       "reading": "ようになる",
@@ -14552,27 +14531,6 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
-      "kind": "word",
-      "label": "かなえる",
-      "reading": "かなえる",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1208880",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "叶える"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
       "kind": "grammar",
       "label": "限りでは",
       "reading": "かぎりでは",
@@ -15786,16 +15744,6 @@
       "reading": "ためらう",
       "levels": [
         "N2"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
-    },
-    {
-      "kind": "word",
-      "label": "ことごとく",
-      "reading": "ことごとく",
-      "levels": [
-        "N1"
       ],
       "method": "word-list",
       "evidence": "Exact spelling and reading in the supplementary reference word list."
@@ -26585,6 +26533,47 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
+      "kind": "idiom",
+      "label": "目を覚ます",
+      "reading": "めをさます",
+      "levels": [
+        "N4"
+      ],
+      "method": "editorial",
+      "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+    },
+    {
+      "kind": "idiom",
+      "label": "足を伸ばす",
+      "reading": "あしをのばす",
+      "levels": [
+        "N3"
+      ],
+      "method": "editorial",
+      "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
+    },
+    {
+      "kind": "word",
+      "label": "さら",
+      "reading": "さら",
+      "levels": [
+        "N3"
+      ],
+      "method": "dictionary-variant",
+      "evidence": [
+        {
+          "id": "1299680",
+          "levels": [
+            "N3"
+          ],
+          "sourceSpellings": [
+            "皿"
+          ]
+        }
+      ],
+      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
       "kind": "word",
       "label": "あかい",
       "reading": "あかい",
@@ -26604,27 +26593,6 @@
             "緋い",
             "赭い",
             "丹い"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "さら",
-      "reading": "さら",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1299680",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "皿"
           ]
         }
       ],
@@ -68732,6 +68700,24 @@
     },
     {
       "kind": "word",
+      "label": "周知",
+      "reading": "しゅうち",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "うとい",
+      "reading": "うとい",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "なぜかというと",
+      "reading": "なぜかというと",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "つぐ",
       "reading": "つぐ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -68746,12 +68732,6 @@
       "kind": "word",
       "label": "くける",
       "reading": "くける",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "周知",
-      "reading": "しゅうち",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -68787,11 +68767,11 @@
   ],
   "totals": {
     "word": {
-      "total": 13971,
-      "before": 5580,
-      "addedSourced": 1100,
+      "total": 14033,
+      "before": 5643,
+      "addedSourced": 1097,
       "addedEstimates": 273,
-      "after": 6953
+      "after": 7013
     },
     "grammar": {
       "total": 221,
@@ -68801,11 +68781,11 @@
       "after": 221
     },
     "idiom": {
-      "total": 182,
+      "total": 184,
       "before": 12,
       "addedSourced": 0,
-      "addedEstimates": 170,
-      "after": 182
+      "addedEstimates": 172,
+      "after": 184
     }
   },
   "compounds": 383

@@ -1,0 +1,1002 @@
+{
+  "version": 1,
+  "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+  "period": "202512",
+  "level": "N3",
+  "type": "grammar",
+  "questions": [
+    {
+      "id": "imported:202512:N3:2:152767748712378:1",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "友人の田中さんは京都が大好きで、今までに何度（　　　）行ったことがあるそうだ。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "も"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "は"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "など"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ぐらい"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] も，表示次数多，“去过很多次”是固定说法，和「何度」搭配最自然。\n[2] は，提示主题，不适合接在「何度」后强调次数。\n[3] など，表示列举，不符合句意。\n[4] ぐらい，表示大概程度，这里不需要。"
+      ],
+      "sourceQuestionNumber": 1,
+      "sourceId": 152767748712378
+    },
+    {
+      "id": "imported:202512:N3:2:13831685975280:2",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "A「ねえ、お昼ご飯、一緒に行かない？」\nB「うん、行こう。何食べる？」\nA「寒いから、温かいうどん（　　　）どう？」",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "に"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "だけ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "まで"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "なんか"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] なんか，放在名词后表示“……之类的怎么样”，口语里用于轻松提议，很符合对话语气。[1] に，格助词，句意不成立。[2] だけ，表示“仅仅”，与提议不搭配。[3] まで，表示程度或范围，也不合适。"
+      ],
+      "sourceQuestionNumber": 2,
+      "sourceId": 13831685975280
+    },
+    {
+      "id": "imported:202512:N3:2:162863519442677:3",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "私は両親の誕生日にいつも手紙を書く。手紙（　　　）、普段は恥ずかしくてなかなか言えない感謝の気持ちを伝えられるからだ。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "でなら"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "になら"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "でしか"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "にしか"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] でなら，表示“如果是用信的话”，强调在“写信”这种方式下就能表达平时难以说出口的感谢。[2] になら，前接名词后常表示对象或身份，不符合“手紙”作手段的用法。\n[3] でしか，后面通常接否定，句型不完整。\n[4] にしか，同样需要否定呼应，不成立。"
+      ],
+      "sourceQuestionNumber": 3,
+      "sourceId": 162863519442677
+    },
+    {
+      "id": "imported:202512:N3:2:275567033569745:4",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "いつもは雨でも自転車で大学に行くが、今朝は（　　　）雨が強かったので、バスで行った。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ちっとも"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "あまりに"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "次第に"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "今にも"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] あまりに，表示“过于，太……了”，说明今早雨大到不得不改坐公交。\n[1] ちっとも，后面一般接否定。\n[3] 次第に，表示“逐渐”，与句意不符。\n[4] 今にも，表示“眼看就要……”，后项搭配不自然。"
+      ],
+      "sourceQuestionNumber": 4,
+      "sourceId": 275567033569745
+    },
+    {
+      "id": "imported:202512:N3:2:254193914720877:5",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "先週、登山をした。暑い日だったが、登っていく（　　　）風が冷たくなり、とても気持ちがよかった。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "とすると"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "のと比べると"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "にしたがって"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "のに対して"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] にしたがって，表示“随着……”。海拔越高风越冷，正是随过程变化而变化的关系。\n[1] とすると，表示假定，不符合题意。\n[2] のと比べると，表示比较，句子结构不对。\n[4] のに対して，表示对比，不是这里的重点。"
+      ],
+      "sourceQuestionNumber": 5,
+      "sourceId": 254193914720877
+    },
+    {
+      "id": "imported:202512:N3:2:177616598100004:6",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "（姉の部屋で）\n妹「お姉ちゃん、この漫画、もう読んだ？　借りてもいい？」\n姉「あ、それ、まだ途中なんだ。（　　　）、貸してあげるね。」",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "読んでいたら"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "読み続けたら"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "読んでおいたら"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "読み終わったら"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 読み終わったら，表示“看完之后”，和前面的“我还没看完”衔接自然，意思完整。\n[1] 読んでいたら，表示“正在读的时候/如果读”，不符合句意。\n[2] 読み続けたら，表示“继续读的话”，逻辑不对。\n[3] 読んでおいたら，表示“事先读完的话”，语境不合适。"
+      ],
+      "sourceQuestionNumber": 6,
+      "sourceId": 177616598100004
+    },
+    {
+      "id": "imported:202512:N3:2:251681859324620:7",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "来月、留学生の友達が日本での留学生活を終えて国に帰る。友達が国に（　　　）、いろいろなことを一緒にしたい。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "帰っていて"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "帰ってしまえば"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "帰っている間"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "帰ってしまう前に"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 帰ってしまう前に，意为“在回国之前”，最符合“想一起做很多事”的时间限制。[1] 帰っていて，表示状态持续，意思不通。\n[2] 帰ってしまえば，表示“如果已经回去了”，与后句矛盾。\n[3] 帰っている間，表示“回去期间”，时间关系错误。"
+      ],
+      "sourceQuestionNumber": 7,
+      "sourceId": 251681859324620
+    },
+    {
+      "id": "imported:202512:N3:2:150626317609794:8",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "この寺は、県内で最も古い寺で、（　　　）今から1000年以上前だそうだ。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "建てられてからは"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "建てられたのは"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "建てさせるまでは"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "建てさせたときは"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 建てられたのは，意为“被建造的时间是”，后接“距今一千多年前”，句子完整自然。\n[1] 建てられてからは，表示“自从建成之后”，后面不能直接接具体时间点。\n[3] 建てさせるまでは，表示“让人建到……之前”，语义错误。\n[4] 建てさせたときは，主语也不合适。"
+      ],
+      "sourceQuestionNumber": 8,
+      "sourceId": 150626317609794
+    },
+    {
+      "id": "imported:202512:N3:2:32437166194150:9",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "兄「駅前にドーナツ屋ができたらしいね。知ってる？」\n弟「うん。人気がある（　　　）よ。昨日店の前を通ったけど、たくさん人が並んでたよ。」",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ことだ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "せいだ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "みたいだ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "つもりだ"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] みたいだ，表示“看起来好像”。因为是通过“很多人在排队”来推测店很有人气，所以用推测最合适。\n[1] ことだ，用于传闻或劝告，不合适。\n[2] せいだ，表示负面原因，语气错误。\n[4] つもりだ，表示打算，不符合句意。"
+      ],
+      "sourceQuestionNumber": 9,
+      "sourceId": 32437166194150
+    },
+    {
+      "id": "imported:202512:N3:2:214994403587287:10",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "（会社で）\n森「すみません、大下さん。この近くで、いい眼科を知っていたら（　　　）。朝から目がかゆくて。」\n大下「え、大丈夫ですか。駅前のABC眼科はよかったですよ。」",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "教えたいんですが"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "教えてもいいですか"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "教えてもらうんですか"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "教えてほしいんですが"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] 教えてほしいんですが，意为“想请您告诉我”，在公司里向同事打听医院，语气礼貌且自然。\n[1] 教えたいんですが，表示“我想告诉你”，主语方向错了。\n[2] 教えてもいいですか，是“我可以告诉你吗”，不符合情景。\n[3] 教えてもらうんですか，是在确认对方是否会告诉别人，意思不对。"
+      ],
+      "sourceQuestionNumber": 10,
+      "sourceId": 214994403587287
+    },
+    {
+      "id": "imported:202512:N3:2:62927876902139:11",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "林さんは、会議で資料のグラフについて質問されたときに、わからないと言っていたが、林さんが作ったグラフなのだから、（　　　）と思う。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "わからないに違いない"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "わからないはずがない"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "わからないかもしれない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "わからなくてもしかたない"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] わからないはずがない，意为“不可能不知道”。既然图表是林先生自己做的，就不应当看不懂，这个判断最合理。\n[1] わからないに違いない，表示“肯定不知道”，与前文相反。\n[3] わからないかもしれない，语气太弱。\n[4] わからなくてもしかたない，和题干逻辑不一致。"
+      ],
+      "sourceQuestionNumber": 11,
+      "sourceId": 62927876902139
+    },
+    {
+      "id": "imported:202512:N3:2:211964261302634:12",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "父は、出張に行くと、母と私に必ずお土産を（　　　）。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "買ってきてあげる"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "買っていってあげる"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "買ってきてくれる"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "買っていってくれる"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 買ってきてくれる，表示“给我们买回来”。动作是父亲在外地买好并带回来给母亲和“我”，方向完全正确。\n[1] 買ってきてあげる，以“我”为给予方，不符合主语。\n[2] 買っていってあげる，表示“带去”，方向错了。\n[4] 買っていってくれる，同样是“带去”，不是“带回来”。"
+      ],
+      "sourceQuestionNumber": 12,
+      "sourceId": 211964261302634
+    },
+    {
+      "id": "imported:202512:N3:2:16161841557551:13",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "風邪をひいて、今日は授業を休んでしまったが、一日家で寝ていたら、かなりよくなってきた。明日は授業に（　　　）。",
+      "instruction": "問題1 次の文の（　　　）に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "出られそうだ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "出られるそうだ"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "出そうだ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "出るそうだ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] 出られそうだ，表示“看起来能去上课”，是根据身体正在恢复作出的自然判断。\n[2] 出られるそうだ，表示传闻，不符合自我状态判断。\n[3] 出そうだ，主语通常是动作即将发生，这里缺少可能态。\n[4] 出るそうだ，也是传闻表达，不合适。"
+      ],
+      "sourceQuestionNumber": 13,
+      "sourceId": 16161841557551
+    },
+    {
+      "id": "imported:202512:N3:2:139836123702739:14",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "昨日、本屋で小説2冊___　___　<u>★</u>　___本を1冊買った。",
+      "instruction": "問題2 次の文の__★__に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "と"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "の"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "について"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "レポートの書き方"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确语序是「と → レポートの書き方 → について → の」，整句为「小説2冊とレポートの書き方についての本を1冊買った」。\n星号位置应放「について」，所以答案是 [3]。这里的关键是先用「～について」表示“关于……”，再用「の本」修饰“书”。"
+      ],
+      "sourceQuestionNumber": 14,
+      "sourceId": 139836123702739
+    },
+    {
+      "id": "imported:202512:N3:2:247612295587926:15",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "（道で）A「あの喫茶店、___　___　<u>★</u>　___があるよ。入ってみない？」B「いいね。」",
+      "instruction": "問題2 次の文の__★__に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "で"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "か何か"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "テレビ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "見たこと"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "正确语序是「テレビ → か何か → で → 見たこと」。整句为「テレビか何かで見たことがあるよ」。\n星号位置应放「で」，表示“在电视之类的地方看到过”。"
+      ],
+      "sourceQuestionNumber": 15,
+      "sourceId": 247612295587926
+    },
+    {
+      "id": "imported:202512:N3:2:120070266422213:16",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "半年前にギターを習い始めてから、毎日練習している。弾けば___　___　<u>★</u>　___自分でもわかり、とても楽しい。",
+      "instruction": "問題2 次の文の__★__に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "上手に"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "弾くほど"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "なっていくのが"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "弾けるように"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "正确语序是「弾くほど → 上手に → 弾けるように → なっていくのが」。整句为「弾けば弾くほど上手に弾けるようになっていくのが自分でもわかり…」。\n星号位置应放「弾けるように」。核心在于“越弹越能熟练地弹”。"
+      ],
+      "sourceQuestionNumber": 16,
+      "sourceId": 120070266422213
+    },
+    {
+      "id": "imported:202512:N3:2:247101012554565:17",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "今の会社に就職したときに、北町で一人暮らしを始めた。会社から遠い___　___　<u>★</u>　___からだ。",
+      "instruction": "問題2 次の文の__★__に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "北町を選んだ"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "のは"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ずっと北町に住んでみたかった"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "のに"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "正确语序是「のに → 北町を選んだ → のは → ずっと北町に住んでみたかった」。整句为「会社から遠いのに北町を選んだのは、ずっと北町に住んでみたかったからだ」。\n星号位置应放「のは」。前面先提出“明明离公司远却还是选了那里”，后面再解释原因。"
+      ],
+      "sourceQuestionNumber": 17,
+      "sourceId": 247101012554565
+    },
+    {
+      "id": "imported:202512:N3:2:4711742360306:18",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "お風呂は家の中でも特にかびが生えやすい場所だ。かびを防ぐ___　___　<u>★</u>　___重要らしい。",
+      "instruction": "問題2 次の文の__★__に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ことが"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "使った後"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ぬれたままにしない"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ためには"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "正确语序是「ためには → 使った後 → ぬれたままにしない → ことが」。整句为「かびを防ぐためには使った後ぬれたままにしないことが重要らしい」。\n星号位置应放「ぬれたままにしない」。关键点是“防霉”的做法，而不是单纯说明浴室潮湿。"
+      ],
+      "sourceQuestionNumber": 18,
+      "sourceId": 4711742360306
+    },
+    {
+      "id": "imported:202512:N3:2:61059244430788:19",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "请选择第 19 题的答案（对应文章中的题号）。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、留学生の作文である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tコンビニ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tウィルソン　リサ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私は日本のコンビニが好きです。家の近くや大学の近くにいろいろなコンビニがあるのですが、24時間営業なので、とても便利です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t日本に来たばかりのころ、コンビニに行くとき、コンビニの会社の違いはあまり気にしていませんでした。会社が違っても、売っている商品は同じだと（19）。売っている商品が会社によって少し違うことに気がついたのは、日本に来て1か月ぐらいたったころでした。飲み物、食べ物、生活用品、雑誌などが売られているのは同じです。（20）、それぞれの会社のコンビニに、ほかの会社のコンビニにはないデザートやパンや弁当などがあるのです。会社ごとにおいしいデザートやパンや弁当を考えて、自分たちだけの新しい商品を作っているようです。いつ行っても店には新しい商品がたくさん並んでいます。見ているだけでも楽しいし、（21）会社もいい商品を売ろうとがんばっているようで、応援したくなります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私にとってコンビニは買い物をするだけの場所ではありません。食べてみたい商品や新商品がたくさん並んでいて、行くと楽しい気分になれる（22）。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t</p>",
+      "instruction": "問題3 次の文章を読んで、[１９]から[２２]の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "思います"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "思ってしまいます"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "思っていたからです"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "思ったことです"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "[3] 思っていたからです，意思是“因为我原本是这么想的”。后文紧接着解释“后来发现其实不一样”，所以这里需要交代过去的认识。\n[1] 思います，时态不对，无法和后文形成转折。\n[2] 思ってしまいます，带有不由自主之意，不贴合回顾叙述。\n[4] 思ったことです，句子结构不完整。",
+        "<p><strong>文章译文</strong></p><p class=\"moj-trans\">以下是留学生的作文。</p><p class=\"moj-trans\">便利店</p><p class=\"moj-trans\">威尔逊·丽莎</p><p class=\"moj-trans\">我很喜欢日本的便利店。在我家附近和大学附近都有各种各样的便利店，而且它们是24小时营业的，所以非常方便。</p><p class=\"moj-trans\">刚来日本的时候，我去便利店时，并没有太在意不同便利店公司的区别。我当时觉得，就算公司不同，卖的商品应该也是一样的。大概是在来日本一个月左右的时候，我才注意到，不同公司卖的商品其实是有一些差别的。虽然饮料、食品、生活用品、杂志等这些基本商品都一样，但是，每家便利店都会有其他便利店没有的甜点、面包和便当等商品。看起来，各家公司都会自己研发美味的甜点、面包和便当，打造只属于自己的新产品。不管什么时候去店里，都会看到摆满了各种新商品。光是看看就觉得很开心，而且还能感觉到各家公司都在努力卖出更好的商品，让人忍不住想为它们加油。</p><p class=\"moj-trans\">对我来说，便利店不仅仅是一个购物的地方。那里摆满了各种想尝试的商品和新商品，每次去都会让人心情变得愉快的地方。</p><p class=\"moj-trans\"></p>"
+      ],
+      "sourceQuestionNumber": 19,
+      "sourceId": 61059244430788
+    },
+    {
+      "id": "imported:202512:N3:2:24206878088279:20",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "请选择第 20 题的答案（对应文章中的题号）。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、留学生の作文である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tコンビニ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tウィルソン　リサ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私は日本のコンビニが好きです。家の近くや大学の近くにいろいろなコンビニがあるのですが、24時間営業なので、とても便利です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t日本に来たばかりのころ、コンビニに行くとき、コンビニの会社の違いはあまり気にしていませんでした。会社が違っても、売っている商品は同じだと（19）。売っている商品が会社によって少し違うことに気がついたのは、日本に来て1か月ぐらいたったころでした。飲み物、食べ物、生活用品、雑誌などが売られているのは同じです。（20）、それぞれの会社のコンビニに、ほかの会社のコンビニにはないデザートやパンや弁当などがあるのです。会社ごとにおいしいデザートやパンや弁当を考えて、自分たちだけの新しい商品を作っているようです。いつ行っても店には新しい商品がたくさん並んでいます。見ているだけでも楽しいし、（21）会社もいい商品を売ろうとがんばっているようで、応援したくなります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私にとってコンビニは買い物をするだけの場所ではありません。食べてみたい商品や新商品がたくさん並んでいて、行くと楽しい気分になれる（22）。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t</p>",
+      "instruction": "問題3 次の文章を読んで、[１９]から[２２]の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "つまり"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ところで"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ちなみに"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "でも"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "[4] でも，意为“但是”。前句说“相同”，后句说“其实每家也有不同商品”，需要明确转折。\n[1] つまり，表示总结，不合适。\n[2] ところで，表示换话题。\n[3] ちなみに，表示补充说明，转折力度不够。",
+        "<p><strong>文章译文</strong></p><p class=\"moj-trans\">以下是留学生的作文。</p><p class=\"moj-trans\">便利店</p><p class=\"moj-trans\">威尔逊·丽莎</p><p class=\"moj-trans\">我很喜欢日本的便利店。在我家附近和大学附近都有各种各样的便利店，而且它们是24小时营业的，所以非常方便。</p><p class=\"moj-trans\">刚来日本的时候，我去便利店时，并没有太在意不同便利店公司的区别。我当时觉得，就算公司不同，卖的商品应该也是一样的。大概是在来日本一个月左右的时候，我才注意到，不同公司卖的商品其实是有一些差别的。虽然饮料、食品、生活用品、杂志等这些基本商品都一样，但是，每家便利店都会有其他便利店没有的甜点、面包和便当等商品。看起来，各家公司都会自己研发美味的甜点、面包和便当，打造只属于自己的新产品。不管什么时候去店里，都会看到摆满了各种新商品。光是看看就觉得很开心，而且还能感觉到各家公司都在努力卖出更好的商品，让人忍不住想为它们加油。</p><p class=\"moj-trans\">对我来说，便利店不仅仅是一个购物的地方。那里摆满了各种想尝试的商品和新商品，每次去都会让人心情变得愉快的地方。</p><p class=\"moj-trans\"></p>"
+      ],
+      "sourceQuestionNumber": 20,
+      "sourceId": 24206878088279
+    },
+    {
+      "id": "imported:202512:N3:2:158115695719853:21",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "请选择第 21 题的答案（对应文章中的题号）。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、留学生の作文である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tコンビニ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tウィルソン　リサ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私は日本のコンビニが好きです。家の近くや大学の近くにいろいろなコンビニがあるのですが、24時間営業なので、とても便利です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t日本に来たばかりのころ、コンビニに行くとき、コンビニの会社の違いはあまり気にしていませんでした。会社が違っても、売っている商品は同じだと（19）。売っている商品が会社によって少し違うことに気がついたのは、日本に来て1か月ぐらいたったころでした。飲み物、食べ物、生活用品、雑誌などが売られているのは同じです。（20）、それぞれの会社のコンビニに、ほかの会社のコンビニにはないデザートやパンや弁当などがあるのです。会社ごとにおいしいデザートやパンや弁当を考えて、自分たちだけの新しい商品を作っているようです。いつ行っても店には新しい商品がたくさん並んでいます。見ているだけでも楽しいし、（21）会社もいい商品を売ろうとがんばっているようで、応援したくなります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私にとってコンビニは買い物をするだけの場所ではありません。食べてみたい商品や新商品がたくさん並んでいて、行くと楽しい気分になれる（22）。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t</p>",
+      "instruction": "問題3 次の文章を読んで、[１９]から[２２]の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "どの"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "その"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "この"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "あの"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "[1] どの，意为“每一家，哪一家都”。作者想表达“每一家便利店公司都在努力卖好商品”，范围是全部公司。\n[2] その、[3] この、[4] あの 都只指向特定对象，不能概括所有公司。",
+        "<p><strong>文章译文</strong></p><p class=\"moj-trans\">以下是留学生的作文。</p><p class=\"moj-trans\">便利店</p><p class=\"moj-trans\">威尔逊·丽莎</p><p class=\"moj-trans\">我很喜欢日本的便利店。在我家附近和大学附近都有各种各样的便利店，而且它们是24小时营业的，所以非常方便。</p><p class=\"moj-trans\">刚来日本的时候，我去便利店时，并没有太在意不同便利店公司的区别。我当时觉得，就算公司不同，卖的商品应该也是一样的。大概是在来日本一个月左右的时候，我才注意到，不同公司卖的商品其实是有一些差别的。虽然饮料、食品、生活用品、杂志等这些基本商品都一样，但是，每家便利店都会有其他便利店没有的甜点、面包和便当等商品。看起来，各家公司都会自己研发美味的甜点、面包和便当，打造只属于自己的新产品。不管什么时候去店里，都会看到摆满了各种新商品。光是看看就觉得很开心，而且还能感觉到各家公司都在努力卖出更好的商品，让人忍不住想为它们加油。</p><p class=\"moj-trans\">对我来说，便利店不仅仅是一个购物的地方。那里摆满了各种想尝试的商品和新商品，每次去都会让人心情变得愉快的地方。</p><p class=\"moj-trans\"></p>"
+      ],
+      "sourceQuestionNumber": 21,
+      "sourceId": 158115695719853
+    },
+    {
+      "id": "imported:202512:N3:2:8198488340569:22",
+      "level": "N3",
+      "category": "语法",
+      "prompt": "请选择第 22 题的答案（对应文章中的题号）。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、留学生の作文である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tコンビニ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tウィルソン　リサ</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私は日本のコンビニが好きです。家の近くや大学の近くにいろいろなコンビニがあるのですが、24時間営業なので、とても便利です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t日本に来たばかりのころ、コンビニに行くとき、コンビニの会社の違いはあまり気にしていませんでした。会社が違っても、売っている商品は同じだと（19）。売っている商品が会社によって少し違うことに気がついたのは、日本に来て1か月ぐらいたったころでした。飲み物、食べ物、生活用品、雑誌などが売られているのは同じです。（20）、それぞれの会社のコンビニに、ほかの会社のコンビニにはないデザートやパンや弁当などがあるのです。会社ごとにおいしいデザートやパンや弁当を考えて、自分たちだけの新しい商品を作っているようです。いつ行っても店には新しい商品がたくさん並んでいます。見ているだけでも楽しいし、（21）会社もいい商品を売ろうとがんばっているようで、応援したくなります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私にとってコンビニは買い物をするだけの場所ではありません。食べてみたい商品や新商品がたくさん並んでいて、行くと楽しい気分になれる（22）。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t</p>",
+      "instruction": "問題3 次の文章を読んで、[１９]から[２２]の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "場所にしたのです"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "場所なのです"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "場所にするのでしょう"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "場所なのでしょうか"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "[2] 場所なのです，意为“就是这样一个地方”。前文总结作者对便利店的新认识，这里用解释说明最自然。\n[1] 場所にしたのです，表示“把它变成某种场所”，意思不对。\n[3] 場所にするのでしょう，结构不通。\n[4] 場所なのでしょうか，变成疑问，不符合文章收束方式。",
+        "<p><strong>文章译文</strong></p><p class=\"moj-trans\">以下是留学生的作文。</p><p class=\"moj-trans\">便利店</p><p class=\"moj-trans\">威尔逊·丽莎</p><p class=\"moj-trans\">我很喜欢日本的便利店。在我家附近和大学附近都有各种各样的便利店，而且它们是24小时营业的，所以非常方便。</p><p class=\"moj-trans\">刚来日本的时候，我去便利店时，并没有太在意不同便利店公司的区别。我当时觉得，就算公司不同，卖的商品应该也是一样的。大概是在来日本一个月左右的时候，我才注意到，不同公司卖的商品其实是有一些差别的。虽然饮料、食品、生活用品、杂志等这些基本商品都一样，但是，每家便利店都会有其他便利店没有的甜点、面包和便当等商品。看起来，各家公司都会自己研发美味的甜点、面包和便当，打造只属于自己的新产品。不管什么时候去店里，都会看到摆满了各种新商品。光是看看就觉得很开心，而且还能感觉到各家公司都在努力卖出更好的商品，让人忍不住想为它们加油。</p><p class=\"moj-trans\">对我来说，便利店不仅仅是一个购物的地方。那里摆满了各种想尝试的商品和新商品，每次去都会让人心情变得愉快的地方。</p><p class=\"moj-trans\"></p>"
+      ],
+      "sourceQuestionNumber": 22,
+      "sourceId": 8198488340569
+    }
+  ],
+  "unavailable": [],
+  "sourceMetadata": {
+    "format": "jlpt-practice/import-exam-bank/v1",
+    "checksum": "02d8988b2f2018c735a99069fa61aa80239719e54c3374b30b463d670027c7ae",
+    "examId": "JIcIGb0sPS",
+    "sourceStatus": "partial",
+    "questions": [
+      {
+        "id": "imported:202512:N3:2:152767748712378:1",
+        "objectId": "WsYQqkg2Fg",
+        "identity": "202512N3010207036*01",
+        "globalQuestionNumber": 36,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:13831685975280:2",
+        "objectId": "qrBHVUNECc",
+        "identity": "202512N3010207037*02",
+        "globalQuestionNumber": 37,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:162863519442677:3",
+        "objectId": "YPzhordq4K",
+        "identity": "202512N3010207038*03",
+        "globalQuestionNumber": 38,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:275567033569745:4",
+        "objectId": "0lvkNARq8W",
+        "identity": "202512N3010207039*04",
+        "globalQuestionNumber": 39,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:254193914720877:5",
+        "objectId": "ormRZZ0Mka",
+        "identity": "202512N3010207040*05",
+        "globalQuestionNumber": 40,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:177616598100004:6",
+        "objectId": "w77ruLO16p",
+        "identity": "202512N3010207041*06",
+        "globalQuestionNumber": 41,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:251681859324620:7",
+        "objectId": "WL2dgZCIiv",
+        "identity": "202512N3010207042*07",
+        "globalQuestionNumber": 42,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:150626317609794:8",
+        "objectId": "sL73METr26",
+        "identity": "202512N3010207043*08",
+        "globalQuestionNumber": 43,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:32437166194150:9",
+        "objectId": "wF0iINasGt",
+        "identity": "202512N3010207044*09",
+        "globalQuestionNumber": 44,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:214994403587287:10",
+        "objectId": "PLuFwnQd0V",
+        "identity": "202512N3010207045*10",
+        "globalQuestionNumber": 45,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:62927876902139:11",
+        "objectId": "n6KHdIVRvq",
+        "identity": "202512N3010207046*11",
+        "globalQuestionNumber": 46,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:211964261302634:12",
+        "objectId": "BXyfgLggTP",
+        "identity": "202512N3010207047*12",
+        "globalQuestionNumber": 47,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:16161841557551:13",
+        "objectId": "XQes1RmQyA",
+        "identity": "202512N3010207048*13",
+        "globalQuestionNumber": 48,
+        "sectionId": "txvPyAOCXe",
+        "questionType": 21
+      },
+      {
+        "id": "imported:202512:N3:2:139836123702739:14",
+        "objectId": "vAPTwwFPdE",
+        "identity": "202512N3010208049*14",
+        "globalQuestionNumber": 49,
+        "sectionId": "UR7Ju9ubW5",
+        "questionType": 22
+      },
+      {
+        "id": "imported:202512:N3:2:247612295587926:15",
+        "objectId": "HDNhHG37Eb",
+        "identity": "202512N3010208050*15",
+        "globalQuestionNumber": 50,
+        "sectionId": "UR7Ju9ubW5",
+        "questionType": 22
+      },
+      {
+        "id": "imported:202512:N3:2:120070266422213:16",
+        "objectId": "snJxxi5KC8",
+        "identity": "202512N3010208051*16",
+        "globalQuestionNumber": 51,
+        "sectionId": "UR7Ju9ubW5",
+        "questionType": 22
+      },
+      {
+        "id": "imported:202512:N3:2:247101012554565:17",
+        "objectId": "NngA8XkxLQ",
+        "identity": "202512N3010208052*17",
+        "globalQuestionNumber": 52,
+        "sectionId": "UR7Ju9ubW5",
+        "questionType": 22
+      },
+      {
+        "id": "imported:202512:N3:2:4711742360306:18",
+        "objectId": "T8iKoHEwRQ",
+        "identity": "202512N3010208053*18",
+        "globalQuestionNumber": 53,
+        "sectionId": "UR7Ju9ubW5",
+        "questionType": 22
+      },
+      {
+        "id": "imported:202512:N3:2:61059244430788:19",
+        "objectId": "WRzuhtHKjt",
+        "identity": "202512N3010209054*19",
+        "globalQuestionNumber": 54,
+        "sectionId": "EYkiGFZglQ",
+        "questionType": 23,
+        "parentObjectId": "D6DT9BslbM"
+      },
+      {
+        "id": "imported:202512:N3:2:24206878088279:20",
+        "objectId": "6IRu1iZxJf",
+        "identity": "202512N3010209055*20",
+        "globalQuestionNumber": 55,
+        "sectionId": "EYkiGFZglQ",
+        "questionType": 23,
+        "parentObjectId": "D6DT9BslbM"
+      },
+      {
+        "id": "imported:202512:N3:2:158115695719853:21",
+        "objectId": "oIqnuA3qnQ",
+        "identity": "202512N3010209056*21",
+        "globalQuestionNumber": 56,
+        "sectionId": "EYkiGFZglQ",
+        "questionType": 23,
+        "parentObjectId": "D6DT9BslbM"
+      },
+      {
+        "id": "imported:202512:N3:2:8198488340569:22",
+        "objectId": "EoTesmkDt1",
+        "identity": "202512N3010209057*22",
+        "globalQuestionNumber": 57,
+        "sectionId": "EYkiGFZglQ",
+        "questionType": 23,
+        "parentObjectId": "D6DT9BslbM"
+      }
+    ]
+  },
+  "importStats": {
+    "sourceRecords": 23,
+    "containers": 1
+  }
+}

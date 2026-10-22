@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "import:bank": "node scripts/import-question-bank.mjs",
+    "import:exam-bank": "node scripts/import-exam-bank.mjs",
+    "test:exam-bank": "node --test scripts/test-exam-bank.mjs",
     "check:bank": "node scripts/check-question-bank.mjs",
     "check:resources": "node scripts/check-bank-resources.mjs",
     "upload:audio": "node scripts/upload-r2-audio.mjs",

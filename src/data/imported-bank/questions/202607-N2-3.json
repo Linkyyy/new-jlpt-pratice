@@ -1,0 +1,956 @@
+{
+  "version": 1,
+  "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+  "period": "202607",
+  "level": "N2",
+  "type": "reading",
+  "questions": [
+    {
+      "id": "imported:202607:N2:3:127091743807711:52",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "優れた文章を書くときの言葉について、筆者はどのように考えているか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(1)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t名文(　注1　)を書くためには豊富な語彙(　注2　)があったほうがいいかといえば、そうでもありません。あまり聞かない言葉をわざわざ使わなくても、自分の気持ちや考え、状況を読み手に伝えることは十分にできます。変に凝った言葉を使うと、かえって伝わりません。たとえば、「悲しい」を表す二字熟語には「悲痛」「哀痛」「痛惜」などがあります。でも、ことさら(　注3　)「悲痛の思い」などと言わなくても、「本当に悲しい」で通じるなら、それで十分です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)名文：優れた文章</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)語彙：ここでは、言葉</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)ことさら:わざわざ</p>",
+      "instruction": "問題10 次の( 1 )から( 5 )の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "気持ちや考えを伝えるときに使える言葉をたくさん知っていたほうがいい。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "伝えたい内容に応じて、異なる種類の言葉を使い分けたほうがいい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "難しい言葉を無理に使うのではなく、日常でもよく使われる言葉を使えばいい。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "この文章は完全に避けるのではなく、必要に応じて使えばいい。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "作者认为“不必特意用不常见的词”，“用‘真的很悲伤’就能传达的话就足够了”。故选项3“不勉强使用难词，用日常常用词就好”正确。 \n1.错误：作者认为不需要知道很多词。 \n2. 错误：作者未提“区分使用”。 \n4. 错误：作者未提“完全回避”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">（1）</p><p class=\"moji-trans\">要说写出优秀文章是否需要有丰富的词汇，其实也未必。即使不刻意使用不常见的词，也完全能够把自己的心情、想法和状况传达给读者。如果硬要使用花哨的词，反而传达不到位。例如，表示“悲伤”的二字熟语有“悲痛”“哀痛”“痛惜”等。但即使不特意说“悲痛之情”，用“真的很悲伤”就能传达的话，那就足够了。</p><p class=\"moji-trans\">(注1)名文：优秀的文章</p><p class=\"moji-trans\">(注2)語彙：此处指“词语”</p><p class=\"moji-trans\">(注3)ことさら：特意</p>"
+      ],
+      "sourceQuestionNumber": 52,
+      "sourceId": 127091743807711
+    },
+    {
+      "id": "imported:202607:N2:3:11298869322596:53",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "このメールで伝えたいことは何か。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(2)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、ある引っ越しセンターに届いたメールである。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tやまの引っ越しセンター</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t東地区ご担当水川様</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t先日お願いした引っ越しについてご相談があります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t実は友人からテレビを譲ってもらえることになりました。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t引っ越しの日に、引っ越し先と同じ町にある友人宅に寄ってもらい、そこからテレビを引っ越し先に運んでもらいたいと思っています。その場合、料金はどうなりますでしょうか。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tなお、テレビのチャンネルの設定などは不要です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t再度見積もりを作成していただけないでしょうか。お返事お待ちしています。よろしくお願いします。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t森村正太</p>",
+      "instruction": "問題10 次の( 1 )から( 5 )の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "今使っているテレビを友人の家に運んでもらいたいので、見積もりを作り直してほしい。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "友人に家にあるテレビを運んでもらいたいので、見積もりを作り直してほしい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "友人に家にあるテレビを運び、チャンネルの設定もしてほしいので、見積もりを作り直してほしい。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "テレビのチャンネルの設定は頼まないことにしたので、見積もりを作り直してほしい。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "邮件核心内容是“想让搬家公司顺路去朋友家，把朋友给的电视搬到新家”。故选项2“想把朋友家的电视搬走，希望重新估价”正确。\n1.错误：是去朋友家取电视，不是把自己电视运到朋友家。\n3.错误：明确说了“不需要频道设置”。\n4.错误：不是“不拜托设置”，而是追加了搬运电视的请求。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(2)</p><p class=\"moji-trans\">以下是一封寄送到某搬家公司的邮件。</p><p class=\"moji-trans\">山野搬家公司</p><p class=\"moji-trans\">东地区负责人 水川先生</p><p class=\"moji-trans\">关于前几天拜托您的搬家事宜，我有事想与您商量。</p><p class=\"moji-trans\">实际上，我朋友说要送我一台电视机。</p><p class=\"moji-trans\">希望在搬家当天，搬家公司能顺路去一趟与我新家同在一个城市的朋友家，然后把那台电视运到我的新家。这种情况下，费用会是多少呢？</p><p class=\"moji-trans\">另外，不需要电视机的频道设置等服务。</p><p class=\"moji-trans\">能否请您重新给我做一份报价？静候回复。拜托了。</p><p class=\"moji-trans\">森村正太</p>"
+      ],
+      "sourceQuestionNumber": 53,
+      "sourceId": 11298869322596
+    },
+    {
+      "id": "imported:202607:N2:3:76029523882289:54",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者によると、人は相手の嬉しそうな表情を見るとどうなるか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(3)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t人は、目の前の人が、嬉しそうな表情をしていると、ついその表情を写し取ってしまう。表情というのは不思議なもので、出力にも入力にも使える。つまり、嬉しいから嬉しい表情をするわけだが、嬉しい表情になってしまうと、嬉しい時に脳に起こる神経信号（　注1　）が誘発される(　注2　)のである。目の前の人の笑顔につられて(　注3　)、つい笑ってしまうと、脳の緊張も解ける。人間なら、そんな経験、山ほどしているはずだ。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">(注1)神経信号：神経細胞が刺激を受けると発生する電気信号</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">(注2)誘発される：ここでは、生じる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">(注3)つられる:ここでは、誘われる</p>",
+      "instruction": "問題10 次の( 1 )から( 5 )の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "相手の表情から嬉しい感情を読み取り、同じ感情が起きる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "相手の表情によって脳の緊張が解かれ、自然に笑顔になる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "無意識に相手と同じ表情になり、嬉しい感情を共有しようとする。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "無意識に嬉しい表情になり、その結果として嬉しい感情が起きる。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "文章指出 “看到对方开心表情会不自觉模仿” → “一旦做出开心表情，开心时的神经信号会被诱发” → “脑部紧张得到缓解”。故选项 4 “无意识地做出开心的表情，结果产生了开心的感情” 正确。\n　1.错误：不是“读取感情”，而是“模仿表情”。\n　2.错误：顺序是先做出表情，后缓解紧张。\n　3.错误：文中未提“想要共享感情”的意图。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(3)</p><p class=\"moji-trans\">当面前的人露出开心的表情时，人总会不自觉地模仿那个表情。表情是一种不可思议的东西，既可以输出也可以输入。也就是说，虽然是因为开心才做出开心的表情，但一旦做出开心的表情，开心时大脑产生的神经信号就会被诱发。被面前人的笑容带动，不经意地笑起来的话，大脑的紧张也会得到缓解。人类的话，应该有过无数次这样的经历吧。</p><p class=\"moji-trans\">（注1）神经信号：神经细胞受到刺激时产生的电信号</p><p class=\"moji-trans\">（注2）诱发：这里指“产生、发生”</p><p class=\"moji-trans\">（注3）つられる：这里指“受到吸引、被诱导”</p>"
+      ],
+      "sourceQuestionNumber": 54,
+      "sourceId": 76029523882289
+    },
+    {
+      "id": "imported:202607:N2:3:281296990473237:55",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "このメールを受け取ったあとで、青山さんがまずしなければならないことは何か。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(4)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t北川農業大学応用生命科学部教授青山友菜先生</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t先日は、来月出版予定の『果物の不思議』に掲載する図表20点についてご意見をいただき、ありがとうございました。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tご指示のあった追加のグラフ1点が出来上がりましたので、添付いたします。ご確認をお願いします。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tまた、誤りのあった図表5点は現在修正中です。今週中にお送りする予定ですので、ご確認いただき、再度修正の必要などころがありましたらご連絡ください。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以上、よろしくお願い申し上げます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tAGR出版編集部川波敬一</p>",
+      "instruction": "問題10 次の( 1 )から( 5 )の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "新しいグラフを作成する。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "新しく作成されたグラフを確認する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "誤りのあった図表の修正を確認する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "誤りのあった図表を再度修正する。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "邮件中说“追加的图表已完成，请查收”，所以青山老师首先要做的是“确认新制作的图表”。选项2正确。\n1.错误：是编辑做图表，不是青山老师。\n3.错误：“有误的图表正在修正中”，还没完成。\n4.错误：是编辑在修正，不是青山老师。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(4)</p><p class=\"moji-trans\">北川农业大学 应用生命科学部青山友菜教授</p><p class=\"moji-trans\">日前，感谢您就预定下月出版的《水果的不可思议》一书中刊登的20张图表给予宝贵意见。</p><p class=\"moji-trans\">您指示增加的1张图表已完成，现随信附上。烦请您确认。</p><p class=\"moji-trans\">另外，有误的5张图表正在修正中。预计本周内发给您，请您确认后，若有需要再次修改的地方，请与我们联系。</p><p class=\"moji-trans\">以上，拜托了。</p><p class=\"moji-trans\">AGR 出版 编辑部川波敬一</p>"
+      ],
+      "sourceQuestionNumber": 55,
+      "sourceId": 281296990473237
+    },
+    {
+      "id": "imported:202607:N2:3:273377984667020:56",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者が言いたいことは何か。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(5)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私たちは、責任を果たすために、他者を頼らなければならないときがある。そしてそれは責任から逃れる(注)ことではない。仕事・家事・育児を抱え込み、壊れそうになりながら日々を生き抜いている人は、その責任を果たすために、他者の手を借りるべきなのだ。それは恥ずかしいことではない。責任の主体として、誇り高く、胸を張って生きるべきである。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注)逃れる：逃げる</p>",
+      "instruction": "問題10 次の( 1 )から( 5 )の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "自分の責任を果たすために他者を頼ることを、恥ずかしいと思う必要はない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "多くのことを抱え込んでいるときは、他者に責任を果たしてもらえばいい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "他者を頼ることより、自分の責任が果たせないことのほうが恥ずかしいことである。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "他者に頼らずに自分の責任を果たすことができたら、誇りを持つべきである。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "文章核心观点是 “为了履行责任应该借助他人之手, 那不是羞耻的事”。故选项 1 “为了履行自己的责任而求助他人, 不必觉得羞耻” 正确。\n2.错误：是“借他人之手履行自己的责任”，不是“让他人代为履行”。\n3.错误：比较的对象有误。\n4.错误：主张的是“求助也可以自豪”，不是“不求助才应自豪”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(5)</p><p class=\"moji-trans\">我们有时为了履行责任，不得不依赖他人。而这并不是逃避责任。那些背负着工作、家务、育儿，几乎要被压垮却仍在努力生活的人，为了履行自己的责任，应该寻求他人的帮助。这不是什么羞耻的事。作为责任的主体，应该自豪地、挺起胸膛地活下去。</p><p class=\"moji-trans\">(注)逃れる：逃跑</p>"
+      ],
+      "sourceQuestionNumber": 56,
+      "sourceId": 273377984667020
+    },
+    {
+      "id": "imported:202607:N2:3:104114408125073:57",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<u>そんなこと</u>とは、どのようなことか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(1)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t誰かへの贈り物を選ぶとき、それをほとんどに相手がほしいと思ってくれるかどうかは、はっきりしません。ぼくらは、よくわからないなりに相手のことを想像し、思いをめぐらせて、贈り物を選びます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以前、小さなお子さんのいる家庭を訪ねたとき、絵本を三冊ほどプレゼントとしてもっていったことがあります。ところが、その人は、どの本もすでにお持ちでした。贈り物には<u>そんなこと</u>がよく起こるのです。でもそれはかならずしも「失敗」とはいえません。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t贈り物の意義は、モノではなく、贈り物を渡そうとした思いのほうにあるからです。もちろん、相手がほしいと指定する物を贈ることもあります。それは、どちらかといえば代わりに支払いをする、といった意味になって、商品の交換に似てきます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tどのくらいの金額のものが適切なのか、どんなものだったら喜んでくれるのか、不確定なままであることが、贈り物に特別の意味を付与して(　注1　)いる面があるのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tたとえ欲しかったものとは違っていても、相手が自分のことをじっくり考えて選んでくれたものには、相手を想起させ(　注2　)、その人との関係をつくりだし、感情を喚起する(　注3　)可能性があります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t相手のなかに目に見えない何かを生み出すこと。それができるかどうかわからないまま、でもそれを目指して贈ること。そこに、モノの効用以上の何かが生じる余地(　注4　)が生まれます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)付与する：与える</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)想起する：思い出す</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)喚起する：ここでは、呼び起こす</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)余地：ここでは、可能性</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "以前相手に贈ったものなのに、また同じものを贈ること"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "自分が贈ったものが、相手が欲しかったものと一致すること"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ほかの人が贈ったものと知らないで、それと同じものを贈ること"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "相手が欲しいものだろうと思ったのに、そうではなかったものを贈ること"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "「そんなこと」指前文“以为对方会想要而送的礼物，对方已经有了（不是对方想要的）”。故选项4“以为对方会想要但其实不是那样的东西”正确。\n1.错误：不是“以前送过的”。\n2.错误：与文意相反。\n3.错误：文中未提“别人送的”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(1)</p><p class=\"moji-trans\">为某人挑选礼物时，对方是否会满意，我们并不清楚。我们虽然不太确定，但会想象对方的情况，思来想去，然后选择礼物。</p><p class=\"moji-trans\">以前，我去一个有小孩的家庭做客时，带了几本绘本作为礼物。然而，对方说那些书家里都已经有了。送礼时经常发生这种事。但这并不一定意味着“失败”。</p><p class=\"moji-trans\">因为礼物的意义不在于物品本身，而在于想要赠送对方的那份心意。当然，有时我们也会送对方指定想要的东西。但那更像是代为付款，类似于商品交换。</p><p class=\"moji-trans\">金额多少合适、怎样的东西能让对方高兴，这些不确定的因素反而赋予了礼物特殊的意义。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">即使与对方想要的不同，但对方认真考虑后为你挑选的东西，有可能让你想起那个人，建立起与那个人的关系，并唤起情感。</p><p class=\"moji-trans\">在对方心中创造出某种看不见的东西。虽然不知道能否做到，但仍然以此为目标去赠送。这样，就有了产生超越物品本身效用之物的余地。</p><p class=\"moji-trans\">（注1）赋予：给予、提供。</p><p class=\"moji-trans\">（注2）想起：回想起来、想起来。</p><p class=\"moji-trans\">（注3）唤起：这里指“唤醒、引起（某种感觉或记忆）”。</p><p class=\"moji-trans\">（注4）余地：这里指“可能性、空间”。</p>"
+      ],
+      "sourceQuestionNumber": 57,
+      "sourceId": 104114408125073
+    },
+    {
+      "id": "imported:202607:N2:3:236621679303652:58",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者が言いたいことは何か。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(1)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t誰かへの贈り物を選ぶとき、それをほとんどに相手がほしいと思ってくれるかどうかは、はっきりしません。ぼくらは、よくわからないなりに相手のことを想像し、思いをめぐらせて、贈り物を選びます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以前、小さなお子さんのいる家庭を訪ねたとき、絵本を三冊ほどプレゼントとしてもっていったことがあります。ところが、その人は、どの本もすでにお持ちでした。贈り物には<u>そんなこと</u>がよく起こるのです。でもそれはかならずしも「失敗」とはいえません。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t贈り物の意義は、モノではなく、贈り物を渡そうとした思いのほうにあるからです。もちろん、相手がほしいと指定する物を贈ることもあります。それは、どちらかといえば代わりに支払いをする、といった意味になって、商品の交換に似てきます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tどのくらいの金額のものが適切なのか、どんなものだったら喜んでくれるのか、不確定なままであることが、贈り物に特別の意味を付与して(　注1　)いる面があるのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tたとえ欲しかったものとは違っていても、相手が自分のことをじっくり考えて選んでくれたものには、相手を想起させ(　注2　)、その人との関係をつくりだし、感情を喚起する(　注3　)可能性があります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t相手のなかに目に見えない何かを生み出すこと。それができるかどうかわからないまま、でもそれを目指して贈ること。そこに、モノの効用以上の何かが生じる余地(　注4　)が生まれます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)付与する：与える</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)想起する：思い出す</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)喚起する：ここでは、呼び起こす</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)余地：ここでは、可能性</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "どんなものでも相手のことを考えて選んだ贈り物は、相手の心を動かせる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "贈り物の金額によっても、相手のことをどのくらい思っているかが示せる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "相手の心に残る贈り物をすれば、よい関係がつくりだせる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "相手が欲しいものを贈れば、どんなものでも強い印象が与えられる。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "文章最后说“即使和想要的东西不同，对方认真思考后选的东西，能唤起感情、建立关系”，即“用心选的礼物能打动人心”。选项1正确。\n2.错误：文章说金额不确定反而有意义。\n3.错误：不是“让对方记住”的礼物。\n4.错误：文章说指定想要的礼物更像是“代为付款”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(1)</p><p class=\"moji-trans\">为某人挑选礼物时，对方是否会满意，我们并不清楚。我们虽然不太确定，但会想象对方的情况，思来想去，然后选择礼物。</p><p class=\"moji-trans\">以前，我去一个有小孩的家庭做客时，带了几本绘本作为礼物。然而，对方说那些书家里都已经有了。送礼时经常发生这种事。但这并不一定意味着“失败”。</p><p class=\"moji-trans\">因为礼物的意义不在于物品本身，而在于想要赠送对方的那份心意。当然，有时我们也会送对方指定想要的东西。但那更像是代为付款，类似于商品交换。</p><p class=\"moji-trans\">金额多少合适、怎样的东西能让对方高兴，这些不确定的因素反而赋予了礼物特殊的意义。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">即使与对方想要的不同，但对方认真考虑后为你挑选的东西，有可能让你想起那个人，建立起与那个人的关系，并唤起情感。</p><p class=\"moji-trans\">在对方心中创造出某种看不见的东西。虽然不知道能否做到，但仍然以此为目标去赠送。这样，就有了产生超越物品本身效用之物的余地。</p><p class=\"moji-trans\">（注1）赋予：给予、提供。</p><p class=\"moji-trans\">（注2）想起：回想起来、想起来。</p><p class=\"moji-trans\">（注3）唤起：这里指“唤醒、引起（某种感觉或记忆）”。</p><p class=\"moji-trans\">（注4）余地：这里指“可能性、空间”。</p>"
+      ],
+      "sourceQuestionNumber": 58,
+      "sourceId": 236621679303652
+    },
+    {
+      "id": "imported:202607:N2:3:140638075269166:59",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "地球全体に棲んでいるクモについて、筆者が述べていることに合っているのはどれか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(2)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t地球全体に棲んでいるクモを全部集めて体重計に乗せてやれば、目盛り(　注1　)はおおよそ2500万トンほどのところをさすことでしょう。地球に棲む、人と家畜(　注2　)を除いたすべての野生ほ乳動物(　注3　)の全体重が4700万トンほどですから、クモはその約半分に相当するほどたくさんいるのです。またこれは、すべての鳥の体重2700万トンとほぼ同じです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tクモが一番たくさん棲んでいるのは森林で、草原や灌木林(　注4　)にはその半分ほどの密度で、農地や沙漠地帯にも1桁少ないとはいえ全体の3パーセントほどが暮らしています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tこれだけの(　注5　)クモがエサを必要とします。その量を1年間積み上げていくと、その総量は莫大で、クモは世界中で4億トンから8億トンのエサを食べていると見積もりられています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t実際は、クモが食べているのはほとんどが昆虫(　注6　)です。昆虫の量は全体で13億トンと見積もられているので、その3割から6割がクモによって食べられていることになります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tということはつまり、もしもクモがいなくなれば、捕食者(　注7　)から自由になった昆虫が大幅に数を増やすことでしょう。その多くは植物を食べます。ですから、森林や草原では緑が失われ、農地では収穫できる作物の量が減るかもしれません。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t実際、農地では、クモがたくさんいると、農作物をエサとする昆虫が数を増やすスピードを抑えることができます。このおかげで収穫量を高く保つことができるのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)目盛り：ここでは、重さの数値</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)家畜：人間が生活に利用するために飼う動物</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)野生ほ乳動物：自然の中で生きている乳で子供を育てる動物</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)灌木林：ここでは、低い木の林</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)これだけの：こんなに多くの</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)昆虫：ここでは、クモ以外の虫</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)捕食者：ここでは、食べようと襲ってくる敵</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "体重の合計がすべての人と家畜の体重の合計の約半分に相当するほど、数が多い。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "非常に数が多く、体重の合計はすべての鳥の体重の合計と同じくらいである。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "森林に棲むものの数が最も多く、全体の半分を占める。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "森林より、草原や低い木の林に棲む密度のほうが高い。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "第一段说“所有蜘蛛的总重量约 2500 万吨, 与所有鸟类的总重量 2700 万吨几乎相同”。选项 2 正确。\n1.错误：是与“野生哺乳动物”比较，不是“人和家畜”。\n3.错误：文中只说森林最多，但未说占一半。\n4.错误：森林密度最高，草原和灌木林是其一半。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(2)</p><p class=\"moji-trans\">如果把地球上所有的蜘蛛都收集起来放到体重秤上，指针大概会指向约2500万吨。地球上除人和家畜之外的所有野生哺乳动物的总重量约为4700万吨，所以蜘蛛的数量相当于其一半左右。另外，这也与所有鸟类的总重量2700万吨几乎相同。</p><p class=\"moji-trans\">蜘蛛数量最多的地方是森林，草原和灌木林的密度约为森林的一半，农地和沙漠地带虽然少一个数量级，但也有约  的蜘蛛生活在那里。</p><p class=\"moji-trans\">这么多的蜘蛛需要捕食。把这些捕食量累加一年，总量相当庞大，据估算蜘蛛每年在全球吃掉的猎物约为4亿到8亿吨。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">实际上，蜘蛛吃的几乎全是昆虫。据估算昆虫总量约为13亿吨，所以其中三到六成是被蜘蛛吃掉的。</p><p class=\"moji-trans\">也就是说，如果蜘蛛消失了，不受天敌制约的昆虫数量将会大幅增加。其中多数昆虫以植物为食，所以森林和草原可能会失去绿色，农田里可收获的作物量也可能减少。</p><p class=\"moji-trans\">实际上，在农田里，蜘蛛数量多的话，可以抑制以农作物为食的昆虫的繁殖速度。正因如此，才能维持较高的收成。</p><p class=\"moji-trans\">(注1)目盛り：此处指重量数值</p><p class=\"moji-trans\">(注2)家畜：为供人类生活利用而饲养的动物</p><p class=\"moji-trans\">(注3)野生は乳动物：生活在自然界中、通过哺乳养育幼崽的动物</p><p class=\"moji-trans\">(注4)灌木林：此处指低矮树木构成的树林</p><p class=\"moji-trans\">(注5)これだけの：如此多的</p><p class=\"moji-trans\">(注6)昆虫：此处指蜘蛛以外的虫类</p><p class=\"moji-trans\">(注7)捕食者：此处指为捕食而袭来的敌人</p>"
+      ],
+      "sourceQuestionNumber": 59,
+      "sourceId": 140638075269166
+    },
+    {
+      "id": "imported:202607:N2:3:266827545643135:60",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者によると、クモがいなくなるとどのような影響があるか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(2)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t地球全体に棲んでいるクモを全部集めて体重計に乗せてやれば、目盛り(　注1　)はおおよそ2500万トンほどのところをさすことでしょう。地球に棲む、人と家畜(　注2　)を除いたすべての野生ほ乳動物(　注3　)の全体重が4700万トンほどですから、クモはその約半分に相当するほどたくさんいるのです。またこれは、すべての鳥の体重2700万トンとほぼ同じです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tクモが一番たくさん棲んでいるのは森林で、草原や灌木林(　注4　)にはその半分ほどの密度で、農地や沙漠地帯にも1桁少ないとはいえ全体の3パーセントほどが暮らしています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tこれだけの(　注5　)クモがエサを必要とします。その量を1年間積み上げていくと、その総量は莫大で、クモは世界中で4億トンから8億トンのエサを食べていると見積もりられています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t実際は、クモが食べているのはほとんどが昆虫(　注6　)です。昆虫の量は全体で13億トンと見積もられているので、その3割から6割がクモによって食べられていることになります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tということはつまり、もしもクモがいなくなれば、捕食者(　注7　)から自由になった昆虫が大幅に数を増やすことでしょう。その多くは植物を食べます。ですから、森林や草原では緑が失われ、農地では収穫できる作物の量が減るかもしれません。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t実際、農地では、クモがたくさんいると、農作物をエサとする昆虫が数を増やすスピードを抑えることができます。このおかげで収穫量を高く保つことができるのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)目盛り：ここでは、重さの数値</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)家畜：人間が生活に利用するために飼う動物</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)野生ほ乳動物：自然の中で生きている乳で子供を育てる動物</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)灌木林：ここでは、低い木の林</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)これだけの：こんなに多くの</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)昆虫：ここでは、クモ以外の虫</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)捕食者：ここでは、食べようと襲ってくる敵</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "クモが食べていた農作物を昆虫が食べることができ、昆虫の数が増える。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "クモを食べていた昆虫が農作物を食べるようになり、収穫量が減る。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "クモに食べられていた昆虫が農作物の成長を助けて、収穫量が増える。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "クモに食べられていた昆虫が農作物を食べるので、収穫量が減る。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "最后一段说“如果蜘蛛消失，昆虫会增加  植物被吃  森林绿地减少，农田收获量减\n少”。故选项4“被蜘蛛吃掉的昆虫会吃农作物，所以收获量减少”正确。\n1.错误：昆虫本来就吃农作物。\n2.错误：不是“吃蜘蛛的昆虫”。\n3.错误：昆虫不会帮助农作物生长。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(2)</p><p class=\"moji-trans\">如果把地球上所有的蜘蛛都收集起来放到体重秤上，指针大概会指向约2500万吨。地球上除人和家畜之外的所有野生哺乳动物的总重量约为4700万吨，所以蜘蛛的数量相当于其一半左右。另外，这也与所有鸟类的总重量2700万吨几乎相同。</p><p class=\"moji-trans\">蜘蛛数量最多的地方是森林，草原和灌木林的密度约为森林的一半，农地和沙漠地带虽然少一个数量级，但也有约  的蜘蛛生活在那里。</p><p class=\"moji-trans\">这么多的蜘蛛需要捕食。把这些捕食量累加一年，总量相当庞大，据估算蜘蛛每年在全球吃掉的猎物约为4亿到8亿吨。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">实际上，蜘蛛吃的几乎全是昆虫。据估算昆虫总量约为13亿吨，所以其中三到六成是被蜘蛛吃掉的。</p><p class=\"moji-trans\">也就是说，如果蜘蛛消失了，不受天敌制约的昆虫数量将会大幅增加。其中多数昆虫以植物为食，所以森林和草原可能会失去绿色，农田里可收获的作物量也可能减少。</p><p class=\"moji-trans\">实际上，在农田里，蜘蛛数量多的话，可以抑制以农作物为食的昆虫的繁殖速度。正因如此，才能维持较高的收成。</p><p class=\"moji-trans\">(注1)目盛り：此处指重量数值</p><p class=\"moji-trans\">(注2)家畜：为供人类生活利用而饲养的动物</p><p class=\"moji-trans\">(注3)野生は乳动物：生活在自然界中、通过哺乳养育幼崽的动物</p><p class=\"moji-trans\">(注4)灌木林：此处指低矮树木构成的树林</p><p class=\"moji-trans\">(注5)これだけの：如此多的</p><p class=\"moji-trans\">(注6)昆虫：此处指蜘蛛以外的虫类</p><p class=\"moji-trans\">(注7)捕食者：此处指为捕食而袭来的敌人</p>"
+      ],
+      "sourceQuestionNumber": 60,
+      "sourceId": 266827545643135
+    },
+    {
+      "id": "imported:202607:N2:3:68863729790283:61",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者によると、上司が部下の小さなミスをあとになって指摘すると、部下はどうなるか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(3)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、仕事で部下がミスをしたときの、上司の対応のしかたについて書かれた文章である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t小さなミスでも、その場できちんと指摘してやることが仕事の能率を高めることは、実験のうえでも確かめられています。マクファーソンという心理学者が、単純作業のミスについて調べた研究ですが、それによると、0.7秒おきに押されるキーの正誤を、結果を知らせながら行なった場合と知らせずに行なった場合とでは、知らせながらのほうが正答率の上がることが確かめられています。「即時確認」の効果ですが、この効果は、小さなミスをくり返しやすい新入社員を教育するときに有効だとされています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tそのうちに注意しておこうと考え、その場は黙って見すごし(　注1　)たりすると、のちに(　注2　)叱ったとき当人は小さなミスだから、自分のしたことを忘れています。そのうえ、なんのことをぶつぶついってるんだと反発したり、あんなことをまだ根に持って(　注3　)いたのかと思って、しつこく陰険な(　注4　)上司だというイメージを与えてしまったりすることになります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t大きなミスの場合、とりあえずは叱るのはあとまわしになります。何より、事後対策を急がなければならないからです。ミスをした当人は、もちろん叱られるまでもなく(　注5　)、ショックで打ちひしがれて(　注6　)いるはずです。だから、当人も含め、ほかの部下も督励し(　注7　)ながら、先頭に立って事に当たらなければならないのです。大切なのは、その処理が終わってから、じっくりと注意し、ミスの原因をつかむことです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t大きなミス、小さなミスには、こうした心理の違いがあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)見すごす：ここでは、そのままにする</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)のちに:あとで</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)根に持つ：ここでは、覚えている</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)陰険な：ここでは、意地悪な</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)叱られるまでもなく:叱られなくても</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)打ちひしがれる：落ち込む</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)督励する：ここでは、元気づける</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "なぜ指摘されたのかが分からず、指摘されたことを不満に思う。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "指摘されても思い出せず、ミスはしていないと主張する。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "指摘されたことに反発して反省せず、より深刻なミスをしてしまう。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "指摘されてはじめて気づき、なぜその場で指摘してくれなかったのかと思う。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "第二段说“过后批评时，当事人因为是小错已经忘了，还会觉得‘在嘀咕什么呢’而产生反感”。故选项1“不知道为什么被批评，对批评感到不满”正确。\n2.错误：是“想不起来”，但不是“主张没犯错”。\n3.错误：未提“更严重的错误”。\n4.错误：未提“为什么不当场指出”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(3)</p><p class=\"moji-trans\">以下是一篇关于工作中下属犯错时，上司应该如何应对的文章。</p><p class=\"moji-trans\">即使是小错误，当场认真指正能提高工作效率，这一点已通过实验得到证实。心理学家麦克弗森进行了一项关于简单操作错误的研究，结果显示，在每0.7秒按一次键的作业中，告知结果正误的情况与不告知的情况相比，前者正确率更高。这就是“即时确认”的效果，这种方法在培训容易反复犯小错误的新员工时很有效。</p><p class=\"moji-trans\">如果想着“回头再提醒吧”，当场默不作声放过去，事后批评时，当事人因为是小错误，已经忘了自己做过什么。而且，还会产生抵触心理，嘀咕“在说什么呢”，或者觉得“那件事你还记着呢”，这样一来，就会给对方留下一个“真是个纠缠不休、阴险的上司”的印象。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">对于大错误，批评先暂且放一放。首先，必须抓紧处理善后。犯错的当事人，不用说也知道，应该已经备受打击、垂头丧气了。所以，要鼓励当事人和其他下属，站在最前面处理事情。重要的是，处理完之后再仔细指出问题，找出错误的原因。</p><p class=\"moji-trans\">大错误和小错误，在心理上的应对是有区别的。</p><p class=\"moji-trans\">(注1)見すごす：此处指放任不管</p><p class=\"moji-trans\">(注2)のちに：之后</p><p class=\"moji-trans\">(注3)根に持つ：此处指记在心里</p><p class=\"moji-trans\">(注4)陰険な：此处指阴险刻薄</p><p class=\"moji-trans\">(注5)叱られるまでもなく：即使不被斥责</p><p class=\"moji-trans\">(注6)打ちひしがれる：消沉沮丧</p><p class=\"moji-trans\">(注7)督励する：此处指鼓励打气</p>"
+      ],
+      "sourceQuestionNumber": 61,
+      "sourceId": 68863729790283
+    },
+    {
+      "id": "imported:202607:N2:3:260742396083136:62",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "筆者によると、大きなミスをした部下に対して上司はどうすればいいか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(3)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、仕事で部下がミスをしたときの、上司の対応のしかたについて書かれた文章である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t小さなミスでも、その場できちんと指摘してやることが仕事の能率を高めることは、実験のうえでも確かめられています。マクファーソンという心理学者が、単純作業のミスについて調べた研究ですが、それによると、0.7秒おきに押されるキーの正誤を、結果を知らせながら行なった場合と知らせずに行なった場合とでは、知らせながらのほうが正答率の上がることが確かめられています。「即時確認」の効果ですが、この効果は、小さなミスをくり返しやすい新入社員を教育するときに有効だとされています。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tそのうちに注意しておこうと考え、その場は黙って見すごし(　注1　)たりすると、のちに(　注2　)叱ったとき当人は小さなミスだから、自分のしたことを忘れています。そのうえ、なんのことをぶつぶついってるんだと反発したり、あんなことをまだ根に持って(　注3　)いたのかと思って、しつこく陰険な(　注4　)上司だというイメージを与えてしまったりすることになります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t大きなミスの場合、とりあえずは叱るのはあとまわしになります。何より、事後対策を急がなければならないからです。ミスをした当人は、もちろん叱られるまでもなく(　注5　)、ショックで打ちひしがれて(　注6　)いるはずです。だから、当人も含め、ほかの部下も督励し(　注7　)ながら、先頭に立って事に当たらなければならないのです。大切なのは、その処理が終わってから、じっくりと注意し、ミスの原因をつかむことです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t大きなミス、小さなミスには、こうした心理の違いがあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)見すごす：ここでは、そのままにする</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)のちに:あとで</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)根に持つ：ここでは、覚えている</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)陰険な：ここでは、意地悪な</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)叱られるまでもなく:叱られなくても</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)打ちひしがれる：落ち込む</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)督励する：ここでは、元気づける</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "部下にミスの対処はさせずに、注意して反省させる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "部下がショックから回復するまで、注意しないようにする。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "ほかの部下も含め一緒にミスに対処してから、丁寧に注意する。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "ほかの部下も含め一緒にミスの原因を考えたうえで、責任を持って対処させる"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "第三段说“大事发生后先处理善后，处理完后‘じっくりと注意し’”，故选项3“和其他部下一起处理完后，仔细批评”正确。\n1.错误：不是“不让部下处理”。\n2.错误：不是“等到恢复”。\n4.错误：是上司站在前面处理，不是“让部下负责”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(3)</p><p class=\"moji-trans\">以下是一篇关于工作中下属犯错时，上司应该如何应对的文章。</p><p class=\"moji-trans\">即使是小错误，当场认真指正能提高工作效率，这一点已通过实验得到证实。心理学家麦克弗森进行了一项关于简单操作错误的研究，结果显示，在每0.7秒按一次键的作业中，告知结果正误的情况与不告知的情况相比，前者正确率更高。这就是“即时确认”的效果，这种方法在培训容易反复犯小错误的新员工时很有效。</p><p class=\"moji-trans\">如果想着“回头再提醒吧”，当场默不作声放过去，事后批评时，当事人因为是小错误，已经忘了自己做过什么。而且，还会产生抵触心理，嘀咕“在说什么呢”，或者觉得“那件事你还记着呢”，这样一来，就会给对方留下一个“真是个纠缠不休、阴险的上司”的印象。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">对于大错误，批评先暂且放一放。首先，必须抓紧处理善后。犯错的当事人，不用说也知道，应该已经备受打击、垂头丧气了。所以，要鼓励当事人和其他下属，站在最前面处理事情。重要的是，处理完之后再仔细指出问题，找出错误的原因。</p><p class=\"moji-trans\">大错误和小错误，在心理上的应对是有区别的。</p><p class=\"moji-trans\">(注1)見すごす：此处指放任不管</p><p class=\"moji-trans\">(注2)のちに：之后</p><p class=\"moji-trans\">(注3)根に持つ：此处指记在心里</p><p class=\"moji-trans\">(注4)陰険な：此处指阴险刻薄</p><p class=\"moji-trans\">(注5)叱られるまでもなく：即使不被斥责</p><p class=\"moji-trans\">(注6)打ちひしがれる：消沉沮丧</p><p class=\"moji-trans\">(注7)督励する：此处指鼓励打气</p>"
+      ],
+      "sourceQuestionNumber": 62,
+      "sourceId": 260742396083136
+    },
+    {
+      "id": "imported:202607:N2:3:90695953190117:63",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "テレビの問題点について、筆者はどのように述べているか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(4)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、孤独に対処する手段について書かれた文章である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t小説を読む物語の世界に没頭する(　注1　)ことができるし、政治や経済、哲学などの思想書を読めば著者への意見に賛成したり反対したりして、いろいろと自分の頭で考えることができる。脳に刺激が入り、それによっていろいろな思考がめぐっているということは、脳は孤独を感じていないってことだ。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t「だったらテレビでもいいじゃないか」って思うかもしれないけれど、実はテレビは読書ほど孤独を癒して(　注2　)はくれない。なぜかというと、テレビは一方的な情報の押し付けであって、コミュニケーションにはならないのだ。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t映像の力というのはすごくて、みている人間の頭にいろいろな情報が入ってくる。たとえばバラエティ番組(　注3　)などでも、出演している人たちの表情や喋り方、そこでどんなムードで話をしているのかなどといったたくさんの情報が同時に頭に飛び込んでくる。しかも、印象的な発言はテロップ(　注4　)などで大きく表示される。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tしかし、その情報について考えをめぐらせようとしても、映像がどんどん流れていって次の展開になるので、立ち止まって思考をめぐらせている暇がない。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t一人暮らしの高齢者が朝から晩までテレビをつけっぱなしにしているということは珍しくないが、あまり孤独は癒されない。常に人の話し声が聞こえてくるので、寂しさを紛らわす(　注5　)ことができる部分もあるかもしれないけれど、テレビを消したら瞬間に、急に孤独に襲われてしまうということになりがちだ。それならば、脳内コミュニケーションができる読書のほうが<u>おすすめだ</u>。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)没頭する:夢中になる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)～を癒す：ここでは、～の気持ちを軽くする</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)バラエティ番組：ここでは、娯楽のための番組</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)テロップ:ここでは、テレビ画面に映し出される文</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)紛らわす：ここでは、忘れる</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "映像の印象が強すぎて、何かを自分で考えようという気が起こらない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "映像の展開が早すぎて、印象的なことしか頭に残らない。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "多量の情報を次々与えられるので、それについて自分で考える時間がない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "いろいろな情報が与えられるので、どれに価値があるのか分からない。"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "文章说电视“信息不断涌入，想要思考时画面已经进行到下一幕，无法停下来思考”。故选项3“被不断给予大量信息，没有自己思考的时间”正确。\n1.错误：不是“不想思考”。\n2.错误：不是“只有印象深刻的留在脑中”。\n4.错误：不是“不知道哪个有价值”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(4)</p><p class=\"moji-trans\">以下是一篇关于应对孤独的方法的文章。</p><p class=\"moji-trans\">读小说可以沉浸在故事的世界里，读政治、经济、哲学等思想类书籍，可以对作者的观点表示赞同或反对，自己进行各种思考。大脑受到刺激，各种思考随之盘旋，这就意味着大脑几乎不会感到孤独。</p><p class=\"moji-trans\">也许你会想“那看电视不也行吗”，但实际上电视并不像读书那样能缓解孤独。因为电视是单向的信息灌输，并不能形成交流。</p><p class=\"moji-trans\">影像的力量很强，观众脑中会涌入各种各样的信息。比如综艺节目，出演者的表情、说话方式、现场气氛等多种信息同时涌入脑中。而且，令人印象深刻的发言会以字幕等形式放大显示。</p><p class=\"moji-trans\">然而，即使你想针对那些信息进行思考，影像会不断推进到下一个场面，你根本没有时间停下来思考。</p><p class=\"moji-trans\">（中略）</p><p class=\"moji-trans\">独居老人从早到晚一直开着电视并不少见，但孤独感并不能得到很好的缓解。虽然一直能听到人声，或许在一定程度上能排遣寂寞，但一关掉电视，瞬间又会被孤独感侵袭。 既然如此，不如选择能在脑内进行交流的读书。</p><p class=\"moji-trans\">（注1）没头于：沉浸其中、专心致志。</p><p class=\"moji-trans\">（注2）治愈～：这里指“缓解～的心情、减轻～的心理负担”。</p><p class=\"moji-trans\">（注3）综艺节目：这里指“以娱乐为目的的节目”。</p><p class=\"moji-trans\">（注4）字幕：这里指“显示在电视画面上的文字”。</p><p class=\"moji-trans\">（注5）排解、转移：这里指“忘却、暂时忘掉”。</p>"
+      ],
+      "sourceQuestionNumber": 63,
+      "sourceId": 90695953190117
+    },
+    {
+      "id": "imported:202607:N2:3:41979743020513:64",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<u>おすすめだ</u>とあるが、なぜか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(4)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t以下は、孤独に対処する手段について書かれた文章である。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t小説を読む物語の世界に没頭する(　注1　)ことができるし、政治や経済、哲学などの思想書を読めば著者への意見に賛成したり反対したりして、いろいろと自分の頭で考えることができる。脳に刺激が入り、それによっていろいろな思考がめぐっているということは、脳は孤独を感じていないってことだ。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t「だったらテレビでもいいじゃないか」って思うかもしれないけれど、実はテレビは読書ほど孤独を癒して(　注2　)はくれない。なぜかというと、テレビは一方的な情報の押し付けであって、コミュニケーションにはならないのだ。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t映像の力というのはすごくて、みている人間の頭にいろいろな情報が入ってくる。たとえばバラエティ番組(　注3　)などでも、出演している人たちの表情や喋り方、そこでどんなムードで話をしているのかなどといったたくさんの情報が同時に頭に飛び込んでくる。しかも、印象的な発言はテロップ(　注4　)などで大きく表示される。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tしかし、その情報について考えをめぐらせようとしても、映像がどんどん流れていって次の展開になるので、立ち止まって思考をめぐらせている暇がない。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t一人暮らしの高齢者が朝から晩までテレビをつけっぱなしにしているということは珍しくないが、あまり孤独は癒されない。常に人の話し声が聞こえてくるので、寂しさを紛らわす(　注5　)ことができる部分もあるかもしれないけれど、テレビを消したら瞬間に、急に孤独に襲われてしまうということになりがちだ。それならば、脳内コミュニケーションができる読書のほうが<u>おすすめだ</u>。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)没頭する:夢中になる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)～を癒す：ここでは、～の気持ちを軽くする</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)バラエティ番組：ここでは、娯楽のための番組</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)テロップ:ここでは、テレビ画面に映し出される文</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)紛らわす：ここでは、忘れる</p>",
+      "instruction": "問題11 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "さまざまな情報が入り、孤独から逃げられるから"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "刺激を受け思考することになり、孤独を感じにくくなるから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "筆者と同じ気持ちだと分かり、孤独が慰められるから"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "好きなときに自分のペースで読め、孤独を感じないから"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "文章说读书能“让脑内产生刺激、各种思考循环，从而不感到孤独”。故选项2“受到刺激进行思考，不容易感到孤独”正确。\n1.错误：不是“逃离孤独”。\n3.错误：不是“与作者心情相同”。\n4.错误：文中未提“按自己节奏读”",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">(4)</p><p class=\"moji-trans\">以下是一篇关于应对孤独的方法的文章。</p><p class=\"moji-trans\">读小说可以沉浸在故事的世界里，读政治、经济、哲学等思想类书籍，可以对作者的观点表示赞同或反对，自己进行各种思考。大脑受到刺激，各种思考随之盘旋，这就意味着大脑几乎不会感到孤独。</p><p class=\"moji-trans\">也许你会想“那看电视不也行吗”，但实际上电视并不像读书那样能缓解孤独。因为电视是单向的信息灌输，并不能形成交流。</p><p class=\"moji-trans\">影像的力量很强，观众脑中会涌入各种各样的信息。比如综艺节目，出演者的表情、说话方式、现场气氛等多种信息同时涌入脑中。而且，令人印象深刻的发言会以字幕等形式放大显示。</p><p class=\"moji-trans\">然而，即使你想针对那些信息进行思考，影像会不断推进到下一个场面，你根本没有时间停下来思考。</p><p class=\"moji-trans\">（中略）</p><p class=\"moji-trans\">独居老人从早到晚一直开着电视并不少见，但孤独感并不能得到很好的缓解。虽然一直能听到人声，或许在一定程度上能排遣寂寞，但一关掉电视，瞬间又会被孤独感侵袭。 既然如此，不如选择能在脑内进行交流的读书。</p><p class=\"moji-trans\">（注1）没头于：沉浸其中、专心致志。</p><p class=\"moji-trans\">（注2）治愈～：这里指“缓解～的心情、减轻～的心理负担”。</p><p class=\"moji-trans\">（注3）综艺节目：这里指“以娱乐为目的的节目”。</p><p class=\"moji-trans\">（注4）字幕：这里指“显示在电视画面上的文字”。</p><p class=\"moji-trans\">（注5）排解、转移：这里指“忘却、暂时忘掉”。</p>"
+      ],
+      "sourceQuestionNumber": 64,
+      "sourceId": 41979743020513
+    },
+    {
+      "id": "imported:202607:N2:3:62013979844806:65",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "勉強を習慣にするための方法について、AとBはどのように述べているか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tA</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t資格試験のための勉強を習慣にするのは難しいと考えている人が多い。確かに、ただ時間が空いているときに勉強しようと思っていてもうまくいかないことが多い。勉強を習慣にするには、いつ、どこで勉強するのかを決めておくことが効果的だ。さらに言うと、日常的な行為とセットにして行うことにするといい。例えば、夕食後すぐに居間で勉強する、出勤前にカフェで勉強する、などだ。毎回時間や場所を決めなくていいので勉強に取りかかりやすくなる。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t仕事で疲れているときなど、一時的にやる気が出ないこともある。しかし、勉強が習慣になれば、そんなときも勉強を無理なく進めていくことができる。そして、勉強を続けていることが自信にもなり、よい結果を出せる可能性も高まるだろう。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tB</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t資格試験のための勉強は習慣にするのがよい。勉強はつらくて大変だと感じがちだが、習慣として行えるようになれば、勉強が苦痛だと感じなくなる。また、やる気がわいてこない日が時々あっても、ふだん通り勉強を行うことができる。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t勉強を習慣にする方法としてお勧めしたいのは、一日の目標を小さくすることだ。毎日5分だけ参考書を読む、毎日1ページだけ問題集をやる、など少しの努力でできることにするのだ。そうすれば、負担を感じずに勉強が始められるので勉強が続けやすくなる。勉強する量が少なくて不安になるかもしれないが、勉強の習慣がついてきたら、時間の長さや取り組む内容を少しずつ変えていけばいい。とにかく毎日勉強することが大切だ。</p>",
+      "instruction": "問題12 次のAとBの意見文を読んで、後の問いに対する答えとして最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "AもBも、毎日決まった時間に決まった行動をしたほうがいいと述べている。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "AもBも、毎日勉強する量を一定にしたほうがいいと述べている。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "Aはほかの行為とセットで行ったほうがいいと述べ、Bは時間の長さや取り組む内容を固定したほうがいいと述べている。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "Aは勉強する時間と場所を決めたほうがいいと述べ、Bは簡単に達成できる目標を立てたほうがいいと述べている。"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "A说“决定何时、何地学习”，B说“设定小目标（每天5分钟/1页）”。故选项4正确。\n1.错误：A提到时间地点，B未提。\n2.错误：B提到少量，A未提量。\n3.错误：A 说“和其他行为组合”，B 说“设定小目标”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">A</p><p class=\"moji-trans\">很多人认为把考证学习变成习惯是很难的。确实，只是想着“有空的时候学”往往行不通。要把学习变成习惯，决定好“何时、何地”学习是有效的。进一步说，把它和日常行为组合在一起会更好。例如，晚饭后马上在客厅学习，上班前去咖啡店学习等。这样就不需要每次决定时间和地点，更容易开始学习。</p><p class=\"moji-trans\">工作累了的时候等，有时会暂时没有干劲。但是，一旦学习成为习惯，那种时候也能无压力地继续学下去。而且，持续学习本身会带来自信，也更有可能取得好成绩。</p><p class=\"moji-trans\">B</p><p class=\"moji-trans\">考证学习最好养成习惯。学习往往让人觉得辛苦，但一旦能作为习惯来进行，就不会觉得痛苦了。而且，即使偶尔有提不起干劲的日子，也能像平时一样学习。</p><p class=\"moji-trans\">养成学习习惯的方法，我建议把一天的目标设小一点。比如每天只读5分钟参考书，每天只做1页习题集，设定为稍微努力就能做到的事情。这样一来，不会感到负担，容易开始，也容易坚持。也许你会因为学习量少而感到不安，但等养成学习习惯之后，再逐渐改变时间和内容就可以了。总之，每天坚持学习才是最重要的。</p>"
+      ],
+      "sourceQuestionNumber": 65,
+      "sourceId": 62013979844806
+    },
+    {
+      "id": "imported:202607:N2:3:199622483053241:66",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "勉強を習慣にすることの利点について、AとBが共通して述べていることは何か。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tA</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t資格試験のための勉強を習慣にするのは難しいと考えている人が多い。確かに、ただ時間が空いているときに勉強しようと思っていてもうまくいかないことが多い。勉強を習慣にするには、いつ、どこで勉強するのかを決めておくことが効果的だ。さらに言うと、日常的な行為とセットにして行うことにするといい。例えば、夕食後すぐに居間で勉強する、出勤前にカフェで勉強する、などだ。毎回時間や場所を決めなくていいので勉強に取りかかりやすくなる。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t仕事で疲れているときなど、一時的にやる気が出ないこともある。しかし、勉強が習慣になれば、そんなときも勉強を無理なく進めていくことができる。そして、勉強を続けていることが自信にもなり、よい結果を出せる可能性も高まるだろう。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tB</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t資格試験のための勉強は習慣にするのがよい。勉強はつらくて大変だと感じがちだが、習慣として行えるようになれば、勉強が苦痛だと感じなくなる。また、やる気がわいてこない日が時々あっても、ふだん通り勉強を行うことができる。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t勉強を習慣にする方法としてお勧めしたいのは、一日の目標を小さくすることだ。毎日5分だけ参考書を読む、毎日1ページだけ問題集をやる、など少しの努力でできることにするのだ。そうすれば、負担を感じずに勉強が始められるので勉強が続けやすくなる。勉強する量が少なくて不安になるかもしれないが、勉強の習慣がついてきたら、時間の長さや取り組む内容を少しずつ変えていけばいい。とにかく毎日勉強することが大切だ。</p>",
+      "instruction": "問題12 次のAとBの意見文を読んで、後の問いに対する答えとして最もよいものを、１・２・３・４から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "やる気が出なくても取り組めるようになる。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "自分に自信が持てるようになる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "勉強する量が少なくても成果が出やすくなる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "勉強に対して不安を感じなくなる。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "A 说“习惯化后即使没干劲也能无压力地推进”，B 说“习惯后即使没干劲也能像平时一样学习”。共通点是“即使没干劲也能坚持”。选项 1 正确。\n2.错误：只有A提到“自信”。\n3.错误：只有 B 提到“量少”。\n4.错误：只有 B 提到“不安”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">A</p><p class=\"moji-trans\">很多人认为把考证学习变成习惯是很难的。确实，只是想着“有空的时候学”往往行不通。要把学习变成习惯，决定好“何时、何地”学习是有效的。进一步说，把它和日常行为组合在一起会更好。例如，晚饭后马上在客厅学习，上班前去咖啡店学习等。这样就不需要每次决定时间和地点，更容易开始学习。</p><p class=\"moji-trans\">工作累了的时候等，有时会暂时没有干劲。但是，一旦学习成为习惯，那种时候也能无压力地继续学下去。而且，持续学习本身会带来自信，也更有可能取得好成绩。</p><p class=\"moji-trans\">B</p><p class=\"moji-trans\">考证学习最好养成习惯。学习往往让人觉得辛苦，但一旦能作为习惯来进行，就不会觉得痛苦了。而且，即使偶尔有提不起干劲的日子，也能像平时一样学习。</p><p class=\"moji-trans\">养成学习习惯的方法，我建议把一天的目标设小一点。比如每天只读5分钟参考书，每天只做1页习题集，设定为稍微努力就能做到的事情。这样一来，不会感到负担，容易开始，也容易坚持。也许你会因为学习量少而感到不安，但等养成学习习惯之后，再逐渐改变时间和内容就可以了。总之，每天坚持学习才是最重要的。</p>"
+      ],
+      "sourceQuestionNumber": 66,
+      "sourceId": 199622483053241
+    },
+    {
+      "id": "imported:202607:N2:3:191129051040602:67",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "目標について、筆者はどのように述べているか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標を持つことは大事ですが、しかし達成されたからといって人生が終わるわけではない。生きていく過程の一つということで、目標は一つの道しるべ(注1)にすぎないのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t人間はいつか死ぬということは、誰もが知っていることです。まさか自分は300年生きるだろうと思っている人は一人もいないでしょうし、大体の平均寿命である80歳前後とか、そのあたりを人生の最終ゴール地点において生きているのではないでしょうか。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tその間、なんの道しるべもなく歩くには長い道のり(注2)なわけで、方向を見失わない(注3)ためにも目標という存在が必要なのです</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t<u>そして目標は自分の前に置くのではなく、横に置くこと</u>が肝心(注4)です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標というと、はるか(注5)先に置いて追いかけていく感覚でとらえる人も多いのですが、目標を遠くに置きすぎると、ただの「期待」で終わってしまう。期待がいっしょに、「妄想」(注6)になってしまう。それではせっかくの道しるべが、逆に道に迷う原因になってしまいます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tだから目標はあまり遠くに持たず、いつも両脇に置いているくらいの感覚がいいでしょう。ふと自分の横を見ると目標がある、それくらいの感覚がいいのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t両脇に目標があれば、いつも目標と一緒にいることになりますから、常に目標の中で生きていることになります。必要以上に重荷になることもないし、とらわれ(注7)すぎることもない。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私の場合は先どころか、目標を後ろに置きたくなることもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t後ろというのは自分が歩いてきた過去であり、振り返ってみるということです。そしてこのどんどん便利になっていく時代の中で、あえてアナログに生きるということでもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tときどき自分の来た道を振り返って確かめるということは大事なことですし、あまりに世間のみなさんが「先へ、先へ」となっているのを見ると、あえて「私は後ろに行ってみようかな」という気になってしまうのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t今、時代はちょっと恐ろしいほどに、みんなが「便利」という方向に向かっている。だからこそ、なるべく前に行きたくないというのが気分としてあるのでしょう。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tアナログなものが私を「危ない、危ない」と、呼び止めるのです。それが「後ろへ来いよ、来いよ」と言ってるような気がするのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)道しるべ：ここでは、方向を示す標識</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)道のり:距離</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)～を見失う：～が分からなくなる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)肝心：大事</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)はるか:ここでは、ずっと</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)妄想：現実的ではない想像</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)とらわれる：ここでは、縛られる</p>",
+      "instruction": "問題13 次の文章を読んで、後の問いに対する答えとして最もよいものを、1～4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "一つ達成したあとで、次の目標を持ったほうがいい。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "生きていく過程で、進む道に迷わないように助けてくれる。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "人生の最終ゴール地点で、その意義が分かる。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "人生に迷わないように、自分が達成できるものにすべきだ。"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "文章说目标是“道しるべ”（路标），防止在漫长人生中迷失方向。选项2正确。\n1.错误：未提“达成后要设新目标”。\n3.错误：未提“最终到达时才明白意义”。\n4.错误：未提“应设定能达成的目标”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">拥有目标固然重要，但达成目标并不意味着人生就结束了。它只是人生过程中的一个阶段，目标不过是一个路标而已。</p><p class=\"moji-trans\">人终有一死，这是谁都知道的。应该没有人认为自己能活300岁吧，大家都是把大约80岁左右的平均寿命作为人生的最终终点来生活的吧。</p><p class=\"moji-trans\">在这期间，没有路标要走的路程很长，为了不迷失方向，目标的存在是必要的。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">而且，重要的是不要把目标放在自己前方，而是放在旁边。</p><p class=\"moji-trans\">说到目标，很多人会理解为放在远方去追赶的感觉。但目标放得太远，最终只会变成“期待”，甚至变成“妄想”。这样一来，好不容易的路标反而会成为迷路的原因。</p><p class=\"moji-trans\">所以，目标不要放得太远，最好保持在总是在两旁的感觉。偶尔转头一看，目标就在那里，那种感觉就很好。</p><p class=\"moji-trans\">如果目标在两侧，就等于一直和目标在一起，也就是一直活在其中。不会成为不必要的负担，也不会被过度束缚。</p><p class=\"moji-trans\">就我而言，我甚至想把目标放在后面，而不是前面。</p><p class=\"moji-trans\">“后面”是指自己走过的过去，也就是回头审视。而且，在这个越来越便利的时代，这也意味着刻意选择“模拟式”地生活。</p><p class=\"moji-trans\">时常回头确认自己走过的路是很重要的。看到社会上大家总是“向前、向前”的时候，我就会产生一种“那我去后面看看吧”的心情。</p><p class=\"moji-trans\">现在，时代几乎令人可怕地，所有人都在朝着“便利”的方向前进。正因为如此，我内心才有一种尽量不想往前走的感觉吧。</p><p class=\"moji-trans\">模拟式的东西在喊我“危险啊，危险”，仿佛在说“到后面来吧，来吧”。</p><p class=\"moji-trans\">(注1)道しるべ：此处指指示方向的标识</p><p class=\"moji-trans\">(注2)道のり：距离</p><p class=\"moji-trans\">(注3)～を見失う：变得不明白～</p><p class=\"moji-trans\">(注4)肝心：重要</p><p class=\"moji-trans\">(注5)はるか：此处指“远远地”</p><p class=\"moji-trans\">(注6)妄想：不切实际的想象</p><p class=\"moji-trans\">(注7)とらわれる：此处指被束缚</p>"
+      ],
+      "sourceQuestionNumber": 67,
+      "sourceId": 191129051040602
+    },
+    {
+      "id": "imported:202607:N2:3:132168276803365:68",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "<u>自分の前に置くのではなく、横に置く</u>とあるが、横に置くのがいいのはなぜか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標を持つことは大事ですが、しかし達成されたからといって人生が終わるわけではない。生きていく過程の一つということで、目標は一つの道しるべ(注1)にすぎないのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t人間はいつか死ぬということは、誰もが知っていることです。まさか自分は300年生きるだろうと思っている人は一人もいないでしょうし、大体の平均寿命である80歳前後とか、そのあたりを人生の最終ゴール地点において生きているのではないでしょうか。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tその間、なんの道しるべもなく歩くには長い道のり(注2)なわけで、方向を見失わない(注3)ためにも目標という存在が必要なのです</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t<u>そして目標は自分の前に置くのではなく、横に置くこと</u>が肝心(注4)です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標というと、はるか(注5)先に置いて追いかけていく感覚でとらえる人も多いのですが、目標を遠くに置きすぎると、ただの「期待」で終わってしまう。期待がいっしょに、「妄想」(注6)になってしまう。それではせっかくの道しるべが、逆に道に迷う原因になってしまいます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tだから目標はあまり遠くに持たず、いつも両脇に置いているくらいの感覚がいいでしょう。ふと自分の横を見ると目標がある、それくらいの感覚がいいのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t両脇に目標があれば、いつも目標と一緒にいることになりますから、常に目標の中で生きていることになります。必要以上に重荷になることもないし、とらわれ(注7)すぎることもない。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私の場合は先どころか、目標を後ろに置きたくなることもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t後ろというのは自分が歩いてきた過去であり、振り返ってみるということです。そしてこのどんどん便利になっていく時代の中で、あえてアナログに生きるということでもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tときどき自分の来た道を振り返って確かめるということは大事なことですし、あまりに世間のみなさんが「先へ、先へ」となっているのを見ると、あえて「私は後ろに行ってみようかな」という気になってしまうのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t今、時代はちょっと恐ろしいほどに、みんなが「便利」という方向に向かっている。だからこそ、なるべく前に行きたくないというのが気分としてあるのでしょう。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tアナログなものが私を「危ない、危ない」と、呼び止めるのです。それが「後ろへ来いよ、来いよ」と言ってるような気がするのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)道しるべ：ここでは、方向を示す標識</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)道のり:距離</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)～を見失う：～が分からなくなる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)肝心：大事</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)はるか:ここでは、ずっと</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)妄想：現実的ではない想像</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)とらわれる：ここでは、縛られる</p>",
+      "instruction": "問題13 次の文章を読んで、後の問いに対する答えとして最もよいものを、1～4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "目標が達成できたかどうかがすぐに分かるから"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "目標に縛られすぎずに、意識し続けることもできるから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "目標をいつも目にすることで、達成できると思えるから"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "目標を重荷に感じたら、いつでも変えられるから"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "文章说目标放太远会变成“期待”或“妄想”。放在两侧则“不会成为过重负担，也不会被束缚，但能一直与目标同在”。故选项2“不会被目标束缚，但能持续意识到”正确。\n1.错误：文中并未提及能马上知道目标是否达成。\n3.错误：文中强调的是“意识到目标存在”，而非“觉得能达成”。\n4.错误：文中未说“随时可以改变目标”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">拥有目标固然重要，但达成目标并不意味着人生就结束了。它只是人生过程中的一个阶段，目标不过是一个路标而已。</p><p class=\"moji-trans\">人终有一死，这是谁都知道的。应该没有人认为自己能活300岁吧，大家都是把大约80岁左右的平均寿命作为人生的最终终点来生活的吧。</p><p class=\"moji-trans\">在这期间，没有路标要走的路程很长，为了不迷失方向，目标的存在是必要的。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">而且，重要的是不要把目标放在自己前方，而是放在旁边。</p><p class=\"moji-trans\">说到目标，很多人会理解为放在远方去追赶的感觉。但目标放得太远，最终只会变成“期待”，甚至变成“妄想”。这样一来，好不容易的路标反而会成为迷路的原因。</p><p class=\"moji-trans\">所以，目标不要放得太远，最好保持在总是在两旁的感觉。偶尔转头一看，目标就在那里，那种感觉就很好。</p><p class=\"moji-trans\">如果目标在两侧，就等于一直和目标在一起，也就是一直活在其中。不会成为不必要的负担，也不会被过度束缚。</p><p class=\"moji-trans\">就我而言，我甚至想把目标放在后面，而不是前面。</p><p class=\"moji-trans\">“后面”是指自己走过的过去，也就是回头审视。而且，在这个越来越便利的时代，这也意味着刻意选择“模拟式”地生活。</p><p class=\"moji-trans\">时常回头确认自己走过的路是很重要的。看到社会上大家总是“向前、向前”的时候，我就会产生一种“那我去后面看看吧”的心情。</p><p class=\"moji-trans\">现在，时代几乎令人可怕地，所有人都在朝着“便利”的方向前进。正因为如此，我内心才有一种尽量不想往前走的感觉吧。</p><p class=\"moji-trans\">模拟式的东西在喊我“危险啊，危险”，仿佛在说“到后面来吧，来吧”。</p><p class=\"moji-trans\">(注1)道しるべ：此处指指示方向的标识</p><p class=\"moji-trans\">(注2)道のり：距离</p><p class=\"moji-trans\">(注3)～を見失う：变得不明白～</p><p class=\"moji-trans\">(注4)肝心：重要</p><p class=\"moji-trans\">(注5)はるか：此处指“远远地”</p><p class=\"moji-trans\">(注6)妄想：不切实际的想象</p><p class=\"moji-trans\">(注7)とらわれる：此处指被束缚</p>"
+      ],
+      "sourceQuestionNumber": 68,
+      "sourceId": 132168276803365
+    },
+    {
+      "id": "imported:202607:N2:3:169338577370318:69",
+      "level": "N2",
+      "category": "阅读",
+      "prompt": "自身の生き方について、筆者はどのように考えているか。",
+      "passage": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標を持つことは大事ですが、しかし達成されたからといって人生が終わるわけではない。生きていく過程の一つということで、目標は一つの道しるべ(注1)にすぎないのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t人間はいつか死ぬということは、誰もが知っていることです。まさか自分は300年生きるだろうと思っている人は一人もいないでしょうし、大体の平均寿命である80歳前後とか、そのあたりを人生の最終ゴール地点において生きているのではないでしょうか。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tその間、なんの道しるべもなく歩くには長い道のり(注2)なわけで、方向を見失わない(注3)ためにも目標という存在が必要なのです</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(中略)</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t<u>そして目標は自分の前に置くのではなく、横に置くこと</u>が肝心(注4)です。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t目標というと、はるか(注5)先に置いて追いかけていく感覚でとらえる人も多いのですが、目標を遠くに置きすぎると、ただの「期待」で終わってしまう。期待がいっしょに、「妄想」(注6)になってしまう。それではせっかくの道しるべが、逆に道に迷う原因になってしまいます。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tだから目標はあまり遠くに持たず、いつも両脇に置いているくらいの感覚がいいでしょう。ふと自分の横を見ると目標がある、それくらいの感覚がいいのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t両脇に目標があれば、いつも目標と一緒にいることになりますから、常に目標の中で生きていることになります。必要以上に重荷になることもないし、とらわれ(注7)すぎることもない。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t私の場合は先どころか、目標を後ろに置きたくなることもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t後ろというのは自分が歩いてきた過去であり、振り返ってみるということです。そしてこのどんどん便利になっていく時代の中で、あえてアナログに生きるということでもあります。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tときどき自分の来た道を振り返って確かめるということは大事なことですし、あまりに世間のみなさんが「先へ、先へ」となっているのを見ると、あえて「私は後ろに行ってみようかな」という気になってしまうのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t今、時代はちょっと恐ろしいほどに、みんなが「便利」という方向に向かっている。だからこそ、なるべく前に行きたくないというのが気分としてあるのでしょう。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tアナログなものが私を「危ない、危ない」と、呼び止めるのです。それが「後ろへ来いよ、来いよ」と言ってるような気がするのです。</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注1)道しるべ：ここでは、方向を示す標識</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注2)道のり:距離</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注3)～を見失う：～が分からなくなる</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注4)肝心：大事</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注5)はるか:ここでは、ずっと</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注6)妄想：現実的ではない想像</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t(注7)とらわれる：ここでは、縛られる</p>",
+      "instruction": "問題13 次の文章を読んで、後の問いに対する答えとして最もよいものを、1～4から一つ選びなさい。",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "世間の人々のように、便利さに流されてしまいたくない。"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "便利さを捨てて、他人とは違う生き方がしてみたい。"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "便利な生活をしていても、自分の来た道は忘れたくない。"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "便利な生活は危険でもあるので、以前の生活に戻りたい。"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "文章最后说“大家都朝着‘便利’的方向前进，所以我尽量不想往前走”，“模拟的东西在喊我‘危险！危险！’”。故选项1“不想被世间的便利所裹挟”正确。\n2.错误：不是“想尝试不同生活方式”。\n3.错误：不是“不想忘记来路”，而是“主动往回看”。\n4.错误：不是“想回到从前的生活”。",
+        "<p><strong>文章译文</strong></p><p class=\"moji-trans\">拥有目标固然重要，但达成目标并不意味着人生就结束了。它只是人生过程中的一个阶段，目标不过是一个路标而已。</p><p class=\"moji-trans\">人终有一死，这是谁都知道的。应该没有人认为自己能活300岁吧，大家都是把大约80岁左右的平均寿命作为人生的最终终点来生活的吧。</p><p class=\"moji-trans\">在这期间，没有路标要走的路程很长，为了不迷失方向，目标的存在是必要的。</p><p class=\"moji-trans\">(中略)</p><p class=\"moji-trans\">而且，重要的是不要把目标放在自己前方，而是放在旁边。</p><p class=\"moji-trans\">说到目标，很多人会理解为放在远方去追赶的感觉。但目标放得太远，最终只会变成“期待”，甚至变成“妄想”。这样一来，好不容易的路标反而会成为迷路的原因。</p><p class=\"moji-trans\">所以，目标不要放得太远，最好保持在总是在两旁的感觉。偶尔转头一看，目标就在那里，那种感觉就很好。</p><p class=\"moji-trans\">如果目标在两侧，就等于一直和目标在一起，也就是一直活在其中。不会成为不必要的负担，也不会被过度束缚。</p><p class=\"moji-trans\">就我而言，我甚至想把目标放在后面，而不是前面。</p><p class=\"moji-trans\">“后面”是指自己走过的过去，也就是回头审视。而且，在这个越来越便利的时代，这也意味着刻意选择“模拟式”地生活。</p><p class=\"moji-trans\">时常回头确认自己走过的路是很重要的。看到社会上大家总是“向前、向前”的时候，我就会产生一种“那我去后面看看吧”的心情。</p><p class=\"moji-trans\">现在，时代几乎令人可怕地，所有人都在朝着“便利”的方向前进。正因为如此，我内心才有一种尽量不想往前走的感觉吧。</p><p class=\"moji-trans\">模拟式的东西在喊我“危险啊，危险”，仿佛在说“到后面来吧，来吧”。</p><p class=\"moji-trans\">(注1)道しるべ：此处指指示方向的标识</p><p class=\"moji-trans\">(注2)道のり：距离</p><p class=\"moji-trans\">(注3)～を見失う：变得不明白～</p><p class=\"moji-trans\">(注4)肝心：重要</p><p class=\"moji-trans\">(注5)はるか：此处指“远远地”</p><p class=\"moji-trans\">(注6)妄想：不切实际的想象</p><p class=\"moji-trans\">(注7)とらわれる：此处指被束缚</p>"
+      ],
+      "sourceQuestionNumber": 69,
+      "sourceId": 169338577370318
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "imported:202607:N2:3:260816337863146:70",
+      "sourceId": 260816337863146,
+      "questionNumber": 70,
+      "reasons": [
+        "缺少配套图片"
+      ],
+      "media": {
+        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "audio": ""
+      },
+      "raw": {
+        "id": 260816337863146,
+        "time": "202607",
+        "level": "N2",
+        "type": 3,
+        "questionId": 70,
+        "bigTitle": "問題14右のページは、ある市のレシピコンテストの募集案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+        "question": "70次の4人は、レシピコンテストに応募したいと考えている。この中で、応募可能なのは誰か。",
+        "littleQuestion": "70次の4人は、レシピコンテストに応募したいと考えている。この中で、応募可能なのは誰か。",
+        "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
+        "answer": 3,
+        "assistantNew": "ハオさん：所需烹饪时间 40 分钟，超过规定的 30 分钟\n中村さん：所用材料不符合规定\nマットさん：全部符合。\n西田さん：所需材料费 1,290 日元，超过规定的 1000 日元。\n\n<p><strong>文章译文</strong></p><p class=\"moji-trans\"></p>",
+        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "questionPicture": "mojitest/exams/picture/536e7887-0a1f-43ec-9157-ef2f5c17dd2c.png",
+        "option1": "八才さん",
+        "option2": "中村さん",
+        "option3": "マットさん",
+        "option4": "西田さん"
+      }
+    },
+    {
+      "id": "imported:202607:N2:3:203052147564511:71",
+      "sourceId": 203052147564511,
+      "questionNumber": 71,
+      "reasons": [
+        "缺少配套图片"
+      ],
+      "media": {
+        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "audio": ""
+      },
+      "raw": {
+        "id": 203052147564511,
+        "time": "202607",
+        "level": "N2",
+        "type": 3,
+        "questionId": 71,
+        "bigTitle": "問題14右のページは、ある市のレシピコンテストの募集案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+        "question": "高校生の林さんは、レシピコンテストに応募しようと思っている。考えたレシピは2品である。林さんは青原市内の高校に通っている。林さんはどうすればいいか。",
+        "littleQuestion": "高校生の林さんは、レシピコンテストに応募しようと思っている。考えたレシピは2品である。林さんは青原市内の高校に通っている。林さんはどうすればいいか。",
+        "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
+        "answer": 3,
+        "assistantNew": "根据募集案内中的规定：\n(1)应征方法：「応募は一人3品まで可能です。応募用紙1枚あたり1品のレシピを記入してください。」（每人最多可报名3道菜。每张报名表填写1道食谱。），所以2道食谱需要2张报名表，各写1道。排除选项1和2。\n(2)提交截止日期：「青原市内の中学校・高等学校に通う生徒は、6月20日（月）までに在籍する学校に提出してください。」（就读于青原市内中学・高中的学生，请在6月20日（周一）前提交至所在学校。）。林同学就读于青原市市内高中，应提交给学校。排除选项4。\n\n<p><strong>文章译文</strong></p><p class=\"moji-trans\"></p>",
+        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "option1": "1枚の応募用紙に2品のレシピを書いて、6月20日までに学校に提出する。",
+        "option2": "1枚の応募用紙に2品のレシピを書いて、6月24日必着で農業課に郵送する。",
+        "option3": "2枚の応募用紙に1品ずつレシピを書いて、6月20日までに学校に提出する。",
+        "option4": "2枚の応募用紙に1品ずつレシピを書いて、6月24日必着で農業課に郵送する。"
+      }
+    }
+  ],
+  "sourceMetadata": {
+    "format": "jlpt-practice/import-exam-bank/v1",
+    "checksum": "ea356c0229eee78c6fff716b8bd95bfc4396948fe5d58e845492d02923923254",
+    "examId": "t6j6BxSG8d",
+    "sourceStatus": "partial",
+    "questions": [
+      {
+        "id": "imported:202607:N2:3:127091743807711:52",
+        "objectId": "294Sz6zjd4",
+        "identity": "202607N2010310052*52",
+        "globalQuestionNumber": 52,
+        "sectionId": "FuT1LC8zgD",
+        "questionType": 31,
+        "parentObjectId": "RtGrBvWPeF"
+      },
+      {
+        "id": "imported:202607:N2:3:11298869322596:53",
+        "objectId": "YqRjJHWNzz",
+        "identity": "202607N2010310053*53",
+        "globalQuestionNumber": 53,
+        "sectionId": "FuT1LC8zgD",
+        "questionType": 31,
+        "parentObjectId": "AefhoCGhSR"
+      },
+      {
+        "id": "imported:202607:N2:3:76029523882289:54",
+        "objectId": "jgpD3XjFWc",
+        "identity": "202607N2010310054*54",
+        "globalQuestionNumber": 54,
+        "sectionId": "FuT1LC8zgD",
+        "questionType": 31,
+        "parentObjectId": "choG5PsIT1"
+      },
+      {
+        "id": "imported:202607:N2:3:281296990473237:55",
+        "objectId": "QtMkAgLgiZ",
+        "identity": "202607N2010310055*55",
+        "globalQuestionNumber": 55,
+        "sectionId": "FuT1LC8zgD",
+        "questionType": 31,
+        "parentObjectId": "OvRM5qAWnk"
+      },
+      {
+        "id": "imported:202607:N2:3:273377984667020:56",
+        "objectId": "ZFEayAlC6S",
+        "identity": "202607N2010310056*56",
+        "globalQuestionNumber": 56,
+        "sectionId": "FuT1LC8zgD",
+        "questionType": 31,
+        "parentObjectId": "AcCQeyieVI"
+      },
+      {
+        "id": "imported:202607:N2:3:104114408125073:57",
+        "objectId": "qZvxdjVhXW",
+        "identity": "202607N2010311057*57",
+        "globalQuestionNumber": 57,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "JOmhE5SaCe"
+      },
+      {
+        "id": "imported:202607:N2:3:236621679303652:58",
+        "objectId": "j2soJqi6OZ",
+        "identity": "202607N2010311058*58",
+        "globalQuestionNumber": 58,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "JOmhE5SaCe"
+      },
+      {
+        "id": "imported:202607:N2:3:140638075269166:59",
+        "objectId": "79uyAHyyCW",
+        "identity": "202607N2010311059*59",
+        "globalQuestionNumber": 59,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "AmF5J2e7gX"
+      },
+      {
+        "id": "imported:202607:N2:3:266827545643135:60",
+        "objectId": "e8AHZg9mIl",
+        "identity": "202607N2010311060*60",
+        "globalQuestionNumber": 60,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "AmF5J2e7gX"
+      },
+      {
+        "id": "imported:202607:N2:3:68863729790283:61",
+        "objectId": "Nr7fycUFvu",
+        "identity": "202607N2010311061*61",
+        "globalQuestionNumber": 61,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "UDGiuTJkYh"
+      },
+      {
+        "id": "imported:202607:N2:3:260742396083136:62",
+        "objectId": "o0HbsvBCSZ",
+        "identity": "202607N2010311062*62",
+        "globalQuestionNumber": 62,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "UDGiuTJkYh"
+      },
+      {
+        "id": "imported:202607:N2:3:90695953190117:63",
+        "objectId": "ya45fPJk0r",
+        "identity": "202607N2010311063*63",
+        "globalQuestionNumber": 63,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "OSAL87Tjk5"
+      },
+      {
+        "id": "imported:202607:N2:3:41979743020513:64",
+        "objectId": "fNaz6qABJm",
+        "identity": "202607N2010311064*64",
+        "globalQuestionNumber": 64,
+        "sectionId": "YfdK7KbEYc",
+        "questionType": 32,
+        "parentObjectId": "OSAL87Tjk5"
+      },
+      {
+        "id": "imported:202607:N2:3:62013979844806:65",
+        "objectId": "QhxqGxd2fa",
+        "identity": "202607N2010313065*65",
+        "globalQuestionNumber": 65,
+        "sectionId": "pGMZBj3pcs",
+        "questionType": 34,
+        "parentObjectId": "ZRLPE5c0gU"
+      },
+      {
+        "id": "imported:202607:N2:3:199622483053241:66",
+        "objectId": "CQSQrBKBOD",
+        "identity": "202607N2010313066*66",
+        "globalQuestionNumber": 66,
+        "sectionId": "pGMZBj3pcs",
+        "questionType": 34,
+        "parentObjectId": "ZRLPE5c0gU"
+      },
+      {
+        "id": "imported:202607:N2:3:191129051040602:67",
+        "objectId": "raCPEgVuiW",
+        "identity": "202607N2010314067*67",
+        "globalQuestionNumber": 67,
+        "sectionId": "AoftChedvB",
+        "questionType": 35,
+        "parentObjectId": "iCkHMHPtKk"
+      },
+      {
+        "id": "imported:202607:N2:3:132168276803365:68",
+        "objectId": "DJI3eQz7Ku",
+        "identity": "202607N2010314068*68",
+        "globalQuestionNumber": 68,
+        "sectionId": "AoftChedvB",
+        "questionType": 35,
+        "parentObjectId": "iCkHMHPtKk"
+      },
+      {
+        "id": "imported:202607:N2:3:169338577370318:69",
+        "objectId": "Xch6FdkIZC",
+        "identity": "202607N2010314069*69",
+        "globalQuestionNumber": 69,
+        "sectionId": "AoftChedvB",
+        "questionType": 35,
+        "parentObjectId": "iCkHMHPtKk"
+      },
+      {
+        "id": "imported:202607:N2:3:260816337863146:70",
+        "objectId": "p9F2yMSudH",
+        "identity": "202607N2010315070*70",
+        "globalQuestionNumber": 70,
+        "sectionId": "sHDAKnyXHO",
+        "questionType": 36,
+        "parentObjectId": "LfUkhKjC0R",
+        "images": {
+          "passage": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+          "question": "mojitest/exams/picture/536e7887-0a1f-43ec-9157-ef2f5c17dd2c.png"
+        }
+      },
+      {
+        "id": "imported:202607:N2:3:203052147564511:71",
+        "objectId": "d7GXT2AEDj",
+        "identity": "202607N2010315071*71",
+        "globalQuestionNumber": 71,
+        "sectionId": "sHDAKnyXHO",
+        "questionType": 36,
+        "parentObjectId": "LfUkhKjC0R",
+        "images": {
+          "passage": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+          "question": ""
+        }
+      }
+    ]
+  },
+  "importStats": {
+    "sourceRecords": 32,
+    "containers": 12
+  }
+}
