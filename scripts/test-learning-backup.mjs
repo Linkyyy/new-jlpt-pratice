@@ -215,3 +215,12 @@ test("failure writing term collection rolls back all backup fields and corrupt t
   const local=environment();const before=[...local.raw];local.failWrite(5);assert.equal(local.backup.importLearningBackup(backup).ok,false);assert.deepEqual([...local.raw],before);
   const broken=environment({"jlpt-practice.term-study.v1":"{broken"});assert.equal(broken.backup.createLearningBackup().ok,false);assert.equal(broken.backup.importLearningBackup(backup).ok,false);assert.equal(broken.raw.get("jlpt-practice.term-study.v1"),"{broken");
 });
+
+test('cloud backup round-trips filter presets, custom groups, saved examples and scheduled reviews without reviving deleted items',()=>{
+ const source=environment(),term={kind:'word',label:'華々しい',reading:'はなばなしい',pos:'形容词',meaning:'华丽',usage:'',referenceLevels:['N1'],example:{text:'華々しい活躍。',path:'/practice?question=example',label:'N1'}};
+ source.terms.updateTermStudy(term,'save');const group=source.terms.saveTermGroup('考前必看');const key=JSON.stringify([term.kind,term.label,term.reading,term.pos]);source.terms.batchTermStudy([key],'move',group.id);source.terms.rateTermStudy(key,'good');source.terms.saveFrequencyPreset('N1语法','kind=grammar&grade=N1&max=15');
+ const backup=source.backup.createLearningBackup();assert.equal(backup.ok,true);assert.equal(backup.data.terms.entries[0].schedule.intervalDays,3);assert.equal(backup.data.terms.presets[0].query,'kind=grammar&grade=N1&max=15');
+ const destination=environment();assert.equal(destination.backup.importLearningBackup(backup.data).ok,true);let data=destination.terms.readTermStudySnapshot().data;assert.equal(data.entries[0].groupIds[0],group.id);assert.equal(data.entries[0].example.text,term.example.text);assert.equal(data.presets[0].name,'N1语法');
+ destination.terms.deleteFrequencyPreset(data.presets[0].id);destination.terms.deleteTermGroup(group.id);destination.terms.updateTermStudy(term,'remove');assert.equal(destination.backup.importLearningBackup(backup.data).ok,true);data=destination.terms.readTermStudySnapshot().data;assert.equal(data.entries.length,0);assert.ok(data.presets[0].deleted);assert.ok(data.groups[0].deleted);
+ const invalid=structuredClone(backup.data);invalid.terms.presets[0].query='returnTo=https%3A%2F%2Fevil.example';const before=[...destination.raw];assert.equal(destination.backup.importLearningBackup(invalid).ok,false);assert.deepEqual([...destination.raw],before);
+});

@@ -253,7 +253,7 @@ test("D1 backups retain personal preferences and display settings through upload
 test('cloud backups retain term review states and history clearing preserves them', async()=>{
  const e=environment(),user=await e.auth(),data=emptyBackup(),now=e.now();
  const identity={kind:'word',label:'華々しい',reading:'はなばなしい',pos:'形容词'};
- data.terms={version:1,entries:[{...identity,key:JSON.stringify([identity.kind,identity.label,identity.reading,identity.pos]),meaning:'华丽；壮烈',usage:'',savedAt:now,updatedAt:now,reviewedAt:now,reviews:1,status:'mastered'}]};
+ data.terms={version:1,entries:[{...identity,key:JSON.stringify([identity.kind,identity.label,identity.reading,identity.pos]),meaning:'华丽；壮烈',usage:'',savedAt:now,updatedAt:now,reviewedAt:now,reviews:1,status:'mastered',groupIds:['exam'],schedule:{dueAt:now+3*86400000,intervalDays:3,streak:1,lapses:0,lastRating:'good'}}],groups:[{id:'exam',name:'考前必看',updatedAt:now}],presets:[{id:'grammar',name:'N1语法',query:'kind=grammar&grade=N1&max=15',updatedAt:now}]};
  assert.equal((await e.write(user.cookie,data)).status,200);const saved=await(await e.read(user.cookie)).json();assert.deepEqual(saved.data.terms,data.terms);
  assert.equal((await removeHistory(e,user.cookie,null,saved.backup.revision)).status,200);const cleared=await(await e.read(user.cookie)).json();assert.deepEqual(cleared.data.terms,data.terms);
  const invalid=structuredClone(data);invalid.terms.entries[0].status='invalid';assert.equal((await e.write(user.cookie,invalid,cleared.backup.revision)).status,400);assert.deepEqual((await(await e.read(user.cookie)).json()).data.terms,data.terms);
