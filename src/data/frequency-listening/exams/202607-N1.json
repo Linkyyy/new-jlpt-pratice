@@ -1,0 +1,1129 @@
+{
+  "version": 1,
+  "generatedBy": "jlpt-practice/listening-transcripts/v1",
+  "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+  "checksum": "cff6f2876c5159ae4d9590e144ac4e8382538f3c8e268f526a744de77da5b685",
+  "level": "N1",
+  "period": "202607",
+  "questionCount": 30,
+  "passageCount": 29,
+  "missingTranscripts": 0,
+  "warnings": [],
+  "questions": [
+    {
+      "id": "imported:202607:N1:4:264797267171105:67",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "フォームに学年の入力欄を作る"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "フォームに質問を入力する"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "アンケートに試験的に回答する"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "アンケートのリンクをメールする"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,725\" data-endtime=\"00:00:11,800\">大学でバドミントン部の男の学生と女の学生が話しています。女の学生はこの後何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:13,525\" data-endtime=\"00:00:24,550\">男：吉川さんこの前、1、2年生を対象にしたアンケート用紙を作ってもらったよね。練習計画を考え直すための。あれ、ちょっと変更があって。</p><p class=\"moji-content\" data-starttime=\"00:00:24,700\" data-endtime=\"00:00:25,900\">女：あ、はい。</p><p class=\"moji-content\" data-starttime=\"00:00:26,175\" data-endtime=\"00:00:36,900\">男：昨日顧問の太田先生と話したんだけど、アンケートを印刷して部員に配るって案はやめて、スマホで回答できるアンケートフォームに変更したらどうって言われて。</p><p class=\"moji-content\" data-starttime=\"00:00:37,175\" data-endtime=\"00:00:38,250\">女：いいですね。</p><p class=\"moji-content\" data-starttime=\"00:00:38,375\" data-endtime=\"00:00:47,425\">男：うん、匿名にしたいから、名前を書く欄はなしにしようかな。その代わり、新しく学年の入力欄は作ろうと思って。</p><p class=\"moji-content\" data-starttime=\"00:00:47,675\" data-endtime=\"00:00:50,125\">女：あ、その方がいいと思います。</p><p class=\"moji-content\" data-starttime=\"00:00:50,275\" data-endtime=\"00:01:04,200\">男：うん。それからウェブ上の新しいフォームに質問を入力するのもやっとくね。ウェブのアンケートフォームが完成したら、試しに答えてみてくれる？リンクをメールで送るから。不具合がないようにしたいんだ。</p><p class=\"moji-content\" data-starttime=\"00:01:04,425\" data-endtime=\"00:01:05,350\">女：分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:11,025\" data-endtime=\"00:01:14,575\">女の学生はこの後何をしますか？</p>"
+      ],
+      "sourceQuestionNumber": 67,
+      "available": false,
+      "sourceObjectId": "4FaBhhFGM1",
+      "sourceParentId": "BigWmT5J4l",
+      "sourceIdentity": "202607N1020416067*01*1番"
+    },
+    {
+      "id": "imported:202607:N1:4:130454610742901:68",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "ローカーに荷物を入れる"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "セミナー室で講義を聞く"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "展示室を見学する"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "楽曲の演奏を聞く"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:09,950\">観光バスの中で、ガイドが客に話しています。客はバスを降りて、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:11,650\" data-endtime=\"00:00:25,525\">朝日町歴史博物館にもうすぐ到着いたします。見学は2時間で、今月の特別展では16世紀頃にこの地域の祭りで使われた衣装や道具などをご覧いただけます。</p><p class=\"moji-content\" data-starttime=\"00:00:26,025\" data-endtime=\"00:00:32,475\">貴重品以外のお荷物はバスに置いたままにし、館内の無料ロッカーの使用はお控えください。</p><p class=\"moji-content\" data-starttime=\"00:00:33,025\" data-endtime=\"00:00:43,500\">セミナー室で皆さん揃って、祭りの歴史について講義を聞いていただき、その後集合時間まで展示室を自由にご見学いただきます。</p><p class=\"moji-content\" data-starttime=\"00:00:44,400\" data-endtime=\"00:00:52,700\">見学の後半、2階で伝統的な楽器の演奏会がちょうど始まるそうですので、是非そちらもお楽しみください。</p><p class=\"moji-content\" data-starttime=\"00:00:58,275\" data-endtime=\"00:01:01,775\">客はバスを降りて、まず何をしますか？</p>"
+      ],
+      "sourceQuestionNumber": 68,
+      "available": false,
+      "sourceObjectId": "2AVKGMqerk",
+      "sourceParentId": "CCYIDkd2um",
+      "sourceIdentity": "202607N1020416068*02*2番"
+    },
+    {
+      "id": "imported:202607:N1:4:32900589580778:69",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "電話をかけて謝る"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "注文された商品を納品する"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "間違えた原因を調べる"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "先方と会う約束を取り付ける"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,775\" data-endtime=\"00:00:09,900\">会社で男の人と課長が話しています。男の人はこの後まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:11,525\" data-endtime=\"00:00:24,075\">男：課長、ちょっとよろしいですか？実はトラブルがありまして、未来食品さんにご注文いただいた食品トレーなんですが、ご注文と異なるサイズが届いてしまったそうなんです。</p><p class=\"moji-content\" data-starttime=\"00:00:24,075\" data-endtime=\"00:00:31,925\">課長：それは困りましたね。電話で謝罪をしたんですか？それと、正しい注文の商品の納品は？</p><p class=\"moji-content\" data-starttime=\"00:00:32,000\" data-endtime=\"00:00:37,775\">男：はい。電話で謝罪をしました。商品を積んだ車はもう倉庫を出たそうです。</p><p class=\"moji-content\" data-starttime=\"00:00:37,800\" data-endtime=\"00:00:40,850\">課長：分かりました。原因は分かってますか？</p><p class=\"moji-content\" data-starttime=\"00:00:40,875\" data-endtime=\"00:00:43,500\">男：それが、伝票上は間違いないんです。</p><p class=\"moji-content\" data-starttime=\"00:00:43,525\" data-endtime=\"00:00:55,550\">課長：そうですか。それは倉庫の方で調べてもらいますね。それより、直接謝罪しないといけないから、あちらの担当者にアポを入れてください。私も同行します。</p><p class=\"moji-content\" data-starttime=\"00:00:55,600\" data-endtime=\"00:00:56,375\">男：分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:02,125\" data-endtime=\"00:01:05,725\">男の人はこの後、まず何をしますか？</p>"
+      ],
+      "sourceQuestionNumber": 69,
+      "available": false,
+      "sourceObjectId": "NRNVF3J4FJ",
+      "sourceParentId": "TZQKMXr5Bt",
+      "sourceIdentity": "202607N1020416069*03*3番"
+    },
+    {
+      "id": "imported:202607:N1:4:74869985005066:70",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "消防への通報方法を確認"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "シーツをロビーに持っていく"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "消火器を駐車場に運ぶ"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "訓練前に利用者へ声をかける"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:11,475\">高齢者の介護施設で、女の課長と男の人が話しています。男の人はこの後、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:13,175\" data-endtime=\"00:00:22,875\">課長：中田さん、おはよう。事前に話してある通り、今日は火災発生時に備えた訓練をしますから、必要なものを用意してほしいんですけど。</p><p class=\"moji-content\" data-starttime=\"00:00:23,000\" data-endtime=\"00:00:27,525\">男：はい。あの、訓練の流れをもう一度確認したいのですが。</p><p class=\"moji-content\" data-starttime=\"00:00:27,600\" data-endtime=\"00:00:42,175\">課長：ええ、いいですよ。初めにここ事務室で、スタッフ全員で消防への通報手順の確認から始めます。次にロビーでベッドシーツを使って、歩行が困難な方を移送する練習をします。</p><p class=\"moji-content\" data-starttime=\"00:00:42,300\" data-endtime=\"00:00:50,475\">その後利用者さんを駐車場まで誘導する訓練をして、外で消火器の使い方を確認して終わりです。</p><p class=\"moji-content\" data-starttime=\"00:00:50,475\" data-endtime=\"00:00:51,150\">男：はい。</p><p class=\"moji-content\" data-starttime=\"00:00:51,250\" data-endtime=\"00:01:05,675\">課長：それで事務室の入り口に並べてある訓練用の消火器を駐車場の隅に置いといてくれませんか、歩けない人を運ぶ練習に使うシーツはリネン室から必要な枚数をロビーに運んでおきました。</p><p class=\"moji-content\" data-starttime=\"00:01:05,675\" data-endtime=\"00:01:06,225\">男：はい。</p><p class=\"moji-content\" data-starttime=\"00:01:06,425\" data-endtime=\"00:01:20,400\">課長：訓練を始める直前に利用者さんへ、「一緒に行きますから、大丈夫ですよ。」などと、声掛けをして安心してもらいましょう。10時に訓練を始めるから、それまでに事務室に戻ってきてください。</p><p class=\"moji-content\" data-starttime=\"00:01:20,500\" data-endtime=\"00:01:23,500\">男：10時までに事務室。分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:29,100\" data-endtime=\"00:01:32,675\">男の人はこの後、まず何をしますか？</p>"
+      ],
+      "sourceQuestionNumber": 70,
+      "available": false,
+      "sourceObjectId": "csdmfOczzW",
+      "sourceParentId": "8qySY1yLeW",
+      "sourceIdentity": "202607N1020416070*04*4番"
+    },
+    {
+      "id": "imported:202607:N1:4:64874264974138:71",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "タイトルを練り直す"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "ターゲットとする読者を絞る"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "紹介するグッズを選び直す"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "公開する時間を決める"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:15,475\">情報サイトを運営する会社で、インターンの女の学生と担当者が話しています。ウェブに掲載する記事について、女の学生はこの後、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:17,125\" data-endtime=\"00:00:31,500\">女：あの、私が書いている、「今真似したいファッショングッズ五つ」というタイトルのウェブ記事についてアドバイスいただけませんか？ちょっとタイトルがありきたりなので、練り直した方がいいとは思ってるんですけど。</p><p class=\"moji-content\" data-starttime=\"00:00:32,100\" data-endtime=\"00:00:40,825\">男：うーん、タイトルは後で考えたらいいかな。それよりターゲットとする読者はどんな層を想定してるの？</p><p class=\"moji-content\" data-starttime=\"00:00:41,125\" data-endtime=\"00:00:43,550\">女：私と同じ20代の女性です。</p><p class=\"moji-content\" data-starttime=\"00:00:43,725\" data-endtime=\"00:00:58,475\">男：20代と言っても幅広いから。例えば、社会人も学生もいるでしょう。学生なら、記事で紹介するグッズを手頃な値段のものに選び直した方がいいし、社会人なら予算にも余裕があるだろうしね。</p><p class=\"moji-content\" data-starttime=\"00:00:58,650\" data-endtime=\"00:01:01,325\">女：そうですね。分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:01,425\" data-endtime=\"00:01:11,125\">男：ウェブ記事を書く上では、その記事を読んでほしい読者層をいかに絞り込むかが大事ですよ。あと何時頃公開するかは決めてるの？</p><p class=\"moji-content\" data-starttime=\"00:01:11,450\" data-endtime=\"00:01:14,825\">女：えっとご相談してから決めたいと思ってたんですが。</p><p class=\"moji-content\" data-starttime=\"00:01:14,900\" data-endtime=\"00:01:24,475\">男：そうだね。大体仕事終わり、授業終わりの時間帯だと思うけど、まあ、対象が定まったら、公開時間も決まってくるから。</p><p class=\"moji-content\" data-starttime=\"00:01:30,025\" data-endtime=\"00:01:36,500\">ウェブに掲載する記事について、女の学生はこの後、まず何をしますか？</p>"
+      ],
+      "sourceQuestionNumber": 71,
+      "available": false,
+      "sourceObjectId": "5c38poZdkH",
+      "sourceParentId": "yQdnRU671m",
+      "sourceIdentity": "202607N1020416071*05*5番"
+    },
+    {
+      "id": "imported:202607:N1:4:19728562040952:72",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "性能がよくなったから"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "価格が安くなったから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "使用する目的が多様化したから"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "配信サービスの品質が向上したから"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:12,175\">テレビでアナウンサーと男の記者が話しています。男の記者はどうしてイヤホンの販売が好調だと言っていますか？</p><p class=\"moji-content\" data-starttime=\"00:00:35,725\" data-endtime=\"00:00:43,350\">女：最近イヤホンの売れ行きが好調です。背景には何があるのでしょうか？鈴木記者に聞きます。</p><p class=\"moji-content\" data-starttime=\"00:00:43,650\" data-endtime=\"00:00:53,525\">男：はい。以前は数千円で買えたイヤホンですが、コードがないタイプのイヤホンが主流になり、高機能になったことで価格が高騰しています。</p><p class=\"moji-content\" data-starttime=\"00:00:53,725\" data-endtime=\"00:00:56,875\">女：それでも手に取る消費者が多いようですが。</p><p class=\"moji-content\" data-starttime=\"00:00:56,875\" data-endtime=\"00:01:09,050\">男：はい。様々な場面で使われるようになったことが最たる要因です。動画等をスマートフォンで楽しむ人が増えたのもその一つですね。またウェブ会議などで使う人もいます。</p><p class=\"moji-content\" data-starttime=\"00:01:09,350\" data-endtime=\"00:01:12,750\">女：音楽を聴くためだけの道具ではなくなったんですね。</p><p class=\"moji-content\" data-starttime=\"00:01:12,875\" data-endtime=\"00:01:24,675\">男：はい。オンラインゲーム、本の朗読を聞けるサービスなど多岐にわたります。今後配信サービスの音質がさらに向上すれば、需要はより高まりそうです。</p><p class=\"moji-content\" data-starttime=\"00:01:30,325\" data-endtime=\"00:01:35,500\">男の記者はどうしてイヤホンの販売が好調だと言っていますか？</p>"
+      ],
+      "sourceQuestionNumber": 72,
+      "available": false,
+      "sourceObjectId": "a8iZxHRBsa",
+      "sourceParentId": "bBBMhJLXnA",
+      "sourceIdentity": "202607N1020417072*01*1番"
+    },
+    {
+      "id": "imported:202607:N1:4:24361770474110:73",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "けががよくならなかったから"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "体力がなくなったと感じたから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "目標がなくなったから"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "新しいことにチャレンジしたいから"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,875\" data-endtime=\"00:00:11,850\">テレビでアナウンサーが柔道の選手にインタビューをしています。柔道の選手が引退を決めた理由は何ですか？</p><p class=\"moji-content\" data-starttime=\"00:00:35,550\" data-endtime=\"00:00:43,350\">男：柔道の本田選手です。今回引退を決意されたということですが、引退を惜しむ声も多く聞かれます。</p><p class=\"moji-content\" data-starttime=\"00:00:43,600\" data-endtime=\"00:00:57,275\">女：はい。ここ数年怪我に苦しむことも多かったのですが、乗り越えられたのは皆様の応援のおかげです。本当にありがとうございました。体力的にはまだまだやれる自信はあるのですが。</p><p class=\"moji-content\" data-starttime=\"00:00:57,700\" data-endtime=\"00:01:02,475\">男：そうですか。昨年はオリンピックで金メダルに輝かれました。</p><p class=\"moji-content\" data-starttime=\"00:01:02,550\" data-endtime=\"00:01:17,425\">女：はい。念願の金メダルでした。それから1年、夢が実現してから目標を失い、これは潮時なのだろうと思うようになりました。引退後はこれまでできなかったことにチャレンジしたいと思います。</p><p class=\"moji-content\" data-starttime=\"00:01:23,150\" data-endtime=\"00:01:27,350\">柔道の選手は引退を決めた理由は何ですか？</p>"
+      ],
+      "sourceQuestionNumber": 73,
+      "available": false,
+      "sourceObjectId": "hUuW82400Y",
+      "sourceParentId": "XxGMNi74nj",
+      "sourceIdentity": "202607N1020417073*02*2番"
+    },
+    {
+      "id": "imported:202607:N1:4:24160769563194:74",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "リラックスできるから"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "体が丈夫になるから"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "脳の働きが活発になるから"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "人と交流が増えるから"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,050\" data-endtime=\"00:00:10,650\">講演会で専門家が話しています。専門家が高齢者に趣味を勧める1番の理由は何ですか？</p><p class=\"moji-content\" data-starttime=\"00:00:34,250\" data-endtime=\"00:00:44,700\">皆さん、趣味はありますか？映画鑑賞やカラオケ、人が趣味を楽しんでいる時、脳はリラックスしていることが調査でわかっています。</p><p class=\"moji-content\" data-starttime=\"00:00:45,400\" data-endtime=\"00:00:53,525\">ゴルフや山登りが趣味の人は体が丈夫になりますし、将棋や囲碁は脳の働きが活発になります。</p><p class=\"moji-content\" data-starttime=\"00:00:54,175\" data-endtime=\"00:01:07,475\">高齢になると、人との関わりが徐々に減っていき、1人の時間が長くなる傾向があります。趣味があればそのために出かけて、人と会い話す機会も多くあります。</p><p class=\"moji-content\" data-starttime=\"00:01:08,150\" data-endtime=\"00:01:13,625\">この孤立を防げる点が、特に趣味を持つことを勧めたい理由です。</p><p class=\"moji-content\" data-starttime=\"00:01:19,275\" data-endtime=\"00:01:24,350\">専門家は高齢者に趣味を勧める一番の理由は何ですか？</p>"
+      ],
+      "sourceQuestionNumber": 74,
+      "available": false,
+      "sourceObjectId": "PLaoeakfOL",
+      "sourceParentId": "G2t3OPWIyM",
+      "sourceIdentity": "202607N1020417074*03*3番"
+    },
+    {
+      "id": "imported:202607:N1:4:119268248567758:75",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "道具を整理すること"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "くずを決められた場所に移動させること"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "機械の掃除をする"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "防犯カメラを取り付ける"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:13,600\">工場で点検担当の女の人と工場長の男の人が話しています。女の人は改善点としてどんな点を指摘しましたか？</p><p class=\"moji-content\" data-starttime=\"00:00:37,175\" data-endtime=\"00:00:44,250\">女：武田さん、お疲れ様です。工場内の定期点検が終わったので、結果をご報告しますね。</p><p class=\"moji-content\" data-starttime=\"00:00:44,300\" data-endtime=\"00:00:45,650\">男：よろしくお願いします。</p><p class=\"moji-content\" data-starttime=\"00:00:45,850\" data-endtime=\"00:00:53,250\">女：道具は扱いやすいように整理されていました。作業の効率を向上させるのに繋がっていると思います。</p><p class=\"moji-content\" data-starttime=\"00:00:53,950\" data-endtime=\"00:01:06,975\">女：作業で出るくずは各機械の横にまとめてありましたけど、火災などにつながることもありますから、そういうものは溜め込まず、終業時に所定の倉庫に運び出す必要があります。</p><p class=\"moji-content\" data-starttime=\"00:01:07,050\" data-endtime=\"00:01:08,550\">男：あ、そうですね。</p><p class=\"moji-content\" data-starttime=\"00:01:08,675\" data-endtime=\"00:01:18,350\">女：工場の機械の掃除は徹底されていますから、マニュアルに沿って行い、点検項目のチェック記入なども習慣づけられていますね。</p><p class=\"moji-content\" data-starttime=\"00:01:18,400\" data-endtime=\"00:01:24,175\">男：ええ、清潔な状態を維持することで、社員の意識も変わってきていると思います。</p><p class=\"moji-content\" data-starttime=\"00:01:24,200\" data-endtime=\"00:01:33,625\">女：そうですね。最後は防犯対策ですが、鍵の管理方法などを確認しました。防犯カメラも正常でした。</p><p class=\"moji-content\" data-starttime=\"00:01:33,775\" data-endtime=\"00:01:34,975\">男：はい、ありがとうございます。</p><p class=\"moji-content\" data-starttime=\"00:01:40,775\" data-endtime=\"00:01:45,475\">女の人は改善点として。どんな点を指摘しましたか？</p>"
+      ],
+      "sourceQuestionNumber": 75,
+      "available": false,
+      "sourceObjectId": "ovsWVov5rt",
+      "sourceParentId": "vlh7VdUK5r",
+      "sourceIdentity": "202607N1020417075*04*4番"
+    },
+    {
+      "id": "imported:202607:N1:4:5339567859466:76",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "シフトを柔軟に変えてもらえること"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "給与が良い"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "顧客対応マニュアルがある"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "環境にはいりょしている"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:14,175\">運送会社で上司とドライバーの男の人が話しています。男の人はドライバーの募集で最もアピールできる点は何だと言っていますか？</p><p class=\"moji-content\" data-starttime=\"00:00:37,725\" data-endtime=\"00:00:40,450\">上司：小野さん、配達お疲れ様です。</p><p class=\"moji-content\" data-starttime=\"00:00:40,475\" data-endtime=\"00:00:48,125\">男：お疲れ様です。先週は火曜日にお休みをいただき助かりました。勤務シフトの調整、ありがとうございました。</p><p class=\"moji-content\" data-starttime=\"00:00:48,325\" data-endtime=\"00:00:59,025\">上司：それはよかったです。あの新しいトラックドライバーを募集するんですけど、どんな情報を載せた方がいいか、ドライバーの小野さんにぜひ伺いたくて。</p><p class=\"moji-content\" data-starttime=\"00:00:59,200\" data-endtime=\"00:01:05,100\">男：えっと、そうですね、うちはけっこう給料はいいですよね。</p><p class=\"moji-content\" data-starttime=\"00:01:05,150\" data-endtime=\"00:01:20,675\">上司：そうですね。給料はもちろん載せたんですが、それとは別にうちの会社のアピールポイントです。以前、顧客対応マニュアルがあって助かったっておっしゃってたので。そういったこともアピールできる点だと思ったんですが。</p><p class=\"moji-content\" data-starttime=\"00:01:20,775\" data-endtime=\"00:01:27,925\">男：私はマニュアルがあって入社当初は助かりましたね。まぁ、ないほうがいいって人もいますけどね。</p><p class=\"moji-content\" data-starttime=\"00:01:28,250\" data-endtime=\"00:01:41,325\">あと、給料がよくても仕事がつらかったらすぐ辞めちゃう人もいるだろうし。やっぱり勤務日や時間を都合に合わせて変更してくれる会社はなかなかないんじゃないでしょうか。</p><p class=\"moji-content\" data-starttime=\"00:01:41,325\" data-endtime=\"00:01:42,375\">上司：あぁ～。</p><p class=\"moji-content\" data-starttime=\"00:01:42,550\" data-endtime=\"00:01:54,325\">男：あと、会社では新しいトラックの導入など、環境への配慮も推進されていていいとは思うんですが、応募の際に重要視するかはちょっと私には分かりません。</p><p class=\"moji-content\" data-starttime=\"00:01:54,525\" data-endtime=\"00:01:56,950\">上司：分かりました。どうもありがとう。</p><p class=\"moji-content\" data-starttime=\"00:02:02,500\" data-endtime=\"00:02:09,150\">男の人はドライバーの募集で最もアピールできる点は何だと言っていますか？</p>"
+      ],
+      "sourceQuestionNumber": 76,
+      "available": false,
+      "sourceObjectId": "X9tAgvngnu",
+      "sourceParentId": "yfFSyS7VbN",
+      "sourceIdentity": "202607N1020417076*05*5番"
+    },
+    {
+      "id": "imported:202607:N1:4:96072938906381:77",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題2 では、まず質問を聞いてください。そのあと、用紙のせんたくしを読んでください。読む時間があります。それから話を聞いて用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "甘みが強いこと"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "実に硬さがあり傷みにくいこと"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "病気や虫に強く育てやすいこと"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "収穫量が安定していること"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,100\" data-endtime=\"00:00:18,025\">テレビでアナウンサーの男の人が農業開発センターの職員にインタビューをしています。新しい品種のイチゴについて、これまでのイチゴと異なる点は何だと言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:41,650\" data-endtime=\"00:00:54,200\">男：農業開発センターの品種開発担当の高山さんです。こちらで新しく開発されたイチゴが好評だそうですね。このイチゴの特徴について教えてください。</p><p class=\"moji-content\" data-starttime=\"00:00:54,350\" data-endtime=\"00:01:11,575\">女：はい、従来のものと同様、甘みが強いのが特徴です。従来の品種は果実が柔らかく、収穫作業やパック詰めの作業だけでも果実が傷んでしまうことがあったんですが、これは硬めで傷が付きにくいんです。</p><p class=\"moji-content\" data-starttime=\"00:01:11,650\" data-endtime=\"00:01:13,075\">男：そうなんですね。</p><p class=\"moji-content\" data-starttime=\"00:01:13,175\" data-endtime=\"00:01:19,475\">女：えぇ、従来の物より長持ちしますので、長距離の輸送にも適しているんです。</p><p class=\"moji-content\" data-starttime=\"00:01:19,700\" data-endtime=\"00:01:26,550\">男：そうですか。栽培方法はこれまでの品種と変わらないんですか？害虫の駆除とか。</p><p class=\"moji-content\" data-starttime=\"00:01:26,675\" data-endtime=\"00:01:38,250\">女：病気や害虫に対しては特に強くなったわけではないんですが、これまでの品種と同様に適切に処置をすれば安定した収穫量は期待できます。</p><p class=\"moji-content\" data-starttime=\"00:01:43,825\" data-endtime=\"00:01:50,825\">問：新しい品種のイチゴについてこれまでのイチゴと異なる点は何だと言っていますか？</p>"
+      ],
+      "sourceQuestionNumber": 77,
+      "available": false,
+      "sourceObjectId": "jGpH0UFa0i",
+      "sourceParentId": "DEo4FjMXMN",
+      "sourceIdentity": "202607N1020417077*06*6番"
+    },
+    {
+      "id": "imported:202607:N1:4:79449281687947:78",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題3 では、用紙に何も印刷されていません。このは、全体としてどんな内容かを聞くです。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①<br>"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②<br>"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③<br>"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④<br>"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,150\" data-endtime=\"00:00:06,758\">ラジオでアナウンサーが女の人にインタビューしています。</p><p class=\"moji-content\" data-starttime=\"00:00:08,400\" data-endtime=\"00:00:13,030\">男：株式会社あおい代表の野田さんにお話を伺います。</p><p class=\"moji-content\" data-starttime=\"00:00:13,375\" data-endtime=\"00:00:27,583\">女：着なくなった服は捨ててしまうという方もいらっしゃると思いますが、私は古い衣類、特に綿の布を紙に作り変える技術に着目し、昨年起業いたしました。</p><p class=\"moji-content\" data-starttime=\"00:00:28,095\" data-endtime=\"00:00:41,407\">女：綿からは普通の紙よりも水をはじく強い紙ができるので、清涼飲料水のラベルやコースター、ゴミ箱、野外に展示するアート作品に使われています。</p><p class=\"moji-content\" data-starttime=\"00:00:41,857\" data-endtime=\"00:00:58,827\">女：このような技術があることをより多くの方に知っていただくために、事業を起こすに至りました。材料にできるものって実はたくさんあるんだ、と気づいていただきたい。人々の意識を変えられるように努めます。</p><p class=\"moji-content\" data-starttime=\"00:01:03,961\" data-endtime=\"00:01:08,202\">女の人は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:01:09,325\" data-endtime=\"00:01:13,165\">1会社を立ち上げた理由。</p><p class=\"moji-content\" data-starttime=\"00:01:15,725\" data-endtime=\"00:01:19,693\">2洋服の素材へのこだわり。</p><p class=\"moji-content\" data-starttime=\"00:01:22,125\" data-endtime=\"00:01:26,477\">3布をリサイクルする為の条件。</p><p class=\"moji-content\" data-starttime=\"00:01:28,912\" data-endtime=\"00:01:32,493\">4ファッション業界の課題。</p>"
+      ],
+      "sourceQuestionNumber": 78,
+      "available": false,
+      "sourceObjectId": "gcdqjxXZeE",
+      "sourceParentId": "pSxGqYG935",
+      "sourceIdentity": "202607N1020418078*01*1番"
+    },
+    {
+      "id": "imported:202607:N1:4:173732395838235:79",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題3 では、用紙に何も印刷されていません。このは、全体としてどんな内容かを聞くです。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,500\" data-endtime=\"00:00:04,300\">テレビでアナウンサーが話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:05,950\" data-endtime=\"00:00:19,000\">自動運転の無人タクシーについて、各自動車メーカーが開発に力を入れています。ドライバー不足を解消するアイデアとして、大きな期待が寄せられる一方、課題も見られます。</p><p class=\"moji-content\" data-starttime=\"00:00:19,750\" data-endtime=\"00:00:29,175\">すでに試験的に導入されている地域からは急な停止で交通の妨げになったり、事故を起こしたりといった例も報告されています。</p><p class=\"moji-content\" data-starttime=\"00:00:29,975\" data-endtime=\"00:00:38,100\">その他法律についても整える必要があり、安心して利用できるようになるまでにはもう少し時間がかかりそうです。</p><p class=\"moji-content\" data-starttime=\"00:00:43,700\" data-endtime=\"00:00:48,175\">アナウンサーは無人タクシーの何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:49,875\" data-endtime=\"00:00:52,725\">1安全な乗り方。</p><p class=\"moji-content\" data-starttime=\"00:00:55,250\" data-endtime=\"00:00:58,300\">2開発のプロセス。</p><p class=\"moji-content\" data-starttime=\"00:01:00,925\" data-endtime=\"00:01:04,725\">3実用化における問題点。</p><p class=\"moji-content\" data-starttime=\"00:01:07,275\" data-endtime=\"00:01:10,475\">4自動運転の仕組み。</p>"
+      ],
+      "sourceQuestionNumber": 79,
+      "available": false,
+      "sourceObjectId": "oFykx1JKiT",
+      "sourceParentId": "Fb9PabZyCH",
+      "sourceIdentity": "202607N1020418079*02*2番"
+    },
+    {
+      "id": "imported:202607:N1:4:6505948368656:80",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題3 では、用紙に何も印刷されていません。このは、全体としてどんな内容かを聞くです。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:04,950\">講演会で栄養士が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,650\" data-endtime=\"00:00:22,025\">野菜は毎日の食事に欠かせない食材です。茹でたり、油で炒めたりして、熱を加えて食べる温野菜は調理することで、かさは減り、一度にたくさん食べられる上に消化しやすいです。</p><p class=\"moji-content\" data-starttime=\"00:00:22,325\" data-endtime=\"00:00:31,125\">ただ、野菜を加熱すると、ビタミンやビタミン群ミネラルが破壊されたり流出したりしてしまいます。</p><p class=\"moji-content\" data-starttime=\"00:00:31,600\" data-endtime=\"00:00:43,750\">一方、サラダなどで食べる生野菜は豊富なビタミンや食物繊維をそのまま取り入れることができますが、温野菜に比べ、消化吸収に時間がかかります。</p><p class=\"moji-content\" data-starttime=\"00:00:44,175\" data-endtime=\"00:00:54,925\">胃腸が弱っている時に食べ過ぎると、体に負担をかけてしまいます。温野菜と生野菜上手に組み合わせて食べるのは理想的ですね。</p><p class=\"moji-content\" data-starttime=\"00:01:00,325\" data-endtime=\"00:01:04,700\">栄養士は野菜の何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:01:06,250\" data-endtime=\"00:01:09,925\">1美味しく食べる為の工夫。</p><p class=\"moji-content\" data-starttime=\"00:01:12,475\" data-endtime=\"00:01:16,475\">2食べる量と健康の関係。</p><p class=\"moji-content\" data-starttime=\"00:01:19,050\" data-endtime=\"00:01:22,850\">3沢山食べた方がいい訳。</p><p class=\"moji-content\" data-starttime=\"00:01:25,475\" data-endtime=\"00:01:30,100\">4調理法によって異なる利点と欠点。</p>"
+      ],
+      "sourceQuestionNumber": 80,
+      "available": false,
+      "sourceObjectId": "qehbDyZ3Db",
+      "sourceParentId": "KVflfgVRy5",
+      "sourceIdentity": "202607N1020418080*03*3番"
+    },
+    {
+      "id": "imported:202607:N1:4:266097927397729:81",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題3 では、用紙に何も印刷されていません。このは、全体としてどんな内容かを聞くです。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:04,475\">大学で先生が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,225\" data-endtime=\"00:00:20,475\">台風は夏から秋にかけて多く発生します。台風が通過すると、強い風で海の水が上下にかき混ぜられるので、海の表面近くの温度が高くなりすぎるのを抑えられます。</p><p class=\"moji-content\" data-starttime=\"00:00:21,425\" data-endtime=\"00:00:29,125\">この時海水に含まれる酸素や栄養分がよく混ざり、海の生物が住みやすい環境になります。</p><p class=\"moji-content\" data-starttime=\"00:00:29,950\" data-endtime=\"00:00:39,275\">また、台風が通る場所にはたくさんの雨が降るため、農業用や生活用など資源としての水が得られます。</p><p class=\"moji-content\" data-starttime=\"00:00:44,850\" data-endtime=\"00:00:48,300\">先生は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:49,850\" data-endtime=\"00:00:53,350\">1台風による恩恵。</p><p class=\"moji-content\" data-starttime=\"00:00:55,825\" data-endtime=\"00:00:58,875\">2台風の進路。</p><p class=\"moji-content\" data-starttime=\"00:01:01,400\" data-endtime=\"00:01:05,875\">3台風から環境を守る方法。</p><p class=\"moji-content\" data-starttime=\"00:01:08,425\" data-endtime=\"00:01:12,350\">4台風が発生する原因。</p>"
+      ],
+      "sourceQuestionNumber": 81,
+      "available": false,
+      "sourceObjectId": "9BDZ5OC6pB",
+      "sourceParentId": "HrD06SaE21",
+      "sourceIdentity": "202607N1020418081*04*4番"
+    },
+    {
+      "id": "imported:202607:N1:4:58771197712071:82",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題3 では、用紙に何も印刷されていません。このは、全体としてどんな内容かを聞くです。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,075\" data-endtime=\"00:00:05,325\">市民講座で専門家が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,825\" data-endtime=\"00:00:20,775\">恐竜の化石というと、骨や歯をイメージしますが、地面を歩いていた場所にできた足跡も化石として残っています。それを見ると恐竜の大まかな種類が識別できます。</p><p class=\"moji-content\" data-starttime=\"00:00:21,025\" data-endtime=\"00:00:32,125\">また足跡の縦の長さからその跡をつけた恐竜の腰の高さが把握でき、歩幅から歩行の速度を推定することもできます。</p><p class=\"moji-content\" data-starttime=\"00:00:32,800\" data-endtime=\"00:00:39,900\">他にも群れで生活していたかどうかや、怪我をしていたかどうかなどを知る手がかりにもなります。</p><p class=\"moji-content\" data-starttime=\"00:00:40,400\" data-endtime=\"00:00:46,350\">骨や歯の化石だけからは定かにできない。多くのことを語りかけてくれます。</p><p class=\"moji-content\" data-starttime=\"00:00:51,950\" data-endtime=\"00:00:55,350\">専門家は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:56,900\" data-endtime=\"00:01:01,625\">1最近発見された恐竜の化石。</p><p class=\"moji-content\" data-starttime=\"00:01:04,150\" data-endtime=\"00:01:08,600\">2恐竜の骨や歯の研究成果。</p><p class=\"moji-content\" data-starttime=\"00:01:11,225\" data-endtime=\"00:01:15,525\">3恐竜の化石が見つかりやすい場所。</p><p class=\"moji-content\" data-starttime=\"00:01:18,100\" data-endtime=\"00:01:22,175\">4恐竜の足跡からわかること。</p>"
+      ],
+      "sourceQuestionNumber": 82,
+      "available": false,
+      "sourceObjectId": "DyoJIaiMlt",
+      "sourceParentId": "KehmqjJN1Q",
+      "sourceIdentity": "202607N1020418082*05*5番"
+    },
+    {
+      "id": "imported:202607:N1:4:220451561085938:83",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,975\" data-endtime=\"00:00:06,100\">サクラ社の人たちと一緒に仕事するのはこりごりですよね。</p><p class=\"moji-content\" data-starttime=\"00:00:07,750\" data-endtime=\"00:00:11,400\">①ご一緒できてよかったですね。</p><p class=\"moji-content\" data-starttime=\"00:00:13,025\" data-endtime=\"00:00:16,300\">②ほんと苦労しましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:18,000\" data-endtime=\"00:00:22,050\">③またぜひ仕事したいですよね。</p>"
+      ],
+      "sourceQuestionNumber": 83,
+      "available": false,
+      "sourceObjectId": "fTgYrapOFP",
+      "sourceParentId": "QD26vji86b",
+      "sourceIdentity": "202607N1020420083*01*1番"
+    },
+    {
+      "id": "imported:202607:N1:4:201053598735570:84",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,725\" data-endtime=\"00:00:07,000\">木村さん、お客さんに頼まれたからって安くするにも程があるんじゃない。</p><p class=\"moji-content\" data-starttime=\"00:00:08,675\" data-endtime=\"00:00:11,900\">①安くするほどいいんだね。</p><p class=\"moji-content\" data-starttime=\"00:00:13,600\" data-endtime=\"00:00:16,925\">②もっと安くした方がよかった？</p><p class=\"moji-content\" data-starttime=\"00:00:18,650\" data-endtime=\"00:00:21,650\">③次からは気を付けるよ。</p>"
+      ],
+      "sourceQuestionNumber": 84,
+      "available": false,
+      "sourceObjectId": "EoOz7M2dv0",
+      "sourceParentId": "Ck1s4B2dCv",
+      "sourceIdentity": "202607N1020420084*02*2番"
+    },
+    {
+      "id": "imported:202607:N1:4:209376224649929:85",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,950\" data-endtime=\"00:00:10,225\">山下さん、来月の自治会の集まりですが、参加するにせよしないにせよ出欠をお知らせいただけますか。</p><p class=\"moji-content\" data-starttime=\"00:00:11,775\" data-endtime=\"00:00:17,175\">①参加する人は連絡する必要ないってことですね。</p><p class=\"moji-content\" data-starttime=\"00:00:18,775\" data-endtime=\"00:00:23,575\">②いずれにしても予定が分かったらお伝えしますね。</p><p class=\"moji-content\" data-starttime=\"00:00:25,225\" data-endtime=\"00:00:30,075\">③不参加の場合のみ、お知らせすればいいですよね。</p>"
+      ],
+      "sourceQuestionNumber": 85,
+      "available": false,
+      "sourceObjectId": "mq96pVKG0Y",
+      "sourceParentId": "3KDsZnUrrF",
+      "sourceIdentity": "202607N1020420085*03*3番"
+    },
+    {
+      "id": "imported:202607:N1:4:108067212645744:86",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,600\" data-endtime=\"00:00:10,400\">岡本さんがなんだか不機嫌なんだけど理由聞くに聞けなくて。</p><p class=\"moji-content\" data-starttime=\"00:00:11,950\" data-endtime=\"00:00:15,825\">①どうして不機嫌なのか聞きたくないんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:17,475\" data-endtime=\"00:00:20,750\">②理由なんて言ってた？</p><p class=\"moji-content\" data-starttime=\"00:00:22,400\" data-endtime=\"00:00:26,650\">③聞いたら余計に機嫌悪くなりそうだもんね。</p>"
+      ],
+      "sourceQuestionNumber": 86,
+      "available": false,
+      "sourceObjectId": "lVzSJVKxM1",
+      "sourceParentId": "7zHjJTad8V",
+      "sourceIdentity": "202607N1020420086*04*4番"
+    },
+    {
+      "id": "imported:202607:N1:4:27648671653385:87",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:06,475\">ねぇ、物価が上がった分、アルバイト代にも反映してほしくない？</p><p class=\"moji-content\" data-starttime=\"00:00:08,100\" data-endtime=\"00:00:12,700\">①ほんと、物価に合わせて上がらないかな。</p><p class=\"moji-content\" data-starttime=\"00:00:14,325\" data-endtime=\"00:00:18,050\">②ちょうど物価と釣り合ってるね。</p><p class=\"moji-content\" data-starttime=\"00:00:19,700\" data-endtime=\"00:00:24,200\">③えっ？物価とは関係なく上げてほしいの？</p>"
+      ],
+      "sourceQuestionNumber": 87,
+      "available": false,
+      "sourceObjectId": "33DaVpHUCb",
+      "sourceParentId": "3UBRDcnKWW",
+      "sourceIdentity": "202607N1020420087*05*5番"
+    },
+    {
+      "id": "imported:202607:N1:4:189793897213186:88",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:06,400\">最新のスマホ買ってって親に頼んだら軽くあしらわれたよ。</p><p class=\"moji-content\" data-starttime=\"00:00:07,975\" data-endtime=\"00:00:12,325\">①高いし、なかなか買ってもらえないよね</p><p class=\"moji-content\" data-starttime=\"00:00:14,025\" data-endtime=\"00:00:17,400\">②簡単にお金出してくれたんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:19,200\" data-endtime=\"00:00:22,675\">③買ってもらえそうでラッキーじゃない。</p>"
+      ],
+      "sourceQuestionNumber": 88,
+      "available": false,
+      "sourceObjectId": "XcRSDbnnSh",
+      "sourceParentId": "FVQKQUMyJx",
+      "sourceIdentity": "202607N1020420088*06*6番"
+    },
+    {
+      "id": "imported:202607:N1:4:59552354593364:89",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,775\" data-endtime=\"00:00:05,000\">和田さんは学生会の会長だけあるよね。</p><p class=\"moji-content\" data-starttime=\"00:00:06,575\" data-endtime=\"00:00:10,475\">①彼ならきっと会長になれるよね。</p><p class=\"moji-content\" data-starttime=\"00:00:12,025\" data-endtime=\"00:00:15,575\">②いかにもリーダーって感じだよね。</p><p class=\"moji-content\" data-starttime=\"00:00:17,200\" data-endtime=\"00:00:20,450\">③会長にふさわしくないの？</p>"
+      ],
+      "sourceQuestionNumber": 89,
+      "available": false,
+      "sourceObjectId": "VcnAERSlFc",
+      "sourceParentId": "L8zSwpfH02",
+      "sourceIdentity": "202607N1020420089*07*7番"
+    },
+    {
+      "id": "imported:202607:N1:4:65107889153840:90",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:07,300\">アオバ機械への納品の日程、あちらの都合で変更を余儀なくされました。</p><p class=\"moji-content\" data-starttime=\"00:00:08,875\" data-endtime=\"00:00:12,775\">①変更せずに済んで助かりましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:14,325\" data-endtime=\"00:00:18,050\">②うちの都合も聞いてもらえたんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:19,650\" data-endtime=\"00:00:23,825\">③スケジュールを調整しないといけないですね。</p>"
+      ],
+      "sourceQuestionNumber": 90,
+      "available": false,
+      "sourceObjectId": "ung0JiamR5",
+      "sourceParentId": "3IDbMDyqMR",
+      "sourceIdentity": "202607N1020420090*08*8番"
+    },
+    {
+      "id": "imported:202607:N1:4:21162352502714:91",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,175\" data-endtime=\"00:00:09,025\">去年発売したうちのチーズ、人気俳優のコメントを機に売り上げが急に伸びましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:10,800\" data-endtime=\"00:00:15,175\">①確かにあれがきっかけで売れましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:16,775\" data-endtime=\"00:00:21,200\">②発売直後からよく売れましたもんね。</p><p class=\"moji-content\" data-starttime=\"00:00:22,725\" data-endtime=\"00:00:27,225\">③売れたのはコメントと関係ないってことですか。</p>"
+      ],
+      "sourceQuestionNumber": 91,
+      "available": false,
+      "sourceObjectId": "h23TvWshJG",
+      "sourceParentId": "wrCh8YSnBn",
+      "sourceIdentity": "202607N1020420091*09*9番"
+    },
+    {
+      "id": "imported:202607:N1:4:186618174513802:92",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,075\" data-endtime=\"00:00:07,050\">週末の学園祭、台風の影響で中止の可能性も否定できないって。</p><p class=\"moji-content\" data-starttime=\"00:00:08,750\" data-endtime=\"00:00:12,425\">①えっ、中止になっちゃったの？</p><p class=\"moji-content\" data-starttime=\"00:00:14,025\" data-endtime=\"00:00:18,675\">②よかった。中止の心配は全くないんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:20,350\" data-endtime=\"00:00:24,550\">③そう？中止にならないといいけど。</p>"
+      ],
+      "sourceQuestionNumber": 92,
+      "available": false,
+      "sourceObjectId": "2nKZn3bK6r",
+      "sourceParentId": "p6zTlIB2MA",
+      "sourceIdentity": "202607N1020420092*10*10番"
+    },
+    {
+      "id": "imported:202607:N1:4:187187170991645:93",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題4 では、用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、１から３の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,150\" data-endtime=\"00:00:09,300\">ミナミ電気からの機械の購入ですが、いくら条件がよかろうと相手への即答は避けてくださいね。</p><p class=\"moji-content\" data-starttime=\"00:00:10,850\" data-endtime=\"00:00:15,425\">①いい条件を出されても慎重に進めます。</p><p class=\"moji-content\" data-starttime=\"00:00:17,125\" data-endtime=\"00:00:21,425\">②条件によっては即答してもいいんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:23,075\" data-endtime=\"00:00:26,975\">③ではすぐに契約に移ります。</p>"
+      ],
+      "sourceQuestionNumber": 93,
+      "available": false,
+      "sourceObjectId": "P4YDyVPkiG",
+      "sourceParentId": "BmDrHobD66",
+      "sourceIdentity": "202607N1020420093*11*11番"
+    },
+    {
+      "id": "imported:202607:N1:4:215787032849135:94",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題5 では長めの話を聞きます。このには練習はありません。メモをとってもかまいません。 \n１番\n用紙に何も印刷されていません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。\n２番\nまず話を聞いてください。それから、二つの質問を聞いて、それぞれ用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "①"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "②"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "③"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "④"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,500\" data-endtime=\"00:00:04,850\">商店街の会議で3人の店長が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,550\" data-endtime=\"00:00:17,350\">店長：あそこに大型スーパーができてから、この商店街から客足が遠のいていますよね。どうにか商店街を盛り上げていく方法を考えないと。</p><p class=\"moji-content\" data-starttime=\"00:00:17,375\" data-endtime=\"00:00:27,125\">男店員：そうですね。ここはひとつ景気づけに、何か大きいイベントとかはどうでしょうか。例えば祭りをしたり、格安セールをしたり。</p><p class=\"moji-content\" data-starttime=\"00:00:27,200\" data-endtime=\"00:00:48,475\">店長：うんうん。イベントは確かに活気づきますね。でもそれじゃあ、一時的な効果しかないんじゃないですか？もっと継続的な何か、お客さんが何度も足を運んでくれるような……うーん、ポイント制を導入するとか、憩いの場を提供するとか。</p><p class=\"moji-content\" data-starttime=\"00:00:48,475\" data-endtime=\"00:01:02,300\">男店員：ポイント制って、買い物したらポイントがもらえて、貯まったら景品と交換できるっていうあれでしょ？うーん、継続性は確かにあるけど、スーパーがもうやってるからなあ。</p><p class=\"moji-content\" data-starttime=\"00:01:02,300\" data-endtime=\"00:01:12,275\">店長：そうですねえ。同じことをしてもねえ。ところで、さっき言っていた、もう一つの憩いの場の提供っていうのは何ですか？</p><p class=\"moji-content\" data-starttime=\"00:01:12,375\" data-endtime=\"00:01:24,250\">女店員：ああ、街の皆さんが気軽に集まって、コミュニケーションできるような場所を作るんです。商店街のあちこちにベンチを置いたらどうでしょう。すぐにでもできますよね。</p><p class=\"moji-content\" data-starttime=\"00:01:24,250\" data-endtime=\"00:01:38,850\">店長：ああなるほど。人が自然に集まるようになれば、商店街も活気づきますね。そうやって人を集めることが大事かな。イベントは様子を見てからまた検討しましょう。</p><p class=\"moji-content\" data-starttime=\"00:01:39,125\" data-endtime=\"00:01:40,125\">男店員：そうですね。</p><p class=\"moji-content\" data-starttime=\"00:01:45,650\" data-endtime=\"00:01:50,475\">問題：この商店街では、まずどんな工夫をすることにしましたか？</p><p class=\"moji-content\" data-starttime=\"00:01:51,975\" data-endtime=\"00:01:55,250\">1．祭りを企画する。</p><p class=\"moji-content\" data-starttime=\"00:01:57,800\" data-endtime=\"00:02:00,900\">2．セールを実施する。</p><p class=\"moji-content\" data-starttime=\"00:02:03,400\" data-endtime=\"00:02:07,025\">3．ポイント制を導入する。</p><p class=\"moji-content\" data-starttime=\"00:02:09,625\" data-endtime=\"00:02:12,725\">4．ベンチを設置する。</p>"
+      ],
+      "sourceQuestionNumber": 94,
+      "available": false,
+      "sourceObjectId": "qBBE8BZl1V",
+      "sourceParentId": "MqZC0xGXn9",
+      "sourceIdentity": "202607N1020421094*01*1番"
+    },
+    {
+      "id": "imported:202607:N1:4:60811322907375:95",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題5 では長めの話を聞きます。このには練習はありません。メモをとってもかまいません。 \n１番\n用紙に何も印刷されていません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。\n２番\nまず話を聞いてください。それから、二つの質問を聞いて、それぞれ用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "コース1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "コース2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "コース3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "コース4<br>"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,375\" data-endtime=\"00:00:05,175\">体育大学で、先生が選択コースについて話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,975\" data-endtime=\"00:00:19,950\">「えー、皆さんは、来年2年次からは選択コースに分かれます。コースは全部で4つありますので、各自その中から一つ選んで下さい。手元の資料をご覧ください。</p><p class=\"moji-content\" data-starttime=\"00:00:20,375\" data-endtime=\"00:00:30,325\">コース1はプロを目指すスポーツ選手の指導者育成を目的としています。トレーニングのノウハウのほかに、スポーツ心理も学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:30,850\" data-endtime=\"00:00:45,450\">コース2は、小中学生のスポーツの指導者を育てるコースです。小学生や中学生の健やかな成長のために、体や心理的な特徴を理解し、指導できる人を育てることが目的です。</p><p class=\"moji-content\" data-starttime=\"00:00:46,225\" data-endtime=\"00:00:57,450\">コース3は、子供から大人まで幅広い世代の健康づくりのための指導について学ぶコースです。運動施設などの管理に必要なノウハウも学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:58,175\" data-endtime=\"00:01:11,975\">コース4では高齢者を対象とする運動指導について学びます。最近では、健康維持のために運動をする高齢者も多く、高齢者専門のトレーナーの需要が増えています。」</p><p class=\"moji-content\" data-starttime=\"00:01:13,600\" data-endtime=\"00:01:15,650\">女「どのコースにしようかなあ？」</p><p class=\"moji-content\" data-starttime=\"00:01:15,775\" data-endtime=\"00:01:24,375\">男「山本さんは子供が好きだから、子供の指導が学べるのがいいんじゃない？小学校の体育の教員免許、取るつもりだって言ってたよね。」</p><p class=\"moji-content\" data-starttime=\"00:01:24,475\" data-endtime=\"00:01:31,150\">女「うーん、それは将来の保険というかなんというか、特に夢ってわけじゃないんだ。」</p><p class=\"moji-content\" data-starttime=\"00:01:31,175\" data-endtime=\"00:01:47,975\">男「そうなんだ。僕は今バスケやってて、できればプロにって思ってるけど、そう簡単にはなれないだろうし、将来のことを考えると、選手としての自分の経験を生かせるコースがいいな。プレイヤーの気持ちとか、心の状態みたいなものにも興味あるし。」</p><p class=\"moji-content\" data-starttime=\"00:01:47,975\" data-endtime=\"00:02:05,000\">女「そっか。私はスポーツを通してみんなの健康づくりにかかわる仕事ができればいいなって思ってるんだ。最近、母が地域の運動教室に通うようになってね、体の調子が良くなって友達も増えたって、なんだか楽しそうなの。」</p><p class=\"moji-content\" data-starttime=\"00:02:05,000\" data-endtime=\"00:02:06,075\">男「ふーん。」</p><p class=\"moji-content\" data-starttime=\"00:02:06,150\" data-endtime=\"00:02:13,800\">女「色んな世代の人がスポーツを楽しめる場が作れたらいいなって思ってるんだ。うん、このコースにしよう。」</p><p class=\"moji-content\" data-starttime=\"00:02:19,475\" data-endtime=\"00:02:25,325\">質問1 男の学生はどのコースを選択しますか？</p><p class=\"moji-content\" data-starttime=\"00:02:39,025\" data-endtime=\"00:02:44,750\">質問2 女の学生はどのコースを選択しますか？</p>"
+      ],
+      "sourceQuestionNumber": 95,
+      "available": false,
+      "sourceObjectId": "EHI1AnJxzF",
+      "sourceParentId": "Oh8fW7AaEe",
+      "sourceIdentity": "202607N1020421095*02*質問1"
+    },
+    {
+      "id": "imported:202607:N1:4:102480938764044:96",
+      "source": "imported",
+      "period": "202607",
+      "level": "N1",
+      "category": "听力",
+      "instruction": "問題5 では長めの話を聞きます。このには練習はありません。メモをとってもかまいません。 \n１番\n用紙に何も印刷されていません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。\n２番\nまず話を聞いてください。それから、二つの質問を聞いて、それぞれ用紙の１から４の中から、最もよいものを一つ選んでください。",
+      "prompt": "",
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "コース1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "コース2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "コース3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "コース4<br>"
+        }
+      ],
+      "explanation": [
+        "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,375\" data-endtime=\"00:00:05,175\">体育大学で、先生が選択コースについて話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,975\" data-endtime=\"00:00:19,950\">「えー、皆さんは、来年2年次からは選択コースに分かれます。コースは全部で4つありますので、各自その中から一つ選んで下さい。手元の資料をご覧ください。</p><p class=\"moji-content\" data-starttime=\"00:00:20,375\" data-endtime=\"00:00:30,325\">コース1はプロを目指すスポーツ選手の指導者育成を目的としています。トレーニングのノウハウのほかに、スポーツ心理も学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:30,850\" data-endtime=\"00:00:45,450\">コース2は、小中学生のスポーツの指導者を育てるコースです。小学生や中学生の健やかな成長のために、体や心理的な特徴を理解し、指導できる人を育てることが目的です。</p><p class=\"moji-content\" data-starttime=\"00:00:46,225\" data-endtime=\"00:00:57,450\">コース3は、子供から大人まで幅広い世代の健康づくりのための指導について学ぶコースです。運動施設などの管理に必要なノウハウも学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:58,175\" data-endtime=\"00:01:11,975\">コース4では高齢者を対象とする運動指導について学びます。最近では、健康維持のために運動をする高齢者も多く、高齢者専門のトレーナーの需要が増えています。」</p><p class=\"moji-content\" data-starttime=\"00:01:13,600\" data-endtime=\"00:01:15,650\">女「どのコースにしようかなあ？」</p><p class=\"moji-content\" data-starttime=\"00:01:15,775\" data-endtime=\"00:01:24,375\">男「山本さんは子供が好きだから、子供の指導が学べるのがいいんじゃない？小学校の体育の教員免許、取るつもりだって言ってたよね。」</p><p class=\"moji-content\" data-starttime=\"00:01:24,475\" data-endtime=\"00:01:31,150\">女「うーん、それは将来の保険というかなんというか、特に夢ってわけじゃないんだ。」</p><p class=\"moji-content\" data-starttime=\"00:01:31,175\" data-endtime=\"00:01:47,975\">男「そうなんだ。僕は今バスケやってて、できればプロにって思ってるけど、そう簡単にはなれないだろうし、将来のことを考えると、選手としての自分の経験を生かせるコースがいいな。プレイヤーの気持ちとか、心の状態みたいなものにも興味あるし。」</p><p class=\"moji-content\" data-starttime=\"00:01:47,975\" data-endtime=\"00:02:05,000\">女「そっか。私はスポーツを通してみんなの健康づくりにかかわる仕事ができればいいなって思ってるんだ。最近、母が地域の運動教室に通うようになってね、体の調子が良くなって友達も増えたって、なんだか楽しそうなの。」</p><p class=\"moji-content\" data-starttime=\"00:02:05,000\" data-endtime=\"00:02:06,075\">男「ふーん。」</p><p class=\"moji-content\" data-starttime=\"00:02:06,150\" data-endtime=\"00:02:13,800\">女「色んな世代の人がスポーツを楽しめる場が作れたらいいなって思ってるんだ。うん、このコースにしよう。」</p><p class=\"moji-content\" data-starttime=\"00:02:19,475\" data-endtime=\"00:02:25,325\">質問1 男の学生はどのコースを選択しますか？</p><p class=\"moji-content\" data-starttime=\"00:02:39,025\" data-endtime=\"00:02:44,750\">質問2 女の学生はどのコースを選択しますか？</p>"
+      ],
+      "sourceQuestionNumber": 96,
+      "available": false,
+      "sourceObjectId": "QcV7X3MpSN",
+      "sourceParentId": "Oh8fW7AaEe",
+      "sourceIdentity": "202607N1020421096*03*質問2"
+    }
+  ]
+}

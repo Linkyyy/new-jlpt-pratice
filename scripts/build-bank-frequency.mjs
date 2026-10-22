@@ -19,7 +19,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'src/data/bank-frequency');
 const imported = path.join(root, 'src/data/imported-bank/questions');
 const files = (await fs.readdir(imported)).filter(file => /^\d{6}-N[1-5]-[1-4]\.json$/.test(file)).sort();
+const transcriptDirectory = path.join(root, 'src/data/frequency-listening/exams');
+const transcriptFiles = (await fs.readdir(transcriptDirectory)).filter(file => /^\d{6}-N[1-5]\.json$/.test(file)).sort();
 const inputs = ['src/data/question-bank.json', 'src/data/imported-bank/index.json', 'src/lib/bank-frequency.mjs', 'src/lib/frequency-lexicon.mjs', 'src/lib/frequency-idioms.mjs', 'src/lib/frequency-subtypes.mjs', 'src/lib/frequency-definitions.mjs', 'src/lib/frequency-word-supplements.mjs', 'src/lib/frequency-study-notes.mjs', 'src/data/frequency-dictionary/source.json', 'scripts/build-bank-frequency.mjs', ...files.map(file => `src/data/imported-bank/questions/${file}`)];
+inputs.push('src/data/frequency-listening/index.json', ...transcriptFiles.map(file => `src/data/frequency-listening/exams/${file}`));
 inputs.push('src/lib/frequency-simplified.mjs', 'src/lib/frequency-levels.mjs', 'src/data/frequency-levels/entries.json', 'src/data/frequency-levels/source.json');
 inputs.push('src/lib/frequency-review.mjs', 'src/lib/frequency-idiom-supplements.mjs', 'src/data/frequency-levels/supplement-entries.json', 'src/data/frequency-levels/supplement-source.json', 'src/data/frequency-levels/reviewed-entries.json');
 inputs.push('src/lib/frequency-variants.mjs', 'src/lib/frequency-morphology.mjs', 'src/lib/frequency-quality.mjs', 'src/data/frequency-levels/expression-entries.json', 'src/data/frequency-levels/expression-source.json');
@@ -70,6 +73,18 @@ for (const [level, periods] of Object.entries(original.papers)) for (const [peri
       options: options.map(text => ({ text })), explanation: Array.isArray(explanation) ? explanation : [explanation] });
   }
 }
+// Text-only listening sources affect statistics, never the practice catalog or scoring.
+const transcriptManifest = JSON.parse(contents.get('src/data/frequency-listening/index.json'));
+let transcriptCount = 0;
+for (const file of transcriptFiles) {
+  const source = JSON.parse(contents.get(`src/data/frequency-listening/exams/${file}`));
+  if (source.generatedBy !== 'jlpt-practice/listening-transcripts/v1' || source.questions.length !== source.questionCount) throw new Error(`Invalid transcript source: ${file}`);
+  for (const question of source.questions) {
+    if (question.available !== false || question.category !== '听力') throw new Error(`Transcript source cannot enable practice: ${question.id}`);
+    builder.addQuestion(question); transcriptCount++;
+  }
+}
+if (transcriptCount !== transcriptManifest.questionCount) throw new Error('Transcript source count mismatch');
 const corpus = builder.finish(revision);
 const correctedReadings = correctFrequencyReadings(corpus, dictionaryEntries);
 annotateFrequencyCorpus(corpus, dictionaryEntries);

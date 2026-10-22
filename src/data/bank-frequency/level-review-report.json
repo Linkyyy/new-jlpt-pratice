@@ -7119,27 +7119,6 @@
     },
     {
       "kind": "word",
-      "label": "つえ",
-      "reading": "つえ",
-      "levels": [
-        "N1"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1356620",
-          "levels": [
-            "N1"
-          ],
-          "sourceSpellings": [
-            "杖"
-          ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
       "label": "わがまま",
       "reading": "わがまま",
       "levels": [
@@ -26638,6 +26617,35 @@
           "sourceSpellings": [
             "免れる"
           ]
+        }
+      ],
+      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
+      "kind": "word",
+      "label": "カゴ",
+      "reading": "かご",
+      "levels": [
+        "N3"
+      ],
+      "method": "dictionary-variant",
+      "evidence": [
+        {
+          "id": "1590200",
+          "levels": [
+            "N3"
+          ],
+          "sourceSpellings": [
+            "籠",
+            "篭"
+          ]
+        },
+        {
+          "id": "1590200",
+          "levels": [
+            "N3"
+          ],
+          "sourceSpellings": []
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -68763,18 +68771,30 @@
       "label": "早計",
       "reading": "そうけい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "grammar",
+      "label": "ないではいられない",
+      "reading": "ないではいられない",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "バタバタ",
+      "reading": "ばたばた",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     }
   ],
   "totals": {
     "word": {
-      "total": 14033,
-      "before": 5643,
+      "total": 14051,
+      "before": 5660,
       "addedSourced": 1097,
       "addedEstimates": 273,
-      "after": 7013
+      "after": 7030
     },
     "grammar": {
-      "total": 221,
+      "total": 222,
       "before": 168,
       "addedSourced": 12,
       "addedEstimates": 41,
@@ -68788,5 +68808,5 @@
       "after": 184
     }
   },
-  "compounds": 383
+  "compounds": 384
 }

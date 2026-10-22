@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "revision": "1688af545167d18e8816f077f848baed2670e9af16291069d03157085a0392e7",
+  "revision": "0b3079215f3769901eb4b08acb85d53626d186278a3a90f097d7e8dcb38b6cb0",
   "summary": {
-    "questions": 9316,
+    "questions": 9552,
     "papers": 102,
-    "units": 40762,
-    "terms": 14438,
-    "listeningQuestions": 2634,
-    "transcripts": 2633,
-    "excludedFragments": 2425,
+    "units": 41392,
+    "terms": 14457,
+    "listeningQuestions": 2870,
+    "transcripts": 2869,
+    "excludedFragments": 2530,
     "grammarExpressions": 238,
     "idiomExpressions": 262
   },
   "definitionSummary": {
-    "matched": 14273,
-    "missing": 165,
-    "total": 14438
+    "matched": 14276,
+    "missing": 181,
+    "total": 14457
   },
   "referenceSource": {
     "name": "Jonathan Waller / Tanos · Stephen Kraus (yomitan-jlpt-vocab)",
@@ -76,10 +76,10 @@
     "reviewRevision": "2026-10-22-whole-word-pos-and-orthography"
   },
   "qualitySummary": {
-    "excludedTerms": 1950,
+    "excludedTerms": 2081,
     "reasons": {
       "personal_or_organization_name": 420,
-      "unverified_word_or_spelling": 1523,
+      "unverified_word_or_spelling": 1654,
       "symbol_or_placeholder": 7
     }
   },

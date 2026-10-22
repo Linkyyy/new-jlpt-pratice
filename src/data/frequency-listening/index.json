@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "generatedBy": "jlpt-practice/listening-transcripts/v1",
+  "questionCount": 236,
+  "passageCount": 230,
+  "groups": [
+    {
+      "file": "202412-N3.json",
+      "level": "N3",
+      "period": "202412",
+      "questionCount": 28,
+      "passageCount": 28,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202507-N1.json",
+      "level": "N1",
+      "period": "202507",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202507-N2.json",
+      "level": "N2",
+      "period": "202507",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202512-N1.json",
+      "level": "N1",
+      "period": "202512",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202512-N2.json",
+      "level": "N2",
+      "period": "202512",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202512-N3.json",
+      "level": "N3",
+      "period": "202512",
+      "questionCount": 28,
+      "passageCount": 28,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202607-N1.json",
+      "level": "N1",
+      "period": "202607",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    },
+    {
+      "file": "202607-N2.json",
+      "level": "N2",
+      "period": "202607",
+      "questionCount": 30,
+      "passageCount": 29,
+      "missingTranscripts": 0
+    }
+  ]
+}

@@ -197,7 +197,8 @@ test('the production corpus covers every available and unavailable question plus
   const c = JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
   const meta = JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/manifest.json', import.meta.url)));
   const manifest = JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json', import.meta.url)));
-  assert.equal(c.questions.length, manifest.report.questions + 90); assert.equal(new Set(c.questions.map(q => q[0])).size, c.questions.length);
+  const transcripts=JSON.parse(fs.readFileSync(new URL('../src/data/frequency-listening/index.json',import.meta.url)));
+  assert.equal(c.questions.length, manifest.report.questions + 90 + transcripts.questionCount); assert.equal(new Set(c.questions.map(q => q[0])).size, c.questions.length);
   assert.equal(c.revision, meta.revision); assert.equal(c.summary.questions, meta.summary.questions);
   for (const [field, ids, counts] of c.units) {
     assert.ok(['passage', 'prompt', 'options', 'transcript'].includes(field));
@@ -541,7 +542,8 @@ test('the rebuilt production index excludes audited artifacts from every query a
   const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   const report=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/quality-report.json',import.meta.url)));
   const bank=JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json',import.meta.url)));
-  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,bank.report.questions+90);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
+  const transcripts=JSON.parse(fs.readFileSync(new URL('../src/data/frequency-listening/index.json',import.meta.url)));
+  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,bank.report.questions+90+transcripts.questionCount);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
   for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫','遍い','しげい'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
   assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
   for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);
