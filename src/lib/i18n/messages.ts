@@ -1,4 +1,5 @@
 export const messages: readonly (readonly [string, string, string])[] = [
+  ["词条设置", "語句の設定", "Term settings"],
   ["筛选与设置", "絞り込みと設定", "Filters and settings"],
   ["词条显示设置", "語句の表示設定", "Term display settings"],
   ["默认展开原题例句", "原文の例文を最初から表示", "Expand source examples by default"],
