@@ -509,7 +509,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "pic/320251259.jpg",
+        "picture": "pic/320251224.jpg",
         "audio": ""
       },
       "raw": {
@@ -524,7 +524,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t（2）</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\t（大学で）</p><p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\">\tこのお知らせが掲示板にはってある。</p>",
         "answer": 4,
         "assistantNew": "[4] 当天带年费和饮料去即可。公告写明“参加不需要事先联系”“饮料请自带”“想成为会员的人可在当天支付年费2000日元，且参加费免费”，所以这一项最完整准确。\n[1] 不需要通过邮件报名，邮件仅限“有问题的人”咨询。\n[2] 点心由主办方准备，不必自带。\n[3] 若当天入会，参加费免费，因此不用同时交参加费。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\">（2）</p><p class=\"moj-trans\">（在大学里）</p><p class=\"moj-trans\">这张通知贴在公告栏上。</p>",
-        "picture": "pic/320251259.jpg",
+        "picture": "pic/320251224.jpg",
         "option1": "メールで参加の連絡をして、当日、年会費と飲み物を持っていく。",
         "option2": "当日、年会費とお菓子と飲み物を持っていく。",
         "option3": "当日、年会費と参加費と飲み物を持っていく。",
@@ -539,7 +539,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "pic/320251272.jpg",
+        "picture": "pic/320251237.jpg",
         "audio": ""
       },
       "raw": {
@@ -554,7 +554,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 1,
         "assistantNew": "[1] 水曜日に読書席A。理由有两点：第一，周三图书馆开放到20点，17点后还能连续坐2小时；第二，读書席A用于阅读馆内资料且“时间不限”，正好满足要求。\n[2] 読書席B虽然也能看资料，但一次最多1小时30分，不够2小时。\n[3] 周六17点后图书馆18点就闭馆，无法坐满2小时。\n[4] 周六时间不够，而且読書席B本身时长也不够。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "pic/320251272.jpg",
+        "picture": "pic/320251237.jpg",
         "option1": "水曜日に、読書席Aを利用する。",
         "option2": "水曜日に、読書席Aか読書席Bを利用する。",
         "option3": "土曜日に、読書席Aを利用する。",
@@ -569,7 +569,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "pic/320251272.jpg",
+        "picture": "pic/320251237.jpg",
         "audio": ""
       },
       "raw": {
@@ -584,7 +584,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 1,
         "assistantNew": "[1] 她是高中生，平日15点左右可使用；要学习且想用自己的电脑，可以选择読書席B或学習席。这两种席位都允许自带电脑，但都需要带借书证去前台申请，所以这一项完全符合。\n[2] インターネット席是馆内电脑用席位，不是给自带电脑学习用的核心选择。\n[3] 読書席B和学習席都需要申请，不能直接坐。\n[4] 学習席需要申请，インターネット席也需要申请，因此不对。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "pic/320251272.jpg",
+        "picture": "pic/320251237.jpg",
         "option1": "貸し出しカードを持って受付に行き、読書席Bか学習席の申し込みをする。",
         "option2": "貸し出しカードを持って受付に行き、学習席かインターネット席の申し込みをする。",
         "option3": "読書席Bか学習席を利用する。申し込みは必要ない。",
@@ -620,7 +620,7 @@
           "question": ""
         },
         "uploadImages": {
-          "passage": "pic/320251259.jpg",
+          "passage": "pic/320251224.jpg",
           "question": ""
         }
       },
@@ -745,7 +745,7 @@
           "question": ""
         },
         "uploadImages": {
-          "passage": "pic/320251272.jpg",
+          "passage": "pic/320251237.jpg",
           "question": ""
         }
       },
@@ -762,7 +762,7 @@
           "question": ""
         },
         "uploadImages": {
-          "passage": "pic/320251272.jpg",
+          "passage": "pic/320251237.jpg",
           "question": ""
         }
       }

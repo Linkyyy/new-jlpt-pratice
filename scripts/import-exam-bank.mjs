@@ -30,7 +30,7 @@ function readingImageNames(input, sections, period, level) {
   const rows = input.items.filter(row => Math.floor(sections.get(row?._parent?.sectionId)?.questionType / 10) === 3)
     .filter(row => text(row.imageId) || row.items?.some(child => text(child.imageId)))
     .map(row => ({row, children: row.items?.length ? row.items : [row]}))
-    .map(item => ({...item, first: Math.min(...item.children.map(child => sourceIdentity(child, period, level).globalNumber))}))
+    .map(item => ({...item, first: Math.min(...item.children.map(child => sourceIdentity(child, period, level).number))}))
     .sort((a, b) => a.first - b.first);
   for (const {row, children, first} of rows) {
     // Match the established pic/320140773.jpg and pic/320140773-1.jpg convention.

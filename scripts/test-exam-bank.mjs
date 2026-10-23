@@ -80,15 +80,15 @@ test('missing passage and question images quarantine all affected children and p
   assert.equal(reading.unavailable[0].raw.option1, '一');
 });
 
-test('image filenames use cumulative source numbers for N3, keep the first shared article number, and remain stable after reordering', () => {
+test('image filenames use printed question numbers, keep the first shared article number, and remain stable after reordering', () => {
   const input = fixture();
   input.items[5].imageId = 'mojitest/exams/picture/article.png';
   input.items[5].items[0].identity = ['202507N1010310059*24'];
   input.items[5].items[1].identity = ['202507N1010310060*25'];
   const first = convert(input).groups[2].payload;
   assert.equal(first.unavailable[0].questionNumber, 24);
-  assert.equal(first.unavailable[0].media.picture, 'pic/120250759.jpg');
-  assert.equal(first.unavailable[1].media.picture, 'pic/120250759.jpg');
+  assert.equal(first.unavailable[0].media.picture, 'pic/120250724.jpg');
+  assert.equal(first.unavailable[1].media.picture, 'pic/120250724.jpg');
   input.items[5].items.reverse();
   const reversed = convert(input).groups[2].payload;
   assert.equal(reversed.unavailable[0].media.picture, first.unavailable[0].media.picture);
@@ -115,7 +115,9 @@ test('the upload checklist maps all 17 excluded subquestions to 11 unique number
   }
   assert.equal(affected.size, 17);
   const n3 = manifest.images.find(image => image.questions.some(q => q.level === 'N3' && q.period === '202512' && q.id.endsWith(':24')));
-  assert.equal(n3.uploadPath, 'pic/320251259.jpg');
+  assert.equal(n3.uploadPath, 'pic/320251224.jpg');
+  const sharedN3 = manifest.images.filter(image => image.questions.some(q => q.level === 'N3' && q.id.endsWith(':37')));
+  assert.deepEqual(sharedN3.map(image => image.uploadPath).sort(), ['pic/320241237.jpg', 'pic/320251237.jpg']);
 });
 
 test('invalid answer positions or empty options are excluded instead of shifting choices or guessing answers', () => {

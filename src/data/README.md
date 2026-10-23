@@ -60,7 +60,7 @@ npm run test:exam-bank
 
 当前不开放该格式的听力作答，也不猜测音频文件名；有日文原文的内容可用 `npm run import:listening-transcripts -- --source "整卷 JSON 目录"` 单独加入[统计来源](frequency-listening/README.md)，保持作答题库不变。图片只有路径而没有文件或可验证地址的题目保存在 `unavailable`，不参与作答、题数或评分。导入会校对展开后的子题数量和卷面声明，数量不符时终止；原文件仅因把大题当作一条记录而标为 `partial` 的情况，在展开后重新核对。
 
-新版阅读图片沿用既有 `pic/等级数字＋YYYYMM＋累计题号.jpg` 命名；文章图使用同组第一题的累计编号，小题附图加 `-1`、`-2` 等后缀。原外部文件名仍保存在 `sourceMetadata.questions[].images`，实际上传路径在 `uploadImages` 和 `unavailable` 图片引用中。N3 的图片文件名使用累计编号，界面继续显示卷面题号。使用 `--image-report <文件路径>` 可生成原始引用与 R2 上传路径的对应清单，详见[图片上传清单](../../docs/reading-image-upload.md)。重命名引用不会自动开放缺图题。
+新版阅读图片使用 `pic/等级数字＋YYYYMM＋卷面原题号.jpg` 命名；文章图使用同组第一题的卷面题号，小题附图加 `-1`、`-2` 等后缀。原外部文件名仍保存在 `sourceMetadata.questions[].images`，实际上传路径在 `uploadImages` 和 `unavailable` 图片引用中。N3 图片名与页面原题号一致，例如卷面第24题使用 `320251224.jpg`；累计编号仍保留在来源元数据中用于核对，不用于新版图片名。使用 `--image-report <文件路径>` 可生成原始引用与 R2 上传路径的对应清单，详见[图片上传清单](../../docs/reading-image-upload.md)。重命名引用不会自动开放缺图题，已有旧题库图片引用保持不变。
 
 该命令保留其余场次，重复导入保持 ID 和统计不变；遇到已有非空旧格式分组时拒绝覆盖，避免使旧收藏失效。导入后执行 `npm run build` 会同步重建词频索引。2026-10-22 批次的统计和缺图清单见 [导入说明](../../docs/exam-bank-import-2026-10-22.md)。
 
