@@ -3,6 +3,8 @@ import {createHash} from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {verifiedReadingImageKeys} from './verify-reading-images.mjs';
+import {getImageObjectKey} from '../src/lib/image-url.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const generator = 'jlpt-practice/import-question-bank/v1';
@@ -43,7 +45,7 @@ function readingImageNames(input, sections, period, level) {
 }
 
 /** Convert the nested exam export without changing the application's question schema. */
-export function convertExamBank(input, {sourceFile, checksum = digest(JSON.stringify(input))} = {}) {
+export function convertExamBank(input, {sourceFile, checksum = digest(JSON.stringify(input)), verifiedImages = new Set()} = {}) {
   assert(input && typeof input === 'object' && input.exam && Array.isArray(input.sections) && Array.isArray(input.items), 'Expected an exam export with exam, sections and items');
   assert(typeof sourceFile === 'string' && path.basename(sourceFile) === sourceFile, 'Expected a source filename');
   const {exam} = input;
@@ -104,10 +106,13 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
     const reasons = [];
     if (!visible(prompt)) reasons.push('题干缺失');
     if (options.length !== 4 || options.some(option => !visible(option.text)) || answer < 0 || answer >= options.length) reasons.push('选项或答案不完整');
-    if (parentImage || questionImage) reasons.push('缺少配套图片');
+    if ([uploadImages.passage, uploadImages.question].filter(Boolean).some(key => getImageObjectKey(key) !== key || !verifiedImages.has(key))) reasons.push('缺少配套图片');
     if (parent && !visible(passage) && !parentImage) reasons.push('文章缺失');
+    const articleImage = parent ? uploadImages.passage : uploadImages.question;
+    const ownImage = parent && uploadImages.question !== uploadImages.passage ? uploadImages.question : '';
     const question = {id, level, category: categories[type], prompt, ...(passage ? {passage} : {}), ...(instruction ? {instruction} : {}), richText: true,
-      options, correctOptionId: letters[answer] ?? null, explanation, sourceQuestionNumber: source.number, sourceId};
+      options, correctOptionId: letters[answer] ?? null, explanation, sourceQuestionNumber: source.number, sourceId,
+      ...(articleImage || ownImage ? {media: {images: articleImage ? [articleImage] : [], ...(ownImage ? {questionImages: [ownImage]} : {})}} : {})};
     group.sourceMetadata.questions.push({id, objectId: row.objectId, identity: source.identity, globalQuestionNumber: source.globalNumber,
       sectionId: section.objectId, questionType: section.questionType, ...(parent ? {parentObjectId: parent.objectId} : {}),
       ...(parentImage || questionImage ? {images: {passage: parentImage, question: questionImage}, uploadImages} : {})});
@@ -148,13 +153,18 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
 }
 
 /** Merge only the selected exam groups, retaining every other bank and stable ID. */
-export async function importExamBanks({sourceDirectory, outputDirectory, reportFile, imageReportFile}) {
+export async function importExamBanks({sourceDirectory, outputDirectory, reportFile, imageReportFile, verifiedImagesFile}) {
+  let verification;
+  const persistedVerification = path.join(outputDirectory, 'verified-reading-images.json');
+  try { verification = JSON.parse(await fs.readFile(verifiedImagesFile ?? persistedVerification, 'utf8')); }
+  catch (error) { if (verifiedImagesFile || error.code !== 'ENOENT') throw error; }
+  const verifiedImages = verification ? verifiedReadingImageKeys(verification) : new Set();
   const files = (await fs.readdir(sourceDirectory)).filter(file => file.endsWith('.json')).sort();
   assert(files.length, 'No JSON exam exports found');
   const exams = [], selected = new Set();
   for (const sourceFile of files) {
     const bytes = await fs.readFile(path.join(sourceDirectory, sourceFile));
-    const result = convertExamBank(JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, '')), {sourceFile, checksum: digest(bytes)});
+    const result = convertExamBank(JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, '')), {sourceFile, checksum: digest(bytes), verifiedImages});
     const key = `${result.report.level}:${result.report.period}`;
     assert(!selected.has(key), `Multiple input files for the same exam: ${key}`);
     selected.add(key); exams.push(result);
@@ -202,6 +212,7 @@ export async function importExamBanks({sourceDirectory, outputDirectory, reportF
   const manifest = {...previous, groups, report};
   await fs.writeFile(`${manifestPath}.tmp`, `${JSON.stringify(manifest, null, 2)}\n`);
   await fs.rename(`${manifestPath}.tmp`, manifestPath);
+  if (verification) await fs.writeFile(persistedVerification, `${JSON.stringify(verification, null, 2)}\n`);
   const summary = {format: converter, files: exams.length, written: 0, available: 0, unavailable: 0, listeningSkipped: 0, papers: exams.map(exam => exam.report)};
   for (const exam of exams) for (const field of ['written', 'available', 'unavailable', 'listeningSkipped']) summary[field] += exam.report[field];
   if (reportFile) await fs.writeFile(reportFile, `${JSON.stringify(summary, null, 2)}\n`);
@@ -230,7 +241,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const args = process.argv.slice(2);
   const value = name => { const index = args.indexOf(name); assert(index < 0 || args[index + 1] && !args[index + 1].startsWith('--'), `${name} requires a value`); return index < 0 ? null : path.resolve(args[index + 1]); };
   const sourceDirectory = value('--source');
-  assert(sourceDirectory, 'Usage: node scripts/import-exam-bank.mjs --source <exam JSON directory> [--output <bank directory>] [--report <report.json>] [--image-report <images.json>]');
-  const result = await importExamBanks({sourceDirectory, outputDirectory: value('--output') ?? path.join(root, 'src/data/imported-bank'), reportFile: value('--report'), imageReportFile: value('--image-report')});
+  assert(sourceDirectory, 'Usage: node scripts/import-exam-bank.mjs --source <exam JSON directory> [--output <bank directory>] [--report <report.json>] [--image-report <images.json>] [--verified-images <verification.json>]');
+  const result = await importExamBanks({sourceDirectory, outputDirectory: value('--output') ?? path.join(root, 'src/data/imported-bank'), reportFile: value('--report'), imageReportFile: value('--image-report'), verifiedImagesFile: value('--verified-images')});
   console.log(JSON.stringify(result, (key, value) => key === 'sectionCounts' ? undefined : value, 2));
 }

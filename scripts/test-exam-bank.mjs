@@ -94,6 +94,50 @@ test('image filenames use printed question numbers, keep the first shared articl
   assert.equal(reversed.unavailable[0].media.picture, first.unavailable[0].media.picture);
 });
 
+test('verified articles and child pictures open only complete questions with stable answers and source order', () => {
+  const input = fixture();
+  input.items[5].imageId = 'mojitest/exams/picture/article.png';
+  input.items[5].items[0].imageId = 'mojitest/exams/picture/question.png';
+  const excluded = convert(input).groups[2].payload;
+  const partial = convertExamBank(input, {sourceFile, verifiedImages: new Set(['pic/12025077.jpg'])}).groups[2].payload;
+  assert.deepEqual(partial.questions.map(q => q.sourceQuestionNumber), [8]);
+  assert.deepEqual(partial.unavailable.map(q => q.questionNumber), [7]);
+  const enabled = convertExamBank(input, {sourceFile, verifiedImages: new Set(['pic/12025077.jpg', 'pic/12025077-1.jpg'])}).groups[2].payload;
+  assert.equal(enabled.unavailable.length, 0);
+  assert.deepEqual(enabled.questions.map(q => q.id), excluded.unavailable.map(q => q.id));
+  assert.deepEqual(enabled.questions.map(q => q.correctOptionId), ['A', 'D']);
+  assert.deepEqual(enabled.questions.map(q => q.media.images), [['pic/12025077.jpg'], ['pic/12025077.jpg']]);
+  assert.deepEqual(enabled.questions[0].media.questionImages, ['pic/12025077-1.jpg']);
+  assert.equal(enabled.questions[1].media.questionImages, undefined);
+});
+
+test('verified image activation survives reimports and a failed verification report cannot change the bank', async () => {
+  const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'jlpt-image-activation-test-'));
+  try {
+    const sourceDirectory = path.join(temp, 'source'), outputDirectory = path.join(temp, 'bank');
+    await fs.mkdir(sourceDirectory); await fs.mkdir(outputDirectory);
+    const input = fixture(); input.items[5].imageId = 'mojitest/exams/picture/article.png';
+    await fs.writeFile(path.join(sourceDirectory, sourceFile), JSON.stringify(input));
+    const first = await importExamBanks({sourceDirectory, outputDirectory});
+    assert.equal(first.unavailable, 2);
+    // Local unit fixture only; never used to activate the production data.
+    const verifiedImagesFile = path.join(temp, 'unit-fixture-verification.json');
+    const image = {key: 'pic/12025077.jpg', url: 'https://example.com/pic/12025077.jpg', status: 'available', httpStatus: 200,
+      bytes: 100, width: 80, height: 100, sha256: 'a'.repeat(64)};
+    const report = {version: 1, status: 'passed', checkedAt: new Date().toISOString(), baseUrl: 'https://example.com', images: [image]};
+    await fs.writeFile(verifiedImagesFile, JSON.stringify(report));
+    const enabled = await importExamBanks({sourceDirectory, outputDirectory, verifiedImagesFile});
+    assert.equal(enabled.available, 8); assert.equal(enabled.unavailable, 0);
+    const before = await fs.readFile(path.join(outputDirectory, 'questions/202507-N1-3.json'), 'utf8');
+    const reimported = await importExamBanks({sourceDirectory, outputDirectory});
+    assert.equal(reimported.available, 8);
+    assert.equal(await fs.readFile(path.join(outputDirectory, 'questions/202507-N1-3.json'), 'utf8'), before);
+    await fs.writeFile(verifiedImagesFile, JSON.stringify({...report, status: 'failed'}));
+    await assert.rejects(importExamBanks({sourceDirectory, outputDirectory, verifiedImagesFile}), /must pass verification/);
+    assert.equal(await fs.readFile(path.join(outputDirectory, 'questions/202507-N1-3.json'), 'utf8'), before);
+  } finally { await fs.rm(temp, {recursive: true, force: true}); }
+});
+
 test('the upload checklist maps all 17 excluded subquestions to 11 unique numbered JPG paths and retains the original filenames', async () => {
   const manifest = JSON.parse(await fs.readFile(new URL('../docs/exam-bank-missing-images-2026-10-22.json', import.meta.url), 'utf8'));
   assert.equal(manifest.images.length, 11);

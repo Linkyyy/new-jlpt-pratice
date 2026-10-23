@@ -29,3 +29,28 @@ npm run import:exam-bank -- --source <整卷JSON目录> --image-report docs/exam
 ```
 
 只修改了上传路径，没有将缺图题移入可作答题库。上传完成后需核对内容及 URL，再关联、启用对应题目。
+
+## 上传后校验与开放
+
+先下载清单中的全部图片并完整解码，检查 HTTP 状态、图片格式、尺寸和文件完整性。脚本保留每张图片的 SHA-256，失败时不会生成可用于开放题目的校验凭据：
+
+```sh
+npm run verify:reading-images -- --download-dir /tmp/jlpt-reading-images
+```
+
+默认读取上方 JSON 清单，使用网站统一图片／音频基础域名，结果保存到 `/tmp/jlpt-reading-image-verification.json`。也可使用 `--base-url https://你的公开资源域名`、`--checklist 清单路径` 和 `--output 报告路径`。Node.js 需要支持 `--use-env-proxy`（本项目云环境为 Node.js 24），以沿用环境代理和证书配置。
+
+检查下载图片与相应题干的内容一致后，才执行开放命令：
+
+```sh
+npm run import:exam-bank -- --source <整卷JSON目录> \
+  --verified-images /tmp/jlpt-reading-image-verification.json \
+  --report docs/exam-bank-import-2026-10-22.json \
+  --image-report docs/exam-bank-missing-images-2026-10-22.json
+npm run check:bank
+npm run build
+```
+
+开放时会保留原题 ID、题序、答案及来源，共用文章图与小题附图分别关联。校验报告保存在 `src/data/imported-bank/verified-reading-images.json`，以后重新导入自动沿用；无需每次重复传 `--verified-images`。听力的可作答状态不受影响。
+
+环境代理拒绝访问、图片 404、返回网页而不是图片、文件损坏等都不能视为校验通过。当前 17 道小题在真实图片校验完成前仍保持关闭。
