@@ -775,7 +775,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+        "picture": "pic/120251265.jpg",
         "audio": ""
       },
       "raw": {
@@ -790,7 +790,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 2,
         "assistantNew": "关键信息：大衣2500日元，连衣裙1500日元，合计4000日元。第一次享受7折，普通会员运费：8000日元以上免费，否则2000日元。计算：清洗费：4000×70%＝2800日元；运费：4000＜8000，需2000日元。琳达是普通会员，因此，需支付清洗费2800日元＋运费2000日元。答案为2：4000打7折的金额和2000日元的运费。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+        "picture": "pic/120251265.jpg",
         "option1": "4，000円から30％引いた金額",
         "option2": "4，000円から30％引いた金額と送料2，000円",
         "option3": "4，000円",
@@ -805,7 +805,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+        "picture": "pic/120251265.jpg",
         "audio": ""
       },
       "raw": {
@@ -820,7 +820,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 4,
         "assistantNew": "关键信息：特别会员，17点（16点后）寄出 → 4天后到。但和服需额外加5天，且与其他衣物一起寄送时，需等和服清洗完毕后统一寄送。计算：4天（基本）＋5天（和服加算）＝9天后。因此答案为9天后。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+        "picture": "pic/120251265.jpg",
         "option1": "3日後",
         "option2": "4日後",
         "option3": "8日後",
@@ -1025,6 +1025,10 @@
         "images": {
           "passage": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
           "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/120251265.jpg",
+          "question": ""
         }
       },
       {
@@ -1037,6 +1041,10 @@
         "parentObjectId": "qi47H36AWE",
         "images": {
           "passage": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+          "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/120251265.jpg",
           "question": ""
         }
       }

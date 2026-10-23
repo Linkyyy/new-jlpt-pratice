@@ -24,6 +24,24 @@ function sourceIdentity(row, period, level) {
   return {identity, number: Number(printed), globalNumber: Number(number[1])};
 }
 
+function readingImageNames(input, sections, period, level) {
+  const images = new Map();
+  const assign = (reference, name) => { if (text(reference) && !images.has(text(reference))) images.set(text(reference), name); };
+  const rows = input.items.filter(row => Math.floor(sections.get(row?._parent?.sectionId)?.questionType / 10) === 3)
+    .filter(row => text(row.imageId) || row.items?.some(child => text(child.imageId)))
+    .map(row => ({row, children: row.items?.length ? row.items : [row]}))
+    .map(item => ({...item, first: Math.min(...item.children.map(child => sourceIdentity(child, period, level).globalNumber))}))
+    .sort((a, b) => a.first - b.first);
+  for (const {row, children, first} of rows) {
+    // Match the established pic/320140773.jpg and pic/320140773-1.jpg convention.
+    const stem = `pic/${level.slice(1)}${period}${first}`;
+    assign(row.imageId, `${stem}.jpg`);
+    if (children[0] !== row) children.forEach((child, index) => assign(child.imageId, `${stem}-${index + 1}.jpg`));
+  }
+  assert.equal(new Set(images.values()).size, images.size, 'Different source images cannot share an upload filename');
+  return images;
+}
+
 /** Convert the nested exam export without changing the application's question schema. */
 export function convertExamBank(input, {sourceFile, checksum = digest(JSON.stringify(input))} = {}) {
   assert(input && typeof input === 'object' && input.exam && Array.isArray(input.sections) && Array.isArray(input.items), 'Expected an exam export with exam, sections and items');
@@ -38,6 +56,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
   assert(!metadata.title || metadata.title === exam.title, 'Exam metadata period mismatch');
   const sections = new Map(input.sections.map(section => [section.objectId, section]));
   assert.equal(sections.size, input.sections.length, 'Duplicate section IDs');
+  const uploadNames = readingImageNames(input, sections, period, level);
   const groups = new Map([1, 2, 3].map(type => [type, {
     version: 1, sourceFile, period, level, type: types[type], questions: [], unavailable: [],
     sourceMetadata: {format: converter, checksum, examId: exam.id, sourceStatus: input.status ?? null, questions: []},
@@ -81,6 +100,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
     const explanation = [text(row.analysis) || '该题库未提供解析。'];
     if (text(parent?.translation)) explanation.push(`<p><strong>文章译文</strong></p>${text(parent.translation)}`);
     const parentImage = text(parent?.imageId), questionImage = text(row.imageId);
+    const uploadImages = {passage: uploadNames.get(parentImage) ?? parentImage, question: uploadNames.get(questionImage) ?? questionImage};
     const reasons = [];
     if (!visible(prompt)) reasons.push('题干缺失');
     if (options.length !== 4 || options.some(option => !visible(option.text)) || answer < 0 || answer >= options.length) reasons.push('选项或答案不完整');
@@ -90,14 +110,15 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
       options, correctOptionId: letters[answer] ?? null, explanation, sourceQuestionNumber: source.number, sourceId};
     group.sourceMetadata.questions.push({id, objectId: row.objectId, identity: source.identity, globalQuestionNumber: source.globalNumber,
       sectionId: section.objectId, questionType: section.questionType, ...(parent ? {parentObjectId: parent.objectId} : {}),
-      ...(parentImage || questionImage ? {images: {passage: parentImage, question: questionImage}} : {})});
+      ...(parentImage || questionImage ? {images: {passage: parentImage, question: questionImage}, uploadImages} : {})});
     if (reasons.length) {
       // Keep the established unavailable-record shape so resource checks and text statistics still work.
       const raw = {id: sourceId, time: period, level, type, questionId: source.number, bigTitle: instruction,
         question: prompt, littleQuestion: prompt, article: passage, answer: answer + 1, assistantNew: explanation.join('\n\n'),
-        picture: parentImage || questionImage, ...(questionImage ? {questionPicture: questionImage} : {}),
+        picture: uploadImages.passage || uploadImages.question, ...(questionImage ? {questionPicture: uploadImages.question} : {}),
         ...Object.fromEntries(options.map((option, index) => [`option${index + 1}`, option.text]))};
-      group.unavailable.push({id, sourceId, questionNumber: source.number, reasons, media: {picture: parentImage || questionImage, audio: ''}, raw});
+      group.unavailable.push({id, sourceId, questionNumber: source.number, reasons,
+        media: {picture: uploadImages.passage || uploadImages.question, ...(questionImage ? {questionPicture: uploadImages.question} : {}), audio: ''}, raw});
     } else group.questions.push(question);
     if (row.questionType !== section.questionType) warnings.push({id, issue: 'question-type-mismatch', sourceType: row.questionType, sectionType: section.questionType, resolution: 'Use the enclosing section type'});
   }
@@ -127,7 +148,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
 }
 
 /** Merge only the selected exam groups, retaining every other bank and stable ID. */
-export async function importExamBanks({sourceDirectory, outputDirectory, reportFile}) {
+export async function importExamBanks({sourceDirectory, outputDirectory, reportFile, imageReportFile}) {
   const files = (await fs.readdir(sourceDirectory)).filter(file => file.endsWith('.json')).sort();
   assert(files.length, 'No JSON exam exports found');
   const exams = [], selected = new Set();
@@ -184,6 +205,19 @@ export async function importExamBanks({sourceDirectory, outputDirectory, reportF
   const summary = {format: converter, files: exams.length, written: 0, available: 0, unavailable: 0, listeningSkipped: 0, papers: exams.map(exam => exam.report)};
   for (const exam of exams) for (const field of ['written', 'available', 'unavailable', 'listeningSkipped']) summary[field] += exam.report[field];
   if (reportFile) await fs.writeFile(reportFile, `${JSON.stringify(summary, null, 2)}\n`);
+  if (imageReportFile) {
+    const images = new Map();
+    for (const {report: paper, groups} of exams) for (const {payload} of groups) for (const question of payload.sourceMetadata.questions) {
+      for (const [kind, reference] of Object.entries(question.images ?? {})) {
+        if (!reference) continue;
+        const uploadPath = question.uploadImages[kind];
+        if (!images.has(reference)) images.set(reference, {reference, uploadPath, questions: []});
+        assert.equal(images.get(reference).uploadPath, uploadPath, 'Inconsistent upload mapping');
+        images.get(reference).questions.push({id: question.id, period: paper.period, level: paper.level, kind});
+      }
+    }
+    await fs.writeFile(imageReportFile, `${JSON.stringify({images: [...images.values()]}, null, 2)}\n`);
+  }
   return summary;
 }
 
@@ -196,7 +230,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const args = process.argv.slice(2);
   const value = name => { const index = args.indexOf(name); assert(index < 0 || args[index + 1] && !args[index + 1].startsWith('--'), `${name} requires a value`); return index < 0 ? null : path.resolve(args[index + 1]); };
   const sourceDirectory = value('--source');
-  assert(sourceDirectory, 'Usage: node scripts/import-exam-bank.mjs --source <exam JSON directory> [--output <bank directory>] [--report <report.json>]');
-  const result = await importExamBanks({sourceDirectory, outputDirectory: value('--output') ?? path.join(root, 'src/data/imported-bank'), reportFile: value('--report')});
+  assert(sourceDirectory, 'Usage: node scripts/import-exam-bank.mjs --source <exam JSON directory> [--output <bank directory>] [--report <report.json>] [--image-report <images.json>]');
+  const result = await importExamBanks({sourceDirectory, outputDirectory: value('--output') ?? path.join(root, 'src/data/imported-bank'), reportFile: value('--report'), imageReportFile: value('--image-report')});
   console.log(JSON.stringify(result, (key, value) => key === 'sectionCounts' ? undefined : value, 2));
 }

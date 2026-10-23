@@ -699,7 +699,8 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "picture": "pic/220260770.jpg",
+        "questionPicture": "pic/220260770-1.jpg",
         "audio": ""
       },
       "raw": {
@@ -714,8 +715,8 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 3,
         "assistantNew": "ハオさん：所需烹饪时间 40 分钟，超过规定的 30 分钟\n中村さん：所用材料不符合规定\nマットさん：全部符合。\n西田さん：所需材料费 1,290 日元，超过规定的 1000 日元。\n\n<p><strong>文章译文</strong></p><p class=\"moji-trans\"></p>",
-        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
-        "questionPicture": "mojitest/exams/picture/536e7887-0a1f-43ec-9157-ef2f5c17dd2c.png",
+        "picture": "pic/220260770.jpg",
+        "questionPicture": "pic/220260770-1.jpg",
         "option1": "八才さん",
         "option2": "中村さん",
         "option3": "マットさん",
@@ -730,7 +731,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "picture": "pic/220260770.jpg",
         "audio": ""
       },
       "raw": {
@@ -745,7 +746,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 3,
         "assistantNew": "根据募集案内中的规定：\n(1)应征方法：「応募は一人3品まで可能です。応募用紙1枚あたり1品のレシピを記入してください。」（每人最多可报名3道菜。每张报名表填写1道食谱。），所以2道食谱需要2张报名表，各写1道。排除选项1和2。\n(2)提交截止日期：「青原市内の中学校・高等学校に通う生徒は、6月20日（月）までに在籍する学校に提出してください。」（就读于青原市内中学・高中的学生，请在6月20日（周一）前提交至所在学校。）。林同学就读于青原市市内高中，应提交给学校。排除选项4。\n\n<p><strong>文章译文</strong></p><p class=\"moji-trans\"></p>",
-        "picture": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+        "picture": "pic/220260770.jpg",
         "option1": "1枚の応募用紙に2品のレシピを書いて、6月20日までに学校に提出する。",
         "option2": "1枚の応募用紙に2品のレシピを書いて、6月24日必着で農業課に郵送する。",
         "option3": "2枚の応募用紙に1品ずつレシピを書いて、6月20日までに学校に提出する。",
@@ -932,6 +933,10 @@
         "images": {
           "passage": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
           "question": "mojitest/exams/picture/536e7887-0a1f-43ec-9157-ef2f5c17dd2c.png"
+        },
+        "uploadImages": {
+          "passage": "pic/220260770.jpg",
+          "question": "pic/220260770-1.jpg"
         }
       },
       {
@@ -944,6 +949,10 @@
         "parentObjectId": "LfUkhKjC0R",
         "images": {
           "passage": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+          "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/220260770.jpg",
           "question": ""
         }
       }

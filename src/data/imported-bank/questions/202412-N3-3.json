@@ -547,7 +547,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+        "picture": "pic/320241272.jpg",
         "audio": ""
       },
       "raw": {
@@ -562,7 +562,7 @@
         "article": "",
         "answer": 1,
         "assistantNew": "コウさん想报名公园内活动，希望上午进行。希望每周都能参加。活动地点要在办公室以外。\n① 花や木の世話 → 上午（9–11时）、每周进行、公园内（不在办公室） → 符合全部条件。\n② ホームページ作り → 上午、每周，但在办公室内 → 错误\n③ 公園の掃除 →公园内、每周，但是在下午（14–16时） → 错误\n④ 公園の案内 → 上午、公园内，但每月一次，不是每周 → 错误",
-        "picture": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+        "picture": "pic/320241272.jpg",
         "option1": "①",
         "option2": "②",
         "option3": "③",
@@ -577,7 +577,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+        "picture": "pic/320241272.jpg",
         "audio": ""
       },
       "raw": {
@@ -592,7 +592,7 @@
         "article": "",
         "answer": 3,
         "assistantNew": "成为公园活动协助者的人，需要注意什么？\n\n逐个看选项：\n1.不能申请多个活动\n　→ 错误。文中写「複数の活動への応募も可能です」。\n2.必须说明会A和B都要参加\n　→ 错误。原文说「AかBどちらかに参加してください」。\n3.参加说明会前一天要电话联系\n　→ 正确。原文写着「参加希望日の前日までに事務所へ電話で連絡してください」。\n4.申请表必须亲自送到办公室\n　→ 错误。原文写着「事務所へ持参、または郵送」。",
-        "picture": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+        "picture": "pic/320241272.jpg",
         "option1": "複数の活動に応募することはできない。",
         "option2": "説明会は、AとBの両方に参加しなければならない。",
         "option3": "説明会に参加するために、参加希望日の前日までに電話で連絡しなければならない。",
@@ -743,6 +743,10 @@
         "images": {
           "passage": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
           "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/320241272.jpg",
+          "question": ""
         }
       },
       {
@@ -755,6 +759,10 @@
         "parentObjectId": "YnADt1rMBt",
         "images": {
           "passage": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+          "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/320241272.jpg",
           "question": ""
         }
       }

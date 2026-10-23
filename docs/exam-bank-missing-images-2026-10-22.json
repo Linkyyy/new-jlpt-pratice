@@ -2,6 +2,7 @@
   "images": [
     {
       "reference": "mojitest/exams/picture/5851a9f5-6c00-4d2b-91bf-5b1c6925a781.png",
+      "uploadPath": "pic/120251265.jpg",
       "questions": [
         {
           "id": "imported:202512:N1:3:125135160954944:65",
@@ -19,6 +20,7 @@
     },
     {
       "reference": "mojitest/exams/picture/58bb4c17-fa89-4b8b-bcbf-3d98e00e67d0.png",
+      "uploadPath": "pic/120250765.jpg",
       "questions": [
         {
           "id": "imported:202507:N1:3:166840840422440:65",
@@ -36,6 +38,7 @@
     },
     {
       "reference": "mojitest/exams/picture/636803e9-db01-45cb-8fcb-20bcf90d4df1.png",
+      "uploadPath": "pic/120250765-1.jpg",
       "questions": [
         {
           "id": "imported:202507:N1:3:166840840422440:65",
@@ -47,6 +50,7 @@
     },
     {
       "reference": "mojitest/exams/picture/0ac40fa2-5540-4ccc-a2e8-f2d8c678efea.png",
+      "uploadPath": "pic/120260765.jpg",
       "questions": [
         {
           "id": "imported:202607:N1:3:216420981139436:65",
@@ -64,6 +68,7 @@
     },
     {
       "reference": "mojitest/exams/picture/051ab2c7-668b-4362-8158-3fb57bf5e041.jpeg",
+      "uploadPath": "pic/220251270.jpg",
       "questions": [
         {
           "id": "imported:202512:N2:3:217246826262266:70",
@@ -81,6 +86,7 @@
     },
     {
       "reference": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+      "uploadPath": "pic/220250770.jpg",
       "questions": [
         {
           "id": "imported:202507:N2:3:180498356155788:70",
@@ -98,6 +104,7 @@
     },
     {
       "reference": "mojitest/exams/picture/924f57ea-ceea-421f-bd82-934d848521a2.png",
+      "uploadPath": "pic/220260770.jpg",
       "questions": [
         {
           "id": "imported:202607:N2:3:260816337863146:70",
@@ -115,6 +122,7 @@
     },
     {
       "reference": "mojitest/exams/picture/536e7887-0a1f-43ec-9157-ef2f5c17dd2c.png",
+      "uploadPath": "pic/220260770-1.jpg",
       "questions": [
         {
           "id": "imported:202607:N2:3:260816337863146:70",
@@ -126,6 +134,7 @@
     },
     {
       "reference": "mojitest/exams/picture/ee7cb608-9fc8-481a-b126-b2068a04bd41.png",
+      "uploadPath": "pic/320241272.jpg",
       "questions": [
         {
           "id": "imported:202412:N3:3:208735567032194:37",
@@ -143,6 +152,7 @@
     },
     {
       "reference": "mojitest/exams/picture/740a1f60-1c1f-4f6f-a647-852f90e1aa78.png",
+      "uploadPath": "pic/320251259.jpg",
       "questions": [
         {
           "id": "imported:202512:N3:3:87155072984514:24",
@@ -154,6 +164,7 @@
     },
     {
       "reference": "mojitest/exams/picture/ada0f779-1855-4dcb-999e-1fd63b7a6ee1.png",
+      "uploadPath": "pic/320251272.jpg",
       "questions": [
         {
           "id": "imported:202512:N3:3:143167332080312:37",

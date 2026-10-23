@@ -72,8 +72,50 @@ test('missing passage and question images quarantine all affected children and p
   assert.equal(reading.questions.length, 0); assert.equal(report.unavailable, 2);
   assert.deepEqual(reading.unavailable[0].reasons, ['缺少配套图片']);
   assert.deepEqual(reading.sourceMetadata.questions[0].images, {passage: 'mojitest/exams/picture/article.png', question: 'mojitest/exams/picture/question.png'});
+  assert.deepEqual(reading.sourceMetadata.questions[0].uploadImages, {passage: 'pic/12025077.jpg', question: 'pic/12025077-1.jpg'});
+  assert.equal(reading.unavailable[0].raw.picture, 'pic/12025077.jpg');
+  assert.equal(reading.unavailable[0].raw.questionPicture, 'pic/12025077-1.jpg');
+  assert.equal(reading.unavailable[1].raw.picture, reading.unavailable[0].raw.picture);
   assert.equal(reading.unavailable[0].raw.article, '<p>同じ記事。</p>');
   assert.equal(reading.unavailable[0].raw.option1, '一');
+});
+
+test('image filenames use cumulative source numbers for N3, keep the first shared article number, and remain stable after reordering', () => {
+  const input = fixture();
+  input.items[5].imageId = 'mojitest/exams/picture/article.png';
+  input.items[5].items[0].identity = ['202507N1010310059*24'];
+  input.items[5].items[1].identity = ['202507N1010310060*25'];
+  const first = convert(input).groups[2].payload;
+  assert.equal(first.unavailable[0].questionNumber, 24);
+  assert.equal(first.unavailable[0].media.picture, 'pic/120250759.jpg');
+  assert.equal(first.unavailable[1].media.picture, 'pic/120250759.jpg');
+  input.items[5].items.reverse();
+  const reversed = convert(input).groups[2].payload;
+  assert.equal(reversed.unavailable[0].media.picture, first.unavailable[0].media.picture);
+});
+
+test('the upload checklist maps all 17 excluded subquestions to 11 unique numbered JPG paths and retains the original filenames', async () => {
+  const manifest = JSON.parse(await fs.readFile(new URL('../docs/exam-bank-missing-images-2026-10-22.json', import.meta.url), 'utf8'));
+  assert.equal(manifest.images.length, 11);
+  assert.equal(new Set(manifest.images.map(image => image.uploadPath)).size, 11);
+  const affected = new Set();
+  for (const image of manifest.images) {
+    assert.match(image.uploadPath, /^pic\/[1-3]\d{6}\d+(?:-\d+)?\.jpg$/);
+    assert.match(image.reference, /^mojitest\/exams\/picture\//);
+    for (const question of image.questions) {
+      const bank = JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${question.period}-${question.level}-3.json`, import.meta.url), 'utf8'));
+      const provenance = bank.sourceMetadata.questions.find(item => item.id === question.id);
+      const unavailable = bank.unavailable.find(item => item.id === question.id);
+      assert.ok(unavailable);
+      assert.equal(provenance.images[question.kind], image.reference);
+      assert.equal(provenance.uploadImages[question.kind], image.uploadPath);
+      assert.equal(question.kind === 'question' ? unavailable.raw.questionPicture : unavailable.raw.picture, image.uploadPath);
+      affected.add(question.id);
+    }
+  }
+  assert.equal(affected.size, 17);
+  const n3 = manifest.images.find(image => image.questions.some(q => q.level === 'N3' && q.period === '202512' && q.id.endsWith(':24')));
+  assert.equal(n3.uploadPath, 'pic/320251259.jpg');
 });
 
 test('invalid answer positions or empty options are excluded instead of shifting choices or guessing answers', () => {

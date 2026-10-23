@@ -699,7 +699,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+        "picture": "pic/220250770.jpg",
         "audio": ""
       },
       "raw": {
@@ -714,7 +714,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 3,
         "assistantNew": "解析：\n正确答案：3\n题目要求选择“关于花或树的讲座”，时间需为“上午”，并且“含实习”。我们逐一比对讲座内容：\n①秋の花に親しむ → 关于花，有实习（花を植える），但时间是下午（14時～16時）→不符合“午前”。\n②森の木を守る → 关于树，上午时间（9時～11時），但没有标注实习 → 不符合。\n③身近な花を撮る → 关于花，上午时间（9時～11時），有实习（撮影実習）→ 符合条件。\n④野菜を知る → 关于蔬菜，非花或树，排除。\n⑤木の香りを楽しむ → 关于树木香味，上午时间，有实习（香水を作ります）→ 符合条件。\n\n故③和⑤最为符合前田さん的所有条件。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+        "picture": "pic/220250770.jpg",
         "option1": "①と③と⑤",
         "option2": "②と③",
         "option3": "③と⑤",
@@ -729,7 +729,7 @@
         "缺少配套图片"
       ],
       "media": {
-        "picture": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+        "picture": "pic/220250770.jpg",
         "audio": ""
       },
       "raw": {
@@ -744,7 +744,7 @@
         "article": "<p class=\"moji-content\" data-starttime=\"\" data-endtime=\"\"><br></p>",
         "answer": 4,
         "assistantNew": "解析：\n正确答案：4\n\n题干指出今天是12月3日，ニコラス想报名④野菜を知る（12/10 开课），而报名期间（①〜③为9/1〜9/15，④⑤为11/1〜11/15）已经结束。需参考特殊说明：\n「申し込み受付期間が過ぎている場合でも、定員に達していなければ講座開始の3日前まで申し込み可能。電話で空きの確認を。」\n即：“如果报名期过了，只要名额未满，可以在开课3日前（即12/7 前）电话确认空位并报名。”\n→ 所以ニコラス应在12月7日前电话确认空位并报名。\n\n<p><strong>文章译文</strong></p><p class=\"moj-trans\"></p>",
-        "picture": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+        "picture": "pic/220250770.jpg",
         "option1": "12月5日までにホームページか電話で空きを確認し申し込む。",
         "option2": "12月5日までに電話で空きを確認し申し込む。",
         "option3": "12月7日までにホームページか電話で空きを確認し申し込む。",
@@ -931,6 +931,10 @@
         "images": {
           "passage": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
           "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/220250770.jpg",
+          "question": ""
         }
       },
       {
@@ -943,6 +947,10 @@
         "parentObjectId": "B4Ifu9vbYX",
         "images": {
           "passage": "mojitest/exams/picture/f127f55c-47c7-4c06-96ba-7a9e0d6501d7.png",
+          "question": ""
+        },
+        "uploadImages": {
+          "passage": "pic/220250770.jpg",
           "question": ""
         }
       }
