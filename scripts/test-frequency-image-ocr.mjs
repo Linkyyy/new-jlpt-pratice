@@ -9,7 +9,7 @@ import kuromoji from 'kuromoji';
 import {createImageTextIndex, withFrequencyImageText, questionImageReferences} from '../src/lib/frequency-image-text.mjs';
 import {createFrequencyBuilder, defaultFrequencyFilters, queryFrequency} from '../src/lib/bank-frequency.mjs';
 import {frequencyExamplePreview} from '../src/lib/frequency-evidence.mjs';
-import {collectImageChecklist, importReviewedImageText, recognizeImage, ocrConfidence} from './ocr-bank-images.mjs';
+import {collectImageChecklist, importReviewedImageText, recognizeImage, ocrConfidence, normalizeJapaneseOcr} from './ocr-bank-images.mjs';
 
 const require = createRequire(import.meta.url);
 const tokenizer = await new Promise((resolve,reject)=>kuromoji.builder({dicPath:path.dirname(require.resolve('kuromoji/dict/base.dat.gz'))}).build((error,result)=>error?reject(error):resolve(result)));
@@ -17,6 +17,11 @@ const image = (key,text,extra={}) => ({key,text,sha256:'a'.repeat(64),reviewed:t
 const question = (id,extra={}) => ({id,source:'imported',level:'N1',period:'202507',category:'阅读',instruction:'問題13',prompt:'',options:[],explanation:[],media:{images:['pic/1.jpg']},...extra});
 function build(questions,images){const builder=createFrequencyBuilder(text=>tokenizer.tokenize(text)),index=createImageTextIndex({version:1,images}); for(const q of questions)builder.addQuestion(withFrequencyImageText(q,index));return builder.finish('image-test');}
 const find = (corpus,label,filters={})=>queryFrequency(corpus,{...defaultFrequencyFilters,...filters,size:100}).rows.find(row=>row.label===label);
+
+test('OCR spacing cleanup restores Japanese words while preserving lines and Latin word boundaries',()=>{
+  assert.equal(normalizeJapaneseOcr('市 民 学習 センター です 。\nコ ミュ ニケ ーション\nOpen Day'), '市民学習センターです。\nコミュニケーション\nOpen Day');
+  assert.equal(normalizeJapaneseOcr('＜主催＞ 市 民 会館'), '【主催】 市民会館');
+});
 
 test('only reviewed Japanese text with a valid image key and checksum can enter the corpus',()=>{
   assert.equal(createImageTextIndex({version:1,images:[image('pic/1.jpg','学生です。',{reviewed:false})]}).size,0);
@@ -48,7 +53,26 @@ test('existing transcriptions are not counted twice and image-only evidence high
   const corpus=build([q],[entry]);assert.equal(find(corpus,'学生').occurrences,1);assert.equal(find(corpus,'公園').occurrences,1);
   const enriched=withFrequencyImageText(q,createImageTextIndex({version:1,images:[entry]}));
   const preview=frequencyExamplePreview(enriched,['passage'],['公園']);assert.equal(preview.excerpts.length,1);assert.equal(preview.excerpts[0].text,'公園で遊びます。');assert.equal(preview.excerpts[0].field,'passage');
+  assert.equal(preview.excerpts[0].image,true);
   assert.equal(frequencyExamplePreview(enriched,['options'],['公園']).excerpts.length,0);
+});
+
+test('OCR grammar matches use exact surface positions after punctuation and spaces',()=>{
+  const corpus=build([question('a')],[image('pic/1.jpg','初回です。 料金にかかわらず無料です。')]);
+  const row=find(corpus,'にかかわらず',{kind:'grammar'});assert.ok(row);assert.equal(row.occurrences,1);
+});
+
+test('production OCR sources match the downloaded image evidence and keep all 11 new images visually corrected',async()=>{
+  const entries=JSON.parse(await fs.readFile(new URL('../src/data/frequency-image-ocr/entries.json',import.meta.url),'utf8'));
+  const index=createImageTextIndex(entries);assert.equal(index.size,96);
+  const report=JSON.parse(await fs.readFile(new URL('../src/data/frequency-image-ocr/report.json',import.meta.url),'utf8'));
+  assert.equal(report.summary.downloaded,96);assert.equal(report.summary.missing,62);
+  for(const source of entries.images)assert.equal(source.sha256,report.downloads.find(d=>d.key===source.key).sha256);
+  for(const source of entries.images){assert.match(source.reviewMethod,/^(visual-correction|two-pass-consensus)$/);assert.ok(source.text.length>30);}
+  const checklist=JSON.parse(await fs.readFile(new URL('../docs/exam-bank-missing-images-2026-10-22.json',import.meta.url),'utf8'));
+  for(const {uploadPath} of checklist.images){assert.equal(index.get(uploadPath).reviewMethod,'visual-correction');assert.equal(index.get(uploadPath).partial,false);}
+  const verified=JSON.parse(await fs.readFile(new URL('../src/data/imported-bank/verified-reading-images.json',import.meta.url),'utf8'));
+  for(const image of verified.images)assert.equal(index.get(image.key).sha256,image.sha256);
 });
 
 test('review import merges idempotently and invalid text cannot overwrite reviewed entries',async()=>{

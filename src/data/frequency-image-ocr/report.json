@@ -1,0 +1,1473 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-23T05:24:04.903Z",
+  "baseUrl": "https://pub-8ac2a059bee9443c839a7e7f2f350e93.r2.dev",
+  "summary": {
+    "referenced": 158,
+    "downloaded": 96,
+    "indexed": 96,
+    "visuallyCorrected": 15,
+    "consensusPartial": 81,
+    "missing": 62,
+    "indexedJapaneseCharacters": 42554,
+    "linkedQuestions": 184
+  },
+  "reviewCriteria": {
+    "newImages": "Visual comparison and correction of all 11 new source images; 4 low-agreement legacy images also corrected.",
+    "legacyImages": "Only matching spans of resized PSM 3 and original-resolution PSM 11, at least 8 non-whitespace characters and 6 Japanese characters; clipped to actual full-token boundaries. Uncertain fragments excluded. These sources are partial, not complete transcriptions."
+  },
+  "missing": [
+    {
+      "key": "pic/220111277.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201112:N2:4:2896:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120120771.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201207:N1:4:6000:71",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120120776.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201207:N1:4:6005:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220120778.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201207:N2:4:2791:78",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120121271.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201212:N1:4:5894:71",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220121279.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201212:N2:4:2686:79",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220140779.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201407:N2:4:2366:79",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120171272.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201712:N1:4:4831:72",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220171276.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201712:N2:4:1614:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120181271.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201812:N1:4:4620:71",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220181274.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201812:N2:4:1190:74",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320181277.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201812:N3:4:7449:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320181279.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201812:N3:4:7451:79",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220191277.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:201912:N2:4:988:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220201275.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N2:4:884:75",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201276.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7143:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201279.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7146:79",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201289.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7156:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201290.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7157:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201291.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7158:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320201292.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202012:N3:4:7159:92",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220210774.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N2:4:781:74",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220210776.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N2:4:783:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320210777.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N3:4:7043:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320210789.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N3:4:7055:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320210790.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N3:4:7056:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320210791.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N3:4:7057:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320210792.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202107:N3:4:7058:92",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220211276.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N2:4:682:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211274.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6939:74",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211276.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6941:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211277.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6942:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211279.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6944:79",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211289.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6954:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211290.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6955:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211291.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6956:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320211292.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202112:N3:4:6957:92",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/120220774.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N1:4:4001:74",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320220777.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N3:4:6842:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320220788.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N3:4:6853:88",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320220789.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N3:4:6854:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320220790.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N3:4:6855:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320220791.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202207:N3:4:6856:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220221273.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202212:N2:4:477:73",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230776.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6740:76",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230777.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6741:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230789.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6753:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230790.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6754:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230791.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6755:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320230792.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202307:N3:4:6756:92",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/220231273.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N2:4:275:73",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231274.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:3:6636:73",
+          "field": "passage"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231277.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:4:6640:77",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231289.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:4:6652:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231290.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:4:6653:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231291.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:4:6654:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320231292.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202312:N3:4:6655:92",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320240774.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202407:N3:4:6536:74",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320240789.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202407:N3:4:6551:89",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320240790.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202407:N3:4:6552:90",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320240791.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202407:N3:4:6553:91",
+          "field": "prompt"
+        }
+      ]
+    },
+    {
+      "key": "pic/320240792.jpg",
+      "status": "missing",
+      "httpStatus": 404,
+      "questions": [
+        {
+          "id": "imported:202407:N3:4:6554:92",
+          "field": "prompt"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "key": "pic/120100770.jpg",
+      "sha256": "70ed0e9ed09a3406a2fb8aa2402e668391dbf58c3c8b6b34c70944c5588ef74a",
+      "width": 1000,
+      "height": 1394,
+      "bytes": 300526,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220100774.jpg",
+      "sha256": "0e52e5a26eea31ad2691993ed3f743b336d9ab5de093eec1cfb2a53a4ffef276",
+      "width": 759,
+      "height": 898,
+      "bytes": 168960,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320100773.jpg",
+      "sha256": "f425946e026169d2bb8f031956a524e5054cd19d7e9f74be906c5ceabe7cbef8",
+      "width": 1000,
+      "height": 1140,
+      "bytes": 193855,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120101270.jpg",
+      "sha256": "d5433c973cac09fd35d9cf41bc4d6d2c76a36f6e7e2968b5dde8edbfa079c069",
+      "width": 1000,
+      "height": 1228,
+      "bytes": 280219,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220101274.jpg",
+      "sha256": "7143246a8b0a7cf2e89d75c074e8848bc119c185579a672e1ab325ed58c68c73",
+      "width": 1000,
+      "height": 1362,
+      "bytes": 301179,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120110769.jpg",
+      "sha256": "fbc63f335a70161945fe7235017beb1c6bf82f468d7330fd100d0ad8045b9290",
+      "width": 1000,
+      "height": 1257,
+      "bytes": 266800,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220110774.jpg",
+      "sha256": "cd4d4aa05f81dbd80b0c2640c5224799d16c8fbf4268603a9893a36764214238",
+      "width": 1000,
+      "height": 1545,
+      "bytes": 292262,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320110773.jpg",
+      "sha256": "9f0e69b6bc7c83ed466e55ed594a92f130e16a740c0e828ffa2b1d3b40189fde",
+      "width": 1000,
+      "height": 753,
+      "bytes": 141587,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120111269.jpg",
+      "sha256": "c018c9f3d074af82531367c42d9be93c18930a22749623d59a87d54f4070f214",
+      "width": 1000,
+      "height": 1195,
+      "bytes": 252060,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220111274.jpg",
+      "sha256": "1c88455761656542a97a37cf0b8d65bbb29e7b56a9be7143eb7ee76caedf9fe2",
+      "width": 607,
+      "height": 751,
+      "bytes": 102241,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320111273.jpg",
+      "sha256": "2b8226934ca78dd31c3fb98e7099b6b7cc833ac0f53b995e4ca6bf9bcc8bce3a",
+      "width": 1000,
+      "height": 871,
+      "bytes": 159668,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120120769.jpg",
+      "sha256": "36fc1f6af5784118561941f4fa5eea7a37952cf865479c0f863eef91a4c55782",
+      "width": 1000,
+      "height": 1314,
+      "bytes": 344314,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220120774.jpg",
+      "sha256": "109838798f0915b1bc8b3529c2efde68af7a7bcd43d0e74bee8018ee8a87ee3b",
+      "width": 1000,
+      "height": 1200,
+      "bytes": 239409,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320120773.jpg",
+      "sha256": "1cd529165e6d015cd774b0d1226eb508d3804aa7ff8c4c68746ad713fac1ca18",
+      "width": 1000,
+      "height": 1041,
+      "bytes": 226111,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120121269.jpg",
+      "sha256": "afa15c88731aac984f58e0902c13e49177d209b917034dcc28ffb0d20c9d037a",
+      "width": 1000,
+      "height": 1110,
+      "bytes": 280702,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220121274.jpg",
+      "sha256": "7466f8c73b31d45087bf50473d36a9bd10c5cd506f1b2aee714a14a14ad94f2b",
+      "width": 1000,
+      "height": 1367,
+      "bytes": 317652,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320121273.jpg",
+      "sha256": "5aa5de56a2180573b3f418e624b14bbab852fed6cd6f2631afbfaf136d755c2d",
+      "width": 1000,
+      "height": 875,
+      "bytes": 176547,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120130769.jpg",
+      "sha256": "bf512dd5fc93fa60503acd9a13d0e9051ec05b0f399c2eadb17c94f99249cd34",
+      "width": 1000,
+      "height": 1417,
+      "bytes": 256240,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220130774.jpg",
+      "sha256": "4bdf612c8dda754b95c81cdbd6fd87002864ed792026b6f5237089808080e97c",
+      "width": 1000,
+      "height": 1218,
+      "bytes": 251887,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320130773.jpg",
+      "sha256": "4a375bf87ccb90d1b96fea6ebb0d2e382326ab769326c3ac002e1e4b569badb6",
+      "width": 1000,
+      "height": 1031,
+      "bytes": 184536,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120131269.jpg",
+      "sha256": "451936c006a13d450d3ab23698e527e6e5832af93393b261d56f534f020bb9e4",
+      "width": 891,
+      "height": 981,
+      "bytes": 320346,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220131274.jpg",
+      "sha256": "6e6cf3ffe2cc625dc97c7d6c46fef292ee76a5fc80e8bbe96e8602f982e961c4",
+      "width": 1000,
+      "height": 1151,
+      "bytes": 250282,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320131273.jpg",
+      "sha256": "dbbbe452d794f4174b16d0d1ba6295b3fb1f829bc8988a9fc274b7c31822c3bb",
+      "width": 1000,
+      "height": 1208,
+      "bytes": 209081,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120140769.jpg",
+      "sha256": "d7ad015460777344f342e1164b3a0d26cd3edf758a52819443adfec2f156c0cb",
+      "width": 1000,
+      "height": 1108,
+      "bytes": 255519,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220140774.jpg",
+      "sha256": "0d3c80fbc0f7b7e9d2ba90d941fccb816cec6b7f2853060b8b6366820d6d5afd",
+      "width": 1000,
+      "height": 1312,
+      "bytes": 279154,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320140773.jpg",
+      "sha256": "e0e90bf13ac8785de20876d036414cfcae2fa211e31672080a7312032f675f74",
+      "width": 1000,
+      "height": 1415,
+      "bytes": 119130,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320140773-1.jpg",
+      "sha256": "146f301b407fb2b48dd6a58911d2700ee33c55d00674881255e9adc39579ad84",
+      "width": 661,
+      "height": 246,
+      "bytes": 13122,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120141269.jpg",
+      "sha256": "b7aed08b02eb398759fa352fd60946e91aba74dda11c5a7374e3cfb1bb7fa0e8",
+      "width": 1000,
+      "height": 1386,
+      "bytes": 322908,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220141274.jpg",
+      "sha256": "3cf9370d94338d0cf980e941e86465f9e5fbce91347758f72d1aea523bf8f385",
+      "width": 700,
+      "height": 798,
+      "bytes": 122203,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320141273.jpg",
+      "sha256": "4d9d32d1580324cd372da0c50af223e33242e82619dfb0b7495fbe75be6705cd",
+      "width": 1000,
+      "height": 1019,
+      "bytes": 201761,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120150769.jpg",
+      "sha256": "d6d35f7b29a6a84502ca048f0d881557aa7d0f8466fcccd285a31a568555779c",
+      "width": 1000,
+      "height": 1243,
+      "bytes": 286141,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220150774.jpg",
+      "sha256": "5009127a2d1f57f709c7079efa7ab861f7356f31c6f8afa27d421ceef2e1106e",
+      "width": 738,
+      "height": 1013,
+      "bytes": 156127,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320150773.jpg",
+      "sha256": "91d0c10ddca9d7037194293d77d6d7e0cf4ae835ae4b1ad6439ee4a718c4bf84",
+      "width": 1000,
+      "height": 1219,
+      "bytes": 197444,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120151269.jpg",
+      "sha256": "ec43c06bcf48c850bbaf60aaf54e40e6253571ea7ca668de1a0cffe83e6b73cb",
+      "width": 1000,
+      "height": 1395,
+      "bytes": 284458,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220151274.jpg",
+      "sha256": "4c804b765027f77fffd1e7d8359cad32e35587413cc2c5308360f70b6fad2f1f",
+      "width": 1000,
+      "height": 1275,
+      "bytes": 279432,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320151273.jpg",
+      "sha256": "57565f328f4d67059ab4e35a77e9596292172aaeb5211ef69ede3d594abf1c8c",
+      "width": 1000,
+      "height": 774,
+      "bytes": 164339,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120160769.jpg",
+      "sha256": "8eef3b1f121434f93dedb55a90a32994657d080a742ed8765db2711fd5658c57",
+      "width": 1000,
+      "height": 1238,
+      "bytes": 267660,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220160774.jpg",
+      "sha256": "1a70e3f89e1ecdc71b5d46107a2b605438bf861b6a78c7a15e069469d76961e5",
+      "width": 1000,
+      "height": 1359,
+      "bytes": 289777,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320160773.jpg",
+      "sha256": "32c7824a055d852eefedbb5d05196656f949454f0b8149133f4c71e4a757430e",
+      "width": 1000,
+      "height": 1007,
+      "bytes": 218569,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120161269.jpg",
+      "sha256": "f4a0937fca5c1417a5a0524c5fc397c2691187277cefd34b313716123ae7d03f",
+      "width": 781,
+      "height": 1033,
+      "bytes": 163831,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220161274.jpg",
+      "sha256": "a32963a461733ca426840d786f88644d40f34796cfcd8ea3f1a729a037f8f09e",
+      "width": 1000,
+      "height": 1150,
+      "bytes": 222685,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320161273.jpg",
+      "sha256": "05ee064b8715b492aa1afd851ecb904f8b42207d6cd814dc426be1591e376c75",
+      "width": 1000,
+      "height": 1044,
+      "bytes": 196578,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120170769.jpg",
+      "sha256": "8019392019e48dea58651a2d88a11f98c130fc92841871e36e62ca9f99704107",
+      "width": 1000,
+      "height": 1343,
+      "bytes": 277642,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220170774.jpg",
+      "sha256": "5e6c8861875882f73f0f042ee08ed3ea7c71df8d67a7fd8b80d2fa872b1ad405",
+      "width": 1000,
+      "height": 1161,
+      "bytes": 231506,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320170773.jpg",
+      "sha256": "3006af53f4c856dc53cc62bb38790b8572b2cd24f7d73a9c202362e1fbfd32e9",
+      "width": 1000,
+      "height": 1115,
+      "bytes": 201517,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120171269.jpg",
+      "sha256": "349daf525b3f1b0adad7fdac9c6d71d4811847a6434d1ca54ab03d44be58570a",
+      "width": 1000,
+      "height": 1209,
+      "bytes": 288544,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220171274.jpg",
+      "sha256": "420426530e62958aa06a868074e787dd992fca67808d6265498517190c18a638",
+      "width": 1000,
+      "height": 1270,
+      "bytes": 261470,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320171273.jpg",
+      "sha256": "0ed77dbc6e3a409ea8662677b5aff69bdb61d7bcd78a7e74a43c06eb228313dd",
+      "width": 1000,
+      "height": 1167,
+      "bytes": 214607,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120180769.jpg",
+      "sha256": "45cd99b214ab8aa2745cad305c30ebcfbe2342ba3d649ee9ca4f41751972532e",
+      "width": 1000,
+      "height": 1288,
+      "bytes": 305231,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220180774.jpg",
+      "sha256": "ab174d1ccf13410639fc3ab3915b4c9100506f7a30510a91ab8868ec1be1ac61",
+      "width": 1000,
+      "height": 1276,
+      "bytes": 267595,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320180773.jpg",
+      "sha256": "efd5a065169cb5bb39bccb8673c69deafe574d3869aaad05dbcf692a85af78cd",
+      "width": 1000,
+      "height": 1121,
+      "bytes": 208956,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120181269.jpg",
+      "sha256": "b5b0c180031e8040e518b4be973bd1a63c36001430939f6a011c060de1dd7f19",
+      "width": 1000,
+      "height": 1451,
+      "bytes": 269013,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220181272.jpg",
+      "sha256": "b76be8ec9648e7d5fce0c5ad85c2c92ca204499a715c1ecd0e06d4b832a653f2",
+      "width": 1000,
+      "height": 1351,
+      "bytes": 280244,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320181273.jpg",
+      "sha256": "96a6c0d1b32e43832fd45333cbcca175c3f31b331089f0b9fd836537dfb2c905",
+      "width": 1000,
+      "height": 1278,
+      "bytes": 214860,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120190768.jpg",
+      "sha256": "2943050000690a4162095afd0fbbc8a523b45333b5a8695fbdd5000fcc02be18",
+      "width": 720,
+      "height": 864,
+      "bytes": 135384,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220190772.jpg",
+      "sha256": "4bfb0ec6b71722b65169d94755cd57ac49ab3bd2f007394e4938e8af95973837",
+      "width": 1000,
+      "height": 1402,
+      "bytes": 279173,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320190773.jpg",
+      "sha256": "343912da55c6a22e624afb4c2368f25b26720b1fd46abeb7b9176ebe500709d7",
+      "width": 1000,
+      "height": 958,
+      "bytes": 188182,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120191268.jpg",
+      "sha256": "42d24411e333a510983bc4733a16075c15278403890d1543523f774ae5e392e5",
+      "width": 708,
+      "height": 969,
+      "bytes": 170174,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220191271.jpg",
+      "sha256": "972011fa29bf3c1681c829b1659975c8cca8fd4d0efc7786c73b0edf7086bd13",
+      "width": 1000,
+      "height": 1442,
+      "bytes": 302457,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320191273.jpg",
+      "sha256": "fe1350a90c2b90e467ce3488cc7edaa516882fd212812e0fcbc20edefd480d1b",
+      "width": 1000,
+      "height": 1015,
+      "bytes": 177550,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120201267.jpg",
+      "sha256": "339551f23f0641fe9cc3bebcf2b3db451be81e455ef0c3948e4953d6d325ba96",
+      "width": 736,
+      "height": 939,
+      "bytes": 135553,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220201271.jpg",
+      "sha256": "dab37826c8cca853b8981a9a6e47062ac894ff2027ba8c84c4a08958110e4af6",
+      "width": 1000,
+      "height": 1393,
+      "bytes": 308780,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320201272.jpg",
+      "sha256": "c63a590b426339d35621ae0906f9cee60c0dd89ebd2d41126342a4e645bd50cd",
+      "width": 1000,
+      "height": 1060,
+      "bytes": 182906,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120210768.jpg",
+      "sha256": "d84e1550add79330d2a47e5b0eb1ed611e70daa1c581f2ea2364d39eea6fc882",
+      "width": 667,
+      "height": 927,
+      "bytes": 126582,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220210771.jpg",
+      "sha256": "6fd78384838e71b9da3ea50e2cb71f6c203bb690f73c7b3b06d1d4b102dc9897",
+      "width": 630,
+      "height": 882,
+      "bytes": 134789,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320210772.jpg",
+      "sha256": "835f964e87345a225d7572505e76b69f2211240c67402f8e617ca8c33fd147e1",
+      "width": 1000,
+      "height": 973,
+      "bytes": 188559,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120211268.jpg",
+      "sha256": "c230606734569415720fc38156388c8d19c7bed980e3d7cd4e1f8f7488d1b32d",
+      "width": 1000,
+      "height": 1191,
+      "bytes": 231317,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220211270.jpg",
+      "sha256": "95ef9c043d2554b88376b0b8361ff1e95e598c1df0b37ca91e65f833bf07cd0c",
+      "width": 731,
+      "height": 975,
+      "bytes": 173582,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320211272.jpg",
+      "sha256": "329184c731d85488be17a6139e07b7ae37cf7529208c7d676ff5dd163f4409c8",
+      "width": 1000,
+      "height": 1239,
+      "bytes": 198999,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120220767.jpg",
+      "sha256": "e6517f3d474da917dd7afabd586dd88cdecda553cfe0779438d6eed4b83adac8",
+      "width": 1000,
+      "height": 1197,
+      "bytes": 265801,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220220770.jpg",
+      "sha256": "28ac002db8b047d87b7fca060fe97f02d0b29769c98808180215ad683cbebd47",
+      "width": 640,
+      "height": 817,
+      "bytes": 133811,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320220771.jpg",
+      "sha256": "a01bd93453e4f1fbc02a41f62595480624878e4eef74b9049de969efc7ef2dac",
+      "width": 1000,
+      "height": 1076,
+      "bytes": 229314,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120221265.jpg",
+      "sha256": "9ad6859e84c877dd7ec85827bd8cdd3af2adbe5c98c52eab2070f14853947bbc",
+      "width": 633,
+      "height": 957,
+      "bytes": 163541,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220221270.jpg",
+      "sha256": "a67e3a9767e566393243d5610753e27bd82294a85d13532ce9b1ed0f23e1cbcf",
+      "width": 584,
+      "height": 929,
+      "bytes": 136694,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120230765.jpg",
+      "sha256": "8c2c58c233ceff6a2eda555f5c5b0a5e5df89e0d67a1c2932173aa957b4ebe39",
+      "width": 597,
+      "height": 865,
+      "bytes": 130703,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220230770.jpg",
+      "sha256": "edb20149303be69631418d1267abf327dd2939b7b77597eceb88d06b9c60a995",
+      "width": 615,
+      "height": 887,
+      "bytes": 133343,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320230772.jpg",
+      "sha256": "7658f8bde8ba17502db2ccf257023bb6eb944a2e86f96b00a05fb4f278f638a6",
+      "width": 1000,
+      "height": 1077,
+      "bytes": 183101,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120231265.jpg",
+      "sha256": "5a8af28bd9cddd5008939367a4f3e1378121bdd87020fb7460e92c6a22a19005",
+      "width": 629,
+      "height": 931,
+      "bytes": 150445,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220231270.jpg",
+      "sha256": "983f9eca4c3510718b92aa1eb7d70674100ef6a27020ca3c80c4dc0477d0dee0",
+      "width": 675,
+      "height": 969,
+      "bytes": 157650,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320231272.jpg",
+      "sha256": "dc1bb8549f28b8e9ffd6dbfe385d1c09ccf0d4b49cfa5bf5e645ca7915c7d8b2",
+      "width": 1000,
+      "height": 1354,
+      "bytes": 237760,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120240765.jpg",
+      "sha256": "fc67f95ff3bb2cba967f3e54cbb506cd619a282435856d46737d7c64e9dff829",
+      "width": 902,
+      "height": 1035,
+      "bytes": 161998,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220240770.jpg",
+      "sha256": "0dbb0183359df756e9298387714bf5985d96309ce75fc909e68a68555ef1a7c7",
+      "width": 740,
+      "height": 906,
+      "bytes": 176272,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320240772.jpg",
+      "sha256": "71a894303f7378b13ee5b004232e10a23d489f7ec4f422b73c1e8eb24ef4b1bd",
+      "width": 654,
+      "height": 965,
+      "bytes": 159343,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120241265.jpg",
+      "sha256": "f7248bf3b6ca354d910f5d1dae16eb1cb29512c2230e30dae644a62f011ef71e",
+      "width": 992,
+      "height": 1304,
+      "bytes": 192746,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220241270.jpg",
+      "sha256": "10b36ef1f82c0c04c7cadc43db92cd38ce865b03f381fbc8b1d7965bd9c4290c",
+      "width": 993,
+      "height": 1378,
+      "bytes": 201277,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320241237.jpg",
+      "sha256": "0027dffffadb2e62e732fcefef27b1cc10ed1f7972f378967d251ed3e973d784",
+      "width": 1000,
+      "height": 1432,
+      "bytes": 95492,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120250765.jpg",
+      "sha256": "57a808c88de2403d172ef574c90fba47fcc79c34c879474b7c9e50ac1208b459",
+      "width": 1000,
+      "height": 1447,
+      "bytes": 143696,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120250765-1.jpg",
+      "sha256": "f0a158f01699ad373bd9310ddd1a33430ba0a19a7b1a78fcaf26c95293844a0c",
+      "width": 1000,
+      "height": 412,
+      "bytes": 61430,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220250770.jpg",
+      "sha256": "b6239701de363b16f3cc2874e2dde4382ec43fab28c07bddada31a0be17e8cc8",
+      "width": 1000,
+      "height": 1150,
+      "bytes": 98350,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120251265.jpg",
+      "sha256": "e5df9056db558bd6000be100ac6ddc8b5b8e1d3edc5ff6a093b10c1074831836",
+      "width": 1000,
+      "height": 1502,
+      "bytes": 175764,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220251270.jpg",
+      "sha256": "4111983e6f886b023f2074c6d422c3a68f08a9a32eae69af1d118f5812dcbe82",
+      "width": 813,
+      "height": 1161,
+      "bytes": 113004,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320251224.jpg",
+      "sha256": "1b86b5bee88a4312e11f93e8760bc0500e7f5162c4f7885e62639feed6955cb9",
+      "width": 890,
+      "height": 905,
+      "bytes": 42234,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/320251237.jpg",
+      "sha256": "2f0a7b55fe1c1786c28d801fbec1aa3abf1cbe443d24d26104bb065d0e2dc0cf",
+      "width": 659,
+      "height": 936,
+      "bytes": 61016,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/120260765.jpg",
+      "sha256": "73f7d95f73c2991f467ee04c84b721c2d7325961584b75045c4438dd49b14d15",
+      "width": 996,
+      "height": 1466,
+      "bytes": 117592,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220260770.jpg",
+      "sha256": "cd9b859fed6d048133288e9f4e89fd91b211b572d4de733c07e681dd71912139",
+      "width": 1000,
+      "height": 1283,
+      "bytes": 99462,
+      "httpStatus": 200
+    },
+    {
+      "key": "pic/220260770-1.jpg",
+      "sha256": "f367a7cb8388b5f831cd3341c9bdd69e36e658923b3f0b3b17ddbda1b9752b94",
+      "width": 1000,
+      "height": 471,
+      "bytes": 34818,
+      "httpStatus": 200
+    }
+  ]
+}

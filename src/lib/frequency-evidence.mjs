@@ -34,6 +34,6 @@ export function frequencyExamplePreview(question, fields, forms) {
     ...(fields.includes('options') ? options.map((text,i) => ({field:'options',text,option:i+1})) : []),
     ...frequencyImageSources(question).filter(image => fields.includes(image.field)),
   ];
-  const excerpts = sources.flatMap(source => {const excerpt=frequencyExcerpt(source.text,forms);return excerpt?[{field:source.field,...(source.option?{option:source.option}:{}),...excerpt}]:[];}).slice(0,3);
+  const excerpts = sources.flatMap(source => {const excerpt=frequencyExcerpt(source.text,forms);return excerpt?[{field:source.field,...(source.option?{option:source.option}:{}),...(source.key?{image:true}:{}),...excerpt}]:[];}).slice(0,3);
   return {prompt:prompt.slice(0,200), ...(passage ? {passage:frequencyExcerpt(passage,forms)?.text ?? passage.slice(0,240)} : {}), options: options.map(option => option.slice(0,180)), excerpts};
 }

@@ -28,7 +28,7 @@
 npm run import:exam-bank -- --source <整卷JSON目录> --image-report docs/exam-bank-missing-images-2026-10-22.json
 ```
 
-本次开放依据所有者的上传确认，记录在 `src/data/imported-bank/uploaded-reading-images.json`；测试环境外网受限，未声称真实图片已通过远程下载校验。后续可按以下流程补充验证。
+本次开放最初依据所有者的上传确认。2026-10-23 网络权限生效后，已实际下载并完整解码这 11 张图片，逐图核对并将文字纳入词频统计。下载状态、尺寸和 SHA-256 记录在 `src/data/imported-bank/verified-reading-images.json`；上传确认仍保留。后续可按以下流程重新验证。
 
 ## 上传后校验与开放
 

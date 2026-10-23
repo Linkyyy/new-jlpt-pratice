@@ -83,6 +83,7 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["一词一行，导入规范仍待确认", "1行1語・取込仕様は確認待ち", "One term per line; import format unconfirmed"],
   ["纯文本词表已导出，MOJi 直接导入兼容性仍待确认。", "テキストを書き出しました。MOJiへの直接取込は未確認です。", "Word list exported; direct MOJi import compatibility remains unconfirmed."],
   ["原题例句", "原文の用例", "Source excerpt"],
+  ["图片文字", "画像の文字", "Image text"],
   ["释义与分级来源", "意味とレベルの出典", "Meaning and grade sources"],
   ["释义来源", "意味の出典", "Definition source"],
   ["分级依据", "分類の根拠", "Grade basis"],

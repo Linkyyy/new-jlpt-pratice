@@ -98,8 +98,20 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
     if (!termIds.has(key)) { termIds.set(key, terms.length); terms.push([label, reading, pos, kind]); surfaces.push(new Set()); }
     return termIds.get(key);
   };
-  function analyze(text) {
-    const tokens = reviewFrequencyTokens(text, tokenize(text), recordMorphology), counts = new Map();
+  function analyze(text, imageText = false) {
+    let rawTokens = tokenize(text);
+    if (imageText) {
+      // OCR introduces unusual line breaks and spacing. Re-anchor exact surfaces
+      // before expression matching rather than trusting shifted tokenizer offsets.
+      let cursor = 0;
+      rawTokens = rawTokens.map(token => {
+        const at = text.indexOf(token.surface_form, cursor);
+        if (at < 0) return token;
+        cursor = at + token.surface_form.length;
+        return {...token, word_position:at+1};
+      });
+    }
+    const tokens = reviewFrequencyTokens(text, rawTokens, recordMorphology), counts = new Map();
     const add = (id, surface) => { counts.set(id, (counts.get(id) ?? 0) + 1); if (surface) surfaces[id].add(surface); };
     const starts = new Set(), ends = new Set(), tokensAt = new Map();
     for (const [tokenIndex, token] of tokens.entries()) {
@@ -144,7 +156,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
     const question = questions[questionIndex];
     const key = shared ? `${question[1]}:${question[2]}:${question[3]}:${question[4]}:${field}:${sharedIdentity ?? text}` : '';
     if (shared && sharedUnits.has(key)) { const linked = units[sharedUnits.get(key)][1]; if (!linked.includes(questionIndex)) linked.push(questionIndex); return; }
-    const unit = [field, [questionIndex], analyze(text)];
+    const unit = [field, [questionIndex], analyze(text, sharedIdentity !== undefined)];
     if (shared) sharedUnits.set(key, units.length);
     units.push(unit);
   }

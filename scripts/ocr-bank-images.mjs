@@ -15,6 +15,13 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const sourceDirectory = path.join(root, 'src/data/imported-bank/questions');
 const entriesFile = path.join(root, 'src/data/frequency-image-ocr/entries.json');
 
+export function normalizeJapaneseOcr(text) {
+  return text.normalize('NFKC').replaceAll('\r','')
+    .replace(/<([^<>]{1,60})>/g,'【$1】')
+    .replace(/(?<=[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー々])[^\S\n]+(?=[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー々])/gu,'')
+    .replace(/[^\S\n]+(?=[。、！？])/gu,'').trim();
+}
+
 export async function collectImageChecklist(directory = sourceDirectory) {
   const images = new Map();
   for (const file of (await fs.readdir(directory)).filter(name => /^\d{6}-N[1-5]-[1-4]\.json$/.test(name)).sort()) {
@@ -40,7 +47,8 @@ export function ocrConfidence(tsv) {
 }
 
 /** Offline Japanese OCR. Image bytes and native OCR tools never enter the deployment. */
-export async function recognizeImage(filename, {tessdataDirectory, cacheDirectory = '/tmp/jlpt-image-ocr/work'} = {}) {
+export async function recognizeImage(filename, {tessdataDirectory, cacheDirectory = '/tmp/jlpt-image-ocr/work', pageSegmentation = 3, preprocess = true} = {}) {
+  assert([3,6,11,12].includes(pageSegmentation), 'Unsupported OCR page segmentation mode');
   const bytes = await fs.readFile(filename);
   const sha256 = createHash('sha256').update(bytes).digest('hex');
   const model = tessdataDirectory ? ['--tessdata-dir', path.resolve(tessdataDirectory)] : [];
@@ -51,11 +59,11 @@ export async function recognizeImage(filename, {tessdataDirectory, cacheDirector
   assert(metadata.width >= 16 && metadata.height >= 16, 'Image is too small for OCR');
   await source.rotate().flatten({background:'#ffffff'}).resize({width:Math.min(3000, Math.max(metadata.width, 2200)), withoutEnlargement:false})
     .grayscale().normalize().sharpen().png().toFile(prepared);
-  await run('tesseract', [prepared, prefix, ...model, '-l', 'jpn', '--psm', '3', '-c', 'tessedit_create_txt=1', '-c', 'tessedit_create_tsv=1'],
+  await run('tesseract', [preprocess ? prepared : filename, prefix, ...model, '-l', 'jpn', '--psm', String(pageSegmentation), '-c', 'tessedit_create_txt=1', '-c', 'tessedit_create_tsv=1'],
     {timeout:60000, maxBuffer:1024*1024, env:{...process.env, OMP_THREAD_LIMIT:'1'}});
   const [text, tsv] = await Promise.all([fs.readFile(`${prefix}.txt`, 'utf8'), fs.readFile(`${prefix}.tsv`, 'utf8')]);
-  return {sha256, text:text.normalize('NFKC').replaceAll('\r','').trim(), confidence:ocrConfidence(tsv),
-    engine:'tesseract-jpn-psm3', reviewed:false};
+  return {sha256, text:normalizeJapaneseOcr(text), confidence:ocrConfidence(tsv),
+    engine:`tesseract-jpn-psm${pageSegmentation}`, reviewed:false};
 }
 
 export async function importReviewedImageText(input, output = entriesFile) {

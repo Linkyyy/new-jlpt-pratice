@@ -1,10 +1,10 @@
 {
-  "revision": "513ef89afbf6584f586a5e3c666c4e1e2057fe53784bc1a5ea40c62221ee49ab",
-  "excludedTerms": 2081,
+  "revision": "d244e5f447d4a5094ccf0f734ce09688ef89354e5f720424c6a8ff98d34e6706",
+  "excludedTerms": 2291,
   "reasons": {
-    "personal_or_organization_name": 420,
-    "unverified_word_or_spelling": 1654,
-    "symbol_or_placeholder": 7
+    "personal_or_organization_name": 421,
+    "unverified_word_or_spelling": 1861,
+    "symbol_or_placeholder": 9
   },
   "excluded": [
     {
@@ -13,11 +13,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 309,
+      "occurrences": 311,
       "examples": [
         "imported:201007:N1:2:6386:32",
-        "imported:201007:N1:4:6431:77",
-        "imported:201007:N1:4:6446:92"
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71"
       ]
     },
     {
@@ -39,7 +39,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 12,
+      "occurrences": 14,
       "examples": [
         "imported:201007:N1:2:6395:41",
         "imported:201007:N1:2:6396:42",
@@ -100,9 +100,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 5,
       "examples": [
-        "imported:201007:N1:3:6402:48"
+        "imported:201007:N1:3:6402:48",
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
       ]
     },
     {
@@ -225,7 +227,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 148,
+      "occurrences": 149,
       "examples": [
         "imported:201007:N1:3:6413:59",
         "imported:201007:N1:3:6414:60",
@@ -342,7 +344,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 9,
+      "occurrences": 10,
       "examples": [
         "imported:201007:N1:3:6424:70",
         "imported:201007:N1:3:6425:71",
@@ -355,7 +357,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 10,
+      "occurrences": 19,
       "examples": [
         "imported:201007:N1:3:6424:70",
         "imported:201007:N1:3:6425:71",
@@ -371,6 +373,133 @@
       "occurrences": 2,
       "examples": [
         "imported:201007:N1:3:6424:70"
+      ]
+    },
+    {
+      "label": "太郎",
+      "reading": "たろう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 12,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201107:N1:2:6176:35"
+      ]
+    },
+    {
+      "label": "山本",
+      "reading": "やまもと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 78,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201007:N3:1:9036:34"
+      ]
+    },
+    {
+      "label": "花子",
+      "reading": "はなこ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 9,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201007:N3:4:9088:86"
+      ]
+    },
+    {
+      "label": "川上",
+      "reading": "かわかみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 5,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201707:N3:3:7751:73"
+      ]
+    },
+    {
+      "label": "次郎",
+      "reading": "じろう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 4,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201312:N2:4:2480:86"
+      ]
+    },
+    {
+      "label": "賞状",
+      "reading": "しょうじょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 7,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201312:N2:3:2468:74"
+      ]
+    },
+    {
+      "label": "副賞",
+      "reading": "ふくしょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71"
+      ]
+    },
+    {
+      "label": "表彰",
+      "reading": "ひょうしょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71",
+        "imported:201112:N1:3:6104:69"
+      ]
+    },
+    {
+      "label": "山手",
+      "reading": "やまて",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71"
+      ]
+    },
+    {
+      "label": "百貨店",
+      "reading": "ひゃっかてん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N1:3:6424:70",
+        "imported:201007:N1:3:6425:71"
       ]
     },
     {
@@ -775,9 +904,47 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 7,
       "examples": [
-        "imported:201007:N2:3:3211:74"
+        "imported:201007:N2:3:3211:74",
+        "imported:201007:N2:3:3212:75"
+      ]
+    },
+    {
+      "label": "セミ",
+      "reading": "せみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N2:3:3211:74",
+        "imported:201007:N2:3:3212:75"
+      ]
+    },
+    {
+      "label": "ナー",
+      "reading": "なー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N2:3:3211:74",
+        "imported:201007:N2:3:3212:75"
+      ]
+    },
+    {
+      "label": "本町",
+      "reading": "ほんまち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201007:N2:3:3211:74",
+        "imported:201007:N2:3:3212:75",
+        "imported:201907:N1:3:4513:68"
       ]
     },
     {
@@ -903,19 +1070,6 @@
       ]
     },
     {
-      "label": "山本",
-      "reading": "やまもと",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 75,
-      "examples": [
-        "imported:201007:N3:1:9036:34",
-        "imported:201012:N1:4:6329:82",
-        "imported:201107:N1:4:6225:84"
-      ]
-    },
-    {
       "label": "ライオン",
       "reading": "らいおん",
       "pos": "名词",
@@ -973,11 +1127,61 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 91,
+      "occurrences": 95,
       "examples": [
         "imported:201007:N3:3:9071:69",
         "imported:201007:N3:3:9072:70",
         "imported:201007:N3:3:9073:71"
+      ]
+    },
+    {
+      "label": "大田",
+      "reading": "おおた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 6,
+      "examples": [
+        "imported:201007:N3:3:9075:73",
+        "imported:201007:N3:3:9076:74",
+        "imported:201212:N3:3:8669:73"
+      ]
+    },
+    {
+      "label": "デジタ",
+      "reading": "でじた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N3:3:9075:73",
+        "imported:201007:N3:3:9076:74"
+      ]
+    },
+    {
+      "label": "ルカメラ",
+      "reading": "るかめら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201007:N3:3:9075:73",
+        "imported:201007:N3:3:9076:74"
+      ]
+    },
+    {
+      "label": "金",
+      "reading": "きむ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 48,
+      "examples": [
+        "imported:201007:N3:3:9075:73",
+        "imported:201007:N3:3:9076:74",
+        "imported:201012:N2:3:3304:60"
       ]
     },
     {
@@ -986,7 +1190,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 26,
+      "occurrences": 27,
       "examples": [
         "imported:201007:N3:3:9076:74",
         "imported:201012:N2:1:3251:7",
@@ -999,7 +1203,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 10,
+      "occurrences": 11,
       "examples": [
         "imported:201007:N3:3:9076:74",
         "imported:201012:N2:2:3278:34",
@@ -1053,19 +1257,6 @@
         "imported:201007:N3:4:9086:84",
         "imported:201312:N3:4:8473:81",
         "imported:202212:N1:4:3906:75"
-      ]
-    },
-    {
-      "label": "花子",
-      "reading": "はなこ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 8,
-      "examples": [
-        "imported:201007:N3:4:9088:86",
-        "imported:202307:N3:2:6717:53",
-        "imported:202512:N2:2:73718641860145:46"
       ]
     },
     {
@@ -1278,7 +1469,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
         "imported:201012:N1:3:6303:56",
         "imported:201012:N1:3:6304:57",
@@ -1387,6 +1578,93 @@
       ]
     },
     {
+      "label": "財団",
+      "reading": "ざいだん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 6,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71"
+      ]
+    },
+    {
+      "label": "前期",
+      "reading": "ぜんき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71"
+      ]
+    },
+    {
+      "label": "月額",
+      "reading": "げつがく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71"
+      ]
+    },
+    {
+      "label": "最長",
+      "reading": "さいちょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71",
+        "imported:201312:N1:3:5680:69"
+      ]
+    },
+    {
+      "label": "ビザ",
+      "reading": "びざ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71",
+        "imported:201012:N2:3:3318:74"
+      ]
+    },
+    {
+      "label": "在留",
+      "reading": "ざいりゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71",
+        "imported:201407:N1:3:5573:69"
+      ]
+    },
+    {
+      "label": "奨学生",
+      "reading": "しょうがくせい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201012:N1:3:6317:70",
+        "imported:201012:N1:3:6318:71"
+      ]
+    },
+    {
       "label": "キム",
       "reading": "きむ",
       "pos": "名词",
@@ -1444,7 +1722,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 49,
+      "occurrences": 50,
       "examples": [
         "imported:201012:N1:4:6351:104",
         "imported:201012:N2:4:3324:80",
@@ -1624,19 +1902,6 @@
       ]
     },
     {
-      "label": "金",
-      "reading": "きむ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 19,
-      "examples": [
-        "imported:201012:N2:3:3304:60",
-        "imported:201012:N2:3:3305:61",
-        "imported:201012:N2:3:3306:62"
-      ]
-    },
-    {
       "label": "池内",
       "reading": "いけうち",
       "pos": "名词",
@@ -1707,11 +1972,37 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 35,
+      "occurrences": 36,
       "examples": [
         "imported:201012:N2:3:3318:74",
         "imported:201107:N1:3:6210:69",
         "imported:201112:N2:3:2893:74"
+      ]
+    },
+    {
+      "label": "本学",
+      "reading": "ほんがく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 14,
+      "examples": [
+        "imported:201012:N2:3:3318:74",
+        "imported:201012:N2:3:3319:75",
+        "imported:201612:N1:3:5038:69"
+      ]
+    },
+    {
+      "label": "ブログラム",
+      "reading": "ぶろぐらむ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201012:N2:3:3318:74",
+        "imported:201012:N2:3:3319:75",
+        "imported:201712:N1:4:4861:102"
       ]
     },
     {
@@ -1766,7 +2057,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 7,
+      "occurrences": 8,
       "examples": [
         "imported:201012:N2:4:3350:106",
         "imported:201012:N2:4:3351:107",
@@ -1843,19 +2134,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201107:N1:2:6169:28"
-      ]
-    },
-    {
-      "label": "太郎",
-      "reading": "たろう",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 11,
-      "examples": [
-        "imported:201107:N1:2:6176:35",
-        "imported:201107:N3:4:8979:78",
-        "imported:201212:N1:4:5903:80"
       ]
     },
     {
@@ -2094,6 +2372,56 @@
       ]
     },
     {
+      "label": "食器洗い",
+      "reading": "しょっきあらい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201107:N1:3:6210:69",
+        "imported:201107:N1:3:6211:70",
+        "imported:202507:N1:4:168507686976934:72"
+      ]
+    },
+    {
+      "label": "むき",
+      "reading": "むき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201107:N1:3:6210:69",
+        "imported:201107:N1:3:6211:70",
+        "imported:202507:N2:3:35944279152256:57"
+      ]
+    },
+    {
+      "label": "日給",
+      "reading": "にっきゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201107:N1:3:6210:69",
+        "imported:201107:N1:3:6211:70"
+      ]
+    },
+    {
+      "label": "補習",
+      "reading": "ほしゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201107:N1:3:6210:69",
+        "imported:201107:N1:3:6211:70"
+      ]
+    },
+    {
       "label": "にあがる",
       "reading": "にあがる",
       "pos": "动词",
@@ -2110,11 +2438,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 5,
+      "occurrences": 11,
       "examples": [
         "imported:201107:N1:4:6223:82",
         "imported:201207:N3:1:8715:17",
-        "imported:201607:N3:1:7894:12"
+        "imported:201212:N1:3:5892:69"
       ]
     },
     {
@@ -2368,6 +2696,42 @@
       ]
     },
     {
+      "label": "引越",
+      "reading": "ひっこし",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201107:N2:3:2999:74",
+        "imported:201107:N2:3:3000:75"
+      ]
+    },
+    {
+      "label": "出入",
+      "reading": "しゅつにゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201107:N2:3:2999:74",
+        "imported:201107:N2:3:3000:75"
+      ]
+    },
+    {
+      "label": "スタッ",
+      "reading": "すたっ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201107:N2:3:2999:74",
+        "imported:201107:N2:3:3000:75"
+      ]
+    },
+    {
       "label": "有田",
       "reading": "ありた",
       "pos": "名词",
@@ -2546,6 +2910,31 @@
         "imported:201107:N3:3:8964:63",
         "imported:201107:N3:3:8965:64",
         "imported:201107:N3:3:8966:65"
+      ]
+    },
+    {
+      "label": "ブール",
+      "reading": "ぶーる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201107:N3:3:8974:73",
+        "imported:201107:N3:3:8975:74"
+      ]
+    },
+    {
+      "label": "日前",
+      "reading": "ひくま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 28,
+      "examples": [
+        "imported:201107:N3:3:8974:73",
+        "imported:201107:N3:3:8975:74",
+        "imported:201112:N3:3:8873:73"
       ]
     },
     {
@@ -2906,7 +3295,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 5,
+      "occurrences": 6,
       "examples": [
         "imported:201112:N1:3:6088:53",
         "imported:201112:N1:3:6089:54",
@@ -2971,7 +3360,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
         "imported:201112:N1:3:6091:56",
         "imported:201112:N1:3:6092:57",
@@ -3062,6 +3451,92 @@
       "occurrences": 2,
       "examples": [
         "imported:201112:N1:3:6104:69"
+      ]
+    },
+    {
+      "label": "参",
+      "reading": "さん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70",
+        "imported:201607:N1:3:5145:69"
+      ]
+    },
+    {
+      "label": "照",
+      "reading": "あきら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70",
+        "imported:201512:N2:1:1976:10"
+      ]
+    },
+    {
+      "label": "コストパフオーマンス",
+      "reading": "こすとぱふおーまんす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70"
+      ]
+    },
+    {
+      "label": "ホームヘージ",
+      "reading": "ほーむへーじ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70"
+      ]
+    },
+    {
+      "label": "フォーラム",
+      "reading": "ふぉーらむ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70"
+      ]
+    },
+    {
+      "label": "東方",
+      "reading": "とうほう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70"
+      ]
+    },
+    {
+      "label": "京",
+      "reading": "きょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201112:N1:3:6104:69",
+        "imported:201112:N1:3:6105:70"
       ]
     },
     {
@@ -3289,11 +3764,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 31,
+      "occurrences": 32,
       "examples": [
         "imported:201112:N2:3:2875:56",
-        "imported:201407:N1:1:5526:22",
-        "imported:201407:N2:1:2315:28"
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
       ]
     },
     {
@@ -3480,6 +3955,18 @@
       ]
     },
     {
+      "label": "ふりがな",
+      "reading": "ふりがな",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201112:N2:3:2893:74",
+        "imported:201112:N2:3:2894:75"
+      ]
+    },
+    {
       "label": "ラベル",
       "reading": "らべる",
       "pos": "名词",
@@ -3511,7 +3998,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
+      "occurrences": 7,
       "examples": [
         "imported:201112:N2:4:2904:85",
         "imported:201407:N3:3:8359:69",
@@ -3669,10 +4156,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 3,
+      "occurrences": 15,
       "examples": [
         "imported:201112:N3:3:8873:73",
-        "imported:201112:N3:3:8874:74"
+        "imported:201112:N3:3:8874:74",
+        "imported:201812:N3:3:7445:73"
       ]
     },
     {
@@ -4086,6 +4574,143 @@
       ]
     },
     {
+      "label": "新開",
+      "reading": "しんかい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "まえる",
+      "reading": "まえる",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 7,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70",
+        "imported:201212:N3:3:8663:67"
+      ]
+    },
+    {
+      "label": "フレンド",
+      "reading": "ふれんど",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "レクチャー",
+      "reading": "れくちゃー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "健二",
+      "reading": "けんじ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 2,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70",
+        "imported:201407:N1:3:5550:46"
+      ]
+    },
+    {
+      "label": "細か",
+      "reading": "こまか",
+      "pos": "形容词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "キヤ",
+      "reading": "きや",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70",
+        "imported:202512:N1:3:200735104608263:52"
+      ]
+    },
+    {
+      "label": "サリン",
+      "reading": "さりん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "スミス",
+      "reading": "すみす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 5,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70",
+        "imported:201612:N2:3:1810:58"
+      ]
+    },
+    {
+      "label": "お立ち",
+      "reading": "おたち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70"
+      ]
+    },
+    {
+      "label": "りく",
+      "reading": "りく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201207:N1:3:5998:69",
+        "imported:201207:N1:3:5999:70",
+        "imported:201907:N1:3:4513:68"
+      ]
+    },
+    {
       "label": "シャル",
       "reading": "しゃる",
       "pos": "名词",
@@ -4162,7 +4787,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
         "imported:201207:N1:4:6012:83",
         "imported:202112:N2:3:671:65",
@@ -4235,7 +4860,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 6,
+      "occurrences": 7,
       "examples": [
         "imported:201207:N2:1:2718:5",
         "imported:201307:N2:3:2564:63",
@@ -4248,11 +4873,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 8,
+      "occurrences": 9,
       "examples": [
         "imported:201207:N2:1:2718:5",
         "imported:201607:N2:4:1963:104",
-        "imported:202107:N1:3:4192:58"
+        "imported:201612:N3:3:7853:73"
       ]
     },
     {
@@ -4297,11 +4922,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 15,
+      "occurrences": 20,
       "examples": [
         "imported:201207:N2:2:2752:39",
-        "imported:201612:N1:4:5043:74",
-        "imported:201612:N3:3:7839:59"
+        "imported:201407:N3:3:8363:73",
+        "imported:201407:N3:3:8364:74"
       ]
     },
     {
@@ -4445,11 +5070,36 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 12,
       "examples": [
         "imported:201207:N2:3:2787:74",
-        "imported:202112:N2:1:613:7",
-        "imported:202407:N2:2:141:40"
+        "imported:201207:N2:3:2788:75",
+        "imported:202112:N2:1:613:7"
+      ]
+    },
+    {
+      "label": "飲物",
+      "reading": "のみもの",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201207:N2:3:2787:74",
+        "imported:201207:N2:3:2788:75"
+      ]
+    },
+    {
+      "label": "無休",
+      "reading": "むきゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201207:N2:3:2787:74",
+        "imported:201207:N2:3:2788:75",
+        "imported:202507:N1:2:86474754702316:37"
       ]
     },
     {
@@ -4507,9 +5157,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
-        "imported:201207:N3:1:8710:12"
+        "imported:201207:N3:1:8710:12",
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71"
       ]
     },
     {
@@ -4540,7 +5192,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 10,
+      "occurrences": 11,
       "examples": [
         "imported:201207:N3:2:8752:54",
         "imported:201207:N3:2:8753:55",
@@ -4608,22 +5260,50 @@
       ]
     },
     {
-      "label": "マイ",
-      "reading": "まい",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 1,
-      "examples": [
-        "imported:201207:N3:3:8772:74"
-      ]
-    },
-    {
       "label": "安見",
       "reading": "やすみ",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 10,
+      "examples": [
+        "imported:201207:N3:3:8771:73",
+        "imported:201207:N3:3:8772:74",
+        "imported:201707:N3:3:7751:73"
+      ]
+    },
+    {
+      "label": "西公園",
+      "reading": "にしこうえん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 6,
+      "examples": [
+        "imported:201207:N3:3:8771:73",
+        "imported:201207:N3:3:8772:74",
+        "imported:201507:N2:4:2177:104"
+      ]
+    },
+    {
+      "label": "交",
+      "reading": "交",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201207:N3:3:8771:73",
+        "imported:201207:N3:3:8772:74",
+        "imported:201307:N2:3:2575:74"
+      ]
+    },
+    {
+      "label": "マイ",
+      "reading": "まい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
       "occurrences": 1,
       "examples": [
         "imported:201207:N3:3:8772:74"
@@ -4894,6 +5574,44 @@
         "imported:201212:N1:3:5892:69",
         "imported:201507:N3:4:8171:85",
         "imported:201612:N3:4:7864:84"
+      ]
+    },
+    {
+      "label": "隔月",
+      "reading": "かくげつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201212:N1:3:5892:69",
+        "imported:201212:N1:3:5893:70"
+      ]
+    },
+    {
+      "label": "演",
+      "reading": "演",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201212:N1:3:5892:69",
+        "imported:201212:N1:3:5893:70",
+        "imported:202312:N2:1:209:7"
+      ]
+    },
+    {
+      "label": "支",
+      "reading": "支",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 8,
+      "examples": [
+        "imported:201212:N1:3:5892:69",
+        "imported:201212:N1:3:5893:70",
+        "imported:201512:N2:1:1975:9"
       ]
     },
     {
@@ -5265,6 +5983,42 @@
       ]
     },
     {
+      "label": "強",
+      "reading": "つよ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201212:N2:3:2681:74",
+        "imported:201212:N2:3:2682:75"
+      ]
+    },
+    {
+      "label": "据え付け",
+      "reading": "すえつけ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201212:N2:3:2681:74",
+        "imported:201212:N2:3:2682:75"
+      ]
+    },
+    {
+      "label": "庫",
+      "reading": "くら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201212:N2:3:2681:74",
+        "imported:201212:N2:3:2682:75"
+      ]
+    },
+    {
       "label": "ワカ",
       "reading": "わか",
       "pos": "名词",
@@ -5391,7 +6145,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 14,
+      "occurrences": 15,
       "examples": [
         "imported:201212:N3:2:8632:36",
         "imported:201212:N3:2:8642:46",
@@ -5430,9 +6184,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
         "imported:201212:N3:2:8642:46",
+        "imported:202107:N3:3:7038:72",
         "imported:202107:N3:3:7039:73"
       ]
     },
@@ -5455,11 +6210,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 8,
+      "occurrences": 9,
       "examples": [
         "imported:201212:N3:2:8649:53",
-        "imported:201912:N2:4:1012:101",
-        "imported:201912:N2:4:1013:102"
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75"
       ]
     },
     {
@@ -5545,19 +6300,6 @@
       ]
     },
     {
-      "label": "まえる",
-      "reading": "まえる",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
-      "examples": [
-        "imported:201212:N3:3:8663:67",
-        "imported:201507:N2:4:2157:84",
-        "imported:201712:N1:2:4800:41"
-      ]
-    },
-    {
       "label": "ナターシャ",
       "reading": "なたーしゃ",
       "pos": "名词",
@@ -5566,6 +6308,32 @@
       "occurrences": 1,
       "examples": [
         "imported:201212:N3:3:8669:73"
+      ]
+    },
+    {
+      "label": "買い取り",
+      "reading": "かいとり",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 10,
+      "examples": [
+        "imported:201212:N3:3:8669:73",
+        "imported:201212:N3:3:8670:74",
+        "imported:202312:N1:3:3704:65"
+      ]
+    },
+    {
+      "label": "中市",
+      "reading": "なかいち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201212:N3:3:8669:73",
+        "imported:201212:N3:3:8670:74",
+        "imported:201407:N2:3:2343:56"
       ]
     },
     {
@@ -5792,6 +6560,91 @@
       ]
     },
     {
+      "label": "問診",
+      "reading": "もんしん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "聴力",
+      "reading": "ちょうりょく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "胸部",
+      "reading": "きょうぶ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "エックス線",
+      "reading": "えっくすせん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "心電図",
+      "reading": "しんでんず",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "ケー",
+      "reading": "けー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70"
+      ]
+    },
+    {
+      "label": "緑町",
+      "reading": "みどりちょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 9,
+      "examples": [
+        "imported:201307:N1:3:5786:69",
+        "imported:201307:N1:3:5787:70",
+        "imported:201407:N1:4:5593:89"
+      ]
+    },
+    {
       "label": "聴",
       "reading": "聴",
       "pos": "名词",
@@ -5971,10 +6824,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 4,
       "examples": [
         "imported:201307:N2:1:2511:10",
-        "imported:201707:N3:1:7688:10"
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
       ]
     },
     {
@@ -6159,6 +7013,42 @@
       ]
     },
     {
+      "label": "カラ",
+      "reading": "から",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N2:3:2575:74",
+        "imported:201307:N2:3:2576:75"
+      ]
+    },
+    {
+      "label": "上巻",
+      "reading": "じょうかん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N2:3:2575:74",
+        "imported:201307:N2:3:2576:75"
+      ]
+    },
+    {
+      "label": "下巻",
+      "reading": "げかん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201307:N2:3:2575:74",
+        "imported:201307:N2:3:2576:75"
+      ]
+    },
+    {
       "label": "オケッ",
       "reading": "おけっ",
       "pos": "名词",
@@ -6232,10 +7122,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
         "imported:201307:N2:4:2605:104",
-        "imported:202307:N2:4:382:79"
+        "imported:202307:N2:4:382:79",
+        "imported:202412:N2:3:70:70"
       ]
     },
     {
@@ -6384,6 +7275,19 @@
       ]
     },
     {
+      "label": "丸市",
+      "reading": "まるいち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201307:N3:3:8567:73",
+        "imported:201307:N3:3:8568:74",
+        "imported:202107:N2:3:760:53"
+      ]
+    },
+    {
       "label": "拓哉",
       "reading": "たくや",
       "pos": "名词",
@@ -6455,18 +7359,6 @@
         "imported:201312:N1:1:5617:6",
         "imported:201407:N2:4:2364:77",
         "imported:201807:N2:2:1269:50"
-      ]
-    },
-    {
-      "label": "大田",
-      "reading": "おおた",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201312:N1:2:5645:34",
-        "imported:201812:N1:4:4631:82"
       ]
     },
     {
@@ -6749,6 +7641,19 @@
       ]
     },
     {
+      "label": "備",
+      "reading": "備",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 6,
+      "examples": [
+        "imported:201312:N1:3:5680:69",
+        "imported:201312:N1:3:5681:70",
+        "imported:201807:N2:1:1228:9"
+      ]
+    },
+    {
       "label": "溫",
       "reading": "溫",
       "pos": "名词",
@@ -6998,16 +7903,76 @@
       ]
     },
     {
-      "label": "次郎",
-      "reading": "じろう",
+      "label": "小森",
+      "reading": "こもり",
       "pos": "名词",
       "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 3,
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
       "examples": [
-        "imported:201312:N2:4:2480:86",
-        "imported:201412:N1:4:5484:87",
-        "imported:201707:N1:3:4920:56"
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75"
+      ]
+    },
+    {
+      "label": "授与",
+      "reading": "じゅよ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75"
+      ]
+    },
+    {
+      "label": "字数",
+      "reading": "じすう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75"
+      ]
+    },
+    {
+      "label": "付す",
+      "reading": "ふす",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75"
+      ]
+    },
+    {
+      "label": "木町",
+      "reading": "きまち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75"
+      ]
+    },
+    {
+      "label": "丁",
+      "reading": "ちょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 9,
+      "examples": [
+        "imported:201312:N2:3:2468:74",
+        "imported:201312:N2:3:2469:75",
+        "imported:201907:N3:3:7343:73"
       ]
     },
     {
@@ -7148,10 +8113,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 5,
+      "occurrences": 6,
       "examples": [
         "imported:201312:N3:3:8453:61",
-        "imported:201607:N2:3:1933:74"
+        "imported:201312:N3:3:8465:73",
+        "imported:201312:N3:3:8466:74"
       ]
     },
     {
@@ -7187,6 +8153,42 @@
       "occurrences": 1,
       "examples": [
         "imported:201312:N3:3:8465:73"
+      ]
+    },
+    {
+      "label": "レスト",
+      "reading": "れすと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N3:3:8465:73",
+        "imported:201312:N3:3:8466:74"
+      ]
+    },
+    {
+      "label": "ラン",
+      "reading": "らん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N3:3:8465:73",
+        "imported:201312:N3:3:8466:74"
+      ]
+    },
+    {
+      "label": "大海",
+      "reading": "おおうみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201312:N3:3:8465:73",
+        "imported:201312:N3:3:8466:74"
       ]
     },
     {
@@ -7317,21 +8319,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 8,
       "examples": [
         "imported:201407:N1:3:5550:46",
-        "imported:202412:N2:3:70:70"
-      ]
-    },
-    {
-      "label": "健二",
-      "reading": "けんじ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 1,
-      "examples": [
-        "imported:201407:N1:3:5550:46"
+        "imported:201912:N3:3:7241:73",
+        "imported:201912:N3:3:7242:74"
       ]
     },
     {
@@ -7607,6 +8599,30 @@
       ]
     },
     {
+      "label": "誘える",
+      "reading": "さそえる",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N1:3:5573:69",
+        "imported:201407:N1:3:5574:70"
+      ]
+    },
+    {
+      "label": "永住",
+      "reading": "えいじゅう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N1:3:5573:69",
+        "imported:201407:N1:3:5574:70"
+      ]
+    },
+    {
       "label": "ファストフィッシュ",
       "reading": "ふぁすとふぃっしゅ",
       "pos": "名词",
@@ -7615,19 +8631,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201407:N1:4:5592:88"
-      ]
-    },
-    {
-      "label": "緑町",
-      "reading": "みどりちょう",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 7,
-      "examples": [
-        "imported:201407:N1:4:5593:89",
-        "imported:201607:N2:4:1944:85",
-        "imported:201707:N3:3:7738:60"
       ]
     },
     {
@@ -7699,17 +8702,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201407:N2:2:2321:34"
-      ]
-    },
-    {
-      "label": "中市",
-      "reading": "なかいち",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201407:N2:3:2343:56"
       ]
     },
     {
@@ -7786,11 +8778,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
+      "occurrences": 9,
       "examples": [
         "imported:201407:N2:3:2346:59",
-        "imported:202012:N2:3:865:56",
-        "imported:202212:N2:1:410:6"
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
       ]
     },
     {
@@ -7878,6 +8870,67 @@
       "occurrences": 1,
       "examples": [
         "imported:201407:N2:3:2361:74"
+      ]
+    },
+    {
+      "label": "いずみ",
+      "reading": "いずみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75"
+      ]
+    },
+    {
+      "label": "税込",
+      "reading": "ぜいこみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75",
+        "imported:201812:N1:3:4618:69"
+      ]
+    },
+    {
+      "label": "引換",
+      "reading": "ひきかえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75"
+      ]
+    },
+    {
+      "label": "翌々月",
+      "reading": "よくよくげつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75"
+      ]
+    },
+    {
+      "label": "なぐ",
+      "reading": "なぐ",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N2:3:2361:74",
+        "imported:201407:N2:3:2362:75"
       ]
     },
     {
@@ -8037,6 +9090,42 @@
       "occurrences": 1,
       "examples": [
         "imported:201407:N3:3:8351:61"
+      ]
+    },
+    {
+      "label": "開",
+      "reading": "ひらく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201407:N3:3:8363:73",
+        "imported:201407:N3:3:8364:74",
+        "imported:201707:N2:1:1656:11"
+      ]
+    },
+    {
+      "label": "小船",
+      "reading": "おぶね",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N3:3:8363:73",
+        "imported:201407:N3:3:8364:74"
+      ]
+    },
+    {
+      "label": "泊まれる",
+      "reading": "とまれる",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201407:N3:3:8363:73"
       ]
     },
     {
@@ -8282,6 +9371,56 @@
         "imported:201412:N1:3:5462:65",
         "imported:201412:N1:3:5463:66",
         "imported:201412:N1:3:5464:67"
+      ]
+    },
+    {
+      "label": "たっての",
+      "reading": "たっての",
+      "pos": "连体词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N1:3:5466:69",
+        "imported:201412:N1:3:5467:70"
+      ]
+    },
+    {
+      "label": "各回",
+      "reading": "かくかい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201412:N1:3:5466:69",
+        "imported:201412:N1:3:5467:70",
+        "imported:201907:N1:3:4513:68"
+      ]
+    },
+    {
+      "label": "証券",
+      "reading": "しょうけん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N1:3:5466:69",
+        "imported:201412:N1:3:5467:70"
+      ]
+    },
+    {
+      "label": "緑山",
+      "reading": "みどりやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 17,
+      "examples": [
+        "imported:201412:N1:3:5466:69",
+        "imported:201412:N1:3:5467:70",
+        "imported:201807:N1:4:4758:104"
       ]
     },
     {
@@ -8540,6 +9679,79 @@
       ]
     },
     {
+      "label": "和白",
+      "reading": "わじろ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
+      ]
+    },
+    {
+      "label": "海浜",
+      "reading": "かいひん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
+      ]
+    },
+    {
+      "label": "両日",
+      "reading": "りょうじつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
+      ]
+    },
+    {
+      "label": "急病",
+      "reading": "きゅうびょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
+      ]
+    },
+    {
+      "label": "ざす",
+      "reading": "ざす",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75",
+        "imported:201507:N2:2:2117:44"
+      ]
+    },
+    {
+      "label": "イーメーノレ",
+      "reading": "いーめーのれ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N2:3:2254:74",
+        "imported:201412:N2:3:2255:75"
+      ]
+    },
+    {
       "label": "キララ",
       "reading": "きらら",
       "pos": "名词",
@@ -8623,6 +9835,43 @@
         "imported:201412:N3:3:8251:63",
         "imported:201412:N3:3:8252:64",
         "imported:201412:N3:3:8253:65"
+      ]
+    },
+    {
+      "label": "全",
+      "reading": "ちょん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N3:3:8261:73",
+        "imported:201412:N3:3:8262:74"
+      ]
+    },
+    {
+      "label": "メールアトレス",
+      "reading": "めーるあとれす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201412:N3:3:8261:73",
+        "imported:201412:N3:3:8262:74"
+      ]
+    },
+    {
+      "label": "受",
+      "reading": "受",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 7,
+      "examples": [
+        "imported:201412:N3:3:8261:73",
+        "imported:201412:N3:3:8262:74",
+        "imported:201907:N1:3:4513:68"
       ]
     },
     {
@@ -9014,9 +10263,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
-        "imported:201507:N1:3:5359:69"
+        "imported:201507:N1:3:5359:69",
+        "imported:201507:N1:3:5360:70"
       ]
     },
     {
@@ -9038,11 +10288,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
         "imported:201507:N1:3:5359:69",
-        "imported:201912:N2:2:959:48",
-        "imported:201912:N2:2:960:49"
+        "imported:201507:N1:3:5360:70",
+        "imported:201912:N2:2:959:48"
       ]
     },
     {
@@ -9057,16 +10307,53 @@
       ]
     },
     {
+      "label": "ールアドレス",
+      "reading": "ーるあどれす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "symbol_or_placeholder",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N1:3:5359:69",
+        "imported:201507:N1:3:5360:70"
+      ]
+    },
+    {
+      "label": "月下",
+      "reading": "げっか",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N1:3:5359:69",
+        "imported:201507:N1:3:5360:70"
+      ]
+    },
+    {
+      "label": "任期",
+      "reading": "にんき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201507:N1:3:5359:69",
+        "imported:201507:N1:3:5360:70",
+        "imported:201607:N1:3:5145:69"
+      ]
+    },
+    {
       "label": "ウェブサイト",
       "reading": "うぇぶさいと",
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 11,
+      "occurrences": 12,
       "examples": [
+        "imported:201507:N1:3:5359:69",
         "imported:201507:N1:3:5360:70",
-        "imported:201707:N1:3:4923:59",
-        "imported:201707:N1:3:4924:60"
+        "imported:201707:N1:3:4923:59"
       ]
     },
     {
@@ -9220,18 +10507,6 @@
       ]
     },
     {
-      "label": "ざす",
-      "reading": "ざす",
-      "pos": "动词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:201507:N2:2:2117:44",
-        "imported:201512:N2:1:1998:32"
-      ]
-    },
-    {
       "label": "優子",
       "reading": "ゆうこ",
       "pos": "名词",
@@ -9368,6 +10643,67 @@
       ]
     },
     {
+      "label": "バーベキューセッ",
+      "reading": "ばーべきゅーせっ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N2:3:2147:74",
+        "imported:201507:N2:3:2148:75"
+      ]
+    },
+    {
+      "label": "持ち込み",
+      "reading": "もちこみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201507:N2:3:2147:74",
+        "imported:201507:N2:3:2148:75",
+        "imported:202012:N2:3:880:71"
+      ]
+    },
+    {
+      "label": "メニュ",
+      "reading": "めにゅ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N2:3:2147:74",
+        "imported:201507:N2:3:2148:75"
+      ]
+    },
+    {
+      "label": "迷",
+      "reading": "迷",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N2:3:2147:74",
+        "imported:201507:N2:3:2148:75"
+      ]
+    },
+    {
+      "label": "バパーベキュー",
+      "reading": "ばぱーべきゅー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201507:N2:3:2147:74",
+        "imported:201507:N2:3:2148:75"
+      ]
+    },
+    {
       "label": "白鳥",
       "reading": "しらとり",
       "pos": "名词",
@@ -9411,18 +10747,6 @@
         "imported:201507:N2:4:2177:104",
         "imported:201812:N2:4:1216:100",
         "imported:202407:N2:4:200:99"
-      ]
-    },
-    {
-      "label": "西公園",
-      "reading": "にしこうえん",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 5,
-      "examples": [
-        "imported:201507:N2:4:2177:104",
-        "imported:201812:N2:4:1216:100"
       ]
     },
     {
@@ -9595,7 +10919,19 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 7,
+      "examples": [
+        "imported:201507:N3:3:8159:73",
+        "imported:201507:N3:3:8160:74"
+      ]
+    },
+    {
+      "label": "タタ",
+      "reading": "たた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
       "examples": [
         "imported:201507:N3:3:8159:73",
         "imported:201507:N3:3:8160:74"
@@ -9607,11 +10943,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
+      "occurrences": 7,
       "examples": [
         "imported:201507:N3:3:8160:74",
-        "imported:202112:N3:3:6937:72",
-        "imported:202412:N3:3:208735567032194:37"
+        "imported:201907:N3:3:7343:73",
+        "imported:201907:N3:3:7344:74"
       ]
     },
     {
@@ -9631,7 +10967,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 7,
+      "occurrences": 15,
       "examples": [
         "imported:201507:N3:4:8175:89",
         "imported:201512:N1:3:5252:69",
@@ -9690,9 +11026,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 4,
       "examples": [
-        "imported:201512:N1:3:5232:49"
+        "imported:201512:N1:3:5232:49",
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71"
       ]
     },
     {
@@ -9836,6 +11174,31 @@
       ]
     },
     {
+      "label": "項",
+      "reading": "こう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201512:N1:3:5252:69",
+        "imported:201512:N1:3:5253:70",
+        "imported:202412:N3:1:184648192573317:9"
+      ]
+    },
+    {
+      "label": "払込",
+      "reading": "はらいこみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N1:3:5252:69",
+        "imported:201512:N1:3:5253:70"
+      ]
+    },
+    {
       "label": "ソン",
       "reading": "そん",
       "pos": "名词",
@@ -9907,19 +11270,6 @@
       ]
     },
     {
-      "label": "支",
-      "reading": "支",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
-      "examples": [
-        "imported:201512:N2:1:1975:9",
-        "imported:202307:N2:1:310:7",
-        "imported:202507:N2:1:244413954848659:10"
-      ]
-    },
-    {
       "label": "摘",
       "reading": "摘",
       "pos": "名词",
@@ -9928,19 +11278,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201512:N2:1:1975:9"
-      ]
-    },
-    {
-      "label": "照",
-      "reading": "あきら",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 3,
-      "examples": [
-        "imported:201512:N2:1:1976:10",
-        "imported:201607:N2:1:1866:7",
-        "imported:202607:N2:1:69409547754679:10"
       ]
     },
     {
@@ -10079,6 +11416,66 @@
       "examples": [
         "imported:201512:N2:3:2040:74",
         "imported:202012:N1:3:4306:68"
+      ]
+    },
+    {
+      "label": "南原",
+      "reading": "なんばら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N2:3:2040:74",
+        "imported:201512:N2:3:2041:75"
+      ]
+    },
+    {
+      "label": "リジナル",
+      "reading": "りじなる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N2:3:2040:74",
+        "imported:201512:N2:3:2041:75"
+      ]
+    },
+    {
+      "label": "ンダント",
+      "reading": "んだんと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N2:3:2040:74",
+        "imported:201512:N2:3:2041:75"
+      ]
+    },
+    {
+      "label": "キーホルダー",
+      "reading": "きーほるだー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N2:3:2040:74",
+        "imported:201512:N2:3:2041:75"
+      ]
+    },
+    {
+      "label": "接着",
+      "reading": "せっちゃく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201512:N2:3:2040:74",
+        "imported:201512:N2:3:2041:75"
       ]
     },
     {
@@ -10300,6 +11697,55 @@
       ]
     },
     {
+      "label": "原山",
+      "reading": "はらやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N3:3:8057:73",
+        "imported:201512:N3:3:8058:74"
+      ]
+    },
+    {
+      "label": "大学前",
+      "reading": "だいがくまえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201512:N3:3:8057:73",
+        "imported:201512:N3:3:8058:74"
+      ]
+    },
+    {
+      "label": "晶",
+      "reading": "あきら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201512:N3:3:8057:73",
+        "imported:201512:N3:3:8058:74"
+      ]
+    },
+    {
+      "label": "必",
+      "reading": "必",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201512:N3:3:8057:73",
+        "imported:201512:N3:3:8058:74",
+        "imported:202207:N3:1:6777:12"
+      ]
+    },
+    {
       "label": "西山寺",
       "reading": "にしやまじ",
       "pos": "名词",
@@ -10517,6 +11963,103 @@
       ]
     },
     {
+      "label": "農産",
+      "reading": "のうさん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "謝",
+      "reading": "しゃ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "年額",
+      "reading": "ねんがく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "短期大学",
+      "reading": "たんきだいがく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "プレゼンテーシ",
+      "reading": "ぷれぜんてーし",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "ダウンロードレ",
+      "reading": "だうんろーどれ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "宇",
+      "reading": "宇",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70"
+      ]
+    },
+    {
+      "label": "問合せ",
+      "reading": "といあわせ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201607:N1:3:5145:69",
+        "imported:201607:N1:3:5146:70",
+        "imported:201907:N3:3:7343:73"
+      ]
+    },
+    {
       "label": "今森",
       "reading": "いまもり",
       "pos": "名词",
@@ -10665,9 +12208,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
-        "imported:201607:N2:3:1916:57"
+        "imported:201607:N2:3:1916:57",
+        "imported:202207:N3:3:6836:71",
+        "imported:202207:N3:3:6837:72"
       ]
     },
     {
@@ -10773,6 +12318,54 @@
       "occurrences": 3,
       "examples": [
         "imported:201607:N2:3:1933:74"
+      ]
+    },
+    {
+      "label": "東丘",
+      "reading": "ひがしおか",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201607:N2:3:1933:74",
+        "imported:201607:N2:3:1934:75"
+      ]
+    },
+    {
+      "label": "各室",
+      "reading": "かくしつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201607:N2:3:1933:74",
+        "imported:201607:N2:3:1934:75"
+      ]
+    },
+    {
+      "label": "年限",
+      "reading": "ねんげん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N2:3:1933:74",
+        "imported:201607:N2:3:1934:75"
+      ]
+    },
+    {
+      "label": "地場",
+      "reading": "じば",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N2:3:1933:74",
+        "imported:201607:N2:3:1934:75"
       ]
     },
     {
@@ -10913,7 +12506,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 3,
+      "occurrences": 4,
       "examples": [
         "imported:201607:N3:3:7951:69",
         "imported:201607:N3:3:7952:70",
@@ -10929,6 +12522,31 @@
       "occurrences": 2,
       "examples": [
         "imported:201607:N3:3:7955:73"
+      ]
+    },
+    {
+      "label": "ター",
+      "reading": "たー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201607:N3:3:7955:73",
+        "imported:201607:N3:3:7956:74",
+        "imported:202307:N1:3:3800:65"
+      ]
+    },
+    {
+      "label": "葉月",
+      "reading": "はづき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201607:N3:3:7955:73",
+        "imported:201607:N3:3:7956:74"
       ]
     },
     {
@@ -10961,7 +12579,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 7,
+      "occurrences": 12,
       "examples": [
         "imported:201612:N1:2:4998:29",
         "imported:201707:N2:3:1711:66",
@@ -11115,6 +12733,30 @@
       "examples": [
         "imported:201612:N1:3:5038:69",
         "imported:202407:N2:3:171:70"
+      ]
+    },
+    {
+      "label": "加盟",
+      "reading": "かめい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201612:N1:3:5038:69",
+        "imported:201612:N1:3:5039:70"
+      ]
+    },
+    {
+      "label": "入管",
+      "reading": "にゅうかん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201612:N1:3:5038:69",
+        "imported:201612:N1:3:5039:70"
       ]
     },
     {
@@ -11312,19 +12954,6 @@
       ]
     },
     {
-      "label": "スミス",
-      "reading": "すみす",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 4,
-      "examples": [
-        "imported:201612:N2:3:1810:58",
-        "imported:202312:N1:3:3696:57",
-        "imported:202312:N1:3:3697:58"
-      ]
-    },
-    {
       "label": "大久保",
       "reading": "おおくぼ",
       "pos": "名词",
@@ -11447,6 +13076,31 @@
       ]
     },
     {
+      "label": "テーブ",
+      "reading": "てーぶ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201612:N2:3:1826:74",
+        "imported:201612:N2:3:1827:75",
+        "imported:201907:N1:4:4547:102"
+      ]
+    },
+    {
+      "label": "シニ",
+      "reading": "しに",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201612:N2:3:1826:74",
+        "imported:201612:N2:3:1827:75"
+      ]
+    },
+    {
       "label": "エンリケ",
       "reading": "えんりけ",
       "pos": "名词",
@@ -11564,6 +13218,31 @@
       "occurrences": 1,
       "examples": [
         "imported:201612:N3:3:7853:73"
+      ]
+    },
+    {
+      "label": "大原",
+      "reading": "おおはら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201612:N3:3:7853:73",
+        "imported:201612:N3:3:7854:74",
+        "imported:202012:N2:3:880:71"
+      ]
+    },
+    {
+      "label": "各日",
+      "reading": "かくじつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201612:N3:3:7853:73",
+        "imported:201612:N3:3:7854:74"
       ]
     },
     {
@@ -11866,6 +13545,43 @@
       ]
     },
     {
+      "label": "誕",
+      "reading": "誕",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201707:N1:3:4933:69",
+        "imported:201707:N1:3:4934:70",
+        "imported:201907:N2:3:1085:72"
+      ]
+    },
+    {
+      "label": "キャツシャカード",
+      "reading": "きゃつしゃかーど",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N1:3:4933:69",
+        "imported:201707:N1:3:4934:70"
+      ]
+    },
+    {
+      "label": "りんどう",
+      "reading": "りんどう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201707:N1:3:4933:69",
+        "imported:201707:N1:3:4934:70"
+      ]
+    },
+    {
       "label": "アンガス",
       "reading": "あんがす",
       "pos": "名词",
@@ -11920,17 +13636,6 @@
       "examples": [
         "imported:201707:N2:1:1655:10",
         "imported:202112:N2:1:616:10"
-      ]
-    },
-    {
-      "label": "開",
-      "reading": "ひらく",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201707:N2:1:1656:11"
       ]
     },
     {
@@ -12082,9 +13787,46 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201707:N2:3:1719:74",
+        "imported:201707:N2:3:1720:75"
+      ]
+    },
+    {
+      "label": "商学部",
+      "reading": "しょうがくぶ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:201707:N2:3:1719:74"
+        "imported:201707:N2:3:1719:74",
+        "imported:201707:N2:3:1720:75"
+      ]
+    },
+    {
+      "label": "受け",
+      "reading": "うけ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N2:3:1719:74",
+        "imported:201707:N2:3:1720:75"
+      ]
+    },
+    {
+      "label": "ジャン",
+      "reading": "じゃん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N2:3:1719:74",
+        "imported:201707:N2:3:1720:75"
       ]
     },
     {
@@ -12294,6 +14036,54 @@
       ]
     },
     {
+      "label": "山北",
+      "reading": "やまきた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201707:N3:3:7751:73",
+        "imported:201707:N3:3:7752:74"
+      ]
+    },
+    {
+      "label": "見山",
+      "reading": "みやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N3:3:7751:73",
+        "imported:201707:N3:3:7752:74"
+      ]
+    },
+    {
+      "label": "忘",
+      "reading": "忘",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N3:3:7751:73",
+        "imported:201707:N3:3:7752:74"
+      ]
+    },
+    {
+      "label": "会務",
+      "reading": "かいむ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201707:N3:3:7751:73",
+        "imported:201707:N3:3:7752:74"
+      ]
+    },
+    {
       "label": "ピデオ",
       "reading": "ぴでお",
       "pos": "名词",
@@ -12480,20 +14270,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 1,
+      "occurrences": 6,
       "examples": [
-        "imported:201712:N1:4:4861:102"
-      ]
-    },
-    {
-      "label": "ブログラム",
-      "reading": "ぶろぐらむ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201712:N1:4:4861:102"
+        "imported:201712:N1:4:4861:102",
+        "imported:201807:N1:3:4723:69",
+        "imported:201807:N1:3:4724:70"
       ]
     },
     {
@@ -12525,7 +14306,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 9,
+      "occurrences": 11,
       "examples": [
         "imported:201712:N1:4:4863:104",
         "imported:201712:N1:4:4864:105",
@@ -12618,6 +14399,30 @@
         "imported:201712:N2:3:1604:66",
         "imported:201712:N2:3:1605:67",
         "imported:201712:N2:3:1606:68"
+      ]
+    },
+    {
+      "label": "ログ",
+      "reading": "ろぐ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201712:N2:3:1612:74",
+        "imported:201712:N2:3:1613:75"
+      ]
+    },
+    {
+      "label": "ラム",
+      "reading": "らむ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201712:N2:3:1612:74",
+        "imported:201712:N2:3:1613:75"
       ]
     },
     {
@@ -12769,6 +14574,44 @@
       ]
     },
     {
+      "label": "グルーブ",
+      "reading": "ぐるーぶ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 2,
+      "examples": [
+        "imported:201712:N3:3:7649:73",
+        "imported:201712:N3:3:7650:74",
+        "imported:201907:N3:4:7345:75"
+      ]
+    },
+    {
+      "label": "コンビューター",
+      "reading": "こんびゅーたー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201712:N3:3:7649:73",
+        "imported:201712:N3:3:7650:74"
+      ]
+    },
+    {
+      "label": "聞",
+      "reading": "聞",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201712:N3:3:7649:73",
+        "imported:201712:N3:3:7650:74",
+        "imported:202412:N1:4:3425:74"
+      ]
+    },
+    {
       "label": "グレイグ",
       "reading": "ぐれいぐ",
       "pos": "名词",
@@ -12808,7 +14651,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 6,
+      "occurrences": 17,
       "examples": [
         "imported:201807:N1:2:4693:39",
         "imported:202212:N1:2:3865:34",
@@ -12864,19 +14707,32 @@
       ]
     },
     {
-      "label": "アリオ",
-      "reading": "ありお",
+      "label": "日夏",
+      "reading": "ひなつ",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
+        "imported:201807:N1:3:4723:69",
         "imported:201807:N1:3:4724:70"
       ]
     },
     {
       "label": "バランティア",
       "reading": "ばらんてぃあ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201807:N1:3:4723:69",
+        "imported:201807:N1:3:4724:70"
+      ]
+    },
+    {
+      "label": "アリオ",
+      "reading": "ありお",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
@@ -12891,9 +14747,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
-        "imported:201807:N1:4:4734:80"
+        "imported:201807:N1:4:4734:80",
+        "imported:202412:N3:3:208735567032194:37",
+        "imported:202412:N3:3:118247410555386:38"
       ]
     },
     {
@@ -12942,19 +14800,6 @@
       ]
     },
     {
-      "label": "緑山",
-      "reading": "みどりやま",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 16,
-      "examples": [
-        "imported:201807:N1:4:4758:104",
-        "imported:201807:N1:4:4759:105",
-        "imported:201812:N1:4:4621:72"
-      ]
-    },
-    {
       "label": "白山",
       "reading": "はくさん",
       "pos": "名词",
@@ -12998,18 +14843,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201807:N2:1:1228:9"
-      ]
-    },
-    {
-      "label": "備",
-      "reading": "備",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 2,
-      "examples": [
-        "imported:201807:N2:1:1228:9",
-        "imported:202412:N2:1:6:6"
       ]
     },
     {
@@ -13101,9 +14934,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 2,
+      "occurrences": 3,
       "examples": [
         "imported:201807:N2:3:1293:74",
+        "imported:201807:N2:3:1294:75",
         "imported:201812:N1:2:4588:39"
       ]
     },
@@ -13127,6 +14961,30 @@
       "occurrences": 1,
       "examples": [
         "imported:201807:N2:3:1293:74"
+      ]
+    },
+    {
+      "label": "アカデミック",
+      "reading": "あかでみっく",
+      "pos": "形容词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201807:N2:3:1293:74",
+        "imported:201807:N2:3:1294:75"
+      ]
+    },
+    {
+      "label": "メー",
+      "reading": "めー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201807:N2:3:1293:74",
+        "imported:201807:N2:3:1294:75"
       ]
     },
     {
@@ -13267,6 +15125,67 @@
         "imported:201807:N3:3:7540:66",
         "imported:201807:N3:3:7541:67",
         "imported:201807:N3:3:7542:68"
+      ]
+    },
+    {
+      "label": "山上",
+      "reading": "さんじょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201807:N3:3:7547:73",
+        "imported:201807:N3:3:7548:74"
+      ]
+    },
+    {
+      "label": "クリーニ",
+      "reading": "くりーに",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201807:N3:3:7547:73",
+        "imported:201807:N3:3:7548:74"
+      ]
+    },
+    {
+      "label": "ング",
+      "reading": "んぐ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201807:N3:3:7547:73",
+        "imported:201807:N3:3:7548:74"
+      ]
+    },
+    {
+      "label": "込",
+      "reading": "こみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201807:N3:3:7547:73",
+        "imported:201807:N3:3:7548:74"
+      ]
+    },
+    {
+      "label": "ざま",
+      "reading": "ざま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201807:N3:3:7547:73",
+        "imported:201807:N3:3:7548:74",
+        "imported:202112:N3:3:6937:72"
       ]
     },
     {
@@ -13441,7 +15360,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 11,
       "examples": [
         "imported:201812:N1:3:4618:69",
         "imported:201812:N1:3:4619:70"
@@ -13456,6 +15375,18 @@
       "occurrences": 1,
       "examples": [
         "imported:201812:N1:3:4618:69"
+      ]
+    },
+    {
+      "label": "区役所",
+      "reading": "くやくしょ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201812:N1:3:4618:69",
+        "imported:201812:N1:3:4619:70"
       ]
     },
     {
@@ -13499,7 +15430,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 5,
       "examples": [
         "imported:201812:N1:4:4623:74",
         "imported:201912:N1:3:4401:60",
@@ -13737,6 +15668,18 @@
       ]
     },
     {
+      "label": "エイト",
+      "reading": "えいと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201812:N2:3:1188:72",
+        "imported:201812:N2:3:1189:73"
+      ]
+    },
+    {
       "label": "タンヤ",
       "reading": "たんや",
       "pos": "名词",
@@ -13850,6 +15793,42 @@
       "occurrences": 2,
       "examples": [
         "imported:201812:N3:3:7445:73"
+      ]
+    },
+    {
+      "label": "種目",
+      "reading": "しゅもく",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201812:N3:3:7445:73",
+        "imported:201812:N3:3:7446:74"
+      ]
+    },
+    {
+      "label": "バンフレット",
+      "reading": "ばんふれっと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201812:N3:3:7445:73",
+        "imported:201812:N3:3:7446:74"
+      ]
+    },
+    {
+      "label": "マランソン",
+      "reading": "まらんそん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201812:N3:3:7445:73",
+        "imported:201812:N3:3:7446:74"
       ]
     },
     {
@@ -13995,19 +15974,80 @@
       ]
     },
     {
-      "label": "アグネス",
-      "reading": "あぐねす",
+      "label": "催し物",
+      "reading": "もよおしもの",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
+      ]
+    },
+    {
+      "label": "古文書",
+      "reading": "こもんじょ",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
+      ]
+    },
+    {
+      "label": "青井",
+      "reading": "あおい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
+      ]
+    },
+    {
+      "label": "杉下",
+      "reading": "すぎした",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201907:N1:3:4513:68",
         "imported:201907:N1:3:4514:69"
       ]
     },
     {
       "label": "船山",
       "reading": "ふなやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
+      ]
+    },
+    {
+      "label": "さきでる",
+      "reading": "さきでる",
+      "pos": "动词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201907:N1:3:4513:68",
+        "imported:201907:N1:3:4514:69"
+      ]
+    },
+    {
+      "label": "アグネス",
+      "reading": "あぐねす",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
@@ -14145,17 +16185,6 @@
       ]
     },
     {
-      "label": "テーブ",
-      "reading": "てーぶ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201907:N1:4:4547:102"
-      ]
-    },
-    {
       "label": "マン",
       "reading": "まん",
       "pos": "名词",
@@ -14287,7 +16316,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
+      "occurrences": 10,
       "examples": [
         "imported:201907:N2:3:1085:72",
         "imported:201907:N2:3:1086:73"
@@ -14358,9 +16387,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 3,
       "examples": [
-        "imported:201907:N3:2:7314:44"
+        "imported:201907:N3:2:7314:44",
+        "imported:202307:N3:3:6736:72",
+        "imported:202307:N3:3:6737:73"
       ]
     },
     {
@@ -14377,14 +16408,15 @@
       ]
     },
     {
-      "label": "グルーブ",
-      "reading": "ぐるーぶ",
+      "label": "ともども",
+      "reading": "ともども",
       "pos": "名词",
       "kind": "word",
-      "reason": "personal_or_organization_name",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:201907:N3:4:7345:75"
+        "imported:201907:N3:3:7343:73",
+        "imported:201907:N3:3:7344:74"
       ]
     },
     {
@@ -14498,6 +16530,31 @@
       "occurrences": 2,
       "examples": [
         "imported:201912:N1:3:4387:46"
+      ]
+    },
+    {
+      "label": "十条",
+      "reading": "じゅうじょう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:201912:N1:3:4409:68",
+        "imported:201912:N1:3:4410:69"
+      ]
+    },
+    {
+      "label": "西島",
+      "reading": "にしじま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 2,
+      "examples": [
+        "imported:201912:N1:3:4409:68",
+        "imported:201912:N1:3:4410:69",
+        "imported:202207:N3:3:6823:58"
       ]
     },
     {
@@ -14671,9 +16728,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 3,
+      "occurrences": 4,
       "examples": [
-        "imported:201912:N2:3:965:54"
+        "imported:201912:N2:3:965:54",
+        "imported:202312:N2:3:272:70",
+        "imported:202312:N2:3:273:71"
       ]
     },
     {
@@ -14682,9 +16741,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 4,
+      "occurrences": 6,
       "examples": [
         "imported:201912:N2:3:965:54",
+        "imported:202512:N2:3:217246826262266:70",
         "imported:202512:N2:3:166526643952674:71"
       ]
     },
@@ -14731,9 +16791,34 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 8,
+      "examples": [
+        "imported:201912:N2:3:982:71",
+        "imported:201912:N2:3:983:72"
+      ]
+    },
+    {
+      "label": "提",
+      "reading": "ひさげ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:201912:N2:3:982:71"
+        "imported:201912:N2:3:982:71",
+        "imported:201912:N2:3:983:72"
+      ]
+    },
+    {
+      "label": "広山",
+      "reading": "ひろやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201912:N2:3:982:71",
+        "imported:201912:N2:3:983:72"
       ]
     },
     {
@@ -14883,6 +16968,42 @@
       ]
     },
     {
+      "label": "リフト",
+      "reading": "りふと",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201912:N3:3:7241:73",
+        "imported:201912:N3:3:7242:74"
+      ]
+    },
+    {
+      "label": "セメールアドレスレ",
+      "reading": "せめーるあどれすれ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201912:N3:3:7241:73",
+        "imported:201912:N3:3:7242:74"
+      ]
+    },
+    {
+      "label": "ンビニ",
+      "reading": "んびに",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201912:N3:3:7241:73",
+        "imported:201912:N3:3:7242:74"
+      ]
+    },
+    {
       "label": "齡",
       "reading": "齡",
       "pos": "名词",
@@ -14993,6 +17114,18 @@
         "imported:202012:N1:3:4296:58",
         "imported:202012:N1:3:4297:59",
         "imported:202012:N1:3:4298:60"
+      ]
+    },
+    {
+      "label": "田原",
+      "reading": "たはら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202012:N1:3:4305:67",
+        "imported:202012:N1:3:4306:68"
       ]
     },
     {
@@ -15112,14 +17245,27 @@
       ]
     },
     {
-      "label": "大原",
-      "reading": "おおはら",
+      "label": "お預け",
+      "reading": "おあづけ",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:202012:N2:3:880:71"
+        "imported:202012:N2:3:880:71",
+        "imported:202012:N2:3:881:72"
+      ]
+    },
+    {
+      "label": "ターミナル",
+      "reading": "たーみなる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202012:N2:3:880:71",
+        "imported:202012:N2:3:881:72"
       ]
     },
     {
@@ -15257,9 +17403,46 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 4,
       "examples": [
-        "imported:202012:N3:3:7139:72"
+        "imported:202012:N3:3:7139:72",
+        "imported:202012:N3:3:7140:73"
+      ]
+    },
+    {
+      "label": "新横浜",
+      "reading": "しんよこはま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:202012:N3:3:7139:72",
+        "imported:202012:N3:3:7140:73"
+      ]
+    },
+    {
+      "label": "品川",
+      "reading": "しながわ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:202012:N3:3:7139:72",
+        "imported:202012:N3:3:7140:73"
+      ]
+    },
+    {
+      "label": "浜松",
+      "reading": "はままつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202012:N3:3:7139:72",
+        "imported:202012:N3:3:7140:73"
       ]
     },
     {
@@ -15493,6 +17676,18 @@
       ]
     },
     {
+      "label": "オーケストラチケットオフィス",
+      "reading": "おーけすとらちけっとおふぃす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202107:N1:3:4202:68",
+        "imported:202107:N1:3:4203:69"
+      ]
+    },
+    {
       "label": "スマン",
       "reading": "すまん",
       "pos": "名词",
@@ -15643,17 +17838,6 @@
       ]
     },
     {
-      "label": "丸市",
-      "reading": "まるいち",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202107:N2:3:760:53"
-      ]
-    },
-    {
       "label": "進一",
       "reading": "しんいち",
       "pos": "名词",
@@ -15717,6 +17901,30 @@
       "occurrences": 1,
       "examples": [
         "imported:202107:N2:3:778:71"
+      ]
+    },
+    {
+      "label": "岩波",
+      "reading": "いわなみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:202107:N2:3:778:71",
+        "imported:202107:N2:3:779:72"
+      ]
+    },
+    {
+      "label": "生み",
+      "reading": "うみ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202107:N2:3:778:71",
+        "imported:202107:N2:3:779:72"
       ]
     },
     {
@@ -15854,6 +18062,18 @@
         "imported:202107:N3:3:7031:65",
         "imported:202107:N3:3:7032:66",
         "imported:202107:N3:3:7033:67"
+      ]
+    },
+    {
+      "label": "場内",
+      "reading": "じょうない",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202107:N3:3:7038:72",
+        "imported:202107:N3:3:7039:73"
       ]
     },
     {
@@ -16053,7 +18273,19 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 3,
+      "occurrences": 7,
+      "examples": [
+        "imported:202112:N1:3:4098:68",
+        "imported:202112:N1:3:4099:69"
+      ]
+    },
+    {
+      "label": "プロジェエクター",
+      "reading": "ぷろじぇえくたー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
       "examples": [
         "imported:202112:N1:3:4098:68",
         "imported:202112:N1:3:4099:69"
@@ -16321,9 +18553,11 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 3,
       "examples": [
-        "imported:202112:N2:3:676:70"
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71",
+        "imported:202207:N1:3:3994:67"
       ]
     },
     {
@@ -16343,9 +18577,60 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71"
+      ]
+    },
+    {
+      "label": "長町",
+      "reading": "ながまち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:202112:N2:3:676:70"
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71"
+      ]
+    },
+    {
+      "label": "全域",
+      "reading": "ぜんいき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71"
+      ]
+    },
+    {
+      "label": "花森",
+      "reading": "はなもり",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71",
+        "imported:202512:N3:3:87155072984514:24"
+      ]
+    },
+    {
+      "label": "時一",
+      "reading": "ときいち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 5,
+      "examples": [
+        "imported:202112:N2:3:676:70",
+        "imported:202112:N2:3:677:71",
+        "imported:202407:N3:3:6534:72"
       ]
     },
     {
@@ -16480,27 +18765,15 @@
       ]
     },
     {
-      "label": "川上",
-      "reading": "かわかみ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 3,
-      "examples": [
-        "imported:202112:N3:3:6933:68",
-        "imported:202112:N3:3:6934:69",
-        "imported:202112:N3:3:6935:70"
-      ]
-    },
-    {
       "label": "深川",
       "reading": "ふかがわ",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 2,
       "examples": [
-        "imported:202112:N3:3:6937:72"
+        "imported:202112:N3:3:6937:72",
+        "imported:202112:N3:3:6938:73"
       ]
     },
     {
@@ -16520,8 +18793,21 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 5,
+      "examples": [
+        "imported:202112:N3:3:6937:72",
+        "imported:202112:N3:3:6938:73"
+      ]
+    },
+    {
+      "label": "借り方",
+      "reading": "かりかた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
+        "imported:202112:N3:3:6937:72",
         "imported:202112:N3:3:6938:73"
       ]
     },
@@ -16694,6 +18980,67 @@
       "occurrences": 2,
       "examples": [
         "imported:202207:N1:3:3994:67"
+      ]
+    },
+    {
+      "label": "年度内",
+      "reading": "ねんどない",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202207:N1:3:3994:67",
+        "imported:202207:N1:3:3995:68",
+        "imported:202412:N1:3:3416:65"
+      ]
+    },
+    {
+      "label": "立て替え払い",
+      "reading": "たてかえばらい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N1:3:3994:67",
+        "imported:202207:N1:3:3995:68"
+      ]
+    },
+    {
+      "label": "ウェプページ",
+      "reading": "うぇぷぺーじ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N1:3:3994:67",
+        "imported:202207:N1:3:3995:68"
+      ]
+    },
+    {
+      "label": "グウンロード",
+      "reading": "ぐうんろーど",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N1:3:3994:67",
+        "imported:202207:N1:3:3995:68"
+      ]
+    },
+    {
+      "label": "各月",
+      "reading": "かくつき",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N1:3:3994:67",
+        "imported:202207:N1:3:3995:68"
       ]
     },
     {
@@ -16963,6 +19310,54 @@
       ]
     },
     {
+      "label": "ショ",
+      "reading": "しょ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N2:3:575:70",
+        "imported:202207:N2:3:576:71"
+      ]
+    },
+    {
+      "label": "ートパス",
+      "reading": "ーとぱす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "symbol_or_placeholder",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N2:3:575:70",
+        "imported:202207:N2:3:576:71"
+      ]
+    },
+    {
+      "label": "プブール",
+      "reading": "ぷぶーる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N2:3:575:70",
+        "imported:202207:N2:3:576:71"
+      ]
+    },
+    {
+      "label": "グループル",
+      "reading": "ぐるーぷる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N2:3:575:70",
+        "imported:202207:N2:3:576:71"
+      ]
+    },
+    {
       "label": "ジョンー",
       "reading": "じょんー",
       "pos": "名词",
@@ -17074,17 +19469,6 @@
       ]
     },
     {
-      "label": "必",
-      "reading": "必",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202207:N3:1:6777:12"
-      ]
-    },
-    {
       "label": "逹",
       "reading": "逹",
       "pos": "名词",
@@ -17156,17 +19540,6 @@
       ]
     },
     {
-      "label": "西島",
-      "reading": "にしじま",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 1,
-      "examples": [
-        "imported:202207:N3:3:6823:58"
-      ]
-    },
-    {
       "label": "石野",
       "reading": "いしの",
       "pos": "名词",
@@ -17208,6 +19581,18 @@
       "occurrences": 1,
       "examples": [
         "imported:202207:N3:3:6830:65"
+      ]
+    },
+    {
+      "label": "カズオ",
+      "reading": "かずお",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202207:N3:3:6836:71",
+        "imported:202207:N3:3:6837:72"
       ]
     },
     {
@@ -17263,9 +19648,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "personal_or_organization_name",
-      "occurrences": 1,
+      "occurrences": 3,
       "examples": [
-        "imported:202212:N1:3:3896:65"
+        "imported:202212:N1:3:3896:65",
+        "imported:202212:N1:3:3897:66"
       ]
     },
     {
@@ -17327,6 +19713,42 @@
       ]
     },
     {
+      "label": "秋原",
+      "reading": "あきばる",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202212:N2:3:474:70",
+        "imported:202212:N2:3:475:71"
+      ]
+    },
+    {
+      "label": "引き落とし",
+      "reading": "ひきおとし",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202212:N2:3:474:70",
+        "imported:202212:N2:3:475:71"
+      ]
+    },
+    {
+      "label": "振り替え",
+      "reading": "ふりかえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202212:N2:3:474:70",
+        "imported:202212:N2:3:475:71"
+      ]
+    },
+    {
       "label": "きよ",
       "reading": "きよ",
       "pos": "名词",
@@ -17374,6 +19796,18 @@
         "imported:202307:N1:3:3792:57",
         "imported:202307:N1:3:3793:58",
         "imported:202307:N1:3:3794:59"
+      ]
+    },
+    {
+      "label": "リセンター",
+      "reading": "りせんたー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202307:N1:3:3800:65",
+        "imported:202307:N1:3:3801:66"
       ]
     },
     {
@@ -17730,6 +20164,42 @@
       ]
     },
     {
+      "label": "青水",
+      "reading": "あおみず",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202307:N2:3:373:70",
+        "imported:202307:N2:3:374:71"
+      ]
+    },
+    {
+      "label": "口前",
+      "reading": "くちまえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202307:N2:3:373:70",
+        "imported:202307:N2:3:374:71"
+      ]
+    },
+    {
+      "label": "イド",
+      "reading": "いど",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202307:N2:3:373:70",
+        "imported:202307:N2:3:374:71"
+      ]
+    },
+    {
       "label": "ダン",
       "reading": "だん",
       "pos": "名词",
@@ -17870,8 +20340,22 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 5,
+      "examples": [
+        "imported:202307:N3:3:6736:72",
+        "imported:202307:N3:3:6737:73",
+        "imported:202512:N3:3:87155072984514:24"
+      ]
+    },
+    {
+      "label": "野中",
+      "reading": "のなか",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
+        "imported:202307:N3:3:6736:72",
         "imported:202307:N3:3:6737:73"
       ]
     },
@@ -17928,18 +20412,6 @@
       "occurrences": 1,
       "examples": [
         "imported:202312:N1:3:3685:46"
-      ]
-    },
-    {
-      "label": "受",
-      "reading": "受",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 2,
-      "examples": [
-        "imported:202312:N1:3:3686:47",
-        "imported:202412:N2:1:9:9"
       ]
     },
     {
@@ -18045,17 +20517,6 @@
       ]
     },
     {
-      "label": "演",
-      "reading": "演",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202312:N2:1:209:7"
-      ]
-    },
-    {
       "label": "標",
       "reading": "しめぎ",
       "pos": "名词",
@@ -18089,13 +20550,14 @@
       ]
     },
     {
-      "label": "ローザ",
-      "reading": "ろーざ",
+      "label": "古寺",
+      "reading": "ふるでら",
       "pos": "名词",
       "kind": "word",
-      "reason": "personal_or_organization_name",
-      "occurrences": 1,
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
       "examples": [
+        "imported:202312:N2:3:272:70",
         "imported:202312:N2:3:273:71"
       ]
     },
@@ -18105,7 +20567,31 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 5,
+      "occurrences": 6,
+      "examples": [
+        "imported:202312:N2:3:272:70",
+        "imported:202312:N2:3:273:71"
+      ]
+    },
+    {
+      "label": "はき物",
+      "reading": "はきもの",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202312:N2:3:272:70",
+        "imported:202312:N2:3:273:71"
+      ]
+    },
+    {
+      "label": "ローザ",
+      "reading": "ろーざ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "personal_or_organization_name",
+      "occurrences": 1,
       "examples": [
         "imported:202312:N2:3:273:71"
       ]
@@ -18218,9 +20704,21 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:202312:N3:3:6635:72",
+        "imported:202312:N3:3:6636:73"
+      ]
+    },
+    {
+      "label": "コーズ",
+      "reading": "こーず",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:202312:N3:3:6636:73"
+        "imported:202312:N3:3:6635:72"
       ]
     },
     {
@@ -18275,7 +20773,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 6,
       "examples": [
         "imported:202407:N1:3:3608:65",
         "imported:202407:N1:3:3609:66"
@@ -18429,6 +20927,18 @@
       ]
     },
     {
+      "label": "洋子",
+      "reading": "ようこ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202407:N2:3:171:70",
+        "imported:202407:N2:3:172:71"
+      ]
+    },
+    {
       "label": "いとう",
       "reading": "いとう",
       "pos": "名词",
@@ -18525,6 +21035,18 @@
       ]
     },
     {
+      "label": "葛",
+      "reading": "かずら",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202407:N3:3:6534:72",
+        "imported:202407:N3:3:6535:73"
+      ]
+    },
+    {
       "label": "せいこう",
       "reading": "せいこう",
       "pos": "名词",
@@ -18600,6 +21122,19 @@
       ]
     },
     {
+      "label": "緑川",
+      "reading": "みどりかわ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:202412:N1:3:3416:65",
+        "imported:202412:N1:3:3417:66",
+        "imported:202512:N1:4:36390829111519:95"
+      ]
+    },
+    {
       "label": "麵",
       "reading": "麵",
       "pos": "名词",
@@ -18619,17 +21154,6 @@
       "occurrences": 3,
       "examples": [
         "imported:202412:N1:4:3419:68"
-      ]
-    },
-    {
-      "label": "聞",
-      "reading": "聞",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202412:N1:4:3425:74"
       ]
     },
     {
@@ -18805,6 +21329,19 @@
       ]
     },
     {
+      "label": "和洋",
+      "reading": "わよう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 6,
+      "examples": [
+        "imported:202412:N2:3:70:70",
+        "imported:202412:N2:3:71:71",
+        "imported:202512:N3:3:107713641706026:25"
+      ]
+    },
+    {
       "label": "ナディア",
       "reading": "なでぃあ",
       "pos": "名词",
@@ -18846,17 +21383,6 @@
       "occurrences": 1,
       "examples": [
         "imported:202412:N3:1:227475286163621:5"
-      ]
-    },
-    {
-      "label": "項",
-      "reading": "こう",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:202412:N3:1:184648192573317:9"
       ]
     },
     {
@@ -18958,6 +21484,18 @@
       "occurrences": 6,
       "examples": [
         "imported:202412:N3:3:156846367986975:26"
+      ]
+    },
+    {
+      "label": "東山公園",
+      "reading": "ひがしやまこうえん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202412:N3:3:208735567032194:37",
+        "imported:202412:N3:3:118247410555386:38"
       ]
     },
     {
@@ -19223,17 +21761,6 @@
       "occurrences": 1,
       "examples": [
         "imported:202507:N1:2:122457154898792:35"
-      ]
-    },
-    {
-      "label": "無休",
-      "reading": "むきゅう",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202507:N1:2:86474754702316:37"
       ]
     },
     {
@@ -19997,6 +22524,18 @@
       ]
     },
     {
+      "label": "浅田",
+      "reading": "あさだ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202507:N1:3:166840840422440:65",
+        "imported:202507:N1:3:161600063775724:66"
+      ]
+    },
+    {
       "label": "ぎする",
       "reading": "ぎする",
       "pos": "动词",
@@ -20291,18 +22830,6 @@
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 4,
-      "examples": [
-        "imported:202507:N2:3:35944279152256:57",
-        "imported:202507:N2:3:13658978828957:58"
-      ]
-    },
-    {
-      "label": "むき",
-      "reading": "むき",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
       "examples": [
         "imported:202507:N2:3:35944279152256:57",
         "imported:202507:N2:3:13658978828957:58"
@@ -20973,17 +23500,6 @@
       ]
     },
     {
-      "label": "キヤ",
-      "reading": "きや",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202512:N1:3:200735104608263:52"
-      ]
-    },
-    {
       "label": "リア",
       "reading": "りあ",
       "pos": "名词",
@@ -21469,6 +23985,66 @@
       ]
     },
     {
+      "label": "ピース",
+      "reading": "ぴーす",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202512:N1:3:125135160954944:65",
+        "imported:202512:N1:3:116006682609114:66"
+      ]
+    },
+    {
+      "label": "集荷",
+      "reading": "しゅうか",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202512:N1:3:125135160954944:65",
+        "imported:202512:N1:3:116006682609114:66"
+      ]
+    },
+    {
+      "label": "種別",
+      "reading": "しゅべつ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:202512:N1:3:125135160954944:65",
+        "imported:202512:N1:3:116006682609114:66"
+      ]
+    },
+    {
+      "label": "優遇",
+      "reading": "ゆうぐう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202512:N1:3:125135160954944:65",
+        "imported:202512:N1:3:116006682609114:66"
+      ]
+    },
+    {
+      "label": "村北",
+      "reading": "むらきた",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202512:N1:3:125135160954944:65",
+        "imported:202512:N1:3:116006682609114:66"
+      ]
+    },
+    {
       "label": "たたかう",
       "reading": "たたかう",
       "pos": "动词",
@@ -21867,9 +24443,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 3,
       "examples": [
-        "imported:202512:N2:3:217246826262266:70"
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
       ]
     },
     {
@@ -21878,7 +24455,80 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 6,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
+      ]
+    },
+    {
+      "label": "特等",
+      "reading": "とくとう",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 2,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
+      ]
+    },
+    {
+      "label": "見",
+      "reading": "み",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 3,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
+      ]
+    },
+    {
+      "label": "じゅうたん",
+      "reading": "じゅうたん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
+      ]
+    },
+    {
+      "label": "大部屋",
+      "reading": "おおべや",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71",
+        "imported:202607:N2:4:145638971705200:73"
+      ]
+    },
+    {
+      "label": "船内",
+      "reading": "せんない",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202512:N2:3:217246826262266:70",
+        "imported:202512:N2:3:166526643952674:71"
+      ]
+    },
+    {
+      "label": "乗船",
+      "reading": "じょうせん",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
       "examples": [
         "imported:202512:N2:3:217246826262266:70",
         "imported:202512:N2:3:166526643952674:71"
@@ -21964,17 +24614,6 @@
       ]
     },
     {
-      "label": "和洋",
-      "reading": "わよう",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
-      "examples": [
-        "imported:202512:N3:3:107713641706026:25"
-      ]
-    },
-    {
       "label": "京子",
       "reading": "きょうこ",
       "pos": "名词",
@@ -21993,7 +24632,7 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
+      "occurrences": 4,
       "examples": [
         "imported:202512:N3:3:143167332080312:37",
         "imported:202512:N3:3:224710138783148:38"
@@ -22779,9 +25418,10 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
+      "occurrences": 6,
       "examples": [
-        "imported:202607:N1:3:216420981139436:65"
+        "imported:202607:N1:3:216420981139436:65",
+        "imported:202607:N1:3:165358977562721:66"
       ]
     },
     {
@@ -23198,9 +25838,43 @@
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
+      "occurrences": 13,
+      "examples": [
+        "imported:202607:N2:3:260816337863146:70",
+        "imported:202607:N2:3:203052147564511:71"
+      ]
+    },
+    {
+      "label": "ハオ",
+      "reading": "はお",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
       "occurrences": 1,
       "examples": [
-        "imported:202607:N2:3:203052147564511:71"
+        "imported:202607:N2:3:260816337863146:70"
+      ]
+    },
+    {
+      "label": "木山",
+      "reading": "きやま",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202607:N2:3:260816337863146:70"
+      ]
+    },
+    {
+      "label": "じゃがいも",
+      "reading": "じゃがいも",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202607:N2:3:260816337863146:70"
       ]
     },
     {
@@ -23293,17 +25967,6 @@
       "occurrences": 1,
       "examples": [
         "imported:202507:N1:4:272015341805411:70"
-      ]
-    },
-    {
-      "label": "食器洗い",
-      "reading": "しょっきあらい",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202507:N1:4:168507686976934:72"
       ]
     },
     {
@@ -23942,18 +26605,6 @@
       ]
     },
     {
-      "label": "緑川",
-      "reading": "みどりかわ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202512:N1:4:36390829111519:95",
-        "imported:202512:N1:4:62264468344383:96"
-      ]
-    },
-    {
       "label": "くぐる",
       "reading": "くぐる",
       "pos": "动词",
@@ -24028,17 +26679,6 @@
       "kind": "word",
       "reason": "unverified_word_or_spelling",
       "occurrences": 4,
-      "examples": [
-        "imported:202512:N2:4:154525060866542:81"
-      ]
-    },
-    {
-      "label": "ビザ",
-      "reading": "びざ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
       "examples": [
         "imported:202512:N2:4:154525060866542:81"
       ]
@@ -24401,17 +27041,6 @@
     {
       "label": "叔父",
       "reading": "おじ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202607:N2:4:145638971705200:73"
-      ]
-    },
-    {
-      "label": "大部屋",
-      "reading": "おおべや",
       "pos": "名词",
       "kind": "word",
       "reason": "unverified_word_or_spelling",
@@ -24786,7 +27415,7 @@
       "surface": "必要",
       "label": "必要",
       "pos": "名詞",
-      "occurrences": 1066
+      "occurrences": 1120
     },
     {
       "reason": "na_adjective_pos",
@@ -24877,14 +27506,14 @@
       "surface": "有名",
       "label": "有名",
       "pos": "名詞",
-      "occurrences": 88
+      "occurrences": 89
     },
     {
       "reason": "na_adjective_pos",
       "surface": "いろいろ",
       "label": "いろいろ",
       "pos": "名詞",
-      "occurrences": 196
+      "occurrences": 197
     },
     {
       "reason": "na_adjective_pos",
@@ -24898,14 +27527,14 @@
       "surface": "完全",
       "label": "完全",
       "pos": "名詞",
-      "occurrences": 38
+      "occurrences": 39
     },
     {
       "reason": "na_adjective_pos",
       "surface": "好き",
       "label": "好き",
       "pos": "名詞",
-      "occurrences": 432
+      "occurrences": 436
     },
     {
       "reason": "na_adjective_pos",
@@ -24933,7 +27562,7 @@
       "surface": "自由",
       "label": "自由",
       "pos": "名詞",
-      "occurrences": 181
+      "occurrences": 194
     },
     {
       "reason": "na_adjective_pos",
@@ -24954,7 +27583,7 @@
       "surface": "普通",
       "label": "普通",
       "pos": "名詞",
-      "occurrences": 91
+      "occurrences": 97
     },
     {
       "reason": "na_adjective_pos",
@@ -24975,7 +27604,7 @@
       "surface": "可能",
       "label": "可能",
       "pos": "名詞",
-      "occurrences": 282
+      "occurrences": 338
     },
     {
       "reason": "na_adjective_pos",
@@ -25017,7 +27646,7 @@
       "surface": "上手",
       "label": "上手",
       "pos": "名詞",
-      "occurrences": 145
+      "occurrences": 146
     },
     {
       "reason": "na_adjective_pos",
@@ -25031,7 +27660,7 @@
       "surface": "たまご",
       "label": "卵",
       "pos": "名詞",
-      "occurrences": 5
+      "occurrences": 7
     },
     {
       "reason": "na_adjective_pos",
@@ -25045,7 +27674,7 @@
       "surface": "温暖",
       "label": "温暖",
       "pos": "名詞",
-      "occurrences": 32
+      "occurrences": 33
     },
     {
       "reason": "na_adjective_pos",
@@ -25066,7 +27695,7 @@
       "surface": "さまざま",
       "label": "さまざま",
       "pos": "名詞",
-      "occurrences": 146
+      "occurrences": 147
     },
     {
       "reason": "unsupported_adjective_stem",
@@ -25101,7 +27730,7 @@
       "surface": "生",
       "label": "生",
       "pos": "名詞",
-      "occurrences": 29
+      "occurrences": 32
     },
     {
       "reason": "na_adjective_pos",
@@ -25122,14 +27751,14 @@
       "surface": "豊か",
       "label": "豊か",
       "pos": "名詞",
-      "occurrences": 74
+      "occurrences": 75
     },
     {
       "reason": "na_adjective_pos",
       "surface": "簡単",
       "label": "簡単",
       "pos": "名詞",
-      "occurrences": 189
+      "occurrences": 192
     },
     {
       "reason": "na_adjective_pos",
@@ -25150,7 +27779,7 @@
       "surface": "きれい",
       "label": "きれい",
       "pos": "名詞",
-      "occurrences": 174
+      "occurrences": 177
     },
     {
       "reason": "na_adjective_pos",
@@ -25192,7 +27821,7 @@
       "surface": "重要",
       "label": "重要",
       "pos": "名詞",
-      "occurrences": 286
+      "occurrences": 287
     },
     {
       "reason": "na_adjective_pos",
@@ -25238,17 +27867,24 @@
     },
     {
       "reason": "na_adjective_pos",
+      "surface": "優秀",
+      "label": "優秀",
+      "pos": "名詞",
+      "occurrences": 38
+    },
+    {
+      "reason": "na_adjective_pos",
       "surface": "大変",
       "label": "大変",
       "pos": "名詞",
-      "occurrences": 303
+      "occurrences": 304
     },
     {
       "reason": "na_adjective_pos",
       "surface": "急",
       "label": "急",
       "pos": "名詞",
-      "occurrences": 99
+      "occurrences": 100
     },
     {
       "reason": "na_adjective_pos",
@@ -25290,7 +27926,7 @@
       "surface": "大丈夫",
       "label": "大丈夫",
       "pos": "名詞",
-      "occurrences": 162
+      "occurrences": 163
     },
     {
       "reason": "na_adjective_pos",
@@ -25332,7 +27968,7 @@
       "surface": "積極",
       "label": "積極",
       "pos": "名詞",
-      "occurrences": 102
+      "occurrences": 103
     },
     {
       "reason": "na_adjective_pos",
@@ -25346,7 +27982,7 @@
       "surface": "多様",
       "label": "多様",
       "pos": "名詞",
-      "occurrences": 135
+      "occurrences": 136
     },
     {
       "reason": "na_adjective_pos",
@@ -25388,7 +28024,7 @@
       "surface": "結構",
       "label": "結構",
       "pos": "名詞",
-      "occurrences": 35
+      "occurrences": 36
     },
     {
       "reason": "na_adjective_pos",
@@ -25416,14 +28052,14 @@
       "surface": "便利",
       "label": "便利",
       "pos": "名詞",
-      "occurrences": 131
+      "occurrences": 138
     },
     {
       "reason": "na_adjective_pos",
       "surface": "健康",
       "label": "健康",
       "pos": "名詞",
-      "occurrences": 192
+      "occurrences": 211
     },
     {
       "reason": "na_adjective_pos",
@@ -25458,7 +28094,7 @@
       "surface": "様々",
       "label": "様々",
       "pos": "名詞",
-      "occurrences": 107
+      "occurrences": 110
     },
     {
       "reason": "na_adjective_pos",
@@ -25479,7 +28115,7 @@
       "surface": "有効",
       "label": "有効",
       "pos": "名詞",
-      "occurrences": 41
+      "occurrences": 47
     },
     {
       "reason": "na_adjective_pos",
@@ -25535,7 +28171,7 @@
       "surface": "自然",
       "label": "自然",
       "pos": "名詞",
-      "occurrences": 417
+      "occurrences": 438
     },
     {
       "reason": "na_adjective_pos",
@@ -25549,7 +28185,7 @@
       "surface": "不要",
       "label": "不要",
       "pos": "名詞",
-      "occurrences": 32
+      "occurrences": 43
     },
     {
       "reason": "na_adjective_pos",
@@ -25619,7 +28255,7 @@
       "surface": "特別",
       "label": "特別",
       "pos": "名詞",
-      "occurrences": 128
+      "occurrences": 160
     },
     {
       "reason": "na_adjective_pos",
@@ -25671,6 +28307,20 @@
       "occurrences": 10
     },
     {
+      "reason": "na_adjective_pos",
+      "surface": "スムーズ",
+      "label": "スムーズ",
+      "pos": "名詞",
+      "occurrences": 35
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "有意義",
+      "label": "有意義",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
       "reason": "unsupported_archaic_verb_fragment",
       "surface": "けん",
       "label": "ける",
@@ -25682,7 +28332,7 @@
       "surface": "身近",
       "label": "身近",
       "pos": "名詞",
-      "occurrences": 54
+      "occurrences": 57
     },
     {
       "reason": "na_adjective_pos",
@@ -25703,7 +28353,7 @@
       "surface": "主",
       "label": "主",
       "pos": "名詞",
-      "occurrences": 83
+      "occurrences": 85
     },
     {
       "reason": "na_adjective_pos",
@@ -25794,7 +28444,7 @@
       "surface": "楽",
       "label": "楽",
       "pos": "名詞",
-      "occurrences": 66
+      "occurrences": 71
     },
     {
       "reason": "na_adjective_pos",
@@ -25892,7 +28542,7 @@
       "surface": "細心",
       "label": "細心",
       "pos": "名詞",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "reason": "reviewed_lexeme",
@@ -25913,7 +28563,7 @@
       "surface": "迷惑",
       "label": "迷惑",
       "pos": "名詞",
-      "occurrences": 32
+      "occurrences": 33
     },
     {
       "reason": "na_adjective_pos",
@@ -25955,7 +28605,7 @@
       "surface": "適当",
       "label": "適当",
       "pos": "名詞",
-      "occurrences": 27
+      "occurrences": 28
     },
     {
       "reason": "na_adjective_pos",
@@ -26018,14 +28668,14 @@
       "surface": "異常",
       "label": "異常",
       "pos": "名詞",
-      "occurrences": 9
+      "occurrences": 11
     },
     {
       "reason": "na_adjective_pos",
       "surface": "速やか",
       "label": "速やか",
       "pos": "名詞",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "reason": "na_adjective_pos",
@@ -26211,13 +28861,6 @@
     },
     {
       "reason": "na_adjective_pos",
-      "surface": "スムーズ",
-      "label": "スムーズ",
-      "pos": "名詞",
-      "occurrences": 34
-    },
-    {
-      "reason": "na_adjective_pos",
       "surface": "冷静",
       "label": "冷静",
       "pos": "名詞",
@@ -26235,14 +28878,14 @@
       "surface": "不明",
       "label": "不明",
       "pos": "名詞",
-      "occurrences": 7
+      "occurrences": 9
     },
     {
       "reason": "na_adjective_pos",
       "surface": "気軽",
       "label": "気軽",
       "pos": "名詞",
-      "occurrences": 20
+      "occurrences": 23
     },
     {
       "reason": "na_adjective_pos",
@@ -26305,14 +28948,14 @@
       "surface": "個別",
       "label": "個別",
       "pos": "名詞",
-      "occurrences": 32
+      "occurrences": 34
     },
     {
       "reason": "unsupported_archaic_verb_fragment",
       "surface": "ち",
       "label": "ちる",
       "pos": "動詞",
-      "occurrences": 54
+      "occurrences": 55
     },
     {
       "reason": "na_adjective_pos",
@@ -26326,21 +28969,21 @@
       "surface": "おぞ",
       "label": "おぞい",
       "pos": "形容詞",
-      "occurrences": 11
+      "occurrences": 13
     },
     {
       "reason": "na_adjective_pos",
       "surface": "最適",
       "label": "最適",
       "pos": "名詞",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "reason": "na_adjective_pos",
       "surface": "安全",
       "label": "安全",
       "pos": "名詞",
-      "occurrences": 135
+      "occurrences": 146
     },
     {
       "reason": "na_adjective_pos",
@@ -26522,7 +29165,7 @@
       "surface": "ささい",
       "label": "ささい",
       "pos": "名詞",
-      "occurrences": 5
+      "occurrences": 6
     },
     {
       "reason": "na_adjective_pos",
@@ -26596,13 +29239,6 @@
     },
     {
       "reason": "na_adjective_pos",
-      "surface": "優秀",
-      "label": "優秀",
-      "pos": "名詞",
-      "occurrences": 34
-    },
-    {
-      "reason": "na_adjective_pos",
       "surface": "好調",
       "label": "好調",
       "pos": "名詞",
@@ -26627,14 +29263,14 @@
       "surface": "替",
       "label": "替る",
       "pos": "動詞",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "reason": "na_adjective_pos",
       "surface": "詳細",
       "label": "詳細",
       "pos": "名詞",
-      "occurrences": 34
+      "occurrences": 48
     },
     {
       "reason": "unsupported_adjective_stem",
@@ -26781,7 +29417,7 @@
       "surface": "新鮮",
       "label": "新鮮",
       "pos": "名詞",
-      "occurrences": 44
+      "occurrences": 45
     },
     {
       "reason": "reviewed_lexeme",
@@ -26795,7 +29431,7 @@
       "surface": "安",
       "label": "安い",
       "pos": "形容詞",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "reason": "na_adjective_pos",
@@ -26823,7 +29459,7 @@
       "surface": "大量",
       "label": "大量",
       "pos": "名詞",
-      "occurrences": 49
+      "occurrences": 50
     },
     {
       "reason": "na_adjective_pos",
@@ -26963,7 +29599,7 @@
       "surface": "く",
       "label": "くる",
       "pos": "動詞",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "reason": "na_adjective_pos",
@@ -26985,6 +29621,20 @@
       "label": "無害",
       "pos": "名詞",
       "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "オリジナル",
+      "label": "オリジナル",
+      "pos": "名詞",
+      "occurrences": 7
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "募",
+      "label": "募る",
+      "pos": "動詞",
+      "occurrences": 4
     },
     {
       "reason": "na_adjective_pos",
@@ -27152,7 +29802,7 @@
       "surface": "丁寧",
       "label": "丁寧",
       "pos": "名詞",
-      "occurrences": 63
+      "occurrences": 64
     },
     {
       "reason": "unsupported_archaic_verb_fragment",
@@ -27165,13 +29815,6 @@
       "reason": "unsupported_archaic_verb_fragment",
       "surface": "在",
       "label": "在る",
-      "pos": "動詞",
-      "occurrences": 1
-    },
-    {
-      "reason": "unsupported_archaic_verb_fragment",
-      "surface": "募",
-      "label": "募る",
       "pos": "動詞",
       "occurrences": 1
     },
@@ -27236,7 +29879,7 @@
       "surface": "クール",
       "label": "クール",
       "pos": "名詞",
-      "occurrences": 6
+      "occurrences": 9
     },
     {
       "reason": "na_adjective_pos",
@@ -27257,7 +29900,7 @@
       "surface": "自動的",
       "label": "自動的",
       "pos": "名詞",
-      "occurrences": 18
+      "occurrences": 19
     },
     {
       "reason": "na_adjective_pos",
@@ -27369,6 +30012,20 @@
       "surface": "寛大",
       "label": "寛大",
       "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "細か",
+      "label": "細か",
+      "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "振",
+      "label": "振る",
+      "pos": "動詞",
       "occurrences": 1
     },
     {
@@ -27496,6 +30153,13 @@
       "label": "幸福",
       "pos": "名詞",
       "occurrences": 50
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "円",
+      "label": "円い",
+      "pos": "形容詞",
+      "occurrences": 4
     },
     {
       "reason": "na_adjective_pos",
@@ -27806,6 +30470,20 @@
       "occurrences": 2
     },
     {
+      "reason": "na_adjective_pos",
+      "surface": "水平",
+      "label": "水平",
+      "pos": "名詞",
+      "occurrences": 2
+    },
+    {
+      "reason": "unsupported_adjective_stem",
+      "surface": "深",
+      "label": "深い",
+      "pos": "形容詞",
+      "occurrences": 1
+    },
+    {
       "reason": "reviewed_lexeme",
       "surface": "けんしゅう",
       "label": "研修",
@@ -27838,7 +30516,7 @@
       "surface": "ぶ",
       "label": "ぶる",
       "pos": "動詞",
-      "occurrences": 16
+      "occurrences": 17
     },
     {
       "reason": "unsupported_archaic_verb_fragment",
@@ -28398,7 +31076,7 @@
       "surface": "放題",
       "label": "放題",
       "pos": "名詞",
-      "occurrences": 3
+      "occurrences": 4
     },
     {
       "reason": "na_adjective_pos",
@@ -28751,6 +31429,13 @@
       "occurrences": 3
     },
     {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "散",
+      "label": "散る",
+      "pos": "動詞",
+      "occurrences": 2
+    },
+    {
       "reason": "na_adjective_pos",
       "surface": "うぶ",
       "label": "うぶ",
@@ -28762,7 +31447,7 @@
       "surface": "く",
       "label": "くい",
       "pos": "形容詞",
-      "occurrences": 14
+      "occurrences": 16
     },
     {
       "reason": "na_adjective_pos",
@@ -28965,7 +31650,7 @@
       "surface": "稚",
       "label": "稚い",
       "pos": "形容詞",
-      "occurrences": 4
+      "occurrences": 5
     },
     {
       "reason": "na_adjective_pos",
@@ -29015,13 +31700,6 @@
       "label": "親密",
       "pos": "名詞",
       "occurrences": 1
-    },
-    {
-      "reason": "na_adjective_pos",
-      "surface": "有意義",
-      "label": "有意義",
-      "pos": "名詞",
-      "occurrences": 6
     },
     {
       "reason": "na_adjective_pos",
@@ -29497,7 +32175,7 @@
       "surface": "希",
       "label": "希",
       "pos": "名詞",
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "reason": "unsupported_adjective_stem",
@@ -29658,7 +32336,7 @@
       "surface": "送",
       "label": "送る",
       "pos": "動詞",
-      "occurrences": 2
+      "occurrences": 3
     },
     {
       "reason": "na_adjective_pos",
@@ -29721,7 +32399,7 @@
       "surface": "高等",
       "label": "高等",
       "pos": "名詞",
-      "occurrences": 2
+      "occurrences": 4
     },
     {
       "reason": "na_adjective_pos",
@@ -29757,6 +32435,13 @@
       "label": "尊大",
       "pos": "名詞",
       "occurrences": 1
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "公的",
+      "label": "公的",
+      "pos": "名詞",
+      "occurrences": 3
     },
     {
       "reason": "na_adjective_pos",
@@ -29806,13 +32491,6 @@
       "label": "去る",
       "pos": "動詞",
       "occurrences": 2
-    },
-    {
-      "reason": "unsupported_archaic_verb_fragment",
-      "surface": "散",
-      "label": "散る",
-      "pos": "動詞",
-      "occurrences": 1
     },
     {
       "reason": "na_adjective_pos",
@@ -30053,6 +32731,13 @@
       "occurrences": 2
     },
     {
+      "reason": "unsupported_adjective_stem",
+      "surface": "ふか",
+      "label": "ふかい",
+      "pos": "形容詞",
+      "occurrences": 2
+    },
+    {
       "reason": "na_adjective_pos",
       "surface": "無闇",
       "label": "無闇",
@@ -30079,6 +32764,13 @@
       "label": "忠実",
       "pos": "名詞",
       "occurrences": 3
+    },
+    {
+      "reason": "na_adjective_pos",
+      "surface": "アカデミック",
+      "label": "アカデミック",
+      "pos": "名詞",
+      "occurrences": 2
     },
     {
       "reason": "reviewed_lexeme",
@@ -30215,13 +32907,6 @@
     },
     {
       "reason": "na_adjective_pos",
-      "surface": "公的",
-      "label": "公的",
-      "pos": "名詞",
-      "occurrences": 1
-    },
-    {
-      "reason": "na_adjective_pos",
       "surface": "不得手",
       "label": "不得手",
       "pos": "名詞",
@@ -30330,7 +33015,7 @@
       "surface": "退",
       "label": "退る",
       "pos": "動詞",
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "reason": "na_adjective_pos",
@@ -30387,13 +33072,6 @@
       "label": "深遠",
       "pos": "名詞",
       "occurrences": 1
-    },
-    {
-      "reason": "na_adjective_pos",
-      "surface": "オリジナル",
-      "label": "オリジナル",
-      "pos": "名詞",
-      "occurrences": 6
     },
     {
       "reason": "unsupported_archaic_verb_fragment",
@@ -30624,7 +33302,7 @@
       "surface": "不良",
       "label": "不良",
       "pos": "名詞",
-      "occurrences": 6
+      "occurrences": 7
     },
     {
       "reason": "na_adjective_pos",
@@ -30897,6 +33575,13 @@
       "surface": "流動的",
       "label": "流動的",
       "pos": "名詞",
+      "occurrences": 1
+    },
+    {
+      "reason": "unsupported_archaic_verb_fragment",
+      "surface": "きま",
+      "label": "きまる",
+      "pos": "動詞",
       "occurrences": 1
     },
     {
@@ -31714,20 +34399,20 @@
   ],
   "morphologySummary": {
     "na_adjective_pos": {
-      "forms": 784,
-      "occurrences": 13209
+      "forms": 787,
+      "occurrences": 13540
     },
     "unsupported_adjective_stem": {
-      "forms": 85,
-      "occurrences": 189
+      "forms": 88,
+      "occurrences": 200
     },
     "reviewed_lexeme": {
       "forms": 30,
-      "occurrences": 60
+      "occurrences": 62
     },
     "unsupported_archaic_verb_fragment": {
-      "forms": 88,
-      "occurrences": 256
+      "forms": 90,
+      "occurrences": 268
     },
     "reviewed_verb_context": {
       "forms": 1,
@@ -31735,7 +34420,7 @@
     },
     "unverified_archaic_adjective_fragment": {
       "forms": 4,
-      "occurrences": 21
+      "occurrences": 23
     }
   },
   "variants": {
@@ -32534,6 +35219,14 @@
         "pos": "形容词",
         "aliases": [
           "はるか"
+        ]
+      },
+      {
+        "label": "取り消す",
+        "reading": "とりけす",
+        "pos": "动词",
+        "aliases": [
+          "とりけす"
         ]
       },
       {
@@ -33703,6 +36396,22 @@
         ]
       },
       {
+        "label": "ひまわり",
+        "reading": "ひまわり",
+        "pos": "名词",
+        "aliases": [
+          "ヒマワリ"
+        ]
+      },
+      {
+        "label": "大人",
+        "reading": "おとな",
+        "pos": "名词",
+        "aliases": [
+          "おとな"
+        ]
+      },
+      {
         "label": "随分",
         "reading": "ずいぶん",
         "pos": "副词",
@@ -34085,14 +36794,6 @@
         "pos": "动词",
         "aliases": [
           "さる"
-        ]
-      },
-      {
-        "label": "大人",
-        "reading": "おとな",
-        "pos": "名词",
-        "aliases": [
-          "おとな"
         ]
       },
       {
@@ -34510,6 +37211,14 @@
         "pos": "动词",
         "aliases": [
           "さかのぼる"
+        ]
+      },
+      {
+        "label": "楽々",
+        "reading": "らくらく",
+        "pos": "副词",
+        "aliases": [
+          "らくらく"
         ]
       },
       {
@@ -35122,6 +37831,14 @@
         ]
       },
       {
+        "label": "凍る",
+        "reading": "こおる",
+        "pos": "动词",
+        "aliases": [
+          "こおる"
+        ]
+      },
+      {
         "label": "決まり",
         "reading": "きまり",
         "pos": "名词",
@@ -35202,14 +37919,6 @@
         ]
       },
       {
-        "label": "楽々",
-        "reading": "らくらく",
-        "pos": "副词",
-        "aliases": [
-          "らくらく"
-        ]
-      },
-      {
         "label": "突っ込む",
         "reading": "つっこむ",
         "pos": "动词",
@@ -35231,14 +37940,6 @@
         "pos": "形容词",
         "aliases": [
           "するどい"
-        ]
-      },
-      {
-        "label": "ひまわり",
-        "reading": "ひまわり",
-        "pos": "名词",
-        "aliases": [
-          "ヒマワリ"
         ]
       },
       {
@@ -35447,14 +38148,6 @@
         "pos": "形容词",
         "aliases": [
           "かかん"
-        ]
-      },
-      {
-        "label": "凍る",
-        "reading": "こおる",
-        "pos": "动词",
-        "aliases": [
-          "こおる"
         ]
       },
       {
@@ -35687,14 +38380,6 @@
         "pos": "动词",
         "aliases": [
           "ゆでる"
-        ]
-      },
-      {
-        "label": "取り消す",
-        "reading": "とりけす",
-        "pos": "动词",
-        "aliases": [
-          "とりけす"
         ]
       },
       {
@@ -36036,8 +38721,8 @@
     ]
   },
   "duplicates": {
-    "groups": 242,
-    "removedRows": 251,
+    "groups": 244,
+    "removedRows": 254,
     "merged": [
       {
         "label": "はく",
@@ -36404,13 +39089,23 @@
         "originalRows": 2
       },
       {
+        "label": "充分",
+        "reading": "じゅうぶん",
+        "partsOfSpeech": [
+          "形容词",
+          "副词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "かつ",
         "reading": "かつ",
         "partsOfSpeech": [
           "接续词",
-          "动词"
+          "动词",
+          "名词"
         ],
-        "originalRows": 2
+        "originalRows": 3
       },
       {
         "label": "略",
@@ -37498,6 +40193,15 @@
         "originalRows": 2
       },
       {
+        "label": "年中",
+        "reading": "ねんじゅう",
+        "partsOfSpeech": [
+          "副词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "ぜったい",
         "reading": "ぜったい",
         "partsOfSpeech": [
@@ -37597,11 +40301,11 @@
         "originalRows": 2
       },
       {
-        "label": "年中",
-        "reading": "ねんじゅう",
+        "label": "水平",
+        "reading": "すいへい",
         "partsOfSpeech": [
-          "名词",
-          "副词"
+          "形容词",
+          "名词"
         ],
         "originalRows": 2
       },
@@ -38503,6 +41207,16 @@
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
+        "prior": "および",
+        "label": "及び",
+        "reading": "および",
+        "partsOfSpeech": [
+          "接续词"
+        ],
+        "jmdictId": "1228140",
+        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
+      },
+      {
         "prior": "つぶれる",
         "label": "潰れる",
         "reading": "つぶれる",
@@ -38620,16 +41334,6 @@
           "动词"
         ],
         "jmdictId": "1478370",
-        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
-      },
-      {
-        "prior": "および",
-        "label": "及び",
-        "reading": "および",
-        "partsOfSpeech": [
-          "接续词"
-        ],
-        "jmdictId": "1228140",
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
@@ -38820,6 +41524,16 @@
           "动词"
         ],
         "jmdictId": "1153440",
+        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
+      },
+      {
+        "prior": "くだす",
+        "label": "下す",
+        "reading": "くだす",
+        "partsOfSpeech": [
+          "动词"
+        ],
+        "jmdictId": "1184320",
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
@@ -39754,6 +42468,16 @@
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
+        "prior": "われる",
+        "label": "割れる",
+        "reading": "われる",
+        "partsOfSpeech": [
+          "动词"
+        ],
+        "jmdictId": "1208020",
+        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
+      },
+      {
         "prior": "とりかかる",
         "label": "取り掛かる",
         "reading": "とりかかる",
@@ -40055,6 +42779,16 @@
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
+        "prior": "いきる",
+        "label": "生きる",
+        "reading": "いきる",
+        "partsOfSpeech": [
+          "动词"
+        ],
+        "jmdictId": "1378520",
+        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
+      },
+      {
         "prior": "もれる",
         "label": "漏れる",
         "reading": "もれる",
@@ -40232,16 +42966,6 @@
           "动词"
         ],
         "jmdictId": "1548550",
-        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
-      },
-      {
-        "prior": "いきる",
-        "label": "生きる",
-        "reading": "いきる",
-        "partsOfSpeech": [
-          "动词"
-        ],
-        "jmdictId": "1378520",
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
@@ -40502,16 +43226,6 @@
           "形容词"
         ],
         "jmdictId": "1260530",
-        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
-      },
-      {
-        "prior": "われる",
-        "label": "割れる",
-        "reading": "われる",
-        "partsOfSpeech": [
-          "动词"
-        ],
-        "jmdictId": "1208020",
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
@@ -41102,16 +43816,6 @@
           "动词"
         ],
         "jmdictId": "1156090",
-        "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
-      },
-      {
-        "prior": "くだす",
-        "label": "下す",
-        "reading": "くだす",
-        "partsOfSpeech": [
-          "动词"
-        ],
-        "jmdictId": "1184320",
         "reason": "整词表记复核：采用现代学习中常见的汉字词头，保留原假名、词性和读音；并非仅按同音转换。"
       },
       {
@@ -42183,6 +44887,15 @@
         "originalRows": 2
       },
       {
+        "label": "限る",
+        "reading": "かぎる",
+        "partsOfSpeech": [
+          "动词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "大変",
         "reading": "たいへん",
         "partsOfSpeech": [
@@ -42302,15 +45015,6 @@
       {
         "label": "進む",
         "reading": "すすむ",
-        "partsOfSpeech": [
-          "动词",
-          "动词"
-        ],
-        "originalRows": 2
-      },
-      {
-        "label": "限る",
-        "reading": "かぎる",
         "partsOfSpeech": [
           "动词",
           "动词"
@@ -42768,6 +45472,33 @@
         "originalRows": 2
       },
       {
+        "label": "大人",
+        "reading": "おとな",
+        "partsOfSpeech": [
+          "名词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "下す",
+        "reading": "くだす",
+        "partsOfSpeech": [
+          "动词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
+        "label": "限り",
+        "reading": "かぎり",
+        "partsOfSpeech": [
+          "名词",
+          "名词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "楽",
         "reading": "らく",
         "partsOfSpeech": [
@@ -42800,15 +45531,6 @@
         "partsOfSpeech": [
           "动词",
           "动词"
-        ],
-        "originalRows": 2
-      },
-      {
-        "label": "限り",
-        "reading": "かぎり",
-        "partsOfSpeech": [
-          "名词",
-          "名词"
         ],
         "originalRows": 2
       },
@@ -42921,6 +45643,15 @@
         "originalRows": 2
       },
       {
+        "label": "振り込む",
+        "reading": "ふりこむ",
+        "partsOfSpeech": [
+          "动词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "やり直す",
         "reading": "やりなおす",
         "partsOfSpeech": [
@@ -43002,26 +45733,8 @@
         "originalRows": 2
       },
       {
-        "label": "大人",
-        "reading": "おとな",
-        "partsOfSpeech": [
-          "名词",
-          "名词"
-        ],
-        "originalRows": 2
-      },
-      {
         "label": "出来上がる",
         "reading": "できあがる",
-        "partsOfSpeech": [
-          "动词",
-          "动词"
-        ],
-        "originalRows": 2
-      },
-      {
-        "label": "振り込む",
-        "reading": "ふりこむ",
         "partsOfSpeech": [
           "动词",
           "动词"
@@ -43542,6 +46255,15 @@
         "originalRows": 2
       },
       {
+        "label": "割れる",
+        "reading": "われる",
+        "partsOfSpeech": [
+          "动词",
+          "动词"
+        ],
+        "originalRows": 2
+      },
+      {
         "label": "手袋",
         "reading": "てぶくろ",
         "partsOfSpeech": [
@@ -43632,15 +46354,6 @@
         "originalRows": 2
       },
       {
-        "label": "割れる",
-        "reading": "われる",
-        "partsOfSpeech": [
-          "动词",
-          "动词"
-        ],
-        "originalRows": 2
-      },
-      {
         "label": "慌ただしい",
         "reading": "あわただしい",
         "partsOfSpeech": [
@@ -43650,8 +46363,8 @@
         "originalRows": 2
       },
       {
-        "label": "漏れる",
-        "reading": "もれる",
+        "label": "焦げる",
+        "reading": "こげる",
         "partsOfSpeech": [
           "动词",
           "动词"
@@ -43659,8 +46372,8 @@
         "originalRows": 2
       },
       {
-        "label": "焦げる",
-        "reading": "こげる",
+        "label": "漏れる",
+        "reading": "もれる",
         "partsOfSpeech": [
           "动词",
           "动词"
@@ -43745,15 +46458,6 @@
         "partsOfSpeech": [
           "形容词",
           "形容词"
-        ],
-        "originalRows": 2
-      },
-      {
-        "label": "下す",
-        "reading": "くだす",
-        "partsOfSpeech": [
-          "动词",
-          "动词"
         ],
         "originalRows": 2
       },
@@ -43869,10 +46573,10 @@
     "retainedAmbiguous": []
   },
   "audit": {
-    "total": 14457,
+    "total": 14480,
     "polysemy": 2253,
-    "token": 444,
-    "level": 7893,
+    "token": 467,
+    "level": 7894,
     "ungraded": 7022,
     "estimates": 486,
     "multipleGrades": 15
