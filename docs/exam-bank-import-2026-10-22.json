@@ -2,8 +2,8 @@
   "format": "jlpt-practice/import-exam-bank/v1",
   "files": 8,
   "written": 557,
-  "available": 540,
-  "unavailable": 17,
+  "available": 557,
+  "unavailable": 0,
   "listeningSkipped": 236,
   "papers": [
     {
@@ -13,8 +13,8 @@
       "period": "202512",
       "sourceStatus": "partial",
       "written": 66,
-      "available": 64,
-      "unavailable": 2,
+      "available": 66,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -118,8 +118,8 @@
       "period": "202507",
       "sourceStatus": "partial",
       "written": 66,
-      "available": 64,
-      "unavailable": 2,
+      "available": 66,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -223,8 +223,8 @@
       "period": "202607",
       "sourceStatus": "partial",
       "written": 66,
-      "available": 64,
-      "unavailable": 2,
+      "available": 66,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -328,8 +328,8 @@
       "period": "202512",
       "sourceStatus": "partial",
       "written": 71,
-      "available": 69,
-      "unavailable": 2,
+      "available": 71,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -438,8 +438,8 @@
       "period": "202507",
       "sourceStatus": "partial",
       "written": 71,
-      "available": 69,
-      "unavailable": 2,
+      "available": 71,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -548,8 +548,8 @@
       "period": "202607",
       "sourceStatus": "partial",
       "written": 71,
-      "available": 69,
-      "unavailable": 2,
+      "available": 71,
+      "unavailable": 0,
       "listeningSkipped": 30,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -673,8 +673,8 @@
       "period": "202412",
       "sourceStatus": "partial",
       "written": 73,
-      "available": 71,
-      "unavailable": 2,
+      "available": 73,
+      "unavailable": 0,
       "listeningSkipped": 28,
       "expandedSectionsComplete": true,
       "sectionCounts": [
@@ -773,8 +773,8 @@
       "period": "202512",
       "sourceStatus": "partial",
       "written": 73,
-      "available": 70,
-      "unavailable": 3,
+      "available": 73,
+      "unavailable": 0,
       "listeningSkipped": 28,
       "expandedSectionsComplete": true,
       "sectionCounts": [

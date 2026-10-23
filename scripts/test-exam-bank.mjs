@@ -99,10 +99,10 @@ test('verified articles and child pictures open only complete questions with sta
   input.items[5].imageId = 'mojitest/exams/picture/article.png';
   input.items[5].items[0].imageId = 'mojitest/exams/picture/question.png';
   const excluded = convert(input).groups[2].payload;
-  const partial = convertExamBank(input, {sourceFile, verifiedImages: new Set(['pic/12025077.jpg'])}).groups[2].payload;
+  const partial = convertExamBank(input, {sourceFile, availableImages: new Set(['pic/12025077.jpg'])}).groups[2].payload;
   assert.deepEqual(partial.questions.map(q => q.sourceQuestionNumber), [8]);
   assert.deepEqual(partial.unavailable.map(q => q.questionNumber), [7]);
-  const enabled = convertExamBank(input, {sourceFile, verifiedImages: new Set(['pic/12025077.jpg', 'pic/12025077-1.jpg'])}).groups[2].payload;
+  const enabled = convertExamBank(input, {sourceFile, availableImages: new Set(['pic/12025077.jpg', 'pic/12025077-1.jpg'])}).groups[2].payload;
   assert.equal(enabled.unavailable.length, 0);
   assert.deepEqual(enabled.questions.map(q => q.id), excluded.unavailable.map(q => q.id));
   assert.deepEqual(enabled.questions.map(q => q.correctOptionId), ['A', 'D']);
@@ -138,7 +138,7 @@ test('verified image activation survives reimports and a failed verification rep
   } finally { await fs.rm(temp, {recursive: true, force: true}); }
 });
 
-test('the upload checklist maps all 17 excluded subquestions to 11 unique numbered JPG paths and retains the original filenames', async () => {
+test('the upload checklist maps all 17 opened subquestions to 11 unique numbered JPG paths and retains the original filenames', async () => {
   const manifest = JSON.parse(await fs.readFile(new URL('../docs/exam-bank-missing-images-2026-10-22.json', import.meta.url), 'utf8'));
   assert.equal(manifest.images.length, 11);
   assert.equal(new Set(manifest.images.map(image => image.uploadPath)).size, 11);
@@ -149,11 +149,12 @@ test('the upload checklist maps all 17 excluded subquestions to 11 unique number
     for (const question of image.questions) {
       const bank = JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${question.period}-${question.level}-3.json`, import.meta.url), 'utf8'));
       const provenance = bank.sourceMetadata.questions.find(item => item.id === question.id);
-      const unavailable = bank.unavailable.find(item => item.id === question.id);
-      assert.ok(unavailable);
+      const enabled = bank.questions.find(item => item.id === question.id);
+      assert.ok(enabled);
+      assert.equal(bank.unavailable.length, 0);
       assert.equal(provenance.images[question.kind], image.reference);
       assert.equal(provenance.uploadImages[question.kind], image.uploadPath);
-      assert.equal(question.kind === 'question' ? unavailable.raw.questionPicture : unavailable.raw.picture, image.uploadPath);
+      assert.ok((question.kind === 'question' ? enabled.media.questionImages : enabled.media.images).includes(image.uploadPath));
       affected.add(question.id);
     }
   }
@@ -162,6 +163,28 @@ test('the upload checklist maps all 17 excluded subquestions to 11 unique number
   assert.equal(n3.uploadPath, 'pic/320251224.jpg');
   const sharedN3 = manifest.images.filter(image => image.questions.some(q => q.level === 'N3' && q.id.endsWith(':37')));
   assert.deepEqual(sharedN3.map(image => image.uploadPath).sort(), ['pic/320241237.jpg', 'pic/320251237.jpg']);
+});
+
+test('owner-confirmed uploaded images enable only listed resources and persist without a fabricated verification report', async () => {
+  const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'jlpt-confirmed-uploads-'));
+  try {
+    const sourceDirectory = path.join(temp, 'source'), outputDirectory = path.join(temp, 'bank');
+    await fs.mkdir(sourceDirectory); await fs.mkdir(outputDirectory);
+    const input = fixture(); input.items[5].imageId = 'mojitest/exams/picture/article.png';
+    input.items[5].items[0].imageId = 'mojitest/exams/picture/question.png';
+    await fs.writeFile(path.join(sourceDirectory, sourceFile), JSON.stringify(input));
+    const uploadedImagesFile = path.join(temp, 'uploads.json');
+    await fs.writeFile(uploadedImagesFile, JSON.stringify({images: [{uploadPath: 'pic/12025077.jpg'}]}));
+    const result = await importExamBanks({sourceDirectory, outputDirectory, uploadedImagesFile});
+    assert.equal(result.available, 7); assert.equal(result.unavailable, 1);
+    const confirm = JSON.parse(await fs.readFile(path.join(outputDirectory, 'uploaded-reading-images.json'), 'utf8'));
+    assert.equal(confirm.source, 'owner-confirmed'); assert.equal(confirm.status, undefined);
+    await assert.rejects(fs.access(path.join(outputDirectory, 'verified-reading-images.json')));
+    const reimported = await importExamBanks({sourceDirectory, outputDirectory});
+    assert.equal(reimported.available, result.available); assert.equal(reimported.unavailable, result.unavailable);
+    await fs.writeFile(uploadedImagesFile, JSON.stringify({images: [{uploadPath: 'pic/../invalid.jpg'}]}));
+    await assert.rejects(importExamBanks({sourceDirectory, outputDirectory, uploadedImagesFile}), /Invalid uploaded/);
+  } finally { await fs.rm(temp, {recursive: true, force: true}); }
 });
 
 test('invalid answer positions or empty options are excluded instead of shifting choices or guessing answers', () => {

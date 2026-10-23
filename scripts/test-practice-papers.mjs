@@ -94,13 +94,13 @@ test("new nested exam exports expose only complete written questions and remain 
       assert.match(question.id, /^imported:\d{6}:N[1-3]:[1-3]:\d+:\d+$/);
       assert.equal(question.options.length, 4);
       assert.ok(question.prompt.trim());
-      if (question.category === "阅读") assert.ok(question.passage.trim());
+      if (question.category === "阅读") assert.ok(question.passage?.trim() || question.media?.images.length);
       assert.doesNotMatch(JSON.stringify(question), /MOJiTest_URL/);
     }
     selected.push(paper.questions[0].id, paper.questions.at(-1).id);
     count += paper.questions.length; excluded += paper.excludedCount;
   }
-  assert.equal(count, 540); assert.equal(excluded, 17);
+  assert.equal(count, 557); assert.equal(excluded, 0);
   assert.equal((await papers.loadFavoriteQuestions(selected)).map(item => item.question.id).join(","), selected.join(","));
   const july = await papers.loadPracticePaper("imported", "N1", "202507", "vocabulary");
   assert.match(july.questions[0].prompt, /<u>余暇<\/u>/);

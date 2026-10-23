@@ -1,6 +1,6 @@
 # 阅读缺图上传清单
 
-本批共 17 道缺图小题，涉及 11 张图片。上传到存放听力的同一个 Cloudflare R2 Bucket，`pic/` 和 `audio/` 位于根目录、互相平级。
+本批原有 17 道缺图小题，涉及 11 张图片。2026-10-23 根据站点所有者确认已全部上传，现已关联并开放作答。图片存放在听力的同一个 Cloudflare R2 Bucket，`pic/` 和 `audio/` 位于根目录、互相平级。
 
 图片统一保存为 JPG。PNG 图片请先导出或转换为 JPG，再使用下表中的文件名。
 
@@ -28,7 +28,7 @@
 npm run import:exam-bank -- --source <整卷JSON目录> --image-report docs/exam-bank-missing-images-2026-10-22.json
 ```
 
-只修改了上传路径，没有将缺图题移入可作答题库。上传完成后需核对内容及 URL，再关联、启用对应题目。
+本次开放依据所有者的上传确认，记录在 `src/data/imported-bank/uploaded-reading-images.json`；测试环境外网受限，未声称真实图片已通过远程下载校验。后续可按以下流程补充验证。
 
 ## 上传后校验与开放
 
@@ -53,4 +53,14 @@ npm run build
 
 开放时会保留原题 ID、题序、答案及来源，共用文章图与小题附图分别关联。校验报告保存在 `src/data/imported-bank/verified-reading-images.json`，以后重新导入自动沿用；无需每次重复传 `--verified-images`。听力的可作答状态不受影响。
 
-环境代理拒绝访问、图片 404、返回网页而不是图片、文件损坏等都不能视为校验通过。当前 17 道小题在真实图片校验完成前仍保持关闭。
+环境代理拒绝访问、图片 404、返回网页而不是图片、文件损坏等都不能视为校验通过。
+
+当所有者已确认上传并明确要求开放时，也支持显式登记上传清单，无需伪造校验通过报告：
+
+```sh
+npm run import:exam-bank -- --source <整卷JSON目录> \
+  --uploaded-images docs/exam-bank-missing-images-2026-10-22.json \
+  --report docs/exam-bank-import-2026-10-22.json
+```
+
+该方式只开放清单中安全的 `pic/` 路径，后续重新导入会自动沿用上传确认；其他缺失资源仍保持关闭。
