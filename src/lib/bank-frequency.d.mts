@@ -17,6 +17,7 @@ export const frequencyOrders: string[];
 export const frequencyLevelScopes: string[];
 export class FrequencyInputError extends Error {}
 export function frequencyText(value?: string): string;
+export function frequencyImageSources(question:{passage?:string;prompt?:string;imageTexts?:{key:string;field:string;text:string}[]}): {key:string;field:string;text:string}[];
 export function listeningTranscript(explanation: string[]): string;
 export function frequencySearchText(text: string): string;
 export function parseFrequencyFilters(params: URLSearchParams, metadata: FrequencyMetadata): FrequencyFilters;

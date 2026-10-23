@@ -770,7 +770,7 @@
       "level": "N1",
       "category": "阅读",
       "prompt": "次の4つの団体は、玉北市在住者による団体で、今後、以下の講座の開講を検討している。この中で「市民企画講座」に応募できるのはどの団体か。",
-      "instruction": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+      "instruction": "問題13 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
       "richText": true,
       "options": [
         {
@@ -814,7 +814,7 @@
       "level": "N1",
       "category": "阅读",
       "prompt": "田村さんはある団体の代表者を務めており、今回初めて「市民企画講座」に応募したいと考えている。外部の講師を探しているが、講師について留意しなければならないことは何か。",
-      "instruction": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+      "instruction": "問題13 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
       "richText": true,
       "options": [
         {
@@ -1046,6 +1046,7 @@
         "sectionId": "xYtpAlmCmM",
         "questionType": 36,
         "parentObjectId": "nIk2IiwZaV",
+        "originalInstruction": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
         "images": {
           "passage": "mojitest/exams/picture/58bb4c17-fa89-4b8b-bcbf-3d98e00e67d0.png",
           "question": "mojitest/exams/picture/636803e9-db01-45cb-8fcb-20bcf90d4df1.png"
@@ -1063,6 +1064,7 @@
         "sectionId": "xYtpAlmCmM",
         "questionType": 36,
         "parentObjectId": "nIk2IiwZaV",
+        "originalInstruction": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
         "images": {
           "passage": "mojitest/exams/picture/58bb4c17-fa89-4b8b-bcbf-3d98e00e67d0.png",
           "question": ""

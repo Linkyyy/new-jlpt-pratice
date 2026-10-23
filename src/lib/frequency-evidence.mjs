@@ -1,4 +1,4 @@
-import {frequencyText, listeningTranscript} from './bank-frequency.mjs';
+import {frequencyText, listeningTranscript, frequencyImageSources} from './bank-frequency.mjs';
 
 /** Plain-text offsets only: React renders the marks without injecting question HTML. */
 export function frequencyExcerpt(input, forms, limit = 240) {
@@ -32,6 +32,7 @@ export function frequencyExamplePreview(question, fields, forms) {
     ...(fields.includes('passage') || fields.includes('transcript') ? [{field: fields.includes('transcript') ? 'transcript' : 'passage', text:passage}] : []),
     ...(fields.includes('prompt') ? [{field:'prompt',text:prompt}] : []),
     ...(fields.includes('options') ? options.map((text,i) => ({field:'options',text,option:i+1})) : []),
+    ...frequencyImageSources(question).filter(image => fields.includes(image.field)),
   ];
   const excerpts = sources.flatMap(source => {const excerpt=frequencyExcerpt(source.text,forms);return excerpt?[{field:source.field,...(source.option?{option:source.option}:{}),...excerpt}]:[];}).slice(0,3);
   return {prompt:prompt.slice(0,200), ...(passage ? {passage:frequencyExcerpt(passage,forms)?.text ?? passage.slice(0,240)} : {}), options: options.map(option => option.slice(0,180)), excerpts};

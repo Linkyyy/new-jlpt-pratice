@@ -13,6 +13,8 @@
     "test:exam-bank": "node --test scripts/test-exam-bank.mjs",
     "verify:reading-images": "node --use-env-proxy scripts/verify-reading-images.mjs",
     "test:reading-images": "node --test scripts/test-verify-reading-images.mjs scripts/test-exam-bank.mjs",
+    "ocr:images": "node --use-env-proxy scripts/ocr-bank-images.mjs",
+    "test:image-ocr": "node --test scripts/test-frequency-image-ocr.mjs",
     "import:listening-transcripts": "node scripts/import-listening-transcripts.mjs",
     "test:listening-transcripts": "node --test scripts/test-listening-transcripts.mjs",
     "check:bank": "node scripts/check-question-bank.mjs",

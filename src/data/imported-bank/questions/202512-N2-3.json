@@ -694,7 +694,7 @@
       "level": "N2",
       "category": "阅读",
       "prompt": "中村さんは、4歳の娘と一緒に、夏野港から岩根島に行こうと思っている。なるべく安く行きたいが、いすには座りたい。中村さんたちの運賃はいくらになるか。",
-      "instruction": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+      "instruction": "問題14 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
       "richText": true,
       "options": [
         {
@@ -735,7 +735,7 @@
       "level": "N2",
       "category": "阅读",
       "prompt": "ミゲルさんは、10月22日（月）に赤木港を出発する船で、岩根鳥に行こうと思っている。予約のしかたとして合っているのはどれか。",
-      "instruction": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+      "instruction": "問題14 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
       "richText": true,
       "options": [
         {
@@ -949,6 +949,7 @@
         "sectionId": "1KJAfqUc5z",
         "questionType": 36,
         "parentObjectId": "uFWeSYGEYN",
+        "originalInstruction": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
         "images": {
           "passage": "mojitest/exams/picture/051ab2c7-668b-4362-8158-3fb57bf5e041.jpeg",
           "question": ""
@@ -966,6 +967,7 @@
         "sectionId": "1KJAfqUc5z",
         "questionType": 36,
         "parentObjectId": "uFWeSYGEYN",
+        "originalInstruction": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
         "images": {
           "passage": "mojitest/exams/picture/051ab2c7-668b-4362-8158-3fb57bf5e041.jpeg",
           "question": ""

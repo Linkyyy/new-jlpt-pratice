@@ -14,6 +14,7 @@ import { mergeFrequencyDuplicateWords } from '../src/lib/frequency-duplicates.mj
 import { preferFrequencyHeadwords } from '../src/lib/frequency-headwords.mjs';
 import { annotateFrequencyAudit } from '../src/lib/frequency-audit.mjs';
 import { reviewFrequencyCorpus, correctFrequencyReadings } from '../src/lib/frequency-quality.mjs';
+import {createImageTextIndex, withFrequencyImageText} from '../src/lib/frequency-image-text.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'src/data/bank-frequency');
@@ -31,6 +32,7 @@ inputs.push('src/lib/frequency-headwords.mjs', 'src/data/frequency-levels/prefer
 inputs.push('src/data/frequency-levels/variant-review.json');
 inputs.push('src/lib/frequency-audit.mjs');
 inputs.push('src/lib/frequency-mimetics.mjs');
+inputs.push('src/lib/frequency-image-text.mjs', 'src/data/frequency-image-ocr/entries.json');
 const digest = createHash('sha256').update('kuromoji@0.1.2/ipadic/v1/opencc-js@1.0.5');
 const contents = new Map();
 for (const name of inputs) { const text = await fs.readFile(path.join(root, name), 'utf8'); contents.set(name, text); digest.update(name).update(text); }
@@ -47,19 +49,21 @@ const dictionaryEntries = JSON.parse(gunzipSync(dictionary));
 const referenceEntries = JSON.parse(contents.get('src/data/frequency-levels/entries.json'));
 const trustedWords = new Set([...Object.keys(dictionaryEntries), ...referenceEntries.map(([word]) => word)]);
 const builder = createFrequencyBuilder(text => tokenizer.tokenize(text), {trustedWords});
+const imageTexts = createImageTextIndex(JSON.parse(contents.get('src/data/frequency-image-ocr/entries.json')));
 let count = 0;
 for (const file of files) {
   const paper = JSON.parse(contents.get(`src/data/imported-bank/questions/${file}`));
-  for (const question of paper.questions) { builder.addQuestion({ ...question, source: 'imported', period: paper.period }); count++; }
+  for (const question of paper.questions) { builder.addQuestion(withFrequencyImageText({ ...question, source: 'imported', period: paper.period }, imageTexts)); count++; }
   // Missing media does not prevent text analysis. Preserve these questions but disable their practice links.
   for (const unavailable of paper.unavailable ?? []) {
     const raw = unavailable.raw;
     if (!raw) continue;
-    builder.addQuestion({ id: unavailable.id, source: 'imported', period: paper.period, level: paper.level,
+    builder.addQuestion(withFrequencyImageText({ id: unavailable.id, source: 'imported', period: paper.period, level: paper.level,
       category: { vocabulary: '词汇', grammar: '语法', reading: '阅读', listening: '听力' }[paper.type],
       instruction: raw.bigTitle ?? '', passage: raw.article ?? '', prompt: raw.littleQuestion || raw.question || '',
       sourceQuestionNumber: unavailable.questionNumber ?? null, available: false,
-      options: [1, 2, 3, 4].map(i => ({ text: raw[`option${i}`] ?? '' })), explanation: [raw.assistantNew || raw.assistant || ''] });
+      options: [1, 2, 3, 4].map(i => ({ text: raw[`option${i}`] ?? '' })), explanation: [raw.assistantNew || raw.assistant || ''],
+      media: {images: raw.picture ? [raw.picture] : [], questionImages: raw.questionPicture ? [raw.questionPicture] : []} }, imageTexts));
     count++;
   }
   if (count && count % 1000 < 40) console.log(`已分析约 ${count} 道题……`);

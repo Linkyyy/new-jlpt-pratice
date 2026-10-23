@@ -3,7 +3,8 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import {convertExamBank, importExamBanks} from './import-exam-bank.mjs';
+import {convertExamBank, importExamBanks, examInstruction} from './import-exam-bank.mjs';
+import {frequencySubtype} from '../src/lib/bank-frequency.mjs';
 
 const sourceFile = 'N1_2025年7月_fixture.json';
 const context = sectionId => ({examId: 'exam-one', examTag: 'N1', examTitle: '2025年7月', sectionId});
@@ -29,6 +30,31 @@ function fixture() {
     ]};
 }
 const convert = input => convertExamBank(input, {sourceFile});
+
+test('official source reading types correct repeated problem numbers without altering the instruction body', () => {
+  const body = ' 右のページは、お知らせである。';
+  assert.equal(examInstruction({title:`問題12${body}`,questionType:36},'N1'),`問題13${body}`);
+  assert.equal(examInstruction({title:`問題１３${body}`,questionType:36},'N2'),`問題14${body}`);
+  assert.equal(examInstruction({title:`問題7${body}`,questionType:36},'N3'),`問題7${body}`);
+  assert.equal(examInstruction({title:`問題12${body}`,questionType:35},'N1'),`問題12${body}`);
+  assert.equal(examInstruction({title:`問題3${body}`,questionType:23},'N1'),`問題3${body}`);
+});
+
+test('all newly opened image questions have the correct official subtype and keep information retrieval apart from thematic reading', async () => {
+  const report = JSON.parse(await fs.readFile(new URL('../docs/exam-bank-import-2026-10-22.json',import.meta.url),'utf8'));
+  let corrected = 0;
+  for(const paper of report.papers){
+    const bank = JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${paper.period}-${paper.level}-3.json`,import.meta.url),'utf8'));
+    for(const question of bank.questions.filter(q=>q.media?.images.length)){
+      const expected = paper.level==='N3' && question.sourceQuestionNumber===24 ? 'reading-short' : 'reading-information';
+      assert.equal(frequencySubtype({...question,source:'imported'}).id,expected,question.id);
+    }
+    const info = bank.questions.at(-1), previous = bank.questions.at(-3);
+    assert.notEqual(info.instruction.match(/問題\s*\d+/)?.[0],previous.instruction.match(/問題\s*\d+/)?.[0]);
+    corrected += bank.sourceMetadata.questions.filter(q=>q.originalInstruction).length;
+  }
+  assert.equal(corrected,6);
+});
 
 test('zero-based answers retain the four original positions and numeric labels', () => {
   const {groups, report} = convert(fixture());

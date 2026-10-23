@@ -33,5 +33,6 @@ test('production provenance, source forms and audit rows stay aligned after filt
   for(const key of ['surfaceForms','termReview','referenceEvidence'])assert.equal(c[key].length,c.terms.length,key);
   const reading=c.terms.findIndex(t=>t[0]==='読む');assert.ok(c.surfaceForms[reading].includes('読み'));
   assert.ok(c.referenceEvidence.some(rows=>rows.some(source=>source.name&&source.url&&source.levels.length)));
-  assert.ok(c.auditSummary.token>0);assert.equal(c.questions.length,8759);
+  const metadata=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/manifest.json',import.meta.url)));
+  assert.ok(c.auditSummary.token>0);assert.equal(c.questions.length,metadata.summary.questions);
 });

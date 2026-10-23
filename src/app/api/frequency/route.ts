@@ -6,6 +6,10 @@ import { parseTermStudyKey } from '@/lib/term-study-data';
 import { findFrequencyTerm, loadFrequencyCorpus } from '@/lib/bank-frequency.server';
 import { apiErrorResponse, checkApiRateLimit } from '@/lib/request-limits';
 import { checkFrequencyAccess } from '@/lib/frequency-access.server';
+import imageOcr from '@/data/frequency-image-ocr/entries.json';
+import {createImageTextIndex, withFrequencyImageText} from '@/lib/frequency-image-text.mjs';
+
+const imageTexts = createImageTextIndex(imageOcr);
 
 export async function GET(request: Request) {
   const access = checkFrequencyAccess(request);
@@ -36,7 +40,7 @@ export async function GET(request: Request) {
       result.detail.examples = result.detail.examples.map(example => {
         const question = questions.get(example.id);
         if (!question) return example;
-        return { ...example, preview:frequencyExamplePreview(question,example.fields,forms)};
+        return { ...example, preview:frequencyExamplePreview(withFrequencyImageText(question,imageTexts),example.fields,forms)};
       });
     }
     return Response.json(result, {

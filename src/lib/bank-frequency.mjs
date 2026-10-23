@@ -47,6 +47,23 @@ const kana = /[\p{Script=Hiragana}\p{Script=Katakana}]/u;
 const toHiragana = text => text.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
 export function frequencySearchText(text) { return toHiragana(frequencyText(text).toLowerCase()); }
 
+/** Do not count OCR copies of already transcribed paragraphs a second time. */
+export function frequencyImageSources(question) {
+  const compact = text => frequencyText(text).replace(/\s/g, '');
+  const seen = new Set();
+  return (question.imageTexts ?? []).flatMap(image => {
+    if (seen.has(image.key) || !['passage', 'prompt'].includes(image.field)) return [];
+    seen.add(image.key);
+    const original = compact(question[image.field] ?? '');
+    const paragraphs = frequencyText(question[image.field] ?? '').split('\n').map(compact);
+    const text = frequencyText(image.text).split('\n').filter(line => {
+      const value = compact(line);
+      return value && !paragraphs.includes(value) && !(value.length >= 8 && original.includes(value));
+    }).join('\n').trim();
+    return text ? [{...image, text}] : [];
+  });
+}
+
 function expressionInventory(rows, kind) {
   const owner = new Map();
   rows.forEach(row => row.forEach(form => {
@@ -122,11 +139,11 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
     for (const label of matchIdioms(tokens, (label, surface) => surfaces[termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom')].add(surface))) add(termId(label, idiomEntries.find(entry => entry.label === label)?.reading ?? readingFor(label), '惯用句', 'idiom'));
     return [...counts].flat();
   }
-  function addUnit(text, field, questionIndex, shared) {
+  function addUnit(text, field, questionIndex, shared, sharedIdentity) {
     if (!text || !japanese.test(text) || /^(?:选项\s*[1-4]|[1-4])?\s*[（(]以音频为准[）)]$|^选项\s*[1-4]\s*[（(]以音频为准[）)]$/.test(text)) return;
     const question = questions[questionIndex];
-    const key = shared ? `${question[1]}:${question[2]}:${question[3]}:${question[4]}:${field}:${text}` : '';
-    if (shared && sharedUnits.has(key)) { units[sharedUnits.get(key)][1].push(questionIndex); return; }
+    const key = shared ? `${question[1]}:${question[2]}:${question[3]}:${question[4]}:${field}:${sharedIdentity ?? text}` : '';
+    if (shared && sharedUnits.has(key)) { const linked = units[sharedUnits.get(key)][1]; if (!linked.includes(questionIndex)) linked.push(questionIndex); return; }
     const unit = [field, [questionIndex], analyze(text)];
     if (shared) sharedUnits.set(key, units.length);
     units.push(unit);
@@ -145,6 +162,7 @@ export function createFrequencyBuilder(tokenize, {trustedWords = new Set()} = {}
       // Imported listening prompts are Chinese UI placeholders; never treat them as Japanese corpus.
       if (prompt !== passage && !/^(?:听力第\s*\d+\s*题|请选择第\s*\d+\s*题)/.test(prompt)) addUnit(prompt, 'prompt', index, false);
       for (const option of question.options) addUnit(frequencyText(option.text), 'options', index, false);
+      for (const image of frequencyImageSources(question)) addUnit(image.text, image.field, index, true, `image:${image.key}`);
       if (question.category === '听力') {
         listeningQuestions++;
         const transcript = listeningTranscript(question.explanation);

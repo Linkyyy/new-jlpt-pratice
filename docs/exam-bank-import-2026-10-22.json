@@ -214,7 +214,22 @@
           "actual": 3
         }
       ],
-      "warnings": []
+      "warnings": [
+        {
+          "id": "imported:202507:N1:3:166840840422440:65",
+          "issue": "problem-number-mismatch",
+          "original": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+          "resolved": "問題13 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        },
+        {
+          "id": "imported:202507:N1:3:161600063775724:66",
+          "issue": "problem-number-mismatch",
+          "original": "問題12 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+          "resolved": "問題13 右のページは、ある博物館の催し物のお知らせである。下の問いに対する答えとして最もよいものを、1、2、3、4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        }
+      ]
     },
     {
       "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
@@ -319,7 +334,22 @@
           "actual": 3
         }
       ],
-      "warnings": []
+      "warnings": [
+        {
+          "id": "imported:202607:N1:3:216420981139436:65",
+          "issue": "problem-number-mismatch",
+          "original": "問題12 下のページは、ある市のフリーマーケットの出店者募集の案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+          "resolved": "問題13 下のページは、ある市のフリーマーケットの出店者募集の案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        },
+        {
+          "id": "imported:202607:N1:3:165358977562721:66",
+          "issue": "problem-number-mismatch",
+          "original": "問題12 下のページは、ある市のフリーマーケットの出店者募集の案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+          "resolved": "問題13 下のページは、ある市のフリーマーケットの出店者募集の案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        }
+      ]
     },
     {
       "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
@@ -429,7 +459,22 @@
           "actual": 3
         }
       ],
-      "warnings": []
+      "warnings": [
+        {
+          "id": "imported:202512:N2:3:217246826262266:70",
+          "issue": "problem-number-mismatch",
+          "original": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+          "resolved": "問題14 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        },
+        {
+          "id": "imported:202512:N2:3:166526643952674:71",
+          "issue": "problem-number-mismatch",
+          "original": "問題13 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+          "resolved": "問題14 ある定期船会社のホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1·2·3·4から一つ選びなさい。",
+          "resolution": "Use the official reading problem number for the source section type and level"
+        }
+      ]
     },
     {
       "sourceFile": "N2_2025年7月_qZC0Qympet.json",

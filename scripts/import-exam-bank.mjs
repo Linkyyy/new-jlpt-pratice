@@ -15,6 +15,17 @@ const letters = ['A', 'B', 'C', 'D'];
 const text = value => typeof value === 'string' ? value.replace(/<\/?MOJiTest_URL\s*>/gi, '').replace(/\r\n?/g, '\n').trim() : '';
 const visible = value => text(value).replace(/<[^>]*>/g, '').replace(/&nbsp;|&#160;/gi, ' ').trim();
 const digest = value => createHash('sha256').update(value).digest('hex');
+const readingProblemNumbers = {
+  N1: {31: 8, 32: 9, 33: 10, 34: 11, 35: 12, 36: 13},
+  N2: {31: 10, 32: 11, 34: 12, 35: 13, 36: 14},
+  N3: {31: 4, 32: 5, 33: 6, 36: 7},
+  N4: {31: 4, 32: 5, 36: 6}, N5: {31: 4, 32: 5, 36: 6},
+};
+
+export function examInstruction(section, level) {
+  const instruction = text(section.title), expected = readingProblemNumbers[level]?.[section.questionType];
+  return expected ? instruction.replace(/(問[題题]\s*)[\d０-９]+/, (_, prefix) => `${prefix}${expected}`) : instruction;
+}
 
 function sourceIdentity(row, period, level) {
   const identity = row.identity?.find(value => typeof value === 'string' && value.startsWith(`${period}${level}`));
@@ -93,7 +104,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
     const sourceId = Number.parseInt(digest(`${exam.id}:${row.objectId}`).slice(0, 12), 16);
     const id = `imported:${period}:${level}:${type}:${sourceId}:${source.number}`;
     assert(!group.sourceMetadata.questions.some(item => item.id === id), `Source ID collision: ${id}`);
-    const instruction = text(section.title);
+    const instruction = examInstruction(section, level);
     const passage = parent ? text(parent.title) : '';
     const title = text(row.title);
     const prompt = visible(title) ? title : parent ? `请选择第 ${source.number} 题的答案（对应文章中的题号）。` : '';
@@ -115,6 +126,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
       ...(articleImage || ownImage ? {media: {images: articleImage ? [articleImage] : [], ...(ownImage ? {questionImages: [ownImage]} : {})}} : {})};
     group.sourceMetadata.questions.push({id, objectId: row.objectId, identity: source.identity, globalQuestionNumber: source.globalNumber,
       sectionId: section.objectId, questionType: section.questionType, ...(parent ? {parentObjectId: parent.objectId} : {}),
+      ...(instruction !== text(section.title) ? {originalInstruction: text(section.title)} : {}),
       ...(parentImage || questionImage ? {images: {passage: parentImage, question: questionImage}, uploadImages} : {})});
     if (reasons.length) {
       // Keep the established unavailable-record shape so resource checks and text statistics still work.
@@ -126,6 +138,7 @@ export function convertExamBank(input, {sourceFile, checksum = digest(JSON.strin
         media: {picture: uploadImages.passage || uploadImages.question, ...(questionImage ? {questionPicture: uploadImages.question} : {}), audio: ''}, raw});
     } else group.questions.push(question);
     if (row.questionType !== section.questionType) warnings.push({id, issue: 'question-type-mismatch', sourceType: row.questionType, sectionType: section.questionType, resolution: 'Use the enclosing section type'});
+    if (instruction !== text(section.title)) warnings.push({id, issue: 'problem-number-mismatch', original: text(section.title), resolved: instruction, resolution: 'Use the official reading problem number for the source section type and level'});
   }
 
   for (const row of input.items) {
