@@ -145,6 +145,8 @@ export default function PracticeHome() {
           <Link href="/frequency" target="_blank" rel="noopener noreferrer" prefetch={false} className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">{t("题库词频统计")} <span aria-hidden="true">↗</span></Link>
           <a href="https://dotknow.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">点解 <span aria-hidden="true">↗</span></a>
           <a href="https://shijian-video.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">视笺 <span aria-hidden="true">↗</span></a>
+          <a href="https://tekaku-website.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">手书 <span aria-hidden="true">↗</span></a>
+          <a href="https://tabelog-silk.vercel.app/menu" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 font-semibold text-indigo-600 hover:underline">tabeLog <span aria-hidden="true">↗</span></a>
         </footer>
       </div>
     </main>
