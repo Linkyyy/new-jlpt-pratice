@@ -20,10 +20,10 @@ export function AttemptCard({ attempt }: { attempt: StudyAttempt }) {
   return <article className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4">
     <div className="min-w-0 flex-1">
       <Link href={`/history/${encodeURIComponent(attempt.id)}`} className="block text-sm font-semibold leading-6 text-slate-900 hover:text-indigo-600">{attemptTitle(attempt, t)}</Link>
-      <p className="mt-1 text-xs leading-5 text-slate-500">{studyDate(attempt.completedAt ?? attempt.updatedAt, locale)} · {t(attempt.mode === "exam" ? "考试" : "练习")} · {t(completed ? `答对 ${score.correct}/${score.total} 题` : attempt.status === "ready" ? "待开始" : `已${attempt.mode === "exam" ? "选择" : "提交"} ${attempt.mode === "exam" ? chosen : score.answered}/${score.total} 题`)}</p>
+      <p className="mt-1 text-xs leading-5 text-slate-500">{studyDate(attempt.completedAt ?? attempt.updatedAt, locale)} · {t(attempt.mode === "exam" ? "考试" : "练习")} · {t(completed ? score.pendingAnswers ? `已提交 ${score.answered}/${score.total} 题` : `答对 ${score.correct}/${score.total} 题` : attempt.status === "ready" ? "待开始" : `已${attempt.mode === "exam" ? "选择" : "提交"} ${attempt.mode === "exam" ? chosen : score.answered}/${score.total} 题`)}</p>
     </div>
     <div className="shrink-0 text-right">
-      {completed && <p className="text-lg font-bold tabular-nums text-indigo-600">{score.score}<span className="ml-0.5 text-sm font-normal">/ {score.maxScore}</span></p>}
+      {completed && (score.pendingAnswers ? <p className="text-xs font-semibold text-slate-500">{t("参考答案待补充")}</p> : <p className="text-lg font-bold tabular-nums text-indigo-600">{score.score}<span className="ml-0.5 text-sm font-normal">/ {score.maxScore}</span></p>)}
       <div className="flex items-center justify-end gap-2"><Link href={studyAttemptUrl(attempt)} className="inline-flex min-h-9 items-center text-sm font-semibold text-indigo-600 hover:underline">{t(completed ? "复习 →" : "继续 →")}</Link></div>
     </div>
   </article>;

@@ -18,7 +18,7 @@ export interface PracticeQuestion {
   readonly passage?: string;
   readonly prompt: string;
   readonly options: readonly PracticeOption[];
-  readonly correctOptionId: OptionId;
+  readonly correctOptionId: OptionId | null;
   readonly explanation: readonly string[];
   readonly instruction?: string;
   readonly richText?: boolean;

@@ -3,7 +3,7 @@ import type { JLPTLevel, OptionId, QuestionCategory } from "@/data/practice-ques
 export interface PracticeScoreQuestion {
   readonly id: string;
   readonly category: QuestionCategory;
-  readonly correctOptionId: OptionId;
+  readonly correctOptionId: OptionId | null;
 }
 
 export interface PracticeScoringPaper {
@@ -13,6 +13,7 @@ export interface PracticeScoringPaper {
 }
 
 export interface PracticeScoreSection {
+  readonly pendingAnswers: number;
   readonly id: string;
   readonly label: string;
   readonly score: number;
@@ -23,6 +24,9 @@ export interface PracticeScoreSection {
 }
 
 export interface PracticeScoreResult {
+  readonly pendingAnswers: number;
+  readonly pendingSubmitted: number;
+  readonly gradedTotal: number;
   readonly score: number;
   readonly maxScore: number;
   /** Raw question accuracy, independent of the section-weighted estimate. */
@@ -65,9 +69,11 @@ export function calculatePracticeScore(
   const categories = (Object.keys(categoryMaxima) as QuestionCategory[]).map(category => {
     const questions = paper.questions.filter(question => question.category === category);
     const total = questions.length;
+    const pendingAnswers = questions.filter(question => question.correctOptionId === null).length;
+    const gradedTotal = total - pendingAnswers;
     const correct = questions.filter(question => answers[question.id] === question.correctOptionId).length;
     const maxScore = categoryMaxima[category];
-    return { category, total, correct, maxScore, score: total ? Math.round(correct / total * maxScore) : 0 };
+    return { category, total, pendingAnswers, correct, maxScore, score: gradedTotal ? Math.round(correct / gradedTotal * maxScore) : 0 };
   });
 
   const sections = scoringSections.flatMap((definition): PracticeScoreSection[] => {
@@ -81,16 +87,22 @@ export function calculatePracticeScore(
       maxScore: paper.fullPaper ? definition.maxScore : included.reduce((sum, category) => sum + category.maxScore, 0),
       correct: included.reduce((sum, category) => sum + category.correct, 0),
       total,
+      pendingAnswers: included.reduce((sum, category) => sum + category.pendingAnswers, 0),
       available: total > 0,
     }];
   });
 
   const total = paper.questions.length;
   const correct = sections.reduce((sum, section) => sum + section.correct, 0);
+  const pendingAnswers = paper.questions.filter(question => question.correctOptionId === null).length;
+  const gradedTotal = total - pendingAnswers;
   return {
+    pendingAnswers,
+    pendingSubmitted: paper.questions.filter(question => question.correctOptionId === null && answers[question.id] != null).length,
+    gradedTotal,
     score: sections.reduce((sum, section) => sum + section.score, 0),
     maxScore: sections.reduce((sum, section) => sum + section.maxScore, 0),
-    percent: total ? Math.round(correct / total * 100) : 0,
+    percent: gradedTotal ? Math.round(correct / gradedTotal * 100) : 0,
     correct,
     total,
     unanswered: paper.questions.filter(question => answers[question.id] == null).length,

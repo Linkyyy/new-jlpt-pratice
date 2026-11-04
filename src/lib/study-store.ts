@@ -15,7 +15,7 @@ export interface StudyQuestion {
   readonly id: string;
   readonly level: JLPTLevel;
   readonly category: QuestionCategory;
-  readonly correctOptionId: OptionId;
+  readonly correctOptionId: OptionId | null;
   readonly optionIds: readonly OptionId[];
   readonly sourceQuestionNumber?: number | null;
 }
@@ -155,23 +155,24 @@ export function studyScore(attempt: StudyAttempt) {
     if (a?.submitted) { answered++; answers[q.id] = a.selectedOptionId; }
   }
   const result = calculatePracticeScore({ ...attempt, fullPaper: attempt.source !== "favorites" && attempt.type === "all" }, answers);
-  return { ...result, answered, wrong: answered - result.correct };
+  const gradedAnswered = answered - result.pendingSubmitted;
+  return { ...result, answered, gradedAnswered, wrong: gradedAnswered - result.correct };
 }
 
 export function questionTrails(data: StudyData) {
-  const trails = new Map<string, { correct: boolean; everCorrect: boolean; count: number; level: JLPTLevel; category: QuestionCategory }>();
+  const trails = new Map<string, { correct: boolean | null; everCorrect: boolean; count: number; level: JLPTLevel; category: QuestionCategory }>();
   for (const attempt of [...data.attempts].sort((a, b) => a.createdAt - b.createdAt)) for (const q of attempt.questions) {
     const answer = attempt.answers[q.id];
     if (!answer?.submitted) continue;
-    const prior = trails.get(q.id), correct = answer.selectedOptionId === q.correctOptionId;
-    trails.set(q.id, { correct, everCorrect: correct || Boolean(prior?.everCorrect), count: (prior?.count ?? 0) + 1, level: q.level, category: q.category });
+    const prior = trails.get(q.id), correct = q.correctOptionId === null ? null : answer.selectedOptionId === q.correctOptionId;
+    trails.set(q.id, { correct, everCorrect: Boolean(correct || prior?.everCorrect), count: (prior?.count ?? 0) + 1, level: q.level, category: q.category });
   }
   return trails;
 }
 export function studySummary(data: StudyData, now?: number) {
   const trails = questionTrails(data), completed = data.attempts.filter(a => a.status === "completed");
   let correct = 0, answered = 0;
-  for (const a of data.attempts) { const score = studyScore(a); correct += score.correct; answered += score.answered; }
+  for (const a of data.attempts) { const score = studyScore(a); correct += score.correct; answered += score.gradedAnswered; }
   const days = new Set(data.activityDays);
   let cursor = days.size ? Date.parse(`${studyDay(now ?? Date.now())}T00:00:00+09:00`) : 0, streak = 0;
   if (!days.has(studyDay(cursor))) cursor -= 86400000;

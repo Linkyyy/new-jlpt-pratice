@@ -26512,6 +26512,35 @@
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
     },
     {
+      "kind": "word",
+      "label": "カゴ",
+      "reading": "かご",
+      "levels": [
+        "N3"
+      ],
+      "method": "dictionary-variant",
+      "evidence": [
+        {
+          "id": "1590200",
+          "levels": [
+            "N3"
+          ],
+          "sourceSpellings": [
+            "籠",
+            "篭"
+          ]
+        },
+        {
+          "id": "1590200",
+          "levels": [
+            "N3"
+          ],
+          "sourceSpellings": []
+        }
+      ],
+      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
+    },
+    {
       "kind": "idiom",
       "label": "目を覚ます",
       "reading": "めをさます",
@@ -26617,35 +26646,6 @@
           "sourceSpellings": [
             "免れる"
           ]
-        }
-      ],
-      "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "カゴ",
-      "reading": "かご",
-      "levels": [
-        "N3"
-      ],
-      "method": "dictionary-variant",
-      "evidence": [
-        {
-          "id": "1590200",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": [
-            "籠",
-            "篭"
-          ]
-        },
-        {
-          "id": "1590200",
-          "levels": [
-            "N3"
-          ],
-          "sourceSpellings": []
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
@@ -68707,6 +68707,24 @@
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
+      "kind": "grammar",
+      "label": "ないではいられない",
+      "reading": "ないではいられない",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "バタバタ",
+      "reading": "ばたばた",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "つぐ",
+      "reading": "つぐ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
       "kind": "word",
       "label": "周知",
       "reading": "しゅうち",
@@ -68722,12 +68740,6 @@
       "kind": "word",
       "label": "なぜかというと",
       "reading": "なぜかというと",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "つぐ",
-      "reading": "つぐ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -68770,18 +68782,6 @@
       "kind": "word",
       "label": "早計",
       "reading": "そうけい",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "grammar",
-      "label": "ないではいられない",
-      "reading": "ないではいられない",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "バタバタ",
-      "reading": "ばたばた",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     }
   ],

@@ -42,7 +42,7 @@ export default function PracticeHome() {
   const resumable = [...selectedAttempts].filter(a => a.status !== "completed").sort((a, b) => b.updatedAt - a.updatedAt)[0];
   const recent = [...data.attempts].sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 3);
   const completed = selectedAttempts.filter(a => a.status === "completed");
-  const best = completed.map(studyScore).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
+  const best = completed.map(studyScore).filter(score => !score.pendingAnswers).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore)[0];
   const done = [...trails].filter(([id, q]) => {
     const samePaper = random ? q.level === activeLevel && (source === "imported" ? id.startsWith("imported:") : !id.startsWith("imported:")) : source === "imported" ? id.startsWith(`imported:${activePeriod}:${activeLevel}:`) : id.startsWith(`${activeLevel}-${activePeriod}-`);
     return samePaper && (selection.category === null || q.category === selection.category);

@@ -9,7 +9,9 @@ const source = fs.readFileSync(new URL("../src/lib/study-store.ts", import.meta.
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
 const preferencesCompiled = ts.transpileModule(fs.readFileSync(new URL("../src/lib/user-preferences.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
 const validation = {};
-vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date });
+const termData = {};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/term-study-data.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: termData });
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/backup-validation.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: validation, Date, require: name => name === "./term-study-data" ? termData : createRequire(import.meta.url)(name) });
 const historyData = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync(new URL("../src/lib/study-history-data.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: historyData });
 const practiceScoring = {};

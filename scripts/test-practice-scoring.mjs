@@ -16,6 +16,15 @@ const questions = (category, count) => Array.from({ length: count }, (_, index) 
 const answer = (items, count = items.length, value = "A") => Object.fromEntries(items.slice(0, count).map(question => [question.id, value]));
 const plain = value => JSON.parse(JSON.stringify(value));
 
+test('listening without a reference key records submissions separately without marking them incorrect',()=>{
+  const items=[...questions('词汇',2),{id:'pending',category:'听力',correctOptionId:null}];
+  const result=calculatePracticeScore({level:'N1',fullPaper:true,questions:items},{'词汇-0':'A','词汇-1':'B',pending:'C'});
+  assert.equal(result.pendingAnswers,1);assert.equal(result.pendingSubmitted,1);assert.equal(result.gradedTotal,2);
+  assert.equal(result.correct,1);assert.equal(result.percent,50);assert.equal(result.unanswered,0);
+  assert.equal(result.total-result.correct-result.unanswered-result.pendingSubmitted,1);
+  assert.equal(result.sections.find(section=>section.id==='listening').pendingAnswers,1);
+});
+
 test("single-category practice gives vocabulary and grammar 30 points each and reading and listening 60 each", () => {
   for (const level of ["N1", "N2", "N3", "N4", "N5", "混合"]) for (const [category, maxScore] of [["词汇", 30], ["语法", 30], ["阅读", 60], ["听力", 60]]) {
     const items = questions(category, 6);
@@ -101,7 +110,7 @@ test("missing full-paper categories retain their full weight and receive zero", 
     assert.equal(result.sections[0].score, 30);
     assert.equal(result.sections[0].maxScore, 60);
     const missing = result.sections.find(section => section.id === "listening");
-    assert.deepEqual(plain(missing), { id: "listening", label: "听力", score: 0, maxScore: 60, correct: 0, total: 0, available: false });
+    assert.deepEqual(plain(missing), { id: "listening", label: "听力", score: 0, maxScore: 60, correct: 0, total: 0, pendingAnswers: 0, available: false });
   }
 });
 

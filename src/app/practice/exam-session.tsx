@@ -206,11 +206,11 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
             <QuestionFeedback question={question} paper={paper} />
               </FloatingSettings>
             }>
-            <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
+            <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? item.correctOptionId === null ? "answered" : answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"} />
 
 </ResponsivePanel>
             <div className="session-content">
-        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"}>
+        <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => answers[item.id] !== undefined ? finished ? item.correctOptionId === null ? "answered" : answers[item.id] === item.correctOptionId ? "correct" : "incorrect" : "answered" : "empty"}>
             <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
               <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-24 text-xl font-bold outline-none sm:text-2xl">{t("第 {0} 题 · {1}", { 0: questionIndex + 1, 1: t(question.category) })}{question.sourceQuestionNumber != null && t(" · 原题号 {0}", { 0: question.sourceQuestionNumber })}</h1>
               {isRandomPeriod(paper.year) && questionPeriod(question) && <p className="mt-1 text-xs leading-5 text-slate-500">{t("题目来源：{0}", { 0: t(formatPeriod(questionPeriod(question)!)) })}</p>}

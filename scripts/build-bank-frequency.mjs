@@ -51,13 +51,15 @@ const trustedWords = new Set([...Object.keys(dictionaryEntries), ...referenceEnt
 const builder = createFrequencyBuilder(text => tokenizer.tokenize(text), {trustedWords});
 const imageTexts = createImageTextIndex(JSON.parse(contents.get('src/data/frequency-image-ocr/entries.json')));
 let count = 0;
+const practiceIds = new Set();
 for (const file of files) {
   const paper = JSON.parse(contents.get(`src/data/imported-bank/questions/${file}`));
-  for (const question of paper.questions) { builder.addQuestion(withFrequencyImageText({ ...question, source: 'imported', period: paper.period }, imageTexts)); count++; }
+  for (const question of paper.questions) { builder.addQuestion(withFrequencyImageText({ ...question, source: 'imported', period: paper.period }, imageTexts)); practiceIds.add(question.id); count++; }
   // Missing media does not prevent text analysis. Preserve these questions but disable their practice links.
   for (const unavailable of paper.unavailable ?? []) {
     const raw = unavailable.raw;
     if (!raw) continue;
+    practiceIds.add(unavailable.id);
     builder.addQuestion(withFrequencyImageText({ id: unavailable.id, source: 'imported', period: paper.period, level: paper.level,
       category: { vocabulary: '词汇', grammar: '语法', reading: '阅读', listening: '听力' }[paper.type],
       instruction: raw.bigTitle ?? '', passage: raw.article ?? '', prompt: raw.littleQuestion || raw.question || '',
@@ -77,7 +79,7 @@ for (const [level, periods] of Object.entries(original.papers)) for (const [peri
       options: options.map(text => ({ text })), explanation: Array.isArray(explanation) ? explanation : [explanation] });
   }
 }
-// Text-only listening sources affect statistics, never the practice catalog or scoring.
+// Preserve text-only sources while preferring playable questions with the same stable IDs.
 const transcriptManifest = JSON.parse(contents.get('src/data/frequency-listening/index.json'));
 let transcriptCount = 0;
 for (const file of transcriptFiles) {
@@ -85,7 +87,8 @@ for (const file of transcriptFiles) {
   if (source.generatedBy !== 'jlpt-practice/listening-transcripts/v1' || source.questions.length !== source.questionCount) throw new Error(`Invalid transcript source: ${file}`);
   for (const question of source.questions) {
     if (question.available !== false || question.category !== '听力') throw new Error(`Transcript source cannot enable practice: ${question.id}`);
-    builder.addQuestion(question); transcriptCount++;
+    if (!practiceIds.has(question.id)) builder.addQuestion(question);
+    transcriptCount++;
   }
 }
 if (transcriptCount !== transcriptManifest.questionCount) throw new Error('Transcript source count mismatch');

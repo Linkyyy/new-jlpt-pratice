@@ -19,7 +19,7 @@ export function favoriteTitle(item: CatalogQuestion) {
 export default function FavoriteQuestion({ questionId, item, folderName, loading, onBack, collectionView = "favorites", wrongCount }: { questionId: string; item?: CatalogQuestion; folderName: string; loading: boolean; onBack: () => void; collectionView?: CollectionView; wrongCount?: number }) {
   const { t } = useI18n();
   const q = item?.question;
-  const explanation = q && <><p className="text-sm font-semibold">{t("正确答案：")}{q.options.find(option => option.id === q.correctOptionId)?.label ?? q.correctOptionId}</p>{q.explanation.map((text, index) => <RichContent key={index} text={text} html={q.richText} className="question-text mt-2 text-slate-700" />)}</>;
+  const explanation = q && <><p className="text-sm font-semibold">{t("正确答案：")}{q.correctOptionId === null ? t("待补充") : q.options.find(option => option.id === q.correctOptionId)?.label ?? q.correctOptionId}</p>{q.explanation.map((text, index) => <RichContent key={index} text={text} html={q.richText} className="question-text mt-2 text-slate-700" />)}</>;
   return <article data-question-id={questionId} className="favorite-question relative rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
     <button type="button" onClick={onBack} className="mb-3 min-h-11 text-sm font-semibold text-indigo-600 lg:hidden">{t("← 返回一览")}</button>
     <h2 tabIndex={-1} className="favorite-detail-title pr-12 text-sm font-semibold leading-6 text-slate-700 outline-none">{t(item ? favoriteTitle(item) : loading ? "正在读取收藏题目" : "收藏的题目暂不可用")}</h2>

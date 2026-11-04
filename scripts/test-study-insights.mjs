@@ -28,6 +28,12 @@ function attempt(id, timestamp, answers, overrides = {}) {
 const data = (attempts = [], activityDays = []) => ({ version: 1, attempts, activityDays });
 const plain = value => JSON.parse(JSON.stringify(value));
 
+test('listening awaiting an answer key never enters mistake counts or weak-category suggestions',()=>{
+  const saved=attempt('pending',now,{pending:'B'},{questions:[question('pending','听力',null)]});
+  assert.equal(api.buildQuestionInsights(data([saved]),now).size,0);
+  assert.equal(api.getStudyWeeklyReport(data([saved]),now).current.answered,0);
+});
+
 test("counts only submitted answers; unfinished exams never reveal graded results", () => {
   const draft = attempt("draft", now, { q: "B", chosen: "B" });
   draft.answers.chosen.submitted = false;

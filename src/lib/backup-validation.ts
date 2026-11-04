@@ -44,7 +44,7 @@ const timestamp = (v: unknown): v is number => typeof v === "number" && Number.i
 function isQuestion(v: unknown): v is StudyQuestion {
   return record(v) && text(v.id) && levels.includes(String(v.level)) && categories.includes(String(v.category))
     && Array.isArray(v.optionIds) && v.optionIds.length >= 2 && v.optionIds.length <= 4 && v.optionIds.every(id => optionIds.includes(String(id)))
-    && new Set(v.optionIds).size === v.optionIds.length && v.optionIds.includes(v.correctOptionId)
+    && new Set(v.optionIds).size === v.optionIds.length && (v.correctOptionId === null && v.category === "听力" || v.optionIds.includes(v.correctOptionId))
     && (v.sourceQuestionNumber === undefined || v.sourceQuestionNumber === null || Number.isSafeInteger(v.sourceQuestionNumber));
 }
 function isAttempt(v: unknown): v is StudyAttempt {

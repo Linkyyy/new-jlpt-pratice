@@ -18,17 +18,18 @@ interface QuestionAnswerProps {
 export default function QuestionAnswer({ question, selectedOptionId, locked, revealAnswer, onSelect, feedbackRef }: QuestionAnswerProps) {
   const { t } = useI18n();
   const isCorrect = selectedOptionId === question.correctOptionId;
-  const feedback = selectedOptionId === null ? "未作答" : isCorrect ? "回答正确" : "回答错误";
+  const feedback = question.correctOptionId === null ? "参考答案待补充" : selectedOptionId === null ? "未作答" : isCorrect ? "回答正确" : "回答错误";
 
   return (
     <>
+      {question.correctOptionId === null && !revealAnswer && <p className="mb-3 text-xs text-slate-500">{t("参考答案待补充")}</p>}
       <fieldset disabled={locked} aria-describedby="answer-help">
         <legend className="sr-only">{t("答案选项（单选）")}</legend>
         <div className="space-y-2 sm:space-y-3">
           {question.options.map((option) => {
             const selected = selectedOptionId === option.id;
             const correctAnswer = revealAnswer && option.id === question.correctOptionId;
-            const wrongSelection = revealAnswer && selected && !correctAnswer;
+            const wrongSelection = question.correctOptionId !== null && revealAnswer && selected && !correctAnswer;
             const appearance = correctAnswer ? "border-emerald-500 bg-emerald-50" : wrongSelection ? "border-rose-400 bg-rose-50" : selected ? "border-indigo-500 bg-indigo-50" : "border-slate-200 bg-white";
 
             return (
@@ -46,8 +47,8 @@ export default function QuestionAnswer({ question, selectedOptionId, locked, rev
       <p aria-live="polite" aria-atomic="true" className="sr-only">{t(revealAnswer ? `${feedback}，答案已锁定。` : "")}</p>
       {revealAnswer && (
         <section aria-labelledby="result-title" className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{t(feedback)}</h2>
-          <p className="mt-2 text-sm text-slate-600">{t("你的选择：")}{optionLabel(question, selectedOptionId)} {t("· 正确答案：")}{optionLabel(question, question.correctOptionId)}</p>
+          <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${question.correctOptionId === null || selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{t(feedback)}</h2>
+          <p className="mt-2 text-sm text-slate-600">{t("你的选择：")}{optionLabel(question, selectedOptionId)} {t("· 正确答案：")}{question.correctOptionId === null ? t("待补充") : optionLabel(question, question.correctOptionId)}</p>
           <h3 className="mt-5 font-semibold">{t(question.richText ? "题库解析" : "中文解析")}</h3>
           {question.explanation.map((paragraph, index) => <RichContent key={index} text={paragraph} html={question.richText} className="question-text mt-2 text-slate-700" />)}
         </section>

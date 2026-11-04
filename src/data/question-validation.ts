@@ -16,7 +16,7 @@ export function isPracticeQuestion(value: unknown): value is PracticeQuestion {
     || typeof value.prompt !== "string" || value.passage !== undefined && typeof value.passage !== "string" || value.instruction !== undefined && typeof value.instruction !== "string"
     || !Array.isArray(value.options) || value.options.length < 2 || value.options.length > 4 || !Array.isArray(value.explanation) || !value.explanation.every((item: unknown) => typeof item === "string")) return false;
   const options: unknown[] = value.options;
-  return options.every(isOption) && new Set(options.map((option) => option.id)).size === options.length && options.some((option) => option.id === value.correctOptionId)
+  return options.every(isOption) && new Set(options.map((option) => option.id)).size === options.length && (value.correctOptionId === null && value.category === "听力" || options.some((option) => option.id === value.correctOptionId))
     && (value.richText === undefined || typeof value.richText === "boolean")
     && (value.sourceQuestionNumber === undefined || value.sourceQuestionNumber === null || typeof value.sourceQuestionNumber === "number" && Number.isInteger(value.sourceQuestionNumber))
     && (value.sourceId === undefined || typeof value.sourceId === "number" && Number.isInteger(value.sourceId))

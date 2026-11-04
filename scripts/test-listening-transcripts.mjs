@@ -69,7 +69,7 @@ test('imports are idempotent and keep the practice bank untouched', async () => 
   } finally { await fs.rm(temporary, {recursive: true, force: true}); }
 });
 
-test('all 236 real listening subquestions are searchable through 230 shared originals with practice links disabled', async () => {
+test('all 236 listening subquestions are searchable through 230 shared originals with practice links enabled and no duplicate sources', async () => {
   const directory = new URL('../src/data/frequency-listening/', import.meta.url);
   const manifest = JSON.parse(await fs.readFile(new URL('index.json', directory), 'utf8'));
   const corpus = JSON.parse(gunzipSync(await fs.readFile(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
@@ -81,7 +81,7 @@ test('all 236 real listening subquestions are searchable through 230 shared orig
     for (const question of source.questions) {
       assert(!ids.has(question.id)); ids.add(question.id);
       const position = positions.get(question.id); assert.notEqual(position, undefined);
-      const metadata = corpus.questions[position]; assert.equal(metadata[7], false); assert.equal(metadata[4], 'listening');
+      const metadata = corpus.questions[position]; assert.equal(metadata[7], true); assert.equal(metadata[4], 'listening');
       indexes.add(position);
     }
   }
@@ -92,5 +92,5 @@ test('all 236 real listening subquestions are searchable through 230 shared orig
   const filters = {...defaultFrequencyFilters, source: 'imported', level: 'N1', period: '202507', category: 'listening', field: 'transcript'};
   const result = queryFrequency(corpus, filters); assert.ok(result.total > 0);
   const detail = queryFrequency(corpus, filters, result.rows[0].id).detail;
-  assert.ok(detail.examples.length > 0); assert.ok(detail.examples.every(example => example.available === false && ids.has(example.id)));
+  assert.ok(detail.examples.length > 0); assert.ok(detail.examples.every(example => example.available === true && ids.has(example.id)));
 });

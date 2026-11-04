@@ -25,6 +25,18 @@ const build = questions => { const builder = createFrequencyBuilder(text => toke
 const query = (corpus, overrides = {}) => queryFrequency(corpus, { ...defaultFrequencyFilters, ...overrides });
 const find = (corpus, label, overrides = {}) => query(corpus, { q: label, size: 100, ...overrides }).rows.find(row => row.label === label);
 
+function productionImportedIds(){
+  const manifest=JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json',import.meta.url)));
+  const ids=new Set();
+  for(const group of manifest.groups){
+    const bank=JSON.parse(fs.readFileSync(new URL(`../src/data/imported-bank/questions/${group.file}`,import.meta.url)));
+    for(const question of [...bank.questions,...bank.unavailable])ids.add(question.id);
+  }
+  const transcripts=JSON.parse(fs.readFileSync(new URL('../src/data/frequency-listening/index.json',import.meta.url)));
+  for(const group of transcripts.groups)for(const question of JSON.parse(fs.readFileSync(new URL(`../src/data/frequency-listening/exams/${group.file}`,import.meta.url))).questions)ids.add(question.id);
+  return ids;
+}
+
 test('katakana filtering recognizes full/half-width headwords but excludes kanji with katakana aliases, preserving grammatical POS', () => {
   const terms = [
     ['コンピューター', 'こんぴゅーたー', '名词', 'word'], ['ｺｰﾋｰ', 'こーひー', '名词', 'word'],
@@ -196,9 +208,9 @@ test('query validation rejects malformed, incompatible and unbounded input', () 
 test('the production corpus covers every available and unavailable question plus originals with valid postings', () => {
   const c = JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz', import.meta.url))));
   const meta = JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/manifest.json', import.meta.url)));
-  const manifest = JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json', import.meta.url)));
-  const transcripts=JSON.parse(fs.readFileSync(new URL('../src/data/frequency-listening/index.json',import.meta.url)));
-  assert.equal(c.questions.length, manifest.report.questions + 90 + transcripts.questionCount); assert.equal(new Set(c.questions.map(q => q[0])).size, c.questions.length);
+  const expectedIds=productionImportedIds();
+  assert.equal(c.questions.length,expectedIds.size+90);assert.deepEqual(new Set(c.questions.filter(q=>q[1]==='imported').map(q=>q[0])),expectedIds);
+  assert.equal(new Set(c.questions.map(q => q[0])).size, c.questions.length);
   assert.equal(c.revision, meta.revision); assert.equal(c.summary.questions, meta.summary.questions);
   for (const [field, ids, counts] of c.units) {
     assert.ok(['passage', 'prompt', 'options', 'transcript'].includes(field));
@@ -541,9 +553,7 @@ test('grammar and idiom levels use whole expressions, support ungraded, and neve
 test('the rebuilt production index excludes audited artifacts from every query and retains aligned sourced expression grades', () => {
   const c=JSON.parse(gunzipSync(fs.readFileSync(new URL('../src/data/bank-frequency/corpus.json.gz',import.meta.url))));
   const report=JSON.parse(fs.readFileSync(new URL('../src/data/bank-frequency/quality-report.json',import.meta.url)));
-  const bank=JSON.parse(fs.readFileSync(new URL('../src/data/imported-bank/index.json',import.meta.url)));
-  const transcripts=JSON.parse(fs.readFileSync(new URL('../src/data/frequency-listening/index.json',import.meta.url)));
-  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,bank.report.questions+90+transcripts.questionCount);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
+  assert.ok(report.excludedTerms>500);assert.equal(c.summary.questions,productionImportedIds().size+90);assert.equal(c.terms.length,c.definitions.length);assert.equal(c.terms.length,c.referenceLevels.length);
   for(const label of ['!」「〇〇',')〇〇','々:','々(','ージー','ード','イペント','昭夫','遍い','しげい'])assert.equal(c.terms.some(row=>row[0]===label),false,label);
   assert.ok(c.terms.some(row=>row[0]==='Tシャツ'));assert.ok(c.terms.some(row=>row[0]==='雲'));
   for(const level of ['N1','N2','N3','N4','N5'])assert.ok(query(c,{kind:'grammar',grade:level}).total>0,level);

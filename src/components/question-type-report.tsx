@@ -15,6 +15,7 @@ export default function QuestionTypeReport({ paper, answers, onReview }: {
   const { t } = useI18n();
   const groups = useMemo(() => analyzeQuestionTypes(paper.questions, answers), [paper.questions, answers]);
   const suggestions = useMemo(() => suggestedQuestionTypes(groups), [groups]);
+  if (!groups.length) return null;
   const mixedLevels = new Set(paper.questions.map(question => question.level)).size > 1;
   function label(group: QuestionTypeAnalysis) {
     return group.problemNumber

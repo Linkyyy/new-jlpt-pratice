@@ -35,6 +35,20 @@ function completed(env, option = "B") {
   return a.id;
 }
 
+test("listening awaiting answer keys can be completed, resumed from backup and kept out of wrong-answer totals",()=>{
+  const env=environment();
+  const listening={...paper,id:'imported-N1-202512-listening',source:'imported',level:'N1',year:'202512',typeLabel:'听力',periodLabel:'2025年12月',
+    questions:[{id:'pending',level:'N1',category:'听力',correctOptionId:null,options:[{id:'A'},{id:'B'}]}]};
+  const created=env.study.createStudyAttempt(listening,'practice');assert.equal(created.error,null);
+  assert.equal(env.study.updateStudyAttempt(created.attempt.id,{status:'completed',answers:{pending:{selectedOptionId:'B',submitted:true}},questionIndex:0,deadline:null,elapsedSeconds:0,timedOut:false,fontSize:18}).ok,true);
+  const backup=env.backup.createLearningBackup();assert.equal(backup.ok,true);
+  const restored=environment();assert.equal(restored.backup.importLearningBackup(JSON.parse(JSON.stringify(backup.data))).ok,true);
+  const attempt=restored.study.readStudySnapshot().data.attempts[0];
+  const result=restored.study.studyScore(attempt);assert.equal(result.answered,1);assert.equal(result.pendingSubmitted,1);assert.equal(result.wrong,0);assert.equal(result.gradedAnswered,0);
+  assert.equal(attempt.questions[0].correctOptionId,null);
+  assert.equal(restored.study.questionTrails(restored.study.readStudySnapshot().data).get('pending').correct,null);
+});
+
 test("combined backup round-trips folders, multiple memberships, answers and completed scores", () => {
   const source = environment({ [favoriteKey]: favorites });
   const id = completed(source);

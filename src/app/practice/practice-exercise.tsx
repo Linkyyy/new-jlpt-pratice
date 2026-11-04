@@ -244,7 +244,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
         }>
           <QuestionOverview questions={paper.questions} currentIndex={questionIndex} onSelect={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
-            return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
+            return answer?.submitted ? item.correctOptionId === null ? "answered" : answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
           }} />
 </ResponsivePanel>
         <div className="session-content">
@@ -254,7 +254,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
           <>
         <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
-            return answer?.submitted ? answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
+            return answer?.submitted ? item.correctOptionId === null ? "answered" : answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
           }}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">{t("第 {0} 题 · {1}", { 0: questionIndex + 1, 1: t(question.category) })}{question.sourceQuestionNumber != null && t(" · 原题号 {0}", { 0: question.sourceQuestionNumber })}</h1>

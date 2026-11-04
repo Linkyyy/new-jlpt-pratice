@@ -97,7 +97,7 @@ function answerEvents(data: StudyData, now: number): AnswerEvent[] {
     const seen = new Set<string>();
     for (const question of attempt.questions) {
       const answer = attempt.answers[question.id];
-      if (seen.has(question.id) || !answer?.submitted) continue;
+      if (seen.has(question.id) || !answer?.submitted || question.correctOptionId === null) continue;
       seen.add(question.id);
       const time = answer.submittedAt ?? fallbackAnswerTime(attempt);
       if (time > now) continue;

@@ -12,6 +12,10 @@ const { analyzeQuestionTypes, suggestedQuestionTypes, questionTypePracticeHref }
 const plain = value => JSON.parse(JSON.stringify(value));
 const question = (id, category, instruction, level = "N2") => ({ id, category, instruction, level, correctOptionId: "A" });
 
+test('ungraded listening does not create a false zero-percent weakness',()=>{
+  assert.deepEqual(plain(analyzeQuestionTypes([{...question('pending','听力','問題1'),correctOptionId:null}],{pending:'A'})),[]);
+});
+
 test("semantic vocabulary and grammar groups normalize HTML and full-width problem numbers", () => {
   const questions = [
     question("v1", "词汇", "<p>問題１&nbsp;言葉の読み方</p>"),

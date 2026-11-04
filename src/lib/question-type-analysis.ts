@@ -48,6 +48,7 @@ export function analyzeQuestionTypes(
 ): QuestionTypeAnalysis[] {
   const groups = new Map<string, QuestionTypeAnalysis>();
   questions.forEach((question, index) => {
+    if (question.correctOptionId === null) return;
     const type = subtype(question);
     const prior = groups.get(type.key);
     const correct = answers[question.id] === question.correctOptionId;

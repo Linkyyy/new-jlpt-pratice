@@ -25,7 +25,7 @@ for (const group of manifest.groups) {
     assert(question.prompt.length > 0);
     assert(question.options.length >= 2 && question.options.length <= 4);
     assert.equal(new Set(question.options.map((option) => option.id)).size, question.options.length);
-    assert(question.options.some((option) => option.id === question.correctOptionId));
+    assert(question.correctOptionId === null && question.category === "听力" || question.options.some((option) => option.id === question.correctOptionId));
     assert(question.explanation.length > 0);
     if (question.media?.audio) assert(isAudioReference(question.media.audio), `Invalid audio reference: ${question.id}`);
     if (question.category === "听力") assert(question.media?.audio, `Missing listening audio: ${question.id}`);

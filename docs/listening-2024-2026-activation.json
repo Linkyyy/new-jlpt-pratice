@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "activatedAt": "2026-11-04T14:42:04.172Z",
+  "basis": "owner-request-and-filename-convention",
+  "remoteVerification": "not-performed",
+  "totalQuestions": 384,
+  "newlyOpened": 236,
+  "papers": [
+    {
+      "period": "202407",
+      "level": "N1",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 0
+    },
+    {
+      "period": "202407",
+      "level": "N2",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 0
+    },
+    {
+      "period": "202407",
+      "level": "N3",
+      "questions": 28,
+      "recordings": 28,
+      "pendingAnswers": 0
+    },
+    {
+      "period": "202412",
+      "level": "N1",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 0
+    },
+    {
+      "period": "202412",
+      "level": "N2",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 0
+    },
+    {
+      "period": "202412",
+      "level": "N3",
+      "questions": 28,
+      "recordings": 28,
+      "pendingAnswers": 28
+    },
+    {
+      "period": "202507",
+      "level": "N1",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    },
+    {
+      "period": "202507",
+      "level": "N2",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    },
+    {
+      "period": "202512",
+      "level": "N1",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    },
+    {
+      "period": "202512",
+      "level": "N2",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    },
+    {
+      "period": "202512",
+      "level": "N3",
+      "questions": 28,
+      "recordings": 28,
+      "pendingAnswers": 28
+    },
+    {
+      "period": "202607",
+      "level": "N1",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    },
+    {
+      "period": "202607",
+      "level": "N2",
+      "questions": 30,
+      "recordings": 29,
+      "pendingAnswers": 30
+    }
+  ]
+}
