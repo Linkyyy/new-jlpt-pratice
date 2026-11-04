@@ -3,7 +3,7 @@ import test from "node:test";
 import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { collectBankResources, auditResources, probeResource } from "./check-bank-resources.mjs";
+import { collectBankResources, auditResources, probeResource, pendingListeningImports } from "./check-bank-resources.mjs";
 
 test("resource collection preserves shared audio and question-specific image mappings", () => {
   const media = { audio: "audio/202412n1/1.mp3", images: ["pic/shared.jpg"], questionImages: ["pic/child.jpg"] };
@@ -11,6 +11,39 @@ test("resource collection preserves shared audio and question-specific image map
   assert.equal(resources.length, 3);
   assert.deepEqual(resources.find(item => item.kind === "audio").questionIds, ["a", "b"]);
   assert.deepEqual(resources.find(item => item.reference === "pic/child.jpg").questionIds, ["a"]);
+});
+
+test("disabled questions retain their raw image/audio paths and share resources with enabled questions", () => {
+  const audio = "audio/202407n3/1.mp3", picture = "pic/320240774.jpg";
+  const resources = collectBankResources([{period: "202407", level: "N3", type: "listening",
+    questions: [{id: "enabled", sourceQuestionNumber: 75, media: {audio, images: []}}],
+    unavailable: [{id: "disabled", questionNumber: 74, raw: {audio, picture, questionPicture: "pic/child.jpg"}}],
+  }]);
+  assert.equal(resources.length, 3);
+  const recording = resources.find(resource => resource.kind === "audio");
+  assert.deepEqual(recording.questionIds, ["enabled", "disabled"]);
+  assert.deepEqual(recording.questions.map(question => question.enabled), [true, false]);
+  assert.equal(recording.questions[1].questionNumber, 74);
+  assert.equal(resources.find(resource => resource.reference === picture).status, "unchecked");
+  assert.ok(resources.some(resource => resource.reference === "pic/child.jpg"));
+});
+
+test("listening without an audio mapping is flagged separately from an HTTP 404", async () => {
+  const resources = collectBankResources([{type: "listening", questions: [{id: "a"}, {id: "b", media: {images: []}}]}]);
+  assert.equal(resources.length, 2);
+  const report = await auditResources(resources, {remote: true, fetcher() { throw new Error("must not fetch missing references"); }});
+  assert.deepEqual(report.summary, {"missing-reference": 2});
+  assert.ok(report.resources.every(resource => resource.url === null && resource.httpStatus === undefined));
+});
+
+test("transcript-only exams are reported as pending import without inventing resource URLs", () => {
+  const group = {period: "202512", level: "N1", sourceFile: "source.json", questions: [{id: "a"}, {id: "b"}]};
+  const banks = [{period: "202512", level: "N1", type: "listening", questions: [{id: "a"}], unavailable: []}];
+  const pending = pendingListeningImports(banks, {groups: [group]});
+  assert.equal(pending.length, 1); assert.equal(pending[0].questions, 1); assert.equal(pending[0].status, "source-required");
+  assert.equal(pending[0].sourceFile, "source.json");
+  banks[0].unavailable.push({id: "b"});
+  assert.deepEqual(pendingListeningImports(banks, {groups: [group]}), []);
 });
 
 test("offline audits do not fetch remote files and enforce local file mappings", async () => {

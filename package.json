@@ -18,7 +18,7 @@
     "import:listening-transcripts": "node scripts/import-listening-transcripts.mjs",
     "test:listening-transcripts": "node --test scripts/test-listening-transcripts.mjs",
     "check:bank": "node scripts/check-question-bank.mjs",
-    "check:resources": "node scripts/check-bank-resources.mjs",
+    "check:resources": "node --use-env-proxy scripts/check-bank-resources.mjs",
     "upload:audio": "node scripts/upload-r2-audio.mjs",
     "test:audio": "node --test scripts/test-audio.mjs",
     "setup:cloud": "node --env-file-if-exists=.env.local scripts/setup-cloud-backup.mjs",

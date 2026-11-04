@@ -7,23 +7,44 @@ import { getImageUrl } from "../src/lib/image-url.mjs";
 /** Audit shared files once, retaining every affected question for fixing mappings. */
 export function collectBankResources(banks, baseUrl) {
   const resources = new Map();
-  for (const bank of banks) for (const question of bank.questions ?? []) {
-    const media = question.media;
-    if (!media) continue;
+  for (const bank of banks) for (const question of [...(bank.questions ?? []), ...(bank.unavailable ?? [])]) {
+    const media = question.media ?? {}, raw = question.raw ?? {};
+    const audio = media.audio || raw.audio;
+    const listening = bank.type === "listening" || question.category === "听力";
+    const images = [
+      ...(media.images ?? []), ...(media.questionImages ?? []),
+      media.picture || raw.picture, media.questionPicture || raw.questionPicture,
+    ].filter(Boolean);
     const references = [
-      ...(media.audio ? [["audio", media.audio]] : []),
-      ...(media.images ?? []).map(reference => ["image", reference]),
-      ...(media.questionImages ?? []).map(reference => ["image", reference]),
+      ...(audio || listening ? [["audio", audio || ""]] : []),
+      ...images.map(reference => ["image", reference]),
     ];
     for (const [kind, reference] of references) {
       const url = kind === "audio" ? getAudioUrl(reference, baseUrl) : getImageUrl(reference, baseUrl);
-      const key = `${kind}:${url ?? reference}`;
-      if (!resources.has(key)) resources.set(key, { kind, reference, url, questionIds: [], status: url ? "unchecked" : "invalid-reference" });
+      const key = `${kind}:${reference ? url ?? reference : `missing:${question.id}`}`;
+      if (!resources.has(key)) resources.set(key, { kind, reference, url, questionIds: [], questions: [], status: !reference ? "missing-reference" : url ? "unchecked" : "invalid-reference" });
       const resource = resources.get(key);
-      if (!resource.questionIds.includes(question.id)) resource.questionIds.push(question.id);
+      if (!resource.questionIds.includes(question.id)) {
+        resource.questionIds.push(question.id);
+        resource.questions.push({id: question.id, period: bank.period, level: bank.level ?? question.level, type: bank.type,
+          questionNumber: question.sourceQuestionNumber ?? question.questionNumber ?? null,
+          enabled: !bank.unavailable?.includes(question)});
+      }
     }
   }
   return [...resources.values()];
+}
+
+/** Text-only imports have no authoritative audio/image mappings or answers to audit. */
+export function pendingListeningImports(banks, transcripts) {
+  return transcripts.groups.flatMap(group => {
+    const bank = banks.find(bank => bank.type === "listening" && bank.period === group.period && bank.level === group.level);
+    const questions = [...(bank?.questions ?? []), ...(bank?.unavailable ?? [])];
+    const ids = new Set(questions.map(question => question.id));
+    const missing = group.questions.filter(question => !ids.has(question.id));
+    return missing.length ? [{period: group.period, level: group.level, sourceFile: group.sourceFile,
+      questions: missing.length, status: "source-required", reason: "仅有听力原文统计，尚未导入答案及音频、图片对应关系"}] : [];
+  });
 }
 
 export async function probeResource(url, fetcher = fetch) {
@@ -78,10 +99,17 @@ async function main() {
   const banks = await Promise.all((await fs.readdir(directory)).filter(name => name.endsWith(".json")).sort().map(async name => JSON.parse(await fs.readFile(new URL(name, directory), "utf8"))));
   const resources = collectBankResources(banks, process.env.NEXT_PUBLIC_AUDIO_BASE_URL);
   const report = await auditResources(resources, { remote, limit, concurrency, publicDirectory: path.resolve("public") });
+  const transcriptDirectory = new URL("../src/data/frequency-listening/exams/", import.meta.url);
+  const transcripts = {groups: await Promise.all((await fs.readdir(transcriptDirectory)).filter(name => name.endsWith(".json")).sort()
+    .map(async name => JSON.parse(await fs.readFile(new URL(name, transcriptDirectory), "utf8"))))};
+  report.pendingListeningImports = pendingListeningImports(banks, transcripts);
+  report.summaryByKind = Object.fromEntries(["audio", "image"].map(kind => [kind, report.resources.filter(resource => resource.kind === kind)
+    .reduce((counts, resource) => { counts[resource.status] = (counts[resource.status] ?? 0) + 1; return counts; }, {})]));
   if (output) { await fs.mkdir(path.dirname(output), { recursive: true }); await fs.writeFile(output, JSON.stringify(report, null, 2) + "\n"); }
-  console.log(JSON.stringify({ total: resources.length, ...report.summary, remote, remoteLimit: limit, ...(output ? { output } : {}) }, null, 2));
+  console.log(JSON.stringify({ total: resources.length, ...report.summary, summaryByKind: report.summaryByKind,
+    pendingListeningImports: report.pendingListeningImports, remote, remoteLimit: limit, ...(output ? { output } : {}) }, null, 2));
   if (!remote) console.log("仅验证引用和本地文件，远端资源未请求；使用 --remote 检查公开URL，默认最多100个，不下载整段音频。");
-  if (report.summary.missing || report.summary["invalid-reference"] || report.summary.unreachable) process.exitCode = 1;
+  if (report.summary.missing || report.summary["missing-reference"] || report.summary["invalid-reference"] || report.summary.unreachable || report.pendingListeningImports.length) process.exitCode = 1;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
