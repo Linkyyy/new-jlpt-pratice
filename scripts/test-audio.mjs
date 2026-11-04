@@ -48,8 +48,8 @@ test("import preserves shared audio mappings, supports an optional manifest and 
     for (const file of ["scripts/import-question-bank.mjs", "scripts/r2-audio-files.mjs", "src/lib/audio-url.mjs", "src/lib/image-url.mjs"]) await fs.copyFile(new URL(`../${file}`, import.meta.url), path.join(root, file));
     const options = { option1: "first", option2: "second", answer: 1 };
     const rows = [
-      { id: 1, audio: "audio/202412n2/7.mp3", bigTitle: "共有音声", extending: [{ id: 2, questionId: 42, ...options }, { id: 3, questionId: 43, ...options }] },
-      { id: 4, questionId: 44, audio: "audio/202412n2/8.mp3", ...options },
+      { id: 1, audio: "audio/202412n2/7.mp3", picture: "pic/shared.jpg", bigTitle: "共有音声", extending: [{ id: 2, questionId: 42, ...options }, { id: 3, questionId: 43, picture: "pic/child.jpg", ...options }] },
+      { id: 4, questionId: 44, audio: "audio/202412n2/8.mp3", picture: "pic/own.jpg", ...options },
       { id: 5, questionId: 45, ...options },
     ];
     await fs.writeFile(path.join(root, "input/time_202412_level_n2_type_4.json"), JSON.stringify(rows));
@@ -63,12 +63,16 @@ test("import preserves shared audio mappings, supports an optional manifest and 
     assert.equal(output.questions[1].sourceQuestionNumber, 43);
     assert.equal(output.questions[0].media.audio, "audio/202412n2/7.mp3");
     assert.equal(output.questions[1].media.audio, output.questions[0].media.audio);
+    assert.deepEqual(output.questions[0].media.images, ["pic/shared.jpg"]);
+    assert.deepEqual(output.questions[1].media.images, ["pic/shared.jpg"]);
+    assert.deepEqual(output.questions[1].media.questionImages, ["pic/child.jpg"]);
     assert.equal(output.questions[0].instruction, "共有音声");
     assert.match(output.unavailable[0].reasons.join(","), /缺少配套音频/);
     execFileSync(process.execPath, [path.join(root, "scripts/import-question-bank.mjs"), "--source", path.join(root, "input")]);
     const remote = JSON.parse(await fs.readFile(path.join(root, "src/data/imported-bank/questions/202412-N2-4.json")));
     assert.equal(remote.questions.length, 3);
     assert.equal(remote.questions[2].media.audio, "audio/202412n2/8.mp3");
+    assert.deepEqual(remote.questions[2].media.images, ["pic/own.jpg"]);
     assert.equal(remote.unavailable.length, 1); // A record without any audio reference is still invalid.
     await assert.rejects(fs.access(path.join(root, "public")));
   } finally { await fs.rm(root, { recursive: true, force: true }); }

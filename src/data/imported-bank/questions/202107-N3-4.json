@@ -126,6 +126,48 @@
       }
     },
     {
+      "id": "imported:202107:N3:4:7043:77",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 77 题：请听音频后选择答案。",
+      "instruction": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "図一"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "図二"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "図三"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "図四"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t学校の健康診断で看護師が話しています、健康診断を受ける人はこのあと、まず何をしますか。</p>\n<p  >\t女：このグループの人は集まりましたね。</p>\n<p  >\tみなさん、健康調査のアンケートを書いて持ってきましたか。</p>\n<p  >\tはい、では身長と体重を測ります、その前に靴下は脱いでおいてください。</p>\n<p  >\t次に血圧を測って内科の診察に進みますが、そこで医師に健康調査のアンケートを出してください。</p>\n<p  >\tアンケートはそれまで自分で持っていてください。</p>\n<p  >\t健康診断を受ける人はこのあと、まず何をします。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>学校组织体检时，护士在说话。需要体检的人之后要先做什么呢。</p>\n<p>女：这组的人都到齐了吧。</p>\n<p>大家都把健康调查问卷带来了吗。</p>\n<p>接下来，我们先来测身高和体重。测之前请脱去袜子。</p>\n<p>之后测血压并做内科检查，请在那里把健康调查问卷交给医生。</p>\n<p>在这之前请自己拿好问卷。</p>\n<p>需要体检的人之后要先做什么呢。</p>"
+      ],
+      "sourceQuestionNumber": 77,
+      "sourceId": 7043,
+      "media": {
+        "images": [
+          "pic/320210777.jpg"
+        ],
+        "audio": "audio/202107n3/4.mp3"
+      }
+    },
+    {
       "id": "imported:202107:N3:4:7044:78",
       "level": "N3",
       "category": "听力",
@@ -566,6 +608,154 @@
       }
     },
     {
+      "id": "imported:202107:N3:4:7055:89",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 89 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\tお世話になっていた先生に久ぶりに会いました、何と言いますか。</p>\n<p  >\t1.ご苦労様です。</p>\n<p  >\t2.お待ち遠様です。</p>\n<p  >\t3.ご無沙汰しております。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>久违了曾教导过自己的老师，该说什么呢。</p>\n<p>1.您辛苦了</p>\n<p>2.您久等了</p>\n<p>3.久疏问候</p>\n\n<p>曾受您照顾的老师好久不见了，该说什么呢。</p>\n<p>1.您辛苦了。</p>\n<p>2.让您久等了。</p>\n<p>3.好久没向您问好了。</p>"
+      ],
+      "sourceQuestionNumber": 89,
+      "sourceId": 7055,
+      "media": {
+        "images": [
+          "pic/320210789.jpg"
+        ],
+        "audio": "audio/202107n3/16.mp3"
+      }
+    },
+    {
+      "id": "imported:202107:N3:4:7056:90",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 90 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t友達のジャケットのボタンがありません。何と言いますか。</p>\n<p  >\t1.あれ、ボタン取れてるよ。</p>\n<p  >\t2.あれ、ボタン落ちそうだよ。</p>\n<p  >\t3.あれ、ボタン取らないと。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>朋友夹克上的扣子不见了。该说什么呢。</p>\n<p>1.咦，你扣子掉了</p>\n<p>2.咦，你的扣子快掉了。</p>\n<p>3.咦，必须把扣子解开</p>\n\n<p>朋友夹克上的扣子不见了。该说什么呢。</p>\n<p>1.咦，你扣子掉了</p>\n<p>2.咦，你的扣子快掉了。</p>\n<p>3.咦，必须把扣子解开</p>"
+      ],
+      "sourceQuestionNumber": 90,
+      "sourceId": 7056,
+      "media": {
+        "images": [
+          "pic/320210790.jpg"
+        ],
+        "audio": "audio/202107n3/17.mp3"
+      }
+    },
+    {
+      "id": "imported:202107:N3:4:7057:91",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 91 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\tここで写真を撮ってはいけません、友達に注意します。何と言いますか。</p>\n<p  >\t1.撮るなって書いてあるよ。</p>\n<p  >\t2.撮りなさいって言ってるよ。</p>\n<p  >\t3.撮らなきゃいけないんだって。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>这里禁止拍照，需要提醒朋友，该说什么呢。</p>\n<p>1.这里写着禁止拍照哦</p>\n<p>2.上面说“请拍照”哦</p>\n<p>3.听说必须拍照</p>\n\n<p>在这里不能拍照，要提醒朋友的话，该说什么呢。</p>\n<p>1.写着不能拍哦。</p>\n<p>2.上面写着请拍哦。</p>\n<p>3.听说必须拍才行。</p>"
+      ],
+      "sourceQuestionNumber": 91,
+      "sourceId": 7057,
+      "media": {
+        "images": [
+          "pic/320210791.jpg"
+        ],
+        "audio": "audio/202107n3/18.mp3"
+      }
+    },
+    {
+      "id": "imported:202107:N3:4:7058:92",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 92 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t部長から、明日ゴルフに行こうと誘われました。一緒に行きます。部長に何と言いますか。</p>\n<p  >\t1.ぜひ、いらっしゃってください。</p>\n<p  >\t2.また誘っていただけますか。</p>\n<p  >\t3.ご一緒させてください。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>部长邀请你明天打高尔夫球，你要和他一起去。该对部长说什么呢。</p>\n<p>1.请您一定要来</p>\n<p>2.您还能再邀请我吗</p>\n<p>3.请让我和您一起去吧</p>\n\n<p>部长から、明日ゴルフに行こうと誘われました。一緒に行きます。部長に何と言いますか。</p>\n<p>1.ぜひ、いらっしゃってください。</p>\n<p>2.また誘っていただけますか。</p>\n<p>3.ご一緒させてください。</p>"
+      ],
+      "sourceQuestionNumber": 92,
+      "sourceId": 7058,
+      "media": {
+        "images": [
+          "pic/320210792.jpg"
+        ],
+        "audio": "audio/202107n3/19.mp3"
+      }
+    },
+    {
       "id": "imported:202107:N3:4:7059:93",
       "level": "N3",
       "category": "听力",
@@ -881,196 +1071,5 @@
       }
     }
   ],
-  "unavailable": [
-    {
-      "id": "imported:202107:N3:4:7043:77",
-      "sourceId": 7043,
-      "questionNumber": 77,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320210777.jpg",
-        "audio": "audio/202107n3/4.mp3"
-      },
-      "raw": {
-        "id": 7043,
-        "time": "202107",
-        "level": "n3",
-        "questionId": 77,
-        "typeQuestionId": 3,
-        "type": 4,
-        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320210777.jpg",
-        "audio": "audio/202107n3/4.mp3",
-        "article": null,
-        "option1": " 図一",
-        "option2": " 図二",
-        "option3": " 図三",
-        "option4": " 図四",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t学校の健康診断で看護師が話しています、健康診断を受ける人はこのあと、まず何をしますか。</p>\n<p  >\t女：このグループの人は集まりましたね。</p>\n<p  >\tみなさん、健康調査のアンケートを書いて持ってきましたか。</p>\n<p  >\tはい、では身長と体重を測ります、その前に靴下は脱いでおいてください。</p>\n<p  >\t次に血圧を測って内科の診察に進みますが、そこで医師に健康調査のアンケートを出してください。</p>\n<p  >\tアンケートはそれまで自分で持っていてください。</p>\n<p  >\t健康診断を受ける人はこのあと、まず何をします。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>学校组织体检时，护士在说话。需要体检的人之后要先做什么呢。</p>\n<p>女：这组的人都到齐了吧。</p>\n<p>大家都把健康调查问卷带来了吗。</p>\n<p>接下来，我们先来测身高和体重。测之前请脱去袜子。</p>\n<p>之后测血压并做内科检查，请在那里把健康调查问卷交给医生。</p>\n<p>在这之前请自己拿好问卷。</p>\n<p>需要体检的人之后要先做什么呢。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202107:N3:4:7055:89",
-      "sourceId": 7055,
-      "questionNumber": 89,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320210789.jpg",
-        "audio": "audio/202107n3/16.mp3"
-      },
-      "raw": {
-        "id": 7055,
-        "time": "202107",
-        "level": "n3",
-        "questionId": 89,
-        "typeQuestionId": 15,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320210789.jpg",
-        "audio": "audio/202107n3/16.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\tお世話になっていた先生に久ぶりに会いました、何と言いますか。</p>\n<p  >\t1.ご苦労様です。</p>\n<p  >\t2.お待ち遠様です。</p>\n<p  >\t3.ご無沙汰しております。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>久违了曾教导过自己的老师，该说什么呢。</p>\n<p>1.您辛苦了</p>\n<p>2.您久等了</p>\n<p>3.久疏问候</p>\n\n<p>曾受您照顾的老师好久不见了，该说什么呢。</p>\n<p>1.您辛苦了。</p>\n<p>2.让您久等了。</p>\n<p>3.好久没向您问好了。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202107:N3:4:7056:90",
-      "sourceId": 7056,
-      "questionNumber": 90,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320210790.jpg",
-        "audio": "audio/202107n3/17.mp3"
-      },
-      "raw": {
-        "id": 7056,
-        "time": "202107",
-        "level": "n3",
-        "questionId": 90,
-        "typeQuestionId": 16,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320210790.jpg",
-        "audio": "audio/202107n3/17.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t友達のジャケットのボタンがありません。何と言いますか。</p>\n<p  >\t1.あれ、ボタン取れてるよ。</p>\n<p  >\t2.あれ、ボタン落ちそうだよ。</p>\n<p  >\t3.あれ、ボタン取らないと。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>朋友夹克上的扣子不见了。该说什么呢。</p>\n<p>1.咦，你扣子掉了</p>\n<p>2.咦，你的扣子快掉了。</p>\n<p>3.咦，必须把扣子解开</p>\n\n<p>朋友夹克上的扣子不见了。该说什么呢。</p>\n<p>1.咦，你扣子掉了</p>\n<p>2.咦，你的扣子快掉了。</p>\n<p>3.咦，必须把扣子解开</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202107:N3:4:7057:91",
-      "sourceId": 7057,
-      "questionNumber": 91,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320210791.jpg",
-        "audio": "audio/202107n3/18.mp3"
-      },
-      "raw": {
-        "id": 7057,
-        "time": "202107",
-        "level": "n3",
-        "questionId": 91,
-        "typeQuestionId": 17,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320210791.jpg",
-        "audio": "audio/202107n3/18.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\tここで写真を撮ってはいけません、友達に注意します。何と言いますか。</p>\n<p  >\t1.撮るなって書いてあるよ。</p>\n<p  >\t2.撮りなさいって言ってるよ。</p>\n<p  >\t3.撮らなきゃいけないんだって。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>这里禁止拍照，需要提醒朋友，该说什么呢。</p>\n<p>1.这里写着禁止拍照哦</p>\n<p>2.上面说“请拍照”哦</p>\n<p>3.听说必须拍照</p>\n\n<p>在这里不能拍照，要提醒朋友的话，该说什么呢。</p>\n<p>1.写着不能拍哦。</p>\n<p>2.上面写着请拍哦。</p>\n<p>3.听说必须拍才行。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202107:N3:4:7058:92",
-      "sourceId": 7058,
-      "questionNumber": 92,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320210792.jpg",
-        "audio": "audio/202107n3/19.mp3"
-      },
-      "raw": {
-        "id": 7058,
-        "time": "202107",
-        "level": "n3",
-        "questionId": 92,
-        "typeQuestionId": 18,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320210792.jpg",
-        "audio": "audio/202107n3/19.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t部長から、明日ゴルフに行こうと誘われました。一緒に行きます。部長に何と言いますか。</p>\n<p  >\t1.ぜひ、いらっしゃってください。</p>\n<p  >\t2.また誘っていただけますか。</p>\n<p  >\t3.ご一緒させてください。</p><br><p>听力译文</p><p><b>翻译</b></p>\n<p>部长邀请你明天打高尔夫球，你要和他一起去。该对部长说什么呢。</p>\n<p>1.请您一定要来</p>\n<p>2.您还能再邀请我吗</p>\n<p>3.请让我和您一起去吧</p>\n\n<p>部长から、明日ゴルフに行こうと誘われました。一緒に行きます。部長に何と言いますか。</p>\n<p>1.ぜひ、いらっしゃってください。</p>\n<p>2.また誘っていただけますか。</p>\n<p>3.ご一緒させてください。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    }
-  ]
+  "unavailable": []
 }

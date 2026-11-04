@@ -42,7 +42,7 @@ async function resolveMedia(reference, kind, remoteImage = false) {
     // Resolve the original reference without fetching audio. A supplied manifest can restrict it.
     return key && (uploadedAudio === null || uploadedAudio.has(key)) ? key : null;
   }
-  // Reading charts can be uploaded after importing the question bank.
+  // Reading and listening images load directly from R2; missing files are reported in the UI.
   if (remoteImage && getImageObjectKey(reference)) return getImageObjectKey(reference);
   const relative = text(reference).replaceAll("\\", "/").replace(/^\.\//, "");
   if (!mediaDirectory || /^(?:[a-z]+:|\/)/i.test(relative) || relative.split("/").some((part) => part === ".." || part === "")) return null;
@@ -131,8 +131,8 @@ for (const name of (await fs.readdir(sourceDirectory)).sort()) {
     const questionPictureReference = parent && text(row.picture) && text(row.picture) !== text(parent.picture) ? text(row.picture) : "";
     const pictureReference = text(parent?.picture) || (questionPictureReference ? "" : text(row.picture));
     const audioReference = text(row.audio) || text(parent?.audio);
-    const image = await resolveMedia(pictureReference, "image", type === 3);
-    const questionImage = await resolveMedia(questionPictureReference, "image", type === 3);
+    const image = await resolveMedia(pictureReference, "image", type === 3 || type === 4);
+    const questionImage = await resolveMedia(questionPictureReference, "image", type === 3 || type === 4);
     const audio = await resolveMedia(audioReference, "audio");
     if (pictureReference && !image || questionPictureReference && !questionImage) reasons.push("缺少配套图片");
     if (type === 4 && !audio || audioReference && !audio) reasons.push("缺少配套音频");

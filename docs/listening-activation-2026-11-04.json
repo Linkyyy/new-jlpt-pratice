@@ -1,0 +1,718 @@
+{
+  "version": 1,
+  "activatedAt": "2026-11-04T14:16:22.390Z",
+  "basis": "owner-request",
+  "remoteVerification": "not-performed",
+  "opened": 61,
+  "affectedPapers": 25,
+  "listeningQuestions": 2634,
+  "remainingDisabled": 0,
+  "pendingSourceQuestions": 236,
+  "pendingSourcePapers": [
+    {
+      "period": "202412",
+      "level": "N3",
+      "questionCount": 28
+    },
+    {
+      "period": "202507",
+      "level": "N1",
+      "questionCount": 30
+    },
+    {
+      "period": "202507",
+      "level": "N2",
+      "questionCount": 30
+    },
+    {
+      "period": "202512",
+      "level": "N1",
+      "questionCount": 30
+    },
+    {
+      "period": "202512",
+      "level": "N2",
+      "questionCount": 30
+    },
+    {
+      "period": "202512",
+      "level": "N3",
+      "questionCount": 28
+    },
+    {
+      "period": "202607",
+      "level": "N1",
+      "questionCount": 30
+    },
+    {
+      "period": "202607",
+      "level": "N2",
+      "questionCount": 30
+    }
+  ],
+  "papers": [
+    {
+      "period": "201112",
+      "level": "N2",
+      "file": "201112-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201112:N2:4:2896:77",
+          "questionNumber": 77,
+          "audio": "audio/201112n2/2.mp3",
+          "images": [
+            "pic/220111277.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201207",
+      "level": "N1",
+      "file": "201207-N1-4.json",
+      "opened": [
+        {
+          "id": "imported:201207:N1:4:6000:71",
+          "questionNumber": 71,
+          "audio": "audio/201207n1/1.mp3",
+          "images": [
+            "pic/120120771.jpg"
+          ]
+        },
+        {
+          "id": "imported:201207:N1:4:6005:76",
+          "questionNumber": 76,
+          "audio": "audio/201207n1/6.mp3",
+          "images": [
+            "pic/120120776.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201207",
+      "level": "N2",
+      "file": "201207-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201207:N2:4:2791:78",
+          "questionNumber": 78,
+          "audio": "audio/201207n2/3.mp3",
+          "images": [
+            "pic/220120778.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201212",
+      "level": "N1",
+      "file": "201212-N1-4.json",
+      "opened": [
+        {
+          "id": "imported:201212:N1:4:5894:71",
+          "questionNumber": 71,
+          "audio": "audio/201212n1/1.mp3",
+          "images": [
+            "pic/120121271.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201212",
+      "level": "N2",
+      "file": "201212-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201212:N2:4:2686:79",
+          "questionNumber": 79,
+          "audio": "audio/201212n2/4.mp3",
+          "images": [
+            "pic/220121279.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201407",
+      "level": "N2",
+      "file": "201407-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201407:N2:4:2366:79",
+          "questionNumber": 79,
+          "audio": "audio/201407n2/4.mp3",
+          "images": [
+            "pic/220140779.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201712",
+      "level": "N1",
+      "file": "201712-N1-4.json",
+      "opened": [
+        {
+          "id": "imported:201712:N1:4:4831:72",
+          "questionNumber": 72,
+          "audio": "audio/201712n1/2.mp3",
+          "images": [
+            "pic/120171272.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201712",
+      "level": "N2",
+      "file": "201712-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201712:N2:4:1614:76",
+          "questionNumber": 76,
+          "audio": "audio/201712n2/1.mp3",
+          "images": [
+            "pic/220171276.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201812",
+      "level": "N1",
+      "file": "201812-N1-4.json",
+      "opened": [
+        {
+          "id": "imported:201812:N1:4:4620:71",
+          "questionNumber": 71,
+          "audio": "audio/201812n1/1.mp3",
+          "images": [
+            "pic/120181271.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201812",
+      "level": "N2",
+      "file": "201812-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201812:N2:4:1190:74",
+          "questionNumber": 74,
+          "audio": "audio/201812n2/1.mp3",
+          "images": [
+            "pic/220181274.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201812",
+      "level": "N3",
+      "file": "201812-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:201812:N3:4:7449:77",
+          "questionNumber": 77,
+          "audio": "audio/201812n3/3.mp3",
+          "images": [
+            "pic/320181277.jpg"
+          ]
+        },
+        {
+          "id": "imported:201812:N3:4:7451:79",
+          "questionNumber": 79,
+          "audio": "audio/201812n3/5.mp3",
+          "images": [
+            "pic/320181279.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "201912",
+      "level": "N2",
+      "file": "201912-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:201912:N2:4:988:77",
+          "questionNumber": 77,
+          "audio": "audio/201912n2/5.mp3",
+          "images": [
+            "pic/220191277.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202012",
+      "level": "N2",
+      "file": "202012-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:202012:N2:4:884:75",
+          "questionNumber": 75,
+          "audio": "audio/202012n2/3.mp3",
+          "images": [
+            "pic/220201275.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202012",
+      "level": "N3",
+      "file": "202012-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202012:N3:4:7143:76",
+          "questionNumber": 76,
+          "audio": "audio/202012n3/3.mp3",
+          "images": [
+            "pic/320201276.jpg"
+          ]
+        },
+        {
+          "id": "imported:202012:N3:4:7146:79",
+          "questionNumber": 79,
+          "audio": "audio/202012n3/6.mp3",
+          "images": [
+            "pic/320201279.jpg"
+          ]
+        },
+        {
+          "id": "imported:202012:N3:4:7156:89",
+          "questionNumber": 89,
+          "audio": "audio/202012n3/16.mp3",
+          "images": [
+            "pic/320201289.jpg"
+          ]
+        },
+        {
+          "id": "imported:202012:N3:4:7157:90",
+          "questionNumber": 90,
+          "audio": "audio/202012n3/17.mp3",
+          "images": [
+            "pic/320201290.jpg"
+          ]
+        },
+        {
+          "id": "imported:202012:N3:4:7158:91",
+          "questionNumber": 91,
+          "audio": "audio/202012n3/18.mp3",
+          "images": [
+            "pic/320201291.jpg"
+          ]
+        },
+        {
+          "id": "imported:202012:N3:4:7159:92",
+          "questionNumber": 92,
+          "audio": "audio/202012n3/19.mp3",
+          "images": [
+            "pic/320201292.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202107",
+      "level": "N2",
+      "file": "202107-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:202107:N2:4:781:74",
+          "questionNumber": 74,
+          "audio": "audio/202107n2/2.mp3",
+          "images": [
+            "pic/220210774.jpg"
+          ]
+        },
+        {
+          "id": "imported:202107:N2:4:783:76",
+          "questionNumber": 76,
+          "audio": "audio/202107n2/4.mp3",
+          "images": [
+            "pic/220210776.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202107",
+      "level": "N3",
+      "file": "202107-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202107:N3:4:7043:77",
+          "questionNumber": 77,
+          "audio": "audio/202107n3/4.mp3",
+          "images": [
+            "pic/320210777.jpg"
+          ]
+        },
+        {
+          "id": "imported:202107:N3:4:7055:89",
+          "questionNumber": 89,
+          "audio": "audio/202107n3/16.mp3",
+          "images": [
+            "pic/320210789.jpg"
+          ]
+        },
+        {
+          "id": "imported:202107:N3:4:7056:90",
+          "questionNumber": 90,
+          "audio": "audio/202107n3/17.mp3",
+          "images": [
+            "pic/320210790.jpg"
+          ]
+        },
+        {
+          "id": "imported:202107:N3:4:7057:91",
+          "questionNumber": 91,
+          "audio": "audio/202107n3/18.mp3",
+          "images": [
+            "pic/320210791.jpg"
+          ]
+        },
+        {
+          "id": "imported:202107:N3:4:7058:92",
+          "questionNumber": 92,
+          "audio": "audio/202107n3/19.mp3",
+          "images": [
+            "pic/320210792.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202112",
+      "level": "N2",
+      "file": "202112-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:202112:N2:4:682:76",
+          "questionNumber": 76,
+          "audio": "audio/202112n2/5.mp3",
+          "images": [
+            "pic/220211276.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202112",
+      "level": "N3",
+      "file": "202112-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202112:N3:4:6939:74",
+          "questionNumber": 74,
+          "audio": "audio/202112n3/1.mp3",
+          "images": [
+            "pic/320211274.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6941:76",
+          "questionNumber": 76,
+          "audio": "audio/202112n3/3.mp3",
+          "images": [
+            "pic/320211276.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6942:77",
+          "questionNumber": 77,
+          "audio": "audio/202112n3/4.mp3",
+          "images": [
+            "pic/320211277.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6944:79",
+          "questionNumber": 79,
+          "audio": "audio/202112n3/6.mp3",
+          "images": [
+            "pic/320211279.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6954:89",
+          "questionNumber": 89,
+          "audio": "audio/202112n3/16.mp3",
+          "images": [
+            "pic/320211289.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6955:90",
+          "questionNumber": 90,
+          "audio": "audio/202112n3/17.mp3",
+          "images": [
+            "pic/320211290.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6956:91",
+          "questionNumber": 91,
+          "audio": "audio/202112n3/18.mp3",
+          "images": [
+            "pic/320211291.jpg"
+          ]
+        },
+        {
+          "id": "imported:202112:N3:4:6957:92",
+          "questionNumber": 92,
+          "audio": "audio/202112n3/19.mp3",
+          "images": [
+            "pic/320211292.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202207",
+      "level": "N1",
+      "file": "202207-N1-4.json",
+      "opened": [
+        {
+          "id": "imported:202207:N1:4:4001:74",
+          "questionNumber": 74,
+          "audio": "audio/202207n1/6.mp3",
+          "images": [
+            "pic/120220774.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202207",
+      "level": "N3",
+      "file": "202207-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202207:N3:4:6842:77",
+          "questionNumber": 77,
+          "audio": "audio/202207n3/5.mp3",
+          "images": [
+            "pic/320220777.jpg"
+          ]
+        },
+        {
+          "id": "imported:202207:N3:4:6853:88",
+          "questionNumber": 88,
+          "audio": "audio/202207n3/16.mp3",
+          "images": [
+            "pic/320220788.jpg"
+          ]
+        },
+        {
+          "id": "imported:202207:N3:4:6854:89",
+          "questionNumber": 89,
+          "audio": "audio/202207n3/17.mp3",
+          "images": [
+            "pic/320220789.jpg"
+          ]
+        },
+        {
+          "id": "imported:202207:N3:4:6855:90",
+          "questionNumber": 90,
+          "audio": "audio/202207n3/18.mp3",
+          "images": [
+            "pic/320220790.jpg"
+          ]
+        },
+        {
+          "id": "imported:202207:N3:4:6856:91",
+          "questionNumber": 91,
+          "audio": "audio/202207n3/19.mp3",
+          "images": [
+            "pic/320220791.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202212",
+      "level": "N2",
+      "file": "202212-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:202212:N2:4:477:73",
+          "questionNumber": 73,
+          "audio": "audio/202212n2/2.mp3",
+          "images": [
+            "pic/220221273.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202307",
+      "level": "N3",
+      "file": "202307-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202307:N3:4:6740:76",
+          "questionNumber": 76,
+          "audio": "audio/202307n3/3.mp3",
+          "images": [
+            "pic/320230776.jpg"
+          ]
+        },
+        {
+          "id": "imported:202307:N3:4:6741:77",
+          "questionNumber": 77,
+          "audio": "audio/202307n3/4.mp3",
+          "images": [
+            "pic/320230777.jpg"
+          ]
+        },
+        {
+          "id": "imported:202307:N3:4:6753:89",
+          "questionNumber": 89,
+          "audio": "audio/202307n3/16.mp3",
+          "images": [
+            "pic/320230789.jpg"
+          ]
+        },
+        {
+          "id": "imported:202307:N3:4:6754:90",
+          "questionNumber": 90,
+          "audio": "audio/202307n3/17.mp3",
+          "images": [
+            "pic/320230790.jpg"
+          ]
+        },
+        {
+          "id": "imported:202307:N3:4:6755:91",
+          "questionNumber": 91,
+          "audio": "audio/202307n3/18.mp3",
+          "images": [
+            "pic/320230791.jpg"
+          ]
+        },
+        {
+          "id": "imported:202307:N3:4:6756:92",
+          "questionNumber": 92,
+          "audio": "audio/202307n3/19.mp3",
+          "images": [
+            "pic/320230792.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202312",
+      "level": "N2",
+      "file": "202312-N2-4.json",
+      "opened": [
+        {
+          "id": "imported:202312:N2:4:275:73",
+          "questionNumber": 73,
+          "audio": "audio/202312n2/2.mp3",
+          "images": [
+            "pic/220231273.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202312",
+      "level": "N3",
+      "file": "202312-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202312:N3:4:6640:77",
+          "questionNumber": 77,
+          "audio": "audio/202312n3/4.mp3",
+          "images": [
+            "pic/320231277.jpg"
+          ]
+        },
+        {
+          "id": "imported:202312:N3:4:6652:89",
+          "questionNumber": 89,
+          "audio": "audio/202312n3/16.mp3",
+          "images": [
+            "pic/320231289.jpg"
+          ]
+        },
+        {
+          "id": "imported:202312:N3:4:6653:90",
+          "questionNumber": 90,
+          "audio": "audio/202312n3/17.mp3",
+          "images": [
+            "pic/320231290.jpg"
+          ]
+        },
+        {
+          "id": "imported:202312:N3:4:6654:91",
+          "questionNumber": 91,
+          "audio": "audio/202312n3/18.mp3",
+          "images": [
+            "pic/320231291.jpg"
+          ]
+        },
+        {
+          "id": "imported:202312:N3:4:6655:92",
+          "questionNumber": 92,
+          "audio": "audio/202312n3/19.mp3",
+          "images": [
+            "pic/320231292.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "period": "202407",
+      "level": "N3",
+      "file": "202407-N3-4.json",
+      "opened": [
+        {
+          "id": "imported:202407:N3:4:6536:74",
+          "questionNumber": 74,
+          "audio": "audio/202407n3/1.mp3",
+          "images": [
+            "pic/320240774.jpg"
+          ]
+        },
+        {
+          "id": "imported:202407:N3:4:6551:89",
+          "questionNumber": 89,
+          "audio": "audio/202407n3/16.mp3",
+          "images": [
+            "pic/320240789.jpg"
+          ]
+        },
+        {
+          "id": "imported:202407:N3:4:6552:90",
+          "questionNumber": 90,
+          "audio": "audio/202407n3/17.mp3",
+          "images": [
+            "pic/320240790.jpg"
+          ]
+        },
+        {
+          "id": "imported:202407:N3:4:6553:91",
+          "questionNumber": 91,
+          "audio": "audio/202407n3/18.mp3",
+          "images": [
+            "pic/320240791.jpg"
+          ]
+        },
+        {
+          "id": "imported:202407:N3:4:6554:92",
+          "questionNumber": 92,
+          "audio": "audio/202407n3/19.mp3",
+          "images": [
+            "pic/320240792.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}

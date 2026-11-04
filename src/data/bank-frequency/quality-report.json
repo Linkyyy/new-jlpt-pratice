@@ -1,5 +1,5 @@
 {
-  "revision": "d244e5f447d4a5094ccf0f734ce09688ef89354e5f720424c6a8ff98d34e6706",
+  "revision": "1fae08d8139c1e8d962712d27eb959ddd68c82c52e87320dc6697454d84bf4d4",
   "excludedTerms": 2291,
   "reasons": {
     "personal_or_organization_name": 421,
@@ -6019,6 +6019,17 @@
       ]
     },
     {
+      "label": "パスター",
+      "reading": "ぱすたー",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:201212:N2:4:2686:79"
+      ]
+    },
+    {
       "label": "ワカ",
       "reading": "わか",
       "pos": "名词",
@@ -6038,17 +6049,6 @@
       "occurrences": 1,
       "examples": [
         "imported:201212:N2:4:2695:88"
-      ]
-    },
-    {
-      "label": "パスター",
-      "reading": "ぱすたー",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:201212:N2:4:2686:79"
       ]
     },
     {
@@ -14208,6 +14208,19 @@
       ]
     },
     {
+      "label": "南市",
+      "reading": "みなみいち",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 4,
+      "examples": [
+        "imported:201712:N1:4:4831:72",
+        "imported:202107:N1:2:4169:35",
+        "imported:202107:N3:4:7051:85"
+      ]
+    },
+    {
       "label": "夢野",
       "reading": "ゆめの",
       "pos": "名词",
@@ -14311,19 +14324,6 @@
         "imported:201712:N1:4:4863:104",
         "imported:201712:N1:4:4864:105",
         "imported:201807:N3:3:7536:62"
-      ]
-    },
-    {
-      "label": "南市",
-      "reading": "みなみいち",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 4,
-      "examples": [
-        "imported:201712:N1:4:4831:72",
-        "imported:202107:N1:2:4169:35",
-        "imported:202107:N3:4:7051:85"
       ]
     },
     {
@@ -18812,17 +18812,6 @@
       ]
     },
     {
-      "label": "桜井",
-      "reading": "さくらい",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202112:N3:4:6947:82"
-      ]
-    },
-    {
       "label": "アイ",
       "reading": "あい",
       "pos": "名词",
@@ -18833,6 +18822,17 @@
         "imported:202112:N3:4:6944:79",
         "imported:202207:N3:4:6842:77",
         "imported:202312:N3:4:6637:74"
+      ]
+    },
+    {
+      "label": "桜井",
+      "reading": "さくらい",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202112:N3:4:6947:82"
       ]
     },
     {
@@ -20597,6 +20597,29 @@
       ]
     },
     {
+      "label": "アイエ",
+      "reading": "あいえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 1,
+      "examples": [
+        "imported:202312:N2:4:275:73"
+      ]
+    },
+    {
+      "label": "イウエ",
+      "reading": "いうえ",
+      "pos": "名词",
+      "kind": "word",
+      "reason": "unverified_word_or_spelling",
+      "occurrences": 2,
+      "examples": [
+        "imported:202312:N2:4:275:73",
+        "imported:202412:N3:4:56132485590735:76"
+      ]
+    },
+    {
       "label": "グリン",
       "reading": "ぐりん",
       "pos": "名词",
@@ -20627,29 +20650,6 @@
       "occurrences": 1,
       "examples": [
         "imported:202312:N2:4:289:87"
-      ]
-    },
-    {
-      "label": "アイエ",
-      "reading": "あいえ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 1,
-      "examples": [
-        "imported:202312:N2:4:275:73"
-      ]
-    },
-    {
-      "label": "イウエ",
-      "reading": "いうえ",
-      "pos": "名词",
-      "kind": "word",
-      "reason": "unverified_word_or_spelling",
-      "occurrences": 2,
-      "examples": [
-        "imported:202312:N2:4:275:73",
-        "imported:202412:N3:4:56132485590735:76"
       ]
     },
     {
@@ -36752,8 +36752,8 @@
         "reading": "ぎりぎり",
         "pos": "副词",
         "aliases": [
-          "ぎりぎり",
-          "ギリギリ"
+          "ギリギリ",
+          "ぎりぎり"
         ]
       },
       {

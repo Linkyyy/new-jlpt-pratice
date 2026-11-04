@@ -6,6 +6,48 @@
   "type": "listening",
   "questions": [
     {
+      "id": "imported:202407:N3:4:6536:74",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 74 题：请听音频后选择答案。",
+      "instruction": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>听力原文</p>\n<p> 台所で男の留学生とホストファミリーのお母さんが話しています。男の留学生はこの後まず、何をしますか。</p>\n<p>男：お昼ご飯の準備、何かお手伝いできることありますか？</p>\n<p>女：ありがとう。お昼、ピザでいい？チーズとピザのソースがあるから。</p>\n<p>男：いいですね。薄く伸ばして丸い形にするのやってみたいです。</p>\n<p>女：あ、それは冷凍のもうできてるのがあるから、これ。上に何か載せて焼くだけなんだ。えっと、ピザソース、先 に塗ってくれる？</p>\n<p>男：はい。何のピザにするんですか？</p>\n<p>女：えっと、ソーセージとピーマンにしよう。私、切るね。切ったの載せていってくれる？</p>\n<p>男：はい。</p>\n<p>男の留学生はこの後まず、何をしますか。</p>\n<br><p>听力译文</p><p>在厨房里，一名男留学生和寄宿家庭的妈妈正在交谈。男留学生接下来首先会做什么？</p>\n<p>男：午饭的准备，有什么我可以帮忙的吗？</p>\n<p>女：谢谢。午饭吃披萨可以吗？有奶酪和披萨酱。</p>\n<p>男：可以啊。我很想试试把面团擀薄，做成圆形的。</p>\n<p>女：啊，那个不用了，已经有现成的冷冻饼皮了，这个就行。只要在上面放些东西然后烤一下就好了。嗯，披萨酱，你先帮我涂一下可以吗？</p>\n<p>男：好的。要做什么样的披萨呢？</p>\n<p>女：嗯，就做香肠和青椒的吧。我来切。我切好了你帮我放上去可以吗？</p>\n<p>男：好的。</p>\n<p>男留学生接下来首先会做什么？</p>"
+      ],
+      "sourceQuestionNumber": 74,
+      "sourceId": 6536,
+      "media": {
+        "images": [
+          "pic/320240774.jpg"
+        ],
+        "audio": "audio/202407n3/1.mp3"
+      }
+    },
+    {
       "id": "imported:202407:N3:4:6537:75",
       "level": "N3",
       "category": "听力",
@@ -566,6 +608,174 @@
       }
     },
     {
+      "id": "imported:202407:N3:4:6551:89",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 89 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>听力原文</p>\n<p>休みの間、友達の家に泊めてもらいました。帰る時、友達の両親に挨拶します。何と言いますか。</p>\n<p>1．お世話になりました</p>\n<p>2．お邪魔します</p>\n<p>3．気をつけて帰ってください</p>\n<br><p>听力译文</p><p>放假期间，我住在了朋友家里。回去的时候，要向朋友的父母打招呼。应该说什么呢。</p>\n<p>1．谢谢您的照顾</p>\n<p>2．打扰了</p>\n<p>3．请路上小心</p>"
+      ],
+      "sourceQuestionNumber": 89,
+      "sourceId": 6551,
+      "media": {
+        "images": [
+          "pic/320240789.jpg"
+        ],
+        "audio": "audio/202407n3/16.mp3"
+      }
+    },
+    {
+      "id": "imported:202407:N3:4:6552:90",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 90 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>听力原文</p>\n<p>カフェで窓側の席が空きました。席を変われるかどうか聞きたいです。店員に何と言いますか。</p>\n<p>1．あの席に変わってもらえますか？</p>\n<p>2．窓側の席に座らないといけませんか？</p>\n<p>3．あっちの席に移れますか？</p>\n<br><p>听力译文</p><p>在咖啡店，靠窗的座位空出来了。我想问店员是否可以换座位。该说什么呢。</p>\n<p>1．那个座位可以让我换过去吗？</p>\n<p>2．我必须坐在靠窗的座位吗？</p>\n<p>3．我可以移到那边的座位吗？</p>"
+      ],
+      "sourceQuestionNumber": 90,
+      "sourceId": 6552,
+      "media": {
+        "images": [
+          "pic/320240790.jpg"
+        ],
+        "audio": "audio/202407n3/17.mp3"
+      }
+    },
+    {
+      "id": "imported:202407:N3:4:6553:91",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 91 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>听力原文</p>\n<p>靴の紐を結びたいです。アイスクリームがあるので結べません。友達に何と言いますか。</p>\n<p>1．紐、結ぼうか？</p>\n<p>2．これ、持っててもらえる？</p>\n<p>3．アイスクリーム、ちょっとくれる？</p>\n<br><p>听力译文</p><p>我想系鞋带。但我拿着冰淇淋，没法系。我该对朋友说什么？</p>\n<p>1．我来帮你系鞋带吧？</p>\n<p>2．这个，能帮我拿着吗？</p>\n<p>3．冰淇淋，能给我一点吗？</p>"
+      ],
+      "sourceQuestionNumber": 91,
+      "sourceId": 6553,
+      "media": {
+        "images": [
+          "pic/320240791.jpg"
+        ],
+        "audio": "audio/202407n3/18.mp3"
+      }
+    },
+    {
+      "id": "imported:202407:N3:4:6554:92",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 92 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>听力原文</p>\n<p>雨です。課長が傘を持っていません。何と言いますか。</p>\n<p>1．傘、お使いになりませんか？</p>\n<p>2．傘、貸していただけますか？</p>\n<p>3．傘、お預かりしましょうか？</p>\n<br><p>听力译文</p><p>下雨了。课长没有带伞。你会说什么？</p>\n<p>1．伞，您要用吗？</p>\n<p>2．伞，能借我一下吗？</p>\n<p>3．伞，我帮您拿着吧？</p>"
+      ],
+      "sourceQuestionNumber": 92,
+      "sourceId": 6554,
+      "media": {
+        "images": [
+          "pic/320240792.jpg"
+        ],
+        "audio": "audio/202407n3/19.mp3"
+      }
+    },
+    {
       "id": "imported:202407:N3:4:6555:93",
       "level": "N3",
       "category": "听力",
@@ -881,196 +1091,5 @@
       }
     }
   ],
-  "unavailable": [
-    {
-      "id": "imported:202407:N3:4:6536:74",
-      "sourceId": 6536,
-      "questionNumber": 74,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320240774.jpg",
-        "audio": "audio/202407n3/1.mp3"
-      },
-      "raw": {
-        "id": 6536,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 74,
-        "typeQuestionId": 0,
-        "type": 4,
-        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320240774.jpg",
-        "audio": "audio/202407n3/1.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p> 台所で男の留学生とホストファミリーのお母さんが話しています。男の留学生はこの後まず、何をしますか。</p>\n<p>男：お昼ご飯の準備、何かお手伝いできることありますか？</p>\n<p>女：ありがとう。お昼、ピザでいい？チーズとピザのソースがあるから。</p>\n<p>男：いいですね。薄く伸ばして丸い形にするのやってみたいです。</p>\n<p>女：あ、それは冷凍のもうできてるのがあるから、これ。上に何か載せて焼くだけなんだ。えっと、ピザソース、先 に塗ってくれる？</p>\n<p>男：はい。何のピザにするんですか？</p>\n<p>女：えっと、ソーセージとピーマンにしよう。私、切るね。切ったの載せていってくれる？</p>\n<p>男：はい。</p>\n<p>男の留学生はこの後まず、何をしますか。</p>\n<br><p>听力译文</p><p>在厨房里，一名男留学生和寄宿家庭的妈妈正在交谈。男留学生接下来首先会做什么？</p>\n<p>男：午饭的准备，有什么我可以帮忙的吗？</p>\n<p>女：谢谢。午饭吃披萨可以吗？有奶酪和披萨酱。</p>\n<p>男：可以啊。我很想试试把面团擀薄，做成圆形的。</p>\n<p>女：啊，那个不用了，已经有现成的冷冻饼皮了，这个就行。只要在上面放些东西然后烤一下就好了。嗯，披萨酱，你先帮我涂一下可以吗？</p>\n<p>男：好的。要做什么样的披萨呢？</p>\n<p>女：嗯，就做香肠和青椒的吧。我来切。我切好了你帮我放上去可以吗？</p>\n<p>男：好的。</p>\n<p>男留学生接下来首先会做什么？</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202407:N3:4:6551:89",
-      "sourceId": 6551,
-      "questionNumber": 89,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320240789.jpg",
-        "audio": "audio/202407n3/16.mp3"
-      },
-      "raw": {
-        "id": 6551,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 89,
-        "typeQuestionId": 15,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320240789.jpg",
-        "audio": "audio/202407n3/16.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p>休みの間、友達の家に泊めてもらいました。帰る時、友達の両親に挨拶します。何と言いますか。</p>\n<p>1．お世話になりました</p>\n<p>2．お邪魔します</p>\n<p>3．気をつけて帰ってください</p>\n<br><p>听力译文</p><p>放假期间，我住在了朋友家里。回去的时候，要向朋友的父母打招呼。应该说什么呢。</p>\n<p>1．谢谢您的照顾</p>\n<p>2．打扰了</p>\n<p>3．请路上小心</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202407:N3:4:6552:90",
-      "sourceId": 6552,
-      "questionNumber": 90,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320240790.jpg",
-        "audio": "audio/202407n3/17.mp3"
-      },
-      "raw": {
-        "id": 6552,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 90,
-        "typeQuestionId": 16,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320240790.jpg",
-        "audio": "audio/202407n3/17.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p>カフェで窓側の席が空きました。席を変われるかどうか聞きたいです。店員に何と言いますか。</p>\n<p>1．あの席に変わってもらえますか？</p>\n<p>2．窓側の席に座らないといけませんか？</p>\n<p>3．あっちの席に移れますか？</p>\n<br><p>听力译文</p><p>在咖啡店，靠窗的座位空出来了。我想问店员是否可以换座位。该说什么呢。</p>\n<p>1．那个座位可以让我换过去吗？</p>\n<p>2．我必须坐在靠窗的座位吗？</p>\n<p>3．我可以移到那边的座位吗？</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202407:N3:4:6553:91",
-      "sourceId": 6553,
-      "questionNumber": 91,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320240791.jpg",
-        "audio": "audio/202407n3/18.mp3"
-      },
-      "raw": {
-        "id": 6553,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 91,
-        "typeQuestionId": 17,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320240791.jpg",
-        "audio": "audio/202407n3/18.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p>靴の紐を結びたいです。アイスクリームがあるので結べません。友達に何と言いますか。</p>\n<p>1．紐、結ぼうか？</p>\n<p>2．これ、持っててもらえる？</p>\n<p>3．アイスクリーム、ちょっとくれる？</p>\n<br><p>听力译文</p><p>我想系鞋带。但我拿着冰淇淋，没法系。我该对朋友说什么？</p>\n<p>1．我来帮你系鞋带吧？</p>\n<p>2．这个，能帮我拿着吗？</p>\n<p>3．冰淇淋，能给我一点吗？</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202407:N3:4:6554:92",
-      "sourceId": 6554,
-      "questionNumber": 92,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320240792.jpg",
-        "audio": "audio/202407n3/19.mp3"
-      },
-      "raw": {
-        "id": 6554,
-        "time": "202407",
-        "level": "n3",
-        "questionId": 92,
-        "typeQuestionId": 18,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320240792.jpg",
-        "audio": "audio/202407n3/19.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": " 4",
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p>雨です。課長が傘を持っていません。何と言いますか。</p>\n<p>1．傘、お使いになりませんか？</p>\n<p>2．傘、貸していただけますか？</p>\n<p>3．傘、お預かりしましょうか？</p>\n<br><p>听力译文</p><p>下雨了。课长没有带伞。你会说什么？</p>\n<p>1．伞，您要用吗？</p>\n<p>2．伞，能借我一下吗？</p>\n<p>3．伞，我帮您拿着吧？</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    }
-  ]
+  "unavailable": []
 }

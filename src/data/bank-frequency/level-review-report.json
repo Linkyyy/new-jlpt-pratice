@@ -11313,6 +11313,27 @@
     },
     {
       "kind": "word",
+      "label": "クラブ",
+      "reading": "くらぶ",
+      "levels": [
+        "N4"
+      ],
+      "method": "editorial",
+      "overridesVariant": true,
+      "reason": "Reviewed common spelling separately; rare kanji/alternate spelling grade must not be transferred to this elementary word."
+    },
+    {
+      "kind": "word",
+      "label": "入会",
+      "reading": "にゅうかい",
+      "levels": [
+        "N3"
+      ],
+      "method": "editorial",
+      "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
+    },
+    {
+      "kind": "word",
       "label": "ばい",
       "reading": "ばい",
       "levels": [
@@ -11486,27 +11507,6 @@
         }
       ],
       "selection": "Introductory attested level for a shared dictionary spelling; do not inherit harder alternate orthographies."
-    },
-    {
-      "kind": "word",
-      "label": "クラブ",
-      "reading": "くらぶ",
-      "levels": [
-        "N4"
-      ],
-      "method": "editorial",
-      "overridesVariant": true,
-      "reason": "Reviewed common spelling separately; rare kanji/alternate spelling grade must not be transferred to this elementary word."
-    },
-    {
-      "kind": "word",
-      "label": "入会",
-      "reading": "にゅうかい",
-      "levels": [
-        "N3"
-      ],
-      "method": "editorial",
-      "reason": "Whole-word review of meaning, reading, register and learner prerequisites; study estimate, not an external published grade."
     },
     {
       "kind": "word",
@@ -13770,6 +13770,16 @@
     },
     {
       "kind": "word",
+      "label": "リード",
+      "reading": "りーど",
+      "levels": [
+        "N1"
+      ],
+      "method": "word-list",
+      "evidence": "Exact spelling and reading in the supplementary reference word list."
+    },
+    {
+      "kind": "word",
       "label": "もって",
       "reading": "もって",
       "levels": [
@@ -13904,16 +13914,6 @@
       ],
       "method": "editorial",
       "reason": "Reviewed as a whole idiom, set phrase or established collocation; nonofficial site study estimate."
-    },
-    {
-      "kind": "word",
-      "label": "リード",
-      "reading": "りーど",
-      "levels": [
-        "N1"
-      ],
-      "method": "word-list",
-      "evidence": "Exact spelling and reading in the supplementary reference word list."
     },
     {
       "kind": "word",
@@ -38474,6 +38474,12 @@
     },
     {
       "kind": "word",
+      "label": "もうこ",
+      "reading": "もうこ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "行く行く",
       "reading": "ゆくゆく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -38572,6 +38578,12 @@
       "kind": "word",
       "label": "取り掛かる",
       "reading": "とりかかる",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "一章",
+      "reading": "いっしょう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -38950,18 +38962,6 @@
       "kind": "word",
       "label": "おじいちゃん",
       "reading": "おじいちゃん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "もうこ",
-      "reading": "もうこ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "一章",
-      "reading": "いっしょう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -40640,6 +40640,24 @@
     },
     {
       "kind": "word",
+      "label": "陸上",
+      "reading": "りくじょう",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "リレー",
+      "reading": "りれー",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "拮抗",
+      "reading": "きっこう",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "業界",
       "reading": "ぎょうかい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -41062,24 +41080,6 @@
       "kind": "word",
       "label": "開花",
       "reading": "かいか",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "陸上",
-      "reading": "りくじょう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "リレー",
-      "reading": "りれー",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "拮抗",
-      "reading": "きっこう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -41600,6 +41600,12 @@
     },
     {
       "kind": "word",
+      "label": "ちっちゃい",
+      "reading": "ちっちゃい",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "思い立つ",
       "reading": "おもいたつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -41692,12 +41698,6 @@
       "kind": "word",
       "label": "あっという間",
       "reading": "あっというま",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ちっちゃい",
-      "reading": "ちっちゃい",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -56606,6 +56606,18 @@
     },
     {
       "kind": "word",
+      "label": "転入",
+      "reading": "てんにゅう",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "管轄",
+      "reading": "かんかつ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "箇条",
       "reading": "かじょう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -56944,18 +56956,6 @@
       "kind": "word",
       "label": "オペラ",
       "reading": "おぺら",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "転入",
-      "reading": "てんにゅう",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "管轄",
-      "reading": "かんかつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -59126,6 +59126,12 @@
     },
     {
       "kind": "word",
+      "label": "六月",
+      "reading": "ろくがつ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "土砂",
       "reading": "どしゃ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -59494,12 +59500,6 @@
       "kind": "word",
       "label": "筋書き",
       "reading": "すじがき",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "六月",
-      "reading": "ろくがつ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -61850,6 +61850,12 @@
     },
     {
       "kind": "word",
+      "label": "飾り付ける",
+      "reading": "かざりつける",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "非常時",
       "reading": "ひじょうじ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -61900,12 +61906,6 @@
       "kind": "word",
       "label": "人参",
       "reading": "にんじん",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "飾り付ける",
-      "reading": "かざりつける",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -63362,6 +63362,18 @@
     },
     {
       "kind": "word",
+      "label": "でなければ",
+      "reading": "でなければ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
+      "label": "喫煙",
+      "reading": "きつえん",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "乗用車",
       "reading": "じょうようしゃ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -63412,18 +63424,6 @@
       "kind": "word",
       "label": "伸ばせる",
       "reading": "のばせる",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "でなければ",
-      "reading": "でなければ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "喫煙",
-      "reading": "きつえん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -64106,6 +64106,12 @@
     },
     {
       "kind": "word",
+      "label": "倒せる",
+      "reading": "たおせる",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "ウェイター",
       "reading": "うぇいたー",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -64150,12 +64156,6 @@
       "kind": "word",
       "label": "消防車",
       "reading": "しょうぼうしゃ",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "倒せる",
-      "reading": "たおせる",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -65696,6 +65696,12 @@
     },
     {
       "kind": "word",
+      "label": "いくらか",
+      "reading": "いくらか",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "ガラスケース",
       "reading": "がらすけーす",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -65728,12 +65734,6 @@
       "kind": "word",
       "label": "オリジナルグッズ",
       "reading": "おりじなるぐっず",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "いくらか",
-      "reading": "いくらか",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -66542,14 +66542,14 @@
     },
     {
       "kind": "word",
-      "label": "チャーハン",
-      "reading": "ちゃーはん",
+      "label": "間作",
+      "reading": "かんさく",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
       "kind": "word",
-      "label": "間作",
-      "reading": "かんさく",
+      "label": "チャーハン",
+      "reading": "ちゃーはん",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -67292,14 +67292,14 @@
     },
     {
       "kind": "word",
-      "label": "間貸",
-      "reading": "まがし",
+      "label": "折紙",
+      "reading": "おりがみ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
       "kind": "word",
-      "label": "折紙",
-      "reading": "おりがみ",
+      "label": "間貸",
+      "reading": "まがし",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {
@@ -68018,6 +68018,12 @@
     },
     {
       "kind": "word",
+      "label": "ソーセージ",
+      "reading": "そーせーじ",
+      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
+    },
+    {
+      "kind": "word",
       "label": "こうとう",
       "reading": "こうとう",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
@@ -68032,12 +68038,6 @@
       "kind": "word",
       "label": "おり",
       "reading": "おり",
-      "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
-    },
-    {
-      "kind": "word",
-      "label": "ソーセージ",
-      "reading": "そーせーじ",
       "reason": "No verified whole-word/reading reference or reviewed whole-expression estimate; paper level and component-word grades are not used."
     },
     {

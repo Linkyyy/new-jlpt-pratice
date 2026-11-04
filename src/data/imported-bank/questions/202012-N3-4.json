@@ -86,6 +86,48 @@
       }
     },
     {
+      "id": "imported:202012:N3:4:7143:76",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 76 题：请听音频后选择答案。",
+      "instruction": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "お菓子"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "扇子"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "茶碗"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "カレンダー"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": [
+        "该题库未提供解析。"
+      ],
+      "sourceQuestionNumber": 76,
+      "sourceId": 7143,
+      "media": {
+        "images": [
+          "pic/320201276.jpg"
+        ],
+        "audio": "audio/202012n3/3.mp3"
+      }
+    },
+    {
       "id": "imported:202012:N3:4:7144:77",
       "level": "N3",
       "category": "听力",
@@ -163,6 +205,48 @@
       "media": {
         "images": [],
         "audio": "audio/202012n3/5.mp3"
+      }
+    },
+    {
+      "id": "imported:202012:N3:4:7146:79",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 79 题：请听音频后选择答案。",
+      "instruction": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "床にうつぶせして、両手は伸ばしたままで、両足は床につける"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "マットにうつぶせに寝て、背中を床につけて両手をゆっくりあげる"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "仰向けに寝って、背中を床につけて両足をあげる"
+        },
+        {
+          "id": "D",
+          "label": "4",
+          "text": "下に向いて、両足は伸ばしたままでゆっくりあげる"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t体操教室で先生が話しています。生徒はどんな姿勢をとりますか。</p>\n<p  >\tまずマットの上に仰向けに寝てください。</p>\n<p  >\tうつ伏せじゃなくて、仰向けですよ。</p>\n<p  >\t上を向いて、背中を床につけてください。</p>\n<p  >\t両足は伸ばしたままで、両手は体の横に置いてください。</p>\n<p  >\t両足をゆっくり上げて床から10センチのところで止めます。</p>\n<p  >\tはい、そのままの姿勢で10秒数えます。</p>\n<p  >\t生徒はどんな姿勢をとりますか。</p><br><p>听力译文</p><p>老师正在体操教室说话。学生要采取怎样的姿势呢。</p>\n<p>首先请仰躺在垫子上。</p>\n<p>不是趴着，而是躺着哦。</p>\n<p>请将身体朝上，背部贴紧地板。</p>\n<p>请保持双腿伸直，双手放在身体两侧。</p>\n<p>双腿慢慢抬到离地板十厘米处后停住。</p>\n<p>很好，就保持这样的姿势数10秒。</p>\n<p>学生要采取怎样的姿势呢。</p>"
+      ],
+      "sourceQuestionNumber": 79,
+      "sourceId": 7146,
+      "media": {
+        "images": [
+          "pic/320201279.jpg"
+        ],
+        "audio": "audio/202012n3/6.mp3"
       }
     },
     {
@@ -526,6 +610,154 @@
       }
     },
     {
+      "id": "imported:202012:N3:4:7156:89",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 89 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t自己紹介をします。何と言いますか。</p>\n<p  >\t1．佐藤をお呼びします。</p>\n<p  >\t2．佐藤と申します。</p>\n<p  >\t3．佐藤だとおしゃっています。</p><br><p>听力译文</p><p>做自我介绍时该说什么。</p>\n<p>1.我去叫佐藤过来。</p>\n<p>2.我叫佐藤。</p>\n<p>3.他说他叫佐藤。</p>"
+      ],
+      "sourceQuestionNumber": 89,
+      "sourceId": 7156,
+      "media": {
+        "images": [
+          "pic/320201289.jpg"
+        ],
+        "audio": "audio/202012n3/16.mp3"
+      }
+    },
+    {
+      "id": "imported:202012:N3:4:7157:90",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 90 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t外出していましが、会社に帰ってきました。何と言いますか。</p>\n<p  >\t1．これから外出します</p>\n<p  >\t2．今戾りました。</p>\n<p  >\t3．どうぞ、お気をつけて。</p><br><p>听力译文</p><p>外出后回到公司该说什么。</p>\n<p>1.我现在要出去。</p>\n<p>2.我回来了。</p>\n<p>3.请多加小心。</p>"
+      ],
+      "sourceQuestionNumber": 90,
+      "sourceId": 7157,
+      "media": {
+        "images": [
+          "pic/320201290.jpg"
+        ],
+        "audio": "audio/202012n3/17.mp3"
+      }
+    },
+    {
+      "id": "imported:202012:N3:4:7158:91",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 91 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t友達がケーキを出してくれました。甘いものが好きではありません。友達に何と言いますか。</p>\n<p  >\t1．甘いものは嫌いじゃないんだ。</p>\n<p  >\t2．甘いものほど好きなものはないんだ。</p>\n<p  >\t3．甘いものはちょっと苦手なんだ。</p><br><p>听力译文</p><p>朋友给了我蛋糕。我不喜欢甜食。要对朋友说什么。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>朋友给你一块蛋糕，但你不喜欢吃甜食，该对朋友说什么呢。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>朋友给了我蛋糕。我并不喜欢甜食。要对朋友说什么。</p>\n<p>解析：3  我吃甜食不太行。</p>\n<p>翻译</p>\n<p>朋友给你一块蛋糕，但你不喜欢吃甜食，该对朋友说什么呢。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>原文</p>\n<p>朋友给了我蛋糕。我不喜欢甜食。要对朋友说什么。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>"
+      ],
+      "sourceQuestionNumber": 91,
+      "sourceId": 7158,
+      "media": {
+        "images": [
+          "pic/320201291.jpg"
+        ],
+        "audio": "audio/202012n3/18.mp3"
+      }
+    },
+    {
+      "id": "imported:202012:N3:4:7159:92",
+      "level": "N3",
+      "category": "听力",
+      "prompt": "听力第 92 题：请听音频后选择答案。",
+      "instruction": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
+      "richText": true,
+      "options": [
+        {
+          "id": "A",
+          "label": "1",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "label": "2",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "label": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": [
+        "<p>听力原文</p>\n<p  >\t工場です。後輩に一緒に機械を運んでもらいたいです。何といいますか。</p>\n<p  >\t1. 良かったら、一緒に運ぶよ。</p>\n<p  >\t2. これ、運ぶから、そっち持って。</p>\n<p  >\t3. 運ぶのを手伝ってやろうか。</p><br><p>听力译文</p><p>在工厂。想让后辈一起来搬机器。要说什么呢。</p>\n<p>1. 如果可以的话，一起来搬吧。</p>\n<p>2. 要搬这个，你去搬那头。</p>\n<p>3. 我帮你搬吧。</p>\n<p>你在工厂，想请后辈一起搬运器械，该说什么呢。</p>\n<p>1. 如果你方便的话，我们一起搬吧。</p>\n<p>2. 要搬这个，你去搬那头。</p>\n<p>3. 我帮你搬吧。</p>\n<p>原文</p>\n<p>工場です。後輩に一緒に機械を運んでもらいたいです。何といいますか。</p>\n<p>1. 良かったら、一緒に運ぶよ。</p>\n<p>2. これ、運ぶから、そっち持って。</p>\n<p>3. 運ぶのを手伝ってやろうか。</p>"
+      ],
+      "sourceQuestionNumber": 92,
+      "sourceId": 7159,
+      "media": {
+        "images": [
+          "pic/320201292.jpg"
+        ],
+        "audio": "audio/202012n3/19.mp3"
+      }
+    },
+    {
       "id": "imported:202012:N3:4:7160:93",
       "level": "N3",
       "category": "听力",
@@ -841,234 +1073,5 @@
       }
     }
   ],
-  "unavailable": [
-    {
-      "id": "imported:202012:N3:4:7143:76",
-      "sourceId": 7143,
-      "questionNumber": 76,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201276.jpg",
-        "audio": "audio/202012n3/3.mp3"
-      },
-      "raw": {
-        "id": 7143,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 76,
-        "typeQuestionId": 2,
-        "type": 4,
-        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201276.jpg",
-        "audio": "audio/202012n3/3.mp3",
-        "article": null,
-        "option1": " お菓子",
-        "option2": " 扇子",
-        "option3": " 茶碗",
-        "option4": " カレンダー",
-        "answer": 4,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": " ",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202012:N3:4:7146:79",
-      "sourceId": 7146,
-      "questionNumber": 79,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201279.jpg",
-        "audio": "audio/202012n3/6.mp3"
-      },
-      "raw": {
-        "id": 7146,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 79,
-        "typeQuestionId": 5,
-        "type": 4,
-        "bigTitle": "<p>問題1 では、まず質問を聞いてください。それから話を聞いて、用紙の1から4の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201279.jpg",
-        "audio": "audio/202012n3/6.mp3",
-        "article": null,
-        "option1": " 床にうつぶせして、両手は伸ばしたままで、両足は床につける",
-        "option2": " マットにうつぶせに寝て、背中を床につけて両手をゆっくりあげる",
-        "option3": " 仰向けに寝って、背中を床につけて両足をあげる",
-        "option4": " 下に向いて、両足は伸ばしたままでゆっくりあげる",
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t体操教室で先生が話しています。生徒はどんな姿勢をとりますか。</p>\n<p  >\tまずマットの上に仰向けに寝てください。</p>\n<p  >\tうつ伏せじゃなくて、仰向けですよ。</p>\n<p  >\t上を向いて、背中を床につけてください。</p>\n<p  >\t両足は伸ばしたままで、両手は体の横に置いてください。</p>\n<p  >\t両足をゆっくり上げて床から10センチのところで止めます。</p>\n<p  >\tはい、そのままの姿勢で10秒数えます。</p>\n<p  >\t生徒はどんな姿勢をとりますか。</p><br><p>听力译文</p><p>老师正在体操教室说话。学生要采取怎样的姿势呢。</p>\n<p>首先请仰躺在垫子上。</p>\n<p>不是趴着，而是躺着哦。</p>\n<p>请将身体朝上，背部贴紧地板。</p>\n<p>请保持双腿伸直，双手放在身体两侧。</p>\n<p>双腿慢慢抬到离地板十厘米处后停住。</p>\n<p>很好，就保持这样的姿势数10秒。</p>\n<p>学生要采取怎样的姿势呢。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202012:N3:4:7156:89",
-      "sourceId": 7156,
-      "questionNumber": 89,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201289.jpg",
-        "audio": "audio/202012n3/16.mp3"
-      },
-      "raw": {
-        "id": 7156,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 89,
-        "typeQuestionId": 15,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201289.jpg",
-        "audio": "audio/202012n3/16.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t自己紹介をします。何と言いますか。</p>\n<p  >\t1．佐藤をお呼びします。</p>\n<p  >\t2．佐藤と申します。</p>\n<p  >\t3．佐藤だとおしゃっています。</p><br><p>听力译文</p><p>做自我介绍时该说什么。</p>\n<p>1.我去叫佐藤过来。</p>\n<p>2.我叫佐藤。</p>\n<p>3.他说他叫佐藤。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202012:N3:4:7157:90",
-      "sourceId": 7157,
-      "questionNumber": 90,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201290.jpg",
-        "audio": "audio/202012n3/17.mp3"
-      },
-      "raw": {
-        "id": 7157,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 90,
-        "typeQuestionId": 16,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201290.jpg",
-        "audio": "audio/202012n3/17.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 2,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t外出していましが、会社に帰ってきました。何と言いますか。</p>\n<p  >\t1．これから外出します</p>\n<p  >\t2．今戾りました。</p>\n<p  >\t3．どうぞ、お気をつけて。</p><br><p>听力译文</p><p>外出后回到公司该说什么。</p>\n<p>1.我现在要出去。</p>\n<p>2.我回来了。</p>\n<p>3.请多加小心。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202012:N3:4:7158:91",
-      "sourceId": 7158,
-      "questionNumber": 91,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201291.jpg",
-        "audio": "audio/202012n3/18.mp3"
-      },
-      "raw": {
-        "id": 7158,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 91,
-        "typeQuestionId": 17,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201291.jpg",
-        "audio": "audio/202012n3/18.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 3,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t友達がケーキを出してくれました。甘いものが好きではありません。友達に何と言いますか。</p>\n<p  >\t1．甘いものは嫌いじゃないんだ。</p>\n<p  >\t2．甘いものほど好きなものはないんだ。</p>\n<p  >\t3．甘いものはちょっと苦手なんだ。</p><br><p>听力译文</p><p>朋友给了我蛋糕。我不喜欢甜食。要对朋友说什么。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>朋友给你一块蛋糕，但你不喜欢吃甜食，该对朋友说什么呢。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>朋友给了我蛋糕。我并不喜欢甜食。要对朋友说什么。</p>\n<p>解析：3  我吃甜食不太行。</p>\n<p>翻译</p>\n<p>朋友给你一块蛋糕，但你不喜欢吃甜食，该对朋友说什么呢。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了</p>\n<p>3. 我有点吃不了甜食。</p>\n<p>原文</p>\n<p>朋友给了我蛋糕。我不喜欢甜食。要对朋友说什么。</p>\n<p>1. 我不讨厌甜食。</p>\n<p>2. 我没有比甜食更喜欢的东西了。</p>\n<p>3. 我有点吃不了甜食。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    },
-    {
-      "id": "imported:202012:N3:4:7159:92",
-      "sourceId": 7159,
-      "questionNumber": 92,
-      "reasons": [
-        "缺少配套图片"
-      ],
-      "media": {
-        "picture": "pic/320201292.jpg",
-        "audio": "audio/202012n3/19.mp3"
-      },
-      "raw": {
-        "id": 7159,
-        "time": "202012",
-        "level": "n3",
-        "questionId": 92,
-        "typeQuestionId": 18,
-        "type": 4,
-        "bigTitle": "<p>問題4 では、絵を見ながら質問を聞いてください。やじるし(→)の人は何とか言いますか。1から3の中から、最もよいものを一つ選んでください。</p>",
-        "question": "<p></p>",
-        "littleQuestion": null,
-        "picture": "pic/320201292.jpg",
-        "audio": "audio/202012n3/19.mp3",
-        "article": null,
-        "option1": " 1",
-        "option2": " 2",
-        "option3": " 3",
-        "option4": null,
-        "answer": 1,
-        "isMultiple": 0,
-        "multipleIds": null,
-        "assistant": null,
-        "assistantNew": "<p>听力原文</p>\n<p  >\t工場です。後輩に一緒に機械を運んでもらいたいです。何といいますか。</p>\n<p  >\t1. 良かったら、一緒に運ぶよ。</p>\n<p  >\t2. これ、運ぶから、そっち持って。</p>\n<p  >\t3. 運ぶのを手伝ってやろうか。</p><br><p>听力译文</p><p>在工厂。想让后辈一起来搬机器。要说什么呢。</p>\n<p>1. 如果可以的话，一起来搬吧。</p>\n<p>2. 要搬这个，你去搬那头。</p>\n<p>3. 我帮你搬吧。</p>\n<p>你在工厂，想请后辈一起搬运器械，该说什么呢。</p>\n<p>1. 如果你方便的话，我们一起搬吧。</p>\n<p>2. 要搬这个，你去搬那头。</p>\n<p>3. 我帮你搬吧。</p>\n<p>原文</p>\n<p>工場です。後輩に一緒に機械を運んでもらいたいです。何といいますか。</p>\n<p>1. 良かったら、一緒に運ぶよ。</p>\n<p>2. これ、運ぶから、そっち持って。</p>\n<p>3. 運ぶのを手伝ってやろうか。</p>",
-        "extending": [],
-        "parentId": null,
-        "articleAssistant": null
-      }
-    }
-  ]
+  "unavailable": []
 }
