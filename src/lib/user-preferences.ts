@@ -18,7 +18,7 @@ export const defaultFrequencyDisplay = { examplesExpanded: true, previewsExpande
 export const PREFERENCES_STORAGE_KEY = "jlpt-practice.preferences.v1";
 export const defaultPreferences: UserPreferences = {
   version: 1,
-  home: { source: "imported", level: "N2", year: "", type: "all", mode: "practice" },
+  home: { source: "imported", level: "N1", year: "201412", type: "all", mode: "practice" },
   practice: { swipeEnabled: true, buttonsEnabled: true, keyboardEnabled: true, instantFeedback: false, fontSize: 18, mobileFontSize: 16, playbackRate: 1 },
   favorites: { mode: "preview", fontSize: 16, sort: "recent", mistakesSort: "wrong", dueSort: "due" },
   frequency: defaultFrequencyDisplay,

@@ -289,7 +289,7 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["导出参数无效。","出力条件が無効です。","Invalid export parameters."],
   ["导出正在处理中，请稍后重试。","別の出力を処理中です。しばらくしてから再試行してください。","Exports are being processed. Please retry shortly."],
   ["结果过多，请增加筛选条件后导出。","件数が多すぎます。条件を絞ってから出力してください。","Too many results. Narrow your filters before exporting."],
-  ["学习工具","学習ツール","Study tools"],
+  ["更多工具","その他のツール","More tools"],
   ["题库词频统计","問題集の語句頻度","Question-bank frequencies"],
   ["正在加载词频统计……","頻度を読み込み中…","Loading frequency statistics…"],
   ["从题库正文看高频词与表达","問題文によく出る語句を調べる","Explore words and expressions in question text"],
