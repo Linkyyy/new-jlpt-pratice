@@ -1,0 +1,15 @@
+{
+  "name": "jlpt-media-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.18.1" },
+  "scripts": {
+    "download": "node download-media.mjs",
+    "test": "node --test test-download-media.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5",
+    "undici": "7.30.1"
+  }
+}
