@@ -34,8 +34,9 @@
           "text": "あさっての午後6時"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>原约后天、明天无空位，最后接受今天下午六点加号。</p><p>原文依据：今日いらっしゃることはできますか？午後6時</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,229\" data-endtime=\"00:00:16,003\">\t電話で男の人と歯医者の受付の人が話しています。男の人はいつ、歯医者に行きますか。</p><p class=\"moji-content\" data-starttime=\"00:00:17,726\" data-endtime=\"00:00:21,876\">\t男：もしもし、いつもお世話になっている山本ですが…。</p><p class=\"moji-content\" data-starttime=\"00:00:22,377\" data-endtime=\"00:00:25,001\">\t女：山本さん、どうされましたか？</p><p class=\"moji-content\" data-starttime=\"00:00:25,001\" data-endtime=\"00:00:34,281\">\t男：先月診ていただいた歯、また痛くなってきちゃって。明日の午前中、10時とか空いてませんか？</p><p class=\"moji-content\" data-starttime=\"00:00:34,473\" data-endtime=\"00:00:45,929\">\t女：少々お待ちください。えっと、山本さんの次の予約は明後日の午後6時ですね。</p><p class=\"moji-content\" data-starttime=\"00:00:45,929\" data-endtime=\"00:00:46,929\">\t男：はい。</p><p class=\"moji-content\" data-starttime=\"00:00:46,929\" data-endtime=\"00:01:03,868\">\t女：それより前がよろしいんですね？すみません、明日は空いていないですね。今日いらっしゃることはできますか？午後6時はいかがですか？待っていただくことになるかもしれませんが…。</p><p class=\"moji-content\" data-starttime=\"00:01:04,113\" data-endtime=\"00:01:10,930\">\t男：あー、予定が入ってるんですが、でもすごく痛いのでお願いします。</p><p class=\"moji-content\" data-starttime=\"00:01:16,557\" data-endtime=\"00:01:20,219\">\t男の人はいつ、歯医者に行きますか。</p>"
       ],
       "sourceQuestionNumber": 74,
@@ -74,8 +75,9 @@
           "text": "はがきを出しに行く"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>新品已检查完，先寄促销明信片，回来再整理仓库和货架。</p><p>原文依据：まずそれを出してきてもらえる</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:09,434\" data-endtime=\"00:00:19,098\">靴屋で店員の女の人と店長が話しています。女の人はこれからまず、何をしますか。</p><p class=\"moji-content\" data-starttime=\"00:00:20,826\" data-endtime=\"00:00:28,698\">女：店長、昨日届いた新商品のチェック、終わったんですけど、他に何かやっておくことはありますか？</p><p class=\"moji-content\" data-starttime=\"00:00:28,929\" data-endtime=\"00:00:41,678\">男：うーん、いろいろあるけど、倉庫の整理とか、棚の掃除とか…。あ、セールのお知らせのはがき、準備できてるからあれも送らないといけないな。</p><p class=\"moji-content\" data-starttime=\"00:00:41,993\" data-endtime=\"00:00:43,109\">女：そうですね。</p><p class=\"moji-content\" data-starttime=\"00:00:43,546\" data-endtime=\"00:00:47,094\">男：セール近いからまずそれを出してきてもらえる？</p><p class=\"moji-content\" data-starttime=\"00:00:47,353\" data-endtime=\"00:00:52,940\">女：わかりました。倉庫の整理や棚の掃除はどうしましょうか？</p><p class=\"moji-content\" data-starttime=\"00:00:52,940\" data-endtime=\"00:00:55,665\">男：それは戻ってから一緒にやろう。</p><p class=\"moji-content\" data-starttime=\"00:00:55,990\" data-endtime=\"00:00:56,569\">女：はい。</p><p class=\"moji-content\" data-starttime=\"00:01:02,248\" data-endtime=\"00:01:06,373\">女の人はこれからまず、何をしますか。</p>"
       ],
       "sourceQuestionNumber": 75,
@@ -156,8 +158,9 @@
           "text": "みんなにれんらくする"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>最后由邮件改成打电话取消酒店，男生通知其他人。</p><p>原文依据：電話の方がいいんじゃない</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,632\" data-endtime=\"00:00:18,624\">大学で女の学生と男の学生が話しています。女の学生はこれから何をしなければなりませんか。</p><p class=\"moji-content\" data-starttime=\"00:00:20,288\" data-endtime=\"00:00:31,040\">女：あ、中山さん。天気予報見た？台風が来るみたいだね。今週末、みんなで行く旅行、どうする？</p><p class=\"moji-content\" data-starttime=\"00:00:31,360\" data-endtime=\"00:00:40,064\">男：うん、さっき他のみんなと話してたんだけど、今回は海で遊ぶのが目的だから行くのやめた方がよさそうじゃない？</p><p class=\"moji-content\" data-starttime=\"00:00:40,384\" data-endtime=\"00:00:42,087\">女：うん、そうだよね。</p><p class=\"moji-content\" data-starttime=\"00:00:42,404\" data-endtime=\"00:00:47,488\">男：ホテル予約してくれたのに悪いんだけど、キャンセルの連絡しておいてくれない？</p><p class=\"moji-content\" data-starttime=\"00:00:47,744\" data-endtime=\"00:00:49,664\">女：わかった。メールしとくね。</p><p class=\"moji-content\" data-starttime=\"00:00:49,856\" data-endtime=\"00:00:56,832\">男：今週末のことだし、電話の方がいいんじゃない？今日連絡すればキャンセル料はかからないはずだよね？</p><p class=\"moji-content\" data-starttime=\"00:00:57,152\" data-endtime=\"00:01:03,296\">女：あ、そうだね。メールだとすぐ確認してもらえないかもしれないからね。</p><p class=\"moji-content\" data-starttime=\"00:01:03,552\" data-endtime=\"00:01:07,008\">男：ありがとう。みんなには僕から連絡しとくよ。</p><p class=\"moji-content\" data-starttime=\"00:01:12,744\" data-endtime=\"00:01:17,796\">女の学生はこれから何をしなければなりませんか。</p>"
       ],
       "sourceQuestionNumber": 77,
@@ -196,8 +199,9 @@
           "text": "本を持ってくる"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>今天先邮件发资料，明天带书；不用印刷也不用再借书。</p><p>原文依据：資料は今日中にメールで送って</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:08,062\" data-endtime=\"00:00:19,281\">大学で女の学生と男の先生が話しています。女の学生はこの後まず何をしなければなりませんか。</p><p class=\"moji-content\" data-starttime=\"00:00:20,945\" data-endtime=\"00:00:31,925\">女：先生、今度の研究会で発表する研究の発表資料を見ていただきたいんですが、今週中に少しお時間いただけますか？</p><p class=\"moji-content\" data-starttime=\"00:00:31,925\" data-endtime=\"00:00:42,257\">男：ああ、明日の午後4時に私の研究室でいいですか？資料は今日中にメールで送っておいてください。</p><p class=\"moji-content\" data-starttime=\"00:00:42,257\" data-endtime=\"00:00:49,169\">女：はい、ありがとうございます。印刷したものも明日、持ってきた方がいいですか？</p><p class=\"moji-content\" data-starttime=\"00:00:49,297\" data-endtime=\"00:00:51,793\">男：パソコンで見るからいいですよ。</p><p class=\"moji-content\" data-starttime=\"00:00:51,793\" data-endtime=\"00:00:55,522\">女：わかりました。私もパソコンを持ってきます。</p><p class=\"moji-content\" data-starttime=\"00:00:55,522\" data-endtime=\"00:00:59,153\">男：以前紹介した本、今回使いましたか？</p><p class=\"moji-content\" data-starttime=\"00:00:59,281\" data-endtime=\"00:01:03,943\">女：はい、図書館で借りました。今、家にありますが…。</p><p class=\"moji-content\" data-starttime=\"00:01:03,943\" data-endtime=\"00:01:10,481\">男：じゃ、明日、それも持ってきてください。一応ちょっと確認したいから。</p><p class=\"moji-content\" data-starttime=\"00:01:10,809\" data-endtime=\"00:01:11,833\">女：わかりました。</p><p class=\"moji-content\" data-starttime=\"00:01:17,329\" data-endtime=\"00:01:22,919\">質問：女の学生はこの後まず何をしなければなりませんか。</p>"
       ],
       "sourceQuestionNumber": 78,
@@ -236,8 +240,9 @@
           "text": "しょうひんをはこにつめる"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>制服已换，派传单前需先试吃苹果派。</p><p>原文依据：その前にここにあるりんごのパイを試食</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:08,660\" data-endtime=\"00:00:21,524\">ケーキ屋で店長が新しいアルバイトの人たちに話しています。アルバイトの人はこの後まず何をしなければなりませんか。</p><p class=\"moji-content\" data-starttime=\"00:00:23,316\" data-endtime=\"00:01:03,956\">女：おはようございます。今日からよろしくお願いします。早速制服に着替えていただきましたが、皆さんにはこれから店の前で新商品のりんごのパイのちらしを配ってもらいます。その前にここにあるりんごのパイを試食してください。味がわからないとお客様にもご紹介できないと思うので。もうすぐ今日2回目のパイが焼けます。声をかけるので、出来上がった商品を箱に詰めるのを手伝ってください。それまでちらしの方、お願いします。</p><p class=\"moji-content\" data-starttime=\"00:01:09,772\" data-endtime=\"00:01:15,540\">アルバイトの人はこの後まず何をしなければなりませんか。</p>"
       ],
       "sourceQuestionNumber": 79,
@@ -276,8 +281,9 @@
           "text": "かぞくがよろこぶ食べ物"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>衣服和绘本均有顾虑，最后选全家能享用的食品。</p><p>原文依据：家族みんなで食べられるおいしいお菓子や果物</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,334\" data-endtime=\"00:00:15,678\">会社で男の人と女の人が話しています。男の人はどんなプレゼントを買うことにしましたか。</p><p class=\"moji-content\" data-starttime=\"00:00:20,275\" data-endtime=\"00:00:34,430\">男：佐藤さん。佐藤さんって小さいお子さんがいるよね？友達の家に赤ちゃんが生まれたから何かプレゼントをあげたいんだけど、どんなものがいいかわからなくて…。佐藤さんはどんなものがうれしかった？</p><p class=\"moji-content\" data-starttime=\"00:00:34,430\" data-endtime=\"00:00:42,622\">女：私は普段使うタオルのようなものより、自分では買わないちょっといい子供服がうれしかった。</p><p class=\"moji-content\" data-starttime=\"00:00:42,878\" data-endtime=\"00:00:49,918\">男：服はすぐ小さくなっちゃうよね？僕は大きくなってから読めるような絵本もいいと思ったんだけど…。</p><p class=\"moji-content\" data-starttime=\"00:00:49,918\" data-endtime=\"00:01:04,889\">女：あー、絵本はよくもらうから同じの持ってるかもしれないよ。あ、家族みんなで食べられるおいしいお菓子や果物はどう？赤ちゃんのお世話で疲れているだろうから。</p><p class=\"moji-content\" data-starttime=\"00:01:04,889\" data-endtime=\"00:01:11,166\">男：いいね。赤ちゃんのものを選ぶの難しいからそうする。ありがとう。</p><p class=\"moji-content\" data-starttime=\"00:01:16,660\" data-endtime=\"00:01:20,969\">男の人はどんなプレゼントを買うことにしましたか。</p>"
       ],
       "sourceQuestionNumber": 80,
@@ -316,8 +322,9 @@
           "text": "まくらが高すぎること"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>睡前设备和枕头已调整，最后认定暖气导致室温过高。</p><p>原文依据：やっぱり部屋の温度じゃない</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,304\" data-endtime=\"00:00:17,882\">女の人と男の人が話しています。男の人は女の人が最近よく眠れない原因は何だと言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:22,287\" data-endtime=\"00:00:25,448\">女：最近、あんまりよく眠れないんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:25,679\" data-endtime=\"00:00:34,511\">男：え、そうなの？この前、インターネットで読んだんだけど、眠れないのは部屋の温度と関係があるんだって。</p><p class=\"moji-content\" data-starttime=\"00:00:34,511\" data-endtime=\"00:00:41,242\">女：え、知らなかった。最近寒いから暖房付けて寝てるんだけど…。</p><p class=\"moji-content\" data-starttime=\"00:00:41,551\" data-endtime=\"00:00:54,031\">男：寒すぎても眠れないけど、部屋の温度を上げすぎてもよく眠れないことがあるんだって。それから寝る前にパソコンや携帯を使うのもよくないらしいよ。</p><p class=\"moji-content\" data-starttime=\"00:00:54,031\" data-endtime=\"00:00:57,292\">女：それは知ってる。だからやめたんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:57,642\" data-endtime=\"00:01:03,035\">男：他にも部屋は暗い方がいいし、枕の高さも大切みたい。</p><p class=\"moji-content\" data-starttime=\"00:01:03,335\" data-endtime=\"00:01:12,955\">女：うん。寝る時は電気を全部消してるし、枕は替えたんだ。前のは高すぎたから首が痛くて。</p><p class=\"moji-content\" data-starttime=\"00:01:13,461\" data-endtime=\"00:01:17,947\">男：じゃ、やっぱり部屋の温度じゃない？消して寝てみたら？</p><p class=\"moji-content\" data-starttime=\"00:01:18,498\" data-endtime=\"00:01:19,502\">女：そうだね。</p><p class=\"moji-content\" data-starttime=\"00:01:25,232\" data-endtime=\"00:01:32,475\">男の人は女の人が最近よく眠れない原因は何だと言っていますか。</p>"
       ],
       "sourceQuestionNumber": 81,
@@ -356,8 +363,9 @@
           "text": "家をあたためること"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>女生家乡用温泉水养鱼；发电及供暖是别的城镇。</p><p>原文依据：温泉の水を利用して育てた魚</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,650\" data-endtime=\"00:00:17,200\">女の学生と男の留学生が話しています。女の学生の出身地では温泉は何に利用されていると言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:22,675\" data-endtime=\"00:00:28,050\">女：ジョンさん。先週、「温泉に行く」って言ってたけど、どうだった？</p><p class=\"moji-content\" data-starttime=\"00:00:28,075\" data-endtime=\"00:00:31,975\">男：よかったよ。今週は違う温泉に行くんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:31,975\" data-endtime=\"00:00:39,900\">女：いいね。あ、ね。温泉の利用方法はお風呂だけじゃないって知ってた？</p><p class=\"moji-content\" data-starttime=\"00:00:39,900\" data-endtime=\"00:00:44,175\">男：温泉の水で作った化粧品なら売ってるの見たよ。</p><p class=\"moji-content\" data-starttime=\"00:00:44,200\" data-endtime=\"00:01:02,375\">女：そういうのもあるね。私の出身地も温泉が有名なんだけど、温泉の水を利用して育てた魚を売ってるんだよ。海から遠くても海の水の代わりに温泉の水を使って育てられるんだって。</p><p class=\"moji-content\" data-starttime=\"00:01:02,375\" data-endtime=\"00:01:04,250\">男：へえー、すごい。</p><p class=\"moji-content\" data-starttime=\"00:01:04,350\" data-endtime=\"00:01:20,925\">女：前にテレビで見たけど、他の町では温泉を利用して作った電気を近くの病院で使ったりしてるんだって。温泉の熱を利用して家の中を暖めている町もあるらしいよ。</p><p class=\"moji-content\" data-starttime=\"00:01:20,925\" data-endtime=\"00:01:22,375\">男：そうなんだ。</p><p class=\"moji-content\" data-starttime=\"00:01:27,625\" data-endtime=\"00:01:35,050\">質問：女の学生の出身地では温泉は何に利用されていると言っていますか。</p>"
       ],
       "sourceQuestionNumber": 82,
@@ -396,8 +404,9 @@
           "text": "よく晴れるが寒い"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>明天周六从早到晚冷雨，晴冷是周日。</p><p>原文依据：明日八日土曜日は朝から冷たい雨</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,875\" data-endtime=\"00:00:16,575\">ラジオで女の人が天気予報を伝えています。明日の天気はどうなると言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:22,425\" data-endtime=\"00:00:49,975\">女：今週はよく晴れて、暖かな日が続きましたが、週末は寒くなりそうです。明日八日土曜日は朝から冷たい雨が降り、夜まで続くでしょう。雨は日曜日には止みますが、寒さは続きます。10日月曜日は暖かくなりそうですが、降ったり止んだりのお天気になるでしょう。</p><p class=\"moji-content\" data-starttime=\"00:00:55,200\" data-endtime=\"00:00:59,075\">質問：明日の天気はどうなると言っていますか。</p>"
       ],
       "sourceQuestionNumber": 83,
@@ -436,8 +445,9 @@
           "text": "世話に時間がかからないばら"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>选玫瑰应根据种植地点日照等环境，而非只看个人喜好。</p><p>原文依据：その場所に合ったバラを選ぶ</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:04,725\" data-endtime=\"00:00:14,425\">テレビで花の専門家が話しています。専門家はどんなバラを選んだ方がいいと言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:18,575\" data-endtime=\"00:01:01,600\">男：バラの花、きれいですよね？皆さんはご自分でバラを育てたいと思った時、どんなバラを選んでいますか？やはり、好きな色や形のバラでしょうか？香りで選ぶ方もいるかもしれませんね。いろいろな選び方がありますが、日がよく当たるかなど植える場所をよく見て、その場所に合ったバラを選ぶのがいいです。その方が花がきれいにたくさん咲きます。バラは虫が付きやすく、世話に時間がかかりますが、それも一緒に楽しんでください。</p><p class=\"moji-content\" data-starttime=\"00:01:06,725\" data-endtime=\"00:01:12,200\">質問：専門家はどんなバラを選んだ方がいいと言っていますか。</p>"
       ],
       "sourceQuestionNumber": 84,
@@ -476,8 +486,9 @@
           "text": "せんでんが足りなかったから"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>男方坚持是价格贵导致滞销，否定气温因素。</p><p>原文依据：価格がちょっと高いと思う</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,125\" data-endtime=\"00:00:23,050\">アイスクリーム屋で店員の男の人と女の人が話しています。男の人はどうして新商品のアイスがあまり売れなかったと言っていますか。男の人です。</p><p class=\"moji-content\" data-starttime=\"00:00:28,550\" data-endtime=\"00:00:37,200\">男：新商品のいちごアイス、結構売れ残っちゃったね。やっぱり、価格がちょっと高いと思うんだよね。</p><p class=\"moji-content\" data-starttime=\"00:00:37,250\" data-endtime=\"00:00:42,000\">女：今日はそんなに暑くならなかったことも影響してるんじゃない？</p><p class=\"moji-content\" data-starttime=\"00:00:42,025\" data-endtime=\"00:00:47,550\">男：でも他のアイスは結構売れてたから気温は関係ないと思うんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:47,600\" data-endtime=\"00:00:59,000\">女：そっか。うーん、私はそんなに高いとは思わないけど、昨日買って食べたけど、いちごの味がしっかりしておいしかったよ。</p><p class=\"moji-content\" data-starttime=\"00:00:59,000\" data-endtime=\"00:01:06,750\">男：うん。味もいいんだから他に売れない理由がないなと思って。宣伝も結構されてるし…。</p><p class=\"moji-content\" data-starttime=\"00:01:11,650\" data-endtime=\"00:01:19,300\">質問：男の人はどうして新商品のアイスがあまり売れなかったと言っていますか。</p>"
       ],
       "sourceQuestionNumber": 85,
@@ -516,8 +527,9 @@
           "text": "选项 4（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>农活超乎想象辛苦，但获得独特经历而满意。</p><p>原文依据：他ではできない経験ができた</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,200\" data-endtime=\"00:00:14,500\">会社で男の人と女の人がある農業プログラムについて話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:15,825\" data-endtime=\"00:00:23,125\">男：この間、友達に誘われて農業を1日経験するプログラムに参加したんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:23,150\" data-endtime=\"00:00:26,000\">女：そうなの？どうだった？</p><p class=\"moji-content\" data-starttime=\"00:00:26,050\" data-endtime=\"00:00:34,400\">男：土を掘ったり、重い物を運んだり、力仕事が多いから想像以上に大変だった。</p><p class=\"moji-content\" data-starttime=\"00:00:34,400\" data-endtime=\"00:00:36,000\">女：そうなんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:36,075\" data-endtime=\"00:00:49,900\">男：腕や腰が痛くて…でも久しぶりに自然の中で体を動かして、お昼に出たおにぎりがおいしくてね。他ではできない経験ができたよ。</p><p class=\"moji-content\" data-starttime=\"00:00:49,950\" data-endtime=\"00:00:51,600\">女：そっか。</p><p class=\"moji-content\" data-starttime=\"00:00:56,575\" data-endtime=\"00:01:03,100\">質問：男の人はこのプロジェクトに参加してどうだったと言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:01:05,650\" data-endtime=\"00:01:08,575\">1.思ったより簡単でよかった。</p><p class=\"moji-content\" data-starttime=\"00:01:12,050\" data-endtime=\"00:01:15,275\">2.大変だったが、満足できた。</p><p class=\"moji-content\" data-starttime=\"00:01:19,050\" data-endtime=\"00:01:22,225\">3.仕事が簡単でつまらなかった。</p><p class=\"moji-content\" data-starttime=\"00:01:25,775\" data-endtime=\"00:01:28,750\">4.疲れるからもう行きたくない。</p>"
       ],
       "sourceQuestionNumber": 86,
@@ -556,8 +568,9 @@
           "text": "选项 4（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>主题是绿山秋冬也能开花的罕见樱花。</p><p>原文依据：秋から冬の時期に美しい花を咲かせる桜</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,650\" data-endtime=\"00:00:11,025\">テレビで女の人がリポートしています。</p><p class=\"moji-content\" data-starttime=\"00:00:12,000\" data-endtime=\"00:00:49,000\">女：今日は緑山に来ています。この山では今、秋から冬の時期に美しい花を咲かせる桜を見ることができます。桜は暖かい時期にしか咲かないと思ってる方が多いと思いますが、種類によってはこの山の桜のように気温が低くなる時期に咲くものもあります。春のお花見まで待てないという方はこの珍しい桜を見に来てはいかがでしょうか？</p><p class=\"moji-content\" data-starttime=\"00:00:53,775\" data-endtime=\"00:00:58,650\">質問：女の人は何について話していますか。</p><p class=\"moji-content\" data-starttime=\"00:01:01,050\" data-endtime=\"00:01:03,725\">1.緑山のお祭り</p><p class=\"moji-content\" data-starttime=\"00:01:07,125\" data-endtime=\"00:01:10,325\">2.桜が咲きやすい環境</p><p class=\"moji-content\" data-starttime=\"00:01:13,950\" data-endtime=\"00:01:16,700\">3.寒い時期に咲く桜</p><p class=\"moji-content\" data-starttime=\"00:01:20,275\" data-endtime=\"00:01:22,475\">4.お花見のマナー</p>"
       ],
       "sourceQuestionNumber": 87,
@@ -596,8 +609,9 @@
           "text": "选项 4（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>主旨是制服由不可选择转向尊重学生选择和意见的观念变化。</p><p>原文依据：実際に着る生徒の意見が大事</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,450\" data-endtime=\"00:00:09,650\">ラジオで男の人が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:10,725\" data-endtime=\"00:00:51,675\">男：学生の時、制服を着て通学していた方は多いのではないでしょうか。以前は生徒は制服の種類を選べませんでしたが、最近は実際に着る生徒の意見が大事だと考える人が増えています。シャツやネクタイを何種類か準備したり、性別に関係なくズボンやスカートを選べるようにしたりしている学校も多いそうです。制服のデザインを新しくする時に生徒の意見を聞いて決めることも一般的になり、生徒に喜ばれているそうです。</p><p class=\"moji-content\" data-starttime=\"00:00:56,775\" data-endtime=\"00:01:01,300\">質問：男の人は何について話していますか。</p><p class=\"moji-content\" data-starttime=\"00:01:03,700\" data-endtime=\"00:01:07,100\">1.制服に対する生徒の意見</p><p class=\"moji-content\" data-starttime=\"00:01:10,550\" data-endtime=\"00:01:13,525\">2.制服を着ることの良い点</p><p class=\"moji-content\" data-starttime=\"00:01:17,050\" data-endtime=\"00:01:20,250\">3.人気がある制服のデザイン</p><p class=\"moji-content\" data-starttime=\"00:01:23,675\" data-endtime=\"00:01:27,300\">4.制服に対する考え方の変化</p>"
       ],
       "sourceQuestionNumber": 88,
@@ -631,8 +645,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>自己复印量大想让等待者先用，应说请先用。</p><p>原文依据：どうぞ、お先に</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,075\" data-endtime=\"00:00:16,725\">コピーするページが多いです。待っている人がいるのであとでコピーします。何と言いますか。</p><p class=\"moji-content\" data-starttime=\"00:00:19,225\" data-endtime=\"00:00:21,700\">1.お先に失礼します。</p><p class=\"moji-content\" data-starttime=\"00:00:24,200\" data-endtime=\"00:00:26,575\">2.あとでお願いします。</p><p class=\"moji-content\" data-starttime=\"00:00:29,300\" data-endtime=\"00:00:31,500\">3.どうぞ、お先に。</p>"
       ],
       "sourceQuestionNumber": 89,
@@ -668,8 +683,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>顾客想要目录，应使用谦逊的领取请求。</p><p>原文依据：これ、いただいてもいいですか</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,900\" data-endtime=\"00:00:16,475\">買い物をしています。商品のカタログをもらいたいです。店の人に何と言いますか。</p><p class=\"moji-content\" data-starttime=\"00:00:18,775\" data-endtime=\"00:00:21,925\">1.こちら、差し上げましょうか。</p><p class=\"moji-content\" data-starttime=\"00:00:24,250\" data-endtime=\"00:00:27,400\">2.これ、いただいてもいいですか。</p><p class=\"moji-content\" data-starttime=\"00:00:30,150\" data-endtime=\"00:00:33,450\">3.このカタログ、お取りしますね。</p>"
       ],
       "sourceQuestionNumber": 90,
@@ -705,8 +721,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>请朋友挪一下挤出位置，詰めて最贴切。</p><p>原文依据：ちょっと詰めて</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,600\" data-endtime=\"00:00:17,100\">これから友達と一緒に映画を見ます。少し場所を空けてもらいたいです。何と言いますか。</p><p class=\"moji-content\" data-starttime=\"00:00:19,575\" data-endtime=\"00:00:21,675\">1.ちょっと詰めて。</p><p class=\"moji-content\" data-starttime=\"00:00:24,000\" data-endtime=\"00:00:26,650\">2.隣に座ってくれない？</p><p class=\"moji-content\" data-starttime=\"00:00:29,425\" data-endtime=\"00:00:31,850\">3.狭かったら言って。</p>"
       ],
       "sourceQuestionNumber": 91,
@@ -742,8 +759,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>请前台通知山田课长自己想拜见，お目にかかる是自谦。</p><p>原文依据：山田課長にお目にかかりたい</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,675\" data-endtime=\"00:00:15,175\">受付で課長の山田さんを呼んでもらいます。受付の人に何と言いますか。</p><p class=\"moji-content\" data-starttime=\"00:00:17,675\" data-endtime=\"00:00:20,750\">1.山田課長にお目にかかりたいんですが。</p><p class=\"moji-content\" data-starttime=\"00:00:23,200\" data-endtime=\"00:00:26,250\">2.山田課長をご覧になりましたか。</p><p class=\"moji-content\" data-starttime=\"00:00:28,700\" data-endtime=\"00:00:31,525\">3.山田課長にお会いになりますか。</p>"
       ],
       "sourceQuestionNumber": 92,
@@ -779,8 +797,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>临时打工导致看不了电影，建议换日期。</p><p>原文依据：別の日に行こうか</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,125\" data-endtime=\"00:00:12,025\">来週の映画、バイトが急に入って行けそうになくて…。</p><p class=\"moji-content\" data-starttime=\"00:00:14,525\" data-endtime=\"00:00:17,525\">1.映画終わってからバイトに行くの？</p><p class=\"moji-content\" data-starttime=\"00:00:19,975\" data-endtime=\"00:00:22,800\">2.バイトなくなってよかったね。</p><p class=\"moji-content\" data-starttime=\"00:00:25,375\" data-endtime=\"00:00:28,000\">3.じゃ、別の日に行こうか。</p>"
       ],
       "sourceQuestionNumber": 93,
@@ -814,8 +833,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>手が止まらない是好吃得停不下，回应询问是否很美味。</p><p>原文依据：そんなにおいしかったの</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,625\" data-endtime=\"00:00:12,500\">昨日買ったお菓子、一つ食べたら手が止まらなくなったよ。</p><p class=\"moji-content\" data-starttime=\"00:00:14,825\" data-endtime=\"00:00:17,300\">1.そんなにおいしかったの？</p><p class=\"moji-content\" data-starttime=\"00:00:19,750\" data-endtime=\"00:00:22,850\">2.あんまり好きな味じゃなかったんだね。</p><p class=\"moji-content\" data-starttime=\"00:00:25,350\" data-endtime=\"00:00:28,050\">3.え、食べにくかったんだ。</p>"
       ],
       "sourceQuestionNumber": 94,
@@ -849,8 +869,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>后辈请求加入学习会，先辈允许参加。</p><p>原文依据：参加していいよ</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,975\" data-endtime=\"00:00:15,975\">鈴木先輩。明日、ゼミの後の勉強会、私も参加させてほしいんですが…。</p><p class=\"moji-content\" data-starttime=\"00:00:18,325\" data-endtime=\"00:00:21,325\">1.わかった。参加していいよ。</p><p class=\"moji-content\" data-starttime=\"00:00:23,900\" data-endtime=\"00:00:26,075\">2.私は参加するよ。</p><p class=\"moji-content\" data-starttime=\"00:00:28,675\" data-endtime=\"00:00:31,300\">3.参加するかどうか教えて。</p>"
       ],
       "sourceQuestionNumber": 95,
@@ -884,8 +905,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>つけたまま是保持空调开着，应确认无需关闭。</p><p>原文依据：消さなくていいんですね</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,725\" data-endtime=\"00:00:13,800\">この会議室、またすぐ使うからエアコンはつけたままにしておいてね。</p><p class=\"moji-content\" data-starttime=\"00:00:16,350\" data-endtime=\"00:00:19,550\">1.エアコンつけた方がいいですか。</p><p class=\"moji-content\" data-starttime=\"00:00:22,050\" data-endtime=\"00:00:24,975\">2.じゃ、ここに置いておきますね。</p><p class=\"moji-content\" data-starttime=\"00:00:27,675\" data-endtime=\"00:00:30,750\">3.あ、消さなくていいんですね。</p>"
       ],
       "sourceQuestionNumber": 96,
@@ -919,8 +941,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>发表尚未进行，应鼓励而非评价已结束。</p><p>原文依据：きっと大丈夫</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,225\" data-endtime=\"00:00:12,700\">今日、初めてゼミの発表するんだ。うまくいくといいな。</p><p class=\"moji-content\" data-starttime=\"00:00:15,200\" data-endtime=\"00:00:17,350\">1.次は頑張ってね。</p><p class=\"moji-content\" data-starttime=\"00:00:20,000\" data-endtime=\"00:00:22,225\">2.きっと大丈夫だよ。</p><p class=\"moji-content\" data-starttime=\"00:00:24,850\" data-endtime=\"00:00:26,825\">3.うまくできてたよ。</p>"
       ],
       "sourceQuestionNumber": 97,
@@ -954,8 +977,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>被问独自出差有无困难，应答托福没有问题。</p><p>原文依据：おかげさまで特に問題ありませんでした</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,975\" data-endtime=\"00:00:14,025\">加藤さん。昨日は初めて1人で出張に行ってもらったけど、困ったことなかったですか？</p><p class=\"moji-content\" data-starttime=\"00:00:16,625\" data-endtime=\"00:00:20,875\">1.申し訳ありませんでした。どんなことでしょうか。</p><p class=\"moji-content\" data-starttime=\"00:00:23,400\" data-endtime=\"00:00:26,925\">2.何もなかったんですね。よかったです。</p><p class=\"moji-content\" data-starttime=\"00:00:29,575\" data-endtime=\"00:00:33,575\">3.おかげさまで特に問題ありませんでした。</p>"
       ],
       "sourceQuestionNumber": 98,
@@ -989,8 +1013,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>被要求移走挡入口的自行车，应道歉并立即移动。</p><p>原文依据：すぐ移動します。すみません</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,700\" data-endtime=\"00:00:14,000\">お客様、こちらは店の入口ですので自転車を移動していただけないでしょうか。</p><p class=\"moji-content\" data-starttime=\"00:00:16,650\" data-endtime=\"00:00:19,050\">1.移動しなくていいんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:21,625\" data-endtime=\"00:00:25,300\">2.移動してくれたんですか。ありがとうございます。</p><p class=\"moji-content\" data-starttime=\"00:00:28,125\" data-endtime=\"00:00:31,150\">3.すぐ移動します。すみません。</p>"
       ],
       "sourceQuestionNumber": 99,
@@ -1024,8 +1049,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>被要求有疑问找伊藤，确认对象并表示明白。</p><p>原文依据：伊藤さんですね、わかりました</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:07,350\" data-endtime=\"00:00:15,100\">この機械の使い方でわからないことがあったら、必ず伊藤さんに聞くようにしてください。</p><p class=\"moji-content\" data-starttime=\"00:00:17,600\" data-endtime=\"00:00:20,825\">1.伊藤さんは詳しくないんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:23,350\" data-endtime=\"00:00:26,800\">2.伊藤さんですね、わかりました。</p><p class=\"moji-content\" data-starttime=\"00:00:29,350\" data-endtime=\"00:00:32,550\">3.伊藤さんに教えたらいいでしょうか。</p>"
       ],
       "sourceQuestionNumber": 100,
@@ -1059,8 +1085,9 @@
           "text": "选项 3（以音频为准）"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>风大随时可能停运，回应希望不要停；并非已经停运。</p><p>原文依据：止まらないといいね</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:06,425\" data-endtime=\"00:00:13,175\">今日は風がとても強いから電車がいつ止まっても不思議じゃないね。</p><p class=\"moji-content\" data-starttime=\"00:00:15,825\" data-endtime=\"00:00:19,575\">1.そうだね。止まらないといいね。</p><p class=\"moji-content\" data-starttime=\"00:00:21,775\" data-endtime=\"00:00:25,425\">2.この駅には電車止まらないの？</p><p class=\"moji-content\" data-starttime=\"00:00:27,925\" data-endtime=\"00:00:30,475\">3.どうして止まったんだろう？</p>"
       ],
       "sourceQuestionNumber": 101,
@@ -1084,7 +1111,9 @@
         "audio": "audio/202512n3/1.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "b18008ef760fa67ace4b0c8872655ce697179122f32606f9fe2c1cd7b93e76ad"
       },
       {
         "id": "imported:202512:N3:4:246986593096494:75",
@@ -1094,7 +1123,9 @@
         "audio": "audio/202512n3/2.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "bcccbf7c0b2d3538d30063b4655b86e4eccabaeeda57358f6ec4be7ba479e887"
       },
       {
         "id": "imported:202512:N3:4:65653968917124:76",
@@ -1116,7 +1147,9 @@
         "audio": "audio/202512n3/4.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "54903f07fb8732406a1417eea3f8e3a9f6a3245666996b9c5ce4b775298b0774"
       },
       {
         "id": "imported:202512:N3:4:9869552481046:78",
@@ -1126,7 +1159,9 @@
         "audio": "audio/202512n3/5.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "74b07d001bc5c5a2c4ac124c953d8cfe92c6b1bf8426f8d75e705ac3dc3fc207"
       },
       {
         "id": "imported:202512:N3:4:25116225762589:79",
@@ -1136,7 +1171,9 @@
         "audio": "audio/202512n3/6.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "893c3f15da71e010a20c397dff24ed841513090aa92d33b251cfb6b79558fb46"
       },
       {
         "id": "imported:202512:N3:4:428585475445:80",
@@ -1146,7 +1183,9 @@
         "audio": "audio/202512n3/7.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "ce8ac2c9ce3318f3d23bf5098e6ee63aca52aef670a0deef7af156424c77af4d"
       },
       {
         "id": "imported:202512:N3:4:167946713200573:81",
@@ -1156,7 +1195,9 @@
         "audio": "audio/202512n3/8.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "8a37e1921539996166b9d05e5dacc1042710c6af94fd699ff20b88233570f663"
       },
       {
         "id": "imported:202512:N3:4:91114190936243:82",
@@ -1166,7 +1207,9 @@
         "audio": "audio/202512n3/9.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "42e6bca7f692e5d82719255586887e47b25b4cf3fe848f5da67b45041e3ac3eb"
       },
       {
         "id": "imported:202512:N3:4:46583440832674:83",
@@ -1176,7 +1219,9 @@
         "audio": "audio/202512n3/10.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "ee61c0b3e16beaa2f804013df3e08761ca0021f5c3e66c791f235d8ad53ef278"
       },
       {
         "id": "imported:202512:N3:4:73447301768353:84",
@@ -1186,7 +1231,9 @@
         "audio": "audio/202512n3/11.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "b81ee7ca9e302665f92f441966d189e348d5bf6a84f61f85c79013246d47c81f"
       },
       {
         "id": "imported:202512:N3:4:19253848896875:85",
@@ -1196,7 +1243,9 @@
         "audio": "audio/202512n3/12.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "e4a3d8f997236234dce230ecd81edcf8d71256da35f555e84d65cd2cc81a6227"
       },
       {
         "id": "imported:202512:N3:4:119570391858125:86",
@@ -1206,7 +1255,9 @@
         "audio": "audio/202512n3/13.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "716a4b3b208e5f81b9702b4a74741a8ee9030b682543cd3d78328764a9515765"
       },
       {
         "id": "imported:202512:N3:4:151702089486085:87",
@@ -1216,7 +1267,9 @@
         "audio": "audio/202512n3/14.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "f3862e7939ba9c9e5b161508746542b9102b2163b2f82d6cfde20580b18ff6c6"
       },
       {
         "id": "imported:202512:N3:4:9505014201131:88",
@@ -1226,7 +1279,9 @@
         "audio": "audio/202512n3/15.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "0ea5b839279f3009014ad985bd87057b18c6f8c23a46c70a0010c2d9db7ab578"
       },
       {
         "id": "imported:202512:N3:4:195417824204562:89",
@@ -1238,7 +1293,9 @@
         "images": [
           "pic/320251289.jpg"
         ],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "1c22ac6aeb17c573095bac15020187cff4f5d6b776476d3a549209d292f66f8d"
       },
       {
         "id": "imported:202512:N3:4:167121743716284:90",
@@ -1250,7 +1307,9 @@
         "images": [
           "pic/320251290.jpg"
         ],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "b051c12c11bde530129ff2720b76fab97558ad1bc11ea4212fe6c5385d4f4d97"
       },
       {
         "id": "imported:202512:N3:4:124617021231119:91",
@@ -1262,7 +1321,9 @@
         "images": [
           "pic/320251291.jpg"
         ],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "8da07b41849c75fc37788ab4ec3108fe7af2d1afd36e4feb8cd1fc703cfb1ccf"
       },
       {
         "id": "imported:202512:N3:4:216428023484294:92",
@@ -1274,7 +1335,9 @@
         "images": [
           "pic/320251292.jpg"
         ],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "f7121ea35910f3c997cce1e48d0eb2d79d2462d64005f3aa205a771c76046310"
       },
       {
         "id": "imported:202512:N3:4:69235994927350:93",
@@ -1284,7 +1347,9 @@
         "audio": "audio/202512n3/20.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "634915cf1d1c70c73c5ec9a6317d5f16699e93b3a82d0a5f9336e39774042c79"
       },
       {
         "id": "imported:202512:N3:4:59168017976999:94",
@@ -1294,7 +1359,9 @@
         "audio": "audio/202512n3/21.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "c0efc9a8112723dec41b4086b5da46f9f2dd5ea052096dfb82e689e4e5cd83b3"
       },
       {
         "id": "imported:202512:N3:4:94916484749148:95",
@@ -1304,7 +1371,9 @@
         "audio": "audio/202512n3/22.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "2ec7f6bab0eeeebd0e31e87f945a3f6a1afb9f6cd82d3ce9b3e980c93ccff186"
       },
       {
         "id": "imported:202512:N3:4:276046626479373:96",
@@ -1314,7 +1383,9 @@
         "audio": "audio/202512n3/23.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "d6889daf81390183b5f26830201a3df75637e0b6303c251119aaa687a0c542f8"
       },
       {
         "id": "imported:202512:N3:4:88556467084924:97",
@@ -1324,7 +1395,9 @@
         "audio": "audio/202512n3/24.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "314907e87cb7579db3e16ce4fd2489245fb1fb387e8d285e8ba49709a18b15eb"
       },
       {
         "id": "imported:202512:N3:4:5204843880452:98",
@@ -1334,7 +1407,9 @@
         "audio": "audio/202512n3/25.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "a21b964b1e34e53061cb091f6c15dac16c6d63e4f2e38e87c106c769fde3c137"
       },
       {
         "id": "imported:202512:N3:4:83803083817495:99",
@@ -1344,7 +1419,9 @@
         "audio": "audio/202512n3/26.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "9c734498586616eef65dc2f4c957b3a1133abc703a236b6f0eeca63b667f85a1"
       },
       {
         "id": "imported:202512:N3:4:235739903530231:100",
@@ -1354,7 +1431,9 @@
         "audio": "audio/202512n3/27.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "59207b64b68b8f93424a64b0337ea882fb046b8cdc2ff7ec3d6a27a2ccc5370b"
       },
       {
         "id": "imported:202512:N3:4:139893276536289:101",
@@ -1364,7 +1443,9 @@
         "audio": "audio/202512n3/28.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "64381054c8340186580c6577ed84a155dea98a4c80643fe48c180670622dde23"
       }
     ]
   },

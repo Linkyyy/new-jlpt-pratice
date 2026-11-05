@@ -25,6 +25,18 @@ function imageFixtures() {
   return { ...base, paper, previousPaper: base.paper, imageQuestions };
 }
 
+test("adding listening reference keys preserves the null-key grading snapshots of existing attempts",()=>{
+  const {paper,attempt,snapshot}=fixtures();
+  const saved={...attempt,questions:snapshot(paper.questions).map(q=>q.category==='听力'?{...q,correctOptionId:null}:q)};
+  const bytes=JSON.stringify(saved),original=JSON.stringify(paper);
+  const restored=restorePracticePaper(paper,saved,'exam');
+  assert(restored);assert.equal(restored.questions.length,paper.questions.length);
+  assert.ok(restored.questions.filter(q=>q.category==='听力').every(q=>q.correctOptionId===null));
+  assert.equal(JSON.stringify(saved),bytes);assert.equal(JSON.stringify(paper),original);
+  const changed=saved.questions.map((q,index)=>index===70?{...q,correctOptionId:'B'}:q);
+  assert.equal(restorePracticePaper(paper,{...saved,questions:changed},'exam'),null);
+});
+
 test("an exact snapshot returns the original paper reference", () => {
   const { paper, attempt, snapshot } = fixtures();
   assert.equal(restorePracticePaper(paper, { ...attempt, questions: snapshot(paper.questions) }, "exam"), paper);

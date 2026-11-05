@@ -1,0 +1,4284 @@
+{
+  "version": 1,
+  "format": "jlpt-listening-answer-review",
+  "answerSource": "transcript-inference",
+  "official": false,
+  "recordedAt": "2026-11-05T01:03:11.460Z",
+  "summary": {
+    "confirmed": 231,
+    "needs-image": 4,
+    "needs-audio": 1
+  },
+  "entries": [
+    {
+      "id": "imported:202412:N3:4:54903000895680:74",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 74,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "2a1312b8c1a78e4895a3ab6f4fad5ab7ab2a7174b19978743b505d8b52c4433b",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "报告需改写讨论最终结果，其他内容已认可。",
+      "evidence": [
+        "話し合いについては最終的にどうなったのかがわかりにくい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:49961534309772:75",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 75,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "2bd37ee7bc5fe255b880768552096a266bbb83f9d777a7bf16b219feb96b0a98",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "电脑预约不可用，改为填写并提交申请表。",
+      "evidence": [
+        "申込用紙に書いて出していただければ予約できます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:56132485590735:76",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 76,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "a276efae9710834846e064aab2ea5e937b8b411221c03a5f6e8475bd399cbc2b",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "需运送节目单并摆椅子，但无法读取图片中ア・イ・ウ・エ各自对应任务，不能确定选项。",
+      "evidence": [
+        "プログラム印刷し終わったから持ってって"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/320241276.jpg"
+      ],
+      "audio": "audio/202412n3/3.mp3"
+    },
+    {
+      "id": "imported:202412:N3:4:136509385810843:77",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 77,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "19b720ac7bfcae67d85d4fdf0c7aefa63c02707385ffd3a515dc78f13f3ebc72",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "先向社长确认推迟半小时是否方便，全部确认后才改日程。",
+      "evidence": [
+        "社長に去年より30分遅くなってもいいか、ご都合聞いてみて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:227911783995417:78",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 78,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "cfe7bc3e3dd140a3de1eae53bd06e7a014447e05b5ce318913568dbd9c358ac1",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "睡眠和用餐时间均无问题，需要把油腻晚餐改清淡。",
+      "evidence": [
+        "夕食は軽いものにしてみてください"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:37289174986930:79",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 79,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "6c3842039b16ffc733202399e0cf2782c2dd968d4f5196bf7b8b35b9fa4d3e60",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "下船后的第一步是上正前方的巴士。",
+      "evidence": [
+        "船を降りましたら正面に停まっているバスにお乗りください"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:51303590182272:80",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 80,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "26149bb69edabe237e02c55b6821d1d81bbafc55ed311e1dee7749020f9fb7ee",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "公交迟迟不来，所以回家拿钥匙改乘汽车。",
+      "evidence": [
+        "今日は車で会社に行くよ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:178615802995335:81",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 81,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "7eceb0ef5ad72cded2427754d7c4a0d07635dc20728beb3625fbff878f9b49f6",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "运动和规律生活都有改善，但他强调家人交流增加最重要。",
+      "evidence": [
+        "家族で話す機会が多くなったんだ。それが一番"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:6726584745083:82",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 82,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "d8790fbcd8c0c7adcf255a7c6ef8ab7e6b9292a1958902156b643ce3e21cd865",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "妻子不在，店长希望夫妻合照，所以女士需再访拍照。",
+      "evidence": [
+        "2人で写っている写真がいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:42506587163554:83",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 83,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "22720b7e68604ad53fd29698429998c990c00ce2e3fa8cd3a616450ff0ee160a",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "老师明确要求假期挑战平时不读的多种题材书籍。",
+      "evidence": [
+        "様々な内容の本にチャレンジしてください"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:88949649739452:84",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 84,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "f11d4073e41696af14425dfdf9a9b844f8bb44ce806c9e45f939424427d719b7",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "尚未找到目标公司，收获是想从事的工作变清晰。",
+      "evidence": [
+        "自分がどんな仕事がしたいのか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:101423073429430:85",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 85,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "5ecda9a3e69c14149932ca6c3f2ba9710c729f6abeda470c228ecd9f822624ae",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "老年人喜欢的是仅两公斤、能自行轻松搬动；便宜吸引的是学生。",
+      "evidence": [
+        "2キ口しかありませんから自分で簡単に動かせる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:109212373933282:86",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 86,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "dfeb19690668ca5f907e24243b39392724e9935beb3b80389de77d849c240bf2",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "全段讨论送给离职老师的纪念礼物。",
+      "evidence": [
+        "先生に何か記念になるものをあげたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:125892958319063:87",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 87,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "716fa5d73c6d79750237587ab527ac4d9d7bb4b4475b846acc33cafec3703c17",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "主题是修枝除草养护山林，保护绿山自然。",
+      "evidence": [
+        "緑山の自然を未来に残したい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:134975220350582:88",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 88,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "398843fbbc41682079b1c067e702bf841d809971a5d3614fc49c0e9d2ccf3470",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "介绍山葵去腥、防腐及健康方面的作用。",
+      "evidence": [
+        "食べ物が悪くなるのを防いで"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:14980167374916:89",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 89,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "948a62b6ef4b9b8fdb2f1db4bd70206a5bd43f3f84d77960a5b755c6e6f525b9",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "把点心送给同事，应礼貌邀请对方品尝。",
+      "evidence": [
+        "一つ召し上がりませんか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:1623180348959:90",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 90,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "1c711f4839fc35408eba4c43048c936705df085b753dad2f6a9aaec877055a4a",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "他人坐在自己的影院座位，应指出这是自己的座位。",
+      "evidence": [
+        "ここ私の席なんですけど"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:278322464346819:91",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 91,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "5b0ce05bdf7872ced621c20eccdde8cec818605cdd80ca4c43ee2b22763c71fb",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "咖喱即将沾到领带，应提醒快要沾上，而非已经沾上。",
+      "evidence": [
+        "ついちゃうよ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:264266021881642:92",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 92,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "42a6d50e455c92cfc2d26f5808b876f6967daa66006853c54c09da882a60117e",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "自己需要剪刀，向前辈请求借用。",
+      "evidence": [
+        "はさみをちょっとお借りできますか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:280700926884444:93",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 93,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "afc6d65fe2342a38c87468e8333505653671a77c3472da5caddb79a39f026df7",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "被建议脚痛就休息，回答接受建议并回家。",
+      "evidence": [
+        "そうする。今日は帰るね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:46456323540639:94",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 94,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "5b724981f2ea3210b8e16a8a489da3ec5c4bc5aedbb67b5b1f528a204884312c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "烟花大会已决定取消，表示失望最贴切。",
+      "evidence": [
+        "楽しみにしてたのに"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:90188824485020:95",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 95,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "4dddd474b57eac2ed8d5978c0bb47786bb6148994fac554ffab3f4b2e6f5e876",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "对方感谢自己带路，应回应能让对方开心就好。",
+      "evidence": [
+        "喜んでもらえてよかった"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:5710773003800:96",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 96,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "7998c60f82c6b4c084c871d46d181dd00a011bca3d9c2c0f4a7733b3a6c253d1",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "问回复截止时间，应回答本周之内。",
+      "evidence": [
+        "今週中なら大丈夫"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:243107036041975:97",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 97,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "d05f5923d37207ab7bbf9aca23d21092118b2540dfc957346476f6fdfba3e24e",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "降らないうちに是趁尚未下雨，因此同意下雨前回去。",
+      "evidence": [
+        "降る前に帰ったほうがいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:123278542820920:98",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 98,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "e8ae30dd654111ca9a0650cb46742667d06321ef4a723ee05f0fd74bc36026b6",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "被请求搬箱子，询问能否稍后做是有效回应。",
+      "evidence": [
+        "あとでもいいですか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:158553448175946:99",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 99,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "760f9429ab14ab540590816875f455e350dd922979f9ea1539fc93083033f457",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "顾客询问能否摄影，店员可以礼貌拒绝。",
+      "evidence": [
+        "写真はご遠慮ください"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:31207926568344:100",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 100,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "a7cb2d2ae1ce02ad0600b7a9a67838e712bfe19607a9d19982511bb41b8678be",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "課长不回公司直接回家，回应确认这一点。",
+      "evidence": [
+        "そのまま家に帰られるんですね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202412:N3:4:128970580278856:101",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 101,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "4bd6d3236f5827fd4da48bb2f347ff7081689b4528da034bd18beb056ff0bafe",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "被建议报告工程延期，应答会转告课长。",
+      "evidence": [
+        "伝えておきます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:59761512212022:67",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 67,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "e2a90811e7137b66a73310db0dbc410be690085903ff725e67ed60a8077d0c22",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "合宿申请表缺顾问老师签名，其他材料当场齐备，需重交申请表。",
+      "evidence": [
+        "先生の署名が漏れています"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:115632217236664:68",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 68,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "18fdfaf90feb7af551c882081894a0f79be6e930d277d15ed102823079de7f94",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "填报名表之前先阅读领养条件，故首先确认交付条件。",
+      "evidence": [
+        "譲渡の条件をよくご覧になってから、応募"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:54122509479649:69",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 69,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "db22c4490d37d0177d783f70f3f97ff4a0d60a904d5710ee323de8e804c678f3",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "因成员早退，改为讨论前拍合照；拍照前先换队服。",
+      "evidence": [
+        "ユニフォームに着替えて撮ろう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:272015341805411:70",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 70,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "709dd1f69a67beeb7255244db097f22c2f4d6870b7337aa26cffe32333ee849c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "现状数据、价格和风险分析均认可，只要求问题部分补顾客意见实例。",
+      "evidence": [
+        "お客様の声など、実例を出してもらえますか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:6605185835754:71",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 71,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "43eae53c807cc87205e31db22183059fdb639002a3986267994749b9f02102cb",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "增加人员和问答表已实施，改窗暂不能做，可先设置盖章点。",
+      "evidence": [
+        "スタンプは前イベントで使ったのあるから、机とかを置いて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:168507686976934:72",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 72,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "9eb6b160510c5d4426b27ea0399cde1d76e73250e5f685b9a22e8824be7544ec",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "节水等功能各品牌都有，选购关键是高温漂洗的杀菌效果。",
+      "evidence": [
+        "高温ですすぎができるか、それが決め手"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:199234586697537:73",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 73,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "454ceac251a4c11e93256e922950ed1c59b7ba4767f8a923448d838f8be6a9be",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "球队的魅力是互相帮助、协同补位，并非人人都能尽兴跑动。",
+      "evidence": [
+        "互いに助け合います。そのようなことが魅力"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:209541695615440:74",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 74,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "71ba1508b9b15b5b2c115c5df82d6e1acd0bc82fb91907e12c49fe5cb58fb394",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "接收器改良无效，电池不能更强，最终建议增大车轮直径。",
+      "evidence": [
+        "じゃあ、車輪の直径を変えてみて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:210222095322637:75",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 75,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "92f20de88eecc71d84d0233ef4bd275a7be8afb1cadbbc0c9489206e5ce79341",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "男生最意外的是观众突然喊演员名字；全男性是女生强调的点。",
+      "evidence": [
+        "今回の衝撃は何と言ってもこれ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:163861341050318:76",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 76,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "fe9c8ab8f778302303eda2978c9bbcf658e2cd5198a1214b160492baa9ca2c7b",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "第二次样品只明确要求进一步提高鞋底硬度，其他设计保留。",
+      "evidence": [
+        "もう少し硬さを増したものでデータ取ってみましょう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:22260853192610:77",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 77,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "1c2e8280b3b485e2fdeaa9a820f8144c22e16b95e9e2f38a678b43896a4ed91a",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "网络介绍、祭典和小学生交流均已开展，新决定接收高中生护理体验。",
+      "evidence": [
+        "近隣の高校から介護体験を受け入れることも決まりました"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:85085740405253:78",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 78,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "649d6f6e025d375d2e9940f74646ff4357ca1f75b5dbca9cb974fff836d06889",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "导游介绍冬天观察野鸟、听鸟鸣、辨别羽毛鸟喙等乐趣。",
+      "evidence": [
+        "野生の小鳥たちのさえずりに耳を傾けて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:171943035613783:79",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 79,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "c85c71f16e0226ceca17dad61de53c198d0010662892630f52d744d06392e4c6",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "重点是飞行汽车连接偏远住宅与医疗商业设施的地方应用前景。",
+      "evidence": [
+        "空飛ぶ車を求める声が多い"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:37820826057946:80",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 80,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "908d82ae6782ec1b95b3764ade972154f48643a6865533c38a78562c35b77892",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "主旨是地方风土与喜好产生不同酱油味道。",
+      "evidence": [
+        "それぞれの地方の風土や嗜好などに深く根ざし、様々な味"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:12943669217224:81",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 81,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "766fef06a293a1b7598f418b8cd3434945625583c864b006007b7f7bb30be3d8",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "工匠强调研究木材变化、预想几十年后的成品，是制作时的坚持。",
+      "evidence": [
+        "木材の変化を見越して、最適なものを選ぶことが大切"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:215815190905661:82",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 82,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "ba5f78fd322ef9fbfbef559ec2e8391c1809f3bc3ef967a1be157133b9c45e56",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "解释灾时仍能通话且有设置规定，所以公用电话不会完全消失。",
+      "evidence": [
+        "国の規則で決められています"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:192090570428421:83",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 83,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "6d1ca54b1c7424c01c21f655100f468bc11b9d2b9788768ef27bc7404f598ffa",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "ギクシャク指关系不顺，举两人开会争执作为回应。",
+      "evidence": [
+        "会議で言い合いになってた"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:266474936554763:84",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 84,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "6cea59e74f30b3d7e4937fa7afa8a9158f3d81ce2b8fd3f8f9e022cb3cc866fa",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "对方只能星期六帮忙，周日不能；回答人手够、不必帮忙。",
+      "evidence": [
+        "人は足りてるから大丈夫"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:177284306840300:85",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 85,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "5650301cff9ee74418bb05ee0c161dd53b16b7ccbc57eb883598239f72bc041d",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "切らしている指已经用完，应马上订购。",
+      "evidence": [
+        "すぐ注文します"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:175710233151765:86",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 86,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "3317938cf34bbbb6b6508040243fa77274c4c85b844c9bcc6070afe7f223a6aa",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "一向に慣れない是完全未适应，应安慰以后会习惯。",
+      "evidence": [
+        "そのうち慣れます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:97164118097313:87",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 87,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "48e45007e1e2814efd22d96bcf2e7f5a695df51b7eb804a46a16cd9152f2321a",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "入ってくるなり是刚进去立即离开，应惊讶为何那么快。",
+      "evidence": [
+        "すぐに？どうしたんだろうね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:178320582801039:88",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 88,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "16109062233dbb2d0d7671d65879b5f0a126ac921e5f4b6a21ec1c4f48597c7e",
+      "status": "needs-audio",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "现有转录对工期延误的表述不能可靠排除A和C两种回应，需要核对音频后再定答案。",
+      "evidence": [
+        "スケジュールの遅れに天候不良の影響はありません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [],
+      "audio": "audio/202507n1/22.mp3",
+      "candidates": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "id": "imported:202507:N1:4:96999219998543:89",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 89,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "d724fe058c4a16ea7aa57bacfad95e7e2cd3dfcbd1cac77b326053cb96d7935e",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "若没有山田就会失败，实为感谢山田在场的贡献。",
+      "evidence": [
+        "山田さんのおかげ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:88426268186328:90",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 90,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "99a5348acd4a66fe2b17ec9d989ea211ce8e22f396a1d504dabcb8f31846b34b",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "一切かかなくなった是完全不打鼾，应感叹换枕头差别很大。",
+      "evidence": [
+        "まくらでそんなに違うんだ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:259730681635988:91",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 91,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "ed86237ae7d1123cfd60e23d31746a0e0321978c188027803d594bac1d817007",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "使えてこそ强调能用于工作才有价值，回应实用的资格好。",
+      "evidence": [
+        "仕事で役に立つものがいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:121494045656281:92",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 92,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "56e671e6810abd7f626f5d36311a7b2f6a85dc252ee97965661b6a8fd8b4b0fb",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "昔ながら指沿袭传统，应回应一直未变。",
+      "evidence": [
+        "昔からずっと変わらない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:276516557774483:93",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 93,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "41b760951e80f8140bffe51e7e7fe7eae74cb7cbeee8405eecee5daf9cb7deb2",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "手伝わないではいられない是忍不住想帮忙。",
+      "evidence": [
+        "つい手伝いたくなっちゃいます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:152090633861983:94",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 94,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "a2a751c390a769f84fcdd0f03617973176dbcaac74e8f60e5b3b9c90c9eee21a",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "目标是交流且避免拥挤，选平缓、人少、能边聊边走的2号路线。",
+      "evidence": [
+        "みんなでゆっくり話しながら歩けるコースで、混まないほう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:86567052623324:95",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 95,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "0d4f6f3366efa66830a0437d8bbba2cdf52b925fd608dc0b2f026e3bdeb06024",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "男士最后改选不同于平常果香的香水，即3号辛香。",
+      "evidence": [
+        "いつも使っているのと違うほうにする"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N1:4:162389580299136:96",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 96,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "278d3fa895c276e0a65660a68fa945287bca7bb96e03c9bbc0b3ae0838b00250",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "女士选让心情清爽的草本香，对应2号。",
+      "evidence": [
+        "私は気分がスッキリっていうのにする"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:253238242208165:72",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 72,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "02596e26217938bb2ed552293a0c03992a6edb8f642bfc77fa7957f2cdb8b76c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "检查缺页由加藤负责，女职员接着录入图书数据；活动选书期限更后。",
+      "evidence": [
+        "パソコンに本のデータを登録してくれる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:42151198616376:73",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 73,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "22b7b734a244f13f17111500ed5fd200e243854950a70d9f671387d2c5bd5ce3",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "问题汇总由男方负责、网站由山下更新，女方马上印资料。",
+      "evidence": [
+        "資料の印刷、後回しになってました。すぐ取り掛かります"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:208821618458439:74",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 74,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "9a05da723944743fbdd95ba932bf0842f219407b63d41dfffdf70dc17cbcdfa2",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "开发成员已选定，课长要求男方先确定分工。",
+      "evidence": [
+        "誰にどの仕事を任せるか決めておいて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:36810876367052:75",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 75,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "63a63242037c2625c71e25c1a152fb9e416ddab310d2daa5bb9cbaf076f45409",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "收问卷已结束，拆帐篷之前先戴作业手套。",
+      "evidence": [
+        "作業の前に作業用手袋をする"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:109774419180111:76",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 76,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "1d8541437b9983b24210c95312a1535b683f44bacdcd3ab1e24d6ece0b2a80c8",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "画的位置已换好，间距无法改变，最后只要求把照明调暗。",
+      "evidence": [
+        "もう少し暗めの方がいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:11482708451213:77",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 77,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "7121dbfde3061a115e97bbd3a8445a9e4b3f932155d4ef0231b0151a5af70820",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "女生从升学改为求职，目标是植物专业出版社。",
+      "evidence": [
+        "植物専門の本を作ってる出版社があって、そこに入りたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:143958561390361:78",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 78,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "fe6ab9b63972cdf63ec452e9c4a9e87671657148763a84816d2563cd2ebe6db4",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "不用拐杖、停药、短程骑车都允许；明确禁止长时间步行。",
+      "evidence": [
+        "あまり長い時間は厳禁"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:109436495624040:79",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 79,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "1b993cb78c53382b4f0ddda50419c449cd27a4240ed3da484c14fab16038f03c",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "他说比农业本身更深刻的收获是发现同学意外的一面。",
+      "evidence": [
+        "クラスメイトの意外な一面を知ることができた"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:200526230304575:80",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 80,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "787cf1330cbfb4dc41f5875426daceb1c5cd03e216135faa76f8dfc2fc0c4598",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "最初动机是自家无庭院但一直想种花，朋友介绍只是途径。",
+      "evidence": [
+        "花を育ててみたいとずっと思ってた"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:78491836710647:81",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 81,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "396f414a69499ed37aeffbae4b0be2b40833ee31568206de9d83ca2c1b694c77",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "淡口味和配菜种类保持，明确同意为健康减少米饭。",
+      "evidence": [
+        "健康のためには少し減らしてみましょうか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:217835135796418:82",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 82,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "baa296375065737acf9fbe96af4267231b0c24403ea1ac147ba21acafbc86181",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "最吸引她的是问号形状的尾巴，并因此取名。",
+      "evidence": [
+        "しっぽの形が、先が曲がっていて、はてなマーク"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:139581637748923:83",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 83,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "88d60763ebda305c12a0b804f0801972db6d8a4bba83f5f6e57733b6c48d402f",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "全文强调独自旅游能更深体验、按自己节奏、心情平静等优点。",
+      "evidence": [
+        "旅先での一つ一つの経験をより深く味わえる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:91471328135098:84",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 84,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "2438ba9c4b7dc84d20d835a577171519005b13125a8e44af7c4acab9b0d50959",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "介绍木家具随年月变化及使用痕迹带来的魅力。",
+      "evidence": [
+        "その傷に愛着が湧くこともある"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:229167966705640:85",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 85,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "efbebddd9780540a6129e21b5adaeda280442b8a0dcb3e52755c34bbcece9bb3",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "店主讲孩子来访、长大后回报近况带给她的喜悦。",
+      "evidence": [
+        "私の方が元気をもらえて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:38105182013739:86",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 86,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "a9517aae830a58d5eae3494c39c5435061cef6548eb8239e4549dd02634d2b28",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "重点是安静、黑暗、温湿度、服装等良好睡眠的条件。",
+      "evidence": [
+        "寝室が静かで暗く快適な温度や湿度"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:55986434352077:87",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 87,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "b5d15fc599a9148ce00774eada3f31bf12818d5847696ceff0cf343edc7aa37b",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "介绍机器人搅浑田水以抑草、减少人工劳动的农业应用。",
+      "evidence": [
+        "この新しい技術を取り入れることによって、その手間を減らす"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:154337968057931:88",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 88,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "522d73e4f81580a2c335d6f98aa33b1fc653c743a10c1ff12af4108acef9bcad",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "おかゆすら是否定连粥都无法吃，应确认什么都没吃。",
+      "evidence": [
+        "何も食べられなかったの"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:5205277105282:89",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 89,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "7b87c833f86dceedc12f0bc3222be1a9a64e508d47d7f4bc864961ad20fe8a53",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "かえって素敵表示下雨反而不错，回应雨景也美。",
+      "evidence": [
+        "雨の景色もきれい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:175987019781839:90",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 90,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "af007102424be0988c3dc19cc85efd01b37f4551fc229327aeb4263b80b9ff23",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "社长叫自己，回应马上过去，而非给社长打电话。",
+      "evidence": [
+        "すぐ行きます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:84168503499333:91",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 91,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "62bf2723f2c6c080134ebfd03d191473ae56f0f6b0d934aa8d0afc50d2862179",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "对方吃不完这份定食，提出帮忙吃一点。",
+      "evidence": [
+        "ちょっと食べてあげようか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:12140956221493:92",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 92,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "3a370b7ffc7e97231d4cffc3e65809c4b02dfc94d71ee60151dc0d1e26663b7b",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "相談したうえで要求先和父母商量，再决定学校。",
+      "evidence": [
+        "ちゃんと親と話します"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:122700085099977:93",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 93,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "affcea48edb0eb47516c1de3116f744a2fb74d2fcdcf986853af8bbd24209045",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "奖学金截止临近，应感谢提醒并赶紧准备。",
+      "evidence": [
+        "急がなくちゃ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:15861392766429:94",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 94,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "38836b8f097f53f779edc3abfef7a9f47ab132b6206e0e7579b4df3d1972d357",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "人気があるだけに表示正因为受欢迎所以售罄。",
+      "evidence": [
+        "すごい人気だからね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:258355384858864:95",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 95,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "94626c3bdfaa8bd211b1796188cf0d07738d2cd6b3fe510a74a19d8353172593",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "その時会ったきり表示自那次后两年未见。",
+      "evidence": [
+        "そんなに会ってないの"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:100236056689836:96",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 96,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "1f23cf7dd2b6a62bd20b4c0866a80a3640469562413ffc14c9200c9045e017b0",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "主办方感谢到场，来宾应感谢邀请，而非再次说欢迎到场。",
+      "evidence": [
+        "ご招待、感謝申し上げます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:123525640728004:97",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 97,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "59a631d752151d12a3d9c5d700479df201b70e8f313d1f9b8af7eebead4cd9c1",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "1位に迫る是逼近第一而非已获第一。",
+      "evidence": [
+        "あと少しで1位になれそう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:214514102977872:98",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 98,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "adfcb6565bc49d2b110e9d62709852e76bed490d81ebb85467106c134755117e",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "手伝ってくれるとよかったのに表示佐藤实际没帮，应解释他忙。",
+      "evidence": [
+        "佐藤さん忙しかったみたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:25417580933528:99",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 99,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "922adbf507cf430401676046e4b88543856092020b9a83454ad5cadb519171c1",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "不改日期、不临时扩宣传、不改比赛内容，决定换较小场地。",
+      "evidence": [
+        "小さいグラウンドの方が、選手と参加者がコミュニケーションしやすい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:242099221864817:100",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 100,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "b14ba4acfb7b6732043b49d0de9ded5d40157b5155da2e7e0684aa13491a3688",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "第一天要海边且靠近酒店散步，指夕日通り，不是湖边公园。",
+      "evidence": [
+        "海沿いの方。ホテルから近い"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202507:N2:4:20605477561900:101",
+      "period": "202507",
+      "level": "N2",
+      "questionNumber": 101,
+      "sourceFile": "N2_2025年7月_qZC0Qympet.json",
+      "sourceHash": "de8894b9baf18bbd47208d8bd49e475ff9872d32c64459813cc39730cbf00a29",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "第二天选能俯瞰寺院、靠近美术馆的西が丘。",
+      "evidence": [
+        "お寺を入れた夕焼けの写真を撮りに行こう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:98234577437069:67",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 67,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "8df783c4609da046020a719d3926f0133ede3fcc4298e1a62304cf08c7e733ef",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "转写录音虽也是任务，但最后强调先修正清单上的楼名。",
+      "evidence": [
+        "リストの修正しとかないと。そっちを先に"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:18410405201600:68",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 68,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "6c351741a924208f86f8b70a712fdb35e31254b83ce8476e89a503dac4c0ee5d",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "需预约6月7、9、21、23、28、30日；四个选项仅数字，缺日历图无法对应选项。",
+      "evidence": [
+        "合同会議の週の月曜日も予約"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/120251268.jpg"
+      ],
+      "audio": "audio/202512n1/2.mp3"
+    },
+    {
+      "id": "imported:202512:N1:4:69337192726774:69",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 69,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "f711852e1b74a2dc074303a9629a03e72ba59c97408fd499c90a3c5e5e51b6ad",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "日本现状已分析，课前应收集自己国家的现状及措施。",
+      "evidence": [
+        "自分の国の現状や施策などを共有"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:42402692098851:70",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 70,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "55e5fc306537a2b8d97c4fd48e1b6e6d933683adfab3d3d3ac7d4c2df5a7a4ea",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "会面已预约，先读往来记录掌握经过；问候邮件稍后发。",
+      "evidence": [
+        "取引の記録がファイルにまとまっているので、それを見て"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:256442215942546:71",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 71,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "373308deb8844333375af4e958e4ebdfe79a9d503d415f14818e6997048a25e6",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "拒绝一天两场及延长期限，最终每天一场五人，减少每天人数。",
+      "evidence": [
+        "受け入れは1日1回5人が限界"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:86491269342419:72",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 72,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "f4cbc936e99d27074e13518a6c8eb7d2c23ed2dc0098f49b07e9401573fb03ed",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "最重视季节特有的素材、造型和彩色，而非本地水果或便宜。",
+      "evidence": [
+        "その季節ならではの素材や形、彩り"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:279804868020283:73",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 73,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "4fb982fddf729ea4312e943356be2bcde81a8a4e8abd2109647456e86d3b4204",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "产品品质本已提升但滞销，改名ふんわりタッチ后销量上升。",
+      "evidence": [
+        "ふんわりタッチ」に改めたところ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:259326591577995:74",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 74,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "ed31f525f5d95f997dc3548676e5c61eeb5c9c32a44b83db31f2a60d5b0e71a9",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "保温、除臭、耐久都合格，需改进鞋底弹性与减震。",
+      "evidence": [
+        "底の部分にもっと弾力性が欲しい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:142672392149765:75",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 75,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "8f9902acda3cc86c3d7a6081022aa9aad0212e882722238c6f1302b3d9b78b94",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "选址目的是让亲子身处自然，体验绘本世界；并非自己童年故居。",
+      "evidence": [
+        "絵本の世界を擬似体験してほしい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:176813538533264:76",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 76,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "8f0a381f4bc210ee577fd3cc7cb275f220bbaa487f80262a49fca58cfe39c371",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "增长原因是归国后的学业、就业衔接支持；海外交流是今后计划。",
+      "evidence": [
+        "留学から戻った学生を対象に"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:103542244481681:77",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 77,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "5c010bee830b834028f0b517168d53668dd0c4715aedb737502b8aa0eb77a76d",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "物价、减税、收入等贴近生活的经济政策最左右投票。",
+      "evidence": [
+        "物価高、減税、所得の向上"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:8543530922807:78",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 78,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "be143ad0c70df52ece87e12617fd4d12c3ca3f89017f144c25e9ba42dcb23ab5",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "对比平地和山间日照温差带来的茶味差异。",
+      "evidence": [
+        "平地で育てられたものと、山間部で育てられたもの"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:239334798679651:79",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 79,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "5ad419fb92ac5a70847c20e471fada65d56170232930e456d040affce780e2f4",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "依次叙述整竹林、销售竹制品筹款、修步道宣传而成为景点的过程。",
+      "evidence": [
+        "今では海外からも多くの人が訪れる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:278314563770679:80",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 80,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "fd8e6821753a554d5bcb15d78dadc2c76063a285022da86a9ddcd1f3d84bf866",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "说明传感器、摄像机与AI如何分析人的情绪并作出反应。",
+      "evidence": [
+        "触った人の気持ちを推測した上で"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:54074511978766:81",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 81,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "965a52a08917d31fa17f87932c9e218c498f8a4680af233a8e96b27690228831",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "低成本、补助、少竞争及人脉均为在地方创业的优势。",
+      "evidence": [
+        "地方を拠点とすることをぜひ検討"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:59920091738834:82",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 82,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "9a88fcdda84df652095ea1f14f7410bd8a1e36033b5a1cce108fd25e0cfa3329",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "主旨是把愤怒写下并销毁纸张的情绪应对方法。",
+      "evidence": [
+        "紙を丸めて捨てたり、シュレッダーで裁断"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:211731204484399:83",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 83,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "b1f2693fa9528415c181d70c6152cc505848ef0b774bbd9d8cc86011963354b2",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "チームがまとまる是团结，回应彼此信赖的感谢。",
+      "evidence": [
+        "お互いのプレイを信頼している"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:257662765519099:84",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 84,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "be3dc7511fdb919bff06e481532e56d957697d2b2a1ae45a9eab6f3d9e8fa10d",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "请求课长向客户说明涨价，课长应答交给我。",
+      "evidence": [
+        "任せておいて下さい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:207991677924304:85",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 85,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "da5023f23beb6feb3862442031837b01b6e374369cef7e07c1c7bdfba5204858",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "ぐずぐずしてはいられない表示不能拖延，应尽快整理。",
+      "evidence": [
+        "急いでまとめないと"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:137297084664034:86",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 86,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "c792d688be51f369f0d001efc521e70edb5286863f34190e7a191dba67605fd9",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "彼ならでは意为只有他能做到的表演。",
+      "evidence": [
+        "彼にしかできない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:196763962380478:87",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 87,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "c6b61a528eb0c059cc0b90f0eaef55959843c3d717c0e3051aa9fa498b4123d0",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "本日をもって終了表示午间营业今天结束，从明天起不做午间。",
+      "evidence": [
+        "明日から昼はやらない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:17081853983373:88",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 88,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "5a7130da720e2e19b4b0b18feca28dcbf639cd34116628e9d0e7a776d0e27335",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "バレてた表示已经被本人发现，应问怎么知道的。",
+      "evidence": [
+        "どうしてわかっちゃったの"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:89622938541058:89",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 89,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "70b2e54a00a37881649caacd151104ef82eb60a3d427a1d5da20b209e9ff4d87",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "只有林可期待，说明其他一年级成员需提高。",
+      "evidence": [
+        "他の1年生のレベル上げなきゃ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:93000266691178:90",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 90,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "ea4b9287af8b0dbcc320922c1d8657138d9aef906913a19a3655aded80070c39",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "对方因最后提问致会议延长而自责，应安慰有想问的就没关系。",
+      "evidence": [
+        "聞きたいことあったんだから、いい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:153388551256711:91",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 91,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "daaa6dcbb55ba98624d0e5db92972ec0d231e27d16a5a364d90d011e340ed82c",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "前倒し表示提前，应问希望提前多少。",
+      "evidence": [
+        "どのくらい早めたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:232193345541273:92",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 92,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "f2804d59da979876f339087f875d2c867df5a7e158bd0820b20971eacbfc4130",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "と同時に表示同时兼任教练和会长。",
+      "evidence": [
+        "両方なんて大変そう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:10900479412796:93",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 93,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "68560aa11ccb785d74fb88277b3316b59673b29e54559df1449e5dd23bba66e6",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "据学长说没有年级限制，自己可能也能申请。",
+      "evidence": [
+        "僕も申し込めるかも"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:96805482811694:94",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 94,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "2e5cb0b7df34f4a2e7e0f4b5e5061d35f54bbde8414b5f7744cdec1ba6e451ee",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "先用现有抽奖贴纸让顾客高兴，软件和公益合作留以后。",
+      "evidence": [
+        "お客様に喜んでもらえそうなことから始めよう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:36390829111519:95",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 95,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "2f8d5c55458e7a660407b0ac9d1b0deb4fd609c19c064ef3f1086e2b50c90cf3",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "周末工业夜景航线不开，两个候选只剩1号灯桥航线。",
+      "evidence": [
+        "あー、ないみたい。"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N1:4:62264468344383:96",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 96,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "eb10896a993ae80e5edc4461abb8e64519f6e6d3fc0c4e9ad86ea072c303e77d",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "下月家人要看高楼和摩天轮但不想边吃边看，故选2号而非3号。",
+      "evidence": [
+        "食べながらだと景色がゆっくり楽しめない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:124055544507548:72",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 72,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "53deb40af24cff7e9889c184de2748ae1a55955fac49aac12716334801d7e23b",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "同意书已签交，接着先穿围裙等待；选颜色和付运费都在后面。",
+      "evidence": [
+        "ご自分に合うサイズのものをつけてお待ちください"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:269927372818987:73",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 73,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "7a036f79beb37272c39a23838e3c1bd4c2777f91abccea1a9ebcd657f9b90094",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "已明确应先把沙拉分装小盘，但①②③④在配图中的任务对应关系未知。",
+      "evidence": [
+        "サラダを小さいお皿に盛って欲しい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/220251273.jpg"
+      ],
+      "audio": "audio/202512n2/2.mp3"
+    },
+    {
+      "id": "imported:202512:N2:4:205003751630794:74",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 74,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "35945ecde3cd847507279226c9e09d5c351b6e7a286f9821063fd18e8f946519",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "女副部长负责向毕业学长征稿，照片和曲目介绍由其他人做。",
+      "evidence": [
+        "先輩に依頼してくれる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:119789716618268:75",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 75,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "2090b7eb3267e216ef92637c78a4b2244f55a6b22d3ce316377e2f29cfdd4ecd",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "先搬炒面、烤鸡串等烹饪器具，之后才是游戏道具和垃圾桶。",
+      "evidence": [
+        "焼きそばや焼き鳥を作るための道具の移動から"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:49837931374821:76",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 76,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "dce9608d9d00eadc873f44d9c455807b811745817b0d44127bb9ce68911cb0f7",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "名册已更新，最后再次强调印刷前优先修正资料表格。",
+      "evidence": [
+        "表を直すのを最優先で"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:127869575800098:77",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 77,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "19145be1628dc9568ebcdf0dfcb1b6baa161dec1a5e9af6262f5b8f3e87eafdf",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "学历、服务期限可放宽，教学指导经验不可妥协。",
+      "evidence": [
+        "経験の有無は譲れない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:213303344570789:78",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 78,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "38353d2c6d4a2231a0e0ec77d6067edf68f0294eceb684fa940f8f862c4e56b9",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "种菜最大的喜悦是增加亲子相处时间，而非完全不买菜。",
+      "evidence": [
+        "親子の時間が取れるようになったのがどんなことより嬉しくて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:86153085281086:79",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 79,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "08e69883fa7f296a00d5ce3c5f90fd5e89102b429ef8d5a3a49c602bc55b6c56",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "体力和成绩仍良好，决定退役是获得大学教练工作机会。",
+      "evidence": [
+        "大学の陸上部でコーチをしないかと誘って"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:184776979348179:80",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 80,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "824436ef365ad401a5071c541073e72d83218a728530c425b483569aa882d68c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "女前辈重视是否有居家工作的日子，其他标准属于男生或朋友。",
+      "evidence": [
+        "在宅で働ける日があるかを重視"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:154525060866542:81",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 81,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "a326873a23dd782fc90ab1191c51264d2312120676ba955880b8a02ab82033dd",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "销量跃升的原因是带冲击力的停售危机广告；半价是下周感恩活动。",
+      "evidence": [
+        "消滅の危機、売り上げが5位以内じゃなかったら、もう売りません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:77553705599374:82",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 82,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "9bf288d064bff4333ebc84a8f56f64b244ecdae6e86c6687197985403ebc44b8",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "他明确认为电影最大魅力是获得多种知识，不是代入人生。",
+      "evidence": [
+        "多種多様な知識を習得できること、それが最大の魅力"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:68507976980839:83",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 83,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "4028f63ba565f47f30e1541b7547f0fbe7bba62a38bfac6cc3b2a77090c76f17",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "整理房间改善心情、效率并避免重复购买，主题为整理的效果。",
+      "evidence": [
+        "片付け一つで自分の気持ちや仕事の能率などが変わる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:273336423989604:84",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 84,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "e11323cfb4cb0472b06302b24b853c1a8ae978562dd24b3f44f7a3d39d9b5f49",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "前半案例被删而失望，后半积极交流有收获。",
+      "evidence": [
+        "活発な話し合いができて色々な気づき"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:274107873912032:85",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 85,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "7da5727bcf4637b6d6b41f04e4b123f854e6e86a386de5819f8805d9324ef8b4",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "讲提醒孩子时先肯定努力和已做好的部分，重点是注意方式。",
+      "evidence": [
+        "注意する時はできているところも伝えて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:271372400912650:86",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 86,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "b737ef7b2e8288155d8c61fc46cf95b3cb9df294361c5ac5e1ad8e18ef106684",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "列举固体肥皂外观、清洁力和环保等优点。",
+      "evidence": [
+        "固形石鹸は純石鹼分という成分が多く"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:122784691965026:87",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 87,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "5c5b0aa95f4632ab950d48a995255e7f492ef797189d30c1d96676790c31b8b5",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "介绍办农业体验会是让人接触自然并了解农业。",
+      "evidence": [
+        "ここでの体験が農業を知る入り口"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:18976752787626:88",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 88,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "af4a4b01444abf89435f79d1ee84c1e01eb957781a0b9265c8b803af7adec9e2",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "顺便去书店并邀吃饭，应询问附近餐厅。",
+      "evidence": [
+        "本屋の近くでいい店知っている"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:147189847488757:89",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 89,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "d708dd7cabb799063fb2a773261c0d07326b3c1473e0e0d4acf30d3f4548224d",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "对方请求看企划书，课长问何时前看完合适。",
+      "evidence": [
+        "いつまでに見ればいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:233850734885115:90",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 90,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "87163d17bf3df6594e19ffd309e2730f9843e8d7751c1ea1c7852afc3542ea63",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "虽然输球但已发挥全部实力，应确认比赛令人满意。",
+      "evidence": [
+        "納得できる試合だった"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:114928892528087:91",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 91,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "3ed2c91d6037ff1e2eee267f1998b740ce84f16475dc8ebd4e0277d18f9c7ab2",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "对方请求商量企划，应答可以并约时间。",
+      "evidence": [
+        "構いませんよ。いつがいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:20235453990510:92",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 92,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "1193ecc691067acd9101978dfd5859609a3ba4cdf7b9771c4b86b63ce760a5a6",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "乗り遅れるところでした表示差点误机但赶上了。",
+      "evidence": [
+        "間に合ってよかった"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:80914683703707:93",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 93,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "4dd59b4e6c8c5b0da4f3ad5d3d62450180c3b0033297c7dfb0bda72dc470f539",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "问是否按期开发，直接回答目前没有延误。",
+      "evidence": [
+        "今のところ、遅れはありません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:97202863795689:94",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 94,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "55b5bba4cfb8406b4c3bb860b0249aacd35a0f782a2625fe34ed4429201f939c",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "何とかなりそう询问论文能否赶上期限，回应会赶上。",
+      "evidence": [
+        "とにかく間に合わせる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:157841215044127:95",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 95,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "289021a19ef63254d6083c35548ca6960d8e93d4aa811b883da8b90863e0cb8e",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "戻りしだい意为回来后立刻，故确认下午回来后开会。",
+      "evidence": [
+        "午後戻られてから"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:205810384489451:96",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 96,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "9ef13129703392478207ad4daea0ef67ed4b08262eb4dc4df2cb30156beced11",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "年齢を問わず表示不限制年龄。",
+      "evidence": [
+        "何歳でもいい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:158263785910621:97",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 97,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "3e87e96f9886cce24bcd0b2791402ce040dea62a8912564f4f32b1469131b757",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "安いわりになかなかの味表示便宜却好吃，可考虑常去。",
+      "evidence": [
+        "安くて美味しいなら"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:126908005691685:98",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 98,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "bce9260b7b642d38222c884aa10eb26e8f453aca1b80a35b7bc3de2fde8f5cea",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "予想に反して指超出预期，回应意外并询问原因。",
+      "evidence": [
+        "意外ですね。なんででしょう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:111923333561300:99",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 99,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "61ae12da1ecc0ef2f9cf9e50b65dc8af2831613bf6e7a877d7875a39cb699074",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "不改营业时间和面粉，最终保持价格、缩小面包大小。",
+      "evidence": [
+        "パンを小さくする方がうちのお客さんには扺抗が少ない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:21348742880501:100",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 100,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "a339a4c3a37b2b0b957032488149d1bbdd452964390130f30c3dfce24580814a",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "女士最后优先安全通勤，选稳定性最高的3号车。",
+      "evidence": [
+        "私はやっぱり安全に通勤できるように1番安定性が高い"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N2:4:240098631118100:101",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 101,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "0a37bed120748c454737b08f9b95f81eb62902d108a004b633430fe2f55a1a7f",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "男士要开车载到河边再骑入小路，因此选可折叠的2号车。",
+      "evidence": [
+        "折りたためる自転車なら、うちの小さい車でも乘せられる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:44611860049440:74",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 74,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "b18008ef760fa67ace4b0c8872655ce697179122f32606f9fe2c1cd7b93e76ad",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "原约后天、明天无空位，最后接受今天下午六点加号。",
+      "evidence": [
+        "今日いらっしゃることはできますか？午後6時"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:246986593096494:75",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 75,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "bcccbf7c0b2d3538d30063b4655b86e4eccabaeeda57358f6ec4be7ba479e887",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "新品已检查完，先寄促销明信片，回来再整理仓库和货架。",
+      "evidence": [
+        "まずそれを出してきてもらえる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:65653968917124:76",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 76,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "84d06e419e6b5dd8b1e29a0f52bda5a7f313037df2df93021a754b94b9d7c1ab",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "顺序为ひかり書店→みなとホテル→あおぞらきかい，但图中ア・イ・ウ对应地点未知。",
+      "evidence": [
+        "みなとホテルの前にそっちですね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/320251276.jpg"
+      ],
+      "audio": "audio/202512n3/3.mp3"
+    },
+    {
+      "id": "imported:202512:N3:4:278442718494175:77",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 77,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "54903f07fb8732406a1417eea3f8e3a9f6a3245666996b9c5ce4b775298b0774",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "最后由邮件改成打电话取消酒店，男生通知其他人。",
+      "evidence": [
+        "電話の方がいいんじゃない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:9869552481046:78",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 78,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "74b07d001bc5c5a2c4ac124c953d8cfe92c6b1bf8426f8d75e705ac3dc3fc207",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "今天先邮件发资料，明天带书；不用印刷也不用再借书。",
+      "evidence": [
+        "資料は今日中にメールで送って"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:25116225762589:79",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 79,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "893c3f15da71e010a20c397dff24ed841513090aa92d33b251cfb6b79558fb46",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "制服已换，派传单前需先试吃苹果派。",
+      "evidence": [
+        "その前にここにあるりんごのパイを試食"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:428585475445:80",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 80,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "ce8ac2c9ce3318f3d23bf5098e6ee63aca52aef670a0deef7af156424c77af4d",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "衣服和绘本均有顾虑，最后选全家能享用的食品。",
+      "evidence": [
+        "家族みんなで食べられるおいしいお菓子や果物"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:167946713200573:81",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 81,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "8a37e1921539996166b9d05e5dacc1042710c6af94fd699ff20b88233570f663",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "睡前设备和枕头已调整，最后认定暖气导致室温过高。",
+      "evidence": [
+        "やっぱり部屋の温度じゃない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:91114190936243:82",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 82,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "42e6bca7f692e5d82719255586887e47b25b4cf3fe848f5da67b45041e3ac3eb",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "女生家乡用温泉水养鱼；发电及供暖是别的城镇。",
+      "evidence": [
+        "温泉の水を利用して育てた魚"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:46583440832674:83",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 83,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "ee61c0b3e16beaa2f804013df3e08761ca0021f5c3e66c791f235d8ad53ef278",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "明天周六从早到晚冷雨，晴冷是周日。",
+      "evidence": [
+        "明日八日土曜日は朝から冷たい雨"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:73447301768353:84",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 84,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "b81ee7ca9e302665f92f441966d189e348d5bf6a84f61f85c79013246d47c81f",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "选玫瑰应根据种植地点日照等环境，而非只看个人喜好。",
+      "evidence": [
+        "その場所に合ったバラを選ぶ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:19253848896875:85",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 85,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "e4a3d8f997236234dce230ecd81edcf8d71256da35f555e84d65cd2cc81a6227",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "男方坚持是价格贵导致滞销，否定气温因素。",
+      "evidence": [
+        "価格がちょっと高いと思う"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:119570391858125:86",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 86,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "716a4b3b208e5f81b9702b4a74741a8ee9030b682543cd3d78328764a9515765",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "农活超乎想象辛苦，但获得独特经历而满意。",
+      "evidence": [
+        "他ではできない経験ができた"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:151702089486085:87",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 87,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "f3862e7939ba9c9e5b161508746542b9102b2163b2f82d6cfde20580b18ff6c6",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "主题是绿山秋冬也能开花的罕见樱花。",
+      "evidence": [
+        "秋から冬の時期に美しい花を咲かせる桜"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:9505014201131:88",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 88,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "0ea5b839279f3009014ad985bd87057b18c6f8c23a46c70a0010c2d9db7ab578",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "主旨是制服由不可选择转向尊重学生选择和意见的观念变化。",
+      "evidence": [
+        "実際に着る生徒の意見が大事"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:195417824204562:89",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 89,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "1c22ac6aeb17c573095bac15020187cff4f5d6b776476d3a549209d292f66f8d",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "自己复印量大想让等待者先用，应说请先用。",
+      "evidence": [
+        "どうぞ、お先に"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:167121743716284:90",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 90,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "b051c12c11bde530129ff2720b76fab97558ad1bc11ea4212fe6c5385d4f4d97",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "顾客想要目录，应使用谦逊的领取请求。",
+      "evidence": [
+        "これ、いただいてもいいですか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:124617021231119:91",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 91,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "8da07b41849c75fc37788ab4ec3108fe7af2d1afd36e4feb8cd1fc703cfb1ccf",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "请朋友挪一下挤出位置，詰めて最贴切。",
+      "evidence": [
+        "ちょっと詰めて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:216428023484294:92",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 92,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "f7121ea35910f3c997cce1e48d0eb2d79d2462d64005f3aa205a771c76046310",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "请前台通知山田课长自己想拜见，お目にかかる是自谦。",
+      "evidence": [
+        "山田課長にお目にかかりたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:69235994927350:93",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 93,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "634915cf1d1c70c73c5ec9a6317d5f16699e93b3a82d0a5f9336e39774042c79",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "临时打工导致看不了电影，建议换日期。",
+      "evidence": [
+        "別の日に行こうか"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:59168017976999:94",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 94,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "c0efc9a8112723dec41b4086b5da46f9f2dd5ea052096dfb82e689e4e5cd83b3",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "手が止まらない是好吃得停不下，回应询问是否很美味。",
+      "evidence": [
+        "そんなにおいしかったの"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:94916484749148:95",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 95,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "2ec7f6bab0eeeebd0e31e87f945a3f6a1afb9f6cd82d3ce9b3e980c93ccff186",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "后辈请求加入学习会，先辈允许参加。",
+      "evidence": [
+        "参加していいよ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:276046626479373:96",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 96,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "d6889daf81390183b5f26830201a3df75637e0b6303c251119aaa687a0c542f8",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "つけたまま是保持空调开着，应确认无需关闭。",
+      "evidence": [
+        "消さなくていいんですね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:88556467084924:97",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 97,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "314907e87cb7579db3e16ce4fd2489245fb1fb387e8d285e8ba49709a18b15eb",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "发表尚未进行，应鼓励而非评价已结束。",
+      "evidence": [
+        "きっと大丈夫"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:5204843880452:98",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 98,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "a21b964b1e34e53061cb091f6c15dac16c6d63e4f2e38e87c106c769fde3c137",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "被问独自出差有无困难，应答托福没有问题。",
+      "evidence": [
+        "おかげさまで特に問題ありませんでした"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:83803083817495:99",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 99,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "9c734498586616eef65dc2f4c957b3a1133abc703a236b6f0eeca63b667f85a1",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "被要求移走挡入口的自行车，应道歉并立即移动。",
+      "evidence": [
+        "すぐ移動します。すみません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:235739903530231:100",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 100,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "59207b64b68b8f93424a64b0337ea882fb046b8cdc2ff7ec3d6a27a2ccc5370b",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "被要求有疑问找伊藤，确认对象并表示明白。",
+      "evidence": [
+        "伊藤さんですね、わかりました"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202512:N3:4:139893276536289:101",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 101,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "64381054c8340186580c6577ed84a155dea98a4c80643fe48c180670622dde23",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "风大随时可能停运，回应希望不要停；并非已经停运。",
+      "evidence": [
+        "止まらないといいね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:264797267171105:67",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 67,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "d2e32f794efb2ee2e7bd509d4833752b1f99a357218ba48afee039667b289681",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "新表单、年级栏和邮件都由男方负责，女生只需试答检查故障。",
+      "evidence": [
+        "試しに答えてみてくれる"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:130454610742901:68",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 68,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "d8b429356784eea75c950220aff688aa61a94aa29daddee4a219e6816b680966",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "不用储物柜，先集体听讲解，再自由看展或听演奏。",
+      "evidence": [
+        "セミナー室で皆さん揃って"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:32900589580778:69",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 69,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "c74c5ac1aa2eae67a1921a8902c4eff38570e8ef4562e3ec65848f4eac353ede",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "电话已道歉、补货已出发，原因由仓库调查，男方先约当面道歉。",
+      "evidence": [
+        "あちらの担当者にアポを入れて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:74869985005066:70",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 70,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "a76b55f7ccdd302e822f5a86dc208c0635f8a24fc63141c06d2f8fdaf388faf0",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "先把灭火器搬到停车场；通报是训练首项，床单已搬好。",
+      "evidence": [
+        "訓練用の消火器を駐車場の隅に置いといて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:64874264974138:71",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 71,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "f10512879147c98cde659aa166aa77f2c4f2d6a0396e1df3223e1452831a9350",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "标题和发布时间以后再定，应先缩小目标读者范围。",
+      "evidence": [
+        "読者層をいかに絞り込むかが大事"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:19728562040952:72",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 72,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "59ed14a1e4d23e85196953eda8ce9db81cd452d747038c8ec45ac9f63da65706",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "销量增长最大原因是会议、视频、游戏等使用场景多样化。",
+      "evidence": [
+        "様々な場面で使われるようになったことが最たる要因"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:24361770474110:73",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 73,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "6a1c9d4bfbec0d277027f3072cb12dbf3e3d1f68e820b09505de8637503ffd59",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "奥运金牌目标实现后失去目标才决定退役，体力仍有自信。",
+      "evidence": [
+        "夢が実現してから目標を失い"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:24160769563194:74",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 74,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "fd9110af92152fe91de4bd10622e4809185c08bc7347b9dbff8e0748ae64594c",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "最重要的是趣味带来外出交流机会，避免老年孤立。",
+      "evidence": [
+        "この孤立を防げる点"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:119268248567758:75",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 75,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "0634581c7ed8a25c97faa6758432131c4af4a77390d7fd32e60dc35d335bf4c6",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "工具和清洁等合格，问题是废料应在下班时运到指定仓库。",
+      "evidence": [
+        "終業時に所定の倉庫に運び出す必要"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:5339567859466:76",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 76,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "ce0bee99e3340d658c586e928a4b513eac38c585e9cc2a9eb24931a7ac40e6e8",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "工资已列，司机强调最值得宣传的是能灵活调整出勤时间。",
+      "evidence": [
+        "勤務日や時間を都合に合わせて変更"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:96072938906381:77",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 77,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "46ca4ced6b77c85a223823cec2877b6b0d3b3def34ae69b910cab6896ffe8fd9",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "新草莓仍一样甜，抗病及产量也无本质变化，差异为更硬、耐损伤。",
+      "evidence": [
+        "これは硬めで傷が付きにくい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:79449281687947:78",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 78,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "b6e7fd1a13bfd835cdc18c1cbe943a02fac6c83d648b3f44f81abca7c2a451e8",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "受访者重点解释为了推广废布造纸技术而创办公司。",
+      "evidence": [
+        "このような技術があることをより多くの方に知っていただくため"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:173732395838235:79",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 79,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "f6768e28a89d546d0466609ecadde0d3fb24dfa6ba20f57a7457218184ca528b",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "全文讨论无人出租车急停、事故和法规等实用化问题。",
+      "evidence": [
+        "課題も見られます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:6505948368656:80",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 80,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "eaef602559a2e8206cc09f182e1be34f5d82c4f6877ca9d5c509839e9e1a213a",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "比较熟蔬菜和生蔬菜在吸收、营养方面各自利弊。",
+      "evidence": [
+        "温野菜と生野菜上手に組み合わせて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:266097927397729:81",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 81,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "bba3c5743b4c5aba46190dea6705bb4d7577c471fe2d95d4575c27c41aa890cb",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "台风混合海水、改善生态、提供淡水，主题为台风的益处。",
+      "evidence": [
+        "資源としての水が得られます"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:58771197712071:82",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 82,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "a145ef03ed96615af46511cf989d9ac525b875fa71ce77fa9224d51eb07cd5dc",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "全段介绍恐龙脚印能揭示种类、体型、速度及群居状态等。",
+      "evidence": [
+        "足跡の縦の長さ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:220451561085938:83",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 83,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "5e9076ba042b6cb360dae2957bc3852a4adc4cc1224ac74a7a5e8055f134faba",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "こりごり表示受够了，应附和之前合作很辛苦。",
+      "evidence": [
+        "ほんと苦労しましたね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:201053598735570:84",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 84,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "7c2c20212642d7598b2a4ec596644a0433ed97d853ae6bbdc0b84541f8fde65b",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "安くするにも程がある是批评过度降价，应回应下次注意。",
+      "evidence": [
+        "次からは気を付ける"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:209376224649929:85",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 85,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "5140d479564f803b35337b164f3cfef5f3af4f0f68c52deac604480cffb8e1e2",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "无论出席与否都需回复，故确认知道安排就告知。",
+      "evidence": [
+        "いずれにしても予定が分かったら"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:108067212645744:86",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 86,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "beb71776f3ba3fe3a45e65208d6461a5b4b3d0ec377125afc0f7e02d60783b6b",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "聞くに聞けない是想问却难以开口，担心使其更不高兴。",
+      "evidence": [
+        "聞いたら余計に機嫌悪くなりそう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:27648671653385:87",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 87,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "8c8138e6a968a0cee2aa2e30cd462ebc889e9d726a880892842d756c33296d1c",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "希望打工工资随物价上调，应附和。",
+      "evidence": [
+        "物価に合わせて上がらないかな"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:189793897213186:88",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 88,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "25fde03ca4ace0d78278c726908b2fa4bd3e6185cd72ca0883660dc722674840",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "軽くあしらわれた指请求被敷衍，没有获准购买。",
+      "evidence": [
+        "なかなか買ってもらえない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:59552354593364:89",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 89,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "52a7ec91473523bf9f5d3a5775bd098fffe39c3656e6ab4763cf46dc3da23bcb",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "会長だけある是赞其不愧为会长，有领导气质。",
+      "evidence": [
+        "いかにもリーダー"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:65107889153840:90",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 90,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "b6444f0e445e6c27d9dc404e7155a5a5d1ead898a2a7922992d7405a454a9584",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "因客户原因被迫改交货日期，需要重新协调日程。",
+      "evidence": [
+        "スケジュールを調整しないと"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:21162352502714:91",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 91,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "0f26cf5d49bcec67a5818b87a94105751ece390121abae40623b73b3e255a8ae",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "を機に说明演员评论是销量增长契机。",
+      "evidence": [
+        "あれがきっかけ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:186618174513802:92",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 92,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "34c8b5d076102b6b2e1265d7d7c236cf2e7e614857f9fd25514fa196f1307d16",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "中止の可能性も否定できない是仍可能取消，表达希望别取消。",
+      "evidence": [
+        "中止にならないといい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:187187170991645:93",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 93,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "aa3cd1d88b9ef8720a6b052f7eabcd1d27ed34ec3cd1405b3138e05e26f00403",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "いくら条件がよかろうと也不要当即答复，需谨慎。",
+      "evidence": [
+        "いい条件を出されても慎重"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:215787032849135:94",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 94,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "82f7b7df5f52bd5a1c98f6cb6480ec3607c4bdba7bdd36bb394317bf6d919912",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "为持续吸引人来且不同于超市，先设置休息长椅。",
+      "evidence": [
+        "ベンチを置いたらどうでしょう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:60811322907375:95",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 95,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "e782fb5c02ebdc596f92497fd9f2b148a712a026e8b79a691c902f1bd97022b7",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "男生想利用选手经验，并学习竞技选手心理，对应培养专业教练的1号。",
+      "evidence": [
+        "プレイヤーの気持ちとか、心の状態"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N1:4:102480938764044:96",
+      "period": "202607",
+      "level": "N1",
+      "questionNumber": 96,
+      "sourceFile": "N1_2026年7月_nqEAYSojLF.json",
+      "sourceHash": "72eda6d4f0b2cafda07c3b2dfa75899597c2254177b59f81c4243449829320a8",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "女生希望促进各种年龄层健康，而非专教儿童或老人，选3号。",
+      "evidence": [
+        "色んな世代の人がスポーツを楽しめる場"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:190616133394595:72",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 72,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "51ccd501efb7d0d7156071e0b7cd23552ec3d22988adbfc61466fe03032e0f42",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "礼物两三周后才取、餐饮下周才订，女生先准备感谢留言卡。",
+      "evidence": [
+        "とりあえずカードを準備してくれない"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:145638971705200:73",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 73,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "e7a38d7b51f8483aa14cf6b1e99af0ee1942a9e2468e9ff6868a245eea19fe78",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "日期已定、住宿已解决、细日程下周讨论，现在急需订交通。",
+      "evidence": [
+        "往復の交通手段は大急ぎで抑えとかないと"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:211751114594227:74",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 74,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "93e9a7110b45b4ef393db9c888658e4e0da25824e1b4233240152fdfb04d112d",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "问候及文化差异以前做过，制服讨论被否决，本次介绍本国传统乐器。",
+      "evidence": [
+        "自分の国の伝統的な楽器の紹介"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:145433662556306:75",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 75,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "ab4b08c3e6b3c8404b4463aacaf6ca003b84232cd18935971226e13261296c12",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "附近电器店不回收，最后决定投入公共设施专用回收箱。",
+      "evidence": [
+        "公共施設に回収専用の箱"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:170240168984568:76",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 76,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "1a011aa46d8a3740f3de6693e3d178f354486df72610e164be5bf6f47788c32c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "从一天两场改为两天同一时段，明确避开较贵的下午。",
+      "evidence": [
+        "じゃあ午後は避けて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:9031404355521:77",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 77,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "a531ca630072c0e67b1b28a38824f2a7902a5348223f88c3a23f599893cb2633",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "偶然看到钓鱼节目而想开始，祖父仅是回忆、杂志用于后来入门。",
+      "evidence": [
+        "たまたま釣りの番組を見た"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:243178239594374:78",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 78,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "0695919d5c56857e40feb86eb2c5c94b3aa197b651a5fc2f88f5d23a61a76f45",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "排除蛀牙、斜生及咬合，疼痛来自后牙周围细菌感染肿胀。",
+      "evidence": [
+        "歯の周りに菌が入って腫れて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:73690529480867:79",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 79,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "61152bea4061e5b9439450727955522bada53d8c267d44d19817a621aa954567",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "教练明确说下赛季课题是防止对手得分，而非回顾伤病。",
+      "evidence": [
+        "相手に得点させないこと"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:106625994335621:80",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 80,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "8287d2f2f1fa5ac12b6d3e6fab0071604b637045e6ed7c8ba6052a740a943a25",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "拜访客户与新人会面不可缺席，能请西田代替的只有企划部网络会议。",
+      "evidence": [
+        "1時半からのミーティングなら西田さんに変わって"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:191121746747826:81",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 81,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "af93c7ae6360c1458874eb6ac7ca39d4b44fc2c96fab9ef681a38615ce97831c",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "最独特之处是向市民出租部分农地的农家比例高。",
+      "evidence": [
+        "農園の1部を市民に貸し出している農家の割合"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:31835842180195:82",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 82,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "9cf73996001d680f451c5b3b83a6aba11fcf6a931b56f3f2f099ca65a8e50e83",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "最主要目的是避免空腹泡温泉导致贫血、眩晕等不适。",
+      "evidence": [
+        "空腹で入ると貧血やめまいを起こしかねません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:149915157254817:83",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 83,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "699b51928fd34bb5899ba2fb0a5ded02881810b643f62af40194578af18e465f",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "厨师谈孩子喜欢饭菜、工作虽繁忙但感到有用的职业成就感。",
+      "evidence": [
+        "人の役に立ってるなっていう実感"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:143670349666580:84",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 84,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "f9bc750cf133d14e6b3585c3b75eb7a3de7c87350db31ed0b40171e585f65881",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "牙片和温泉擦巾共同特点是不需水，适用于停水及户外。",
+      "evidence": [
+        "水が貴重な場で役立ちそう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:271619235431030:85",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 85,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "0f8e7fce00207c169c1204b82d1f88104dd726ffff75c7bf2a475f828d9a8728",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "旅行记录带来网友留言互动，主旨是因爱好产生交流的喜悦。",
+      "evidence": [
+        "やり取りをするのが楽しい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:140408809070693:86",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 86,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "90de02e8f056db1ebce5813beffb2c73f9781d935f8724e81f8d68a9e8843401",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "退休告别主要表达对新员工成长、主动学习和独立工作的欣慰。",
+      "evidence": [
+        "非常に頼もしく思いました"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:225595048733928:87",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 87,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "4b8d62e159307b57345a858fe7375a35dd992dc727daa76870b5cb5eb3e2cb72",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "解释临摹能吸收技巧和理解、培养感性及表达能力的意义。",
+      "evidence": [
+        "画家たちの影の付け方などの技術"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:172698863752456:88",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 88,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "68cbc4e2564061fbfefee17d10e6fa5c24fa63f68c463471595df4c1d6cff450",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "涙なしには見られない即看了会哭的电影。",
+      "evidence": [
+        "泣ける映画なんだ"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:175534418318977:89",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 89,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "73baf1459120777b497e0d725d46a478ed4b9f5ff3c53c74c4c5bd8197cbdc53",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "増える一方是持续增重，应回应一直增加很困扰。",
+      "evidence": [
+        "増え続けるのは困ります"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:19241220420274:90",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 90,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "ee74aa950585e9273922c199415be4dc9b146c3459bb21b39f940473680b4da0",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "对方劝不要因便宜大量购买，接受建议只买一份。",
+      "evidence": [
+        "ひとつだけにする"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:66566550940596:91",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 91,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "f635d1e2cfef5ab415ddca9529a4ec8d7ff7c9b736729b1aee723af2ecbdfaa6",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "请求出席明天下午会议，应回应下午可以。",
+      "evidence": [
+        "午後ですか、構いません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:198155416451572:92",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 92,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "bde527f21b286a6863e6c012bff4dd12b7504097f75faeaa1a90a6a253629945",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "欠かせない是不可缺少，应强调缺席会输。",
+      "evidence": [
+        "織田君がいないと負けちゃう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:242310473734609:93",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 93,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "14f55ebfe53a8ad74ab02bcdb8c9297c9533a91c6b0087757bc1ceba44d5cdaf",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "被问为何看手机大笑，应解释视频有趣。",
+      "evidence": [
+        "この動画おかしくて"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:160863837985854:94",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 94,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "cdd59e250799a8c9b9a3b606ed445a9e76905ee9d12f7ab9365aa12c3d336cca",
+      "status": "confirmed",
+      "firstPassOptionId": "C",
+      "secondPassOptionId": "C",
+      "correctOptionId": "C",
+      "rationale": "プログラムの事なら森さん是推荐程序专家森，应请他负责。",
+      "evidence": [
+        "森さんにお願いしましょう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:222425432649964:95",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 95,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "b39c1117899cebee91166fb61f22f2a94168201669a9b3e9f856ad3f35f2a523",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "出门前希望雨停，回应不停就麻烦。",
+      "evidence": [
+        "雨、止まないと嫌"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:168886467859117:96",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 96,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "d9f9a50132801ee60460cac01d2f5f9c34eeb827c9cb285f79737cb5d8061219",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "生きているといいのに表示怀念已故祖父，应回应他是好爷爷。",
+      "evidence": [
+        "いいおじいちゃんだった"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:81241601798602:97",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 97,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "db7bf8dccabd6e7be73a6a5ad43b73e89fcf22f24416c393f2526f89a05148fe",
+      "status": "confirmed",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": "A",
+      "correctOptionId": "A",
+      "rationale": "辞めるって決めた以上指已决定退学，应尽快告知老师。",
+      "evidence": [
+        "決めたんだったら。そうしたほう"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:126501677449656:98",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 98,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "3171099bba869da09f21a8ec95c847e6dc01a38d041fba6bb67111f0ab48bd6b",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "怒らずにはいられない是无法不生气，确认态度是否难以忍受。",
+      "evidence": [
+        "我慢できないくらいの態度"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:48559448733904:99",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 99,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "200ba2b6d53943b7c62ac7246c3f9b5e3e324aad922caa01ff57951097b85be9",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "让狗留在熟悉的家，并请它熟悉、愿意再照顾的祖母来家里。",
+      "evidence": [
+        "ポチがよく慣れてる人にお願いした方が心強い"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:43752843984848:100",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 100,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "ed7586f8c8b4ba9f8b1accb6d30986a12ef0302f8cbba5c38251ebe938966930",
+      "status": "confirmed",
+      "firstPassOptionId": "D",
+      "secondPassOptionId": "D",
+      "correctOptionId": "D",
+      "rationale": "女士想尝味噌味，对应南部。",
+      "evidence": [
+        "味噌味のが食べてみたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    },
+    {
+      "id": "imported:202607:N2:4:132100009823288:101",
+      "period": "202607",
+      "level": "N2",
+      "questionNumber": 101,
+      "sourceFile": "N2_2026年7月_t6j6BxSG8d.json",
+      "sourceHash": "7d0759227c2a40ec1098f34fb620dd9d5a8777cadb20aa7843c950982e32f8d1",
+      "status": "confirmed",
+      "firstPassOptionId": "B",
+      "secondPassOptionId": "B",
+      "correctOptionId": "B",
+      "rationale": "男士要清淡酱油味且有鱼，排除仅海苔的北部，选西部。",
+      "evidence": [
+        "魚が入ってるのを食べてみたい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05"
+    }
+  ]
+}

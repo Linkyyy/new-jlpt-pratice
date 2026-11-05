@@ -34,8 +34,9 @@
           "text": "アンケートのリンクをメールする"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>新表单、年级栏和邮件都由男方负责，女生只需试答检查故障。</p><p>原文依据：試しに答えてみてくれる</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,725\" data-endtime=\"00:00:11,800\">大学でバドミントン部の男の学生と女の学生が話しています。女の学生はこの後何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:13,525\" data-endtime=\"00:00:24,550\">男：吉川さんこの前、1、2年生を対象にしたアンケート用紙を作ってもらったよね。練習計画を考え直すための。あれ、ちょっと変更があって。</p><p class=\"moji-content\" data-starttime=\"00:00:24,700\" data-endtime=\"00:00:25,900\">女：あ、はい。</p><p class=\"moji-content\" data-starttime=\"00:00:26,175\" data-endtime=\"00:00:36,900\">男：昨日顧問の太田先生と話したんだけど、アンケートを印刷して部員に配るって案はやめて、スマホで回答できるアンケートフォームに変更したらどうって言われて。</p><p class=\"moji-content\" data-starttime=\"00:00:37,175\" data-endtime=\"00:00:38,250\">女：いいですね。</p><p class=\"moji-content\" data-starttime=\"00:00:38,375\" data-endtime=\"00:00:47,425\">男：うん、匿名にしたいから、名前を書く欄はなしにしようかな。その代わり、新しく学年の入力欄は作ろうと思って。</p><p class=\"moji-content\" data-starttime=\"00:00:47,675\" data-endtime=\"00:00:50,125\">女：あ、その方がいいと思います。</p><p class=\"moji-content\" data-starttime=\"00:00:50,275\" data-endtime=\"00:01:04,200\">男：うん。それからウェブ上の新しいフォームに質問を入力するのもやっとくね。ウェブのアンケートフォームが完成したら、試しに答えてみてくれる？リンクをメールで送るから。不具合がないようにしたいんだ。</p><p class=\"moji-content\" data-starttime=\"00:01:04,425\" data-endtime=\"00:01:05,350\">女：分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:11,025\" data-endtime=\"00:01:14,575\">女の学生はこの後何をしますか？</p>"
       ],
       "sourceQuestionNumber": 67,
@@ -74,8 +75,9 @@
           "text": "楽曲の演奏を聞く"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>不用储物柜，先集体听讲解，再自由看展或听演奏。</p><p>原文依据：セミナー室で皆さん揃って</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:09,950\">観光バスの中で、ガイドが客に話しています。客はバスを降りて、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:11,650\" data-endtime=\"00:00:25,525\">朝日町歴史博物館にもうすぐ到着いたします。見学は2時間で、今月の特別展では16世紀頃にこの地域の祭りで使われた衣装や道具などをご覧いただけます。</p><p class=\"moji-content\" data-starttime=\"00:00:26,025\" data-endtime=\"00:00:32,475\">貴重品以外のお荷物はバスに置いたままにし、館内の無料ロッカーの使用はお控えください。</p><p class=\"moji-content\" data-starttime=\"00:00:33,025\" data-endtime=\"00:00:43,500\">セミナー室で皆さん揃って、祭りの歴史について講義を聞いていただき、その後集合時間まで展示室を自由にご見学いただきます。</p><p class=\"moji-content\" data-starttime=\"00:00:44,400\" data-endtime=\"00:00:52,700\">見学の後半、2階で伝統的な楽器の演奏会がちょうど始まるそうですので、是非そちらもお楽しみください。</p><p class=\"moji-content\" data-starttime=\"00:00:58,275\" data-endtime=\"00:01:01,775\">客はバスを降りて、まず何をしますか？</p>"
       ],
       "sourceQuestionNumber": 68,
@@ -114,8 +116,9 @@
           "text": "先方と会う約束を取り付ける"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>电话已道歉、补货已出发，原因由仓库调查，男方先约当面道歉。</p><p>原文依据：あちらの担当者にアポを入れて</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,775\" data-endtime=\"00:00:09,900\">会社で男の人と課長が話しています。男の人はこの後まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:11,525\" data-endtime=\"00:00:24,075\">男：課長、ちょっとよろしいですか？実はトラブルがありまして、未来食品さんにご注文いただいた食品トレーなんですが、ご注文と異なるサイズが届いてしまったそうなんです。</p><p class=\"moji-content\" data-starttime=\"00:00:24,075\" data-endtime=\"00:00:31,925\">課長：それは困りましたね。電話で謝罪をしたんですか？それと、正しい注文の商品の納品は？</p><p class=\"moji-content\" data-starttime=\"00:00:32,000\" data-endtime=\"00:00:37,775\">男：はい。電話で謝罪をしました。商品を積んだ車はもう倉庫を出たそうです。</p><p class=\"moji-content\" data-starttime=\"00:00:37,800\" data-endtime=\"00:00:40,850\">課長：分かりました。原因は分かってますか？</p><p class=\"moji-content\" data-starttime=\"00:00:40,875\" data-endtime=\"00:00:43,500\">男：それが、伝票上は間違いないんです。</p><p class=\"moji-content\" data-starttime=\"00:00:43,525\" data-endtime=\"00:00:55,550\">課長：そうですか。それは倉庫の方で調べてもらいますね。それより、直接謝罪しないといけないから、あちらの担当者にアポを入れてください。私も同行します。</p><p class=\"moji-content\" data-starttime=\"00:00:55,600\" data-endtime=\"00:00:56,375\">男：分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:02,125\" data-endtime=\"00:01:05,725\">男の人はこの後、まず何をしますか？</p>"
       ],
       "sourceQuestionNumber": 69,
@@ -154,8 +157,9 @@
           "text": "訓練前に利用者へ声をかける"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>先把灭火器搬到停车场；通报是训练首项，床单已搬好。</p><p>原文依据：訓練用の消火器を駐車場の隅に置いといて</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:11,475\">高齢者の介護施設で、女の課長と男の人が話しています。男の人はこの後、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:13,175\" data-endtime=\"00:00:22,875\">課長：中田さん、おはよう。事前に話してある通り、今日は火災発生時に備えた訓練をしますから、必要なものを用意してほしいんですけど。</p><p class=\"moji-content\" data-starttime=\"00:00:23,000\" data-endtime=\"00:00:27,525\">男：はい。あの、訓練の流れをもう一度確認したいのですが。</p><p class=\"moji-content\" data-starttime=\"00:00:27,600\" data-endtime=\"00:00:42,175\">課長：ええ、いいですよ。初めにここ事務室で、スタッフ全員で消防への通報手順の確認から始めます。次にロビーでベッドシーツを使って、歩行が困難な方を移送する練習をします。</p><p class=\"moji-content\" data-starttime=\"00:00:42,300\" data-endtime=\"00:00:50,475\">その後利用者さんを駐車場まで誘導する訓練をして、外で消火器の使い方を確認して終わりです。</p><p class=\"moji-content\" data-starttime=\"00:00:50,475\" data-endtime=\"00:00:51,150\">男：はい。</p><p class=\"moji-content\" data-starttime=\"00:00:51,250\" data-endtime=\"00:01:05,675\">課長：それで事務室の入り口に並べてある訓練用の消火器を駐車場の隅に置いといてくれませんか、歩けない人を運ぶ練習に使うシーツはリネン室から必要な枚数をロビーに運んでおきました。</p><p class=\"moji-content\" data-starttime=\"00:01:05,675\" data-endtime=\"00:01:06,225\">男：はい。</p><p class=\"moji-content\" data-starttime=\"00:01:06,425\" data-endtime=\"00:01:20,400\">課長：訓練を始める直前に利用者さんへ、「一緒に行きますから、大丈夫ですよ。」などと、声掛けをして安心してもらいましょう。10時に訓練を始めるから、それまでに事務室に戻ってきてください。</p><p class=\"moji-content\" data-starttime=\"00:01:20,500\" data-endtime=\"00:01:23,500\">男：10時までに事務室。分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:29,100\" data-endtime=\"00:01:32,675\">男の人はこの後、まず何をしますか？</p>"
       ],
       "sourceQuestionNumber": 70,
@@ -194,8 +198,9 @@
           "text": "公開する時間を決める"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>标题和发布时间以后再定，应先缩小目标读者范围。</p><p>原文依据：読者層をいかに絞り込むかが大事</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:15,475\">情報サイトを運営する会社で、インターンの女の学生と担当者が話しています。ウェブに掲載する記事について、女の学生はこの後、まず何をしますか？</p><p class=\"moji-content\" data-starttime=\"00:00:17,125\" data-endtime=\"00:00:31,500\">女：あの、私が書いている、「今真似したいファッショングッズ五つ」というタイトルのウェブ記事についてアドバイスいただけませんか？ちょっとタイトルがありきたりなので、練り直した方がいいとは思ってるんですけど。</p><p class=\"moji-content\" data-starttime=\"00:00:32,100\" data-endtime=\"00:00:40,825\">男：うーん、タイトルは後で考えたらいいかな。それよりターゲットとする読者はどんな層を想定してるの？</p><p class=\"moji-content\" data-starttime=\"00:00:41,125\" data-endtime=\"00:00:43,550\">女：私と同じ20代の女性です。</p><p class=\"moji-content\" data-starttime=\"00:00:43,725\" data-endtime=\"00:00:58,475\">男：20代と言っても幅広いから。例えば、社会人も学生もいるでしょう。学生なら、記事で紹介するグッズを手頃な値段のものに選び直した方がいいし、社会人なら予算にも余裕があるだろうしね。</p><p class=\"moji-content\" data-starttime=\"00:00:58,650\" data-endtime=\"00:01:01,325\">女：そうですね。分かりました。</p><p class=\"moji-content\" data-starttime=\"00:01:01,425\" data-endtime=\"00:01:11,125\">男：ウェブ記事を書く上では、その記事を読んでほしい読者層をいかに絞り込むかが大事ですよ。あと何時頃公開するかは決めてるの？</p><p class=\"moji-content\" data-starttime=\"00:01:11,450\" data-endtime=\"00:01:14,825\">女：えっとご相談してから決めたいと思ってたんですが。</p><p class=\"moji-content\" data-starttime=\"00:01:14,900\" data-endtime=\"00:01:24,475\">男：そうだね。大体仕事終わり、授業終わりの時間帯だと思うけど、まあ、対象が定まったら、公開時間も決まってくるから。</p><p class=\"moji-content\" data-starttime=\"00:01:30,025\" data-endtime=\"00:01:36,500\">ウェブに掲載する記事について、女の学生はこの後、まず何をしますか？</p>"
       ],
       "sourceQuestionNumber": 71,
@@ -234,8 +239,9 @@
           "text": "配信サービスの品質が向上したから"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>销量增长最大原因是会议、视频、游戏等使用场景多样化。</p><p>原文依据：様々な場面で使われるようになったことが最たる要因</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:12,175\">テレビでアナウンサーと男の記者が話しています。男の記者はどうしてイヤホンの販売が好調だと言っていますか？</p><p class=\"moji-content\" data-starttime=\"00:00:35,725\" data-endtime=\"00:00:43,350\">女：最近イヤホンの売れ行きが好調です。背景には何があるのでしょうか？鈴木記者に聞きます。</p><p class=\"moji-content\" data-starttime=\"00:00:43,650\" data-endtime=\"00:00:53,525\">男：はい。以前は数千円で買えたイヤホンですが、コードがないタイプのイヤホンが主流になり、高機能になったことで価格が高騰しています。</p><p class=\"moji-content\" data-starttime=\"00:00:53,725\" data-endtime=\"00:00:56,875\">女：それでも手に取る消費者が多いようですが。</p><p class=\"moji-content\" data-starttime=\"00:00:56,875\" data-endtime=\"00:01:09,050\">男：はい。様々な場面で使われるようになったことが最たる要因です。動画等をスマートフォンで楽しむ人が増えたのもその一つですね。またウェブ会議などで使う人もいます。</p><p class=\"moji-content\" data-starttime=\"00:01:09,350\" data-endtime=\"00:01:12,750\">女：音楽を聴くためだけの道具ではなくなったんですね。</p><p class=\"moji-content\" data-starttime=\"00:01:12,875\" data-endtime=\"00:01:24,675\">男：はい。オンラインゲーム、本の朗読を聞けるサービスなど多岐にわたります。今後配信サービスの音質がさらに向上すれば、需要はより高まりそうです。</p><p class=\"moji-content\" data-starttime=\"00:01:30,325\" data-endtime=\"00:01:35,500\">男の記者はどうしてイヤホンの販売が好調だと言っていますか？</p>"
       ],
       "sourceQuestionNumber": 72,
@@ -274,8 +280,9 @@
           "text": "新しいことにチャレンジしたいから"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>奥运金牌目标实现后失去目标才决定退役，体力仍有自信。</p><p>原文依据：夢が実現してから目標を失い</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,875\" data-endtime=\"00:00:11,850\">テレビでアナウンサーが柔道の選手にインタビューをしています。柔道の選手が引退を決めた理由は何ですか？</p><p class=\"moji-content\" data-starttime=\"00:00:35,550\" data-endtime=\"00:00:43,350\">男：柔道の本田選手です。今回引退を決意されたということですが、引退を惜しむ声も多く聞かれます。</p><p class=\"moji-content\" data-starttime=\"00:00:43,600\" data-endtime=\"00:00:57,275\">女：はい。ここ数年怪我に苦しむことも多かったのですが、乗り越えられたのは皆様の応援のおかげです。本当にありがとうございました。体力的にはまだまだやれる自信はあるのですが。</p><p class=\"moji-content\" data-starttime=\"00:00:57,700\" data-endtime=\"00:01:02,475\">男：そうですか。昨年はオリンピックで金メダルに輝かれました。</p><p class=\"moji-content\" data-starttime=\"00:01:02,550\" data-endtime=\"00:01:17,425\">女：はい。念願の金メダルでした。それから1年、夢が実現してから目標を失い、これは潮時なのだろうと思うようになりました。引退後はこれまでできなかったことにチャレンジしたいと思います。</p><p class=\"moji-content\" data-starttime=\"00:01:23,150\" data-endtime=\"00:01:27,350\">柔道の選手は引退を決めた理由は何ですか？</p>"
       ],
       "sourceQuestionNumber": 73,
@@ -314,8 +321,9 @@
           "text": "人と交流が増えるから"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>最重要的是趣味带来外出交流机会，避免老年孤立。</p><p>原文依据：この孤立を防げる点</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,050\" data-endtime=\"00:00:10,650\">講演会で専門家が話しています。専門家が高齢者に趣味を勧める1番の理由は何ですか？</p><p class=\"moji-content\" data-starttime=\"00:00:34,250\" data-endtime=\"00:00:44,700\">皆さん、趣味はありますか？映画鑑賞やカラオケ、人が趣味を楽しんでいる時、脳はリラックスしていることが調査でわかっています。</p><p class=\"moji-content\" data-starttime=\"00:00:45,400\" data-endtime=\"00:00:53,525\">ゴルフや山登りが趣味の人は体が丈夫になりますし、将棋や囲碁は脳の働きが活発になります。</p><p class=\"moji-content\" data-starttime=\"00:00:54,175\" data-endtime=\"00:01:07,475\">高齢になると、人との関わりが徐々に減っていき、1人の時間が長くなる傾向があります。趣味があればそのために出かけて、人と会い話す機会も多くあります。</p><p class=\"moji-content\" data-starttime=\"00:01:08,150\" data-endtime=\"00:01:13,625\">この孤立を防げる点が、特に趣味を持つことを勧めたい理由です。</p><p class=\"moji-content\" data-starttime=\"00:01:19,275\" data-endtime=\"00:01:24,350\">専門家は高齢者に趣味を勧める一番の理由は何ですか？</p>"
       ],
       "sourceQuestionNumber": 74,
@@ -354,8 +362,9 @@
           "text": "防犯カメラを取り付ける"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>工具和清洁等合格，问题是废料应在下班时运到指定仓库。</p><p>原文依据：終業時に所定の倉庫に運び出す必要</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:13,600\">工場で点検担当の女の人と工場長の男の人が話しています。女の人は改善点としてどんな点を指摘しましたか？</p><p class=\"moji-content\" data-starttime=\"00:00:37,175\" data-endtime=\"00:00:44,250\">女：武田さん、お疲れ様です。工場内の定期点検が終わったので、結果をご報告しますね。</p><p class=\"moji-content\" data-starttime=\"00:00:44,300\" data-endtime=\"00:00:45,650\">男：よろしくお願いします。</p><p class=\"moji-content\" data-starttime=\"00:00:45,850\" data-endtime=\"00:00:53,250\">女：道具は扱いやすいように整理されていました。作業の効率を向上させるのに繋がっていると思います。</p><p class=\"moji-content\" data-starttime=\"00:00:53,950\" data-endtime=\"00:01:06,975\">女：作業で出るくずは各機械の横にまとめてありましたけど、火災などにつながることもありますから、そういうものは溜め込まず、終業時に所定の倉庫に運び出す必要があります。</p><p class=\"moji-content\" data-starttime=\"00:01:07,050\" data-endtime=\"00:01:08,550\">男：あ、そうですね。</p><p class=\"moji-content\" data-starttime=\"00:01:08,675\" data-endtime=\"00:01:18,350\">女：工場の機械の掃除は徹底されていますから、マニュアルに沿って行い、点検項目のチェック記入なども習慣づけられていますね。</p><p class=\"moji-content\" data-starttime=\"00:01:18,400\" data-endtime=\"00:01:24,175\">男：ええ、清潔な状態を維持することで、社員の意識も変わってきていると思います。</p><p class=\"moji-content\" data-starttime=\"00:01:24,200\" data-endtime=\"00:01:33,625\">女：そうですね。最後は防犯対策ですが、鍵の管理方法などを確認しました。防犯カメラも正常でした。</p><p class=\"moji-content\" data-starttime=\"00:01:33,775\" data-endtime=\"00:01:34,975\">男：はい、ありがとうございます。</p><p class=\"moji-content\" data-starttime=\"00:01:40,775\" data-endtime=\"00:01:45,475\">女の人は改善点として。どんな点を指摘しましたか？</p>"
       ],
       "sourceQuestionNumber": 75,
@@ -394,8 +403,9 @@
           "text": "環境にはいりょしている"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>工资已列，司机强调最值得宣传的是能灵活调整出勤时间。</p><p>原文依据：勤務日や時間を都合に合わせて変更</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,800\" data-endtime=\"00:00:14,175\">運送会社で上司とドライバーの男の人が話しています。男の人はドライバーの募集で最もアピールできる点は何だと言っていますか？</p><p class=\"moji-content\" data-starttime=\"00:00:37,725\" data-endtime=\"00:00:40,450\">上司：小野さん、配達お疲れ様です。</p><p class=\"moji-content\" data-starttime=\"00:00:40,475\" data-endtime=\"00:00:48,125\">男：お疲れ様です。先週は火曜日にお休みをいただき助かりました。勤務シフトの調整、ありがとうございました。</p><p class=\"moji-content\" data-starttime=\"00:00:48,325\" data-endtime=\"00:00:59,025\">上司：それはよかったです。あの新しいトラックドライバーを募集するんですけど、どんな情報を載せた方がいいか、ドライバーの小野さんにぜひ伺いたくて。</p><p class=\"moji-content\" data-starttime=\"00:00:59,200\" data-endtime=\"00:01:05,100\">男：えっと、そうですね、うちはけっこう給料はいいですよね。</p><p class=\"moji-content\" data-starttime=\"00:01:05,150\" data-endtime=\"00:01:20,675\">上司：そうですね。給料はもちろん載せたんですが、それとは別にうちの会社のアピールポイントです。以前、顧客対応マニュアルがあって助かったっておっしゃってたので。そういったこともアピールできる点だと思ったんですが。</p><p class=\"moji-content\" data-starttime=\"00:01:20,775\" data-endtime=\"00:01:27,925\">男：私はマニュアルがあって入社当初は助かりましたね。まぁ、ないほうがいいって人もいますけどね。</p><p class=\"moji-content\" data-starttime=\"00:01:28,250\" data-endtime=\"00:01:41,325\">あと、給料がよくても仕事がつらかったらすぐ辞めちゃう人もいるだろうし。やっぱり勤務日や時間を都合に合わせて変更してくれる会社はなかなかないんじゃないでしょうか。</p><p class=\"moji-content\" data-starttime=\"00:01:41,325\" data-endtime=\"00:01:42,375\">上司：あぁ～。</p><p class=\"moji-content\" data-starttime=\"00:01:42,550\" data-endtime=\"00:01:54,325\">男：あと、会社では新しいトラックの導入など、環境への配慮も推進されていていいとは思うんですが、応募の際に重要視するかはちょっと私には分かりません。</p><p class=\"moji-content\" data-starttime=\"00:01:54,525\" data-endtime=\"00:01:56,950\">上司：分かりました。どうもありがとう。</p><p class=\"moji-content\" data-starttime=\"00:02:02,500\" data-endtime=\"00:02:09,150\">男の人はドライバーの募集で最もアピールできる点は何だと言っていますか？</p>"
       ],
       "sourceQuestionNumber": 76,
@@ -434,8 +444,9 @@
           "text": "収穫量が安定していること"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>新草莓仍一样甜，抗病及产量也无本质变化，差异为更硬、耐损伤。</p><p>原文依据：これは硬めで傷が付きにくい</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,100\" data-endtime=\"00:00:18,025\">テレビでアナウンサーの男の人が農業開発センターの職員にインタビューをしています。新しい品種のイチゴについて、これまでのイチゴと異なる点は何だと言っていますか。</p><p class=\"moji-content\" data-starttime=\"00:00:41,650\" data-endtime=\"00:00:54,200\">男：農業開発センターの品種開発担当の高山さんです。こちらで新しく開発されたイチゴが好評だそうですね。このイチゴの特徴について教えてください。</p><p class=\"moji-content\" data-starttime=\"00:00:54,350\" data-endtime=\"00:01:11,575\">女：はい、従来のものと同様、甘みが強いのが特徴です。従来の品種は果実が柔らかく、収穫作業やパック詰めの作業だけでも果実が傷んでしまうことがあったんですが、これは硬めで傷が付きにくいんです。</p><p class=\"moji-content\" data-starttime=\"00:01:11,650\" data-endtime=\"00:01:13,075\">男：そうなんですね。</p><p class=\"moji-content\" data-starttime=\"00:01:13,175\" data-endtime=\"00:01:19,475\">女：えぇ、従来の物より長持ちしますので、長距離の輸送にも適しているんです。</p><p class=\"moji-content\" data-starttime=\"00:01:19,700\" data-endtime=\"00:01:26,550\">男：そうですか。栽培方法はこれまでの品種と変わらないんですか？害虫の駆除とか。</p><p class=\"moji-content\" data-starttime=\"00:01:26,675\" data-endtime=\"00:01:38,250\">女：病気や害虫に対しては特に強くなったわけではないんですが、これまでの品種と同様に適切に処置をすれば安定した収穫量は期待できます。</p><p class=\"moji-content\" data-starttime=\"00:01:43,825\" data-endtime=\"00:01:50,825\">問：新しい品種のイチゴについてこれまでのイチゴと異なる点は何だと言っていますか？</p>"
       ],
       "sourceQuestionNumber": 77,
@@ -474,8 +485,9 @@
           "text": "④<br>"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>受访者重点解释为了推广废布造纸技术而创办公司。</p><p>原文依据：このような技術があることをより多くの方に知っていただくため</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,150\" data-endtime=\"00:00:06,758\">ラジオでアナウンサーが女の人にインタビューしています。</p><p class=\"moji-content\" data-starttime=\"00:00:08,400\" data-endtime=\"00:00:13,030\">男：株式会社あおい代表の野田さんにお話を伺います。</p><p class=\"moji-content\" data-starttime=\"00:00:13,375\" data-endtime=\"00:00:27,583\">女：着なくなった服は捨ててしまうという方もいらっしゃると思いますが、私は古い衣類、特に綿の布を紙に作り変える技術に着目し、昨年起業いたしました。</p><p class=\"moji-content\" data-starttime=\"00:00:28,095\" data-endtime=\"00:00:41,407\">女：綿からは普通の紙よりも水をはじく強い紙ができるので、清涼飲料水のラベルやコースター、ゴミ箱、野外に展示するアート作品に使われています。</p><p class=\"moji-content\" data-starttime=\"00:00:41,857\" data-endtime=\"00:00:58,827\">女：このような技術があることをより多くの方に知っていただくために、事業を起こすに至りました。材料にできるものって実はたくさんあるんだ、と気づいていただきたい。人々の意識を変えられるように努めます。</p><p class=\"moji-content\" data-starttime=\"00:01:03,961\" data-endtime=\"00:01:08,202\">女の人は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:01:09,325\" data-endtime=\"00:01:13,165\">1会社を立ち上げた理由。</p><p class=\"moji-content\" data-starttime=\"00:01:15,725\" data-endtime=\"00:01:19,693\">2洋服の素材へのこだわり。</p><p class=\"moji-content\" data-starttime=\"00:01:22,125\" data-endtime=\"00:01:26,477\">3布をリサイクルする為の条件。</p><p class=\"moji-content\" data-starttime=\"00:01:28,912\" data-endtime=\"00:01:32,493\">4ファッション業界の課題。</p>"
       ],
       "sourceQuestionNumber": 78,
@@ -514,8 +526,9 @@
           "text": "④"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>全文讨论无人出租车急停、事故和法规等实用化问题。</p><p>原文依据：課題も見られます</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,500\" data-endtime=\"00:00:04,300\">テレビでアナウンサーが話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:05,950\" data-endtime=\"00:00:19,000\">自動運転の無人タクシーについて、各自動車メーカーが開発に力を入れています。ドライバー不足を解消するアイデアとして、大きな期待が寄せられる一方、課題も見られます。</p><p class=\"moji-content\" data-starttime=\"00:00:19,750\" data-endtime=\"00:00:29,175\">すでに試験的に導入されている地域からは急な停止で交通の妨げになったり、事故を起こしたりといった例も報告されています。</p><p class=\"moji-content\" data-starttime=\"00:00:29,975\" data-endtime=\"00:00:38,100\">その他法律についても整える必要があり、安心して利用できるようになるまでにはもう少し時間がかかりそうです。</p><p class=\"moji-content\" data-starttime=\"00:00:43,700\" data-endtime=\"00:00:48,175\">アナウンサーは無人タクシーの何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:49,875\" data-endtime=\"00:00:52,725\">1安全な乗り方。</p><p class=\"moji-content\" data-starttime=\"00:00:55,250\" data-endtime=\"00:00:58,300\">2開発のプロセス。</p><p class=\"moji-content\" data-starttime=\"00:01:00,925\" data-endtime=\"00:01:04,725\">3実用化における問題点。</p><p class=\"moji-content\" data-starttime=\"00:01:07,275\" data-endtime=\"00:01:10,475\">4自動運転の仕組み。</p>"
       ],
       "sourceQuestionNumber": 79,
@@ -554,8 +567,9 @@
           "text": "④"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>比较熟蔬菜和生蔬菜在吸收、营养方面各自利弊。</p><p>原文依据：温野菜と生野菜上手に組み合わせて</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:04,950\">講演会で栄養士が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,650\" data-endtime=\"00:00:22,025\">野菜は毎日の食事に欠かせない食材です。茹でたり、油で炒めたりして、熱を加えて食べる温野菜は調理することで、かさは減り、一度にたくさん食べられる上に消化しやすいです。</p><p class=\"moji-content\" data-starttime=\"00:00:22,325\" data-endtime=\"00:00:31,125\">ただ、野菜を加熱すると、ビタミンやビタミン群ミネラルが破壊されたり流出したりしてしまいます。</p><p class=\"moji-content\" data-starttime=\"00:00:31,600\" data-endtime=\"00:00:43,750\">一方、サラダなどで食べる生野菜は豊富なビタミンや食物繊維をそのまま取り入れることができますが、温野菜に比べ、消化吸収に時間がかかります。</p><p class=\"moji-content\" data-starttime=\"00:00:44,175\" data-endtime=\"00:00:54,925\">胃腸が弱っている時に食べ過ぎると、体に負担をかけてしまいます。温野菜と生野菜上手に組み合わせて食べるのは理想的ですね。</p><p class=\"moji-content\" data-starttime=\"00:01:00,325\" data-endtime=\"00:01:04,700\">栄養士は野菜の何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:01:06,250\" data-endtime=\"00:01:09,925\">1美味しく食べる為の工夫。</p><p class=\"moji-content\" data-starttime=\"00:01:12,475\" data-endtime=\"00:01:16,475\">2食べる量と健康の関係。</p><p class=\"moji-content\" data-starttime=\"00:01:19,050\" data-endtime=\"00:01:22,850\">3沢山食べた方がいい訳。</p><p class=\"moji-content\" data-starttime=\"00:01:25,475\" data-endtime=\"00:01:30,100\">4調理法によって異なる利点と欠点。</p>"
       ],
       "sourceQuestionNumber": 80,
@@ -594,8 +608,9 @@
           "text": "④"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>台风混合海水、改善生态、提供淡水，主题为台风的益处。</p><p>原文依据：資源としての水が得られます</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,900\" data-endtime=\"00:00:04,475\">大学で先生が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,225\" data-endtime=\"00:00:20,475\">台風は夏から秋にかけて多く発生します。台風が通過すると、強い風で海の水が上下にかき混ぜられるので、海の表面近くの温度が高くなりすぎるのを抑えられます。</p><p class=\"moji-content\" data-starttime=\"00:00:21,425\" data-endtime=\"00:00:29,125\">この時海水に含まれる酸素や栄養分がよく混ざり、海の生物が住みやすい環境になります。</p><p class=\"moji-content\" data-starttime=\"00:00:29,950\" data-endtime=\"00:00:39,275\">また、台風が通る場所にはたくさんの雨が降るため、農業用や生活用など資源としての水が得られます。</p><p class=\"moji-content\" data-starttime=\"00:00:44,850\" data-endtime=\"00:00:48,300\">先生は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:49,850\" data-endtime=\"00:00:53,350\">1台風による恩恵。</p><p class=\"moji-content\" data-starttime=\"00:00:55,825\" data-endtime=\"00:00:58,875\">2台風の進路。</p><p class=\"moji-content\" data-starttime=\"00:01:01,400\" data-endtime=\"00:01:05,875\">3台風から環境を守る方法。</p><p class=\"moji-content\" data-starttime=\"00:01:08,425\" data-endtime=\"00:01:12,350\">4台風が発生する原因。</p>"
       ],
       "sourceQuestionNumber": 81,
@@ -634,8 +649,9 @@
           "text": "④"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>全段介绍恐龙脚印能揭示种类、体型、速度及群居状态等。</p><p>原文依据：足跡の縦の長さ</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,075\" data-endtime=\"00:00:05,325\">市民講座で専門家が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,825\" data-endtime=\"00:00:20,775\">恐竜の化石というと、骨や歯をイメージしますが、地面を歩いていた場所にできた足跡も化石として残っています。それを見ると恐竜の大まかな種類が識別できます。</p><p class=\"moji-content\" data-starttime=\"00:00:21,025\" data-endtime=\"00:00:32,125\">また足跡の縦の長さからその跡をつけた恐竜の腰の高さが把握でき、歩幅から歩行の速度を推定することもできます。</p><p class=\"moji-content\" data-starttime=\"00:00:32,800\" data-endtime=\"00:00:39,900\">他にも群れで生活していたかどうかや、怪我をしていたかどうかなどを知る手がかりにもなります。</p><p class=\"moji-content\" data-starttime=\"00:00:40,400\" data-endtime=\"00:00:46,350\">骨や歯の化石だけからは定かにできない。多くのことを語りかけてくれます。</p><p class=\"moji-content\" data-starttime=\"00:00:51,950\" data-endtime=\"00:00:55,350\">専門家は何について話していますか？</p><p class=\"moji-content\" data-starttime=\"00:00:56,900\" data-endtime=\"00:01:01,625\">1最近発見された恐竜の化石。</p><p class=\"moji-content\" data-starttime=\"00:01:04,150\" data-endtime=\"00:01:08,600\">2恐竜の骨や歯の研究成果。</p><p class=\"moji-content\" data-starttime=\"00:01:11,225\" data-endtime=\"00:01:15,525\">3恐竜の化石が見つかりやすい場所。</p><p class=\"moji-content\" data-starttime=\"00:01:18,100\" data-endtime=\"00:01:22,175\">4恐竜の足跡からわかること。</p>"
       ],
       "sourceQuestionNumber": 82,
@@ -669,8 +685,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>こりごり表示受够了，应附和之前合作很辛苦。</p><p>原文依据：ほんと苦労しましたね</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,975\" data-endtime=\"00:00:06,100\">サクラ社の人たちと一緒に仕事するのはこりごりですよね。</p><p class=\"moji-content\" data-starttime=\"00:00:07,750\" data-endtime=\"00:00:11,400\">①ご一緒できてよかったですね。</p><p class=\"moji-content\" data-starttime=\"00:00:13,025\" data-endtime=\"00:00:16,300\">②ほんと苦労しましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:18,000\" data-endtime=\"00:00:22,050\">③またぜひ仕事したいですよね。</p>"
       ],
       "sourceQuestionNumber": 83,
@@ -704,8 +721,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>安くするにも程がある是批评过度降价，应回应下次注意。</p><p>原文依据：次からは気を付ける</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,725\" data-endtime=\"00:00:07,000\">木村さん、お客さんに頼まれたからって安くするにも程があるんじゃない。</p><p class=\"moji-content\" data-starttime=\"00:00:08,675\" data-endtime=\"00:00:11,900\">①安くするほどいいんだね。</p><p class=\"moji-content\" data-starttime=\"00:00:13,600\" data-endtime=\"00:00:16,925\">②もっと安くした方がよかった？</p><p class=\"moji-content\" data-starttime=\"00:00:18,650\" data-endtime=\"00:00:21,650\">③次からは気を付けるよ。</p>"
       ],
       "sourceQuestionNumber": 84,
@@ -739,8 +757,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>无论出席与否都需回复，故确认知道安排就告知。</p><p>原文依据：いずれにしても予定が分かったら</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,950\" data-endtime=\"00:00:10,225\">山下さん、来月の自治会の集まりですが、参加するにせよしないにせよ出欠をお知らせいただけますか。</p><p class=\"moji-content\" data-starttime=\"00:00:11,775\" data-endtime=\"00:00:17,175\">①参加する人は連絡する必要ないってことですね。</p><p class=\"moji-content\" data-starttime=\"00:00:18,775\" data-endtime=\"00:00:23,575\">②いずれにしても予定が分かったらお伝えしますね。</p><p class=\"moji-content\" data-starttime=\"00:00:25,225\" data-endtime=\"00:00:30,075\">③不参加の場合のみ、お知らせすればいいですよね。</p>"
       ],
       "sourceQuestionNumber": 85,
@@ -774,8 +793,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>聞くに聞けない是想问却难以开口，担心使其更不高兴。</p><p>原文依据：聞いたら余計に機嫌悪くなりそう</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:05,600\" data-endtime=\"00:00:10,400\">岡本さんがなんだか不機嫌なんだけど理由聞くに聞けなくて。</p><p class=\"moji-content\" data-starttime=\"00:00:11,950\" data-endtime=\"00:00:15,825\">①どうして不機嫌なのか聞きたくないんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:17,475\" data-endtime=\"00:00:20,750\">②理由なんて言ってた？</p><p class=\"moji-content\" data-starttime=\"00:00:22,400\" data-endtime=\"00:00:26,650\">③聞いたら余計に機嫌悪くなりそうだもんね。</p>"
       ],
       "sourceQuestionNumber": 86,
@@ -809,8 +829,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>希望打工工资随物价上调，应附和。</p><p>原文依据：物価に合わせて上がらないかな</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:06,475\">ねぇ、物価が上がった分、アルバイト代にも反映してほしくない？</p><p class=\"moji-content\" data-starttime=\"00:00:08,100\" data-endtime=\"00:00:12,700\">①ほんと、物価に合わせて上がらないかな。</p><p class=\"moji-content\" data-starttime=\"00:00:14,325\" data-endtime=\"00:00:18,050\">②ちょうど物価と釣り合ってるね。</p><p class=\"moji-content\" data-starttime=\"00:00:19,700\" data-endtime=\"00:00:24,200\">③えっ？物価とは関係なく上げてほしいの？</p>"
       ],
       "sourceQuestionNumber": 87,
@@ -844,8 +865,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>軽くあしらわれた指请求被敷衍，没有获准购买。</p><p>原文依据：なかなか買ってもらえない</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:06,400\">最新のスマホ買ってって親に頼んだら軽くあしらわれたよ。</p><p class=\"moji-content\" data-starttime=\"00:00:07,975\" data-endtime=\"00:00:12,325\">①高いし、なかなか買ってもらえないよね</p><p class=\"moji-content\" data-starttime=\"00:00:14,025\" data-endtime=\"00:00:17,400\">②簡単にお金出してくれたんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:19,200\" data-endtime=\"00:00:22,675\">③買ってもらえそうでラッキーじゃない。</p>"
       ],
       "sourceQuestionNumber": 88,
@@ -879,8 +901,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "B",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：2</p><p>会長だけある是赞其不愧为会长，有领导气质。</p><p>原文依据：いかにもリーダー</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,775\" data-endtime=\"00:00:05,000\">和田さんは学生会の会長だけあるよね。</p><p class=\"moji-content\" data-starttime=\"00:00:06,575\" data-endtime=\"00:00:10,475\">①彼ならきっと会長になれるよね。</p><p class=\"moji-content\" data-starttime=\"00:00:12,025\" data-endtime=\"00:00:15,575\">②いかにもリーダーって感じだよね。</p><p class=\"moji-content\" data-starttime=\"00:00:17,200\" data-endtime=\"00:00:20,450\">③会長にふさわしくないの？</p>"
       ],
       "sourceQuestionNumber": 89,
@@ -914,8 +937,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>因客户原因被迫改交货日期，需要重新协调日程。</p><p>原文依据：スケジュールを調整しないと</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:01,850\" data-endtime=\"00:00:07,300\">アオバ機械への納品の日程、あちらの都合で変更を余儀なくされました。</p><p class=\"moji-content\" data-starttime=\"00:00:08,875\" data-endtime=\"00:00:12,775\">①変更せずに済んで助かりましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:14,325\" data-endtime=\"00:00:18,050\">②うちの都合も聞いてもらえたんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:19,650\" data-endtime=\"00:00:23,825\">③スケジュールを調整しないといけないですね。</p>"
       ],
       "sourceQuestionNumber": 90,
@@ -949,8 +973,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>を機に说明演员评论是销量增长契机。</p><p>原文依据：あれがきっかけ</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,175\" data-endtime=\"00:00:09,025\">去年発売したうちのチーズ、人気俳優のコメントを機に売り上げが急に伸びましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:10,800\" data-endtime=\"00:00:15,175\">①確かにあれがきっかけで売れましたね。</p><p class=\"moji-content\" data-starttime=\"00:00:16,775\" data-endtime=\"00:00:21,200\">②発売直後からよく売れましたもんね。</p><p class=\"moji-content\" data-starttime=\"00:00:22,725\" data-endtime=\"00:00:27,225\">③売れたのはコメントと関係ないってことですか。</p>"
       ],
       "sourceQuestionNumber": 91,
@@ -984,8 +1009,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>中止の可能性も否定できない是仍可能取消，表达希望别取消。</p><p>原文依据：中止にならないといい</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,075\" data-endtime=\"00:00:07,050\">週末の学園祭、台風の影響で中止の可能性も否定できないって。</p><p class=\"moji-content\" data-starttime=\"00:00:08,750\" data-endtime=\"00:00:12,425\">①えっ、中止になっちゃったの？</p><p class=\"moji-content\" data-starttime=\"00:00:14,025\" data-endtime=\"00:00:18,675\">②よかった。中止の心配は全くないんだ。</p><p class=\"moji-content\" data-starttime=\"00:00:20,350\" data-endtime=\"00:00:24,550\">③そう？中止にならないといいけど。</p>"
       ],
       "sourceQuestionNumber": 92,
@@ -1019,8 +1045,9 @@
           "text": "③"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>いくら条件がよかろうと也不要当即答复，需谨慎。</p><p>原文依据：いい条件を出されても慎重</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:02,150\" data-endtime=\"00:00:09,300\">ミナミ電気からの機械の購入ですが、いくら条件がよかろうと相手への即答は避けてくださいね。</p><p class=\"moji-content\" data-starttime=\"00:00:10,850\" data-endtime=\"00:00:15,425\">①いい条件を出されても慎重に進めます。</p><p class=\"moji-content\" data-starttime=\"00:00:17,125\" data-endtime=\"00:00:21,425\">②条件によっては即答してもいいんですね。</p><p class=\"moji-content\" data-starttime=\"00:00:23,075\" data-endtime=\"00:00:26,975\">③ではすぐに契約に移ります。</p>"
       ],
       "sourceQuestionNumber": 93,
@@ -1059,8 +1086,9 @@
           "text": "④"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "D",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：4</p><p>为持续吸引人来且不同于超市，先设置休息长椅。</p><p>原文依据：ベンチを置いたらどうでしょう</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,500\" data-endtime=\"00:00:04,850\">商店街の会議で3人の店長が話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,550\" data-endtime=\"00:00:17,350\">店長：あそこに大型スーパーができてから、この商店街から客足が遠のいていますよね。どうにか商店街を盛り上げていく方法を考えないと。</p><p class=\"moji-content\" data-starttime=\"00:00:17,375\" data-endtime=\"00:00:27,125\">男店員：そうですね。ここはひとつ景気づけに、何か大きいイベントとかはどうでしょうか。例えば祭りをしたり、格安セールをしたり。</p><p class=\"moji-content\" data-starttime=\"00:00:27,200\" data-endtime=\"00:00:48,475\">店長：うんうん。イベントは確かに活気づきますね。でもそれじゃあ、一時的な効果しかないんじゃないですか？もっと継続的な何か、お客さんが何度も足を運んでくれるような……うーん、ポイント制を導入するとか、憩いの場を提供するとか。</p><p class=\"moji-content\" data-starttime=\"00:00:48,475\" data-endtime=\"00:01:02,300\">男店員：ポイント制って、買い物したらポイントがもらえて、貯まったら景品と交換できるっていうあれでしょ？うーん、継続性は確かにあるけど、スーパーがもうやってるからなあ。</p><p class=\"moji-content\" data-starttime=\"00:01:02,300\" data-endtime=\"00:01:12,275\">店長：そうですねえ。同じことをしてもねえ。ところで、さっき言っていた、もう一つの憩いの場の提供っていうのは何ですか？</p><p class=\"moji-content\" data-starttime=\"00:01:12,375\" data-endtime=\"00:01:24,250\">女店員：ああ、街の皆さんが気軽に集まって、コミュニケーションできるような場所を作るんです。商店街のあちこちにベンチを置いたらどうでしょう。すぐにでもできますよね。</p><p class=\"moji-content\" data-starttime=\"00:01:24,250\" data-endtime=\"00:01:38,850\">店長：ああなるほど。人が自然に集まるようになれば、商店街も活気づきますね。そうやって人を集めることが大事かな。イベントは様子を見てからまた検討しましょう。</p><p class=\"moji-content\" data-starttime=\"00:01:39,125\" data-endtime=\"00:01:40,125\">男店員：そうですね。</p><p class=\"moji-content\" data-starttime=\"00:01:45,650\" data-endtime=\"00:01:50,475\">問題：この商店街では、まずどんな工夫をすることにしましたか？</p><p class=\"moji-content\" data-starttime=\"00:01:51,975\" data-endtime=\"00:01:55,250\">1．祭りを企画する。</p><p class=\"moji-content\" data-starttime=\"00:01:57,800\" data-endtime=\"00:02:00,900\">2．セールを実施する。</p><p class=\"moji-content\" data-starttime=\"00:02:03,400\" data-endtime=\"00:02:07,025\">3．ポイント制を導入する。</p><p class=\"moji-content\" data-starttime=\"00:02:09,625\" data-endtime=\"00:02:12,725\">4．ベンチを設置する。</p>"
       ],
       "sourceQuestionNumber": 94,
@@ -1099,8 +1127,9 @@
           "text": "コース4<br>"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "A",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：1</p><p>男生想利用选手经验，并学习竞技选手心理，对应培养专业教练的1号。</p><p>原文依据：プレイヤーの気持ちとか、心の状態</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,375\" data-endtime=\"00:00:05,175\">体育大学で、先生が選択コースについて話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,975\" data-endtime=\"00:00:19,950\">「えー、皆さんは、来年2年次からは選択コースに分かれます。コースは全部で4つありますので、各自その中から一つ選んで下さい。手元の資料をご覧ください。</p><p class=\"moji-content\" data-starttime=\"00:00:20,375\" data-endtime=\"00:00:30,325\">コース1はプロを目指すスポーツ選手の指導者育成を目的としています。トレーニングのノウハウのほかに、スポーツ心理も学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:30,850\" data-endtime=\"00:00:45,450\">コース2は、小中学生のスポーツの指導者を育てるコースです。小学生や中学生の健やかな成長のために、体や心理的な特徴を理解し、指導できる人を育てることが目的です。</p><p class=\"moji-content\" data-starttime=\"00:00:46,225\" data-endtime=\"00:00:57,450\">コース3は、子供から大人まで幅広い世代の健康づくりのための指導について学ぶコースです。運動施設などの管理に必要なノウハウも学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:58,175\" data-endtime=\"00:01:11,975\">コース4では高齢者を対象とする運動指導について学びます。最近では、健康維持のために運動をする高齢者も多く、高齢者専門のトレーナーの需要が増えています。」</p><p class=\"moji-content\" data-starttime=\"00:01:13,600\" data-endtime=\"00:01:15,650\">女「どのコースにしようかなあ？」</p><p class=\"moji-content\" data-starttime=\"00:01:15,775\" data-endtime=\"00:01:24,375\">男「山本さんは子供が好きだから、子供の指導が学べるのがいいんじゃない？小学校の体育の教員免許、取るつもりだって言ってたよね。」</p><p class=\"moji-content\" data-starttime=\"00:01:24,475\" data-endtime=\"00:01:31,150\">女「うーん、それは将来の保険というかなんというか、特に夢ってわけじゃないんだ。」</p><p class=\"moji-content\" data-starttime=\"00:01:31,175\" data-endtime=\"00:01:47,975\">男「そうなんだ。僕は今バスケやってて、できればプロにって思ってるけど、そう簡単にはなれないだろうし、将来のことを考えると、選手としての自分の経験を生かせるコースがいいな。プレイヤーの気持ちとか、心の状態みたいなものにも興味あるし。」</p><p class=\"moji-content\" data-starttime=\"00:01:47,975\" data-endtime=\"00:02:05,000\">女「そっか。私はスポーツを通してみんなの健康づくりにかかわる仕事ができればいいなって思ってるんだ。最近、母が地域の運動教室に通うようになってね、体の調子が良くなって友達も増えたって、なんだか楽しそうなの。」</p><p class=\"moji-content\" data-starttime=\"00:02:05,000\" data-endtime=\"00:02:06,075\">男「ふーん。」</p><p class=\"moji-content\" data-starttime=\"00:02:06,150\" data-endtime=\"00:02:13,800\">女「色んな世代の人がスポーツを楽しめる場が作れたらいいなって思ってるんだ。うん、このコースにしよう。」</p><p class=\"moji-content\" data-starttime=\"00:02:19,475\" data-endtime=\"00:02:25,325\">質問1 男の学生はどのコースを選択しますか？</p><p class=\"moji-content\" data-starttime=\"00:02:39,025\" data-endtime=\"00:02:44,750\">質問2 女の学生はどのコースを選択しますか？</p>"
       ],
       "sourceQuestionNumber": 95,
@@ -1139,8 +1168,9 @@
           "text": "コース4<br>"
         }
       ],
-      "correctOptionId": null,
+      "correctOptionId": "C",
       "explanation": [
+        "<p><strong>推导参考答案（非官方）</strong>：3</p><p>女生希望促进各种年龄层健康，而非专教儿童或老人，选3号。</p><p>原文依据：色んな世代の人がスポーツを楽しめる場</p>",
         "<p>听力原文</p><p class=\"moji-content\" data-starttime=\"00:00:00,375\" data-endtime=\"00:00:05,175\">体育大学で、先生が選択コースについて話しています。</p><p class=\"moji-content\" data-starttime=\"00:00:06,975\" data-endtime=\"00:00:19,950\">「えー、皆さんは、来年2年次からは選択コースに分かれます。コースは全部で4つありますので、各自その中から一つ選んで下さい。手元の資料をご覧ください。</p><p class=\"moji-content\" data-starttime=\"00:00:20,375\" data-endtime=\"00:00:30,325\">コース1はプロを目指すスポーツ選手の指導者育成を目的としています。トレーニングのノウハウのほかに、スポーツ心理も学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:30,850\" data-endtime=\"00:00:45,450\">コース2は、小中学生のスポーツの指導者を育てるコースです。小学生や中学生の健やかな成長のために、体や心理的な特徴を理解し、指導できる人を育てることが目的です。</p><p class=\"moji-content\" data-starttime=\"00:00:46,225\" data-endtime=\"00:00:57,450\">コース3は、子供から大人まで幅広い世代の健康づくりのための指導について学ぶコースです。運動施設などの管理に必要なノウハウも学びます。</p><p class=\"moji-content\" data-starttime=\"00:00:58,175\" data-endtime=\"00:01:11,975\">コース4では高齢者を対象とする運動指導について学びます。最近では、健康維持のために運動をする高齢者も多く、高齢者専門のトレーナーの需要が増えています。」</p><p class=\"moji-content\" data-starttime=\"00:01:13,600\" data-endtime=\"00:01:15,650\">女「どのコースにしようかなあ？」</p><p class=\"moji-content\" data-starttime=\"00:01:15,775\" data-endtime=\"00:01:24,375\">男「山本さんは子供が好きだから、子供の指導が学べるのがいいんじゃない？小学校の体育の教員免許、取るつもりだって言ってたよね。」</p><p class=\"moji-content\" data-starttime=\"00:01:24,475\" data-endtime=\"00:01:31,150\">女「うーん、それは将来の保険というかなんというか、特に夢ってわけじゃないんだ。」</p><p class=\"moji-content\" data-starttime=\"00:01:31,175\" data-endtime=\"00:01:47,975\">男「そうなんだ。僕は今バスケやってて、できればプロにって思ってるけど、そう簡単にはなれないだろうし、将来のことを考えると、選手としての自分の経験を生かせるコースがいいな。プレイヤーの気持ちとか、心の状態みたいなものにも興味あるし。」</p><p class=\"moji-content\" data-starttime=\"00:01:47,975\" data-endtime=\"00:02:05,000\">女「そっか。私はスポーツを通してみんなの健康づくりにかかわる仕事ができればいいなって思ってるんだ。最近、母が地域の運動教室に通うようになってね、体の調子が良くなって友達も増えたって、なんだか楽しそうなの。」</p><p class=\"moji-content\" data-starttime=\"00:02:05,000\" data-endtime=\"00:02:06,075\">男「ふーん。」</p><p class=\"moji-content\" data-starttime=\"00:02:06,150\" data-endtime=\"00:02:13,800\">女「色んな世代の人がスポーツを楽しめる場が作れたらいいなって思ってるんだ。うん、このコースにしよう。」</p><p class=\"moji-content\" data-starttime=\"00:02:19,475\" data-endtime=\"00:02:25,325\">質問1 男の学生はどのコースを選択しますか？</p><p class=\"moji-content\" data-starttime=\"00:02:39,025\" data-endtime=\"00:02:44,750\">質問2 女の学生はどのコースを選択しますか？</p>"
       ],
       "sourceQuestionNumber": 96,
@@ -1164,7 +1194,9 @@
         "audio": "audio/202607n1/1.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "d2e32f794efb2ee2e7bd509d4833752b1f99a357218ba48afee039667b289681"
       },
       {
         "id": "imported:202607:N1:4:130454610742901:68",
@@ -1174,7 +1206,9 @@
         "audio": "audio/202607n1/2.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "d8b429356784eea75c950220aff688aa61a94aa29daddee4a219e6816b680966"
       },
       {
         "id": "imported:202607:N1:4:32900589580778:69",
@@ -1184,7 +1218,9 @@
         "audio": "audio/202607n1/3.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "c74c5ac1aa2eae67a1921a8902c4eff38570e8ef4562e3ec65848f4eac353ede"
       },
       {
         "id": "imported:202607:N1:4:74869985005066:70",
@@ -1194,7 +1230,9 @@
         "audio": "audio/202607n1/4.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "a76b55f7ccdd302e822f5a86dc208c0635f8a24fc63141c06d2f8fdaf388faf0"
       },
       {
         "id": "imported:202607:N1:4:64874264974138:71",
@@ -1204,7 +1242,9 @@
         "audio": "audio/202607n1/5.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "f10512879147c98cde659aa166aa77f2c4f2d6a0396e1df3223e1452831a9350"
       },
       {
         "id": "imported:202607:N1:4:19728562040952:72",
@@ -1214,7 +1254,9 @@
         "audio": "audio/202607n1/6.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "59ed14a1e4d23e85196953eda8ce9db81cd452d747038c8ec45ac9f63da65706"
       },
       {
         "id": "imported:202607:N1:4:24361770474110:73",
@@ -1224,7 +1266,9 @@
         "audio": "audio/202607n1/7.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "6a1c9d4bfbec0d277027f3072cb12dbf3e3d1f68e820b09505de8637503ffd59"
       },
       {
         "id": "imported:202607:N1:4:24160769563194:74",
@@ -1234,7 +1278,9 @@
         "audio": "audio/202607n1/8.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "fd9110af92152fe91de4bd10622e4809185c08bc7347b9dbff8e0748ae64594c"
       },
       {
         "id": "imported:202607:N1:4:119268248567758:75",
@@ -1244,7 +1290,9 @@
         "audio": "audio/202607n1/9.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "0634581c7ed8a25c97faa6758432131c4af4a77390d7fd32e60dc35d335bf4c6"
       },
       {
         "id": "imported:202607:N1:4:5339567859466:76",
@@ -1254,7 +1302,9 @@
         "audio": "audio/202607n1/10.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "ce0bee99e3340d658c586e928a4b513eac38c585e9cc2a9eb24931a7ac40e6e8"
       },
       {
         "id": "imported:202607:N1:4:96072938906381:77",
@@ -1264,7 +1314,9 @@
         "audio": "audio/202607n1/11.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "46ca4ced6b77c85a223823cec2877b6b0d3b3def34ae69b910cab6896ffe8fd9"
       },
       {
         "id": "imported:202607:N1:4:79449281687947:78",
@@ -1274,7 +1326,9 @@
         "audio": "audio/202607n1/12.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "b6e7fd1a13bfd835cdc18c1cbe943a02fac6c83d648b3f44f81abca7c2a451e8"
       },
       {
         "id": "imported:202607:N1:4:173732395838235:79",
@@ -1284,7 +1338,9 @@
         "audio": "audio/202607n1/13.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "f6768e28a89d546d0466609ecadde0d3fb24dfa6ba20f57a7457218184ca528b"
       },
       {
         "id": "imported:202607:N1:4:6505948368656:80",
@@ -1294,7 +1350,9 @@
         "audio": "audio/202607n1/14.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "eaef602559a2e8206cc09f182e1be34f5d82c4f6877ca9d5c509839e9e1a213a"
       },
       {
         "id": "imported:202607:N1:4:266097927397729:81",
@@ -1304,7 +1362,9 @@
         "audio": "audio/202607n1/15.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "bba3c5743b4c5aba46190dea6705bb4d7577c471fe2d95d4575c27c41aa890cb"
       },
       {
         "id": "imported:202607:N1:4:58771197712071:82",
@@ -1314,7 +1374,9 @@
         "audio": "audio/202607n1/16.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "a145ef03ed96615af46511cf989d9ac525b875fa71ce77fa9224d51eb07cd5dc"
       },
       {
         "id": "imported:202607:N1:4:220451561085938:83",
@@ -1324,7 +1386,9 @@
         "audio": "audio/202607n1/17.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "5e9076ba042b6cb360dae2957bc3852a4adc4cc1224ac74a7a5e8055f134faba"
       },
       {
         "id": "imported:202607:N1:4:201053598735570:84",
@@ -1334,7 +1398,9 @@
         "audio": "audio/202607n1/18.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "7c2c20212642d7598b2a4ec596644a0433ed97d853ae6bbdc0b84541f8fde65b"
       },
       {
         "id": "imported:202607:N1:4:209376224649929:85",
@@ -1344,7 +1410,9 @@
         "audio": "audio/202607n1/19.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "5140d479564f803b35337b164f3cfef5f3af4f0f68c52deac604480cffb8e1e2"
       },
       {
         "id": "imported:202607:N1:4:108067212645744:86",
@@ -1354,7 +1422,9 @@
         "audio": "audio/202607n1/20.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "beb71776f3ba3fe3a45e65208d6461a5b4b3d0ec377125afc0f7e02d60783b6b"
       },
       {
         "id": "imported:202607:N1:4:27648671653385:87",
@@ -1364,7 +1434,9 @@
         "audio": "audio/202607n1/21.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "8c8138e6a968a0cee2aa2e30cd462ebc889e9d726a880892842d756c33296d1c"
       },
       {
         "id": "imported:202607:N1:4:189793897213186:88",
@@ -1374,7 +1446,9 @@
         "audio": "audio/202607n1/22.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "25fde03ca4ace0d78278c726908b2fa4bd3e6185cd72ca0883660dc722674840"
       },
       {
         "id": "imported:202607:N1:4:59552354593364:89",
@@ -1384,7 +1458,9 @@
         "audio": "audio/202607n1/23.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "52a7ec91473523bf9f5d3a5775bd098fffe39c3656e6ab4763cf46dc3da23bcb"
       },
       {
         "id": "imported:202607:N1:4:65107889153840:90",
@@ -1394,7 +1470,9 @@
         "audio": "audio/202607n1/24.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "b6444f0e445e6c27d9dc404e7155a5a5d1ead898a2a7922992d7405a454a9584"
       },
       {
         "id": "imported:202607:N1:4:21162352502714:91",
@@ -1404,7 +1482,9 @@
         "audio": "audio/202607n1/25.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "0f26cf5d49bcec67a5818b87a94105751ece390121abae40623b73b3e255a8ae"
       },
       {
         "id": "imported:202607:N1:4:186618174513802:92",
@@ -1414,7 +1494,9 @@
         "audio": "audio/202607n1/26.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "34c8b5d076102b6b2e1265d7d7c236cf2e7e614857f9fd25514fa196f1307d16"
       },
       {
         "id": "imported:202607:N1:4:187187170991645:93",
@@ -1424,7 +1506,9 @@
         "audio": "audio/202607n1/27.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "aa3cd1d88b9ef8720a6b052f7eabcd1d27ed34ec3cd1405b3138e05e26f00403"
       },
       {
         "id": "imported:202607:N1:4:215787032849135:94",
@@ -1434,7 +1518,9 @@
         "audio": "audio/202607n1/28.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "82f7b7df5f52bd5a1c98f6cb6480ec3607c4bdba7bdd36bb394317bf6d919912"
       },
       {
         "id": "imported:202607:N1:4:60811322907375:95",
@@ -1444,7 +1530,9 @@
         "audio": "audio/202607n1/29.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "e782fb5c02ebdc596f92497fd9f2b148a712a026e8b79a691c902f1bd97022b7"
       },
       {
         "id": "imported:202607:N1:4:102480938764044:96",
@@ -1454,7 +1542,9 @@
         "audio": "audio/202607n1/29.mp3",
         "audioMapping": "parent-order-convention",
         "images": [],
-        "answerStatus": "pending"
+        "answerStatus": "inferred-reviewed",
+        "answerReviewFile": "src/data/listening-answer-review/entries.json",
+        "answerSourceHash": "72eda6d4f0b2cafda07c3b2dfa75899597c2254177b59f81c4243449829320a8"
       }
     ]
   },

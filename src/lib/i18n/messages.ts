@@ -291,6 +291,8 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["结果过多，请增加筛选条件后导出。","件数が多すぎます。条件を絞ってから出力してください。","Too many results. Narrow your filters before exporting."],
   ["更多工具","その他のツール","More tools"],
   ["参考答案待补充","解答は準備中","Answer key pending"],
+  ["部分答案待核对","一部の解答は確認中","Some answer keys are pending"],
+  ["已核对 {0}/{1} 题，已核对部分答对 {2} 题；待核对题目暂不计分。","{0}/{1} 問の解答を確認済み、正解は {2} 問です。確認中の問題は採点されません。","Answer keys are available for {0}/{1} questions, with {2} correct. Pending questions are not graded."],
   ["待补充","準備中","Pending"],
   ["已作答待核对 {0} 题","解答待ち：回答済み {0} 問","{0} answered questions awaiting an answer key"],
   ["听力练习已记录","聴解練習を記録しました","Listening practice recorded"],

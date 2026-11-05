@@ -21,11 +21,11 @@ export default function ScoreReport({ result }: { result: PracticeScoreResult })
     <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 sm:p-7">
       <p className="text-xs font-semibold tracking-wide text-indigo-700">{t("练习估分")}{result.sections.length === 1 && ` · ${t(result.sections[0].label)}`}</p>
       <div className="mt-3 flex items-center justify-between gap-3">
-        {result.pendingAnswers ? <p className="text-2xl font-bold text-indigo-700">{t("参考答案待补充")}</p> : <p aria-label={t("得分 {0}/{1}", { 0: result.score, 1: result.maxScore })} className="flex min-w-0 items-baseline gap-2 whitespace-nowrap font-bold tabular-nums tracking-tight text-indigo-700"><span className="text-5xl min-[380px]:text-6xl sm:text-7xl">{result.score}</span><span className="text-2xl font-semibold sm:text-3xl">/ {result.maxScore}</span></p>}
+        {result.pendingAnswers ? <p className="text-2xl font-bold text-indigo-700">{t(result.gradedTotal > 0 ? "部分答案待核对" : "参考答案待补充")}</p> : <p aria-label={t("得分 {0}/{1}", { 0: result.score, 1: result.maxScore })} className="flex min-w-0 items-baseline gap-2 whitespace-nowrap font-bold tabular-nums tracking-tight text-indigo-700"><span className="text-5xl min-[380px]:text-6xl sm:text-7xl">{result.score}</span><span className="text-2xl font-semibold sm:text-3xl">/ {result.maxScore}</span></p>}
         <span aria-hidden="true" className="flex h-12 w-12 shrink-0 min-[380px]:h-16 min-[380px]:w-16 items-center justify-center rounded-2xl bg-white text-3xl min-[380px]:text-4xl sm:h-20 sm:w-20 sm:text-5xl">{message.icon}</span>
       </div>
       <h2 className="mt-4 text-lg font-bold leading-7 text-slate-900">{t(message.title)}</h2>
-      <p className="mt-1 text-sm leading-6 text-slate-600">{t(message.text)}</p>
+      <p className="mt-1 text-sm leading-6 text-slate-600">{result.pendingAnswers && result.gradedTotal > 0 ? t("已核对 {0}/{1} 题，已核对部分答对 {2} 题；待核对题目暂不计分。", {0: result.gradedTotal, 1: result.total, 2: result.correct}) : t(message.text)}</p>
     </div>
     {result.sections.length > 1 && <div role="group" aria-label={t("分项估分")} className={`grid gap-3 ${result.sections.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
       {result.sections.map(section => <div key={section.id} className="rounded-xl border border-slate-200 bg-slate-50 p-4">

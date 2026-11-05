@@ -4,11 +4,13 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {isAudioReference} from '../src/lib/audio-url.mjs';
 import {isImageReference} from '../src/lib/image-url.mjs';
+import {listeningAnswerSourceHash} from '../src/lib/listening-answer-review.mjs';
 
 const root=fileURLToPath(new URL('..',import.meta.url));
 const format='jlpt-practice/import-listening-practice/v1';
 const text=value=>typeof value==='string'?value.trim():'';
-const visible=value=>text(value).replace(/<[^>]*>/g,'').replace(/&nbsp;|&#160;/gi,' ').trim();
+const visible=value=>text(value).replace(/<[^>]*>/g,'').replace(/&nbsp;|&#160;/gi,' ')
+  .replace(/&#(x[0-9a-f]+|\d+);/gi,(match,number)=>{const point=number[0].toLowerCase()==='x'?parseInt(number.slice(1),16):Number(number);return point<=0x10ffff?String.fromCodePoint(point):match;}).trim();
 
 /** Owner-authorized filename convention: number recordings by parent, not by subquestion. */
 export function convertListeningPractice(source){
@@ -66,9 +68,21 @@ export async function importListeningPractice({sourceDirectory=path.join(root,'s
     if(old)priorBanks.set(filename,old);
     // Retain subsequently supplied authoritative answer keys across reruns.
     const prior=new Map(old?.questions.map(question=>[question.id,question])??[]);
+    const priorMetadata=new Map(old?.sourceMetadata?.questions?.map(question=>[question.id,question])??[]);
+    const sourceQuestions=new Map(source.questions.map(question=>[question.id,question]));
     for(const question of bank.questions){
       const key=prior.get(question.id)?.correctOptionId;
-      if(question.correctOptionId===null&&key!=null){assert(question.options.some(option=>option.id===key));question.correctOptionId=key;bank.sourceMetadata.questions.find(row=>row.id===question.id).answerStatus='source';}
+      if(question.correctOptionId===null&&key!=null){
+        const priorMeta=priorMetadata.get(question.id),meta=bank.sourceMetadata.questions.find(row=>row.id===question.id);
+        // Inferences belong to the exact reviewed transcript and choice order.
+        if(priorMeta?.answerStatus==='inferred-reviewed'&&priorMeta.answerSourceHash!==listeningAnswerSourceHash(sourceQuestions.get(question.id)))continue;
+        assert(question.options.some(option=>option.id===key));question.correctOptionId=key;
+        meta.answerStatus=priorMeta?.answerStatus==='inferred-reviewed'?'inferred-reviewed':'source';
+        if(priorMeta?.answerStatus==='inferred-reviewed'){
+          meta.answerReviewFile=priorMeta.answerReviewFile;meta.answerSourceHash=priorMeta.answerSourceHash;
+          question.explanation=prior.get(question.id).explanation;
+        }
+      }
     }
     replacements.set(filename,bank);
   }

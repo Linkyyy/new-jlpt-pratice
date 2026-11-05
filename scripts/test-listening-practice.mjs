@@ -30,6 +30,28 @@ test('feedback and score UI show pending answer keys without red wrong-answer st
   assert.match(summary,/参考答案待补充/);assert.doesNotMatch(summary,/得分 0\/60/);
 });
 
+test('reviewed production keys grade choices and display partial versus complete listening results',async()=>{
+  const registry=JSON.parse(await fs.readFile(new URL('../src/data/listening-answer-review/entries.json',import.meta.url),'utf8'));
+  const component=await loadTs('src/app/practice/question-answer.tsx');
+  const scoring=await loadTs('src/lib/practice-scoring.ts'),report=await loadTs('src/components/score-report.tsx');
+  for(const name of new Set(registry.entries.map(row=>`${row.period}-${row.level}`))){
+    const bank=JSON.parse(await fs.readFile(new URL(`../src/data/imported-bank/questions/${name}-4.json`,import.meta.url),'utf8'));
+    const question=bank.questions.find(q=>q.correctOptionId!==null);
+    for(const selectedOptionId of [question.correctOptionId,question.options.find(o=>o.id!==question.correctOptionId).id]){
+      const html=renderToStaticMarkup(React.createElement(component.default,{question,selectedOptionId,locked:true,revealAnswer:true,onSelect(){}}));
+      assert.match(html,selectedOptionId===question.correctOptionId?/回答正确/:/回答错误/);
+      assert.match(html,/推导参考答案（非官方）/);
+    }
+    const known=bank.questions.filter(q=>q.correctOptionId!==null),answers=Object.fromEntries(known.map(q=>[q.id,q.correctOptionId]));
+    const result=scoring.calculatePracticeScore(bank,answers);
+    assert.equal(result.correct,known.length);assert.equal(result.gradedTotal,known.length);
+    assert.equal(result.pendingAnswers,bank.questions.length-known.length);assert.equal(result.maxScore,60);
+    const html=renderToStaticMarkup(React.createElement(report.default,{result}));
+    if(result.pendingAnswers){assert.match(html,/部分答案待核对/);assert.doesNotMatch(html,/得分 60\/60/);}
+    else{assert.equal(result.score,60);assert.match(html,/得分 60\/60/);}
+  }
+});
+
 function fixture(){
   return {period:'202507',level:'N1',sourceFile:'source.json',checksum:'source-hash',questionCount:3,
     questions:[67,68,69].map((number,index)=>({id:`imported:202507:N1:4:${100+index}:${number}`,level:'N1',category:'听力',
@@ -61,6 +83,12 @@ test('illustrated N3 speech-response questions keep their picture path even when
   source.questions[0].options=source.questions[0].options.slice(0,3).map(option=>({...option,text:'<br>'}));
   const question=convertListeningPractice(source).questions[0];
   assert.deepEqual(question.media.images,['pic/120250767.jpg']);assert.equal(question.options.length,3);
+});
+
+test('numeric HTML entities in printed options still retain the required diagram path',()=>{
+  const source=fixture();source.questions[0].options.forEach((option,index)=>option.text=index===3?'&#9315;':['①','②','③'][index]);
+  const question=convertListeningPractice(source).questions[0];
+  assert.deepEqual(question.media.images,['pic/120250767.jpg']);
 });
 
 test('all eight real exams expose 236 playable questions and 230 recording paths with six shared final recordings',async()=>{

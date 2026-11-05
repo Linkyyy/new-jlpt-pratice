@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "answerSource": "transcript-inference",
+  "official": false,
+  "reviewedAt": "2026-11-05T01:03:12.528Z",
+  "filledNow": 231,
+  "confirmed": 231,
+  "pending": [
+    {
+      "id": "imported:202412:N3:4:56132485590735:76",
+      "period": "202412",
+      "level": "N3",
+      "questionNumber": 76,
+      "sourceFile": "N3_2024年12月_7XFYvz5zc2.json",
+      "sourceHash": "a276efae9710834846e064aab2ea5e937b8b411221c03a5f6e8475bd399cbc2b",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "需运送节目单并摆椅子，但无法读取图片中ア・イ・ウ・エ各自对应任务，不能确定选项。",
+      "evidence": [
+        "プログラム印刷し終わったから持ってって"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/320241276.jpg"
+      ],
+      "audio": "audio/202412n3/3.mp3"
+    },
+    {
+      "id": "imported:202507:N1:4:178320582801039:88",
+      "period": "202507",
+      "level": "N1",
+      "questionNumber": 88,
+      "sourceFile": "N1_2025年7月_ww93VxW5ss.json",
+      "sourceHash": "16109062233dbb2d0d7671d65879b5f0a126ac921e5f4b6a21ec1c4f48597c7e",
+      "status": "needs-audio",
+      "firstPassOptionId": "A",
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "现有转录对工期延误的表述不能可靠排除A和C两种回应，需要核对音频后再定答案。",
+      "evidence": [
+        "スケジュールの遅れに天候不良の影響はありません"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [],
+      "audio": "audio/202507n1/22.mp3",
+      "candidates": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "id": "imported:202512:N1:4:18410405201600:68",
+      "period": "202512",
+      "level": "N1",
+      "questionNumber": 68,
+      "sourceFile": "N1_2025年12月_lUZ711l1bB.json",
+      "sourceHash": "6c351741a924208f86f8b70a712fdb35e31254b83ce8476e89a503dac4c0ee5d",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "需预约6月7、9、21、23、28、30日；四个选项仅数字，缺日历图无法对应选项。",
+      "evidence": [
+        "合同会議の週の月曜日も予約"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/120251268.jpg"
+      ],
+      "audio": "audio/202512n1/2.mp3"
+    },
+    {
+      "id": "imported:202512:N2:4:269927372818987:73",
+      "period": "202512",
+      "level": "N2",
+      "questionNumber": 73,
+      "sourceFile": "N2_2025年12月_5evjFFhcZu.json",
+      "sourceHash": "7a036f79beb37272c39a23838e3c1bd4c2777f91abccea1a9ebcd657f9b90094",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "已明确应先把沙拉分装小盘，但①②③④在配图中的任务对应关系未知。",
+      "evidence": [
+        "サラダを小さいお皿に盛って欲しい"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/220251273.jpg"
+      ],
+      "audio": "audio/202512n2/2.mp3"
+    },
+    {
+      "id": "imported:202512:N3:4:65653968917124:76",
+      "period": "202512",
+      "level": "N3",
+      "questionNumber": 76,
+      "sourceFile": "N3_2025年12月_JIcIGb0sPS.json",
+      "sourceHash": "84d06e419e6b5dd8b1e29a0f52bda5a7f313037df2df93021a754b94b9d7c1ab",
+      "status": "needs-image",
+      "firstPassOptionId": null,
+      "secondPassOptionId": null,
+      "correctOptionId": null,
+      "rationale": "顺序为ひかり書店→みなとホテル→あおぞらきかい，但图中ア・イ・ウ对应地点未知。",
+      "evidence": [
+        "みなとホテルの前にそっちですね"
+      ],
+      "reviewMethod": "transcript-reasoning-and-second-reading",
+      "reviewedOn": "2026-11-05",
+      "images": [
+        "pic/320251276.jpg"
+      ],
+      "audio": "audio/202512n3/3.mp3"
+    }
+  ],
+  "papers": [
+    {
+      "period": "202412",
+      "level": "N3",
+      "confirmed": 27,
+      "pending": 1
+    },
+    {
+      "period": "202507",
+      "level": "N1",
+      "confirmed": 29,
+      "pending": 1
+    },
+    {
+      "period": "202507",
+      "level": "N2",
+      "confirmed": 30,
+      "pending": 0
+    },
+    {
+      "period": "202512",
+      "level": "N1",
+      "confirmed": 29,
+      "pending": 1
+    },
+    {
+      "period": "202512",
+      "level": "N2",
+      "confirmed": 29,
+      "pending": 1
+    },
+    {
+      "period": "202512",
+      "level": "N3",
+      "confirmed": 27,
+      "pending": 1
+    },
+    {
+      "period": "202607",
+      "level": "N1",
+      "confirmed": 30,
+      "pending": 0
+    },
+    {
+      "period": "202607",
+      "level": "N2",
+      "confirmed": 30,
+      "pending": 0
+    }
+  ]
+}

@@ -18,6 +18,15 @@ export function restorePracticePaper(paper: PracticePaper, attempt: StudyAttempt
     || paper.source !== "favorites" && !paper.id.endsWith(`-${attempt.type}`)) return null;
   if (matchesQuestions(attempt.questions, paper.questions)) return paper;
 
+  // Older listening attempts intentionally stored a null answer key. Preserve
+  // that grading snapshot after reference keys are added, while keeping review usable.
+  if (attempt.questions.length === paper.questions.length) {
+    const snapshotQuestions = paper.questions.map((question, index) => attempt.questions[index]?.correctOptionId === null && question.category === "听力"
+      ? { ...question, correctOptionId: null }
+      : question);
+    if (matchesQuestions(attempt.questions, snapshotQuestions)) return { ...paper, questions: snapshotQuestions };
+  }
+
   if (paper.source === "favorites" || attempt.source === "favorites" || attempt.questions.length === 0) return null;
 
   const beforeReadingImages = paper.questions.filter(question => !(question.category === "阅读" && question.media?.images.some(image => image.startsWith("pic/"))));
