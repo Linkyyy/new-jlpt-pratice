@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import Script from "next/script";
 import "./globals.css";
 import "./panels.css";
 import "./themes.css";
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head><script dangerouslySetInnerHTML={{ __html: displayBootScript }} /><script dangerouslySetInnerHTML={{__html: startupBootScript}} /></head>
-      <body className="min-h-full flex flex-col"><StartupStatus /><Suspense fallback={null}><DisplaySync /></Suspense><PopupPositioning />{children}</body>
+      <body className="min-h-full flex flex-col"><Script src="/vendor/popover-polyfill-0.7.3.min.js" strategy="beforeInteractive" /><StartupStatus /><Suspense fallback={null}><DisplaySync /></Suspense><PopupPositioning />{children}</body>
     </html>
   );
 }

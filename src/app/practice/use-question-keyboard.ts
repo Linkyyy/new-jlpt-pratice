@@ -23,7 +23,8 @@ export function useQuestionKeyboard({ enabled, anchorRef, onSelect, onAdvance, o
       const root = anchor?.closest("main");
       if (!root || !anchor || root.closest("[hidden], [inert], [aria-hidden='true']") || anchor.getClientRects().length === 0) return;
       // The desktop answer card is an inline, non-modal dialog, not an overlay.
-      if (document.querySelector("dialog:modal, dialog[open]:not(.panel-dialog), [popover]:popover-open, [role='dialog'][aria-modal='true']")) return;
+      if (document.querySelector("dialog:modal, dialog[open]:not(.panel-dialog), [popover].\\:popover-open, [role='dialog'][aria-modal='true']")) return;
+      if (CSS.supports("selector(:popover-open)") && document.querySelector("[popover]:popover-open")) return;
       if ([event.target, document.activeElement].some(target => target instanceof Element && target.closest(interactiveTarget))) return;
       if (window.getSelection()?.toString()) return;
 

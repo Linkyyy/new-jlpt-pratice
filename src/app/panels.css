@@ -109,6 +109,11 @@ body:has(dialog:modal) { overflow: hidden; }
 .settings-toggle:hover { background: var(--surface-muted); color: var(--accent-focus); }
 .settings-toggle:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .floating-settings-window { position: fixed; inset: auto 24px 24px auto; margin: 0; width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 20px; padding: 20px; background: var(--surface); color: var(--ink); box-shadow: 0 16px 64px rgb(15 23 42 / 20%); }
+/* Older iOS treats popover as an ordinary visible section. Keep it hidden
+   before JavaScript loads; the polyfill adds this class only while open. */
+@supports not selector(:popover-open) {
+  .floating-settings-window:not(.\:popover-open) { display: none; }
+}
 .floating-settings-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
 @media (max-width: 1023px) { .floating-settings-window { inset: auto 16px 16px auto; } }
 
