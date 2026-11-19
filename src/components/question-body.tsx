@@ -10,7 +10,7 @@ import ListeningPlayer from "./listening-player";
 import PassagePen from "./passage-pen";
 import InlinePassageTranslation from "./inline-passage-translation";
 
-export default function QuestionBody({ question, part = "all", audioGroupId, inlineTranslation }: { question: PracticeQuestion; part?: "all" | "passage" | "question"; audioGroupId?: string; inlineTranslation?: { questionId: string; enabled: boolean } }) {
+export default function QuestionBody({ question, part = "all", audioGroupId, inlineTranslation }: { question: PracticeQuestion; part?: "all" | "passage" | "question"; audioGroupId?: string; inlineTranslation?: { questionId: string; enabled: boolean; bySentence: boolean } }) {
   const { t } = useI18n();
   const prompt = part === "question" && question.passage?.trim() === question.prompt.trim()
     ? question.category === "语法" ? t("请选择文章中{0}的答案。", { 0: question.sourceQuestionNumber != null ? t("第 {0} 空", { 0: question.sourceQuestionNumber }) : t("当前空格") }) : t("请根据上方文章选择答案。")

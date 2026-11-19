@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { fetchPassageTranslation, n1TranslationIndex, type PassageTranslationReview } from "@/data/passage-translation";
+import { fetchPassageTranslation, passageTranslationLocation, type PassageTranslationReview } from "@/data/passage-translation";
 import { useI18n } from "@/lib/i18n";
 
 const controlStyle = "rounded-lg border border-slate-200 font-semibold text-indigo-600 focus-visible:outline-2 focus-visible:outline-indigo-500 disabled:opacity-40";
@@ -13,7 +13,7 @@ interface TranslationButtonProps {
 }
 
 export default function PassageTranslationButton(props: TranslationButtonProps) {
-  return n1TranslationIndex(props.questionId) === undefined ? null : <PassageTranslationReader key={props.questionId} {...props} />;
+  return passageTranslationLocation(props.questionId) ? <PassageTranslationReader key={props.questionId} {...props} /> : null;
 }
 
 function PassageTranslationReader({ questionId }: TranslationButtonProps) {

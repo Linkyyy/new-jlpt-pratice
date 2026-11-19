@@ -24,7 +24,7 @@ function parseContent(html: string): ContentNode[] {
   const root: ElementNode = { type: "element", tag: "root", children: [] };
   const stack = [root];
   // 不注入原始 HTML；仅生成白名单 React 元素，丢弃事件、样式、链接等外部属性。
-  const safeInput = html.replace(/<!--[^]*?-->/g, "").replace(/<(script|style|iframe|object)\b[^>]*>[^]*?<\/\1\s*>/gi, "");
+  const safeInput = html.replace(/<!--[^]*?-->/g, "").replace(/<(script|style|iframe|object)\b[^>]*>[^]*?<\/\1\s*>/gi, "").replace(/<\/[a-z][a-z0-9]*\s*$/i, "");
   for (const token of safeInput.match(/<\/?[a-z][^>]*>|[^<]+|</gi) ?? []) {
     const tagMatch = token.match(/^<(\/?)([a-z0-9]+)/i);
     if (!tagMatch) { stack[stack.length - 1].children.push({ type: "text", value: decodeEntities(token) }); continue; }

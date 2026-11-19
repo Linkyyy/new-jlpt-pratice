@@ -5,7 +5,7 @@ import { useI18n } from "@/lib/i18n";
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import type { PracticeQuestion } from "@/data/practice-question";
 import QuestionBody from "@/components/question-body";
-import { n1TranslationIndex } from "@/data/passage-translation";
+import { passageTranslationLocation } from "@/data/passage-translation";
 import { articleGroup, articleGroupKey, usesArticleDrawer } from "./article-questions";
 
 type QuestionStatus = "empty" | "draft" | "correct" | "incorrect" | "answered";
@@ -71,8 +71,8 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const group = articleGroup(questions, question);
   const listening = question.category === "听力";
   const translationId = group[0].item.id;
-  const inlineTranslation = translateInline !== undefined && n1TranslationIndex(translationId) !== undefined
-    ? { questionId: translationId, enabled: translateInline } : undefined;
+  const translation = translateInline !== undefined ? passageTranslationLocation(translationId) : undefined;
+  const inlineTranslation = translation && { questionId: translationId, enabled: Boolean(translateInline), bySentence: translation.level === "N1" };
   const articleTitle = listening ? "听力材料" : question.category === "语法" ? "语法文章" : "阅读文章";
 
   useLayoutEffect(() => {

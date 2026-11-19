@@ -9,37 +9,51 @@ import ts from "typescript";
 
 const data = new URL("../src/data/", import.meta.url);
 const read = (file) => JSON.parse(readFileSync(new URL(file, data), "utf8"));
-const index = read("passage-translations/n1-index.json");
-const passages = read("passage-translations/n1.zh.json");
+const levels = ["N1", "N2", "N3"];
+const corpus = Object.fromEntries(levels.map(level => {
+  const prefix = `passage-translations/${level.toLowerCase()}`;
+  return [level, { index: read(`${prefix}-index.json`), passages: read(`${prefix}.zh.json`) }];
+}));
+const { index, passages } = corpus.N1;
 const questionBank = read("question-bank.json");
 const manifest = read("imported-bank/index.json");
 const ocr = new Map(read("frequency-image-ocr/entries.json").images.filter(entry => entry.reviewed && entry.partial === false).map(entry => [entry.key, entry.text]));
-const n1Questions = new Map();
+const questions = new Map();
 const sentenceModule = ts.transpileModule(readFileSync(new URL("passage-sentences.ts", data), "utf8"), {
   compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 },
 }).outputText;
 const { passageSentences } = await import(`data:text/javascript;base64,${Buffer.from(sentenceModule).toString("base64")}`);
+const richContent = {};
+const richSource = readFileSync(new URL("../src/components/rich-content.tsx", import.meta.url), "utf8");
+runInNewContext(ts.transpileModule(richSource, {
+  compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX },
+}).outputText, { exports: richContent, require: createRequire(import.meta.url) });
 
-for (const group of manifest.groups.filter(group => group.level === "N1" && ["grammar", "reading"].includes(group.type))) {
-  for (const question of read(`imported-bank/questions/${group.file}`).questions) n1Questions.set(question.id, question);
+for (const group of manifest.groups.filter(group => levels.includes(group.level) && ["grammar", "reading"].includes(group.type))) {
+  for (const question of read(`imported-bank/questions/${group.file}`).questions) questions.set(question.id, question);
 }
-for (const { reading } of Object.values(questionBank.papers.N1)) {
-  for (const [id] of reading.questions) n1Questions.set(id, { passage: reading.passage });
+for (const level of levels) for (const { reading } of Object.values(questionBank.papers[level])) {
+  for (const [id] of reading.questions) questions.set(id, { level, passage: reading.passage });
 }
 
-function compact(text) {
+const compact = (text) => text.replace(/\s/gu, "");
+
+function renderedText(text, html) {
+  if (!html) return compact(text);
   const entities = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ensp: " ", emsp: " " };
-  return text.replace(/<[^>]*>/g, "").replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (entity, value) => {
+  const markup = renderToStaticMarkup(createElement(richContent.default, { text, html: true }));
+  return compact(markup.replace(/<[^>]*>/g, "").replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (entity, value) => {
     if (value.startsWith("#x")) return String.fromCodePoint(parseInt(value.slice(2), 16));
     if (value.startsWith("#")) return String.fromCodePoint(Number(value.slice(1)));
     return entities[value] ?? entity;
-  }).replace(/\s/g, "");
+  }));
 }
 
-test("N1 text passages and verified transcriptions retain their source text", () => {
-  for (const [questionId, question] of n1Questions) {
+test("N1–N3 text passages and verified transcriptions retain their source text", () => {
+  for (const [questionId, question] of questions) {
+    const { index, passages } = corpus[question.level];
     const imageRefs = question.media?.images ?? [];
-    const written = compact(question.passage ?? "");
+    const written = renderedText(question.passage ?? "", question.richText);
     const hasImageText = !written && imageRefs.length > 0 && imageRefs.every(ref => ocr.has(ref));
     if (!written && !hasImageText) {
       assert.equal(index[questionId], undefined, questionId);
@@ -52,7 +66,7 @@ test("N1 text passages and verified transcriptions retain their source text", ()
     const original = written || compact(imageRefs.map(ref => ocr.get(ref)).join(""));
     assert.equal(compact(passage.paragraphs.map(paragraph => paragraph.original).join("")), original, questionId);
   }
-  for (const id of Object.keys(index)) assert.ok(n1Questions.has(id), id);
+  for (const level of levels) for (const id of Object.keys(corpus[level].index)) assert.equal(questions.get(id)?.level, level, id);
 });
 
 test("sibling questions use the same translation and grammar blanks stay in the reviewed passage", () => {
@@ -69,7 +83,7 @@ test("sibling questions use the same translation and grammar blanks stay in the 
 });
 
 test("sentence review retains every line of the existing bilingual passages", () => {
-  for (const passage of passages) {
+  for (const { passages } of Object.values(corpus)) for (const passage of passages) {
     const sentences = passageSentences(passage);
     assert.ok(sentences.every(pair => pair.original.trim() && pair.translation.trim()));
     for (const key of ["original", "translation"]) {
@@ -99,25 +113,34 @@ test("sentence review aligns split and merged translations, quotes, and grammar 
   assert.match(blanks[2].translation, /^（41），/);
 });
 
-test("each N1 sentence button fits the rendered original, including passages with underlines", () => {
-  const exports = {};
-  const source = readFileSync(new URL("../src/components/rich-content.tsx", import.meta.url), "utf8");
-  runInNewContext(ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX },
-  }).outputText, { exports, require: createRequire(import.meta.url) });
-  const checked = new Set();
-  for (const [questionId, position] of Object.entries(index)) {
-    const passage = passages[position];
-    if (passage.transcribedImage || checked.has(position)) continue;
-    checked.add(position);
-    const { passage: text, richText: html } = n1Questions.get(questionId);
-    const insertAfter = passageSentences(passage).map(({ original }) => ({
-      original, content: createElement("i", { "data-test-sentence-end": "" }),
-    }));
-    const base = renderToStaticMarkup(createElement(exports.default, { text, html }));
-    const annotated = renderToStaticMarkup(createElement(exports.default, { text, html, insertAfter }));
-    assert.equal((annotated.match(/data-test-sentence-end=/g) ?? []).length, insertAfter.length, questionId);
-    const stripAnnotation = annotated.replace(/<i data-test-sentence-end=""><\/i>|<span data-passage-node="\d+" data-passage-offset="\d+">|<\/span>/g, "");
-    assert.equal(stripAnnotation, base.replace(/<\/span>/g, ""), questionId);
+test("sentence and paragraph buttons fit the rendered original, including passages with underlines", () => {
+  for (const level of levels) {
+    const { index, passages } = corpus[level];
+    const checked = new Set();
+    for (const [questionId, position] of Object.entries(index)) {
+      const passage = passages[position];
+      if (passage.transcribedImage || checked.has(position)) continue;
+      checked.add(position);
+      const { passage: text, richText: html } = questions.get(questionId);
+      const entries = level === "N1" ? passageSentences(passage) : passage.paragraphs;
+      const insertAfter = entries.map(({ original }) => ({ original, content: createElement("i", { "data-test-translation-end": "" }) }));
+      const base = renderToStaticMarkup(createElement(richContent.default, { text, html }));
+      const annotated = renderToStaticMarkup(createElement(richContent.default, { text, html, insertAfter }));
+      assert.equal((annotated.match(/data-test-translation-end=/g) ?? []).length, insertAfter.length, questionId);
+      const stripAnnotation = annotated.replace(/<i data-test-translation-end=""><\/i>|<span data-passage-node="\d+" data-passage-offset="\d+">|<\/span>/g, "");
+      assert.equal(stripAnnotation, base.replace(/<\/span>/g, ""), questionId);
+    }
+  }
+});
+
+test("N2 and N3 translations preserve their grammar blanks", () => {
+  const blanks = (text) => [...text.normalize("NFKC").matchAll(/\(\s*(\d{2}(?:-?[a-z])?)\s*\)/gi)].map(match => match[1]);
+  for (const level of ["N2", "N3"]) {
+    const { index, passages } = corpus[level];
+    const positions = new Set(Object.entries(index).filter(([id]) => questions.get(id)?.category === "语法").map(([, position]) => position));
+    for (const position of positions) for (const { original, translation } of passages[position].paragraphs) {
+      const translated = blanks(translation);
+      for (const blank of blanks(original)) assert.ok(translated.includes(blank), `${level} ${position} blank ${blank}`);
+    }
   }
 });
