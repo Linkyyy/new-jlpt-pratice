@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 
 import type { RefObject } from "react";
 import { optionLabel, type OptionId, type PracticeQuestion } from "@/data/practice-question";
+import PassageTranslationButton from "@/components/passage-translation";
 import RichContent from "@/components/rich-content";
 
 interface QuestionAnswerProps {
@@ -50,6 +51,7 @@ export default function QuestionAnswer({ question, selectedOptionId, locked, rev
           <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${question.correctOptionId === null || selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{t(feedback)}</h2>
           <p className="mt-2 text-sm text-slate-600">{t("你的选择：")}{optionLabel(question, selectedOptionId)} {t("· 正确答案：")}{question.correctOptionId === null ? t("待补充") : optionLabel(question, question.correctOptionId)}</p>
           <h3 className="mt-5 font-semibold">{t(question.richText ? "题库解析" : "中文解析")}</h3>
+          <PassageTranslationButton questionId={question.id} />
           {question.explanation.map((paragraph, index) => <RichContent key={index} text={paragraph} html={question.richText} className="question-text mt-2 text-slate-700" />)}
         </section>
       )}

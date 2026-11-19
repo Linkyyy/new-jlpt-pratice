@@ -15,6 +15,7 @@ async function loadTs(filename){
   const source=await fs.readFile(new URL(`../${filename}`,import.meta.url),'utf8'),exports={};
   vm.runInNewContext(ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText,
     {exports,require:name=>name==='@/lib/i18n'?{useI18n:()=>({t:(text,params={})=>text.replace(/\{(\w+)\}/g,(match,key)=>String(params[key]??match))})}:name==='@/components/rich-content'?{default:({text})=>React.createElement('p',null,text)}:
+      name==='@/components/passage-translation'?{default:()=>null}:
       name==='@/data/practice-question'?{optionLabel:(question,id)=>question.options.find(o=>o.id===id)?.label??'未作答'}:require(name)});
   return exports;
 }

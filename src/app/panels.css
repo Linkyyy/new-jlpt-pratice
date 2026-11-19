@@ -253,6 +253,21 @@ body:has(dialog:modal) { overflow: hidden; }
 .reading-workspace-written .question-card h3 { margin-top: 8px; }
 .reading-workspace-written .question-card .answer-actions button { min-height: 42px; padding-block: 6px; }
 
+.passage-translation-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(42rem, calc(100% - 24px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.passage-translation-dialog::backdrop { background: rgb(15 23 42 / 50%); }
+.passage-translation-frame { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: min(42rem, calc(100dvh - 24px)); }
+
 .passage-pen-tools { display: flex; align-items: center; justify-content: flex-end; gap: 4px; pointer-events: none; }
 .reading-workspace-written .passage-pen-tools {
   position: fixed;
