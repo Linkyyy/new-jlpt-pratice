@@ -5,6 +5,9 @@ import { useI18n } from "@/lib/i18n";
 import { useUserPreferences } from "@/lib/user-preferences";
 import { findInkAnchor, inkFrame, passageTextNodes, type InkStroke } from "./passage-pen-geometry";
 
+const inkChanged = "jlpt-practice:passage-ink-changed";
+type InkUpdate = { key: string; strokes: InkStroke[]; saveError: boolean };
+
 function readStrokes(key: string): InkStroke[] {
   try {
     const value: unknown = JSON.parse(sessionStorage.getItem(key) ?? "[]");
@@ -32,6 +35,7 @@ export default function PassagePen({ passageKey, children }: PassagePenProps) {
   const [strokes, setStrokes] = useState(() => readStrokes(key));
   const [saveError, setSaveError] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const penButtonRef = useRef<HTMLButtonElement>(null);
   const savedRef = useRef<SVGGElement>(null);
   const previewRef = useRef<SVGPolylineElement>(null);
   const active = useRef<{ id: number; anchor: InkStroke["anchor"]; frame: ReturnType<typeof inkFrame> } | null>(null);
@@ -46,6 +50,22 @@ export default function PassagePen({ passageKey, children }: PassagePenProps) {
       previewRef.current?.removeAttribute("points");
     }
   }, [drawing]);
+
+  useLayoutEffect(() => {
+    // Several favorite cards can show the same passage in one tab.
+    function syncInk(event: Event) {
+      const update = (event as CustomEvent<InkUpdate>).detail;
+      if (update?.key !== key) return;
+      if (!update.strokes.length) {
+        active.current = null;
+        previewRef.current?.removeAttribute("points");
+      }
+      setStrokes(update.strokes);
+      setSaveError(update.saveError);
+    }
+    window.addEventListener(inkChanged, syncInk);
+    return () => window.removeEventListener(inkChanged, syncInk);
+  }, [key]);
 
   useLayoutEffect(() => {
     const content = contentRef.current;
@@ -68,12 +88,17 @@ export default function PassagePen({ passageKey, children }: PassagePenProps) {
   }, [strokes]);
 
   function save(next: InkStroke[]) {
-    setStrokes(next);
+    let failed = false;
     try {
       if (next.length) sessionStorage.setItem(key, JSON.stringify(next));
       else sessionStorage.removeItem(key);
-      setSaveError(false);
-    } catch { setSaveError(true); }
+    } catch { failed = true; }
+    window.dispatchEvent(new CustomEvent<InkUpdate>(inkChanged, { detail: { key, strokes: next, saveError: failed } }));
+  }
+
+  function clearInk() {
+    save([]);
+    penButtonRef.current?.focus({ preventScroll: true });
   }
 
   function addPoint(event: PointerEvent<HTMLDivElement>) {
@@ -135,22 +160,27 @@ export default function PassagePen({ passageKey, children }: PassagePenProps) {
 
   return <div className="passage-pen">
     {passagePenEnabled && <div className="passage-pen-tools">
-      {drawing && <>
-        <span className="passage-scroll-hint">{t("双指滚动")}</span>
-        <button type="button" aria-label={t("撤销上一笔")} title={t("撤销上一笔")} disabled={!strokes.length} onClick={() => save(strokes.slice(0, -1))}>
+      {(drawing || strokes.length > 0) && (
+        <button type="button" aria-label={t("清除本篇全部笔迹")} disabled={!strokes.length} onClick={clearInk}>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 6h16M9 6V3h6v3m3 0-1 15H7L6 6m4 4v7m4-7v7" />
+          </svg>
+        </button>
+      )}
+      {drawing && (
+        <button type="button" aria-label={t("撤销上一笔")} disabled={!strokes.length} onClick={() => save(strokes.slice(0, -1))}>
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="m9 5-5 5 5 5M4 10h10a6 6 0 0 1 0 12" transform="translate(0 -2)" />
           </svg>
         </button>
-      </>}
-      <button type="button" aria-pressed={drawing} onClick={() => setDrawing(!drawing)}>
+      )}
+      <button ref={penButtonRef} type="button" aria-label={t("画笔")} aria-pressed={drawing} onClick={() => setDrawing(!drawing)}>
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="m14.5 5.5 4 4M3 21l4.5-1 13-13a2.8 2.8 0 0 0-4-4l-13 13L3 21Z" />
         </svg>
-        {t(drawing ? "结束标注" : "画笔")}
       </button>
     </div>}
-    {saveError && <p role="status" className="text-xs text-amber-800">{t("笔迹仅在当前页面保留。")}</p>}
+    {saveError && <p role="status" className="sr-only">{t("笔迹仅在当前页面保留。")}</p>}
     <div className="passage-pen-surface" data-drawing={drawing || undefined} onPointerDown={begin} onPointerMove={addPoint}
       onPointerUp={finish} onPointerCancel={finish} onLostPointerCapture={finish}
       onTouchStart={panWithTwoFingers} onTouchMove={panWithTwoFingers}

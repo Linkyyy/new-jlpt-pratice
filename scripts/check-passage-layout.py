@@ -7,7 +7,7 @@ import shutil
 import sys
 from urllib.parse import urlencode
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 
 def swipe_up(touch, x, y, height):
@@ -64,6 +64,60 @@ def open_pen_setting(page, mobile):
     return page.get_by_role("checkbox", name="显示长文悬浮画笔")
 
 
+def check_drawer_header(sheet, handle):
+    toolbar = sheet.locator(".reading-sheet-toolbar")
+    nav = toolbar.locator(".reading-subquestions")
+    assert "本篇" not in toolbar.inner_text()
+    assert "收起题目" in handle.inner_text()
+
+    other_number = nav.locator("button:not([aria-current])").first.inner_text()
+    other = nav.get_by_text(other_number, exact=True)
+    other.click()
+    expect(other).to_have_attribute("aria-current", "step")
+    assert other.evaluate("""button => {
+        const nav = button.parentElement.getBoundingClientRect();
+        const bounds = button.getBoundingClientRect();
+        const style = getComputedStyle(button);
+        const outline = parseFloat(style.outlineWidth) + parseFloat(style.outlineOffset);
+        return bounds.top - outline >= nav.top && bounds.bottom + outline <= nav.bottom
+            && bounds.left - outline >= nav.left && bounds.right + outline <= nav.right;
+    }""")
+    nav_box, handle_box = nav.bounding_box(), handle.bounding_box()
+    assert nav_box["x"] + nav_box["width"] <= handle_box["x"]
+    assert abs(nav_box["y"] + nav_box["height"] / 2 - handle_box["y"] - handle_box["height"] / 2) < 1
+
+
+def check_clear_ink(page, touch, pen):
+    toolbar = page.locator(".passage-pen-tools")
+    clear = toolbar.get_by_role("button", name="清除本篇全部笔迹")
+    ink = page.locator(".passage-ink g polyline")
+    pen.tap()
+    assert clear.is_disabled()
+    assert not toolbar.inner_text().strip()
+    assert toolbar.bounding_box()["width"] <= 140
+    assert toolbar.locator("button svg").count() == 3
+
+    surface = page.locator(".passage-pen-surface").bounding_box()
+    top = max(surface["y"], page.locator(".session-content").bounding_box()["y"])
+    bottom = min(surface["y"] + surface["height"], toolbar.bounding_box()["y"])
+    for offset in (24, 60, 96):
+        swipe_up(touch, surface["x"] + offset, (top + bottom) / 2, 60)
+    expect(ink).to_have_count(3)
+    # Give Chromium's synthetic touch sequence time to settle before tapping a control.
+    page.wait_for_timeout(500)
+    toolbar.get_by_role("button", name="撤销上一笔").tap()
+    expect(ink).to_have_count(2)
+
+    pen.tap()
+    assert pen.get_attribute("aria-pressed") == "false"
+    clear.tap()
+    expect(ink).to_have_count(0)
+    expect(clear).to_have_count(0)
+    page.reload(wait_until="domcontentloaded")
+    pen.wait_for()
+    expect(ink).to_have_count(0)
+
+
 def check_passage(browser, base, question_id, width, height, exam=False):
     mobile = width < 1024
     page = browser.new_page(viewport={"width": width, "height": height}, is_mobile=mobile, has_touch=mobile)
@@ -89,13 +143,14 @@ def check_passage(browser, base, question_id, width, height, exam=False):
         article_size = article.evaluate("e => [e.offsetWidth, e.offsetHeight]")
         handle.click()
         assert handle.get_attribute("aria-expanded") == "true"
+        check_drawer_header(sheet, handle)
         opened = sheet.bounding_box()
         assert opened["height"] <= 180, "The default drawer is too tall"
         touch = page.context.new_cdp_session(page) if mobile else None
         scroll_to_end(page, touch)
         assert_ending_visible(page)
 
-        grip = handle.bounding_box()
+        grip = handle.locator(".reading-grip").bounding_box()
         x, y = grip["x"] + grip["width"] / 2, grip["y"] + grip["height"] / 2
         if touch:
             swipe_up(touch, x, y, height)
@@ -113,6 +168,15 @@ def check_passage(browser, base, question_id, width, height, exam=False):
         assert pen.evaluate(on_screen)
         assert pen.bounding_box()["y"] + pen.bounding_box()["height"] <= raised["y"]
         assert article.evaluate("e => [e.offsetWidth, e.offsetHeight]") == article_size
+
+        if mobile and not exam:
+            option = sheet.locator(".answer-option").first
+            option.evaluate("e => e.scrollIntoView({ block: 'center' })")
+            pane_box = sheet.locator(".reading-sheet-content").bounding_box()
+            option_box = option.bounding_box()
+            assert option_box["y"] >= pane_box["y"]
+            assert option_box["y"] + option_box["height"] <= pane_box["y"] + pane_box["height"]
+            check_clear_ink(page, touch, pen)
 
         if not exam:
             pen.click()

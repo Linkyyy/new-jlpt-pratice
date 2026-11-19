@@ -24,9 +24,9 @@ export default function ReadingWorkspace(props: ReadingWorkspaceProps) {
   return <ReadingSheet key={articleGroupKey(props.question)} {...props} />;
 }
 
-function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
+function sheetBounds(sheet: HTMLElement, header: HTMLElement) {
   const styles = window.getComputedStyle(sheet);
-  const minimum = handle.getBoundingClientRect().height + parseFloat(styles.paddingBottom) + parseFloat(styles.borderTopWidth) + parseFloat(styles.borderBottomWidth);
+  const minimum = header.getBoundingClientRect().height + parseFloat(styles.paddingBottom) + parseFloat(styles.borderTopWidth) + parseFloat(styles.borderBottomWidth);
   const viewport = window.visualViewport?.height ?? window.innerHeight;
   const topSpace = parseFloat(styles.getPropertyValue("--sheet-top-space")) || 16;
   const bottomSpace = parseFloat(styles.bottom) || 0;
@@ -58,6 +58,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const id = useId();
   const sheetRef = useRef<HTMLElement>(null);
   const questionsRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
   const handleRef = useRef<HTMLButtonElement>(null);
   const heightRef = useRef<number | null>(null);
   const sizeMode = useRef<"min" | "max" | "custom">(reviewing ? "max" : "min");
@@ -112,11 +113,18 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
     if (!listening) questionsRef.current?.scrollTo({ top: 0 });
   }, [listening, question.id]);
 
+  useEffect(() => {
+    const navigation = toolbarRef.current?.querySelector("nav");
+    if (navigation && navigation.scrollWidth > navigation.clientWidth) {
+      navigation.querySelector("[aria-current]")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+  }, [expanded, question.id]);
+
   const resizeSheet = useCallback((requested: number, commit = true) => {
     const sheet = sheetRef.current;
-    const handle = handleRef.current;
-    if (!sheet || !handle) return;
-    const { minimum, maximum } = sheetBounds(sheet, handle);
+    const header = toolbarRef.current ?? handleRef.current;
+    if (!sheet || !header) return;
+    const { minimum, maximum } = sheetBounds(sheet, header);
     let next = Math.min(maximum, Math.max(minimum, requested));
     const open = next > minimum + 1;
     if (!open) next = minimum;
@@ -173,28 +181,56 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   }
 
   function toggle() {
-    if (!sheetRef.current || !handleRef.current) return;
+    const sheet = sheetRef.current;
+    const header = toolbarRef.current ?? handleRef.current;
+    if (!sheet || !header) return;
     if (!expanded && !listening) {
       // Let short questions use their natural height until the reader drags the sheet.
-      sheetRef.current.style.removeProperty("height");
+      sheet.style.removeProperty("height");
       heightRef.current = null;
       setHeight(null);
       setExpanded(true);
       return;
     }
-    const { minimum, maximum } = sheetBounds(sheetRef.current, handleRef.current);
+    const { minimum, maximum } = sheetBounds(sheet, header);
     resizeSheet(expanded ? minimum : maximum);
   }
 
   function resizeWithKeyboard(event: KeyboardEvent<HTMLButtonElement>) {
-    if (!sheetRef.current || !handleRef.current) return;
-    const { minimum, maximum } = sheetBounds(sheetRef.current, handleRef.current);
-    const current = sheetRef.current.getBoundingClientRect().height;
+    const sheet = sheetRef.current;
+    const header = toolbarRef.current ?? handleRef.current;
+    if (!sheet || !header) return;
+    const { minimum, maximum } = sheetBounds(sheet, header);
+    const current = sheet.getBoundingClientRect().height;
     const targets: Record<string, number> = { ArrowUp: current + 32, ArrowDown: current - 32, Home: minimum, End: maximum };
     if (!(event.key in targets)) return;
     event.preventDefault();
     resizeSheet(targets[event.key]);
   }
+
+  const action = <span className="text-xs text-indigo-600">{t(expanded ? "收起题目 ↓" : "展开题目 ↑")}</span>;
+  const handle = (
+    <button ref={handleRef} type="button" className="reading-sheet-handle" title={t("上下拖动调整高度；点击展开或收起；方向键微调高度")} aria-expanded={expanded} aria-controls={id}
+      onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={endDrag} onKeyDown={resizeWithKeyboard}
+      onClick={(event) => { if (dragged.current && event.detail > 0) { dragged.current = false; return; } toggle(); }}>
+      <span aria-hidden="true" className="reading-grip" />
+      {listening ? <span className="flex w-full items-center justify-between gap-3">
+        <span>{t("第 {0} 题 · 本段 {1} 题", { 0: questionIndex + 1, 1: group.length })}</span>
+        {action}
+      </span> : action}
+    </button>
+  );
+  const subquestions = group.length > 1 && (
+    <nav aria-label={t(listening ? "同段听力子题" : "同篇文章子题")} className="reading-subquestions">
+      {group.map(({ item, index }) => {
+        const status = getStatus(item);
+        const current = index === questionIndex;
+        return <button key={item.id} type="button" onClick={() => onNavigate(index)} aria-current={current ? "step" : undefined}
+          aria-label={t(`本篇第 ${index + 1} 题，${statusLabels[status]}`)}
+          className={`question-number question-${status}${current ? " question-current" : ""}`}>{index + 1}</button>;
+      })}
+    </nav>
+  );
 
   return (
     <div className={`reading-workspace${listening ? "" : " reading-workspace-written"}`}>
@@ -204,16 +240,9 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
         <QuestionBody question={question} part="passage" audioGroupId={listening ? articleGroupKey(question) : undefined} />
       </article>
       <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={t(listening ? "听力题目抽屉" : question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉")} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}${height === null && !listening ? " reading-sheet-auto" : ""}`}>
-        <button ref={handleRef} type="button" className="reading-sheet-handle" title={t("上下拖动调整高度；点击展开或收起；方向键微调高度")} aria-expanded={expanded} aria-controls={id}
-          onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={endDrag} onKeyDown={resizeWithKeyboard}
-          onClick={(event) => { if (dragged.current && event.detail > 0) { dragged.current = false; return; } toggle(); }}>
-          <span aria-hidden="true" className="reading-grip" />
-          <span className="flex w-full items-center justify-between gap-3"><span>{t(listening ? "第 {0} 题 · 本段 {1} 题" : "第 {0} 题 · 本篇 {1} 题", { 0: questionIndex + 1, 1: group.length })}</span><span className="text-xs text-indigo-600">{t(expanded ? "收起题目 ↓" : "展开题目 ↑")}</span></span>
-        </button>
+        {listening ? handle : <div ref={toolbarRef} className="reading-sheet-toolbar">{expanded && subquestions}{handle}</div>}
         <div ref={questionsRef} id={id} hidden={!expanded} className="reading-sheet-content">
-          {group.length > 1 && <nav aria-label={t(listening ? "同段听力子题" : "同篇文章子题")} className="reading-subquestions">
-            {group.map(({ item, index }) => <button key={item.id} type="button" onClick={() => onNavigate(index)} aria-current={index === questionIndex ? "step" : undefined} aria-label={t(`本篇第 ${index + 1} 题，${statusLabels[getStatus(item)]}`)} className={`question-number question-${getStatus(item)} ${index === questionIndex ? "question-current" : ""}`}>{index + 1}</button>)}
-          </nav>}
+          {listening && subquestions}
           {children}
         </div>
       </section>
