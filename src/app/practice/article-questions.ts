@@ -9,8 +9,12 @@ function listeningGroupKey(question: PracticeQuestion): string | null {
   return JSON.stringify(["听力", sourcePaper(question), question.media.audio]);
 }
 
+export function isWrittenPassage(question: PracticeQuestion): boolean {
+  return (question.category === "阅读" || question.category === "语法") && Boolean(question.passage?.trim() || question.media?.images.length);
+}
+
 export function usesArticleDrawer(question: PracticeQuestion, questions: readonly PracticeQuestion[] = []): boolean {
-  if (question.category === "阅读" || question.category === "语法") return Boolean(question.passage?.trim() || question.media?.images.length);
+  if (isWrittenPassage(question)) return true;
   const key = listeningGroupKey(question);
   return key !== null && questions.some(item => item.id !== question.id && listeningGroupKey(item) === key);
 }

@@ -6,6 +6,9 @@ import { isRandomPeriod, RANDOM_PERIOD, selectRandomQuestions } from "./random-p
 import { getPracticePaper, getQuestionCatalog, questionTypes, type CatalogQuestion, type PracticePaper, type QuestionType } from "./practice-papers";
 import { levels, type JLPTLevel, type PracticeQuestion } from "./practice-question";
 import { isPracticeQuestion, isRecord } from "./question-validation";
+import passageExplanations from "./passage-explanations.zh.json";
+
+const chineseNotes = new Map(Object.entries(passageExplanations));
 
 const readGroup = cache(async (level: JLPTLevel, period: string, type: QuestionType): Promise<readonly PracticeQuestion[]> => {
   const group = getImportedGroup(level, period, type);
@@ -15,7 +18,11 @@ const readGroup = cache(async (level: JLPTLevel, period: string, type: QuestionT
   if (!isRecord(input) || !Array.isArray(input.questions)) throw new Error("Invalid imported group");
   const questions: unknown[] = input.questions;
   if (!questions.every(isPracticeQuestion) || questions.length !== group.availableCount || questions.some((question) => question.level !== level)) throw new Error("Invalid imported question data");
-  return questions;
+  return questions.map(question => {
+    const note = chineseNotes.get(question.id);
+    if (!note) return question;
+    return { ...question, explanation: [note, ...question.explanation.filter(text => text !== "该题库未提供解析。")] };
+  });
 });
 
 export async function loadPracticePaper(source: "original" | "imported", level: JLPTLevel, period: string, type: QuestionType): Promise<PracticePaper> {

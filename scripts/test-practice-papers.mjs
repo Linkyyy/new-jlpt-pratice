@@ -28,6 +28,33 @@ const papers = load(path.join(root, "src/data/imported-papers.server.ts"));
 const catalog = load(path.join(root, "src/data/bank-catalog.ts"));
 const manifest = require("../src/data/imported-bank/index.json");
 
+test("passage explanations reach practice and favorites with the original analysis and answer keys", async () => {
+  const notes = require("../src/data/passage-explanations.zh.json");
+  assert.match(notes["imported:201007:N2:2:3189:52"], /血型/);
+  assert.match(notes["imported:201507:N1:3:5346:56"], /村/);
+  assert.match(notes["imported:201912:N2:3:982:71"], /报名表/);
+  const ids = Object.keys(notes);
+  const favorites = await papers.loadFavoriteQuestions(ids);
+  assert.equal(favorites.length, ids.length);
+  for (const { question } of favorites) {
+    assert.ok(question.passage || question.media?.images.length, question.id);
+    assert.ok(["阅读", "语法"].includes(question.category), question.id);
+    assert.equal(question.explanation[0], notes[question.id]);
+  }
+  for (const [period, level, type] of [["201007", "N2", "grammar"], ["201912", "N2", "reading"]]) {
+    const group = catalog.getImportedGroup(level, period, type);
+    const original = require(`../src/data/imported-bank/questions/${group.file}`).questions;
+    const paper = await papers.loadPracticePaper("imported", level, period, type);
+    for (const [index, question] of paper.questions.entries()) {
+      const source = original[index];
+      const note = notes[source.id];
+      const expected = note ? [note, ...source.explanation.filter(text => text !== "该题库未提供解析。")] : source.explanation;
+      assert.deepEqual([...question.explanation], expected);
+      assert.equal(question.correctOptionId, source.correctOptionId);
+    }
+  }
+});
+
 test("full imported papers include listening after the written sections", async () => {
   const paper = await papers.loadPracticePaper("imported", "N2", "202412", "all");
   assert.equal(paper.id, "imported-N2-202412-all");
