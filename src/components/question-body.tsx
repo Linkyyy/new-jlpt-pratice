@@ -22,9 +22,8 @@ export default function QuestionBody({ question, part = "all", audioGroupId }: {
   </>;
   return (
     <>
-      {passageKey
-        ? <PassagePen key={passageKey} passageKey={passageKey} title={t(question.category === "语法" ? "语法文章" : "阅读文章")} instruction={instruction}>{passage}</PassagePen>
-        : <>{instruction}{passage}</>}
+      {instruction}
+      {passageKey ? <PassagePen key={passageKey} passageKey={passageKey}>{passage}</PassagePen> : passage}
       {part !== "question" && question.media?.audio && <ListeningPlayer reference={question.media.audio} questionId={audioGroupId ?? question.id} />}
       {part !== "passage" && <RichContent text={prompt} html={question.richText} lang="ja" className="question-text mt-4 sm:mt-7 whitespace-pre-line" />}
       {part !== "passage" && question.media?.questionImages?.map(src => <QuestionImage key={src} reference={src} />)}

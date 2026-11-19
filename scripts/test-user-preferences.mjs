@@ -39,6 +39,22 @@ test("practice and favorite settings persist independently without overwriting s
   assert.equal(data.practice.fontSize, 24); assert.equal(data.practice.mobileFontSize, 20); assert.equal(data.practice.playbackRate, 1.25);
   assert.equal(data.favorites.mode, "cards"); assert.equal(data.favorites.sort, "paper"); assert.equal(data.favorites.dueSort, "due");
 });
+test("the floating pen defaults on and older preferences can turn it off and back on", () => {
+  const defaults = environment().api.defaultPreferences;
+  assert.equal(defaults.practice.passagePenEnabled, true);
+  const old = JSON.parse(JSON.stringify(defaults));
+  delete old.practice.passagePenEnabled;
+  old.practice.fontSize = 22;
+  assert.equal(validation.isUserPreferences(old), true);
+  const saved = environment(JSON.stringify(old));
+  assert.equal(saved.api.setUserPreferences("practice", { passagePenEnabled: false }), true);
+  const restored = environment(saved.raw());
+  assert.equal(restored.api.readUserPreferences().data.practice.passagePenEnabled, false);
+  assert.equal(restored.api.readUserPreferences().data.practice.fontSize, 22);
+  assert.equal(restored.api.setUserPreferences("practice", { passagePenEnabled: "false" }), false);
+  assert.equal(restored.api.setUserPreferences("practice", { passagePenEnabled: true }), true);
+  assert.equal(environment(restored.raw()).api.readUserPreferences().data.practice.passagePenEnabled, true);
+});
 test("invalid preferences cannot be saved or accepted by the server backup validator", () => {
   const e = environment(); e.api.setUserPreferences("home", { level: "N4" });
   const before = e.raw();

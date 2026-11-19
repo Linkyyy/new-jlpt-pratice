@@ -7,6 +7,7 @@ import Link from "next/link";
 import QuestionOverview from "./question-overview";
 import ResponsivePanel from "@/components/responsive-panel";
 import FloatingSettings from "@/components/floating-settings";
+import PassagePenSetting from "@/components/passage-pen-setting";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import type { OptionId } from "@/data/practice-question";
@@ -200,6 +201,7 @@ export default function ExamSession({ paper, attempt, initialSaveError, initialQ
             <ResponsivePanel title={t("答题卡")} className="answer-card-panel" trigger={t(`答题卡 · 已作答 ${answeredCount}/${paper.questions.length}`)} headerAction={
               <FloatingSettings title={t(finished ? "复习设置" : "考试设置")}>
             <FontSizeSetting value={fontSize} onChange={setFontSize} />
+            <PassagePenSetting />
             <NavigationSettings swipeEnabled={swipeEnabled} buttonsEnabled={buttonsEnabled} keyboardEnabled={keyboardEnabled} onSwipeChange={value => setUserPreferences("practice", { swipeEnabled: value })} onButtonsChange={value => setUserPreferences("practice", { buttonsEnabled: value })} onKeyboardChange={value => setUserPreferences("practice", { keyboardEnabled: value })} />
             {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
         <p className="mt-4 text-xs leading-6 text-slate-500">{t(paper.sourceLabel)} · {translatePeriod(paper.periodLabel ?? paper.year, paper.source, t)}。{t(Boolean(paper.excludedCount) && `${paper.excludedCount} 题因资源缺失未计入本次考试。`)}</p>

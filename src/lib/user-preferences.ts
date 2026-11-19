@@ -10,7 +10,7 @@ export type FavoriteSort = "recent" | "wrong" | "due" | "paper";
 export interface UserPreferences {
   readonly version: 1;
   readonly home: { readonly source: "original" | "imported"; readonly level: JLPTLevel; readonly year: string; readonly type: QuestionType; readonly mode: PracticeMode };
-  readonly practice: { readonly swipeEnabled: boolean; readonly buttonsEnabled: boolean; readonly keyboardEnabled: boolean; readonly instantFeedback: boolean; readonly fontSize: number; readonly mobileFontSize: number; readonly playbackRate: number };
+  readonly practice: { readonly swipeEnabled: boolean; readonly buttonsEnabled: boolean; readonly keyboardEnabled: boolean; readonly instantFeedback: boolean; readonly passagePenEnabled?: boolean; readonly fontSize: number; readonly mobileFontSize: number; readonly playbackRate: number };
   readonly favorites: { readonly mode: "preview" | "cards"; readonly fontSize: number; readonly sort: FavoriteSort; readonly mistakesSort: FavoriteSort; readonly dueSort: FavoriteSort };
   readonly frequency?: { readonly examplesExpanded: boolean; readonly previewsExpanded: boolean };
 }
@@ -19,7 +19,7 @@ export const PREFERENCES_STORAGE_KEY = "jlpt-practice.preferences.v1";
 export const defaultPreferences: UserPreferences = {
   version: 1,
   home: { source: "imported", level: "N1", year: "201412", type: "all", mode: "practice" },
-  practice: { swipeEnabled: true, buttonsEnabled: true, keyboardEnabled: true, instantFeedback: false, fontSize: 18, mobileFontSize: 16, playbackRate: 1 },
+  practice: { swipeEnabled: true, buttonsEnabled: true, keyboardEnabled: true, instantFeedback: false, passagePenEnabled: true, fontSize: 18, mobileFontSize: 16, playbackRate: 1 },
   favorites: { mode: "preview", fontSize: 16, sort: "recent", mistakesSort: "wrong", dueSort: "due" },
   frequency: defaultFrequencyDisplay,
 };

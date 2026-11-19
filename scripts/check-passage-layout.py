@@ -21,21 +21,47 @@ def swipe_up(touch, x, y, height):
 
 
 def scroll_to_end(page, touch):
-    pane = page.locator(".passage-scroll")
-    box = pane.bounding_box()
-    x = box["x"] + box["width"] / 2
-    y = box["y"] + box["height"] * 0.8
+    pane = page.locator(".session-content" if touch else "html")
+    article = page.locator(".reading-article").bounding_box()
+    x = article["x"] + article["width"] / 2
+    top = pane.bounding_box()["y"] if touch else 0
+    height = page.locator(".reading-sheet").bounding_box()["y"] - top
+    y = top + height * 0.8
     at_end = "e => e.scrollHeight - e.clientHeight - e.scrollTop < 2"
     for _ in range(60):
         if pane.evaluate(at_end):
             return
         if touch:
-            swipe_up(touch, x, y, box["height"])
+            swipe_up(touch, x, y, height)
         else:
             page.mouse.move(x, y)
-            page.mouse.wheel(0, box["height"] * 2)
+            page.mouse.wheel(0, height * 2)
         page.wait_for_timeout(80)
     assert pane.evaluate(at_end), "Scrolling over the passage did not reach its end"
+
+
+def assert_ending_visible(page):
+    page.wait_for_function("""() => {
+        const text = document.querySelector(".question-passage");
+        const walker = document.createTreeWalker(text, NodeFilter.SHOW_TEXT);
+        let last;
+        while (walker.nextNode()) if (walker.currentNode.data.trim()) last = walker.currentNode;
+        const end = last.data.trimEnd().length;
+        const range = document.createRange();
+        range.setStart(last, end - 1);
+        range.setEnd(last, end);
+        const glyph = range.getBoundingClientRect();
+        const sheet = document.querySelector(".reading-sheet").getBoundingClientRect();
+        return glyph.bottom <= sheet.top && text.contains(document.elementFromPoint(
+            glyph.x + glyph.width / 2, glyph.y + glyph.height / 2));
+    }""", timeout=2500)
+
+
+def open_pen_setting(page, mobile):
+    if mobile:
+        page.locator(".answer-card-panel > .panel-trigger").click()
+    page.get_by_role("button", name="练习设置", exact=True).click()
+    return page.get_by_role("checkbox", name="显示长文悬浮画笔")
 
 
 def check_passage(browser, base, question_id, width, height, exam=False):
@@ -56,32 +82,52 @@ def check_passage(browser, base, question_id, width, height, exam=False):
         }"""
         assert pen.evaluate(on_screen), "The pen must be visible before scrolling"
         handle = page.locator(".reading-sheet-handle")
+        sheet = page.locator(".reading-sheet")
+        assert sheet.evaluate("e => getComputedStyle(e).position") == "fixed"
+        assert pen.evaluate("b => getComputedStyle(b.parentElement).position") == "fixed"
+        article = page.locator(".reading-article")
+        article_size = article.evaluate("e => [e.offsetWidth, e.offsetHeight]")
         handle.click()
         assert handle.get_attribute("aria-expanded") == "true"
-        sheet = page.locator(".reading-sheet")
-        default_height = sheet.bounding_box()["height"]
-        assert default_height <= 180, "The default drawer is too tall"
+        opened = sheet.bounding_box()
+        assert opened["height"] <= 180, "The default drawer is too tall"
         touch = page.context.new_cdp_session(page) if mobile else None
-        for size in ("default", "maximum"):
-            if size == "maximum":
-                handle.press("End")
-                assert sheet.bounding_box()["height"] > default_height
-            scroll_to_end(page, touch)
-            assert pen.evaluate(on_screen), "The pen scrolled out of view"
-            assert page.locator(".question-passage").evaluate("""text => {
-                const walker = document.createTreeWalker(text, NodeFilter.SHOW_TEXT);
-                let last;
-                while (walker.nextNode()) if (walker.currentNode.data.trim()) last = walker.currentNode;
-                const end = last.data.trimEnd().length;
-                const range = document.createRange();
-                range.setStart(last, end - 1);
-                range.setEnd(last, end);
-                const glyph = range.getBoundingClientRect();
-                const pane = text.closest(".passage-scroll").getBoundingClientRect();
-                const drawer = document.querySelector(".reading-sheet").getBoundingClientRect();
-                return pane.bottom <= drawer.top && glyph.top >= pane.top && glyph.bottom <= pane.bottom
-                    && text.contains(document.elementFromPoint(glyph.x + glyph.width / 2, glyph.y + glyph.height / 2));
-            }"""), f"Last character is covered at {width}×{height} with the {size} drawer"
+        scroll_to_end(page, touch)
+        assert_ending_visible(page)
+
+        grip = handle.bounding_box()
+        x, y = grip["x"] + grip["width"] / 2, grip["y"] + grip["height"] / 2
+        if touch:
+            swipe_up(touch, x, y, height)
+        else:
+            page.mouse.move(x, y)
+            page.mouse.down()
+            page.mouse.move(x, 12, steps=12)
+            page.mouse.up()
+        raised = sheet.bounding_box()
+        assert raised["height"] > opened["height"]
+        assert abs((raised["y"] + raised["height"]) - (opened["y"] + opened["height"])) < 1
+        assert_ending_visible(page)  # Raising the drawer must keep an already visible ending in view.
+        scroll_to_end(page, touch)
+        assert_ending_visible(page)
+        assert pen.evaluate(on_screen)
+        assert pen.bounding_box()["y"] + pen.bounding_box()["height"] <= raised["y"]
+        assert article.evaluate("e => [e.offsetWidth, e.offsetHeight]") == article_size
+
+        if not exam:
+            pen.click()
+            option = open_pen_setting(page, mobile)
+            assert option.is_checked()
+            option.uncheck()
+            assert not page.locator(".passage-pen-tools, [data-drawing]").count()
+            assert article.evaluate("e => [e.offsetWidth, e.offsetHeight]") == article_size
+            page.reload(wait_until="domcontentloaded")
+            article.wait_for()
+            assert not pen.count()
+            option = open_pen_setting(page, mobile)
+            assert not option.is_checked()
+            option.check()
+            assert page.locator(".passage-pen-tools button[aria-pressed='false']").count() == 1
     finally:
         page.close()
 

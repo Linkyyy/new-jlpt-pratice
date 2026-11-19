@@ -93,6 +93,7 @@ export function isUserPreferences(value: unknown): value is UserPreferences {
     && typeof home.year === "string" && /^(?:|\d{4}|\d{6}|random)$/.test(home.year) && types.includes(String(home.type))
     && (home.year !== "random" || home.type !== "all") && ["practice", "exam"].includes(String(home.mode))
     && ["swipeEnabled", "buttonsEnabled", "keyboardEnabled", "instantFeedback"].every(key => typeof practice[key] === "boolean")
+    && (practice.passagePenEnabled === undefined || typeof practice.passagePenEnabled === "boolean")
     && size(practice.fontSize) && size(practice.mobileFontSize) && [0.75, 1, 1.25, 1.5].includes(practice.playbackRate as number)
     && ["preview", "cards"].includes(String(favorites.mode)) && size(favorites.fontSize)
     && ["sort", "mistakesSort", "dueSort"].every(key => ["recent", "wrong", "due", "paper"].includes(String(favorites[key])))

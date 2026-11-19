@@ -8,6 +8,7 @@ import QuestionOverview from "./question-overview";
 import Link from "next/link";
 import ResponsivePanel from "@/components/responsive-panel";
 import FloatingSettings from "@/components/floating-settings";
+import PassagePenSetting from "@/components/passage-pen-setting";
 import { useRouter } from "next/navigation";
 import type { OptionId } from "@/data/practice-question";
 import type { PracticePaper } from "@/data/practice-papers";
@@ -233,6 +234,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
             </label>
             </>}
             <FontSizeSetting value={fontSize} onChange={setFontSize} />
+            <PassagePenSetting />
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500">{t("文章题完成全部小题后统一提交，即时判定仅用于独立题。已提交答案保持锁定。")}</p>
         </fieldset>

@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
 import { useI18n } from "@/lib/i18n";
+import { useUserPreferences } from "@/lib/user-preferences";
 import { findInkAnchor, inkFrame, passageTextNodes, type InkStroke } from "./passage-pen-geometry";
 
 function readStrokes(key: string): InkStroke[] {
@@ -20,13 +21,12 @@ function transform(frame: ReturnType<typeof inkFrame>) {
 
 interface PassagePenProps {
   passageKey: string;
-  title: string;
-  instruction: ReactNode;
   children: ReactNode;
 }
 
-export default function PassagePen({ passageKey, title, instruction, children }: PassagePenProps) {
+export default function PassagePen({ passageKey, children }: PassagePenProps) {
   const { t } = useI18n();
+  const { passagePenEnabled = true } = useUserPreferences().data.practice;
   const key = `jlpt-practice.passage-ink.v1:${passageKey}`;
   const [drawing, setDrawing] = useState(false);
   const [strokes, setStrokes] = useState(() => readStrokes(key));
@@ -36,6 +36,16 @@ export default function PassagePen({ passageKey, title, instruction, children }:
   const previewRef = useRef<SVGPolylineElement>(null);
   const active = useRef<{ id: number; anchor: InkStroke["anchor"]; frame: ReturnType<typeof inkFrame> } | null>(null);
   const pan = useRef<{ scroller: Element; y: number } | null>(null);
+
+  if (!passagePenEnabled && drawing) setDrawing(false);
+
+  useLayoutEffect(() => {
+    if (!drawing) {
+      active.current = null;
+      pan.current = null;
+      previewRef.current?.removeAttribute("points");
+    }
+  }, [drawing]);
 
   useLayoutEffect(() => {
     const content = contentRef.current;
@@ -124,32 +134,32 @@ export default function PassagePen({ passageKey, title, instruction, children }:
   }
 
   return <div className="passage-pen">
-    <div className="passage-pen-tools">
-      <div className="passage-heading">
-        <h2 className="text-lg font-bold">{title}</h2>
-        {drawing && <span className="passage-scroll-hint">{t("双指滚动")}</span>}
-      </div>
-      {drawing && <button type="button" disabled={!strokes.length} onClick={() => save(strokes.slice(0, -1))}>{t("撤销上一笔")}</button>}
+    {passagePenEnabled && <div className="passage-pen-tools">
+      {drawing && <>
+        <span className="passage-scroll-hint">{t("双指滚动")}</span>
+        <button type="button" aria-label={t("撤销上一笔")} title={t("撤销上一笔")} disabled={!strokes.length} onClick={() => save(strokes.slice(0, -1))}>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m9 5-5 5 5 5M4 10h10a6 6 0 0 1 0 12" transform="translate(0 -2)" />
+          </svg>
+        </button>
+      </>}
       <button type="button" aria-pressed={drawing} onClick={() => setDrawing(!drawing)}>
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="m14.5 5.5 4 4M3 21l4.5-1 13-13a2.8 2.8 0 0 0-4-4l-13 13L3 21Z" />
         </svg>
         {t(drawing ? "结束标注" : "画笔")}
       </button>
-    </div>
-    <div className="passage-scroll" role="region" aria-label={title} tabIndex={0}>
-      {saveError && <p role="status" className="text-xs text-amber-800">{t("笔迹仅在当前页面保留。")}</p>}
-      {instruction}
-      <div className="passage-pen-surface" data-drawing={drawing || undefined} onPointerDown={begin} onPointerMove={addPoint}
-        onPointerUp={finish} onPointerCancel={finish} onLostPointerCapture={finish}
-        onTouchStart={panWithTwoFingers} onTouchMove={panWithTwoFingers}
-        onClickCapture={event => { if (drawing) { event.preventDefault(); event.stopPropagation(); } }}>
-        <div ref={contentRef} className="flow-root">{children}</div>
-        <svg aria-hidden="true" className="passage-ink">
-          <g ref={savedRef}>{strokes.map((stroke, i) => <polyline key={i} points={stroke.points} />)}</g>
-          <polyline ref={previewRef} />
-        </svg>
-      </div>
+    </div>}
+    {saveError && <p role="status" className="text-xs text-amber-800">{t("笔迹仅在当前页面保留。")}</p>}
+    <div className="passage-pen-surface" data-drawing={drawing || undefined} onPointerDown={begin} onPointerMove={addPoint}
+      onPointerUp={finish} onPointerCancel={finish} onLostPointerCapture={finish}
+      onTouchStart={panWithTwoFingers} onTouchMove={panWithTwoFingers}
+      onClickCapture={event => { if (drawing) { event.preventDefault(); event.stopPropagation(); } }}>
+      <div ref={contentRef} className="flow-root">{children}</div>
+      <svg aria-hidden="true" className="passage-ink">
+        <g ref={savedRef}>{strokes.map((stroke, i) => <polyline key={i} points={stroke.points} />)}</g>
+        <polyline ref={previewRef} />
+      </svg>
     </div>
   </div>;
 }

@@ -212,47 +212,17 @@ body:has(dialog:modal) { overflow: hidden; }
   .session-layout .reading-sheet-content .question-card { padding: 12px 0 0; }
 }
 
-/* The written passage and its questions share the available height. Each pane scrolls on its own. */
-.session-layout > .session-content:has(> .reading-workspace-written) {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
-}
-.session-layout .reading-workspace-written {
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: column;
-  gap: 6px;
-  min-height: 0;
-  padding: 0;
-}
-.reading-workspace-written > .reading-article,
-.reading-workspace-written .passage-pen { display: flex; flex: 1 1 0; flex-direction: column; min-height: 0; }
-.reading-workspace-written > .reading-article { overflow: hidden; padding: 0; }
-.reading-workspace-written .passage-pen { margin: 0; }
-.reading-workspace-written .passage-scroll {
-  flex: 1 1 0;
-  min-height: 0;
-  overflow: auto;
-  overscroll-behavior: contain;
-  padding: 8px clamp(8px, 2vw, 20px) 14px;
-}
+/* The sheet overlays the original page. Only the end of its native scroll area needs extra room. */
+.session-layout .reading-workspace-written { padding-bottom: 0; }
 .reading-workspace-written > .reading-sheet {
-  position: relative;
-  inset: auto;
-  flex: none;
-  width: 100%;
-  max-width: none;
-  max-height: 50%;
-  padding-bottom: 0;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+  --sheet-bottom-space: var(--written-sheet-bottom, var(--answer-card-height, 0px));
+  max-height: calc((100dvh - var(--sheet-top-space) - var(--sheet-bottom-space) - var(--sheet-safe-top, 0px)) / 2);
 }
+.reading-workspace-written > .reading-article:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: -2px; }
 .reading-workspace-written .reading-sheet-expanded { height: auto; }
 .reading-sheet-auto:not([data-resizing]) .reading-sheet-content { max-height: min(18dvh, 8.5rem); }
-.reading-workspace-written .reading-sheet-handle { flex-direction: row; min-height: 34px; gap: 8px; padding: 3px 12px; font-size: 13px; }
-.reading-workspace-written .reading-grip { flex: none; width: 22px; height: 3px; }
+.reading-workspace-written .reading-sheet-handle { min-height: 34px; gap: 2px; padding: 4px 14px; font-size: 13px; }
+.reading-workspace-written .reading-grip { width: 32px; height: 3px; }
 .reading-workspace-written .reading-sheet-content { padding: 0 10px 6px; }
 .reading-workspace-written .reading-subquestions { gap: 4px; padding: 3px; }
 .reading-workspace-written .reading-subquestions button { min-width: 30px; height: 28px; }
@@ -270,48 +240,39 @@ body:has(dialog:modal) { overflow: hidden; }
 .reading-workspace-written .question-card h3 { margin-top: 8px; }
 .reading-workspace-written .question-card .answer-actions button { min-height: 42px; padding-block: 6px; }
 
-.passage-pen { margin-top: 12px; }
-.passage-pen-tools { display: flex; flex: none; align-items: center; gap: 6px; padding: 4px 12px; border-bottom: 1px solid var(--line); background: var(--surface); }
-.favorite-question .passage-pen-tools { position: sticky; top: 0; z-index: 1; }
-.passage-heading { flex: 1; min-width: 0; }
-.passage-heading h2 { line-height: 1.25; }
+.passage-pen-tools { display: flex; align-items: center; justify-content: flex-end; gap: 6px; pointer-events: none; }
+.reading-workspace-written .passage-pen-tools {
+  position: fixed;
+  z-index: 21;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: calc(var(--written-sheet-bottom, var(--answer-card-height, 0px)) + var(--written-sheet-height, 36px) + 8px);
+}
+/* Favorite cards can share a page. Each floating pen stays with its own passage. */
+.favorite-question .passage-pen-tools { position: sticky; top: 8px; z-index: 3; height: 0; align-items: flex-start; }
 .passage-scroll-hint { display: none; }
 @media (any-pointer: coarse) {
-  .passage-scroll-hint { display: block; font-size: 11px; line-height: 1.2; color: var(--muted); }
+  .passage-scroll-hint { display: block; border-radius: 12px; padding: 4px 8px; background: var(--surface); color: var(--muted); font-size: 12px; box-shadow: 0 1px 5px rgb(15 23 42 / 16%); }
 }
-.passage-pen-tools button { display: inline-flex; flex: none; align-items: center; gap: 6px; min-height: 38px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--accent-text); font-size: 14px; font-weight: 600; }
+.passage-pen-tools button { pointer-events: auto; display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 6px; min-width: 44px; min-height: 44px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--accent-text); font-size: 14px; font-weight: 600; box-shadow: 0 2px 8px rgb(15 23 42 / 18%); }
 .passage-pen-tools button[aria-pressed] { border-color: var(--accent-line); background: var(--accent-surface); }
 .passage-pen-tools button[aria-pressed="true"] { background: var(--accent-text); color: var(--surface); }
 .passage-pen-tools button:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
 .passage-pen-tools button:disabled { color: var(--muted); opacity: .65; }
-.passage-scroll:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: -2px; }
-.passage-scroll > .question-instruction { margin: 0 0 8px; }
 .passage-pen-surface { position: relative; }
-.passage-pen-surface > .flow-root > :first-child { margin-top: 4px; }
-.passage-pen-surface .question-passage > :last-child { margin-bottom: 0; }
 .passage-pen-surface[data-drawing] { cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; }
 .passage-ink { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; fill: none; stroke: #cc5229; stroke-width: 3px; stroke-linecap: round; stroke-linejoin: round; }
 .passage-ink polyline { vector-effect: non-scaling-stroke; }
 html[data-theme="dark"] .passage-ink { stroke: #ffac79; }
-@media (max-width: 1023px) and (max-height: 550px) {
-  .session-layout > .session-content:has(> .reading-workspace-written) { padding-block: 4px; }
-  .reading-workspace-written .reading-subquestions { position: static; }
-  .reading-workspace-written .passage-pen-tools { padding-block: 1px; }
-  .reading-workspace-written .passage-pen-tools button { min-height: 32px; }
-  .reading-workspace-written .passage-scroll { padding-block: 4px; }
-  .reading-workspace-written .question-passage { padding-block: 8px; }
+@media (max-width: 1023px) {
+  .session-layout .reading-workspace-written { padding-bottom: var(--written-sheet-height, 36px); }
+  .session-layout .reading-workspace-written:has(.passage-pen-surface img) { padding-bottom: calc(var(--written-sheet-height, 36px) + 24px); }
+  .session-content:has(> .reading-workspace-written) { scroll-padding-bottom: calc(var(--written-sheet-height, 36px) + 8px); }
 }
+@media (max-height: 550px) { .reading-workspace-written .reading-subquestions { position: static; } }
 @media (min-width: 1024px) {
-  .session-page:has(.reading-workspace-written) { height: 100dvh; min-height: 32rem; }
-  .session-layout:has(.reading-workspace-written) { height: 100%; grid-template-rows: auto auto minmax(0, 1fr) auto auto; row-gap: 6px; align-items: stretch; }
-  .session-layout:has(.reading-workspace-written) > .session-header { grid-row: 1; margin-bottom: 0; }
-  .session-layout:has(.reading-workspace-written) > :is(.session-timer, .session-review) { grid-row: 2; margin-bottom: 0; }
-  .session-layout:has(.reading-workspace-written) > :is(.answer-card-panel, .session-content) { grid-row: 3; }
-  .session-layout:has(.reading-workspace-written) > .answer-card-panel { position: static; min-height: 0; align-self: stretch; }
-  .session-layout:has(.reading-workspace-written) > .answer-card-panel > .panel-dialog { max-height: 100%; }
-  .session-content:has(> .reading-workspace-written) ~ .session-progress { grid-row: 4; padding-bottom: 0; }
-  .session-content:has(> .reading-workspace-written) ~ p { grid-row: 5; margin-top: 0; }
-  .reading-workspace-written + div, .session-content:has(> .reading-workspace-written) ~ .session-progress > div { margin-top: 6px; }
+  .session-layout:has(.reading-workspace-written) { padding-bottom: var(--written-sheet-height, 36px); }
+  .session-content:has(> .reading-workspace-written) ~ .session-progress { padding-bottom: 0; }
+  .reading-workspace-written .passage-pen-tools { right: max(40px, calc((100vw - 1536px) / 2 + 8px)); }
 }
 @media (max-width: 360px) and (max-height: 680px) {
   .session-layout > .session-content { padding: 8px; }

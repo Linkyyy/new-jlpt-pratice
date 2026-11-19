@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import FloatingSettings from "@/components/floating-settings";
+import PassagePenSetting from "@/components/passage-pen-setting";
 import BackupControls from "@/components/backup-controls";
 import FontSizeSetting from "@/app/practice/font-size-setting";
 import FavoriteQuestion, { favoriteTitle } from "./favorite-question";
@@ -164,6 +165,7 @@ export default function FavoritesClient({ catalog }: { catalog: readonly Catalog
                 ] as const).map(([value, label, description]) => <label key={value} className="flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 p-3"><input type="radio" name="favorite-view" value={value} checked={mode === value} onChange={() => { setMode(value); resetSelection(); paneRef.current?.scrollTo({ top: 0 }); }} className="mt-1 accent-indigo-600" /><span className="text-sm"><span className="block font-semibold">{t(label)}</span><span className="mt-1 block text-xs leading-5 text-slate-500">{t(description)}</span></span></label>)}</div></fieldset>}
 
                 <div className="mt-3"><FontSizeSetting value={fontSize} onChange={setFontSize} /></div>
+                <PassagePenSetting />
                 {preferences.error && <p role="alert" className="mt-2 text-xs text-amber-800">{t(preferences.error)}</p>}
                 <div className="mt-4 flex flex-wrap gap-2 border-t border-slate-200 pt-4"><FavoriteOrganizer catalog={[...catalogById.values()]} initialFolderId={view === "favorites" ? activeFolder : "all"} /><FolderManager /></div>
                 <p className="mt-4 text-xs leading-6 text-slate-500">{t("备份包含全部收藏夹、收藏题目、做题记录和个人设置，不受当前筛选影响。")}</p>

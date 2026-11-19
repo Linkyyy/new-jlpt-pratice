@@ -2,7 +2,7 @@
 
 import { useI18n } from "@/lib/i18n";
 
-import { useCallback, useEffect, useId, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import type { PracticeQuestion } from "@/data/practice-question";
 import QuestionBody from "@/components/question-body";
 import { articleGroup, articleGroupKey, usesArticleDrawer } from "./article-questions";
@@ -27,10 +27,6 @@ export default function ReadingWorkspace(props: ReadingWorkspaceProps) {
 function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
   const styles = window.getComputedStyle(sheet);
   const minimum = handle.getBoundingClientRect().height + parseFloat(styles.paddingBottom) + parseFloat(styles.borderTopWidth) + parseFloat(styles.borderBottomWidth);
-  if (styles.maxHeight.endsWith("%") && sheet.parentElement) {
-    const maximum = sheet.parentElement.clientHeight * parseFloat(styles.maxHeight) / 100;
-    return { minimum, maximum: Math.max(minimum, maximum) };
-  }
   const viewport = window.visualViewport?.height ?? window.innerHeight;
   const topSpace = parseFloat(styles.getPropertyValue("--sheet-top-space")) || 16;
   const bottomSpace = parseFloat(styles.bottom) || 0;
@@ -38,12 +34,28 @@ function sheetBounds(sheet: HTMLElement, handle: HTMLElement) {
   return { minimum, maximum: Math.max(minimum, Math.min(cssMaximum, viewport - topSpace - bottomSpace)) };
 }
 
+function passageEnding(article: HTMLElement): Element | Range {
+  const last = article.querySelector(".passage-pen-surface > .flow-root")?.lastElementChild;
+  if (!last?.classList.contains("question-passage")) return last ?? article;
+  // Track the final glyph independently of trailing whitespace and paragraph padding.
+  const walker = document.createTreeWalker(last, NodeFilter.SHOW_TEXT);
+  for (let node = walker.lastChild(); node; node = walker.previousNode()) {
+    const end = node.textContent?.trimEnd().length;
+    if (end) {
+      const range = document.createRange();
+      range.setStart(node, end - 1);
+      range.setEnd(node, end);
+      return range;
+    }
+  }
+  return last;
+}
+
 function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
   const { t } = useI18n();
   const [expanded, setExpanded] = useState(reviewing);
   const [height, setHeight] = useState<number | null>(null);
   const id = useId();
-  const workspaceRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLElement>(null);
   const questionsRef = useRef<HTMLDivElement>(null);
   const handleRef = useRef<HTMLButtonElement>(null);
@@ -56,9 +68,45 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const listening = question.category === "听力";
   const articleTitle = listening ? "听力材料" : question.category === "语法" ? "语法文章" : "阅读文章";
 
-  useEffect(() => {
-    if (listening) articleRef.current?.scrollIntoView({ block: "start" });
+  useLayoutEffect(() => {
+    const sheet = sheetRef.current;
+    const article = articleRef.current;
+    const content = article?.closest<HTMLElement>(".session-content");
+    const layout = content?.closest<HTMLElement>(".session-layout");
+    if (listening || !sheet || !article || !content || !layout) return;
+    const ending = passageEnding(article);
+    let previousTop: number | undefined;
+    const measure = () => {
+      const scrollsInPanel = getComputedStyle(content).overflowY === "auto";
+      const bottom = scrollsInPanel ? Math.max(0, window.innerHeight - content.getBoundingClientRect().bottom) : 0;
+      layout.style.setProperty("--written-sheet-bottom", `${bottom}px`);
+      const bounds = sheet.getBoundingClientRect();
+      layout.style.setProperty("--written-sheet-height", `${bounds.height}px`);
+
+      // If the reader had reached the ending, keep it above the rising drawer and pen.
+      if (previousTop !== undefined && bounds.top < previousTop) {
+        const end = ending.getBoundingClientRect();
+        const pen = article.querySelector(".passage-pen-tools")?.getBoundingClientRect();
+        const overlapsPen = pen && end.right > pen.left && end.left < pen.right;
+        const limit = (overlapsPen ? pen.top : bounds.top) - 8;
+        if (end.bottom <= previousTop + 1 && end.bottom > limit) {
+          (scrollsInPanel ? content : document.scrollingElement)?.scrollBy(0, end.bottom - limit);
+        }
+      }
+      previousTop = bounds.top;
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(sheet, { box: "border-box" });
+    observer.observe(content);
+    return () => {
+      observer.disconnect();
+      layout.style.removeProperty("--written-sheet-height");
+      layout.style.removeProperty("--written-sheet-bottom");
+    };
   }, [listening]);
+
+  useEffect(() => { articleRef.current?.scrollIntoView({ block: "start" }); }, []);
 
   useEffect(() => {
     if (!listening) questionsRef.current?.scrollTo({ top: 0 });
@@ -89,17 +137,13 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
       sizeMode.current = mode;
     }
     const viewport = window.visualViewport;
-    const workspace = workspaceRef.current;
-    const observer = !listening && workspace ? new ResizeObserver(fitViewport) : null;
-    if (workspace) observer?.observe(workspace);
     window.addEventListener("resize", fitViewport);
     viewport?.addEventListener("resize", fitViewport);
     return () => {
-      observer?.disconnect();
       window.removeEventListener("resize", fitViewport);
       viewport?.removeEventListener("resize", fitViewport);
     };
-  }, [listening, resizeSheet]);
+  }, [resizeSheet]);
 
   function startDrag(event: PointerEvent<HTMLButtonElement>) {
     if (!event.isPrimary || event.button !== 0 || !sheetRef.current) return;
@@ -153,12 +197,10 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   }
 
   return (
-    <div ref={workspaceRef} className={`reading-workspace${listening ? "" : " reading-workspace-written"}`}>
-      <article ref={articleRef} aria-label={t(articleTitle)} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-        {listening && <>
-          <h2 className="text-lg font-bold">{t(articleTitle)}</h2>
-          <p className="mt-2 text-xs leading-6 text-slate-500">{t("本段共")}{group.length} {t("题 · 拖动底部题目栏调整高度，点击可展开或收起。")}</p>
-        </>}
+    <div className={`reading-workspace${listening ? "" : " reading-workspace-written"}`}>
+      <article ref={articleRef} tabIndex={listening ? undefined : 0} aria-label={t(articleTitle)} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+        <h2 className="text-lg font-bold">{t(articleTitle)}</h2>
+        <p className="mt-2 text-xs leading-6 text-slate-500">{t(listening ? "本段共" : "本篇共")}{group.length} {t("题 · 拖动底部题目栏调整高度，点击可展开或收起。")}</p>
         <QuestionBody question={question} part="passage" audioGroupId={listening ? articleGroupKey(question) : undefined} />
       </article>
       <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={t(listening ? "听力题目抽屉" : question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉")} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}${height === null && !listening ? " reading-sheet-auto" : ""}`}>

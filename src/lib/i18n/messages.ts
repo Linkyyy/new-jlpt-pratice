@@ -823,6 +823,7 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["问题{0}", "問題{0}", "Part {0}"],
   ["阅读文章", "読解本文", "Reading passage"],
   ["画笔", "ペン", "Pen"],
+  ["显示长文悬浮画笔", "長文にフローティングペンを表示", "Show floating pen on passages"],
   ["双指滚动", "2本指でスクロール", "Scroll with two fingers"],
   ["结束标注", "書き込みを終了", "Finish marking"],
   ["撤销上一笔", "一筆戻す", "Undo stroke"],
