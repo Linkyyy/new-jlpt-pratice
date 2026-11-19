@@ -78,10 +78,13 @@ export default function PassagePen({ passageKey, children }: PassagePenProps) {
     position();
     const observer = new ResizeObserver(position);
     observer.observe(content);
+    const mutations = new MutationObserver(position);
+    mutations.observe(content, { childList: true, subtree: true });
     content.addEventListener("scroll", position, true);
     content.addEventListener("load", position, true);
     return () => {
       observer.disconnect();
+      mutations.disconnect();
       content.removeEventListener("scroll", position, true);
       content.removeEventListener("load", position, true);
     };

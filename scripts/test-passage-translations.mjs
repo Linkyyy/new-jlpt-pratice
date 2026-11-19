@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
 import test from "node:test";
+import { runInNewContext } from "node:vm";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
 
 const data = new URL("../src/data/", import.meta.url);
@@ -93,4 +97,27 @@ test("sentence review aligns split and merged translations, quotes, and grammar 
   const blanks = passageSentences(passages[index["imported:201007:N1:2:6395:41"]]);
   assert.match(blanks[2].original, /^\(　41　\)、/);
   assert.match(blanks[2].translation, /^（41），/);
+});
+
+test("each N1 sentence button fits the rendered original, including passages with underlines", () => {
+  const exports = {};
+  const source = readFileSync(new URL("../src/components/rich-content.tsx", import.meta.url), "utf8");
+  runInNewContext(ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX },
+  }).outputText, { exports, require: createRequire(import.meta.url) });
+  const checked = new Set();
+  for (const [questionId, position] of Object.entries(index)) {
+    const passage = passages[position];
+    if (passage.transcribedImage || checked.has(position)) continue;
+    checked.add(position);
+    const { passage: text, richText: html } = n1Questions.get(questionId);
+    const insertAfter = passageSentences(passage).map(({ original }) => ({
+      original, content: createElement("i", { "data-test-sentence-end": "" }),
+    }));
+    const base = renderToStaticMarkup(createElement(exports.default, { text, html }));
+    const annotated = renderToStaticMarkup(createElement(exports.default, { text, html, insertAfter }));
+    assert.equal((annotated.match(/data-test-sentence-end=/g) ?? []).length, insertAfter.length, questionId);
+    const stripAnnotation = annotated.replace(/<i data-test-sentence-end=""><\/i>|<span data-passage-node="\d+" data-passage-offset="\d+">|<\/span>/g, "");
+    assert.equal(stripAnnotation, base.replace(/<\/span>/g, ""), questionId);
+  }
 });

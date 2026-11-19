@@ -961,6 +961,7 @@ export const messages: readonly (readonly [string, string, string])[] = [
   ["查看答案与解析", "答えと解説を見る", "Show answer & explanation"],
   ["逐段翻译", "段落ごとの翻訳", "Paragraph translation"],
   ["逐句翻译", "一文ずつ翻訳", "Sentence translation"],
+  ["译", "訳", "Tr"],
   ["按段查看", "段落で見る", "By paragraph"],
   ["按句查看", "文ごとに見る", "By sentence"],
   ["日文原文", "日本語の原文", "Japanese original"],

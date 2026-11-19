@@ -5,6 +5,7 @@ import { useI18n } from "@/lib/i18n";
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import type { PracticeQuestion } from "@/data/practice-question";
 import QuestionBody from "@/components/question-body";
+import { n1TranslationIndex } from "@/data/passage-translation";
 import { articleGroup, articleGroupKey, usesArticleDrawer } from "./article-questions";
 
 type QuestionStatus = "empty" | "draft" | "correct" | "incorrect" | "answered";
@@ -16,7 +17,7 @@ interface ReadingWorkspaceProps {
   reviewing?: boolean;
   onNavigate: (index: number) => void;
   getStatus: (question: PracticeQuestion) => QuestionStatus;
-  headerAction?: ReactNode;
+  translateInline?: boolean;
   children: ReactNode;
 }
 
@@ -41,6 +42,7 @@ function passageEnding(article: HTMLElement): Element | Range {
   // Track the final glyph independently of trailing whitespace and paragraph padding.
   const walker = document.createTreeWalker(last, NodeFilter.SHOW_TEXT);
   for (let node = walker.lastChild(); node; node = walker.previousNode()) {
+    if (node.parentElement?.closest("button, [hidden]")) continue;
     const end = node.textContent?.trimEnd().length;
     if (end) {
       const range = document.createRange();
@@ -52,7 +54,7 @@ function passageEnding(article: HTMLElement): Element | Range {
   return last;
 }
 
-function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, headerAction, children }: ReadingWorkspaceProps) {
+function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, translateInline, children }: ReadingWorkspaceProps) {
   const { t } = useI18n();
   const [expanded, setExpanded] = useState(reviewing);
   const [height, setHeight] = useState<number | null>(null);
@@ -68,7 +70,9 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const dragged = useRef(false);
   const group = articleGroup(questions, question);
   const listening = question.category === "听力";
-  const hasHeaderAction = Boolean(headerAction);
+  const translationId = group[0].item.id;
+  const inlineTranslation = translateInline !== undefined && n1TranslationIndex(translationId) !== undefined
+    ? { questionId: translationId, enabled: translateInline } : undefined;
   const articleTitle = listening ? "听力材料" : question.category === "语法" ? "语法文章" : "阅读文章";
 
   useLayoutEffect(() => {
@@ -77,7 +81,6 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
     const content = article?.closest<HTMLElement>(".session-content");
     const layout = content?.closest<HTMLElement>(".session-layout");
     if (listening || !sheet || !article || !content || !layout) return;
-    const ending = passageEnding(article);
     let previousTop: number | undefined;
     const measure = () => {
       const scrollsInPanel = getComputedStyle(content).overflowY === "auto";
@@ -88,7 +91,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
 
       // If the reader had reached the ending, keep it above the rising drawer and pen.
       if (previousTop !== undefined && bounds.top < previousTop) {
-        const end = ending.getBoundingClientRect();
+        const end = passageEnding(article).getBoundingClientRect();
         const pen = article.querySelector(".passage-pen-tools")?.getBoundingClientRect();
         const overlapsPen = pen && end.right > pen.left && end.left < pen.right;
         const limit = (overlapsPen ? pen.top : bounds.top) - 8;
@@ -120,7 +123,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
     if (navigation && navigation.scrollWidth > navigation.clientWidth) {
       navigation.querySelector("[aria-current]")?.scrollIntoView({ block: "nearest", inline: "nearest" });
     }
-  }, [expanded, hasHeaderAction, question.id]);
+  }, [expanded, question.id]);
 
   const resizeSheet = useCallback((requested: number, commit = true) => {
     const sheet = sheetRef.current;
@@ -239,10 +242,10 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
       <article ref={articleRef} tabIndex={listening ? undefined : 0} aria-label={t(articleTitle)} className="reading-article rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
         <h2 className="text-lg font-bold">{t(articleTitle)}</h2>
         <p className="mt-2 text-xs leading-6 text-slate-500">{t(listening ? "本段共" : "本篇共")}{group.length} {t("题 · 拖动底部题目栏调整高度，点击可展开或收起。")}</p>
-        <QuestionBody question={question} part="passage" audioGroupId={listening ? articleGroupKey(question) : undefined} />
+        <QuestionBody question={question} part="passage" audioGroupId={listening ? articleGroupKey(question) : undefined} inlineTranslation={inlineTranslation} />
       </article>
       <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={t(listening ? "听力题目抽屉" : question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉")} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}${height === null && !listening ? " reading-sheet-auto" : ""}`}>
-        {listening ? handle : <div ref={toolbarRef} className="reading-sheet-toolbar">{expanded && subquestions}{headerAction}{handle}</div>}
+        {listening ? handle : <div ref={toolbarRef} className="reading-sheet-toolbar">{expanded && subquestions}{handle}</div>}
         <div ref={questionsRef} id={id} hidden={!expanded} className="reading-sheet-content">
           {listening && subquestions}
           {children}

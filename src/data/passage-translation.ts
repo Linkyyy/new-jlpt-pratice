@@ -32,3 +32,12 @@ export function isPassageTranslationReview(value: unknown): value is PassageTran
   return value !== null && typeof value === "object" && "paragraphs" in value && "sentences" in value
     && isTranslationList(value.paragraphs) && isTranslationList(value.sentences);
 }
+
+export async function fetchPassageTranslation(questionId: string, signal: AbortSignal): Promise<PassageTranslationReview> {
+  const query = new URLSearchParams({ id: questionId });
+  const response = await fetch(`/api/practice/passage-translation?${query}`, { signal });
+  if (!response.ok) throw new Error("Passage translation request failed");
+  const data: unknown = await response.json();
+  if (!isPassageTranslationReview(data)) throw new Error("Invalid passage translation data");
+  return data;
+}

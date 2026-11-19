@@ -24,7 +24,6 @@ import { useQuestionKeyboard } from "./use-question-keyboard";
 import QuestionFeedback from "@/components/question-feedback";
 import SessionResults, { type SelectedAnswers } from "./session-results";
 import FavoriteButton from "@/components/favorite-button";
-import PassageTranslationButton from "@/components/passage-translation";
 import QuestionBody from "@/components/question-body";
 import type { StudyAttempt } from "@/lib/study-store";
 import { useStudyPersistence } from "./use-study-persistence";
@@ -258,7 +257,7 @@ export default function PracticeExercise({ paper, attempt, initialSaveError, onR
         <ReadingWorkspace question={question} questions={paper.questions} questionIndex={questionIndex} reviewing={finished} onNavigate={goToQuestion} getStatus={(item) => {
             const answer = answers[item.id];
             return answer?.submitted ? item.correctOptionId === null ? "answered" : answer.selectedOptionId === item.correctOptionId ? "correct" : "incorrect" : answer ? "draft" : "empty";
-          }} headerAction={(submitted || finished) && <PassageTranslationButton questionId={question.id} initialView="sentence" compact />}>
+          }} translateInline={submitted || finished}>
         <section {...swipe} aria-labelledby="question-title" className="question-card relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <h1 ref={headingRef} tabIndex={-1} id="question-title" className="pr-12 scroll-mt-6 text-xl font-bold outline-none sm:text-2xl">{t("第 {0} 题 · {1}", { 0: questionIndex + 1, 1: t(question.category) })}{question.sourceQuestionNumber != null && t(" · 原题号 {0}", { 0: question.sourceQuestionNumber })}</h1>
           {isRandomPeriod(paper.year) && questionPeriod(question) && <p className="mt-1 text-xs leading-5 text-slate-500">{t("题目来源：{0}", { 0: t(formatPeriod(questionPeriod(question)!)) })}</p>}

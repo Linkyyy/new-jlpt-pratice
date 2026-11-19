@@ -1,8 +1,11 @@
-import { createElement, type ReactNode } from "react";
+import { createElement, Fragment, type ReactNode } from "react";
 
 interface TextNode { type: "text"; value: string }
 interface ElementNode { type: "element"; tag: string; children: ContentNode[]; colSpan?: number; rowSpan?: number }
 type ContentNode = TextNode | ElementNode;
+interface TextInsert { original: string; content: ReactNode }
+interface NodeInsert { at: number; content: ReactNode }
+type InsertPlan = Map<TextNode, { sourceIndex: number; inserts: NodeInsert[] }>;
 const allowedTags = new Set(["p", "div", "span", "u", "b", "strong", "em", "br", "ul", "ol", "li", "table", "thead", "tbody", "tr", "td", "th", "h3", "h4", "h5", "ruby", "rt", "sup", "sub"]);
 const blockTags = new Set(["p", "div", "ul", "ol", "table", "h3", "h4", "h5"]);
 
@@ -51,16 +54,58 @@ function parseContent(html: string): ContentNode[] {
   return root.children;
 }
 
-function renderNodes(nodes: readonly ContentNode[]): ReactNode[] {
+function childrenInRenderOrder(node: ElementNode): readonly ContentNode[] {
+  const rows = node.tag === "table" ? node.children.filter((child) => child.type === "element" && child.tag === "tr") : [];
+  return rows.length ? [...node.children.filter((child) => !rows.includes(child)), { type: "element", tag: "tbody", children: rows }] : node.children;
+}
+
+function collectText(nodes: readonly ContentNode[]): TextNode[] {
+  return nodes.flatMap(node => node.type === "element" ? collectText(childrenInRenderOrder(node)) : node.value ? [node] : []);
+}
+
+function planInserts(nodes: readonly ContentNode[], inserts: readonly TextInsert[]): InsertPlan | undefined {
+  const textNodes = collectText(nodes);
+  const compact = (text: string) => text.replace(/\s/gu, "");
+  const parts = inserts.map(part => compact(part.original));
+  if (parts.some(part => !part) || compact(textNodes.map(node => node.value).join("")) !== parts.join("")) return undefined;
+
+  const result: InsertPlan = new Map();
+  let next = 0, end = parts[0].length, offset = 0;
+  textNodes.forEach((node, sourceIndex) => {
+    const additions: NodeInsert[] = [];
+    for (const char of node.value.matchAll(/\S/gu)) {
+      offset += char[0].length;
+      if (offset !== end) continue;
+      additions.push({ at: char.index + char[0].length, content: inserts[next].content });
+      next++;
+      end += parts[next]?.length ?? 0;
+    }
+    if (additions.length) result.set(node, { sourceIndex, inserts: additions });
+  });
+  return result;
+}
+
+function renderNodes(nodes: readonly ContentNode[], plan?: InsertPlan): ReactNode[] {
   return nodes.map((node, index) => {
-    if (node.type === "text") return node.value;
-    const directRows = node.tag === "table" ? node.children.filter((child) => child.type === "element" && child.tag === "tr") : [];
-    const children: readonly ContentNode[] = directRows.length > 0 ? [...node.children.filter((child) => !directRows.includes(child)), { type: "element", tag: "tbody", children: directRows }] : node.children;
-    const content = createElement(node.tag, { key: index, ...(node.colSpan ? { colSpan: node.colSpan } : {}), ...(node.rowSpan ? { rowSpan: node.rowSpan } : {}) }, ...renderNodes(children));
+    if (node.type === "text") {
+      const entry = plan?.get(node);
+      if (!entry) return node.value;
+      let start = 0;
+      const fragment = (from: number, to: number) => <span data-passage-node={entry.sourceIndex} data-passage-offset={from}>{node.value.slice(from, to)}</span>;
+      const parts = entry.inserts.map(({ at, content }) => {
+        const piece = <Fragment key={at}>{fragment(start, at)}{content}</Fragment>;
+        start = at;
+        return piece;
+      });
+      return <Fragment key={index}>{parts}{start < node.value.length && fragment(start, node.value.length)}</Fragment>;
+    }
+    const content = createElement(node.tag, { key: index, ...(node.colSpan ? { colSpan: node.colSpan } : {}), ...(node.rowSpan ? { rowSpan: node.rowSpan } : {}) }, ...renderNodes(childrenInRenderOrder(node), plan));
     return node.tag === "table" ? <div key={index} className="my-3 max-w-full overflow-x-auto">{content}</div> : content;
   });
 }
 
-export default function RichContent({ text, html = false, className = "", lang }: { text: string; html?: boolean; className?: string; lang?: string }) {
-  return <div lang={lang} className={`min-w-0 max-w-full break-words [&_p]:my-2 [&_u]:underline [&_table]:border-collapse [&_td]:border [&_td]:border-slate-300 [&_td]:p-2 [&_th]:border [&_th]:border-slate-300 [&_th]:p-2 [&_ul]:list-inside [&_ul]:list-disc ${className}`}>{html ? renderNodes(parseContent(text)) : text}</div>;
+export default function RichContent({ text, html = false, className = "", lang, insertAfter }: { text: string; html?: boolean; className?: string; lang?: string; insertAfter?: readonly TextInsert[] }) {
+  const nodes = html ? parseContent(text) : [{ type: "text", value: text } satisfies TextNode];
+  const plan = insertAfter?.length ? planInserts(nodes, insertAfter) : undefined;
+  return <div lang={lang} className={`min-w-0 max-w-full break-words [&_p]:my-2 [&_u]:underline [&_table]:border-collapse [&_td]:border [&_td]:border-slate-300 [&_td]:p-2 [&_th]:border [&_th]:border-slate-300 [&_th]:p-2 [&_ul]:list-inside [&_ul]:list-disc ${className}`}>{renderNodes(nodes, plan)}</div>;
 }

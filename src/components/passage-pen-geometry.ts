@@ -2,35 +2,47 @@
 export type InkAnchor = { kind: "text"; node: number; offset: number } | { kind: "image"; index: number } | { kind: "surface" };
 export type InkStroke = { anchor: InkAnchor; points: string };
 
-export function passageTextNodes(content: HTMLElement): Text[] {
+interface PassageTextPart { text: Text; node: number; offset: number }
+
+export function passageTextNodes(content: HTMLElement): PassageTextPart[] {
   const passage = content.querySelector(".question-passage");
   if (!passage) return [];
   const walker = document.createTreeWalker(passage, NodeFilter.SHOW_TEXT);
-  const nodes: Text[] = [];
-  while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+  const nodes: PassageTextPart[] = [];
+  let nextNode = 0;
+  while (walker.nextNode()) {
+    const text = walker.currentNode as Text;
+    if (text.parentElement?.closest("[data-passage-insert]")) continue;
+    const original = text.parentElement?.closest<HTMLElement>("[data-passage-node]");
+    // Translations split an existing text node without changing stored ink anchors.
+    const node = original ? Number(original.dataset.passageNode) : nextNode;
+    nodes.push({ text, node, offset: Number(original?.dataset.passageOffset ?? 0) });
+    nextNode = node + 1;
+  }
   return nodes;
 }
 
-export function findInkAnchor(content: HTMLElement, nodes: Text[], target: EventTarget, x: number, y: number): InkAnchor {
+export function findInkAnchor(content: HTMLElement, nodes: PassageTextPart[], target: EventTarget, x: number, y: number): InkAnchor {
   if (target instanceof HTMLImageElement) {
     return { kind: "image", index: Array.from(content.querySelectorAll("img")).indexOf(target) };
   }
   const caret = document.caretPositionFromPoint?.(x, y);
   const range = caret ? null : document.caretRangeFromPoint?.(x, y);
   const node = caret?.offsetNode ?? range?.startContainer;
-  const index = node instanceof Text ? nodes.indexOf(node) : -1;
-  if (index < 0) return { kind: "surface" };
-  return { kind: "text", node: index, offset: Math.min(caret?.offset ?? range?.startOffset ?? 0, nodes[index].length - 1) };
+  const part = nodes.find(candidate => candidate.text === node);
+  if (!part) return { kind: "surface" };
+  return { kind: "text", node: part.node, offset: part.offset + Math.min(caret?.offset ?? range?.startOffset ?? 0, part.text.length - 1) };
 }
 
-export function inkFrame(content: HTMLElement, nodes: Text[], anchor: InkAnchor) {
+export function inkFrame(content: HTMLElement, nodes: PassageTextPart[], anchor: InkAnchor) {
   const bounds = content.getBoundingClientRect();
   if (anchor.kind === "text") {
-    const node = nodes[anchor.node];
-    if (node && anchor.offset >= 0 && anchor.offset < node.length) {
+    const part = nodes.find(candidate => candidate.node === anchor.node && candidate.offset <= anchor.offset && anchor.offset < candidate.offset + candidate.text.length);
+    if (part) {
+      const offset = anchor.offset - part.offset;
       const range = document.createRange();
-      range.setStart(node, anchor.offset);
-      range.setEnd(node, anchor.offset + 1);
+      range.setStart(part.text, offset);
+      range.setEnd(part.text, offset + 1);
       const glyph = range.getBoundingClientRect();
       if (glyph.height > 0) return { x: glyph.left - bounds.left, y: glyph.top - bounds.top, width: glyph.height, height: glyph.height };
     }

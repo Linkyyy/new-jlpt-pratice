@@ -268,6 +268,35 @@ body:has(dialog:modal) { overflow: hidden; }
 .passage-translation-dialog::backdrop { background: rgb(15 23 42 / 50%); }
 .passage-translation-frame { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: min(42rem, calc(100dvh - 24px)); }
 
+.passage-inline-translate {
+  display: inline-grid;
+  min-width: 24px;
+  min-height: 24px;
+  place-items: center;
+  margin-inline-start: .35em;
+  padding-inline: 4px;
+  border: 1px solid var(--accent-line);
+  border-radius: 5px;
+  background: var(--accent-surface);
+  color: var(--accent-text);
+  font-size: .7em;
+  font-weight: 600;
+  line-height: 1.25;
+  vertical-align: middle;
+}
+.passage-inline-translate[aria-expanded="true"] { background: var(--accent-text); color: var(--surface); }
+.passage-inline-translate:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
+.passage-inline-translation:not([hidden]) {
+  display: block;
+  margin-block: .25em .5em;
+  padding: .35em .65em;
+  border-inline-start: 2px solid var(--accent-line);
+  background: var(--accent-surface);
+  font-size: .9em;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
 .passage-pen-tools { display: flex; align-items: center; justify-content: flex-end; gap: 4px; pointer-events: none; }
 .reading-workspace-written .passage-pen-tools {
   position: fixed;

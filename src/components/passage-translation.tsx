@@ -1,25 +1,22 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { isPassageTranslationReview, n1TranslationIndex, type PassageTranslationReview } from "@/data/passage-translation";
+import { fetchPassageTranslation, n1TranslationIndex, type PassageTranslationReview } from "@/data/passage-translation";
 import { useI18n } from "@/lib/i18n";
 
 const controlStyle = "rounded-lg border border-slate-200 font-semibold text-indigo-600 focus-visible:outline-2 focus-visible:outline-indigo-500 disabled:opacity-40";
 const control = `min-h-11 px-3 text-sm ${controlStyle}`;
-const compactControl = `min-h-[38px] shrink-0 whitespace-nowrap px-2 text-xs ${controlStyle}`;
 
 type TranslationView = "sentence" | "paragraph";
 interface TranslationButtonProps {
   questionId: string;
-  initialView?: TranslationView;
-  compact?: boolean;
 }
 
 export default function PassageTranslationButton(props: TranslationButtonProps) {
   return n1TranslationIndex(props.questionId) === undefined ? null : <PassageTranslationReader key={props.questionId} {...props} />;
 }
 
-function PassageTranslationReader({ questionId, initialView = "paragraph", compact }: TranslationButtonProps) {
+function PassageTranslationReader({ questionId }: TranslationButtonProps) {
   const { t } = useI18n();
   const id = useId();
   const dialog = useRef<HTMLDialogElement>(null);
@@ -28,12 +25,11 @@ function PassageTranslationReader({ questionId, initialView = "paragraph", compa
   const [passage, setPassage] = useState<PassageTranslationReview | null>(null);
   const [failed, setFailed] = useState(false);
   const [index, setIndex] = useState(0);
-  const [view, setView] = useState(initialView);
+  const [view, setView] = useState<TranslationView>("paragraph");
   const [revealed, setRevealed] = useState(false);
   const bySentence = view === "sentence" && !passage?.transcribedImage;
   const entries = bySentence ? passage?.sentences : passage?.paragraphs;
   const entry = entries?.[index];
-  const title = initialView === "sentence" ? "逐句翻译" : "逐段翻译";
 
   useEffect(() => () => request.current?.abort(), []);
 
@@ -43,12 +39,7 @@ function PassageTranslationReader({ questionId, initialView = "paragraph", compa
     request.current = controller;
     setFailed(false);
     try {
-      const query = new URLSearchParams({ id: questionId });
-      const response = await fetch(`/api/practice/passage-translation?${query}`, { signal: controller.signal });
-      if (!response.ok) throw new Error("Passage translation request failed");
-      const data: unknown = await response.json();
-      if (!isPassageTranslationReview(data)) throw new Error("Invalid passage translation data");
-      setPassage(data);
+      setPassage(await fetchPassageTranslation(questionId, controller.signal));
     } catch {
       if (!controller.signal.aborted) setFailed(true);
     } finally {
@@ -63,14 +54,14 @@ function PassageTranslationReader({ questionId, initialView = "paragraph", compa
   }
 
   function open() {
-    setView(initialView);
+    setView("paragraph");
     showEntry(0);
     dialog.current?.showModal();
     void load();
   }
 
   return <>
-    <button type="button" aria-haspopup="dialog" aria-controls={id} className={compact ? compactControl : `mt-2 ${control}`} onClick={open}>{t(title)}</button>
+    <button type="button" aria-haspopup="dialog" aria-controls={id} className={`mt-2 ${control}`} onClick={open}>{t("逐段翻译")}</button>
     <dialog ref={dialog} id={id} aria-labelledby={`${id}-title`} className="passage-translation-dialog">
       <div className="passage-translation-frame">
         <header className="flex items-center justify-between gap-3 border-b border-slate-200 px-4 py-2">
