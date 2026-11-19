@@ -14,9 +14,10 @@ interface QuestionAnswerProps {
   revealAnswer: boolean;
   onSelect: (optionId: OptionId) => void;
   feedbackRef?: RefObject<HTMLHeadingElement | null>;
+  showTranslation?: boolean;
 }
 
-export default function QuestionAnswer({ question, selectedOptionId, locked, revealAnswer, onSelect, feedbackRef }: QuestionAnswerProps) {
+export default function QuestionAnswer({ question, selectedOptionId, locked, revealAnswer, onSelect, feedbackRef, showTranslation = true }: QuestionAnswerProps) {
   const { t } = useI18n();
   const isCorrect = selectedOptionId === question.correctOptionId;
   const feedback = question.correctOptionId === null ? "参考答案待补充" : selectedOptionId === null ? "未作答" : isCorrect ? "回答正确" : "回答错误";
@@ -51,7 +52,7 @@ export default function QuestionAnswer({ question, selectedOptionId, locked, rev
           <h2 ref={feedbackRef} tabIndex={-1} id="result-title" className={`scroll-mt-6 text-lg font-bold outline-none ${question.correctOptionId === null || selectedOptionId === null ? "text-slate-600" : isCorrect ? "text-emerald-700" : "text-rose-700"}`}>{t(feedback)}</h2>
           <p className="mt-2 text-sm text-slate-600">{t("你的选择：")}{optionLabel(question, selectedOptionId)} {t("· 正确答案：")}{question.correctOptionId === null ? t("待补充") : optionLabel(question, question.correctOptionId)}</p>
           <h3 className="mt-5 font-semibold">{t(question.richText ? "题库解析" : "中文解析")}</h3>
-          <PassageTranslationButton questionId={question.id} />
+          {showTranslation && <PassageTranslationButton questionId={question.id} />}
           {question.explanation.map((paragraph, index) => <RichContent key={index} text={paragraph} html={question.richText} className="question-text mt-2 text-slate-700" />)}
         </section>
       )}

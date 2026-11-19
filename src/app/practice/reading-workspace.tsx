@@ -16,6 +16,7 @@ interface ReadingWorkspaceProps {
   reviewing?: boolean;
   onNavigate: (index: number) => void;
   getStatus: (question: PracticeQuestion) => QuestionStatus;
+  headerAction?: ReactNode;
   children: ReactNode;
 }
 
@@ -51,7 +52,7 @@ function passageEnding(article: HTMLElement): Element | Range {
   return last;
 }
 
-function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, children }: ReadingWorkspaceProps) {
+function ReadingSheet({ question, questions, questionIndex, reviewing = false, onNavigate, getStatus, headerAction, children }: ReadingWorkspaceProps) {
   const { t } = useI18n();
   const [expanded, setExpanded] = useState(reviewing);
   const [height, setHeight] = useState<number | null>(null);
@@ -67,6 +68,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
   const dragged = useRef(false);
   const group = articleGroup(questions, question);
   const listening = question.category === "听力";
+  const hasHeaderAction = Boolean(headerAction);
   const articleTitle = listening ? "听力材料" : question.category === "语法" ? "语法文章" : "阅读文章";
 
   useLayoutEffect(() => {
@@ -118,7 +120,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
     if (navigation && navigation.scrollWidth > navigation.clientWidth) {
       navigation.querySelector("[aria-current]")?.scrollIntoView({ block: "nearest", inline: "nearest" });
     }
-  }, [expanded, question.id]);
+  }, [expanded, hasHeaderAction, question.id]);
 
   const resizeSheet = useCallback((requested: number, commit = true) => {
     const sheet = sheetRef.current;
@@ -240,7 +242,7 @@ function ReadingSheet({ question, questions, questionIndex, reviewing = false, o
         <QuestionBody question={question} part="passage" audioGroupId={listening ? articleGroupKey(question) : undefined} />
       </article>
       <section ref={sheetRef} style={height === null ? undefined : { height }} aria-label={t(listening ? "听力题目抽屉" : question.category === "语法" ? "语法题目抽屉" : "阅读题目抽屉")} className={`reading-sheet ${expanded ? "reading-sheet-expanded" : ""}${height === null && !listening ? " reading-sheet-auto" : ""}`}>
-        {listening ? handle : <div ref={toolbarRef} className="reading-sheet-toolbar">{expanded && subquestions}{handle}</div>}
+        {listening ? handle : <div ref={toolbarRef} className="reading-sheet-toolbar">{expanded && subquestions}{headerAction}{handle}</div>}
         <div ref={questionsRef} id={id} hidden={!expanded} className="reading-sheet-content">
           {listening && subquestions}
           {children}

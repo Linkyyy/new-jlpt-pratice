@@ -10,14 +10,25 @@ export interface PassageTranslation {
   readonly transcribedImage?: boolean;
 }
 
+export interface TranslatedSentence extends TranslatedParagraph {
+  readonly combined?: boolean;
+}
+
+export interface PassageTranslationReview extends PassageTranslation {
+  readonly sentences: readonly TranslatedSentence[];
+}
+
 export function n1TranslationIndex(questionId: string): number | undefined {
   return Object.hasOwn(n1Index, questionId) ? n1Index[questionId as keyof typeof n1Index] : undefined;
 }
 
-export function isPassageTranslation(value: unknown): value is PassageTranslation {
-  if (!value || typeof value !== "object" || !("paragraphs" in value)) return false;
-  const { paragraphs } = value;
-  return Array.isArray(paragraphs) && paragraphs.length > 0 && paragraphs.every(paragraph =>
-    typeof paragraph?.original === "string" && !!paragraph.original.trim()
-    && typeof paragraph.translation === "string" && !!paragraph.translation.trim());
+function isTranslationList(value: unknown): value is TranslatedParagraph[] {
+  return Array.isArray(value) && value.length > 0 && value.every(pair =>
+    typeof pair?.original === "string" && !!pair.original.trim()
+    && typeof pair.translation === "string" && !!pair.translation.trim());
+}
+
+export function isPassageTranslationReview(value: unknown): value is PassageTranslationReview {
+  return value !== null && typeof value === "object" && "paragraphs" in value && "sentences" in value
+    && isTranslationList(value.paragraphs) && isTranslationList(value.sentences);
 }

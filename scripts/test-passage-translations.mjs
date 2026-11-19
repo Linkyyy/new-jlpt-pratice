@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import ts from "typescript";
 
 const data = new URL("../src/data/", import.meta.url);
 const read = (file) => JSON.parse(readFileSync(new URL(file, data), "utf8"));
@@ -10,6 +11,10 @@ const questionBank = read("question-bank.json");
 const manifest = read("imported-bank/index.json");
 const ocr = new Map(read("frequency-image-ocr/entries.json").images.filter(entry => entry.reviewed && entry.partial === false).map(entry => [entry.key, entry.text]));
 const n1Questions = new Map();
+const sentenceModule = ts.transpileModule(readFileSync(new URL("passage-sentences.ts", data), "utf8"), {
+  compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 },
+}).outputText;
+const { passageSentences } = await import(`data:text/javascript;base64,${Buffer.from(sentenceModule).toString("base64")}`);
 
 for (const group of manifest.groups.filter(group => group.level === "N1" && ["grammar", "reading"].includes(group.type))) {
   for (const question of read(`imported-bank/questions/${group.file}`).questions) n1Questions.set(question.id, question);
@@ -57,4 +62,35 @@ test("sibling questions use the same translation and grammar blanks stay in the 
   const grammar = passages[index["imported:201607:N1:2:5117:41"]];
   assert.match(grammar.paragraphs[0].translation, /（41）/);
   assert.match(grammar.paragraphs[4].translation, /（45）/);
+});
+
+test("sentence review retains every line of the existing bilingual passages", () => {
+  for (const passage of passages) {
+    const sentences = passageSentences(passage);
+    assert.ok(sentences.every(pair => pair.original.trim() && pair.translation.trim()));
+    for (const key of ["original", "translation"]) {
+      const text = (pairs) => pairs.map(pair => pair[key]).join("").replace(/\s/gu, "");
+      assert.equal(text(sentences), text(passage.paragraphs));
+    }
+    if (passage.transcribedImage) assert.deepEqual(sentences, passage.paragraphs);
+  }
+});
+
+test("sentence review aligns split and merged translations, quotes, and grammar blanks", () => {
+  const reading = passageSentences(passages[index["imported:201507:N1:3:5346:56"]]);
+  assert.match(reading[0].original, /^\(3\)\n人類は/);
+  assert.match(reading[0].translation, /人类在创造出“城市”/);
+  assert.match(reading[1].translation, /在村落里.*。他们形成社会关系的前提/);
+  assert.match(reading[2].original, /^都市の街頭において/);
+  assert.match(reading[2].translation, /^在城市街头/);
+
+  const grammar = passageSentences(passages[index["imported:201607:N1:2:5117:41"]]);
+  assert.equal(grammar[0].combined, true);
+  assert.match(grammar[3].original, /^「よろしくお願いしますッ！」と店のカード/);
+  assert.match(grammar[3].translation, /“请多多关照！”/);
+  assert.match(grammar[5].translation, /（41）/);
+
+  const blanks = passageSentences(passages[index["imported:201007:N1:2:6395:41"]]);
+  assert.match(blanks[2].original, /^\(　41　\)、/);
+  assert.match(blanks[2].translation, /^（41），/);
 });
